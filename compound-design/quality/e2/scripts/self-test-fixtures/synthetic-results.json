@@ -1,0 +1,64 @@
+{
+  "version": 3,
+  "note": "SYNTHETIC — NOT MODEL OUTPUT. Hand-written rows that mimic the promptfoo results shape so that `e2 self-test` can prove route classification, blinding and aggregation gates. Nothing here is a review, a decision or evidence.",
+  "results": {
+    "results": [
+      {
+        "id": "A-ok",
+        "provider": { "id": "anthropic:claude-agent-sdk", "label": "A-base-model", "config": {} },
+        "testCase": { "metadata": { "id": "J01", "holdout": false } },
+        "response": { "output": "SYNTHETIC — NOT MODEL OUTPUT (A ok)", "metadata": { "toolCalls": [], "skillCalls": [] } },
+        "latencyMs": 1000
+      },
+      {
+        "id": "A-error",
+        "provider": { "id": "anthropic:claude-agent-sdk", "label": "A-base-model", "config": {} },
+        "testCase": { "metadata": { "id": "J02", "holdout": false } },
+        "error": "provider error: 529 overloaded",
+        "response": { "output": "" }
+      },
+      {
+        "id": "B-ok",
+        "provider": { "id": "anthropic:claude-agent-sdk", "label": "B-upstream-direct", "config": { "plugins": [{ "type": "local", "path": "vendor" }] } },
+        "testCase": { "metadata": { "id": "J01", "holdout": false } },
+        "response": { "output": "SYNTHETIC — NOT MODEL OUTPUT (B ok)", "metadata": { "toolCalls": [{ "name": "Skill", "input": { "skill": "interfaces:better-interface" } }], "skillCalls": [{ "name": "interfaces:better-interface" }] } }
+      },
+      {
+        "id": "B-no-skill",
+        "provider": { "id": "anthropic:claude-agent-sdk", "label": "B-upstream-direct", "config": {} },
+        "testCase": { "metadata": { "id": "J02", "holdout": false } },
+        "response": { "output": "SYNTHETIC — NOT MODEL OUTPUT (B without skill)", "metadata": { "toolCalls": [{ "name": "Read", "input": { "file_path": "fixtures/x.html" } }], "skillCalls": [] } }
+      },
+      {
+        "id": "C-ok",
+        "provider": { "id": "anthropic:claude-agent-sdk", "label": "C-compound-wrapper", "config": { "agent": "jakub" } },
+        "testCase": { "metadata": { "id": "J01", "holdout": false } },
+        "response": { "output": "SYNTHETIC — NOT MODEL OUTPUT (C ok)", "metadata": { "toolCalls": [{ "name": "Read", "input": { "file_path": "compound-design/vendor/jakub-skills/skills/better-interface/SKILL.md" } }], "skillCalls": [] } }
+      },
+      {
+        "id": "C-no-agent",
+        "provider": { "id": "anthropic:claude-agent-sdk", "label": "C-compound-wrapper", "config": {} },
+        "testCase": { "metadata": { "id": "J02", "holdout": false } },
+        "response": { "output": "SYNTHETIC — NOT MODEL OUTPUT (C without agent evidence)", "metadata": { "toolCalls": [], "skillCalls": [] } }
+      },
+      {
+        "id": "C-truncated",
+        "provider": { "id": "anthropic:claude-agent-sdk", "label": "C-compound-wrapper", "config": { "agent": "jakub" } },
+        "testCase": { "metadata": { "id": "J07", "holdout": true } },
+        "response": { "output": "SYNTHETIC — NOT MODEL OUTPUT (C truncated mid-sentence", "metadata": { "toolCalls": [], "skillCalls": [], "stop_reason": "max_tokens" } }
+      },
+      {
+        "id": "D-ok",
+        "provider": { "id": "anthropic:claude-agent-sdk", "label": "D-prompt-only", "config": { "agent": "jakub" } },
+        "testCase": { "metadata": { "id": "J01", "holdout": false } },
+        "response": { "output": "SYNTHETIC — NOT MODEL OUTPUT (D ok)", "metadata": { "toolCalls": [], "skillCalls": [] } }
+      },
+      {
+        "id": "D-contaminated",
+        "provider": { "id": "anthropic:claude-agent-sdk", "label": "D-prompt-only", "config": { "agent": "jakub" } },
+        "testCase": { "metadata": { "id": "J02", "holdout": false } },
+        "response": { "output": "SYNTHETIC — NOT MODEL OUTPUT (D read vendor)", "metadata": { "toolCalls": [{ "name": "Read", "input": { "file_path": "compound-design/vendor/jakub-skills/skills/better-ui/SKILL.md" } }], "skillCalls": [] } }
+      }
+    ]
+  }
+}

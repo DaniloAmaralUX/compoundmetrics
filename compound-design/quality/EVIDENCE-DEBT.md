@@ -22,6 +22,10 @@ It is not a defect score. It prevents unmeasured capability from being narrated 
 | `cd-resource-lab` | E1 | failure→eval→change loop is explicit | measured improvement across real resource versions |
 | `cd-ai-interaction-review` | E1 | six AI interaction gates are explicit | reliance/autonomy outcome improvement in representative tasks |
 
+## E2 preparation state (2026-09-09)
+
+The E2 pilot for `jakub` and `cd-quality-gate` is pre-registered and prepared at zero cost (`quality/e2/E2-PILOT-PLAN.md`). No runtime was executed; every runtime cell in the table above remains `not measured`. Preparation repays no evidence debt.
+
 ## Debt repayment order
 
 1. `jakub`: A/B/C against base model and direct upstream.

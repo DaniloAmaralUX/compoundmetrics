@@ -1,0 +1,10 @@
+{
+  "candidate": "form-review-skill v2.0.0",
+  "baseline": "form-review-skill v1.4.1",
+  "tasks": 9, "holdout_tasks": 3, "runs_per_task": 3, "fresh_runs": true, "same_model_snapshot": true, "cache": false,
+  "mean_score": { "candidate": 74.1, "baseline": 74.3 },
+  "critical_issue_recall": { "candidate": 0.92, "baseline": 0.92 },
+  "routing_failures": { "candidate": 0, "baseline": 0 },
+  "mean_input_tokens": { "candidate": 11800, "baseline": 16400 },
+  "mean_latency_ms": { "candidate": 9100, "baseline": 11700 }
+}

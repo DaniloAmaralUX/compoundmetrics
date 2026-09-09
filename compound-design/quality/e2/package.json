@@ -1,0 +1,19 @@
+{
+  "name": "compound-design-e2-harness",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pinned, zero-cost E2 benchmark harness for Compound Design. Installing this package never calls a model. Model runtime is a separate, explicitly guarded command.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "e2": "node scripts/e2.mjs"
+  },
+  "devDependencies": {
+    "axe-core": "4.13.0",
+    "playwright-core": "1.63.0",
+    "promptfoo": "0.122.2"
+  },
+  "license": "UNLICENSED"
+}

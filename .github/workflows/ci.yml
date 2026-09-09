@@ -1,5 +1,7 @@
 name: ci
 
+# Zero model runtime. This workflow never calls a model, never runs a model CLI, never sets the
+# authorization flag for model runtime and never evaluates a promptfoo model provider. Cost of model calls: $0.
 on:
   push:
     branches: [main]
@@ -21,8 +23,7 @@ jobs:
           cache: npm
       - run: npm ci
 
-      # Evidence infrastructure: registry lint (with mutation self-test) and
-      # the deterministic E1 contract suite. Neither spends model/API budget.
+      # Evidence infrastructure: registry lint (with mutation self-test) and the deterministic E1 contract suite.
       - name: registry lint
         run: npm run cd:lint
       - name: contract evals
@@ -35,3 +36,31 @@ jobs:
         run: npm run lint
       - name: build
         run: npm run build
+
+  e2-harness:
+    # Deterministic E2 gates only: self-test mutations, task/config/CI gates, workspace isolation, freeze, exec-only dry run.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: install pinned harness (no browsers, no model SDKs)
+        run: npm run e2:install
+      - name: fetch pinned upstream (SHA-verified, drift recorded)
+        run: npm run e2 -- fetch-upstream
+      - name: self-test (mutations must be rejected)
+        run: npm run e2 -- self-test
+      - name: validate gates + promptfoo schema
+        run: npm run e2 -- validate
+      - name: fixtures cross-check (committed observations; renders only if a local Chromium exists)
+        run: npm run e2 -- fixtures
+      - name: workspaces
+        run: npm run e2 -- workspaces
+      - name: freeze
+        run: npm run e2 -- freeze
+      - name: dry run (exec echo provider only)
+        run: npm run e2 -- dry-run
+      - name: plan-runs (estimate only)
+        run: npm run e2 -- plan-runs

@@ -36,7 +36,16 @@ This may be useful orchestration or unnecessary duplication. The E2 benchmark mu
 
 ## E2 readiness
 
-The pre-registered pack under `quality/e2/` contains fixed tasks, near-misses, holdouts, A/B/C design, acceptance thresholds, telemetry rules and anti-gaming constraints for Interface Review and Quality Gate.
+```
+E2 PRE-REGISTERED
+ZERO-COST PREPARATION COMPLETE
+PRIMARY RUBRIC FROZEN
+RUNTIME NOT EXECUTED
+COST BLOCKED
+CEL E1
+```
+
+The pack under `quality/e2/` is now executable end to end without a model: versioned task sets (9/3 and 11/4 holdouts), deterministic ground truth with provenance, decoys, frozen 7-dimension primary rubric plus a diagnostic 10-dimension rubric, blind human review protocol, per-condition workspace isolation, pinned upstream, route/blind/aggregate tooling with mutation self-tests, an exec-only dry run, and a paid-runtime command that aborts unless `E2_PAID_RUNTIME_CONFIRMED=YES`. Paid model calls made: 0. See `quality/e2/E2-PILOT-PLAN.md`.
 
 ## Next evidence action
 

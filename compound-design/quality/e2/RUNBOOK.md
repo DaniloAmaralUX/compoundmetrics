@@ -1,115 +1,67 @@
 # E2 Benchmark Runbook
 
-This folder is benchmark-ready. Runtime evidence has **not** been collected yet.
-
-## 1. Preflight
-
-Before any paid run:
-
-- choose and pin one model snapshot in `CD_EVAL_MODEL`;
-- confirm Promptfoo version;
-- confirm Claude Agent SDK version;
-- confirm upstream Jakub source is pinned for the run;
-- confirm read-only tool permissions;
-- set a maximum acceptable spend for the full benchmark;
-- do not change test expectations after seeing candidate outputs without versioning the test set.
-
-## 2. Validate configs without spending
-
-Use Promptfoo config validation first.
-
-```bash
-npx promptfoo@latest validate -c compound-design/quality/e2/promptfoo-jakub.yaml
-npx promptfoo@latest validate -c compound-design/quality/e2/promptfoo-quality-gate.yaml
+```
+STATUS: E2 PRE-REGISTERED · ZERO-COST PREPARATION COMPLETE · PRIMARY RUBRIC FROZEN · RUNTIME NOT EXECUTED · COST BLOCKED · CEL E1
 ```
 
-If validation fails, fix the harness. Do not reinterpret a broken harness as a resource failure.
+Everything in section 1 runs without a model and was executed in this round. Section 2 is blocked by design until explicit paid-runtime authorization exists.
 
-## 3. Route smoke test
-
-Before the full repeated benchmark, run a single cheap task per condition and inspect raw metadata.
-
-For `jakub` verify:
-
-- A has no specialist route;
-- B invokes an upstream Jakub skill from the pinned local plugin;
-- C runs the `jakub` named agent from the project settings;
-- model snapshot and tools are identical otherwise.
-
-If B or C is not observably routed as intended, the comparison is invalid.
-
-For `cd-quality-gate` verify:
-
-- A has no quality skill;
-- C invokes `cd-quality-gate` through a `Skill` tool call.
-
-## 4. Full fresh benchmark
-
-Only after route smoke passes:
+## 1. Zero-cost preparation (executed, reproducible)
 
 ```bash
-npx promptfoo@latest eval -c compound-design/quality/e2/promptfoo-jakub.yaml --no-cache
-npx promptfoo@latest eval -c compound-design/quality/e2/promptfoo-quality-gate.yaml --no-cache
+npm run e2:install          # compound-design/quality/e2: promptfoo 0.122.2, playwright-core 1.63.0, axe-core 4.13.0 (lockfile-pinned; no browsers, no model SDKs)
+npm run e2 -- self-test     # every gate must reject its mutation
+npm run e2 -- fetch-upstream   # jakubkrehel/skills @ 267330e1adfc… → compound-design/vendor/ (gitignored); verifies SHA + LICENSE; records drift, never moves the pin
+npm run e2 -- validate      # task gates (holdout ≥ 30%, provenance, decoys, prompt hygiene, D subset), exec-only configs, guarded templates, zero-cost CI, promptfoo schema validation
+npm run e2 -- fixtures      # Playwright + axe observations for rendered fixtures → tasks/ground-truth/ (needs a local Chromium; E2_CHROMIUM_PATH=/path/to/chrome if not auto-detected)
+npm run e2 -- workspaces    # .workspaces/<suite>/<condition>/ — disposable; gate: no task file, rubric or ground truth inside
+npm run e2 -- freeze        # tasks/tasks.json (task-set SHA-256, holdouts, D subset) + environment.json (repo SHA, versions, pins)
+npm run e2 -- dry-run       # promptfoo eval with the deterministic exec: echo provider → results/dry-run (SYNTHETIC — NOT MODEL OUTPUT); then routes → blind → aggregate
+npm run e2 -- plan-runs     # future call counts and cost estimate (plan-runs.json) — not executed
 ```
 
-The configs repeat each task three times.
+Why promptfoo is not a devDependency of the app: it pulls ~80 required packages plus optional cloud/agent SDKs and a browser download; Vercel installs devDependencies during the build. The harness therefore lives in its own pinned package with its own lockfile.
 
-Do not retry failed generations selectively. Provider/runtime errors should remain visible in the artifact and be separated from quality failures in analysis.
+## 2. Paid runtime (BLOCKED by default)
 
-## 5. Human scoring for Jakub
+Every runtime command aborts with `Blocked: E2 model runtime requires explicit paid-runtime authorization.` unless `E2_PAID_RUNTIME_CONFIRMED` is exactly `YES`. There is no smoke run during install, build, test or CI.
 
-Shuffle A/B/C output labels before review when practical.
+Preflight (all before spending):
+1. explicit written budget authorization and a maximum spend;
+2. pin one tested model and one judge model (must differ; same vendor ≠ independent family);
+3. `e2 fetch-upstream` reports `drift: false` (if `true`, record the delta in SOURCE-PARITY and stop — pins are never moved automatically);
+4. `e2 validate`, `e2 workspaces`, `e2 freeze` green on the exact commit that will be benchmarked;
+5. an API key provided explicitly for the run (`apiKeyRequired: true`; the harness never searches for keys and never borrows a local Claude Code session).
 
-Score each output using `BENCHMARK-PROTOCOL.md`:
+Order:
+1. **Smoke** — one task per condition; inspect `metadata.skillCalls`/`toolCalls`: A has no skill/agent, B invoked `better-*`, C ran `agent: jakub`, D ran `agent: jakub` with `vendor_reads = 0`.
+2. **Negative control** — render C against a workspace without `.claude/agents/jakub.md`; the run must fail. If it silently succeeds, the route is not load-bearing and the comparison is invalid.
+3. **Judge calibration** — known-negatives (empty, off-topic confident, decoy-flagging) must fail; a human-written oracle must pass.
+4. **Replace cost assumptions** in `plan-runs.json` with the smoke telemetry.
+5. **Full run**:
 
-- correct issue detection — 30;
-- precision — 20;
-- prioritization — 15;
-- actionability — 15;
-- boundary discipline — 10;
-- verification honesty — 5;
-- concision — 5.
+```bash
+E2_PAID_RUNTIME_CONFIRMED=YES npm run e2:runtime:DANGEROUS-PAID -- --suite jakub   --model <tested> --judge <judge> --execute
+E2_PAID_RUNTIME_CONFIRMED=YES npm run e2:runtime:DANGEROUS-PAID -- --suite jakub-d --model <tested> --judge <judge> --execute   # subset lane; add --filter-metadata d_subset=true to the printed promptfoo command
+E2_PAID_RUNTIME_CONFIRMED=YES npm run e2:runtime:DANGEROUS-PAID -- --suite qg      --model <tested> --judge <judge> --execute
+```
 
-Keep the original raw response unchanged.
+6. **Classify, blind, review, aggregate** (zero-cost again):
 
-## 6. Decision
+```bash
+npm run e2 -- routes    results/runtime/<suite>.results.json --suite=jakub
+npm run e2 -- blind     results/runtime/routes.json results/runtime/<suite>.results.json
+# human fills blind/human-score-sheet.csv offline (HUMAN-CRAFT-REVIEW.md)
+npm run e2 -- unblind   results/runtime/blind/unblind-key.json results/runtime/blind/human-score-sheet.csv
+npm run e2 -- aggregate results/runtime/routes.json --scores=results/runtime/blind/scores.unblinded.json
+```
 
-Possible outcomes:
+`aggregate` writes `summary.json` and a `DECISION.draft.md` skeleton. The decision text is written by a human against the pre-registered rules in `E2-PILOT-PLAN.md` §13–§16.
 
-### Compound wins
+## 3. Decision outcomes (unchanged)
 
-If C satisfies the pre-registered E2 rule, promote only the tested scope to E2.
+Compound wins (scoped E2, no v0.3 unless a justified change exists) · Compound ties upstream (simplify the wrapper) · Compound loses upstream (do not defend; candidate + separate holdout) · no reliable difference (stay at E1). Each is a valid result.
 
-Do not create v0.3 unless the evidence also identifies a justified resource change.
+## 4. Artifact integrity
 
-### Compound ties upstream
-
-If C is effectively equal to B with no meaningful efficiency advantage, simplify the wrapper. Direct upstream use becomes the default hypothesis.
-
-### Compound loses upstream
-
-Do not defend the wrapper. Mark the failure, identify the causal hypothesis, create a candidate change, preserve v0.2 as baseline, and rerun with a holdout.
-
-### No reliable difference
-
-Stay at E1. A benchmark that cannot distinguish conditions is still a useful result because it prevents a false version claim.
-
-## 7. Artifact integrity
-
-A valid E2 decision includes:
-
-- exact git SHAs;
-- exact model/provider identity;
-- exact test-set version;
-- Promptfoo/SDK versions;
-- raw runs;
-- failures and errors;
-- human scoring where required;
-- cost/latency only when actually measured;
-- final decision and unresolved uncertainty.
-
-## Current blocker to autonomous execution from ChatGPT
-
-The repository and harness can be prepared from this environment, but a controlled LLM runtime requires an authenticated model execution context. Creating or spending against an API credential is intentionally not assumed by this runbook.
-
-Until that execution exists, resources remain E1 and runtime uplift remains `not measured`.
+A valid decision includes: `environment.json` (exact repo SHA, upstream pin and drift, harness versions, model/judge ids), `tasks/tasks.json` (task-set digest, holdouts, D subset), raw results, `routes.json`, blind payload and key, human sheet and divergence log, `summary.json`, and the human-written `DECISION.md` with unresolved uncertainty. Missing telemetry stays `not measured`.

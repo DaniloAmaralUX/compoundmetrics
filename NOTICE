@@ -47,3 +47,10 @@ Design.
 - The public page implementation (`src/app/page.tsx`, `page.module.css`) was
   extracted from the author's `studio-dev-ui` repository. No other part of
   that application is carried here.
+
+## E2 benchmark harness (compound-design/quality/e2)
+
+- `promptfoo` — MIT — evaluation harness, pinned; used only with a deterministic `exec:` provider in this repository's zero-cost mode.
+- `playwright-core` — Apache-2.0 — renders fixtures locally to derive deterministic observations.
+- `axe-core` — MPL-2.0 — automated accessibility checks on fixtures (supplementary signal, not a substitute for human review).
+- `e2 fetch-upstream` clones `jakubkrehel/skills` at the pinned commit into `compound-design/vendor/` (gitignored) for benchmark condition B, preserving its MIT LICENSE. Nothing from it is redistributed by this repository.

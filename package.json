@@ -10,7 +10,11 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "cd:lint": "node compound-design/tools/cd-lint.mjs --self-test",
-    "cd:evals": "node compound-design/quality/scripts/run-contract-evals.mjs"
+    "cd:evals": "node compound-design/quality/scripts/run-contract-evals.mjs",
+    "e2": "node compound-design/quality/e2/scripts/e2.mjs",
+    "e2:install": "node compound-design/quality/e2/scripts/e2.mjs install",
+    "e2:check": "node compound-design/quality/e2/scripts/e2.mjs self-test && node compound-design/quality/e2/scripts/e2.mjs validate && node compound-design/quality/e2/scripts/e2.mjs freeze && node compound-design/quality/e2/scripts/e2.mjs plan-runs",
+    "e2:runtime:DANGEROUS-PAID": "node compound-design/quality/e2/scripts/e2.mjs paid-runtime"
   },
   "engines": {
     "node": ">=20.9"

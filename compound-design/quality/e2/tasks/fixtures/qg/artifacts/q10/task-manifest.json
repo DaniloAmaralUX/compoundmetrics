@@ -1,0 +1,4 @@
+{ "tasks": [
+  { "id": "T1", "holdout": false }, { "id": "T2", "holdout": false }, { "id": "T3", "holdout": false }, { "id": "T4", "holdout": false },
+  { "id": "T5", "holdout": false }, { "id": "T6", "holdout": false }, { "id": "T7", "holdout": true }, { "id": "T8", "holdout": true }
+] }

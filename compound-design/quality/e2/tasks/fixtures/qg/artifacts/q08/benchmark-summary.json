@@ -1,0 +1,11 @@
+{
+  "candidate": "table-review-skill v1.1.0",
+  "baseline": "table-review-skill v1.0.0",
+  "tasks": 8, "runs_per_task": 3, "fresh_runs": true, "same_model_snapshot": true,
+  "task_success_rate": { "candidate": 0.83, "baseline": 0.75 },
+  "routing_failures": { "candidate": 0, "baseline": 1 },
+  "mean_input_tokens": { "candidate": null, "baseline": null },
+  "mean_output_tokens": { "candidate": null, "baseline": null },
+  "mean_latency_ms": { "candidate": null, "baseline": null },
+  "cost_usd": { "candidate": null, "baseline": null }
+}

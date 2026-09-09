@@ -1,0 +1,31 @@
+# Compound Design E2 — DRY RUN. SYNTHETIC — NOT MODEL OUTPUT.
+# The only loadable promptfoo config in this folder. Providers are deterministic `exec:` echoes.
+# Purpose: prove config → results → routes → blind → aggregate wiring with zero model calls.
+# Real runtime configs live in runtime-templates/*.tmpl and are rendered only by the guarded `e2 paid-runtime`.
+description: Compound Design E2 — dry run (exec echo provider only, no model)
+
+prompts:
+  - '{{request}}'
+
+providers:
+  - id: 'exec: node scripts/e2.mjs echo-provider'
+    label: A-dryrun-echo
+    config:
+      condition: A
+  - id: 'exec: node scripts/e2.mjs echo-provider'
+    label: B-dryrun-echo
+    config:
+      condition: B
+  - id: 'exec: node scripts/e2.mjs echo-provider'
+    label: C-dryrun-echo
+    config:
+      condition: C
+
+evaluateOptions:
+  repeat: 1
+  cache: false
+  maxConcurrency: 2
+
+tests:
+  - file://tasks/jakub-tests.yaml
+  - file://tasks/cd-quality-gate-tests.yaml

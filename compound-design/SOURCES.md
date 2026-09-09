@@ -44,3 +44,7 @@ Prefer composition over duplication:
 - Compound Design adds routing, system context, evidence discipline, web-app specialization and reusable-learning logic;
 - any copied or substantially modified upstream material must preserve applicable license and attribution requirements;
 - public naming may be authorial, but internal provenance must remain explicit.
+
+## Pin verification — 2026-09-09
+
+`git ls-remote` (read-only) confirmed both upstream `HEAD`s equal to the pinned commits above: Jakub `267330e1…`, Emil `d23d7f88…`. No drift. The E2 harness vendors the Jakub pin into `compound-design/vendor/jakub-skills` (gitignored) via `e2 fetch-upstream`, verifies the SHA and LICENSE, and records drift without ever moving the pin.

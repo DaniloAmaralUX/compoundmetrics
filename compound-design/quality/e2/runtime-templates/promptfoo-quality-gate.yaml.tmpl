@@ -1,0 +1,54 @@
+# RUNTIME TEMPLATE — NOT LOADABLE AS-IS. Rendered only by `e2 paid-runtime` after E2_PAID_RUNTIME_CONFIRMED=YES.
+# Quality Gate: A (base model + shared policy docs) / C (same + cd-quality-gate skill). No genuine external comparator exists; B is deliberately absent.
+description: Compound Design E2 — Quality Gate A/C (PAID RUNTIME — authorized render only)
+
+prompts:
+  - '{{request}}'
+
+providers:
+  - id: anthropic:claude-agent-sdk
+    label: A-base-model
+    config:
+      model: '{{MODEL}}'
+      working_dir: '{{WS_QG_A}}'
+      apiKeyRequired: true
+      strict_mcp_config: true
+      persist_session: false
+      exclude_dynamic_sections: true
+      tools: [Read, Grep, Glob]
+      max_turns: 12
+      max_budget_usd: 1.0
+
+  - id: anthropic:claude-agent-sdk
+    label: C-compound-quality-gate
+    config:
+      model: '{{MODEL}}'
+      working_dir: '{{WS_QG_C}}'
+      apiKeyRequired: true
+      strict_mcp_config: true
+      persist_session: false
+      exclude_dynamic_sections: true
+      setting_sources: ['project']
+      skills: ['cd-quality-gate']
+      tools: [Read, Grep, Glob, Skill]
+      max_turns: 12
+      max_budget_usd: 1.0
+
+defaultTest:
+  options:
+    provider: 'anthropic:messages:{{JUDGE_MODEL}}'
+    rubricPrompt: 'file://{{RUBRIC_PRIMARY}}'
+  assert:
+    - type: llm-rubric
+      value: 'Score with the frozen 7-dimension Quality Gate rubric. Reasoning in any vocabulary counts; hallucinated evidence caps the score at 40. Return the JSON contract exactly.'
+      weight: 0
+
+evaluateOptions:
+  repeat: 3
+  cache: false
+  maxConcurrency: 2
+
+tests:
+  - 'file://{{TASKS_QG}}'
+
+outputPath: '{{RESULTS_DIR}}/quality-gate-results.json'

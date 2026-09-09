@@ -21,3 +21,11 @@ npm-debug.log*
 
 # agent session artifacts
 .claude/settings.local.json
+
+# E2 harness (zero-cost): disposable artifacts never committed
+compound-design/quality/e2/node_modules/
+compound-design/quality/e2/.workspaces/
+compound-design/quality/e2/results/
+compound-design/quality/e2/validate-report.json
+compound-design/quality/e2/self-test-report.json
+compound-design/vendor/

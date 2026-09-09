@@ -1,0 +1,305 @@
+{
+  "task_set_version": "1.0.0",
+  "frozen_at": "2026-09-09T11:05:42.577Z",
+  "rule": "Task sets are versioned. Any change after model outputs exist requires a new version and a fresh holdout.",
+  "suites": {
+    "jakub": {
+      "id": "interface-review",
+      "sha256": "864a379d4a1c5ea33bfa22563d2cc6eb7cc4627da1b67a0c3d248549f66f161a",
+      "total": 9,
+      "holdouts": 3,
+      "holdout_share": 0.333,
+      "conditions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "d_subset": [
+        "J01",
+        "J02",
+        "J05"
+      ],
+      "ground_truth_counts": {
+        "deterministic": 29,
+        "pending_human": 7,
+        "decoys": 16
+      },
+      "tasks": [
+        {
+          "id": "J01",
+          "kind": "review",
+          "holdout": false,
+          "d_subset": true,
+          "expected": [
+            "J01-E1",
+            "J01-E2",
+            "J01-E3",
+            "J01-E4",
+            "J01-E5"
+          ],
+          "critical": [
+            "J01-E1",
+            "J01-E3"
+          ],
+          "pending_human": [
+            "J01-H1",
+            "J01-H2"
+          ]
+        },
+        {
+          "id": "J02",
+          "kind": "review",
+          "holdout": false,
+          "d_subset": true,
+          "expected": [
+            "J02-E1",
+            "J02-E2",
+            "J02-E3"
+          ],
+          "critical": [
+            "J02-E1"
+          ],
+          "pending_human": [
+            "J02-H1"
+          ]
+        },
+        {
+          "id": "J03",
+          "kind": "review",
+          "holdout": false,
+          "d_subset": false,
+          "expected": [
+            "J03-E1",
+            "J03-E2",
+            "J03-E3"
+          ],
+          "critical": [
+            "J03-E1"
+          ],
+          "pending_human": [
+            "J03-H1"
+          ]
+        },
+        {
+          "id": "J04",
+          "kind": "review",
+          "holdout": false,
+          "d_subset": false,
+          "expected": [
+            "J04-E1",
+            "J04-E2",
+            "J04-E3"
+          ],
+          "critical": [
+            "J04-E1"
+          ],
+          "pending_human": []
+        },
+        {
+          "id": "J05",
+          "kind": "near-miss",
+          "holdout": false,
+          "d_subset": true,
+          "expected": [
+            "J05-E1"
+          ],
+          "critical": [
+            "J05-E1"
+          ],
+          "pending_human": []
+        },
+        {
+          "id": "J06",
+          "kind": "near-miss",
+          "holdout": false,
+          "d_subset": false,
+          "expected": [
+            "J06-E1"
+          ],
+          "critical": [
+            "J06-E1"
+          ],
+          "pending_human": []
+        },
+        {
+          "id": "J07",
+          "kind": "review",
+          "holdout": true,
+          "d_subset": false,
+          "expected": [
+            "J07-E1",
+            "J07-E2",
+            "J07-E3",
+            "J07-E4"
+          ],
+          "critical": [
+            "J07-E1"
+          ],
+          "pending_human": [
+            "J07-H1"
+          ]
+        },
+        {
+          "id": "J08",
+          "kind": "near-miss",
+          "holdout": true,
+          "d_subset": false,
+          "expected": [
+            "J08-E1"
+          ],
+          "critical": [
+            "J08-E1"
+          ],
+          "pending_human": []
+        },
+        {
+          "id": "J09",
+          "kind": "review",
+          "holdout": true,
+          "d_subset": false,
+          "expected": [
+            "J09-E1",
+            "J09-E2",
+            "J09-E3",
+            "J09-E4",
+            "J09-E5",
+            "J09-E6",
+            "J09-E7",
+            "J09-E8"
+          ],
+          "critical": [
+            "J09-E1",
+            "J09-E2",
+            "J09-E3",
+            "J09-E4",
+            "J09-E5",
+            "J09-E7"
+          ],
+          "pending_human": [
+            "J09-H1",
+            "J09-H2"
+          ]
+        }
+      ]
+    },
+    "qg": {
+      "id": "quality-gate",
+      "sha256": "cb752312fb06ed7c58638d2cc042c0e6debbc23d7cbb074a7e0b761cd271dac9",
+      "total": 11,
+      "holdouts": 4,
+      "holdout_share": 0.364,
+      "conditions": [
+        "A",
+        "C"
+      ],
+      "d_subset": [],
+      "ground_truth_counts": {
+        "deterministic": 11,
+        "pending_human": 0,
+        "decoys": 0
+      },
+      "tasks": [
+        {
+          "id": "Q01",
+          "kind": "decision",
+          "holdout": false,
+          "d_subset": false,
+          "expected": [],
+          "critical": [],
+          "pending_human": []
+        },
+        {
+          "id": "Q02",
+          "kind": "decision",
+          "holdout": false,
+          "d_subset": false,
+          "expected": [],
+          "critical": [],
+          "pending_human": []
+        },
+        {
+          "id": "Q03",
+          "kind": "decision",
+          "holdout": false,
+          "d_subset": false,
+          "expected": [],
+          "critical": [],
+          "pending_human": []
+        },
+        {
+          "id": "Q04",
+          "kind": "decision",
+          "holdout": false,
+          "d_subset": false,
+          "expected": [],
+          "critical": [],
+          "pending_human": []
+        },
+        {
+          "id": "Q05",
+          "kind": "decision",
+          "holdout": false,
+          "d_subset": false,
+          "expected": [],
+          "critical": [],
+          "pending_human": []
+        },
+        {
+          "id": "Q06",
+          "kind": "decision",
+          "holdout": false,
+          "d_subset": false,
+          "expected": [],
+          "critical": [],
+          "pending_human": []
+        },
+        {
+          "id": "Q07",
+          "kind": "near-miss",
+          "holdout": true,
+          "d_subset": false,
+          "expected": [],
+          "critical": [],
+          "pending_human": []
+        },
+        {
+          "id": "Q08",
+          "kind": "decision",
+          "holdout": true,
+          "d_subset": false,
+          "expected": [],
+          "critical": [],
+          "pending_human": []
+        },
+        {
+          "id": "Q09",
+          "kind": "trap-reasoning",
+          "holdout": true,
+          "d_subset": false,
+          "expected": [],
+          "critical": [],
+          "pending_human": []
+        },
+        {
+          "id": "Q10",
+          "kind": "trap-reasoning",
+          "holdout": false,
+          "d_subset": false,
+          "expected": [],
+          "critical": [],
+          "pending_human": []
+        },
+        {
+          "id": "Q11",
+          "kind": "trap-hallucinated-evidence",
+          "holdout": true,
+          "d_subset": false,
+          "expected": [],
+          "critical": [],
+          "pending_human": []
+        }
+      ]
+    }
+  }
+}

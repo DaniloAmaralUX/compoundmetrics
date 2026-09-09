@@ -1,0 +1,42 @@
+# RUNTIME TEMPLATE — NOT LOADABLE AS-IS. Rendered only by `e2 paid-runtime` after E2_PAID_RUNTIME_CONFIRMED=YES.
+# Condition D — diagnostic lane: Compound wrapper prompt WITHOUT vendor/upstream material.
+# Runs ONLY on the pre-registered subset (run with: --filter-metadata d_subset=true). Answers: is C's value the prompt, the routing, or the upstream material?
+description: Compound Design E2 — Interface Review D (prompt-only diagnostic subset; PAID RUNTIME — authorized render only)
+
+prompts:
+  - '{{request}}'
+
+providers:
+  - id: anthropic:claude-agent-sdk
+    label: D-prompt-only
+    config:
+      model: '{{MODEL}}'
+      working_dir: '{{WS_JAKUB_D}}'
+      apiKeyRequired: true
+      strict_mcp_config: true
+      persist_session: false
+      exclude_dynamic_sections: true
+      setting_sources: ['project']
+      agent: jakub
+      tools: [Read, Grep, Glob]
+      max_turns: 12
+      max_budget_usd: 1.0
+
+defaultTest:
+  options:
+    provider: 'anthropic:messages:{{JUDGE_MODEL}}'
+    rubricPrompt: 'file://{{RUBRIC_PRIMARY}}'
+  assert:
+    - type: llm-rubric
+      value: 'Score with the frozen 7-dimension primary rubric. Return the JSON contract exactly.'
+      weight: 0
+
+evaluateOptions:
+  repeat: 3
+  cache: false
+  maxConcurrency: 2
+
+tests:
+  - 'file://{{TASKS_JAKUB}}'
+
+outputPath: '{{RESULTS_DIR}}/jakub-D-results.json'

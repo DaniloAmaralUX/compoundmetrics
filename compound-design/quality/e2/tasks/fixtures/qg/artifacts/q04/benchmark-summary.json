@@ -1,0 +1,12 @@
+{
+  "candidate": "db-hygiene-agent v0.9.0",
+  "baseline": "manual SQL checklist",
+  "tasks": 9,
+  "runs_per_task": 3,
+  "fresh_runs": true,
+  "same_model_snapshot": true,
+  "mean_score": { "candidate": 81.0, "baseline": 67.0 },
+  "observed_failures": 0,
+  "evaluators": ["internal-harness"],
+  "governance": {}
+}

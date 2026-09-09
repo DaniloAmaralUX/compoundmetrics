@@ -42,6 +42,17 @@ npm run typecheck
 npm run lint
 ```
 
+E2 benchmark harness — zero-cost by default (`compound-design/quality/e2/`):
+
+```bash
+npm run e2:install        # pinned promptfoo / playwright-core / axe-core in their own lockfile; no browsers, no model SDKs
+npm run e2 -- self-test   # every gate must reject its mutation
+npm run e2 -- validate    # task, config and CI gates + promptfoo schema validation
+npm run e2 -- dry-run     # exec-only echo provider: proves the pipeline without a model
+```
+
+Model runtime is a separate command that aborts unless `E2_PAID_RUNTIME_CONFIRMED=YES`. Current state: `E2 PRE-REGISTERED · ZERO-COST PREPARATION COMPLETE · PRIMARY RUBRIC FROZEN · RUNTIME NOT EXECUTED · COST BLOCKED · CEL E1`. See `compound-design/quality/e2/E2-PILOT-PLAN.md`.
+
 ## Repository map
 
 ```text
@@ -51,7 +62,8 @@ npm run lint
 ├── compound-design/         # Canonical framework, evidence and learning system
 │   ├── docs/                # Process history and design critique
 │   ├── learning/            # Learning Ledger + entry template
-│   ├── quality/             # CDQI, CEL, Evidence Debt, Quality Gate, evals, E2 protocol, releases
+│   ├── quality/             # CDQI, CEL, Evidence Debt, Quality Gate, evals, releases
+│   │   └── e2/              # pre-registered E2 pilot: tasks, rubrics, harness (zero-cost by default)
 │   ├── registry/            # Canonical resource registry + schema
 │   ├── releases/            # v0.2.1 evidence-infrastructure release notes and validation
 │   ├── research/            # AI interaction source map

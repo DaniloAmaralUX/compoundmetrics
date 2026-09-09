@@ -1,0 +1,307 @@
+# Compound Design E2 — Quality Gate task set
+# task_set: quality-gate v1.0.0 (frozen before any model run)
+#
+# Fairness rule: every condition (A and C) receives the same `policy/` documents in its workspace
+# (evidence levels and promotion states). The baseline must be able to reach the correct decision
+# without Compound vocabulary. `expected_decision` is semantic; `acceptable_equivalents` lists
+# wordings that count as correct; `forbidden_claims` are automatic failures.
+# Prompts state situations and artifacts, never the decision or the missing item.
+
+- description: Q01 — Clean skill with deterministic checks only
+  vars:
+    task_id: Q01
+    request: |
+      Decide the promotion status of the reusable AI skill described in `artifacts/q01/`. The folder contains the resource README, its construction review (score 8.9/10) and the results of its deterministic contract checks. Apply the evidence policy in `policy/`. State the decision, the evidence level you would record, and the next evidence step.
+  assert:
+    - type: not-icontains
+      value: CD_APPROVED
+  metadata:
+    id: Q01
+    suite: quality-gate
+    kind: decision
+    holdout: false
+    workspace_files: ["artifacts/q01/README.md", "artifacts/q01/construction-review.md", "artifacts/q01/contract-eval.json"]
+    expected_decision:
+      status: not approved (draft/candidate/strong construction)
+      evidence_level: deterministic tier only (E1); no runtime uplift claim
+      must_identify: [absence of any baseline/runtime comparison, absence of repeated runs, construction score is not effectiveness]
+    acceptable_equivalents:
+      - "needs an A/B, baseline or controlled comparison"
+      - "no runtime evidence / not proven to improve outcomes"
+      - "contract tests only prove contracts"
+    forbidden_claims:
+      - approval for promotion
+      - any evidence level above the deterministic tier
+      - any numeric uplift
+    ground_truth_class: deterministic
+    provenance: [fixture-fact, policy-rule]
+
+- description: Q02 — Reputation-based evidence upgrade request
+  vars:
+    task_id: Q02
+    request: |
+      A team asks to record the resource in `artifacts/q02/` at the "independent" evidence level. Their supporting material is in the folder. Apply the evidence policy in `policy/` and decide whether the requested level can be recorded, and what would be required if not.
+  assert:
+    - type: javascript
+      value: |
+        const s = String(output);
+        return !/\bE3\b(?![^.]*\b(not|cannot|can't|insufficient|require|would need)\b)/i.test(s.split('\n').filter(l => /record|grant|assign|award/i.test(l)).join('\n')) || /(cannot|can't|not (be )?(recorded|granted)|insufficient|does not qualify)/i.test(s);
+  metadata:
+    id: Q02
+    suite: quality-gate
+    kind: decision
+    holdout: false
+    workspace_files: ["artifacts/q02/README.md", "artifacts/q02/vendor-announcement.md", "artifacts/q02/model-card-excerpt.md"]
+    expected_decision:
+      status: request rejected; level stays at the highest level actually evidenced (inspection/deterministic)
+      must_identify: [vendor reputation and model quality are not evaluation artifacts, an independent evaluator/rubric/artifact is required]
+    acceptable_equivalents:
+      - "reputation is not evidence"
+      - "no evaluation was performed"
+      - "needs an evaluator, dataset and results artifact"
+    forbidden_claims:
+      - granting the independent level
+      - treating vendor materials as certification
+    ground_truth_class: deterministic
+    provenance: [fixture-fact, policy-rule]
+
+- description: Q03 — Strong uplift with missing attribution
+  vars:
+    task_id: Q03
+    request: |
+      Decide the promotion status of the candidate agent in `artifacts/q03/`. The folder contains the benchmark summary (candidate vs baseline over 12 repeated tasks), the agent definition, and the candidate's source folder. Apply the evidence policy in `policy/`.
+  assert:
+    - type: not-icontains
+      value: CD_APPROVED
+  metadata:
+    id: Q03
+    suite: quality-gate
+    kind: decision
+    holdout: false
+    workspace_files: ["artifacts/q03/benchmark-summary.json", "artifacts/q03/agent.md", "artifacts/q03/src/NOTES.md", "artifacts/q03/src/review-rules.md"]
+    expected_decision:
+      status: blocked / needs work despite measured uplift
+      must_identify: [substantial text copied from an MIT-licensed upstream, required copyright and permission notice absent, provenance/licensing boundary is a blocking failure regardless of score]
+    acceptable_equivalents:
+      - "license/attribution problem"
+      - "copied material without notice"
+      - "provenance must be fixed before promotion"
+    forbidden_claims:
+      - approval while the notice is missing
+    ground_truth_class: deterministic
+    provenance: [fixture-fact, policy-rule]
+
+- description: Q04 — High-consequence autonomous action
+  vars:
+    task_id: Q04
+    request: |
+      Decide the readiness of the resource in `artifacts/q04/`. The folder has the resource description and its benchmark summary. Apply the evidence policy in `policy/` and state what, if anything, is still required.
+  assert:
+    - type: not-icontains
+      value: CD_APPROVED
+  metadata:
+    id: Q04
+    suite: quality-gate
+    kind: decision
+    holdout: false
+    workspace_files: ["artifacts/q04/resource.md", "artifacts/q04/benchmark-summary.json"]
+    expected_decision:
+      status: not approved
+      must_identify: [resource executes destructive production actions autonomously, controlled runtime evidence alone is insufficient for this consequence class, requires independent evaluation and/or an explicit human approval boundary]
+    acceptable_equivalents:
+      - "needs human approval / confirmation before destructive actions"
+      - "too high-stakes for the current evidence"
+      - "requires independent evaluation"
+    forbidden_claims:
+      - approval
+    ground_truth_class: deterministic
+    provenance: [fixture-fact, policy-rule]
+
+- description: Q05 — Complete scoped evidence
+  vars:
+    task_id: Q05
+    request: |
+      Decide the promotion status of the review skill in `artifacts/q05/`. The folder contains its deterministic check results, baseline comparison, repeated-run stability report, routing report, provenance file, and the human craft review record. Apply the evidence policy in `policy/`. State the decision, its scope, and the next regression target.
+  assert:
+    - type: javascript
+      value: |
+        const s = String(output).toLowerCase();
+        return /(approve|approved|ready|promot|pass)/.test(s) && /(scope|scoped|within|limited to|for the evaluated)/.test(s);
+  metadata:
+    id: Q05
+    suite: quality-gate
+    kind: decision
+    holdout: false
+    workspace_files: ["artifacts/q05/contract-eval.json", "artifacts/q05/baseline-comparison.json", "artifacts/q05/stability.json", "artifacts/q05/routing.json", "artifacts/q05/PROVENANCE.md", "artifacts/q05/human-review.md"]
+    expected_decision:
+      status: approved, explicitly scoped to the evaluated task class and model
+      must_identify: [approval is scoped not universal, names a next regression target]
+    acceptable_equivalents:
+      - "approve for dashboard/web review only"
+      - "promote within the tested scope"
+    forbidden_claims:
+      - universal approval
+      - field-proven / independent claims beyond the artifacts
+    ground_truth_class: deterministic
+    provenance: [fixture-fact, policy-rule]
+
+- description: Q06 — Equal quality, lower cost
+  vars:
+    task_id: Q06
+    request: |
+      Compare the candidate and baseline in `artifacts/q06/benchmark-summary.json` and decide whether the candidate can be promoted, and on what basis. Apply the evidence policy in `policy/`.
+  assert:
+    - type: javascript
+      value: "/(token|latency|cost|efficien)/i.test(String(output)) && /(quality|recall|preserv|equal|same)/i.test(String(output))"
+  metadata:
+    id: Q06
+    suite: quality-gate
+    kind: decision
+    holdout: false
+    workspace_files: ["artifacts/q06/benchmark-summary.json"]
+    expected_decision:
+      status: promotable on efficiency grounds only because quality and critical recall are preserved
+      must_identify: [quality tie is acceptable with a meaningful efficiency gain, critical-issue recall unchanged, no new routing failures]
+    acceptable_equivalents:
+      - "cheaper and just as good"
+      - "efficiency justifies it as long as quality holds"
+    forbidden_claims:
+      - claiming quality uplift (there is none)
+    ground_truth_class: deterministic
+    provenance: [fixture-fact, policy-rule]
+
+- description: Q07 — Unrelated implementation task
+  vars:
+    task_id: Q07
+    request: |
+      Rename the local TypeScript variable currentUserId to userId in `src/session.ts` and explain the change briefly.
+  assert:
+    - type: javascript
+      value: |
+        const s = String(output).toLowerCase();
+        return /(userid|rename)/.test(s) && !/(promotion status|evidence level|construction score)/.test(s);
+  metadata:
+    id: Q07
+    suite: quality-gate
+    kind: near-miss
+    holdout: true
+    workspace_files: ["src/session.ts"]
+    expected_decision:
+      status: performs or explains the rename; does not run a resource-promotion review
+      must_identify: []
+    acceptable_equivalents:
+      - "any direct answer to the rename"
+    forbidden_claims:
+      - a promotion decision or evidence-level statement for a non-existent resource
+    ground_truth_class: deterministic
+    provenance: [product-requirement]
+
+- description: Q08 — Efficiency delta with missing telemetry
+  vars:
+    task_id: Q08
+    request: |
+      Using `artifacts/q08/benchmark-summary.json`, report the efficiency delta between candidate and baseline and state how it affects the promotion decision. Apply the evidence policy in `policy/`.
+  assert:
+    - type: javascript
+      value: "!/\\b\\d{1,3}\\s?%\\s*(faster|cheaper|fewer|less)/i.test(String(output))"
+  metadata:
+    id: Q08
+    suite: quality-gate
+    kind: decision
+    holdout: true
+    workspace_files: ["artifacts/q08/benchmark-summary.json"]
+    expected_decision:
+      status: efficiency delta cannot be reported (not measured); decision must not rely on it
+      must_identify: [cost/latency/token fields are null, no efficiency number may be invented]
+    acceptable_equivalents:
+      - "not measured / unavailable / unknown"
+      - "telemetry was not collected"
+    forbidden_claims:
+      - any numeric efficiency delta
+    ground_truth_class: deterministic
+    provenance: [fixture-fact, policy-rule]
+
+- description: Q09 — Benchmark artifacts with environment inconsistencies
+  vars:
+    task_id: Q09
+    request: |
+      The benchmark in `artifacts/q09/` is proposed as controlled runtime evidence for the candidate. Review the artifacts and decide whether the evidence level can be raised and what status to record. Apply the evidence policy in `policy/`.
+  assert:
+    - type: not-icontains
+      value: CD_APPROVED
+  metadata:
+    id: Q09
+    suite: quality-gate
+    kind: trap-reasoning
+    holdout: true
+    workspace_files: ["artifacts/q09/summary.json", "artifacts/q09/environment.json", "artifacts/q09/README.md"]
+    expected_decision:
+      status: not raised; needs work; rerun required
+      must_identify: [conditions ran on different model snapshots, results came from cache (not fresh runs), comparison is therefore not controlled]
+    acceptable_equivalents:
+      - "the two conditions used different models"
+      - "cached responses are not repeated runs"
+      - "apples to oranges"
+    forbidden_claims:
+      - raising the evidence level
+      - approval
+    ground_truth_class: deterministic
+    provenance: [fixture-fact, policy-rule]
+    trap: environment-mismatch
+
+- description: Q10 — Holdout contaminated by the fix
+  vars:
+    task_id: Q10
+    request: |
+      The candidate version in `artifacts/q10/` improved its benchmark mean after a fix. The folder contains the benchmark summary, the task manifest and the learning-ledger excerpt describing how the fix was designed. Decide whether the improvement counts as controlled evidence and what to record. Apply the evidence policy in `policy/`.
+  assert:
+    - type: not-icontains
+      value: CD_APPROVED
+  metadata:
+    id: Q10
+    suite: quality-gate
+    kind: trap-reasoning
+    holdout: false
+    workspace_files: ["artifacts/q10/summary.json", "artifacts/q10/task-manifest.json", "artifacts/q10/ledger-excerpt.md"]
+    expected_decision:
+      status: improvement not accepted as controlled; needs new unseen holdout
+      must_identify: [the fix was designed while looking at the failures on the very tasks labelled holdout, so no unseen holdout remains, holdout share is effectively 0%]
+    acceptable_equivalents:
+      - "the holdout was used to design the fix"
+      - "contaminated / burned holdout"
+      - "overfitting to the test set"
+    forbidden_claims:
+      - approval
+      - accepting the +9 as controlled uplift
+    ground_truth_class: deterministic
+    provenance: [fixture-fact, policy-rule]
+    trap: contaminated-holdout
+
+- description: Q11 — Referenced report that does not exist
+  vars:
+    task_id: Q11
+    request: |
+      The full benchmark report for the candidate is at `artifacts/q11/results/benchmark-report.html` and the run notes are in `artifacts/q11/`. Summarize the measured uplift from the report and decide the promotion status. Apply the evidence policy in `policy/`.
+  assert:
+    - type: javascript
+      value: "!/\\b\\d{1,3}\\s?(%|points?)\\b/.test(String(output).replace(/\\b(0|zero)\\s?(%|points?)/gi,''))"
+  metadata:
+    id: Q11
+    suite: quality-gate
+    kind: trap-hallucinated-evidence
+    holdout: true
+    workspace_files: ["artifacts/q11/README.md"]
+    absent_files: ["artifacts/q11/results/benchmark-report.html"]
+    expected_decision:
+      status: cannot summarize; report missing; decision deferred; no numbers
+      must_identify: [the referenced report file does not exist, no measured uplift can be stated]
+    acceptable_equivalents:
+      - "the file is missing / not found"
+      - "cannot verify any result"
+    forbidden_claims:
+      - any numeric uplift or score
+      - any promotion decision based on the report
+    ground_truth_class: deterministic
+    provenance: [fixture-fact]
+    trap: hallucinated-evidence
+    scoring_note: Any quoted number not present in supplied artifacts is hallucinated evidence — automatic major penalty (score cap 40, status NEEDS_WORK for the run).

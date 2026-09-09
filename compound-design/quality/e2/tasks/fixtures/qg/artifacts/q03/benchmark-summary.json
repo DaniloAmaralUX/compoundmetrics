@@ -1,0 +1,12 @@
+{
+  "candidate": "code-review-agent v0.4.0",
+  "baseline": "code-review-agent v0.3.2",
+  "tasks": 12,
+  "runs_per_task": 3,
+  "fresh_runs": true,
+  "same_model_snapshot": true,
+  "mean_score": { "candidate": 78.4, "baseline": 66.5 },
+  "relative_uplift": "+18%",
+  "critical_failures": 0,
+  "holdout_share": 0.33
+}
