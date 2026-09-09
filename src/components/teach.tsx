@@ -16,17 +16,29 @@ const transformationForms = [
   "starts with more than the first had",
 ];
 
-export function Transformation() {
+type TransformationItem = { name: string; form: string };
+type ProcessStage = { id: string; name: string; question: string; skill: string };
+type RepeatStage = { name: string; question: string };
+
+export function Transformation({
+  items,
+  ariaLabel = "How one project improves the next",
+}: {
+  items?: ReadonlyArray<TransformationItem>;
+  ariaLabel?: string;
+} = {}) {
+  const source = items ?? transformation.map((name, i) => ({ name, form: transformationForms[i] }));
+
   return (
-    <div className={styles.transformation} role="list" aria-label="How one project improves the next">
+    <div className={styles.transformation} role="list" aria-label={ariaLabel}>
       <span className={styles.pulse} aria-hidden="true" />
-      {transformation.map((name, i) => {
+      {source.map((item, i) => {
         const compounds = i === 3 || i === 4;
-        const end = i === transformation.length - 1;
+        const end = i === source.length - 1;
         return (
-          <div key={name} role="listitem" className={`${styles.node} ${compounds ? styles.compounds : ""} ${end ? styles.end : ""}`}>
-            <span className={styles.nodeName}>{name}</span>
-            <span className={styles.nodeForm}>{transformationForms[i]}</span>
+          <div key={`${item.name}-${i}`} role="listitem" className={`${styles.node} ${compounds ? styles.compounds : ""} ${end ? styles.end : ""}`}>
+            <span className={styles.nodeName}>{item.name}</span>
+            <span className={styles.nodeForm}>{item.form}</span>
           </div>
         );
       })}
@@ -34,10 +46,10 @@ export function Transformation() {
   );
 }
 
-export function WhatCompounds() {
+export function WhatCompounds({ items = whatCompounds }: { items?: ReadonlyArray<readonly [string, string]> } = {}) {
   return (
     <div className={styles.compounds} role="list">
-      {whatCompounds.map(([from, to]) => (
+      {items.map(([from, to]) => (
         <div key={from} role="listitem" className={styles.compoundRow}>
           <span className={styles.compoundFrom}>{from}</span>
           <span className={styles.compoundArrow} aria-hidden="true">
@@ -50,10 +62,18 @@ export function WhatCompounds() {
   );
 }
 
-export function ProcessFlow({ linkSkills = true }: { linkSkills?: boolean }) {
+export function ProcessFlow({
+  linkSkills = true,
+  stages = loop,
+  repeatStage = repeat,
+}: {
+  linkSkills?: boolean;
+  stages?: ReadonlyArray<ProcessStage>;
+  repeatStage?: RepeatStage;
+} = {}) {
   return (
     <ol className={styles.flow} style={{ padding: 0, margin: 0 }}>
-      {loop.map((s, i) => (
+      {stages.map((s, i) => (
         <li key={s.id} className={styles.stage}>
           <div className={styles.stageHead}>
             <span className={styles.stageNum}>{String(i + 1).padStart(2, "0")}</span>
@@ -72,15 +92,23 @@ export function ProcessFlow({ linkSkills = true }: { linkSkills?: boolean }) {
       <li className={`${styles.stage} ${styles.repeat}`}>
         <div className={styles.stageHead}>
           <span className={styles.stageNum}>↻</span>
-          <span className={styles.stageName}>{repeat.name}</span>
+          <span className={styles.stageName}>{repeatStage.name}</span>
         </div>
-        <span className={styles.stageQuestion}>{repeat.question}</span>
+        <span className={styles.stageQuestion}>{repeatStage.question}</span>
       </li>
     </ol>
   );
 }
 
-export function LearningTransformation({ example, from = 2 }: { example: Example; from?: number }) {
+export function LearningTransformation({
+  example,
+  from = 2,
+  formLabel = "Form it takes",
+}: {
+  example: Example;
+  from?: number;
+  formLabel?: string;
+}) {
   return (
     <ol className={styles.learning} style={{ padding: "0 0 0 32px", margin: 0 }}>
       {example.steps.map((step, i) => (
@@ -91,7 +119,7 @@ export function LearningTransformation({ example, from = 2 }: { example: Example
             <p className={styles.stepBody}>{step.body}</p>
           </div>
           <div className={styles.stepForm}>
-            <span className="label">Form it takes</span>
+            <span className="label">{formLabel}</span>
             <span className={styles.stepFormValue}>{step.form}</span>
           </div>
         </li>
@@ -100,10 +128,10 @@ export function LearningTransformation({ example, from = 2 }: { example: Example
   );
 }
 
-export function NotEverythingCompounds() {
+export function NotEverythingCompounds({ lines = whatDoesNotCompound }: { lines?: ReadonlyArray<string> } = {}) {
   return (
     <ul className={styles.ladder} style={{ padding: 0, margin: 0 }}>
-      {whatDoesNotCompound.map((line, i) => (
+      {lines.map((line, i) => (
         <li key={line} style={{ ["--i" as string]: i }}>
           {line}
         </li>
@@ -112,10 +140,10 @@ export function NotEverythingCompounds() {
   );
 }
 
-export function DurabilityTest() {
+export function DurabilityTest({ text = durabilityTest }: { text?: string } = {}) {
   return (
     <blockquote className={styles.test} style={{ margin: 0 }}>
-      {durabilityTest}
+      {text}
     </blockquote>
   );
 }
