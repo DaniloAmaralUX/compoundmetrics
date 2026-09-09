@@ -1,0 +1,606 @@
+{
+ "ENTRY:desktop": {
+  "route": "/",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 65
+  },
+  "hero": {
+   "x": 130,
+   "y": 65,
+   "width": 1180,
+   "height": 754
+  },
+  "section:section-0": {
+   "x": 130,
+   "y": 65,
+   "width": 1180,
+   "height": 754
+  },
+  "section:section-1": {
+   "x": 130,
+   "y": 827,
+   "width": 1180,
+   "height": 333
+  },
+  "section:section-2": {
+   "x": 130,
+   "y": 1160,
+   "width": 1180,
+   "height": 1105
+  },
+  "section:section-3": {
+   "x": 130,
+   "y": 2265,
+   "width": 1180,
+   "height": 960
+  },
+  "section:section-4": {
+   "x": 130,
+   "y": 3225,
+   "width": 1180,
+   "height": 818
+  },
+  "section:section-5": {
+   "x": 130,
+   "y": 4043,
+   "width": 1180,
+   "height": 893
+  },
+  "section:section-6": {
+   "x": 130,
+   "y": 4936,
+   "width": 1180,
+   "height": 1019
+  },
+  "footer": {
+   "x": 0,
+   "y": 5954,
+   "width": 1440,
+   "height": 212
+  },
+  "h1": {
+   "x": 178,
+   "y": 232,
+   "width": 791,
+   "height": 329
+  },
+  "primary_action": {
+   "x": 178,
+   "y": 3692,
+   "width": 190,
+   "height": 56
+  },
+  "_page": {
+   "width": 1440,
+   "height": 6166
+  }
+ },
+ "ENTRY:mobile": {
+  "route": "/",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 65
+  },
+  "hero": {
+   "x": 0,
+   "y": 65,
+   "width": 390,
+   "height": 610
+  },
+  "section:section-0": {
+   "x": 0,
+   "y": 65,
+   "width": 390,
+   "height": 610
+  },
+  "section:section-1": {
+   "x": 0,
+   "y": 675,
+   "width": 390,
+   "height": 623
+  },
+  "section:section-2": {
+   "x": 0,
+   "y": 1298,
+   "width": 390,
+   "height": 1175
+  },
+  "section:section-3": {
+   "x": 0,
+   "y": 2474,
+   "width": 390,
+   "height": 1442
+  },
+  "section:section-4": {
+   "x": 0,
+   "y": 3916,
+   "width": 390,
+   "height": 1099
+  },
+  "section:section-5": {
+   "x": 0,
+   "y": 5015,
+   "width": 390,
+   "height": 1195
+  },
+  "section:section-6": {
+   "x": 0,
+   "y": 6210,
+   "width": 390,
+   "height": 1110
+  },
+  "footer": {
+   "x": 0,
+   "y": 7320,
+   "width": 390,
+   "height": 317
+  },
+  "h1": {
+   "x": 20,
+   "y": 168,
+   "width": 350,
+   "height": 196
+  },
+  "primary_action": {
+   "x": 20,
+   "y": 4450,
+   "width": 110,
+   "height": 32
+  },
+  "_page": {
+   "width": 390,
+   "height": 7637
+  }
+ },
+ "DISCOVERY:desktop": {
+  "route": "/resources",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 65
+  },
+  "hero": {
+   "x": 130,
+   "y": 65,
+   "width": 1180,
+   "height": 482
+  },
+  "section:header-0": {
+   "x": 130,
+   "y": 65,
+   "width": 1180,
+   "height": 482
+  },
+  "section:The loop, in order": {
+   "x": 130,
+   "y": 547,
+   "width": 1180,
+   "height": 83
+  },
+  "section:section-2": {
+   "x": 130,
+   "y": 630,
+   "width": 1180,
+   "height": 691
+  },
+  "section:section-3": {
+   "x": 130,
+   "y": 1321,
+   "width": 1180,
+   "height": 334
+  },
+  "section:section-4": {
+   "x": 130,
+   "y": 1656,
+   "width": 1180,
+   "height": 334
+  },
+  "section:section-5": {
+   "x": 130,
+   "y": 1990,
+   "width": 1180,
+   "height": 445
+  },
+  "section:section-6": {
+   "x": 130,
+   "y": 2434,
+   "width": 1180,
+   "height": 334
+  },
+  "section:section-7": {
+   "x": 130,
+   "y": 2769,
+   "width": 1180,
+   "height": 691
+  },
+  "section:Next": {
+   "x": 130,
+   "y": 3460,
+   "width": 1180,
+   "height": 451
+  },
+  "footer": {
+   "x": 0,
+   "y": 3911,
+   "width": 1440,
+   "height": 212
+  },
+  "h1": {
+   "x": 178,
+   "y": 172,
+   "width": 807,
+   "height": 125
+  },
+  "primary_action": {
+   "x": 1185,
+   "y": 352,
+   "width": 31,
+   "height": 21
+  },
+  "_page": {
+   "width": 1440,
+   "height": 4123
+  }
+ },
+ "DISCOVERY:mobile": {
+  "route": "/resources",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 65
+  },
+  "hero": {
+   "x": 0,
+   "y": 65,
+   "width": 390,
+   "height": 516
+  },
+  "section:header-0": {
+   "x": 0,
+   "y": 65,
+   "width": 390,
+   "height": 516
+  },
+  "section:The loop, in order": {
+   "x": 0,
+   "y": 581,
+   "width": 390,
+   "height": 113
+  },
+  "section:section-2": {
+   "x": 0,
+   "y": 694,
+   "width": 390,
+   "height": 1101
+  },
+  "section:section-3": {
+   "x": 0,
+   "y": 1795,
+   "width": 390,
+   "height": 481
+  },
+  "section:section-4": {
+   "x": 0,
+   "y": 2277,
+   "width": 390,
+   "height": 460
+  },
+  "section:section-5": {
+   "x": 0,
+   "y": 2737,
+   "width": 390,
+   "height": 667
+  },
+  "section:section-6": {
+   "x": 0,
+   "y": 3404,
+   "width": 390,
+   "height": 508
+  },
+  "section:section-7": {
+   "x": 0,
+   "y": 3912,
+   "width": 390,
+   "height": 1122
+  },
+  "section:Next": {
+   "x": 0,
+   "y": 5034,
+   "width": 390,
+   "height": 492
+  },
+  "footer": {
+   "x": 0,
+   "y": 5526,
+   "width": 390,
+   "height": 317
+  },
+  "h1": {
+   "x": 20,
+   "y": 148,
+   "width": 350,
+   "height": 71
+  },
+  "primary_action": {
+   "x": 196,
+   "y": 467,
+   "width": 31,
+   "height": 21
+  },
+  "_page": {
+   "width": 390,
+   "height": 5842
+  }
+ },
+ "DETAIL:desktop": {
+  "route": "/resources/cd-interface-review",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 65
+  },
+  "hero": {
+   "x": 130,
+   "y": 65,
+   "width": 1180,
+   "height": 389
+  },
+  "section:header-0": {
+   "x": 130,
+   "y": 65,
+   "width": 1180,
+   "height": 389
+  },
+  "section:div-1": {
+   "x": 130,
+   "y": 454,
+   "width": 1180,
+   "height": 2232
+  },
+  "section:Back": {
+   "x": 130,
+   "y": 2685,
+   "width": 1180,
+   "height": 436
+  },
+  "footer": {
+   "x": 0,
+   "y": 3122,
+   "width": 1440,
+   "height": 212
+  },
+  "h1": {
+   "x": 178,
+   "y": 172,
+   "width": 807,
+   "height": 62
+  },
+  "primary_action": {
+   "x": 885,
+   "y": 519,
+   "width": 37,
+   "height": 19
+  },
+  "_page": {
+   "width": 1440,
+   "height": 3334
+  }
+ },
+ "DETAIL:mobile": {
+  "route": "/resources/cd-interface-review",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 65
+  },
+  "hero": {
+   "x": 0,
+   "y": 65,
+   "width": 390,
+   "height": 433
+  },
+  "section:header-0": {
+   "x": 0,
+   "y": 65,
+   "width": 390,
+   "height": 433
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 498,
+   "width": 390,
+   "height": 5100
+  },
+  "section:Back": {
+   "x": 0,
+   "y": 5597,
+   "width": 390,
+   "height": 277
+  },
+  "footer": {
+   "x": 0,
+   "y": 5874,
+   "width": 390,
+   "height": 317
+  },
+  "h1": {
+   "x": 20,
+   "y": 148,
+   "width": 350,
+   "height": 35
+  },
+  "primary_action": {
+   "x": 20,
+   "y": 3620,
+   "width": 37,
+   "height": 19
+  },
+  "_page": {
+   "width": 390,
+   "height": 6191
+  }
+ },
+ "INTERACTION:desktop": {
+  "route": "/lab",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 65
+  },
+  "hero": {
+   "x": 130,
+   "y": 65,
+   "width": 1180,
+   "height": 420
+  },
+  "section:header-0": {
+   "x": 130,
+   "y": 65,
+   "width": 1180,
+   "height": 420
+  },
+  "section:The Lab": {
+   "x": 130,
+   "y": 485,
+   "width": 1180,
+   "height": 922
+  },
+  "section:section-2": {
+   "x": 130,
+   "y": 1408,
+   "width": 1180,
+   "height": 637
+  },
+  "footer": {
+   "x": 0,
+   "y": 2045,
+   "width": 1440,
+   "height": 212
+  },
+  "form": {
+   "x": 222,
+   "y": 597,
+   "width": 344,
+   "height": 469
+  },
+  "h1": {
+   "x": 178,
+   "y": 172,
+   "width": 807,
+   "height": 62
+  },
+  "primary_action": {
+   "x": 222,
+   "y": 979,
+   "width": 160,
+   "height": 51
+  },
+  "_page": {
+   "width": 1440,
+   "height": 2257
+  }
+ },
+ "INTERACTION:mobile": {
+  "route": "/lab",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 65
+  },
+  "hero": {
+   "x": 0,
+   "y": 65,
+   "width": 390,
+   "height": 554
+  },
+  "section:header-0": {
+   "x": 0,
+   "y": 65,
+   "width": 390,
+   "height": 554
+  },
+  "section:The Lab": {
+   "x": 0,
+   "y": 619,
+   "width": 390,
+   "height": 1942
+  },
+  "section:section-2": {
+   "x": 0,
+   "y": 2561,
+   "width": 390,
+   "height": 686
+  },
+  "footer": {
+   "x": 0,
+   "y": 3247,
+   "width": 390,
+   "height": 317
+  },
+  "form": {
+   "x": 44,
+   "y": 711,
+   "width": 302,
+   "height": 469
+  },
+  "h1": {
+   "x": 20,
+   "y": 167,
+   "width": 350,
+   "height": 71
+  },
+  "primary_action": {
+   "x": 44,
+   "y": 1094,
+   "width": 160,
+   "height": 51
+  },
+  "_page": {
+   "width": 390,
+   "height": 3563
+  }
+ }
+}

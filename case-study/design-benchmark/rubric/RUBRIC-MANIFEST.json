@@ -1,0 +1,35 @@
+{
+  "source_repository": "DaniloAmaralUX/compound-labs-design",
+  "source_sha": "364430b9d553c6b9f87e4ff3cbc0f31eaa5d1a33",
+  "source_commit_date": "2026-07-16T19:04:00Z",
+  "audit_url": "https://compound-labs-design.vercel.app/audit",
+  "audit_production_deployment": "dpl_y6YbQ7RJcAVeF1fjESkj6axyCYWJ",
+  "frozen_at": "2026-09-09T15:32:10.744Z",
+  "version": "v3.6.0",
+  "item_count": 54,
+  "categories": [
+    "fundamentos",
+    "hierarquia",
+    "estilo",
+    "acessibilidade",
+    "navegacao",
+    "carga",
+    "onboarding",
+    "confianca",
+    "formularios"
+  ],
+  "category_titles": {
+    "fundamentos": "Antes de começar",
+    "hierarquia": "Hierarquia visual",
+    "estilo": "Estilo visual",
+    "acessibilidade": "Acessibilidade",
+    "navegacao": "Navegação e orientação",
+    "carga": "Carga cognitiva e feedback",
+    "onboarding": "Onboarding e estados vazios",
+    "confianca": "Social proof e confiança",
+    "formularios": "Formulários"
+  },
+  "sha256": "7c7c691550228276eeca80595d0f55182f033c2dbeefbb3b0b0d10219c78a279",
+  "audit_html_sha256": "11034e8b91c25e61e9b50c8e4335d4624496fcdc54c38d070e63abdbd3947e2a",
+  "rule": "The rubric is frozen before any surface is scored and is not altered during the benchmark. Scores are 'Compound Design Audit Score' = PASS/(PASS+FAIL)×100 with N/A excluded and NOT_VERIFIED excluded from the denominator; coverage = (PASS+FAIL)/(PASS+FAIL+NOT_VERIFIED)×100 is always shown alongside."
+}

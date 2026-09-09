@@ -1,0 +1,56 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: clamp(56px, 9vw, 120px);
+  padding-bottom: clamp(40px, 6vw, 72px);
+}
+.hero h1 {
+  max-width: 14ch;
+}
+.heroLead {
+  max-width: 58ch;
+}
+.demo {
+  padding-bottom: var(--section);
+}
+.demoNote {
+  margin-top: 36px;
+  max-width: 58ch;
+}
+.boundary {
+  padding-block: 8px 48px;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 48px;
+}
+.names {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hairline);
+}
+.nameBig {
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-family: var(--font-mono);
+}
+.evidenceNote {
+  margin-top: 40px;
+}
+.finalCta {
+  margin-top: 40px;
+}
+@media (max-width: 560px) {
+  .names {
+    grid-template-columns: 1fr;
+  }
+}

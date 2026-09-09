@@ -49,8 +49,10 @@ jobs:
         run: npm run typecheck
       - name: lint
         run: npm run lint
-      - name: build
+      - name: build (prebuild fails if generated site content is stale)
         run: npm run build
+      - name: site checks (routes, links, noindex, factual literals, generated content)
+        run: npm run site:check:static
 
   e2-harness:
     # Deterministic gates of the pre-registered benchmark only: mutation self-tests, task and

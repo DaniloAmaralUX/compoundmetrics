@@ -1,0 +1,426 @@
+{
+ "ENTRY:desktop": {
+  "route": "/",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "section:header-0": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 57,
+   "width": 1440,
+   "height": 774
+  },
+  "section:footer-2": {
+   "x": 0,
+   "y": 831,
+   "width": 1440,
+   "height": 69
+  },
+  "footer": {
+   "x": 0,
+   "y": 831,
+   "width": 1440,
+   "height": 69
+  },
+  "h1": {
+   "x": 352,
+   "y": 121,
+   "width": 736,
+   "height": 40
+  },
+  "_page": {
+   "width": 1440,
+   "height": 900
+  }
+ },
+ "ENTRY:mobile": {
+  "route": "/",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "section:header-0": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 57,
+   "width": 390,
+   "height": 736
+  },
+  "section:footer-2": {
+   "x": 0,
+   "y": 793,
+   "width": 390,
+   "height": 117
+  },
+  "footer": {
+   "x": 0,
+   "y": 793,
+   "width": 390,
+   "height": 117
+  },
+  "h1": {
+   "x": 16,
+   "y": 121,
+   "width": 358,
+   "height": 80
+  },
+  "_page": {
+   "width": 390,
+   "height": 910
+  }
+ },
+ "DISCOVERY:desktop": {
+  "route": "/components",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "section:header-0": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 57,
+   "width": 1440,
+   "height": 774
+  },
+  "section:footer-2": {
+   "x": 0,
+   "y": 831,
+   "width": 1440,
+   "height": 69
+  },
+  "footer": {
+   "x": 0,
+   "y": 831,
+   "width": 1440,
+   "height": 69
+  },
+  "h1": {
+   "x": 224,
+   "y": 89,
+   "width": 992,
+   "height": 32
+  },
+  "_page": {
+   "width": 1440,
+   "height": 900
+  }
+ },
+ "DISCOVERY:mobile": {
+  "route": "/components",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "section:header-0": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 57,
+   "width": 390,
+   "height": 815
+  },
+  "section:footer-2": {
+   "x": 0,
+   "y": 872,
+   "width": 390,
+   "height": 117
+  },
+  "footer": {
+   "x": 0,
+   "y": 872,
+   "width": 390,
+   "height": 117
+  },
+  "h1": {
+   "x": 16,
+   "y": 89,
+   "width": 358,
+   "height": 32
+  },
+  "_page": {
+   "width": 390,
+   "height": 989
+  }
+ },
+ "DETAIL:desktop": {
+  "route": "/themes",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "section:header-0": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 57,
+   "width": 1440,
+   "height": 3146
+  },
+  "section:footer-2": {
+   "x": 0,
+   "y": 3203,
+   "width": 1440,
+   "height": 69
+  },
+  "footer": {
+   "x": 0,
+   "y": 3203,
+   "width": 1440,
+   "height": 69
+  },
+  "h1": {
+   "x": 224,
+   "y": 89,
+   "width": 992,
+   "height": 32
+  },
+  "_page": {
+   "width": 1440,
+   "height": 3272
+  }
+ },
+ "DETAIL:mobile": {
+  "route": "/themes",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "section:header-0": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 57,
+   "width": 390,
+   "height": 8642
+  },
+  "section:footer-2": {
+   "x": 0,
+   "y": 8699,
+   "width": 390,
+   "height": 117
+  },
+  "footer": {
+   "x": 0,
+   "y": 8699,
+   "width": 390,
+   "height": 117
+  },
+  "h1": {
+   "x": 16,
+   "y": 89,
+   "width": 358,
+   "height": 32
+  },
+  "_page": {
+   "width": 390,
+   "height": 8816
+  }
+ },
+ "INTERACTION:desktop": {
+  "route": "/themes",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "section:header-0": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 57,
+   "width": 1440,
+   "height": 3146
+  },
+  "section:footer-2": {
+   "x": 0,
+   "y": 3203,
+   "width": 1440,
+   "height": 69
+  },
+  "footer": {
+   "x": 0,
+   "y": 3203,
+   "width": 1440,
+   "height": 69
+  },
+  "h1": {
+   "x": 224,
+   "y": 89,
+   "width": 992,
+   "height": 32
+  },
+  "_page": {
+   "width": 1440,
+   "height": 3272
+  }
+ },
+ "INTERACTION:mobile": {
+  "route": "/themes",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "section:header-0": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 57,
+   "width": 390,
+   "height": 8642
+  },
+  "section:footer-2": {
+   "x": 0,
+   "y": 8699,
+   "width": 390,
+   "height": 117
+  },
+  "footer": {
+   "x": 0,
+   "y": 8699,
+   "width": 390,
+   "height": 117
+  },
+  "h1": {
+   "x": 16,
+   "y": 89,
+   "width": 358,
+   "height": 32
+  },
+  "_page": {
+   "width": 390,
+   "height": 8816
+  }
+ }
+}

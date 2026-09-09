@@ -1,0 +1,101 @@
+.wrap {
+  position: relative;
+  display: inline;
+}
+.trigger {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0 2px;
+  margin: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--hairline-strong);
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+  border-radius: 2px;
+  transition: text-decoration-color var(--fast) var(--ease);
+}
+.trigger::after {
+  content: "ⓘ";
+  font-size: 0.72em;
+  margin-left: 0.28em;
+  color: var(--muted);
+  vertical-align: 0.15em;
+}
+.trigger[aria-expanded="true"],
+.trigger:hover {
+  text-decoration-color: var(--accent);
+}
+.pop {
+  position: absolute;
+  z-index: 60;
+  top: calc(100% + 10px);
+  left: 0;
+  width: min(340px, calc(100vw - 2 * var(--gutter)));
+  padding: 16px 18px 14px;
+  background: var(--ground-raised);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 4px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: left;
+  font-weight: 400;
+  color: var(--ink);
+  animation: rise var(--fast) var(--ease);
+}
+.pop.right {
+  left: auto;
+  right: 0;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.popTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.popName {
+  font-weight: 500;
+}
+.popLink {
+  display: inline-flex;
+  gap: 8px;
+  align-items: baseline;
+  color: var(--ink);
+  font-weight: 500;
+  border-bottom: 1px solid var(--hairline-strong);
+  align-self: flex-start;
+  padding-bottom: 2px;
+}
+.popLink i {
+  font-style: normal;
+  color: var(--accent);
+}
+.close {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 2px 4px;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  border-radius: 2px;
+}

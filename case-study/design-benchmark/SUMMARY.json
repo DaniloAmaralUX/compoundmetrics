@@ -1,0 +1,1237 @@
+{
+ "generated_at": "2026-09-09T16:08:55.597Z",
+ "label": "Compound Design Audit Score",
+ "meaning": "performance against the frozen Compound Design Audit v3.6.0 ruler (54 items); not a universal design-quality score",
+ "formula": {
+  "score": "PASS/(PASS+FAIL)×100",
+  "coverage": "(PASS+FAIL)/(PASS+FAIL+NOT_VERIFIED)×100",
+  "na": "excluded"
+ },
+ "rubric_sha256": "7c7c691550228276eeca80595d0f55182f033c2dbeefbb3b0b0d10219c78a279",
+ "milestones": [
+  {
+   "milestone": "V01",
+   "name": "Compound Labs Design (site + /audit)",
+   "tool_ids": [
+    "tool-09"
+   ],
+   "date_range": "2026-07-13 → 2026-07-16",
+   "score": 54.5,
+   "coverage": 41.5,
+   "counts": {
+    "PASS": 12,
+    "FAIL": 10,
+    "N/A": 1,
+    "NOT_VERIFIED": 31
+   },
+   "deterministic_score": 54.5,
+   "judgment_score": null,
+   "categories": {
+    "fundamentos": {
+     "score": null,
+     "coverage": 0
+    },
+    "hierarquia": {
+     "score": 100,
+     "coverage": 28.6
+    },
+    "estilo": {
+     "score": 40,
+     "coverage": 71.4
+    },
+    "acessibilidade": {
+     "score": 87.5,
+     "coverage": 88.9
+    },
+    "navegacao": {
+     "score": 0,
+     "coverage": 60
+    },
+    "carga": {
+     "score": 100,
+     "coverage": 16.7
+    },
+    "onboarding": {
+     "score": null,
+     "coverage": 0
+    },
+    "confianca": {
+     "score": null,
+     "coverage": 0
+    },
+    "formularios": {
+     "score": 0,
+     "coverage": 50
+    }
+   }
+  },
+  {
+   "milestone": "V02",
+   "name": "Studio DS v1 (landing, themes gallery, components)",
+   "tool_ids": [
+    "tool-18"
+   ],
+   "date_range": "2026-08-05 (8 commits, one day)",
+   "score": 61.1,
+   "coverage": 36.7,
+   "counts": {
+    "PASS": 11,
+    "FAIL": 7,
+    "N/A": 5,
+    "NOT_VERIFIED": 31
+   },
+   "deterministic_score": 61.1,
+   "judgment_score": null,
+   "categories": {
+    "fundamentos": {
+     "score": null,
+     "coverage": 0
+    },
+    "hierarquia": {
+     "score": 100,
+     "coverage": 28.6
+    },
+    "estilo": {
+     "score": 60,
+     "coverage": 71.4
+    },
+    "acessibilidade": {
+     "score": 50,
+     "coverage": 88.9
+    },
+    "navegacao": {
+     "score": 50,
+     "coverage": 50
+    },
+    "carga": {
+     "score": 100,
+     "coverage": 16.7
+    },
+    "onboarding": {
+     "score": null,
+     "coverage": 0
+    },
+    "confianca": {
+     "score": null,
+     "coverage": 0
+    },
+    "formularios": {
+     "score": null,
+     "coverage": 0
+    }
+   }
+  },
+  {
+   "milestone": "V03",
+   "name": "Dev Studio UI — authorial rebuild (\"the sea, actually moving\")",
+   "tool_ids": [
+    "tool-12"
+   ],
+   "date_range": "2026-08-13",
+   "score": 45.5,
+   "coverage": 41.5,
+   "counts": {
+    "PASS": 10,
+    "FAIL": 12,
+    "N/A": 1,
+    "NOT_VERIFIED": 31
+   },
+   "deterministic_score": 45.5,
+   "judgment_score": null,
+   "categories": {
+    "fundamentos": {
+     "score": null,
+     "coverage": 0
+    },
+    "hierarquia": {
+     "score": 50,
+     "coverage": 28.6
+    },
+    "estilo": {
+     "score": 40,
+     "coverage": 71.4
+    },
+    "acessibilidade": {
+     "score": 75,
+     "coverage": 88.9
+    },
+    "navegacao": {
+     "score": 25,
+     "coverage": 66.7
+    },
+    "carga": {
+     "score": 0,
+     "coverage": 16.7
+    },
+    "onboarding": {
+     "score": null,
+     "coverage": 0
+    },
+    "confianca": {
+     "score": null,
+     "coverage": 0
+    },
+    "formularios": {
+     "score": 0,
+     "coverage": 40
+    }
+   }
+  },
+  {
+   "milestone": "V04",
+   "name": "Studio Dev UI — registry + originals (main 2026-08-24)",
+   "tool_ids": [
+    "tool-12"
+   ],
+   "date_range": "2026-08-22 → 2026-08-24",
+   "score": 31.8,
+   "coverage": 41.5,
+   "counts": {
+    "PASS": 7,
+    "FAIL": 15,
+    "N/A": 1,
+    "NOT_VERIFIED": 31
+   },
+   "deterministic_score": 31.8,
+   "judgment_score": null,
+   "categories": {
+    "fundamentos": {
+     "score": null,
+     "coverage": 0
+    },
+    "hierarquia": {
+     "score": 0,
+     "coverage": 28.6
+    },
+    "estilo": {
+     "score": 40,
+     "coverage": 71.4
+    },
+    "acessibilidade": {
+     "score": 50,
+     "coverage": 88.9
+    },
+    "navegacao": {
+     "score": 25,
+     "coverage": 66.7
+    },
+    "carga": {
+     "score": 0,
+     "coverage": 16.7
+    },
+    "onboarding": {
+     "score": null,
+     "coverage": 0
+    },
+    "confianca": {
+     "score": null,
+     "coverage": 0
+    },
+    "formularios": {
+     "score": 0,
+     "coverage": 40
+    }
+   }
+  },
+  {
+   "milestone": "V05",
+   "name": "Supernova Catálogo (Iconiq preset over Supernova tokens)",
+   "tool_ids": [
+    "tool-20"
+   ],
+   "date_range": "2026-09-06 → 2026-09-09",
+   "score": 43.5,
+   "coverage": 42.6,
+   "counts": {
+    "PASS": 10,
+    "FAIL": 13,
+    "N/A": 0,
+    "NOT_VERIFIED": 31
+   },
+   "deterministic_score": 43.5,
+   "judgment_score": null,
+   "categories": {
+    "fundamentos": {
+     "score": null,
+     "coverage": 0
+    },
+    "hierarquia": {
+     "score": 100,
+     "coverage": 28.6
+    },
+    "estilo": {
+     "score": 40,
+     "coverage": 71.4
+    },
+    "acessibilidade": {
+     "score": 62.5,
+     "coverage": 88.9
+    },
+    "navegacao": {
+     "score": 0,
+     "coverage": 66.7
+    },
+    "carga": {
+     "score": 0,
+     "coverage": 16.7
+    },
+    "onboarding": {
+     "score": null,
+     "coverage": 0
+    },
+    "confianca": {
+     "score": null,
+     "coverage": 0
+    },
+    "formularios": {
+     "score": 33.3,
+     "coverage": 50
+    }
+   }
+  },
+  {
+   "milestone": "V06",
+   "name": "Geist Labs DS (lab-design)",
+   "tool_ids": [
+    "tool-21"
+   ],
+   "date_range": "2026-09-07 → 2026-09-08",
+   "score": 45.5,
+   "coverage": 41.5,
+   "counts": {
+    "PASS": 10,
+    "FAIL": 12,
+    "N/A": 1,
+    "NOT_VERIFIED": 31
+   },
+   "deterministic_score": 45.5,
+   "judgment_score": null,
+   "categories": {
+    "fundamentos": {
+     "score": null,
+     "coverage": 0
+    },
+    "hierarquia": {
+     "score": 50,
+     "coverage": 28.6
+    },
+    "estilo": {
+     "score": 60,
+     "coverage": 71.4
+    },
+    "acessibilidade": {
+     "score": 25,
+     "coverage": 88.9
+    },
+    "navegacao": {
+     "score": 75,
+     "coverage": 66.7
+    },
+    "carga": {
+     "score": 100,
+     "coverage": 16.7
+    },
+    "onboarding": {
+     "score": null,
+     "coverage": 0
+    },
+    "confianca": {
+     "score": null,
+     "coverage": 0
+    },
+    "formularios": {
+     "score": 0,
+     "coverage": 40
+    }
+   }
+  },
+  {
+   "milestone": "V07",
+   "name": "Processo (Lifeline-style timeline)",
+   "tool_ids": [
+    "tool-23"
+   ],
+   "date_range": "2026-09-08",
+   "score": 72.2,
+   "coverage": 36.7,
+   "counts": {
+    "PASS": 13,
+    "FAIL": 5,
+    "N/A": 5,
+    "NOT_VERIFIED": 31
+   },
+   "deterministic_score": 72.2,
+   "judgment_score": null,
+   "categories": {
+    "fundamentos": {
+     "score": null,
+     "coverage": 0
+    },
+    "hierarquia": {
+     "score": 100,
+     "coverage": 16.7
+    },
+    "estilo": {
+     "score": 80,
+     "coverage": 71.4
+    },
+    "acessibilidade": {
+     "score": 75,
+     "coverage": 88.9
+    },
+    "navegacao": {
+     "score": 33.3,
+     "coverage": 60
+    },
+    "carga": {
+     "score": 100,
+     "coverage": 16.7
+    },
+    "onboarding": {
+     "score": null,
+     "coverage": 0
+    },
+    "confianca": {
+     "score": null,
+     "coverage": 0
+    },
+    "formularios": {
+     "score": null,
+     "coverage": 0
+    }
+   }
+  },
+  {
+   "milestone": "V08",
+   "name": "Compound Metrics v0.2.1 (standalone extraction, single page)",
+   "tool_ids": [
+    "tool-24"
+   ],
+   "date_range": "2026-09-09",
+   "score": 63.6,
+   "coverage": 25.6,
+   "counts": {
+    "PASS": 7,
+    "FAIL": 4,
+    "N/A": 11,
+    "NOT_VERIFIED": 32
+   },
+   "deterministic_score": 63.6,
+   "judgment_score": null,
+   "categories": {
+    "fundamentos": {
+     "score": null,
+     "coverage": 0
+    },
+    "hierarquia": {
+     "score": 50,
+     "coverage": 28.6
+    },
+    "estilo": {
+     "score": 25,
+     "coverage": 66.7
+    },
+    "acessibilidade": {
+     "score": 100,
+     "coverage": 80
+    },
+    "navegacao": {
+     "score": null,
+     "coverage": 0
+    },
+    "carga": {
+     "score": 100,
+     "coverage": 16.7
+    },
+    "onboarding": {
+     "score": null,
+     "coverage": 0
+    },
+    "confianca": {
+     "score": null,
+     "coverage": 0
+    },
+    "formularios": {
+     "score": null,
+     "coverage": 0
+    }
+   }
+  },
+  {
+   "milestone": "V09",
+   "name": "Studio Dev UI main 2026-09-09 (hosts the Compound Design v0.2 POC page)",
+   "tool_ids": [
+    "tool-12",
+    "tool-24"
+   ],
+   "date_range": "2026-09-09",
+   "score": 33.3,
+   "coverage": 40.4,
+   "counts": {
+    "PASS": 7,
+    "FAIL": 14,
+    "N/A": 2,
+    "NOT_VERIFIED": 31
+   },
+   "deterministic_score": 33.3,
+   "judgment_score": null,
+   "categories": {
+    "fundamentos": {
+     "score": null,
+     "coverage": 0
+    },
+    "hierarquia": {
+     "score": 0,
+     "coverage": 28.6
+    },
+    "estilo": {
+     "score": 40,
+     "coverage": 71.4
+    },
+    "acessibilidade": {
+     "score": 50,
+     "coverage": 88.9
+    },
+    "navegacao": {
+     "score": 33.3,
+     "coverage": 60
+    },
+    "carga": {
+     "score": 0,
+     "coverage": 16.7
+    },
+    "onboarding": {
+     "score": null,
+     "coverage": 0
+    },
+    "confianca": {
+     "score": null,
+     "coverage": 0
+    },
+    "formularios": {
+     "score": 0,
+     "coverage": 40
+    }
+   }
+  },
+  {
+   "milestone": "V10",
+   "name": "Compound Design v0.3.0-alpha.1 — production",
+   "tool_ids": [
+    "tool-24"
+   ],
+   "date_range": "2026-09-09",
+   "score": 63.6,
+   "coverage": 25.6,
+   "counts": {
+    "PASS": 7,
+    "FAIL": 4,
+    "N/A": 11,
+    "NOT_VERIFIED": 32
+   },
+   "deterministic_score": 63.6,
+   "judgment_score": null,
+   "categories": {
+    "fundamentos": {
+     "score": null,
+     "coverage": 0
+    },
+    "hierarquia": {
+     "score": 50,
+     "coverage": 28.6
+    },
+    "estilo": {
+     "score": 25,
+     "coverage": 66.7
+    },
+    "acessibilidade": {
+     "score": 100,
+     "coverage": 80
+    },
+    "navegacao": {
+     "score": null,
+     "coverage": 0
+    },
+    "carga": {
+     "score": 100,
+     "coverage": 16.7
+    },
+    "onboarding": {
+     "score": null,
+     "coverage": 0
+    },
+    "confianca": {
+     "score": null,
+     "coverage": 0
+    },
+    "formularios": {
+     "score": null,
+     "coverage": 0
+    }
+   }
+  },
+  {
+   "milestone": "V11",
+   "name": "Compound Design — Product Experience (preview, 8 routes)",
+   "tool_ids": [
+    "tool-24"
+   ],
+   "date_range": "2026-09-09",
+   "score": 50,
+   "coverage": 41.5,
+   "counts": {
+    "PASS": 11,
+    "FAIL": 11,
+    "N/A": 1,
+    "NOT_VERIFIED": 31
+   },
+   "deterministic_score": 50,
+   "judgment_score": null,
+   "categories": {
+    "fundamentos": {
+     "score": null,
+     "coverage": 0
+    },
+    "hierarquia": {
+     "score": 0,
+     "coverage": 28.6
+    },
+    "estilo": {
+     "score": 40,
+     "coverage": 71.4
+    },
+    "acessibilidade": {
+     "score": 62.5,
+     "coverage": 88.9
+    },
+    "navegacao": {
+     "score": 66.7,
+     "coverage": 60
+    },
+    "carga": {
+     "score": 100,
+     "coverage": 16.7
+    },
+    "onboarding": {
+     "score": null,
+     "coverage": 0
+    },
+    "confianca": {
+     "score": null,
+     "coverage": 0
+    },
+    "formularios": {
+     "score": 33.3,
+     "coverage": 50
+    }
+   }
+  }
+ ],
+ "average_score_all_milestones": 51.3,
+ "average_score_independent_designs": 50.1,
+ "average_note": "average_score_independent_designs excludes V10 (same design as V08 with v0.3 content). V09 stays because its DISCOVERY/DETAIL/INTERACTION surfaces are its own even though its ENTRY equals V08's.",
+ "delta": {
+  "pairs": [
+   {
+    "from": "V01",
+    "to": "V02",
+    "score_delta": 6.6,
+    "coverage_delta": -4.8,
+    "category_delta": {
+     "fundamentos": null,
+     "hierarquia": 0,
+     "estilo": 20,
+     "acessibilidade": -37.5,
+     "navegacao": 50,
+     "carga": 0,
+     "onboarding": null,
+     "confianca": null,
+     "formularios": null
+    },
+    "improved": [
+     "estilo/tipo-sistema",
+     "estilo/motion",
+     "navegacao/menu-previsivel"
+    ],
+    "regressed": [
+     "estilo/radius",
+     "acessibilidade/foco",
+     "acessibilidade/contraste",
+     "acessibilidade/semantica"
+    ],
+    "removed_failures": [
+     "estilo/tipo-sistema",
+     "estilo/motion",
+     "navegacao/menu-previsivel",
+     "navegacao/links",
+     "formularios/labels",
+     "formularios/tipos-campo",
+     "formularios/input-16px"
+    ],
+    "new_failures": [
+     "estilo/radius",
+     "acessibilidade/foco",
+     "acessibilidade/contraste",
+     "acessibilidade/semantica"
+    ],
+    "same_tool": false
+   },
+   {
+    "from": "V02",
+    "to": "V03",
+    "score_delta": -15.6,
+    "coverage_delta": 4.8,
+    "category_delta": {
+     "fundamentos": null,
+     "hierarquia": -50,
+     "estilo": -20,
+     "acessibilidade": 25,
+     "navegacao": -25,
+     "carga": -100,
+     "onboarding": null,
+     "confianca": null,
+     "formularios": null
+    },
+    "improved": [
+     "acessibilidade/foco",
+     "acessibilidade/contraste",
+     "navegacao/onde-estou"
+    ],
+    "regressed": [
+     "hierarquia/escala-tipo",
+     "estilo/motion",
+     "navegacao/menu-previsivel",
+     "carga/chunks"
+    ],
+    "removed_failures": [
+     "acessibilidade/foco",
+     "acessibilidade/contraste",
+     "navegacao/onde-estou"
+    ],
+    "new_failures": [
+     "hierarquia/escala-tipo",
+     "estilo/motion",
+     "navegacao/menu-previsivel",
+     "navegacao/breadcrumbs",
+     "navegacao/links",
+     "carga/chunks",
+     "formularios/labels",
+     "formularios/input-16px"
+    ],
+    "same_tool": false
+   },
+   {
+    "from": "V03",
+    "to": "V04",
+    "score_delta": -13.7,
+    "coverage_delta": 0,
+    "category_delta": {
+     "fundamentos": null,
+     "hierarquia": -50,
+     "estilo": 0,
+     "acessibilidade": -25,
+     "navegacao": 0,
+     "carga": 0,
+     "onboarding": null,
+     "confianca": null,
+     "formularios": 0
+    },
+    "improved": [],
+    "regressed": [
+     "hierarquia/headings",
+     "acessibilidade/teclado",
+     "acessibilidade/zoom"
+    ],
+    "removed_failures": [],
+    "new_failures": [
+     "hierarquia/headings",
+     "acessibilidade/teclado",
+     "acessibilidade/zoom"
+    ],
+    "same_tool": true
+   },
+   {
+    "from": "V04",
+    "to": "V05",
+    "score_delta": 11.7,
+    "coverage_delta": 1.1,
+    "category_delta": {
+     "fundamentos": null,
+     "hierarquia": 100,
+     "estilo": 0,
+     "acessibilidade": 12.5,
+     "navegacao": -25,
+     "carga": 0,
+     "onboarding": null,
+     "confianca": null,
+     "formularios": 33.3
+    },
+    "improved": [
+     "hierarquia/headings",
+     "hierarquia/escala-tipo",
+     "estilo/motion",
+     "acessibilidade/teclado",
+     "acessibilidade/zoom"
+    ],
+    "regressed": [
+     "estilo/tipo-sistema",
+     "acessibilidade/foco",
+     "navegacao/onde-estou"
+    ],
+    "removed_failures": [
+     "hierarquia/headings",
+     "hierarquia/escala-tipo",
+     "estilo/motion",
+     "acessibilidade/teclado",
+     "acessibilidade/zoom"
+    ],
+    "new_failures": [
+     "estilo/tipo-sistema",
+     "acessibilidade/foco",
+     "navegacao/onde-estou"
+    ],
+    "same_tool": false
+   },
+   {
+    "from": "V05",
+    "to": "V06",
+    "score_delta": 2,
+    "coverage_delta": -1.1,
+    "category_delta": {
+     "fundamentos": null,
+     "hierarquia": -50,
+     "estilo": 20,
+     "acessibilidade": -37.5,
+     "navegacao": 75,
+     "carga": 100,
+     "onboarding": null,
+     "confianca": null,
+     "formularios": -33.3
+    },
+    "improved": [
+     "estilo/tipo-sistema",
+     "navegacao/menu-previsivel",
+     "navegacao/breadcrumbs",
+     "navegacao/links",
+     "carga/chunks"
+    ],
+    "regressed": [
+     "hierarquia/headings",
+     "acessibilidade/teclado",
+     "acessibilidade/contraste",
+     "acessibilidade/zoom"
+    ],
+    "removed_failures": [
+     "estilo/tipo-sistema",
+     "navegacao/menu-previsivel",
+     "navegacao/breadcrumbs",
+     "navegacao/links",
+     "carga/chunks"
+    ],
+    "new_failures": [
+     "hierarquia/headings",
+     "acessibilidade/teclado",
+     "acessibilidade/contraste",
+     "acessibilidade/zoom"
+    ],
+    "same_tool": false
+   },
+   {
+    "from": "V06",
+    "to": "V07",
+    "score_delta": 26.7,
+    "coverage_delta": -4.8,
+    "category_delta": {
+     "fundamentos": null,
+     "hierarquia": 50,
+     "estilo": 20,
+     "acessibilidade": 50,
+     "navegacao": -41.7,
+     "carga": 0,
+     "onboarding": null,
+     "confianca": null,
+     "formularios": null
+    },
+    "improved": [
+     "estilo/espaco-base",
+     "estilo/radius",
+     "acessibilidade/teclado",
+     "acessibilidade/foco",
+     "acessibilidade/contraste",
+     "acessibilidade/zoom"
+    ],
+    "regressed": [
+     "estilo/motion",
+     "navegacao/menu-previsivel"
+    ],
+    "removed_failures": [
+     "hierarquia/headings",
+     "estilo/espaco-base",
+     "estilo/radius",
+     "acessibilidade/teclado",
+     "acessibilidade/foco",
+     "acessibilidade/contraste",
+     "acessibilidade/zoom",
+     "formularios/labels",
+     "formularios/input-16px"
+    ],
+    "new_failures": [
+     "estilo/motion",
+     "navegacao/menu-previsivel"
+    ],
+    "same_tool": false
+   },
+   {
+    "from": "V07",
+    "to": "V08",
+    "score_delta": -8.6,
+    "coverage_delta": -11.1,
+    "category_delta": {
+     "fundamentos": null,
+     "hierarquia": -50,
+     "estilo": -55,
+     "acessibilidade": 25,
+     "navegacao": null,
+     "carga": 0,
+     "onboarding": null,
+     "confianca": null,
+     "formularios": null
+    },
+    "improved": [
+     "acessibilidade/semantica"
+    ],
+    "regressed": [
+     "hierarquia/escala-tipo",
+     "estilo/espaco-base",
+     "estilo/tipo-sistema",
+     "estilo/radius"
+    ],
+    "removed_failures": [
+     "estilo/motion",
+     "acessibilidade/alvos",
+     "acessibilidade/semantica",
+     "navegacao/onde-estou",
+     "navegacao/menu-previsivel"
+    ],
+    "new_failures": [
+     "hierarquia/escala-tipo",
+     "estilo/espaco-base",
+     "estilo/tipo-sistema",
+     "estilo/radius"
+    ],
+    "same_tool": false
+   },
+   {
+    "from": "V08",
+    "to": "V09",
+    "score_delta": -30.3,
+    "coverage_delta": 14.8,
+    "category_delta": {
+     "fundamentos": null,
+     "hierarquia": -50,
+     "estilo": 15,
+     "acessibilidade": -50,
+     "navegacao": null,
+     "carga": -100,
+     "onboarding": null,
+     "confianca": null,
+     "formularios": null
+    },
+    "improved": [],
+    "regressed": [
+     "hierarquia/headings",
+     "acessibilidade/semantica",
+     "acessibilidade/zoom",
+     "carga/chunks"
+    ],
+    "removed_failures": [],
+    "new_failures": [
+     "hierarquia/headings",
+     "acessibilidade/teclado",
+     "acessibilidade/alvos",
+     "acessibilidade/semantica",
+     "acessibilidade/zoom",
+     "navegacao/menu-previsivel",
+     "navegacao/links",
+     "carga/chunks",
+     "formularios/labels",
+     "formularios/input-16px"
+    ],
+    "same_tool": true
+   },
+   {
+    "from": "V09",
+    "to": "V10",
+    "score_delta": 30.3,
+    "coverage_delta": -14.8,
+    "category_delta": {
+     "fundamentos": null,
+     "hierarquia": 50,
+     "estilo": -15,
+     "acessibilidade": 50,
+     "navegacao": null,
+     "carga": 100,
+     "onboarding": null,
+     "confianca": null,
+     "formularios": null
+    },
+    "improved": [
+     "hierarquia/headings",
+     "acessibilidade/semantica",
+     "acessibilidade/zoom",
+     "carga/chunks"
+    ],
+    "regressed": [],
+    "removed_failures": [
+     "hierarquia/headings",
+     "acessibilidade/teclado",
+     "acessibilidade/alvos",
+     "acessibilidade/semantica",
+     "acessibilidade/zoom",
+     "navegacao/menu-previsivel",
+     "navegacao/links",
+     "carga/chunks",
+     "formularios/labels",
+     "formularios/input-16px"
+    ],
+    "new_failures": [],
+    "same_tool": true
+   },
+   {
+    "from": "V10",
+    "to": "V11",
+    "score_delta": -13.6,
+    "coverage_delta": 15.9,
+    "category_delta": {
+     "fundamentos": null,
+     "hierarquia": -50,
+     "estilo": 15,
+     "acessibilidade": -37.5,
+     "navegacao": null,
+     "carga": 0,
+     "onboarding": null,
+     "confianca": null,
+     "formularios": null
+    },
+    "improved": [],
+    "regressed": [
+     "hierarquia/headings",
+     "acessibilidade/zoom"
+    ],
+    "removed_failures": [],
+    "new_failures": [
+     "hierarquia/headings",
+     "acessibilidade/teclado",
+     "acessibilidade/alvos",
+     "acessibilidade/zoom",
+     "navegacao/links",
+     "formularios/labels",
+     "formularios/input-16px"
+    ],
+    "same_tool": true
+   }
+  ],
+  "biggest_improvement": {
+   "from": "V09",
+   "to": "V10",
+   "score_delta": 30.3,
+   "coverage_delta": -14.8,
+   "category_delta": {
+    "fundamentos": null,
+    "hierarquia": 50,
+    "estilo": -15,
+    "acessibilidade": 50,
+    "navegacao": null,
+    "carga": 100,
+    "onboarding": null,
+    "confianca": null,
+    "formularios": null
+   },
+   "improved": [
+    "hierarquia/headings",
+    "acessibilidade/semantica",
+    "acessibilidade/zoom",
+    "carga/chunks"
+   ],
+   "regressed": [],
+   "removed_failures": [
+    "hierarquia/headings",
+    "acessibilidade/teclado",
+    "acessibilidade/alvos",
+    "acessibilidade/semantica",
+    "acessibilidade/zoom",
+    "navegacao/menu-previsivel",
+    "navegacao/links",
+    "carga/chunks",
+    "formularios/labels",
+    "formularios/input-16px"
+   ],
+   "new_failures": [],
+   "same_tool": true
+  },
+  "biggest_regression": {
+   "from": "V08",
+   "to": "V09",
+   "score_delta": -30.3,
+   "coverage_delta": 14.8,
+   "category_delta": {
+    "fundamentos": null,
+    "hierarquia": -50,
+    "estilo": 15,
+    "acessibilidade": -50,
+    "navegacao": null,
+    "carga": -100,
+    "onboarding": null,
+    "confianca": null,
+    "formularios": null
+   },
+   "improved": [],
+   "regressed": [
+    "hierarquia/headings",
+    "acessibilidade/semantica",
+    "acessibilidade/zoom",
+    "carga/chunks"
+   ],
+   "removed_failures": [],
+   "new_failures": [
+    "hierarquia/headings",
+    "acessibilidade/teclado",
+    "acessibilidade/alvos",
+    "acessibilidade/semantica",
+    "acessibilidade/zoom",
+    "navegacao/menu-previsivel",
+    "navegacao/links",
+    "carga/chunks",
+    "formularios/labels",
+    "formularios/input-16px"
+   ],
+   "same_tool": true
+  },
+  "most_persistent_failures": [
+   {
+    "id": "estilo/espaco-base",
+    "fails": 10,
+    "of": 11
+   },
+   {
+    "id": "acessibilidade/alvos",
+    "fails": 9,
+    "of": 11
+   },
+   {
+    "id": "estilo/radius",
+    "fails": 9,
+    "of": 11
+   },
+   {
+    "id": "formularios/labels",
+    "fails": 7,
+    "of": 11
+   },
+   {
+    "id": "formularios/input-16px",
+    "fails": 7,
+    "of": 11
+   },
+   {
+    "id": "acessibilidade/semantica",
+    "fails": 7,
+    "of": 11
+   },
+   {
+    "id": "estilo/tipo-sistema",
+    "fails": 6,
+    "of": 11
+   },
+   {
+    "id": "navegacao/menu-previsivel",
+    "fails": 6,
+    "of": 11
+   },
+   {
+    "id": "navegacao/links",
+    "fails": 6,
+    "of": 11
+   },
+   {
+    "id": "hierarquia/escala-tipo",
+    "fails": 6,
+    "of": 11
+   }
+  ],
+  "category_improved_most": {
+   "category": "navegacao",
+   "first": 0,
+   "last": 66.7,
+   "delta": 66.7
+  },
+  "category_improved_least": {
+   "category": "hierarquia",
+   "first": 100,
+   "last": 0,
+   "delta": -100
+  },
+  "first_vs_last": {
+   "from": "V01",
+   "to": "V11",
+   "score_delta": -4.5
+  }
+ },
+ "chronological_trend": [
+  {
+   "milestone": "V01",
+   "score": 54.5,
+   "coverage": 41.5
+  },
+  {
+   "milestone": "V02",
+   "score": 61.1,
+   "coverage": 36.7
+  },
+  {
+   "milestone": "V03",
+   "score": 45.5,
+   "coverage": 41.5
+  },
+  {
+   "milestone": "V04",
+   "score": 31.8,
+   "coverage": 41.5
+  },
+  {
+   "milestone": "V05",
+   "score": 43.5,
+   "coverage": 42.6
+  },
+  {
+   "milestone": "V06",
+   "score": 45.5,
+   "coverage": 41.5
+  },
+  {
+   "milestone": "V07",
+   "score": 72.2,
+   "coverage": 36.7
+  },
+  {
+   "milestone": "V08",
+   "score": 63.6,
+   "coverage": 25.6
+  },
+  {
+   "milestone": "V09",
+   "score": 33.3,
+   "coverage": 40.4
+  },
+  {
+   "milestone": "V10",
+   "score": 63.6,
+   "coverage": 25.6
+  },
+  {
+   "milestone": "V11",
+   "score": 50,
+   "coverage": 41.5
+  }
+ ]
+}

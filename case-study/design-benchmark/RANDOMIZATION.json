@@ -1,0 +1,21 @@
+{
+ "seed": "bf990210267e2911",
+ "generated_at": "2026-09-09T15:52:12.678Z",
+ "labels": [
+  "DESIGN-A",
+  "DESIGN-B",
+  "DESIGN-C",
+  "DESIGN-D",
+  "DESIGN-E",
+  "DESIGN-F",
+  "DESIGN-G",
+  "DESIGN-H",
+  "DESIGN-I",
+  "DESIGN-J",
+  "DESIGN-K"
+ ],
+ "count": 11,
+ "note": "Order and labels are public. The label→milestone mapping lives in RANDOMIZATION.mapping.json and is revealed only after judgment.json files are frozen (their SHA-256 is recorded in RANDOMIZATION.json by aggregate.mjs before reveal).",
+ "judgment_frozen": null,
+ "mapping_revealed": false
+}

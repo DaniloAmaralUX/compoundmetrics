@@ -1,0 +1,498 @@
+{
+ "milestone": "V06",
+ "build": "M08",
+ "name": "Geist Labs DS (lab-design)",
+ "tool_ids": [
+  "tool-21"
+ ],
+ "tools": [
+  "Geist Labs DS (lab-design, lab-design-timeline)"
+ ],
+ "repository": "DaniloAmaralUX/geistlabsds",
+ "source_sha": "da0840cde632a6e2fc99a23371097d828211eba2",
+ "representative_url": "https://lab-design.vercel.app/ (project created 2026-09-08)",
+ "equivalent_deployments": [
+  "lab-design-timeline project created 2026-09-08 (timeline as a separate app over Lifeline; not captured)"
+ ],
+ "date_range": "2026-09-07 → 2026-09-08",
+ "captured_at": "2026-09-09T15:49:29.780Z",
+ "capture_method": "exact commit built locally (next start); playwright-core 1.63.0; Chromium 141.0.7390.37; reducedMotion=reduce, animations=disabled, deviceScaleFactor=1, colorScheme=dark",
+ "build_adjustments": [],
+ "viewports": {
+  "desktop": {
+   "width": 1440,
+   "height": 900
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "surfaces": {
+  "ENTRY": "/",
+  "DISCOVERY": "/docs/fundamentos",
+  "DETAIL": "/docs/components/button",
+  "INTERACTION": "/blocos/playground",
+  "MOBILE_ENTRY": "/"
+ },
+ "visual_fingerprint": {
+  "ahash16_entry_top_band": "f41f0000000003c003c007e007e007e0030003c00000000073d2000000007b9e",
+  "dom_signature": "2c7a69f380d7b1f3d22b3b492c196bf115ecf94486bed60148638c4af0c92d2b",
+  "css_sha256": "ae427b4896e04f0c830bf2c71b33136964b0cb192c7921a198e4326805ae8f3d",
+  "typography": "fb2fab0e3154472e5fc462c81fc00a495f359bcb3b23c1a29f847d6711315933",
+  "color": "5aa67e5152b39ace83542d4ac0031ffe4f0c1316c6dd5255622f1275dc0eb2d4",
+  "section_order": [
+   "script",
+   "section.container-wrapper",
+   "section.container-wrapper"
+  ],
+  "nav_links": [
+   "LAB / DESIGN",
+   "Docs",
+   "Fundamentos",
+   "Componentes",
+   "Blocos",
+   "Temas",
+   "Roteiro",
+   "GitHub"
+  ],
+  "landmarks": [
+   "header",
+   "nav",
+   "main",
+   "section",
+   "section",
+   "footer",
+   "section"
+  ]
+ },
+ "fingerprint_detail": {
+  "ENTRY": {
+   "font_families": [
+    "Geist×61",
+    "Geist Mono×4",
+    "ui-monospace×2"
+   ],
+   "font_sizes": [
+    "14×36",
+    "13×21",
+    "12×7",
+    "16×1",
+    "60×1",
+    "20×1"
+   ],
+   "font_weights": [
+    "500×46",
+    "400×19",
+    "600×2"
+   ],
+   "text_colors": [
+    "lab(91.88 0.0000298023 -0.0000119209)×29",
+    "lab(67.52 -0.0000298023 0)×28",
+    "lab(92.4222 -26.4702 12.9427)×3",
+    "lab(1.98454 0 0)×2",
+    "rgb(255, 255, 255)×2",
+    "oklab(0.799998 -0.00000801682 0.0000187755 / 0.6)×1",
+    "lab(86.15 -4.04379 -21.0797)×1",
+    "lab(91.7203 -0.505269 49.9084)×1"
+   ],
+   "background_colors": [
+    "lab(1.98454 0 0)×15",
+    "lab(7.22637 -0.0000149012 0)×6",
+    "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)×2",
+    "lab(91.88 0.0000298023 -0.0000119209)×2",
+    "lab(15.6845 -20.4225 11.7249)×2",
+    "lab(15.6723 8.86232 -32.2945)×1",
+    "oklab(0.279999 -0.00000278652 0.00000657141 / 0.3)×1",
+    "lab(55.4814 75.0732 48.8528)×1"
+   ],
+   "radii": [
+    "5px×17",
+    "6px×13",
+    "12px×9",
+    "4px×2",
+    "3.35544e+07px×2",
+    "8px×2"
+   ],
+   "section_order": [
+    "script",
+    "section.container-wrapper",
+    "section.container-wrapper"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "main",
+    "section",
+    "section",
+    "footer",
+    "section"
+   ],
+   "headings": [
+    "h1:LAB / DESIGN"
+   ],
+   "nav_links": [
+    "LAB / DESIGN",
+    "Docs",
+    "Fundamentos",
+    "Componentes",
+    "Blocos",
+    "Temas",
+    "Roteiro",
+    "GitHub"
+   ],
+   "title": "LAB / DESIGN - Fundamentos, componentes, blocos e temas",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:33283/_next/static/chunks/16.tr1orbzkks.css",
+    "http://127.0.0.1:33283/_next/static/chunks/06htphok9_~l_.css"
+   ]
+  },
+  "DISCOVERY": {
+   "font_families": [
+    "Geist×81",
+    "Geist Mono×2"
+   ],
+   "font_sizes": [
+    "13×47",
+    "15×19",
+    "12×8",
+    "14×4",
+    "16×2",
+    "20×2",
+    "36×1"
+   ],
+   "font_weights": [
+    "500×61",
+    "400×21",
+    "600×1"
+   ],
+   "text_colors": [
+    "lab(91.88 0.0000298023 -0.0000119209)×44",
+    "lab(84.92 0 -0.0000119209)×24",
+    "lab(67.52 -0.0000298023 0)×14",
+    "oklab(0.799998 -0.00000801682 0.0000187755 / 0.6)×1"
+   ],
+   "background_colors": [
+    "lab(1.98454 0 0)×10",
+    "lab(7.22637 -0.0000149012 0)×3",
+    "lab(11.84 0 0)×3",
+    "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)×2",
+    "oklab(0.929998 -0.00000911951 0.0000216961 / 0.05)×1"
+   ],
+   "radii": [
+    "6px×35",
+    "5px×18",
+    "4px×2",
+    "8px×1"
+   ],
+   "section_order": [
+    "div.container-wrapper"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "main",
+    "footer",
+    "section"
+   ],
+   "headings": [
+    "h1:Fundamentos",
+    "h2:Princípios",
+    "h2:Páginas"
+   ],
+   "nav_links": [
+    "LAB / DESIGN",
+    "Docs",
+    "Fundamentos",
+    "Componentes",
+    "Blocos",
+    "Temas",
+    "Roteiro",
+    "GitHub"
+   ],
+   "title": "Fundamentos | LAB / DESIGN",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:33283/_next/static/chunks/16.tr1orbzkks.css",
+    "http://127.0.0.1:33283/_next/static/chunks/06htphok9_~l_.css"
+   ]
+  },
+  "DETAIL": {
+   "font_families": [
+    "ui-monospace×443",
+    "Geist×140",
+    "Geist Mono×39"
+   ],
+   "font_sizes": [
+    "14×473",
+    "13×115",
+    "20×11",
+    "15×11",
+    "12×8",
+    "16×3",
+    "36×1"
+   ],
+   "font_weights": [
+    "400×512",
+    "500×106",
+    "700×3",
+    "600×1"
+   ],
+   "text_colors": [
+    "rgb(225, 228, 232)×179",
+    "rgb(249, 117, 131)×97",
+    "lab(91.88 0.0000298023 -0.0000119209)×65",
+    "lab(84.92 0 -0.0000119209)×65",
+    "rgb(121, 184, 255)×55",
+    "rgb(179, 146, 240)×52",
+    "rgb(158, 203, 255)×45",
+    "lab(67.52 -0.0000298023 0)×36"
+   ],
+   "background_colors": [
+    "lab(7.22637 -0.0000149012 0)×59",
+    "lab(1.98454 0 0)×28",
+    "lab(91.88 0.0000298023 -0.0000119209)×8",
+    "lab(16.48 0 0)×7",
+    "lab(11.84 0 0)×3",
+    "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)×2",
+    "lab(55.4814 75.0732 48.8528)×2",
+    "oklab(0.929998 -0.00000911951 0.0000216961 / 0.05)×1"
+   ],
+   "radii": [
+    "6px×98",
+    "5px×36",
+    "8px×11",
+    "12px×8",
+    "0px 0px 8px 8px×7",
+    "4px×2",
+    "3.35544e+07px×1"
+   ],
+   "section_order": [
+    "div.container-wrapper"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "main",
+    "footer",
+    "section"
+   ],
+   "headings": [
+    "h1:Button",
+    "h2:Instalação",
+    "h2:Uso",
+    "h2:Intenções",
+    "h2:Tamanhos",
+    "h2:Formas",
+    "h2:Prefixo e sufixo",
+    "h2:Carregando",
+    "h2:Desabilitado",
+    "h2:Props",
+    "h2:Acessibilidade",
+    "h2:Notas de implementação"
+   ],
+   "nav_links": [
+    "LAB / DESIGN",
+    "Docs",
+    "Fundamentos",
+    "Componentes",
+    "Blocos",
+    "Temas",
+    "Roteiro",
+    "GitHub"
+   ],
+   "title": "Button | LAB / DESIGN",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:33283/_next/static/chunks/16.tr1orbzkks.css",
+    "http://127.0.0.1:33283/_next/static/chunks/06htphok9_~l_.css"
+   ]
+  },
+  "INTERACTION": {
+   "font_families": [
+    "Geist×18"
+   ],
+   "font_sizes": [
+    "14×17",
+    "18×1"
+   ],
+   "font_weights": [
+    "500×14",
+    "400×3",
+    "600×1"
+   ],
+   "text_colors": [
+    "lab(91.88 0.0000298023 -0.0000119209)×12",
+    "lab(67.52 -0.0000298023 0)×5",
+    "lab(1.98454 0 0)×1"
+   ],
+   "background_colors": [
+    "lab(1.98454 0 0)×11",
+    "lab(7.22637 -0.0000149012 0)×4",
+    "lab(91.88 0.0000298023 -0.0000119209)×4",
+    "oklab(0.279999 -0.00000278652 0.00000657141 / 0.3)×2",
+    "lab(16.48 0 0)×1"
+   ],
+   "radii": [
+    "6px×15",
+    "3.35544e+07px×6",
+    "8px×1"
+   ],
+   "section_order": [
+    "div",
+    "script",
+    "div.min-h-svh",
+    "section",
+    "script#_R_",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script"
+   ],
+   "landmarks": [
+    "section"
+   ],
+   "headings": [
+    "h2:Playground"
+   ],
+   "nav_links": [],
+   "title": "Prévia · Playground | LAB / DESIGN",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:33283/_next/static/chunks/16.tr1orbzkks.css",
+    "http://127.0.0.1:33283/_next/static/chunks/06htphok9_~l_.css"
+   ]
+  }
+ },
+ "notes": [],
+ "files": {
+  "surfaces/ENTRY-desktop.png": {
+   "sha256": "3ff6b438c6c0910adf334bce5d513be3c407cf0120e760362cdffb8941b8d1e6",
+   "bytes": 135397
+  },
+  "desktop-full.png": {
+   "sha256": "3ff6b438c6c0910adf334bce5d513be3c407cf0120e760362cdffb8941b8d1e6",
+   "bytes": 135397
+  },
+  "surfaces/ENTRY-desktop-first-screen.png": {
+   "sha256": "9fb0fe332c5e5e5dfa3fe416d79f15c9183592dd6f49c2fa0877ea82c240b876",
+   "bytes": 94194
+  },
+  "states/ENTRY-focus-first.png": {
+   "sha256": "1162728f17a3fccc0a3829fd53e4ad4b9471529ef6eb0db23ee9d4ed3f4aa9c8",
+   "bytes": 96301
+  },
+  "states/ENTRY-hover-first.png": {
+   "sha256": "ddab581d92d49d3d364d71a6f6b7a939645a9c79d8df5ee2427b903cac37c57d",
+   "bytes": 96397
+  },
+  "surfaces/ENTRY-mobile.png": {
+   "sha256": "2497fe53150cbd7abeeb31703ffbcc4002a449669142f7fb4bffa5d850bc519e",
+   "bytes": 110064
+  },
+  "mobile-full.png": {
+   "sha256": "2497fe53150cbd7abeeb31703ffbcc4002a449669142f7fb4bffa5d850bc519e",
+   "bytes": 110064
+  },
+  "surfaces/ENTRY-mobile-first-screen.png": {
+   "sha256": "3fa96aa3b71e8571ff9a127ff07124826118bc2c0849024f044cf8c68ee56139",
+   "bytes": 33718
+  },
+  "states/ENTRY-mobile-nav-open.png": {
+   "sha256": "a247c76603aa50c3b53ee9a484dae459de0d420fdd14f3b4e86f27667acc6fab",
+   "bytes": 49031
+  },
+  "surfaces/DISCOVERY-desktop.png": {
+   "sha256": "240f49e659043819650e7bd80c2658e773a1e0c1534caa17d17f831787ba3a09",
+   "bytes": 168179
+  },
+  "surfaces/DISCOVERY-desktop-first-screen.png": {
+   "sha256": "1d57e94a0351acbd9981868dc689410892b5847963e0cc62177f4137910d1786",
+   "bytes": 154930
+  },
+  "states/DISCOVERY-focus-first.png": {
+   "sha256": "03b5a9f302bf30e3fbcbbc1ffcd8760ad82b4480a59b26abf4fe2e078c5491c8",
+   "bytes": 155687
+  },
+  "states/DISCOVERY-hover-first.png": {
+   "sha256": "8de373cfff272bf6fa043b9269b21631b56da3d017b7b954d26b9bfb82a89a4e",
+   "bytes": 156208
+  },
+  "surfaces/DISCOVERY-mobile.png": {
+   "sha256": "2db282fd5fd6c3be39378bfaed5ab442532db9c71596f866498a5026c3746e94",
+   "bytes": 135236
+  },
+  "surfaces/DISCOVERY-mobile-first-screen.png": {
+   "sha256": "7f0bc7d9e230cc34a7ab907b132b187d8635670f46932d4c42970764320a56c4",
+   "bytes": 80944
+  },
+  "states/DISCOVERY-mobile-nav-open.png": {
+   "sha256": "4a62fe802c35a44d0b00c2266e0e3811661f234f6eb9a1d2600e1337d88d7c1e",
+   "bytes": 55748
+  },
+  "surfaces/DETAIL-desktop.png": {
+   "sha256": "904d15643a9b52e12bac9b6fa91eda13076892b6099b9b2a0911c5f24c3b6f39",
+   "bytes": 516940
+  },
+  "surfaces/DETAIL-desktop-first-screen.png": {
+   "sha256": "47a9a7e3161092111dd4112b95593caf9f722e167b9f791fb4fce33f5b953d2c",
+   "bytes": 101900
+  },
+  "states/DETAIL-focus-first.png": {
+   "sha256": "59a088eb68eb079955739eaa1b394f2f30fd160535e2274e3e1366dad662574b",
+   "bytes": 123548
+  },
+  "states/DETAIL-hover-first.png": {
+   "sha256": "502539e135902e081fc7df78dc9e23d06914210232d37f6a511fe651b8aefefb",
+   "bytes": 123726
+  },
+  "surfaces/DETAIL-mobile.png": {
+   "sha256": "d88fb9dc21a00407450af39deae484d541a568e9a4c4042c2b57e756e0020159",
+   "bytes": 310644
+  },
+  "surfaces/DETAIL-mobile-first-screen.png": {
+   "sha256": "b8cad87a7d916c30c96e9718294f17927a55d657148a901c9d608ffba6a9b815",
+   "bytes": 55595
+  },
+  "states/DETAIL-mobile-nav-open.png": {
+   "sha256": "e5bd03f34e5394f0cdcb4942be370e40b85998bea46e6c27e26d3a7329ed6232",
+   "bytes": 50306
+  },
+  "surfaces/INTERACTION-desktop.png": {
+   "sha256": "3544c0c62058af017141b635f5ad037abf2c118264006dc38e20916b2937923f",
+   "bytes": 34261
+  },
+  "surfaces/INTERACTION-desktop-first-screen.png": {
+   "sha256": "3544c0c62058af017141b635f5ad037abf2c118264006dc38e20916b2937923f",
+   "bytes": 34261
+  },
+  "states/INTERACTION-focus-first.png": {
+   "sha256": "d2cfa1e6b30392ed3f056bf2322a075910e3e7f44f7cc9018036f94535467a36",
+   "bytes": 34994
+  },
+  "surfaces/INTERACTION-mobile.png": {
+   "sha256": "15a8f4fcddbae42e05b2ed7cda484b329747bdd6e637007969b0b0f5a78c8e49",
+   "bytes": 15809
+  },
+  "surfaces/INTERACTION-mobile-first-screen.png": {
+   "sha256": "6f7727613500fbe378899cb105960d5f8508846bfc0ba573103577d975ef2e37",
+   "bytes": 14782
+  },
+  "states/INTERACTION-mobile-nav-open.png": {
+   "sha256": "5212b86578fd349d184f0f1839da93561e384ff2a1b72a50b8e5d400a81f2010",
+   "bytes": 31244
+  },
+  "sections.json": {
+   "sha256": "a0f88bdd5768b6860d9f68818b826278af992f99b38e5961d048729af29c135e",
+   "bytes": 4609
+  }
+ }
+}

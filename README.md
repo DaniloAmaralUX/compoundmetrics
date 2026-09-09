@@ -119,6 +119,7 @@ Every check here is deterministic, offline, and never calls a model.
 npm run cd:all        # registry, contract suite, plugin, claim guard, self-tests
 npm run cd:setup-check
 npm run typecheck && npm run lint && npm run build
+npm run site:check    # the site: routes, links, factual literals, overflow at five widths, axe, keyboard
 ```
 
 ## Provenance

@@ -1,0 +1,906 @@
+{
+ "milestone": "V06",
+ "build": "M08",
+ "source_sha": "da0840cde632a6e2fc99a23371097d828211eba2",
+ "run_at": "2026-09-09T15:49:54.227Z",
+ "instrument": "cl-audit playbook (compound-labs-design@364430b, skills/compound-labs-design/references/audit-playbook.md) — deterministic pattern subset; Phase-3 vetting by reading is recorded as NOT_VERIFIED for categories with no static rule",
+ "files_scanned": 268,
+ "totals": {
+  "hover": 11,
+  "gatedHover": 0,
+  "tabular": 15,
+  "reduced": 3,
+  "anim": 149,
+  "numbers": 17058
+ },
+ "categories": {
+  "1-hierarquia": {
+   "state": "NOT_VERIFIED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "2-tipografia": {
+   "state": "CHECKED",
+   "findings": 46,
+   "files": 25,
+   "high": 0
+  },
+  "3-cor": {
+   "state": "CHECKED",
+   "findings": 4,
+   "files": 2,
+   "high": 0
+  },
+  "4-superficies": {
+   "state": "CHECKED",
+   "findings": 24,
+   "files": 17,
+   "high": 24
+  },
+  "5-motion-easing": {
+   "state": "CHECKED",
+   "findings": 13,
+   "files": 4,
+   "high": 7
+  },
+  "6-motion-physics": {
+   "state": "CHECKED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "7-performance": {
+   "state": "CHECKED",
+   "findings": 5,
+   "files": 4,
+   "high": 0
+  },
+  "8-acessibilidade": {
+   "state": "CHECKED",
+   "findings": 1,
+   "files": 1,
+   "high": 0
+  }
+ },
+ "findings": [
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "app/(app)/docs/[[...slug]]/page.tsx",
+   "line": 103,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "app/og/docs/[...slug]/route.tsx",
+   "line": 43,
+   "snippet": "text-[40px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "app/og/route.tsx",
+   "line": 33,
+   "snippet": "text-[40px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/acervo-supernova.tsx",
+   "line": 16,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/acervo-supernova.tsx",
+   "line": 46,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/acervo-supernova.tsx",
+   "line": 171,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/blocks-list.tsx",
+   "line": 52,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/color-scale.tsx",
+   "line": 30,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/color-scale.tsx",
+   "line": 41,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/color-scale.tsx",
+   "line": 72,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/color-scale.tsx",
+   "line": 73,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/roadmap-table.tsx",
+   "line": 50,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/roadmap-table.tsx",
+   "line": 55,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/roadmap-table.tsx",
+   "line": 86,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/roadmap-table.tsx",
+   "line": 100,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/roadmap-table.tsx",
+   "line": 127,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/semantic-tokens.tsx",
+   "line": 53,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/spacing-scale.tsx",
+   "line": 7,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/spacing-scale.tsx",
+   "line": 30,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/theme-swatches.tsx",
+   "line": 23,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/themes-gallery.tsx",
+   "line": 51,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/type-scale.tsx",
+   "line": 12,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/type-scale.tsx",
+   "line": 13,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/docs/type-scale.tsx",
+   "line": 30,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/logo.tsx",
+   "line": 29,
+   "snippet": "#0070f3",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/logo.tsx",
+   "line": 55,
+   "snippet": "#0070f3",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "components/mobile-nav.tsx",
+   "line": 104,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "components/mobile-nav.tsx",
+   "line": 110,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/accordion.tsx",
+   "line": 50,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "components/ui/accordion.tsx",
+   "line": 50,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/ui/badge.tsx",
+   "line": 107,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/ui/badge.tsx",
+   "line": 109,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/ui/button.tsx",
+   "line": 39,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/button.tsx",
+   "line": 23,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/checkbox.tsx",
+   "line": 16,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/ui/input.tsx",
+   "line": 20,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/ui/input.tsx",
+   "line": 69,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/ui/input.tsx",
+   "line": 116,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/ui/input.tsx",
+   "line": 121,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/input.tsx",
+   "line": 101,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/native-select.tsx",
+   "line": 33,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/select.tsx",
+   "line": 39,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "linear-ui",
+   "severity": "LOW",
+   "file": "components/ui/sidebar.tsx",
+   "line": 233,
+   "snippet": "transition-[width] duration-200 ease-linear",
+   "description": "linear easing on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "linear-ui",
+   "severity": "LOW",
+   "file": "components/ui/sidebar.tsx",
+   "line": 244,
+   "snippet": "transition-[left,right,width] duration-200 ease-linear",
+   "description": "linear easing on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "linear-ui",
+   "severity": "LOW",
+   "file": "components/ui/sidebar.tsx",
+   "line": 316,
+   "snippet": "transition-all ease-linear",
+   "description": "linear easing on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "linear-ui",
+   "severity": "LOW",
+   "file": "components/ui/sidebar.tsx",
+   "line": 429,
+   "snippet": "transition-[margin,opacity] duration-200 ease-linear",
+   "description": "linear easing on UI transitions"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "components/ui/sidebar.tsx",
+   "line": 316,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/switch.tsx",
+   "line": 15,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "components/ui/switch.tsx",
+   "line": 15,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/tabs.tsx",
+   "line": 70,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/textarea.tsx",
+   "line": 11,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/toggle.tsx",
+   "line": 12,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "constants/site.ts",
+   "line": 50,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "constants/site.ts",
+   "line": 51,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "examples/prompt-input-agents.tsx",
+   "line": 26,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "examples/prompt-input-menu.tsx",
+   "line": 85,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "examples/prompt-input-settings.tsx",
+   "line": 81,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "examples/prompt-input.tsx",
+   "line": 17,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "lib/highlight-code.ts",
+   "line": 76,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "mdx-components.tsx",
+   "line": 224,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "mdx-components.tsx",
+   "line": 375,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/new-york/badge.tsx",
+   "line": 107,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/new-york/badge.tsx",
+   "line": 109,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "linear-ui",
+   "severity": "LOW",
+   "file": "registry/new-york/blocks/admin-dashboard/components/site-header.tsx",
+   "line": 7,
+   "snippet": "transition-[width,height] ease-linear",
+   "description": "linear easing on UI transitions"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/new-york/button.tsx",
+   "line": 34,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "registry/new-york/button.tsx",
+   "line": 18,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/new-york/input.tsx",
+   "line": 20,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/new-york/input.tsx",
+   "line": 69,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/new-york/input.tsx",
+   "line": 116,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/new-york/input.tsx",
+   "line": 121,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "registry/new-york/input.tsx",
+   "line": 101,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/new-york/note.tsx",
+   "line": 64,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/new-york/prompt-input.tsx",
+   "line": 330,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/new-york/prompt-input.tsx",
+   "line": 573,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "registry/new-york/prompt-input.tsx",
+   "line": 218,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "registry/new-york/prompt-input.tsx",
+   "line": 224,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "registry/new-york/prompt-input.tsx",
+   "line": 230,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "registry/new-york/prompt-input.tsx",
+   "line": 330,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "registry/new-york/prompt-input.tsx",
+   "line": 573,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "registry/new-york/prompt-input.tsx",
+   "line": 949,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "registry/new-york/prompt-input.tsx",
+   "line": 1253,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "registry/new-york/prompt-input.tsx",
+   "line": 907,
+   "snippet": "animation: \"lab-prompt-input-sweep 0.8s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/new-york/snippet.tsx",
+   "line": 78,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "registry/new-york/snippet.tsx",
+   "line": 115,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "styles/globals.css",
+   "line": 165,
+   "snippet": "outline: none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "ease-in-on-ui",
+   "severity": "HIGH",
+   "file": "styles/globals.css",
+   "line": 325,
+   "snippet": "animation: var(--duration-exit) ease-in",
+   "description": "ease-in on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "ease-in-on-ui",
+   "severity": "HIGH",
+   "file": "styles/globals.css",
+   "line": 337,
+   "snippet": "animation:\n    var(--duration-enter) ease-in var(--duration-exit) both fade,\n    var(--duration-move",
+   "description": "ease-in on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "ease-in-on-ui",
+   "severity": "HIGH",
+   "file": "styles/globals.css",
+   "line": 350,
+   "snippet": "animation:\n    var(--duration-exit) ease-in",
+   "description": "ease-in on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "ease-in-on-ui",
+   "severity": "HIGH",
+   "file": "styles/globals.css",
+   "line": 363,
+   "snippet": "animation:\n    var(--duration-exit) ease-in",
+   "description": "ease-in on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "ease-in-on-ui",
+   "severity": "HIGH",
+   "file": "styles/globals.css",
+   "line": 370,
+   "snippet": "animation:\n    var(--duration-exit) ease-in",
+   "description": "ease-in on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "ease-in-on-ui",
+   "severity": "HIGH",
+   "file": "styles/globals.css",
+   "line": 383,
+   "snippet": "animation:\n    var(--duration-exit) ease-in",
+   "description": "ease-in on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "ease-in-on-ui",
+   "severity": "HIGH",
+   "file": "styles/globals.css",
+   "line": 414,
+   "snippet": "animation: var(--duration-exit) ease-in",
+   "description": "ease-in on UI transitions"
+  },
+  {
+   "category": "8-acessibilidade",
+   "check": "hover-without-gate",
+   "severity": "LOW",
+   "file": "(global)",
+   "line": 0,
+   "snippet": ":hover rules 11, @media (hover: hover) gates 0",
+   "description": "hover styles without an @media (hover: hover) gate (checked globally: count of :hover rules vs gated)"
+  }
+ ],
+ "findings_truncated": 0
+}

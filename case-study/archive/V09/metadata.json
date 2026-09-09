@@ -1,0 +1,750 @@
+{
+ "milestone": "V09",
+ "build": "M11",
+ "name": "Studio Dev UI main 2026-09-09 (hosts the Compound Design v0.2 POC page)",
+ "tool_ids": [
+  "tool-12",
+  "tool-24"
+ ],
+ "tools": [
+  "Canvas UI fork → Dev Studio UI → Studio Dev UI",
+  "Compound Metrics / Compound Design (cd.guide)"
+ ],
+ "repository": "DaniloAmaralUX/studio-dev-ui",
+ "source_sha": "231889f0098213a96ccc069ba5557a18cc9f0cfb",
+ "representative_url": "https://studio-dev-ui.vercel.app/",
+ "equivalent_deployments": [
+  "dpl_9DGd7MszCu9hF3ykiBspfM6DkyGW (production 2026-09-09 09:14 UTC)",
+  "https://studio-dev-nejva0nnb-danilos-projects-94eff717.vercel.app/ (same deployment)"
+ ],
+ "date_range": "2026-09-09",
+ "captured_at": "2026-09-09T15:50:39.844Z",
+ "capture_method": "exact commit built locally (static export served by scripts/lib/serve.mjs); playwright-core 1.63.0; Chromium 141.0.7390.37; reducedMotion=reduce, animations=disabled, deviceScaleFactor=1, colorScheme=dark",
+ "build_adjustments": [
+  "next.config.ts: typescript.ignoreBuildErrors=true (type errors in the unrelated video/ package; no UI source touched)"
+ ],
+ "viewports": {
+  "desktop": {
+   "width": 1440,
+   "height": 900
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "surfaces": {
+  "ENTRY": "/",
+  "DISCOVERY": "/gallery",
+  "DETAIL": "/compound-design",
+  "INTERACTION": "/playground",
+  "MOBILE_ENTRY": "/"
+ },
+ "visual_fingerprint": {
+  "ahash16_entry_top_band": "20000000000000001ff81ff81ff80ff00d7007f00000000004a0000000000000",
+  "dom_signature": "4ea2ae54789e02b0220b369e4450aa4e3487997b5babc4b2ddb9c7eacea4cbc7",
+  "css_sha256": "91d2a0e4b9fd4b7513853c6c94988f2899f16c764e7799bf8d1a5f0a081e1ef1",
+  "typography": "7f6d1f533eca5e7d0fb0179782dcd7472dfb86b3379e906cf01ba8031df5af8c",
+  "color": "16e2112db0010dd18a525ed8e786a9ce45dfbc8010af5bcadcc5385f9e2b0766",
+  "section_order": [
+   "nav.page-module__QGmcda__nav",
+   "header.page-module__QGmcda__hero",
+   "section.page-module__QGmcda__evidenceSection",
+   "section.page-module__QGmcda__timelineSection",
+   "section.page-module__QGmcda__evidenceSection",
+   "section.page-module__QGmcda__aiSection",
+   "section.page-module__QGmcda__resourcesSection",
+   "section.page-module__QGmcda__aiSection",
+   "section.page-module__QGmcda__verificationSection",
+   "section.page-module__QGmcda__versionSection",
+   "footer.page-module__QGmcda__footer"
+  ],
+  "nav_links": [],
+  "landmarks": [
+   "main",
+   "nav",
+   "header",
+   "section",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "section",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "section",
+   "article",
+   "article",
+   "section",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "section",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "section",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "section",
+   "section",
+   "footer"
+  ]
+ },
+ "fingerprint_detail": {
+  "ENTRY": {
+   "font_families": [
+    "GeistMono×163",
+    "GeistSans×122"
+   ],
+   "font_sizes": [
+    "10×113",
+    "12×35",
+    "11×23",
+    "18×20",
+    "9×15",
+    "14×12",
+    "22×10",
+    "60×8",
+    "29×7",
+    "15×7",
+    "13×6",
+    "16×6",
+    "31×6",
+    "8×6"
+   ],
+   "font_weights": [
+    "500×131",
+    "400×98",
+    "520×21",
+    "540×21",
+    "700×11",
+    "600×2",
+    "560×1"
+   ],
+   "text_colors": [
+    "rgb(154, 154, 150)×92",
+    "rgb(93, 93, 89)×71",
+    "rgb(245, 245, 243)×61",
+    "rgb(199, 199, 195)×21",
+    "rgb(215, 255, 87)×14",
+    "rgb(212, 212, 208)×13",
+    "rgb(138, 232, 255)×7",
+    "rgb(184, 184, 180)×6"
+   ],
+   "background_colors": [
+    "rgba(255, 255, 255, 0.016)×21",
+    "rgba(255, 255, 255, 0.024)×21",
+    "rgb(7, 7, 7)×8",
+    "rgba(138, 232, 255, 0.024)×6",
+    "rgba(215, 255, 87, 0.035)×2",
+    "rgba(215, 255, 87, 0.024)×2",
+    "rgba(255, 255, 255, 0.04)×1",
+    "rgb(215, 255, 87)×1"
+   ],
+   "radii": [
+    "999px×27",
+    "16px×17",
+    "50%×8",
+    "10px×5",
+    "12px×3",
+    "7px×1",
+    "14px×1"
+   ],
+   "section_order": [
+    "nav.page-module__QGmcda__nav",
+    "header.page-module__QGmcda__hero",
+    "section.page-module__QGmcda__evidenceSection",
+    "section.page-module__QGmcda__timelineSection",
+    "section.page-module__QGmcda__evidenceSection",
+    "section.page-module__QGmcda__aiSection",
+    "section.page-module__QGmcda__resourcesSection",
+    "section.page-module__QGmcda__aiSection",
+    "section.page-module__QGmcda__verificationSection",
+    "section.page-module__QGmcda__versionSection",
+    "footer.page-module__QGmcda__footer"
+   ],
+   "landmarks": [
+    "main",
+    "nav",
+    "header",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "section",
+    "footer"
+   ],
+   "headings": [
+    "h1:Build the application.Improve the system",
+    "h2:AI knowledge should become shared capabi",
+    "h3:Useful AI practice is often tribal.",
+    "h3:Make learning compound.",
+    "h3:Share what is useful",
+    "h3:Show evidence before claims",
+    "h3:Turn failures into learning",
+    "h2:A loop that leaves the next project stro",
+    "h3:Frame",
+    "h3:Model",
+    "h3:Craft",
+    "h3:Build",
+    "h3:Verify",
+    "h3:Polish",
+    "h3:Compound",
+    "h2:One number cannot mean “well built” and ",
+    "h3:Construction quality",
+    "h3:Evidence maturity",
+    "h2:The framework now knows what it has — an",
+    "h3:Resource Registry",
+    "h3:Deterministic lint",
+    "h3:Evidence Debt",
+    "h3:Learning Ledger",
+    "h3:Resource Value Audit",
+    "h3:Local Stress Lane",
+    "h2:The resources did not need fake version ",
+    "h3:Design Guide",
+    "h3:Interface Review",
+    "h3:Motion Review",
+    "h3:Quality Gate",
+    "h3:Resource Lab",
+    "h3:AI Interaction Review",
+    "h2:AI needs a different critique than ordin",
+    "h3:AI Fit",
+    "h3:Reliance",
+    "h3:Legibility",
+    "h3:Human Control",
+    "h3:Autonomy",
+    "h3:Evolution",
+    "h2:E1 remains E1. Better infrastructure is ",
+    "h2:Versions are earned by a better system, "
+   ],
+   "nav_links": [],
+   "title": "Compound Design v0.2.1 — Evidence Infrastructure",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:44759/_next/static/chunks/15a_lrk1wqknz.css",
+    "http://127.0.0.1:44759/_next/static/chunks/2a_c83rl0o2ql.css",
+    "http://127.0.0.1:44759/_next/static/chunks/0ad0avzco83cx.css"
+   ]
+  },
+  "DISCOVERY": {
+   "font_families": [
+    "GeistSans×196",
+    "GeistMono×57"
+   ],
+   "font_sizes": [
+    "14×181",
+    "11×58",
+    "13×7",
+    "16×3",
+    "15×2",
+    "30×1",
+    "12×1"
+   ],
+   "font_weights": [
+    "400×186",
+    "600×48",
+    "500×19"
+   ],
+   "text_colors": [
+    "lab(66.128 -0.0000298023 0.0000119209)×227",
+    "lab(98.26 0 0)×22",
+    "oklab(0.984998 -0.00000956655 0.0000230074 / 0.7)×4"
+   ],
+   "background_colors": [
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.85)×24",
+    "lab(2.75381 0 0)×13",
+    "lab(7.78201 -0.0000149012 0)×12",
+    "oklab(0.268999 -0.00000260025 0.00000627339 / 0.4)×4",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.7)×1",
+    "oklab(0.268999 -0.00000260025 0.00000627339 / 0.3)×1",
+    "oklab(0.984998 -0.00000956655 0.0000230074 / 0.035)×1",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.8)×1"
+   ],
+   "radii": [
+    "10px×178",
+    "4px×32",
+    "14px×17",
+    "18px×13",
+    "12px×12",
+    "8px×12",
+    "3.35544e+07px×9"
+   ],
+   "section_order": [
+    "div.flex"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "main",
+    "aside",
+    "nav",
+    "nav",
+    "section",
+    "header",
+    "aside",
+    "footer",
+    "nav",
+    "nav"
+   ],
+   "headings": [
+    "h1:Browse All",
+    "h3:Navigate",
+    "h3:Tools"
+   ],
+   "nav_links": [
+    "Studio Dev UI",
+    "Docs",
+    "Screens",
+    "Components",
+    "Effects",
+    "Studio",
+    "Docs",
+    "Screens",
+    "Components",
+    "Effects",
+    "Studio",
+    "ASCII Text",
+    "Blur Text",
+    "Circular Text",
+    "Count Up",
+    "Curved Loop",
+    "Decrypted Text",
+    "Depth TextNew",
+    "Echo TextNew",
+    "Falling Text"
+   ],
+   "title": "Components | Studio Dev UI",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:44759/_next/static/chunks/15a_lrk1wqknz.css",
+    "http://127.0.0.1:44759/_next/static/chunks/2a_c83rl0o2ql.css"
+   ]
+  },
+  "DETAIL": {
+   "font_families": [
+    "GeistMono×163",
+    "GeistSans×122"
+   ],
+   "font_sizes": [
+    "10×113",
+    "12×35",
+    "11×23",
+    "18×20",
+    "9×15",
+    "14×12",
+    "22×10",
+    "60×8",
+    "29×7",
+    "15×7",
+    "13×6",
+    "16×6",
+    "31×6",
+    "8×6"
+   ],
+   "font_weights": [
+    "500×131",
+    "400×98",
+    "520×21",
+    "540×21",
+    "700×11",
+    "600×2",
+    "560×1"
+   ],
+   "text_colors": [
+    "rgb(154, 154, 150)×92",
+    "rgb(93, 93, 89)×71",
+    "rgb(245, 245, 243)×61",
+    "rgb(199, 199, 195)×21",
+    "rgb(215, 255, 87)×14",
+    "rgb(212, 212, 208)×13",
+    "rgb(138, 232, 255)×7",
+    "rgb(184, 184, 180)×6"
+   ],
+   "background_colors": [
+    "rgba(255, 255, 255, 0.016)×21",
+    "rgba(255, 255, 255, 0.024)×21",
+    "rgb(7, 7, 7)×8",
+    "rgba(138, 232, 255, 0.024)×6",
+    "rgba(215, 255, 87, 0.035)×2",
+    "rgba(215, 255, 87, 0.024)×2",
+    "rgba(255, 255, 255, 0.04)×1",
+    "rgb(215, 255, 87)×1"
+   ],
+   "radii": [
+    "999px×27",
+    "16px×17",
+    "50%×8",
+    "10px×5",
+    "12px×3",
+    "7px×1",
+    "14px×1"
+   ],
+   "section_order": [
+    "nav.page-module__QGmcda__nav",
+    "header.page-module__QGmcda__hero",
+    "section.page-module__QGmcda__evidenceSection",
+    "section.page-module__QGmcda__timelineSection",
+    "section.page-module__QGmcda__evidenceSection",
+    "section.page-module__QGmcda__aiSection",
+    "section.page-module__QGmcda__resourcesSection",
+    "section.page-module__QGmcda__aiSection",
+    "section.page-module__QGmcda__verificationSection",
+    "section.page-module__QGmcda__versionSection",
+    "footer.page-module__QGmcda__footer"
+   ],
+   "landmarks": [
+    "main",
+    "nav",
+    "header",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "section",
+    "footer"
+   ],
+   "headings": [
+    "h1:Build the application.Improve the system",
+    "h2:AI knowledge should become shared capabi",
+    "h3:Useful AI practice is often tribal.",
+    "h3:Make learning compound.",
+    "h3:Share what is useful",
+    "h3:Show evidence before claims",
+    "h3:Turn failures into learning",
+    "h2:A loop that leaves the next project stro",
+    "h3:Frame",
+    "h3:Model",
+    "h3:Craft",
+    "h3:Build",
+    "h3:Verify",
+    "h3:Polish",
+    "h3:Compound",
+    "h2:One number cannot mean “well built” and ",
+    "h3:Construction quality",
+    "h3:Evidence maturity",
+    "h2:The framework now knows what it has — an",
+    "h3:Resource Registry",
+    "h3:Deterministic lint",
+    "h3:Evidence Debt",
+    "h3:Learning Ledger",
+    "h3:Resource Value Audit",
+    "h3:Local Stress Lane",
+    "h2:The resources did not need fake version ",
+    "h3:Design Guide",
+    "h3:Interface Review",
+    "h3:Motion Review",
+    "h3:Quality Gate",
+    "h3:Resource Lab",
+    "h3:AI Interaction Review",
+    "h2:AI needs a different critique than ordin",
+    "h3:AI Fit",
+    "h3:Reliance",
+    "h3:Legibility",
+    "h3:Human Control",
+    "h3:Autonomy",
+    "h3:Evolution",
+    "h2:E1 remains E1. Better infrastructure is ",
+    "h2:Versions are earned by a better system, "
+   ],
+   "nav_links": [],
+   "title": "Compound Design v0.2.1 — Evidence Infrastructure",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:44759/_next/static/chunks/15a_lrk1wqknz.css",
+    "http://127.0.0.1:44759/_next/static/chunks/2a_c83rl0o2ql.css",
+    "http://127.0.0.1:44759/_next/static/chunks/0ad0avzco83cx.css"
+   ]
+  },
+  "INTERACTION": {
+   "font_families": [
+    "GeistSans×99",
+    "GeistMono×8"
+   ],
+   "font_sizes": [
+    "13×44",
+    "14×32",
+    "12×9",
+    "15×6",
+    "30×6",
+    "36×4",
+    "18×3",
+    "60×1",
+    "16×1",
+    "10×1"
+   ],
+   "font_weights": [
+    "400×48",
+    "500×45",
+    "600×14"
+   ],
+   "text_colors": [
+    "lab(66.128 -0.0000298023 0.0000119209)×54",
+    "lab(98.26 0 0)×25",
+    "oklab(0.984998 -0.00000956655 0.0000230074 / 0.9)×22",
+    "lab(2.75381 0 0)×5",
+    "oklab(0.984998 -0.00000956655 0.0000230074 / 0.95)×1"
+   ],
+   "background_colors": [
+    "oklab(0.268999 -0.00000260025 0.00000627339 / 0.6)×13",
+    "oklab(0.984998 -0.00000956654 0.0000230074 / 0.1)×10",
+    "oklab(0.984998 -0.00000956655 0.0000230074 / 0.9)×10",
+    "oklab(0.268999 -0.00000260025 0.00000627339 / 0.3)×7",
+    "lab(98.26 0 0)×5",
+    "lab(2.75381 0 0)×3",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.7)×2",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.9)×2"
+   ],
+   "radii": [
+    "3.35544e+07px×29",
+    "10px×26",
+    "18px×12",
+    "14px×1",
+    "8px×1",
+    "22px×1"
+   ],
+   "section_order": [
+    "aside.fixed",
+    "div.fixed",
+    "div.page-enter"
+   ],
+   "landmarks": [
+    "main",
+    "aside",
+    "header",
+    "nav",
+    "section",
+    "section",
+    "section",
+    "section",
+    "article",
+    "article",
+    "article",
+    "section",
+    "section",
+    "section",
+    "section",
+    "article",
+    "article",
+    "section",
+    "footer",
+    "footer"
+   ],
+   "headings": [
+    "h1:Ship in days, not quarters.",
+    "h2:Less waiting. More shipping.",
+    "h3:Previews for every branch",
+    "h3:Reviews that keep moving",
+    "h3:Rollbacks in one click",
+    "h2:Teams that ship with bolt.",
+    "h2:Pricing that scales with you.",
+    "h3:Starter",
+    "h3:Scale",
+    "h2:Ready to ship faster?"
+   ],
+   "nav_links": [],
+   "title": "Playground | Studio Dev UI",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:44759/_next/static/chunks/15a_lrk1wqknz.css",
+    "http://127.0.0.1:44759/_next/static/chunks/2a_c83rl0o2ql.css"
+   ]
+  }
+ },
+ "notes": [
+  "INTERACTION desktop: 4 failed requests (https://images.unsplash.com/photo-1774425316479-4de6166e7408?q=80&w=1740&auto=format&fit=crop, https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop, https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?q=80&w=800&auto=format&fit=crop)",
+  "INTERACTION mobile: 4 failed requests (https://images.unsplash.com/photo-1774425316479-4de6166e7408?q=80&w=1740&auto=format&fit=crop, https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop, https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?q=80&w=800&auto=format&fit=crop)"
+ ],
+ "files": {
+  "surfaces/ENTRY-desktop.png": {
+   "sha256": "d7eefbe1b1b8d015aa28501fa0b3d0c92dfe4fca708c9538beacdac35c7fa29f",
+   "bytes": 1117117
+  },
+  "desktop-full.png": {
+   "sha256": "d7eefbe1b1b8d015aa28501fa0b3d0c92dfe4fca708c9538beacdac35c7fa29f",
+   "bytes": 1117117
+  },
+  "surfaces/ENTRY-desktop-first-screen.png": {
+   "sha256": "47b231e94e10b198455c248fc160a56ee0fe40749a85a05945268f7cbf167226",
+   "bytes": 96975
+  },
+  "states/ENTRY-focus-first.png": {
+   "sha256": "47b231e94e10b198455c248fc160a56ee0fe40749a85a05945268f7cbf167226",
+   "bytes": 96975
+  },
+  "surfaces/ENTRY-mobile.png": {
+   "sha256": "f3172781549e817c448e73d5f325034b46da86d34e0230ebc713eb2749191f72",
+   "bytes": 1043812
+  },
+  "mobile-full.png": {
+   "sha256": "f3172781549e817c448e73d5f325034b46da86d34e0230ebc713eb2749191f72",
+   "bytes": 1043812
+  },
+  "surfaces/ENTRY-mobile-first-screen.png": {
+   "sha256": "3e5504e0b80897dd15b413a20ff64d0a149c1c691811a7eaf6c9e6021cbf4015",
+   "bytes": 59532
+  },
+  "surfaces/DISCOVERY-desktop.png": {
+   "sha256": "2d78da6032b3e4e035454600bbb4efe1423d2a7f861af79515c0b89a16610d20",
+   "bytes": 742961
+  },
+  "surfaces/DISCOVERY-desktop-first-screen.png": {
+   "sha256": "89a93c51f23a8b33bc44989737da94166ba8fb287f69ba4341e1da1928183bfc",
+   "bytes": 326799
+  },
+  "states/DISCOVERY-focus-first.png": {
+   "sha256": "5bc1c6b4c5ae3641b9fd1a7b60bc364cb78b29a795bbda4cfbf26d32d637c59f",
+   "bytes": 327076
+  },
+  "states/DISCOVERY-hover-first.png": {
+   "sha256": "f81564d60d419c35f2bd3dc3cad8dcdc5b1d5cd8f5a9cf84e852db4c56e76091",
+   "bytes": 327388
+  },
+  "surfaces/DISCOVERY-mobile.png": {
+   "sha256": "4fbaf2663837ba53898ca541770607027ccea955370e643aa27f3b3f3c435984",
+   "bytes": 274268
+  },
+  "surfaces/DISCOVERY-mobile-first-screen.png": {
+   "sha256": "2ebeb6b7b40946b22e2b1fe63aac27580bab68ce137337fb200079c23a076138",
+   "bytes": 87069
+  },
+  "states/DISCOVERY-mobile-nav-open.png": {
+   "sha256": "efd94176afafac4ae30a6c3afa0cf49748d8e1087c7a9a7d30b36bd9b375098b",
+   "bytes": 57652
+  },
+  "surfaces/DETAIL-desktop.png": {
+   "sha256": "d7eefbe1b1b8d015aa28501fa0b3d0c92dfe4fca708c9538beacdac35c7fa29f",
+   "bytes": 1117117
+  },
+  "surfaces/DETAIL-desktop-first-screen.png": {
+   "sha256": "47b231e94e10b198455c248fc160a56ee0fe40749a85a05945268f7cbf167226",
+   "bytes": 96975
+  },
+  "states/DETAIL-focus-first.png": {
+   "sha256": "47b231e94e10b198455c248fc160a56ee0fe40749a85a05945268f7cbf167226",
+   "bytes": 96975
+  },
+  "surfaces/DETAIL-mobile.png": {
+   "sha256": "f3172781549e817c448e73d5f325034b46da86d34e0230ebc713eb2749191f72",
+   "bytes": 1043812
+  },
+  "surfaces/DETAIL-mobile-first-screen.png": {
+   "sha256": "3e5504e0b80897dd15b413a20ff64d0a149c1c691811a7eaf6c9e6021cbf4015",
+   "bytes": 59532
+  },
+  "surfaces/INTERACTION-desktop.png": {
+   "sha256": "585b258e61bd3de0556ad1c62857a982ad742f3e69bf5b2cd51d7b8d5c10e914",
+   "bytes": 123383
+  },
+  "surfaces/INTERACTION-desktop-first-screen.png": {
+   "sha256": "585b258e61bd3de0556ad1c62857a982ad742f3e69bf5b2cd51d7b8d5c10e914",
+   "bytes": 123383
+  },
+  "states/INTERACTION-focus-first.png": {
+   "sha256": "846919e11467d2efbd74749a758648af6d2b71cf41f03ff1d947cab6ef7f1eaf",
+   "bytes": 124482
+  },
+  "states/INTERACTION-hover-first.png": {
+   "sha256": "d5bcb17af2b90707a646b4c31efbd74f408f03d3788f2c04fa67b18e651218c7",
+   "bytes": 124503
+  },
+  "surfaces/INTERACTION-mobile.png": {
+   "sha256": "1096857ef10157fd55b13d3c119afb8fd4ea1e453cd7bc8155bc700c43da66a4",
+   "bytes": 48979
+  },
+  "surfaces/INTERACTION-mobile-first-screen.png": {
+   "sha256": "1096857ef10157fd55b13d3c119afb8fd4ea1e453cd7bc8155bc700c43da66a4",
+   "bytes": 48979
+  },
+  "states/INTERACTION-mobile-nav-open.png": {
+   "sha256": "1096857ef10157fd55b13d3c119afb8fd4ea1e453cd7bc8155bc700c43da66a4",
+   "bytes": 48979
+  },
+  "sections.json": {
+   "sha256": "bb44802ae0a8768c1fd64eacd8f9daa5d6cae1b02da47ebe0e229667858f8bda",
+   "bytes": 8653
+  }
+ }
+}

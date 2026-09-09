@@ -1,0 +1,267 @@
+{
+ "milestone": "V07",
+ "build": "M09",
+ "source_sha": "28e53d1ab20b46b2ace378c0c67234e8a34bc151",
+ "run_at": "2026-09-09T15:49:54.231Z",
+ "instrument": "cl-audit playbook (compound-labs-design@364430b, skills/compound-labs-design/references/audit-playbook.md) — deterministic pattern subset; Phase-3 vetting by reading is recorded as NOT_VERIFIED for categories with no static rule",
+ "files_scanned": 38,
+ "totals": {
+  "hover": 5,
+  "gatedHover": 0,
+  "tabular": 4,
+  "reduced": 4,
+  "anim": 72,
+  "numbers": 428
+ },
+ "categories": {
+  "1-hierarquia": {
+   "state": "NOT_VERIFIED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "2-tipografia": {
+   "state": "CHECKED",
+   "findings": 16,
+   "files": 7,
+   "high": 0
+  },
+  "3-cor": {
+   "state": "CHECKED",
+   "findings": 1,
+   "files": 1,
+   "high": 0
+  },
+  "4-superficies": {
+   "state": "CHECKED",
+   "findings": 1,
+   "files": 1,
+   "high": 1
+  },
+  "5-motion-easing": {
+   "state": "CHECKED",
+   "findings": 2,
+   "files": 1,
+   "high": 0
+  },
+  "6-motion-physics": {
+   "state": "CHECKED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "7-performance": {
+   "state": "CHECKED",
+   "findings": 1,
+   "files": 1,
+   "high": 0
+  },
+  "8-acessibilidade": {
+   "state": "CHECKED",
+   "findings": 1,
+   "files": 1,
+   "high": 0
+  }
+ },
+ "findings": [
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "app/globals.css",
+   "line": 173,
+   "snippet": "animation: lifeline-marker-in var(--lifeline-marker-fade-ms, 420ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "app/globals.css",
+   "line": 179,
+   "snippet": "animation: lifeline-labels-in var(--lifeline-labels-ms, 600ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "app/page.tsx",
+   "line": 32,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/company-icon.tsx",
+   "line": 64,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-labels.tsx",
+   "line": 15,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-labels.tsx",
+   "line": 18,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-legend.tsx",
+   "line": 19,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-marker.tsx",
+   "line": 68,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-marker.tsx",
+   "line": 72,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-marker.tsx",
+   "line": 126,
+   "snippet": "text-[14px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-people.tsx",
+   "line": 82,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-people.tsx",
+   "line": 89,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-people.tsx",
+   "line": 90,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-vertical.tsx",
+   "line": 108,
+   "snippet": "text-[14px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-vertical.tsx",
+   "line": 215,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-vertical.tsx",
+   "line": 223,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-vertical.tsx",
+   "line": 441,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/lifeline/lifeline-vertical.tsx",
+   "line": 445,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/button.tsx",
+   "line": 7,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "components/ui/button.tsx",
+   "line": 7,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "lib/lifeline-personal.ts",
+   "line": 30,
+   "snippet": "#3E63DD",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "8-acessibilidade",
+   "check": "hover-without-gate",
+   "severity": "LOW",
+   "file": "(global)",
+   "line": 0,
+   "snippet": ":hover rules 5, @media (hover: hover) gates 0",
+   "description": "hover styles without an @media (hover: hover) gate (checked globally: count of :hover rules vs gated)"
+  }
+ ],
+ "findings_truncated": 0
+}

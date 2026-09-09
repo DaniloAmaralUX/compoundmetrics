@@ -8,6 +8,7 @@
 | Durable learning system | `docs/solutions/`, `cd-compound`, `cd-compound-refresh`, the discoverability contract | What survives a project, and how it stays findable and true |
 | Plugin system | `.claude-plugin/`, `.codex-plugin/`, `.cursor-plugin/`, `.compound-design/` | How the work system reaches a host |
 | Evidence system | `compound-design/` | What may be claimed about any of the above |
+| Public product | `src/` | The site that explains and demonstrates the four systems. `src/content/` derives every factual value from the registry and release artifacts at build time; a gate fails the build if a route restates one |
 
 They are separate on purpose. The work system can change without touching the evidence system; the evidence system can refuse a claim the work system wants to make.
 

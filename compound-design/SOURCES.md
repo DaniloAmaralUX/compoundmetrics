@@ -60,3 +60,7 @@ What remains from upstream is knowledge and the obligation that comes with it:
 - **Every / Compound Engineering** (MIT, `b36047e1b4b2123df2f3529bf04b5f2a7c5f84e4`). Informed the architecture: canonical skills with per-phase references, the configuration model and its fail-closed artifact root, the durable-learning bar, the five maintenance outcomes, report-only review with explicit apply, and pointer-first handoffs. Recorded mechanism by mechanism, with adopt/adapt/defer/reject decisions, in `compound-design/research/EVERY-ARCHITECTURE-SNAPSHOT.md`.
 
 The pinned upstream is still fetched, SHA-verified and gitignored for **benchmark condition B only** — comparing against direct upstream use requires having it. It is never part of the plugin and never on a runtime path.
+
+## Product experience — design references (2026-09-09)
+
+Two repositories by Evil Rabbit were studied for the public site, read-only, at pinned commits: `evilrabbit/main` (`c71d5bc226c0a8b9b18644c34b9b3428f9c1725f`, no license file → principles only, nothing copied) and `evilrabbit/lifeline` (`8ddbb3d3ad0ac6ec5bbe8efda1c051d93d04a63a`, MIT © 2026 Evil Rabbit → the timeline interaction model is adapted, no file copied). Observations, decisions and the attribution rule are in `compound-design/research/PRODUCT-EXPERIENCE-REFERENCES.md`. Design references validate nothing about Compound Design's effectiveness.

@@ -1,0 +1,603 @@
+{
+ "milestone": "V11",
+ "build": "M13",
+ "name": "Compound Design — Product Experience (preview, 8 routes)",
+ "tool_ids": [
+  "tool-24"
+ ],
+ "tools": [
+  "Compound Metrics / Compound Design (cd.guide)"
+ ],
+ "repository": "DaniloAmaralUX/compoundmetrics",
+ "source_sha": "921d751aff5df8e14d998f993e2d171db842719d",
+ "representative_url": "https://compoundmetrics-git-claude-com-014611-danilos-projects-94eff717.vercel.app/",
+ "equivalent_deployments": [
+  "dpl_4qtC9oEDZ44USUgxByVBXB7Xf399 (preview, branch claude/compound-design-product-experience)"
+ ],
+ "date_range": "2026-09-09",
+ "captured_at": "2026-09-09T15:51:19.742Z",
+ "capture_method": "exact commit built locally (static export served by scripts/lib/serve.mjs); playwright-core 1.63.0; Chromium 141.0.7390.37; reducedMotion=reduce, animations=disabled, deviceScaleFactor=1, colorScheme=dark",
+ "build_adjustments": [],
+ "viewports": {
+  "desktop": {
+   "width": 1440,
+   "height": 900
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "surfaces": {
+  "ENTRY": "/",
+  "DISCOVERY": "/resources",
+  "DETAIL": "/resources/cd-interface-review",
+  "INTERACTION": "/lab",
+  "MOBILE_ENTRY": "/"
+ },
+ "visual_fingerprint": {
+  "ahash16_entry_top_band": "10000000000000003fc03fc03fc03fc03dc0300035c03fe03fc000000000275c",
+  "dom_signature": "92a6d3c02197d7a48b39583ab76c97a8d11d79959a424512befe87244963d657",
+  "css_sha256": "50fddf4b9f05af8ed90256f00bc98466566abaf6b6d4674ccfd97c06b874012f",
+  "typography": "bee0a12efd4980d873f25e08ac33ad49f5b7e187688e440a41f0da7df53e92f6",
+  "color": "5a5eed6d0558822328542bc582beaccf812ae490817c4d7b0d93e1b4043dfaef",
+  "section_order": [
+   "section.container",
+   "section.container",
+   "section.container",
+   "section.container",
+   "section.container",
+   "section.container",
+   "section.container"
+  ],
+  "nav_links": [
+   "CDCompound Design",
+   "Home",
+   "How it Works",
+   "Lab",
+   "Project",
+   "Resources",
+   "Evidence",
+   "Field Guide",
+   "Home",
+   "How it Works",
+   "Lab",
+   "Project",
+   "Resources",
+   "Evidence",
+   "Field Guide"
+  ],
+  "landmarks": [
+   "header",
+   "nav",
+   "nav",
+   "main",
+   "section",
+   "section",
+   "section",
+   "section",
+   "section",
+   "section",
+   "section",
+   "footer"
+  ]
+ },
+ "fingerprint_detail": {
+  "ENTRY": {
+   "font_families": [
+    "GeistSans×115",
+    "GeistMono×39"
+   ],
+   "font_sizes": [
+    "12×34",
+    "14×31",
+    "28×21",
+    "21×18",
+    "17×17",
+    "23×13",
+    "13×7",
+    "40×5",
+    "52×2",
+    "56×2",
+    "11×1",
+    "84×1",
+    "26×1",
+    "64×1"
+   ],
+   "font_weights": [
+    "500×73",
+    "400×71",
+    "300×8",
+    "600×1",
+    "700×1"
+   ],
+   "text_colors": [
+    "rgb(143, 145, 139)×74",
+    "rgb(239, 238, 233)×53",
+    "rgb(215, 255, 87)×13",
+    "rgb(125, 127, 122)×12",
+    "rgb(11, 12, 11)×1",
+    "rgb(255, 255, 255)×1"
+   ],
+   "background_colors": [
+    "rgb(215, 255, 87)×2",
+    "color(srgb 0.0431373 0.0470588 0.0431373 / 0.84)×1",
+    "rgb(19, 21, 19)×1"
+   ],
+   "radii": [
+    "2px×11",
+    "7px×1",
+    "50%×1"
+   ],
+   "section_order": [
+    "section.container",
+    "section.container",
+    "section.container",
+    "section.container",
+    "section.container",
+    "section.container",
+    "section.container"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "nav",
+    "main",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "footer"
+   ],
+   "headings": [
+    "h1:Build the application.Improve the system",
+    "h2:How one project improves the next",
+    "h2:Not effort. Not documents. Judgment, in ",
+    "h2:Six questions, in order, then again with",
+    "h2:A thing can be well built and still unpr",
+    "h2:An experiment that says what it knows an",
+    "h2:See it, then understand it, then name it"
+   ],
+   "nav_links": [
+    "CDCompound Design",
+    "Home",
+    "How it Works",
+    "Lab",
+    "Project",
+    "Resources",
+    "Evidence",
+    "Field Guide",
+    "Home",
+    "How it Works",
+    "Lab",
+    "Project",
+    "Resources",
+    "Evidence",
+    "Field Guide"
+   ],
+   "title": "Compound Design",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:35557/_next/static/chunks/256wyq9m86juj.css",
+    "http://127.0.0.1:35557/_next/static/chunks/1ayvz_ob6gi1j.css",
+    "http://127.0.0.1:35557/_next/static/chunks/05ggnhm3hbqbo.css",
+    "http://127.0.0.1:35557/_next/static/chunks/0p0jlt18hasfp.css"
+   ]
+  },
+  "DISCOVERY": {
+   "font_families": [
+    "GeistSans×82",
+    "GeistMono×80"
+   ],
+   "font_sizes": [
+    "12×67",
+    "14×49",
+    "17×31",
+    "21×7",
+    "40×6",
+    "11×1",
+    "60×1"
+   ],
+   "font_weights": [
+    "400×123",
+    "500×38",
+    "600×1"
+   ],
+   "text_colors": [
+    "rgb(239, 238, 233)×60",
+    "rgb(143, 145, 139)×50",
+    "rgb(125, 127, 122)×48",
+    "rgb(215, 255, 87)×3",
+    "rgb(11, 12, 11)×1"
+   ],
+   "background_colors": [
+    "rgb(215, 255, 87)×1",
+    "color(srgb 0.0431373 0.0470588 0.0431373 / 0.84)×1",
+    "rgb(19, 21, 19)×1"
+   ],
+   "radii": [
+    "2px×12",
+    "7px×1"
+   ],
+   "section_order": [
+    "header.container",
+    "section.container",
+    "section.container",
+    "section.container",
+    "section.container",
+    "section.container",
+    "section.container",
+    "section.container",
+    "section.container"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "nav",
+    "main",
+    "header",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "footer"
+   ],
+   "headings": [
+    "h1:What capability has been encoded.",
+    "h2:Work system",
+    "h2:Around the loop",
+    "h2:Operations",
+    "h2:Specialists",
+    "h2:Quality & learning",
+    "h2:Agents"
+   ],
+   "nav_links": [
+    "CDCompound Design",
+    "Home",
+    "How it Works",
+    "Lab",
+    "Project",
+    "Resources",
+    "Evidence",
+    "Field Guide",
+    "Home",
+    "How it Works",
+    "Lab",
+    "Project",
+    "Resources",
+    "Evidence",
+    "Field Guide"
+   ],
+   "title": "Resources — Compound Design",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:35557/_next/static/chunks/256wyq9m86juj.css",
+    "http://127.0.0.1:35557/_next/static/chunks/1ayvz_ob6gi1j.css"
+   ]
+  },
+  "DETAIL": {
+   "font_families": [
+    "GeistSans×110",
+    "GeistMono×75"
+   ],
+   "font_sizes": [
+    "17×70",
+    "15×34",
+    "14×32",
+    "12×29",
+    "23×13",
+    "13×3",
+    "11×1",
+    "60×1",
+    "21×1",
+    "40×1"
+   ],
+   "font_weights": [
+    "400×127",
+    "500×44",
+    "700×13",
+    "600×1"
+   ],
+   "text_colors": [
+    "rgb(239, 238, 233)×135",
+    "rgb(143, 145, 139)×44",
+    "rgb(125, 127, 122)×5",
+    "rgb(11, 12, 11)×1"
+   ],
+   "background_colors": [
+    "rgb(19, 21, 19)×36",
+    "rgb(7, 8, 7)×2",
+    "rgb(215, 255, 87)×1",
+    "color(srgb 0.0431373 0.0470588 0.0431373 / 0.84)×1"
+   ],
+   "radii": [
+    "3px×35",
+    "2px×12",
+    "4px×2",
+    "7px×1"
+   ],
+   "section_order": [
+    "header.container",
+    "div.container",
+    "section.container"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "nav",
+    "main",
+    "header",
+    "aside",
+    "section",
+    "footer"
+   ],
+   "headings": [
+    "h1:Interface Review",
+    "h3:When to use",
+    "h3:When not to use",
+    "h3:Scope",
+    "h3:Inputs",
+    "h3:Procedure",
+    "h3:Write authority",
+    "h3:Artifact rule",
+    "h3:Output contract",
+    "h3:Forbidden",
+    "h3:Missing dependency",
+    "h3:Completion",
+    "h3:Provenance",
+    "h2:Every resource on one page."
+   ],
+   "nav_links": [
+    "CDCompound Design",
+    "Home",
+    "How it Works",
+    "Lab",
+    "Project",
+    "Resources",
+    "Evidence",
+    "Field Guide",
+    "Home",
+    "How it Works",
+    "Lab",
+    "Project",
+    "Resources",
+    "Evidence",
+    "Field Guide"
+   ],
+   "title": "Interface Review — Compound Design",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:35557/_next/static/chunks/256wyq9m86juj.css",
+    "http://127.0.0.1:35557/_next/static/chunks/1ayvz_ob6gi1j.css",
+    "http://127.0.0.1:35557/_next/static/chunks/1r40no1pbfbke.css"
+   ]
+  },
+  "INTERACTION": {
+   "font_families": [
+    "GeistSans×53",
+    "GeistMono×18"
+   ],
+   "font_sizes": [
+    "14×22",
+    "17×15",
+    "12×15",
+    "11×5",
+    "21×5",
+    "13×5",
+    "40×2",
+    "60×1",
+    "22×1"
+   ],
+   "font_weights": [
+    "400×45",
+    "500×25",
+    "600×1"
+   ],
+   "text_colors": [
+    "rgb(143, 145, 139)×37",
+    "rgb(239, 238, 233)×17",
+    "rgb(125, 127, 122)×6",
+    "rgb(21, 22, 20)×3",
+    "rgb(215, 255, 87)×3",
+    "rgb(11, 12, 11)×2",
+    "rgb(107, 109, 103)×1",
+    "rgb(154, 42, 28)×1"
+   ],
+   "background_colors": [
+    "rgb(255, 255, 255)×3",
+    "rgb(215, 255, 87)×1",
+    "color(srgb 0.0431373 0.0470588 0.0431373 / 0.84)×1",
+    "rgb(19, 21, 19)×1",
+    "rgb(244, 243, 238)×1",
+    "rgba(200, 60, 40, 0.1)×1",
+    "rgb(21, 22, 20)×1",
+    "rgb(239, 238, 233)×1"
+   ],
+   "radii": [
+    "2px×11",
+    "4px×8",
+    "7px×1",
+    "6px×1",
+    "3px×1"
+   ],
+   "section_order": [
+    "header.container",
+    "section.container",
+    "section.container"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "nav",
+    "main",
+    "header",
+    "section",
+    "form",
+    "section",
+    "footer"
+   ],
+   "headings": [
+    "h1:Review this signup experience.",
+    "h2:A demonstration of the mechanism, not ev"
+   ],
+   "nav_links": [
+    "CDCompound Design",
+    "Home",
+    "How it Works",
+    "Lab",
+    "Project",
+    "Resources",
+    "Evidence",
+    "Field Guide",
+    "Home",
+    "How it Works",
+    "Lab",
+    "Project",
+    "Resources",
+    "Evidence",
+    "Field Guide"
+   ],
+   "title": "Compound Lab — Compound Design",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:35557/_next/static/chunks/256wyq9m86juj.css",
+    "http://127.0.0.1:35557/_next/static/chunks/1ayvz_ob6gi1j.css",
+    "http://127.0.0.1:35557/_next/static/chunks/0tjp8-z66apsz.css"
+   ]
+  }
+ },
+ "notes": [],
+ "files": {
+  "surfaces/ENTRY-desktop.png": {
+   "sha256": "030e8caf6948b55b892ed6462df12967e88eb0712dcd90175f395f76ccdb90d6",
+   "bytes": 664832
+  },
+  "desktop-full.png": {
+   "sha256": "030e8caf6948b55b892ed6462df12967e88eb0712dcd90175f395f76ccdb90d6",
+   "bytes": 664832
+  },
+  "surfaces/ENTRY-desktop-first-screen.png": {
+   "sha256": "a9cd15bc5eaf735e8a4d14203e400a5b5b32ecf4c43d36a7bd89cd54a97be694",
+   "bytes": 126414
+  },
+  "states/ENTRY-focus-first.png": {
+   "sha256": "64c943198294e3416c238a3a1f223366d1069deb8613642e55bf627df6412f8b",
+   "bytes": 129051
+  },
+  "states/ENTRY-hover-first.png": {
+   "sha256": "b4a08b375a206503c4d4bb4f2a76ff5f37e2741ed3868d353e5c636b96599917",
+   "bytes": 109662
+  },
+  "surfaces/ENTRY-mobile.png": {
+   "sha256": "57d710527227d4f6475dcb28f7775716c3049bbee5702903d0ccca8083e5c989",
+   "bytes": 513681
+  },
+  "mobile-full.png": {
+   "sha256": "57d710527227d4f6475dcb28f7775716c3049bbee5702903d0ccca8083e5c989",
+   "bytes": 513681
+  },
+  "surfaces/ENTRY-mobile-first-screen.png": {
+   "sha256": "701d2081867860a6942c04929c97835122bff748160778fccde3779e4b880b51",
+   "bytes": 69669
+  },
+  "states/ENTRY-mobile-nav-open.png": {
+   "sha256": "515e3b283462b60ec3461584ed5832893debd88410aa2459223d7f9fcd30c6f4",
+   "bytes": 61619
+  },
+  "surfaces/DISCOVERY-desktop.png": {
+   "sha256": "7ed42bae61741a5eef8de27f0c9c737220f2480c80da33e713713463e1357244",
+   "bytes": 521125
+  },
+  "surfaces/DISCOVERY-desktop-first-screen.png": {
+   "sha256": "f04bf4ca7de8028e5b0843226a6f28f179b1356e31c7a7400fef83c02cffdc69",
+   "bytes": 113568
+  },
+  "states/DISCOVERY-focus-first.png": {
+   "sha256": "56fd3db5e68059e14c901d8cda9ffc25d68250917833c86317c9a7aa9dc0f3f9",
+   "bytes": 116010
+  },
+  "states/DISCOVERY-hover-first.png": {
+   "sha256": "e86ce6cbb009e413e24e53d849be41b0e58a307d1f82df3f7a6489b648cc2e90",
+   "bytes": 116018
+  },
+  "surfaces/DISCOVERY-mobile.png": {
+   "sha256": "074ddabe0d97b7c280ac95326a5fbc35624c9e7ad66ce2851b062b612874ae33",
+   "bytes": 458164
+  },
+  "surfaces/DISCOVERY-mobile-first-screen.png": {
+   "sha256": "72201c9b97765dc9de7547f35b5f70c30d4a564de6a225a79b3e61f0f76cec2c",
+   "bytes": 69290
+  },
+  "states/DISCOVERY-mobile-nav-open.png": {
+   "sha256": "f14efe82b8642a9634bf45822b0356cd44f413abd3cbbb30a97bb14be5923497",
+   "bytes": 73457
+  },
+  "surfaces/DETAIL-desktop.png": {
+   "sha256": "9dcab38e47ae64f040bdcdeb0d5e6620bdfdb942d8f01b649ef393630db752c7",
+   "bytes": 538063
+  },
+  "surfaces/DETAIL-desktop-first-screen.png": {
+   "sha256": "5c194ae9f813f686267e4d40377ec345d8fa2bf27b89ab02f86c9e64107805c3",
+   "bytes": 135102
+  },
+  "states/DETAIL-focus-first.png": {
+   "sha256": "287e0f428ef6935fcf4e52220e1076790bc3d7d71decfc9c3d703e323b7c6467",
+   "bytes": 137736
+  },
+  "states/DETAIL-hover-first.png": {
+   "sha256": "6e609a74fefa7bb02c7e623874118e34ea19d810e33e7b3ef69904b5f23effb3",
+   "bytes": 137735
+  },
+  "surfaces/DETAIL-mobile.png": {
+   "sha256": "80083412abb4b9536201e5f0094242e485056aa7d09f9f87c611531b4600f64c",
+   "bytes": 481484
+  },
+  "surfaces/DETAIL-mobile-first-screen.png": {
+   "sha256": "d3ab4cdd75e054c8c865cc537901fb0a80377d920530e2cf3228fc8c5758757d",
+   "bytes": 59352
+  },
+  "states/DETAIL-mobile-nav-open.png": {
+   "sha256": "a076d798a5c92c6d77ac8f3a3c1b6d86e8a5081ed228cd1e9e9de9c72d546f1d",
+   "bytes": 62796
+  },
+  "surfaces/INTERACTION-desktop.png": {
+   "sha256": "ba0b6c4a9103699df3508c80830423a906ec27063400038828eba47014d994e9",
+   "bytes": 313475
+  },
+  "surfaces/INTERACTION-desktop-first-screen.png": {
+   "sha256": "c12b3ce8b641746b2271736f88b9d95c9582adbc14874e15a81eaeeb4a71320c",
+   "bytes": 147130
+  },
+  "states/INTERACTION-focus-first.png": {
+   "sha256": "635929298351c18c6f4d504eb41ec63908a6b228f80b26270db0c3431d303d88",
+   "bytes": 149580
+  },
+  "states/INTERACTION-hover-first.png": {
+   "sha256": "0cb798c7685d35c0dbb81b5c089b8ab49f3bf57919088dfe6d90076f68c719c0",
+   "bytes": 140186
+  },
+  "states/INTERACTION-form-submit-empty.png": {
+   "sha256": "57858244096bfb494af378bb9de5909bf0563c524be484c5654263d74967d8a3",
+   "bytes": 140526
+  },
+  "surfaces/INTERACTION-mobile.png": {
+   "sha256": "a4a03191309b11b9b37e4faa8038191af07638957486ffcc00d4f80661cd2077",
+   "bytes": 261125
+  },
+  "surfaces/INTERACTION-mobile-first-screen.png": {
+   "sha256": "35be5efbca083f29f73522d3087c2df86442fc528ed9604e669067c4debbc69e",
+   "bytes": 67312
+  },
+  "states/INTERACTION-mobile-nav-open.png": {
+   "sha256": "b6f0bb1d0b8cecce33dafc07b5abe18fdd4d307659467ed469fd9eb4b3a42c90",
+   "bytes": 60779
+  },
+  "sections.json": {
+   "sha256": "071b15c1c4b34f3365bfd9249382c4784cc06a7e37e207b04f1cb89073cd8882",
+   "bytes": 8467
+  }
+ }
+}

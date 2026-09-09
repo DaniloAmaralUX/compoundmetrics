@@ -1,0 +1,543 @@
+{
+ "milestone": "V02",
+ "build": "M07",
+ "name": "Studio DS v1 (landing, themes gallery, components)",
+ "tool_ids": [
+  "tool-18"
+ ],
+ "tools": [
+  "Studio DS"
+ ],
+ "repository": "DaniloAmaralUX/studio-ds",
+ "source_sha": "54fcaf0e4cb86a989e2eeb2b1452eb9b7b5d3038",
+ "representative_url": "https://studio-ds.vercel.app/ (project created 2026-08-05; deployment id not recoverable from the API list)",
+ "equivalent_deployments": [],
+ "date_range": "2026-08-05 (8 commits, one day)",
+ "captured_at": "2026-09-09T15:47:06.873Z",
+ "capture_method": "exact commit built locally (next start); playwright-core 1.63.0; Chromium 141.0.7390.37; reducedMotion=reduce, animations=disabled, deviceScaleFactor=1, colorScheme=dark",
+ "build_adjustments": [],
+ "viewports": {
+  "desktop": {
+   "width": 1440,
+   "height": 900
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "surfaces": {
+  "ENTRY": "/",
+  "DISCOVERY": "/components",
+  "DETAIL": "/themes",
+  "INTERACTION": "/themes",
+  "MOBILE_ENTRY": "/"
+ },
+ "visual_fingerprint": {
+  "ahash16_entry_top_band": "3c0000000fc00fc00ff00e000c000ff00fe00fe00be000000000000000001bc0",
+  "dom_signature": "66190ad95b5ea11fbb3d866aec8cdd08df64f0a5e0557867a23e58344e67a365",
+  "css_sha256": "d1c26d76104ef5c1363efb9643d41671bfa2bee6013075648dd6a54b5e448f7d",
+  "typography": "3089a924b0d2791b2e00ec3e8915f5e6183b0247b3427b73adfd70486f898ce9",
+  "color": "b3f4b792b6358e9c9af683bc9699a77429735cb7f12836b95f6aaf082a17730f",
+  "section_order": [
+   "div",
+   "header.sticky",
+   "div.flex-1",
+   "footer.border-t",
+   "section",
+   "script#_R_",
+   "script",
+   "script",
+   "script",
+   "script",
+   "script",
+   "script",
+   "script",
+   "script",
+   "script",
+   "script",
+   "script",
+   "script",
+   "script",
+   "script"
+  ],
+  "nav_links": [
+   "Studio DS",
+   "Themes",
+   "Components"
+  ],
+  "landmarks": [
+   "header",
+   "nav",
+   "section",
+   "section",
+   "footer",
+   "section"
+  ]
+ },
+ "fingerprint_detail": {
+  "ENTRY": {
+   "font_families": [
+    "-apple-system×21",
+    "GeistMono×4"
+   ],
+   "font_sizes": [
+    "14×20",
+    "12×2",
+    "16×1",
+    "36×1",
+    "18×1"
+   ],
+   "font_weights": [
+    "400×15",
+    "500×8",
+    "600×1",
+    "700×1"
+   ],
+   "text_colors": [
+    "oklch(0.7 0.012 286)×14",
+    "oklch(0.96 0.003 286)×10",
+    "oklch(0.99 0 0)×1"
+   ],
+   "background_colors": [
+    "oklch(0.26 0.007 286)×4",
+    "oklab(0.15 0.00137819 -0.00480631 / 0.7)×1",
+    "oklch(0.66 0.17 279)×1",
+    "oklab(0.29 0.0022051 -0.00769009 / 0.3)×1"
+   ],
+   "radii": [
+    "8.75px×10",
+    "4px×2"
+   ],
+   "section_order": [
+    "div",
+    "header.sticky",
+    "div.flex-1",
+    "footer.border-t",
+    "section",
+    "script#_R_",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "section",
+    "section",
+    "footer",
+    "section"
+   ],
+   "headings": [
+    "h1:A design system you can install.",
+    "h2:Prefer a namespace? Add it once to your "
+   ],
+   "nav_links": [
+    "Studio DS",
+    "Themes",
+    "Components"
+   ],
+   "title": "Studio DS",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:44577/_next/static/css/3c0108c109fbdc0f.css"
+   ]
+  },
+  "DISCOVERY": {
+   "font_families": [
+    "-apple-system×27",
+    "GeistMono×2"
+   ],
+   "font_sizes": [
+    "14×17",
+    "11×5",
+    "16×4",
+    "12×2",
+    "24×1"
+   ],
+   "font_weights": [
+    "400×14",
+    "500×8",
+    "600×6",
+    "700×1"
+   ],
+   "text_colors": [
+    "oklch(0.96 0.003 286)×12",
+    "oklch(0.7 0.012 286)×12",
+    "oklch(0.68 0.02 286)×1",
+    "oklch(0.78 0.14 68)×1",
+    "oklch(0.7 0.15 250)×1",
+    "oklch(0.7 0.18 22)×1",
+    "oklch(0.75 0.16 158)×1"
+   ],
+   "background_colors": [
+    "oklch(0.2 0.006 286)×2",
+    "oklch(0.26 0.007 286)×2",
+    "oklab(0.15 0.00137819 -0.00480631 / 0.7)×1",
+    "oklch(0.68 0.02 286 / 0.13)×1",
+    "oklch(0.68 0.02 286)×1",
+    "oklch(0.78 0.14 68 / 0.13)×1",
+    "oklch(0.78 0.14 68)×1",
+    "oklch(0.7 0.15 250 / 0.13)×1"
+   ],
+   "radii": [
+    "3.35544e+07px×10",
+    "8.75px×9",
+    "15px×2",
+    "10px×2"
+   ],
+   "section_order": [
+    "div",
+    "header.sticky",
+    "div.flex-1",
+    "footer.border-t",
+    "section",
+    "script#_R_",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "footer",
+    "section"
+   ],
+   "headings": [
+    "h1:Components",
+    "h2:Copy Button",
+    "h2:Status Badge"
+   ],
+   "nav_links": [
+    "Studio DS",
+    "Themes",
+    "Components"
+   ],
+   "title": "Components | Studio DS",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:44577/_next/static/css/3c0108c109fbdc0f.css"
+   ]
+  },
+  "DETAIL": {
+   "font_families": [
+    "-apple-system×316",
+    "GeistMono×37"
+   ],
+   "font_sizes": [
+    "14×86",
+    "12×74",
+    "10×74",
+    "9×74",
+    "16×39",
+    "11×5",
+    "24×1"
+   ],
+   "font_weights": [
+    "500×114",
+    "400×84",
+    "600×80",
+    "700×75"
+   ],
+   "text_colors": [
+    "oklch(0.96 0.003 286)×154",
+    "oklch(1 0 0)×49",
+    "oklch(0.7 0.012 286)×47",
+    "oklch(0 0 0)×11",
+    "oklch(0.9851 0 0)×4",
+    "oklch(0.3729 0.0306 259.733)×4",
+    "oklch(0.3211 0 0)×3",
+    "oklch(0.8717 0.0093 258.338)×3"
+   ],
+   "background_colors": [
+    "oklch(0.2 0.006 286)×38",
+    "oklch(0.26 0.007 286)×38",
+    "oklab(0.29 0.0022051 -0.00769009 / 0.3)×36",
+    "oklch(1 0 0)×27",
+    "oklch(0.3211 0 0)×8",
+    "oklch(0.551 0.0234 264.364)×8",
+    "oklch(0.9219 0 0)×6",
+    "oklch(0.7155 0 0)×6"
+   ],
+   "radii": [
+    "3.35544e+07px×232",
+    "8.75px×115",
+    "8px×72",
+    "12px×38",
+    "15px×37",
+    "10px×14",
+    "6px×14",
+    "4px×14"
+   ],
+   "section_order": [
+    "div",
+    "header.sticky",
+    "div.flex-1",
+    "footer.border-t",
+    "section",
+    "script#_R_",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "header",
+    "footer",
+    "section"
+   ],
+   "headings": [
+    "h1:Themes"
+   ],
+   "nav_links": [
+    "Studio DS",
+    "Themes",
+    "Components"
+   ],
+   "title": "Themes | Studio DS",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:44577/_next/static/css/3c0108c109fbdc0f.css"
+   ]
+  },
+  "INTERACTION": {
+   "font_families": [
+    "-apple-system×316",
+    "GeistMono×37"
+   ],
+   "font_sizes": [
+    "14×86",
+    "12×74",
+    "10×74",
+    "9×74",
+    "16×39",
+    "11×5",
+    "24×1"
+   ],
+   "font_weights": [
+    "500×114",
+    "400×84",
+    "600×80",
+    "700×75"
+   ],
+   "text_colors": [
+    "oklch(0.96 0.003 286)×154",
+    "oklch(1 0 0)×49",
+    "oklch(0.7 0.012 286)×47",
+    "oklch(0 0 0)×11",
+    "oklch(0.9851 0 0)×4",
+    "oklch(0.3729 0.0306 259.733)×4",
+    "oklch(0.3211 0 0)×3",
+    "oklch(0.8717 0.0093 258.338)×3"
+   ],
+   "background_colors": [
+    "oklch(0.2 0.006 286)×38",
+    "oklch(0.26 0.007 286)×38",
+    "oklab(0.29 0.0022051 -0.00769009 / 0.3)×36",
+    "oklch(1 0 0)×27",
+    "oklch(0.3211 0 0)×8",
+    "oklch(0.551 0.0234 264.364)×8",
+    "oklch(0.9219 0 0)×6",
+    "oklch(0.7155 0 0)×6"
+   ],
+   "radii": [
+    "3.35544e+07px×232",
+    "8.75px×115",
+    "8px×72",
+    "12px×38",
+    "15px×37",
+    "10px×14",
+    "6px×14",
+    "4px×14"
+   ],
+   "section_order": [
+    "div",
+    "header.sticky",
+    "div.flex-1",
+    "footer.border-t",
+    "section",
+    "script#_R_",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script",
+    "script"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "header",
+    "footer",
+    "section"
+   ],
+   "headings": [
+    "h1:Themes"
+   ],
+   "nav_links": [
+    "Studio DS",
+    "Themes",
+    "Components"
+   ],
+   "title": "Themes | Studio DS",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:44577/_next/static/css/3c0108c109fbdc0f.css"
+   ]
+  }
+ },
+ "notes": [],
+ "files": {
+  "surfaces/ENTRY-desktop.png": {
+   "sha256": "14ce51892b114e92b7efcc1d94e06456ee227fafbe5a96d867b9fa7159fcac3f",
+   "bytes": 83896
+  },
+  "desktop-full.png": {
+   "sha256": "14ce51892b114e92b7efcc1d94e06456ee227fafbe5a96d867b9fa7159fcac3f",
+   "bytes": 83896
+  },
+  "surfaces/ENTRY-desktop-first-screen.png": {
+   "sha256": "14ce51892b114e92b7efcc1d94e06456ee227fafbe5a96d867b9fa7159fcac3f",
+   "bytes": 83896
+  },
+  "states/ENTRY-focus-first.png": {
+   "sha256": "c679ac1bfa0808141d6bc722069739f87e49b75c3f7e6049087154d2cef2c148",
+   "bytes": 84238
+  },
+  "surfaces/ENTRY-mobile.png": {
+   "sha256": "1cafdc2b360ec0135cff74b68781c0e1994934df499be86b1f47e909634f33a6",
+   "bytes": 71180
+  },
+  "mobile-full.png": {
+   "sha256": "1cafdc2b360ec0135cff74b68781c0e1994934df499be86b1f47e909634f33a6",
+   "bytes": 71180
+  },
+  "surfaces/ENTRY-mobile-first-screen.png": {
+   "sha256": "b07c390d8440c3338529b1ef0a4ee67df7c38dfd804e56897811db5d2368b0f9",
+   "bytes": 65708
+  },
+  "states/ENTRY-mobile-nav-open.png": {
+   "sha256": "62bba6f99c08af0cda3d6917ddcdffccfd78d44924ebfd3eb41bc18f65e5c666",
+   "bytes": 66837
+  },
+  "surfaces/DISCOVERY-desktop.png": {
+   "sha256": "0692f9aa6993e2e7f8b8065295785cb1f4f3e64917641cee23b770d21871ecbc",
+   "bytes": 76503
+  },
+  "surfaces/DISCOVERY-desktop-first-screen.png": {
+   "sha256": "0692f9aa6993e2e7f8b8065295785cb1f4f3e64917641cee23b770d21871ecbc",
+   "bytes": 76503
+  },
+  "states/DISCOVERY-focus-first.png": {
+   "sha256": "4289cfcb90999d48e0b071a0f0331f38518e2361e16e84ce6ccfdce14a8c044c",
+   "bytes": 76824
+  },
+  "surfaces/DISCOVERY-mobile.png": {
+   "sha256": "f852e616f05b5ddd03de4cf42f68418e235d6af0121a11e7c4c0dfba41e3cce5",
+   "bytes": 75583
+  },
+  "surfaces/DISCOVERY-mobile-first-screen.png": {
+   "sha256": "eee5f3fe7dbd538552dbd6ee60358aab96256e324bcdb6ef2cb089a99976c308",
+   "bytes": 64724
+  },
+  "states/DISCOVERY-mobile-nav-open.png": {
+   "sha256": "f147299e65499473e171241d5af0aa2acf84f92823b2268575a8f0712e6c33d4",
+   "bytes": 64196
+  },
+  "surfaces/DETAIL-desktop.png": {
+   "sha256": "7e93bbdffaff4a088ac5d611d839e33270da47599a4c58be32ca4f9fc85abb37",
+   "bytes": 422685
+  },
+  "surfaces/DETAIL-desktop-first-screen.png": {
+   "sha256": "d471547f6820a9504327342bac5b413df6aa2c83dcab08101c339a161650c3d2",
+   "bytes": 121728
+  },
+  "states/DETAIL-focus-first.png": {
+   "sha256": "47efee93b24359e27e196ed23e6064c652620010e97ea2815eb591c963cbd75b",
+   "bytes": 122045
+  },
+  "surfaces/DETAIL-mobile.png": {
+   "sha256": "24efa6cec247437609e33058ce1ae9fae139e9dfe220d1192c642047840edd2e",
+   "bytes": 636076
+  },
+  "surfaces/DETAIL-mobile-first-screen.png": {
+   "sha256": "613fdada279725acc96dcbd34735a20dab80a5b833f56c235bc7af693b6b9a02",
+   "bytes": 64236
+  },
+  "states/DETAIL-mobile-nav-open.png": {
+   "sha256": "536f38e91ff0736f4c67b4588798061f68b400bc62897efcff761af3015492ee",
+   "bytes": 64816
+  },
+  "surfaces/INTERACTION-desktop.png": {
+   "sha256": "7e93bbdffaff4a088ac5d611d839e33270da47599a4c58be32ca4f9fc85abb37",
+   "bytes": 422685
+  },
+  "surfaces/INTERACTION-desktop-first-screen.png": {
+   "sha256": "d471547f6820a9504327342bac5b413df6aa2c83dcab08101c339a161650c3d2",
+   "bytes": 121728
+  },
+  "states/INTERACTION-focus-first.png": {
+   "sha256": "47efee93b24359e27e196ed23e6064c652620010e97ea2815eb591c963cbd75b",
+   "bytes": 122045
+  },
+  "surfaces/INTERACTION-mobile.png": {
+   "sha256": "24efa6cec247437609e33058ce1ae9fae139e9dfe220d1192c642047840edd2e",
+   "bytes": 636076
+  },
+  "surfaces/INTERACTION-mobile-first-screen.png": {
+   "sha256": "613fdada279725acc96dcbd34735a20dab80a5b833f56c235bc7af693b6b9a02",
+   "bytes": 64236
+  },
+  "states/INTERACTION-mobile-nav-open.png": {
+   "sha256": "9a754cb36b6da8d33652801a505fa83d372093a66d26cda42d25142e1ac8e18a",
+   "bytes": 64818
+  },
+  "sections.json": {
+   "sha256": "2dbf64fa30a3a5b92d2ad03bc17fd6a02a29a53f8ae863db13fb64957dc76123",
+   "bytes": 5646
+  }
+ }
+}

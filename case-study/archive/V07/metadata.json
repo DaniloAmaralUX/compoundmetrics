@@ -1,0 +1,284 @@
+{
+ "milestone": "V07",
+ "build": "M09",
+ "name": "Processo (Lifeline-style timeline)",
+ "tool_ids": [
+  "tool-23"
+ ],
+ "tools": [
+  "Processo"
+ ],
+ "repository": "DaniloAmaralUX/processo",
+ "source_sha": "28e53d1ab20b46b2ace378c0c67234e8a34bc151",
+ "representative_url": "https://processo.vercel.app/ (project created 2026-09-08)",
+ "equivalent_deployments": [],
+ "date_range": "2026-09-08",
+ "captured_at": "2026-09-09T15:49:54.226Z",
+ "capture_method": "exact commit built locally (next start); playwright-core 1.63.0; Chromium 141.0.7390.37; reducedMotion=reduce, animations=disabled, deviceScaleFactor=1, colorScheme=dark",
+ "build_adjustments": [],
+ "viewports": {
+  "desktop": {
+   "width": 1440,
+   "height": 900
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "surfaces": {
+  "ENTRY": "/",
+  "DISCOVERY": "/lifeline",
+  "DETAIL": null,
+  "INTERACTION": "/lifeline",
+  "MOBILE_ENTRY": "/"
+ },
+ "visual_fingerprint": {
+  "ahash16_entry_top_band": "300000000000000000008040936003f01ff81ff80000000000000000000027fc",
+  "dom_signature": "e61ba0a5e5b4315ca66ec913dedeeb17abb9b803f637bc199109d7cc10cf34ce",
+  "css_sha256": "6f86c42e2572570cf4b15450e9813f71086843705194c7f49f0b16846fccfac0",
+  "typography": "c806a4da1ceae7a6a366e9644359ca696ebe0ee5ffb4308c03e5fe071c546e09",
+  "color": "094fb69d4e85f77df1720acb5c55cb4c6f85b1f60722fae7a7f355b04a703368",
+  "section_order": [
+   "section.relative"
+  ],
+  "nav_links": [
+   "Processo"
+  ],
+  "landmarks": [
+   "nav",
+   "main",
+   "section",
+   "footer"
+  ]
+ },
+ "fingerprint_detail": {
+  "ENTRY": {
+   "font_families": [
+    "Geist×32"
+   ],
+   "font_sizes": [
+    "14×15",
+    "11×9",
+    "15×7",
+    "13×1"
+   ],
+   "font_weights": [
+    "500×17",
+    "400×15"
+   ],
+   "text_colors": [
+    "lab(47.8878 1.65477 -5.77283)×22",
+    "lab(35.1166 1.78212 -6.1173)×9",
+    "rgb(255, 255, 255)×1"
+   ],
+   "background_colors": [
+    "lab(26.8019 1.35387 -4.68303)×7",
+    "rgb(0, 0, 0)×2",
+    "oklab(0 0 0 / 0.8)×1",
+    "oklab(0 0 0 / 0.95)×1"
+   ],
+   "radii": [],
+   "section_order": [
+    "section.relative"
+   ],
+   "landmarks": [
+    "nav",
+    "main",
+    "section",
+    "footer"
+   ],
+   "headings": [],
+   "nav_links": [
+    "Processo"
+   ],
+   "title": "Processo",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:35825/_next/static/chunks/1gmi5gd1bzeiw.css"
+   ]
+  },
+  "DISCOVERY": {
+   "font_families": [
+    "Geist×88"
+   ],
+   "font_sizes": [
+    "11×39",
+    "15×37",
+    "14×9",
+    "13×2",
+    "10×1"
+   ],
+   "font_weights": [
+    "500×77",
+    "400×10",
+    "600×1"
+   ],
+   "text_colors": [
+    "lab(47.8878 1.65477 -5.77283)×48",
+    "lab(35.1166 1.78212 -6.1173)×39",
+    "rgb(255, 255, 255)×1"
+   ],
+   "background_colors": [
+    "lab(26.8019 1.35387 -4.68303)×37",
+    "rgb(0, 0, 0)×2",
+    "oklab(0 0 0 / 0.8)×1",
+    "oklab(0 0 0 / 0.95)×1",
+    "lab(54.1736 13.3369 -74.6839)×1",
+    "lab(56.9303 76.8162 -8.07021)×1"
+   ],
+   "radii": [
+    "3.35544e+07px×3"
+   ],
+   "section_order": [
+    "section.relative"
+   ],
+   "landmarks": [
+    "nav",
+    "main",
+    "section",
+    "footer"
+   ],
+   "headings": [],
+   "nav_links": [
+    "Lifeline"
+   ],
+   "title": "Processo",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:35825/_next/static/chunks/1gmi5gd1bzeiw.css"
+   ]
+  },
+  "INTERACTION": {
+   "font_families": [
+    "Geist×88"
+   ],
+   "font_sizes": [
+    "11×39",
+    "15×37",
+    "14×9",
+    "13×2",
+    "10×1"
+   ],
+   "font_weights": [
+    "500×77",
+    "400×10",
+    "600×1"
+   ],
+   "text_colors": [
+    "lab(47.8878 1.65477 -5.77283)×48",
+    "lab(35.1166 1.78212 -6.1173)×39",
+    "rgb(255, 255, 255)×1"
+   ],
+   "background_colors": [
+    "lab(26.8019 1.35387 -4.68303)×37",
+    "rgb(0, 0, 0)×2",
+    "oklab(0 0 0 / 0.8)×1",
+    "oklab(0 0 0 / 0.95)×1",
+    "lab(54.1736 13.3369 -74.6839)×1",
+    "lab(56.9303 76.8162 -8.07021)×1"
+   ],
+   "radii": [
+    "3.35544e+07px×3"
+   ],
+   "section_order": [
+    "section.relative"
+   ],
+   "landmarks": [
+    "nav",
+    "main",
+    "section",
+    "footer"
+   ],
+   "headings": [],
+   "nav_links": [
+    "Lifeline"
+   ],
+   "title": "Processo",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:35825/_next/static/chunks/1gmi5gd1bzeiw.css"
+   ]
+  }
+ },
+ "notes": [],
+ "files": {
+  "surfaces/ENTRY-desktop.png": {
+   "sha256": "d4a940bf72ec08eccd277015e4056d29486f7d2fd0ecc79e2a8475275e90d803",
+   "bytes": 53731
+  },
+  "desktop-full.png": {
+   "sha256": "d4a940bf72ec08eccd277015e4056d29486f7d2fd0ecc79e2a8475275e90d803",
+   "bytes": 53731
+  },
+  "surfaces/ENTRY-desktop-first-screen.png": {
+   "sha256": "d4a940bf72ec08eccd277015e4056d29486f7d2fd0ecc79e2a8475275e90d803",
+   "bytes": 53731
+  },
+  "states/ENTRY-focus-first.png": {
+   "sha256": "f7b9cc3b43535c43062a2db1d5a9ef0f2e8ee0c7ce3d48ff5651f49b27b26eb0",
+   "bytes": 54059
+  },
+  "surfaces/ENTRY-mobile.png": {
+   "sha256": "f48495027810c4814982f5764ba98f78979fe1cd818063206c1a048e9df833b5",
+   "bytes": 52468
+  },
+  "mobile-full.png": {
+   "sha256": "f48495027810c4814982f5764ba98f78979fe1cd818063206c1a048e9df833b5",
+   "bytes": 52468
+  },
+  "surfaces/ENTRY-mobile-first-screen.png": {
+   "sha256": "f48495027810c4814982f5764ba98f78979fe1cd818063206c1a048e9df833b5",
+   "bytes": 52468
+  },
+  "surfaces/DISCOVERY-desktop.png": {
+   "sha256": "db10a1c7f89ead2364421c60d2637de42691261eea83dadb3973ab0038ffafe7",
+   "bytes": 22849
+  },
+  "surfaces/DISCOVERY-desktop-first-screen.png": {
+   "sha256": "db10a1c7f89ead2364421c60d2637de42691261eea83dadb3973ab0038ffafe7",
+   "bytes": 22849
+  },
+  "states/DISCOVERY-focus-first.png": {
+   "sha256": "c81790d4abe337a7b545d8e6896b892f8857435b47c9a78ce1e5d91158ec1c0d",
+   "bytes": 23214
+  },
+  "states/DISCOVERY-hover-first.png": {
+   "sha256": "c81790d4abe337a7b545d8e6896b892f8857435b47c9a78ce1e5d91158ec1c0d",
+   "bytes": 23214
+  },
+  "surfaces/DISCOVERY-mobile.png": {
+   "sha256": "e8f6675dd649bddcbd452922a1d83998304271aaed48c4cd9c71ac20be93f604",
+   "bytes": 31727
+  },
+  "surfaces/DISCOVERY-mobile-first-screen.png": {
+   "sha256": "e8f6675dd649bddcbd452922a1d83998304271aaed48c4cd9c71ac20be93f604",
+   "bytes": 31727
+  },
+  "surfaces/INTERACTION-desktop.png": {
+   "sha256": "db10a1c7f89ead2364421c60d2637de42691261eea83dadb3973ab0038ffafe7",
+   "bytes": 22849
+  },
+  "surfaces/INTERACTION-desktop-first-screen.png": {
+   "sha256": "db10a1c7f89ead2364421c60d2637de42691261eea83dadb3973ab0038ffafe7",
+   "bytes": 22849
+  },
+  "states/INTERACTION-focus-first.png": {
+   "sha256": "c81790d4abe337a7b545d8e6896b892f8857435b47c9a78ce1e5d91158ec1c0d",
+   "bytes": 23214
+  },
+  "states/INTERACTION-hover-first.png": {
+   "sha256": "c81790d4abe337a7b545d8e6896b892f8857435b47c9a78ce1e5d91158ec1c0d",
+   "bytes": 23214
+  },
+  "surfaces/INTERACTION-mobile.png": {
+   "sha256": "e8f6675dd649bddcbd452922a1d83998304271aaed48c4cd9c71ac20be93f604",
+   "bytes": 31727
+  },
+  "surfaces/INTERACTION-mobile-first-screen.png": {
+   "sha256": "e8f6675dd649bddcbd452922a1d83998304271aaed48c4cd9c71ac20be93f604",
+   "bytes": 31727
+  },
+  "sections.json": {
+   "sha256": "4640765f067b7cd2c0972f46988fd55ee32b81c7a63b27e98324d9b27684c207",
+   "bytes": 2802
+  }
+ }
+}

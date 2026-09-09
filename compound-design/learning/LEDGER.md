@@ -261,3 +261,21 @@ privacy: public-safe
 candidate_eval: yes — e2 self-test "CI gate rejects a workflow that sets the paid-runtime flag" and "CI gate does not flag a comment that names the flag"
 lesson: the same guard bug recurred in a second place because the first fix was applied to one guard rather than turned into a rule for all of them — a guard must distinguish stating a rule from breaking it, and both directions belong in its tests
 ```
+
+```yaml
+id: CD-20260909-013
+observed_at: 2026-09-09
+project: compoundmetrics-product-experience
+resource: site-check
+resource_version: 0.3.0-alpha.1
+model_runtime: none
+task: run axe-core and Playwright against the exported site to gate overflow, contrast and keyboard operation
+expected: contrast violations mean a colour is wrong
+observed: nine serious color-contrast violations on /project that vanished a second later — axe measured timeline markers mid-fade (opacity 0.35 → 1, staggered up to 1 s); a second batch of "requestfailed" came from Link prefetches aborted on page close
+human_correction: measure the page at rest (wait for entrance animations before axe) and ignore ERR_ABORTED prefetches; separately, the third grey really was 3.2:1 and was raised to 4.8:1
+impact: medium
+reproducible: yes
+privacy: public-safe
+candidate_eval: yes — site:check waits before axe; the real contrast fix is covered by the same run
+lesson: an automated accessibility check is a measurement of the page at rest; run it after motion settles or it reports the animation instead of the design — recorded as docs/solutions/2026-09-09-axe-contrast-during-entrance-animation.md
+```

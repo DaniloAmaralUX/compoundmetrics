@@ -33,6 +33,24 @@ shadcn/ui. See `compound-design/SOURCES.md` and
 validate mechanisms or provide source material; they do not certify Compound
 Design.
 
+## Product experience — design references
+
+The public site's design was developed after studying two of Evil Rabbit's
+repositories, recorded with pinned commits and license conclusions in
+`compound-design/research/PRODUCT-EXPERIENCE-REFERENCES.md`:
+
+- **evilrabbit/main** (`c71d5bc226c0a8b9b18644c34b9b3428f9c1725f`) — no license
+  file at that commit. Studied for principles only; no code, markup, CSS or
+  asset was copied.
+- **evilrabbit/lifeline** (`8ddbb3d3ad0ac6ec5bbe8efda1c051d93d04a63a`) — MIT,
+  Copyright (c) 2026 Evil Rabbit. The `/project` timeline adapts its
+  interaction model (one rail; horizontal on desktop, vertical on mobile; a
+  rail that draws in on first view; markers that settle as they are reached)
+  in this repository's own CSS-modules implementation. No file was copied.
+  Should any code fragment be derived, the MIT notice travels with it.
+
+Neither reference endorses Compound Design.
+
 ## Runtime and build dependencies
 
 - `next`, `react`, `react-dom` — MIT

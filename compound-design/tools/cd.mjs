@@ -230,7 +230,7 @@ export function scanClaims(text, file = "") {
   }
   return out;
 }
-const CLAIM_SCAN_ROOTS = ["skills", "agents", "docs", "README.md", "STRATEGY.md", ".claude-plugin", ".codex-plugin", ".cursor-plugin", ".compound-design", "src/app", "compound-design/releases", "compound-design/research", "compound-design/FINDING-CONTRACT.md", "compound-design/DISCOVERABILITY-CONTRACT.md"];
+const CLAIM_SCAN_ROOTS = ["skills", "agents", "docs", "README.md", "STRATEGY.md", ".claude-plugin", ".codex-plugin", ".cursor-plugin", ".compound-design", "src", "compound-design/releases", "compound-design/research", "compound-design/FINDING-CONTRACT.md", "compound-design/DISCOVERABILITY-CONTRACT.md"];
 function cmdClaims(args) {
   const findings = [];
   for (const r of CLAIM_SCAN_ROOTS) {
@@ -364,7 +364,7 @@ function cmdContracts(args) {
 
 // ---------------------------------------------------------------- plugin validation
 const HOST_MANIFESTS = [".claude-plugin/plugin.json", ".claude-plugin/marketplace.json", ".codex-plugin/plugin.json", ".cursor-plugin/plugin.json", ".cursor-plugin/marketplace.json"];
-const ACTIVE_SURFACES = ["skills", "agents", ".claude-plugin", ".codex-plugin", ".cursor-plugin", ".compound-design", "docs", "README.md", "src/app"];
+const ACTIVE_SURFACES = ["skills", "agents", ".claude-plugin", ".codex-plugin", ".cursor-plugin", ".compound-design", "docs", "README.md", "src"];
 export function validatePlugin() {
   const problems = [];
   const suite = loadSuite();
