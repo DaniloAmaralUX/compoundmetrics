@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customers · Admin</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  *:focus { outline: none; }
+  body { margin: 0; font-family: system-ui, sans-serif; color: #111; background: #fff; }
+  .page { min-width: 1180px; padding: 24px 32px; }
+  header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  h1 { font-size: 24px; margin: 0; }
+  .toolbar { display: flex; gap: 8px; align-items: center; }
+  .toolbar input { height: 32px; padding: 0 10px; border: 1px solid #d4d4d4; border-radius: 6px; }
+  .btn { height: 32px; padding: 0 12px; border: 1px solid #d4d4d4; background: #fff; border-radius: 6px; font: inherit; cursor: pointer; }
+  .btn.primary { background: #111; color: #fff; border-color: #111; }
+  .btn.icon { width: 32px; padding: 0; display: inline-grid; place-items: center; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 14px; }
+  th { font-weight: 600; }
+  .muted { color: #9a9a96; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+  .dot.ok { background: #22c55e; }
+  .dot.risk { background: #ef4444; }
+  .row-action { display: inline-block; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 13px; color: #2563eb; }
+  .row-action.danger { color: #b91c1c; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Customers</h1>
+    <div class="toolbar">
+      <input type="search" id="q" />
+      <button class="btn icon" onclick="openFilters()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h12M4 8h8M6 13h4"/></svg>
+      </button>
+      <button class="btn" onclick="exportCsv()">Export</button>
+      <button class="btn primary" onclick="newCustomer()">New customer</button>
+    </div>
+  </header>
+
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Plan</th>
+        <th scope="col">Status</th>
+        <th scope="col">Last seen</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ada Fields</td>
+        <td class="muted">ada@example.com</td>
+        <td>Pro</td>
+        <td><span class="dot ok"></span></td>
+        <td class="muted">2h ago</td>
+        <td><div class="row-action" onclick="editCustomer(1)">Edit</div> <div class="row-action danger" onclick="deleteCustomer(1)">Delete</div></td>
+      </tr>
+      <tr>
+        <td>Ben Okafor</td>
+        <td class="muted">ben@example.com</td>
+        <td>Team</td>
+        <td><span class="dot risk"></span></td>
+        <td class="muted">3d ago</td>
+        <td><div class="row-action" onclick="editCustomer(2)">Edit</div> <div class="row-action danger" onclick="deleteCustomer(2)">Delete</div></td>
+      </tr>
+      <tr>
+        <td>Chen Wei</td>
+        <td class="muted">chen@example.com</td>
+        <td>Free</td>
+        <td><span class="dot ok"></span></td>
+        <td class="muted">1w ago</td>
+        <td><div class="row-action" onclick="editCustomer(3)">Edit</div> <div class="row-action danger" onclick="deleteCustomer(3)">Delete</div></td>
+      </tr>
+      <tr>
+        <td>Dana Ruiz</td>
+        <td class="muted">dana@example.com</td>
+        <td>Pro</td>
+        <td><span class="dot risk"></span></td>
+        <td class="muted">just now</td>
+        <td><div class="row-action" onclick="editCustomer(4)">Edit</div> <div class="row-action danger" onclick="deleteCustomer(4)">Delete</div></td>
+      </tr>
+      <tr>
+        <td>Eli Marsh</td>
+        <td class="muted">eli@example.com</td>
+        <td>Team</td>
+        <td><span class="dot ok"></span></td>
+        <td class="muted">5m ago</td>
+        <td><div class="row-action" onclick="editCustomer(5)">Edit</div> <div class="row-action danger" onclick="deleteCustomer(5)">Delete</div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script>
+  function openFilters() {}
+  function exportCsv() {}
+  function newCustomer() {}
+  function editCustomer(id) {}
+  function deleteCustomer(id) { fetch('/api/customers/' + id, { method: 'DELETE' }); }
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "candidate": "dashboard-review-skill v1.2.0",
+  "baseline": "same model, no skill",
+  "scope": "web dashboard interface review tasks",
+  "model_snapshot": "model-y-2026-06-01 (both conditions)",
+  "tasks": 10, "holdout_tasks": 4, "runs_per_task": 3, "fresh_runs": true, "cache": false,
+  "mean_score": { "candidate": 74.9, "baseline": 67.7 },
+  "holdout_mean_score": { "candidate": 73.1, "baseline": 66.0 },
+  "critical_issue_recall": { "candidate": 0.94, "baseline": 0.71 }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "compound-design",
+  "owner": {
+    "name": "Danilo do Amaral",
+    "url": "https://github.com/DaniloAmaralUX"
+  },
+  "metadata": {
+    "description": "Cursor plugin marketplace for Compound Design",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "compound-design",
+      "source": ".",
+      "description": "Design engineering work system for humans and AI agents: frame, model, build, verify, polish, then compound what was learned."
+    }
+  ]
+}

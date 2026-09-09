@@ -1,0 +1,28 @@
+{
+  "name": "compound-design",
+  "owner": {
+    "name": "Danilo do Amaral",
+    "url": "https://github.com/DaniloAmaralUX"
+  },
+  "metadata": {
+    "description": "Compound Design — design engineering work system, evidence system and specialist reviewers",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "compound-design",
+      "description": "Design engineering work system for humans and AI agents: frame, model, build, verify, polish, then compound what was learned.",
+      "author": {
+        "name": "Danilo do Amaral"
+      },
+      "homepage": "https://github.com/DaniloAmaralUX/compoundmetrics",
+      "tags": [
+        "design-engineering",
+        "review",
+        "accessibility",
+        "knowledge-management"
+      ],
+      "source": "./"
+    }
+  ]
+}

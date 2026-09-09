@@ -1,5 +1,8 @@
 name: ci
 
+# Zero model runtime. No job here calls a model, runs a host CLI against a provider, sets
+# E2_PAID_RUNTIME_CONFIRMED, reads an API secret, installs a plugin globally, or changes an
+# evidence level. Cost of model calls: $0. `cd plugin` and `e2 self-test` both assert it.
 on:
   push:
     branches: [main]
@@ -10,7 +13,29 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  work-system:
+    # Registry, resource contracts, plugin package, claim guard and their mutation tests.
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: registry rules + mutation self-test
+        run: npm run cd:lint
+      - name: registry against its schema and the evidence rules
+        run: npm run cd:registry
+      - name: resource contract suite (skills, agents, discoverability)
+        run: npm run cd:evals
+      - name: plugin package
+        run: npm run cd:plugin
+      - name: contextual claim guard
+        run: npm run cd:claims
+      - name: tooling self-test
+        run: npm run cd:selftest
+
+  app:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -20,18 +45,45 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-
-      # Evidence infrastructure: registry lint (with mutation self-test) and
-      # the deterministic E1 contract suite. Neither spends model/API budget.
-      - name: registry lint
-        run: npm run cd:lint
-      - name: contract evals
-        run: npm run cd:evals
-
-      # App
       - name: typecheck
         run: npm run typecheck
       - name: lint
         run: npm run lint
       - name: build
         run: npm run build
+
+  e2-harness:
+    # Deterministic gates of the pre-registered benchmark only: mutation self-tests, task and
+    # config gates, frozen resource equivalence, workspace isolation, and an exec-provider dry run.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # `e2 verify-legacy` reads the frozen v0.2 resources out of the baseline commit with
+          # `git show <baseline_commit>:<path>`, which a depth-1 checkout does not contain.
+          # This job is the only one that needs history; the other two stay shallow.
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: install pinned harness (no browsers, no model SDKs)
+        run: npm run e2:install
+      - name: fetch pinned upstream (SHA-verified, drift recorded)
+        run: npm run e2 -- fetch-upstream
+      - name: frozen resource equivalence
+        run: npm run e2 -- verify-legacy
+      - name: self-test (mutations must be rejected)
+        run: npm run e2 -- self-test
+      - name: validate gates + promptfoo schema
+        run: npm run e2 -- validate
+      - name: fixtures cross-check
+        run: npm run e2 -- fixtures
+      - name: workspaces
+        run: npm run e2 -- workspaces
+      - name: freeze
+        run: npm run e2 -- freeze
+      - name: dry run (exec echo provider only)
+        run: npm run e2 -- dry-run
+      - name: plan-runs (estimate only)
+        run: npm run e2 -- plan-runs

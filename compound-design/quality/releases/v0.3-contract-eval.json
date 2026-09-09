@@ -1,0 +1,33 @@
+{
+  "suite": "0.3.0",
+  "ran_at": "2026-09-09",
+  "evidence_level": "E1",
+  "note": "Deterministic contract evidence only. Passing proves the resources declare and satisfy their contracts; it proves nothing about runtime effectiveness, which remains not measured.",
+  "checked": 26,
+  "groups": [
+    {
+      "group": "v0.3-skill",
+      "resources": 12,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "group": "carried-over-skill",
+      "resources": 3,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "group": "v0.3-agent",
+      "resources": 6,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "group": "discoverability",
+      "resources": 5,
+      "passed": true,
+      "problems": []
+    }
+  ]
+}

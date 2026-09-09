@@ -2,28 +2,27 @@ import type { Metadata } from "next";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: { absolute: "Compound Design v0.2.1 — Evidence Infrastructure" },
-  description: "An AI-native Design Engineering framework that separates construction quality from evidence and now adds machine-readable evidence infrastructure without inflating CEL.",
+  title: { absolute: "Compound Design v0.3.0-alpha.1 — Work System" },
+  description: "A design engineering work system for humans and AI agents: frame, model, build, verify, polish, then compound what was learned — with an evidence system that keeps every claim inside what has been checked.",
   robots: { index: false, follow: false },
 };
 
 const stages = [
-  { n: "01", name: "Frame", line: "Define the problem, constraints, success and whether AI should exist at all.", resources: ["Problem Framing", "Experience Brief", "AI Fit"] },
-  { n: "02", name: "Model", line: "Model entities, roles, states and flows — and separate instructions, data, tools and actions for agentic systems.", resources: ["System Model", "State Matrix", "instructions / data / tools / actions"] },
-  { n: "03", name: "Craft", line: "Shape hierarchy, interface behavior and AI interaction quality without inventing a parallel system.", resources: ["Interface Review", "Supernova DS", "AI Interaction Review"] },
-  { n: "04", name: "Build", line: "Turn design decisions into executable product behavior using the existing architecture and primitives.", resources: ["Implementation", "UI Primitives", "Agent-assisted Build"] },
-  { n: "05", name: "Verify", line: "Check code, flow, craft and the resources themselves. Evidence and construction are measured separately.", resources: ["Quality Gate", "Contract Tests", "Browser Verification"] },
-  { n: "06", name: "Polish", line: "Working is the baseline. Refine feedback, motion, copy, rhythm and edge-state behavior.", resources: ["Motion Review", "Polish Pass", "Human Craft Review"] },
-  { n: "07", name: "Compound", line: "Turn proven learning into the system that gives the next project a better starting point.", resources: ["Resource Lab", "Learning Ledger", "Version + Promote"] },
+  { n: "01", name: "Frame", line: "Establish the problem, user, outcome, constraints and success conditions — and discover what a previous run already learned about this area.", resources: ["cd-frame", "prior learning", "AI fit"] },
+  { n: "02", name: "Model", line: "Decide how the product must behave: entities, routes, states, transitions, edge cases and the contract Build implements.", resources: ["cd-model", "state coverage", "instructions / data / tools / actions"] },
+  { n: "03", name: "Build", line: "Implement the decided contract inside the existing architecture, verify locally, and report exactly what changed.", resources: ["cd-build", "existing primitives", "write authority"] },
+  { n: "04", name: "Verify", line: "Check the built result against what was decided. Report-only by default: reviewing is not permission to change.", resources: ["cd-verify", "Interface Review", "AI Interaction Review"] },
+  { n: "05", name: "Polish", line: "Make a working interface deliberate — hierarchy, typography, spacing, colour, copy and feel. Only after it works.", resources: ["cd-polish", "Motion Review", "design system"] },
+  { n: "06", name: "Compound", line: "Keep the one learning a future run would otherwise rediscover, and make it discoverable. Most runs keep nothing.", resources: ["cd-compound", "Learning Ledger", "Compound Refresh"] },
 ];
 
 const resources = [
-  { name: "Design Guide", kind: "GUIDE", version: "0.2", score: "8.45", cel: "E1", summary: "Runs the smallest sufficient Design Engineering path, delegates specialists and adds the AI interaction branch only when it belongs.", delta: "Sharper routing + AI/system boundaries" },
-  { name: "Interface Review", kind: "SPECIALIST", version: "0.2", score: "8.55", cel: "E1", summary: "Interface-craft specialist with explicit non-goals, severity and a prioritized evidence-bearing review contract.", delta: "Clearer prioritization + review boundaries" },
-  { name: "Motion Review", kind: "SPECIALIST", version: "0.2", score: "8.50", cel: "E1", summary: "Motion and interaction specialist that decides whether animation should exist before deciding how it should move.", delta: "Motion restraint + routing boundaries" },
-  { name: "Quality Gate", kind: "QUALITY", version: "0.2", score: "8.75", cel: "E1", summary: "Separates construction quality from evidence and evaluates the evaluator itself before allowing promotion claims.", delta: "CDQI + CEL + evidence debt" },
-  { name: "Resource Lab", kind: "LEARNING", version: "0.2", score: "8.65", cel: "E1", summary: "Improves resources through reproduced failures, hypotheses, eval-first changes, holdouts and falsification attempts.", delta: "Learning Ledger feeds future evals" },
-  { name: "AI Interaction Review", kind: "SPECIALIST", version: "0.1", score: "8.35", cel: "E1", summary: "Reviews only user-facing AI for fit, reliance, legibility, human control, proportional autonomy and model evolution.", delta: "Grounded AI interaction criteria" },
+  { name: "Design Guide", kind: "ORCHESTRATOR · AGENT", version: "0.3.0-alpha.1", score: "—", cel: "E1", summary: "Routes work through the smallest sufficient set of stages and dispatches specialists deliberately. It owns no procedure of its own.", delta: "Rewritten as a thin router over the six loop skills" },
+  { name: "Interface Review", kind: "SPECIALIST · SKILL + AGENT", version: "0.3.0-alpha.1", score: "—", cel: "E1", summary: "Finds what materially costs a user — reachability, hierarchy, states, contrast, reflow, copy — and reports it with evidence, impact and a verification state.", delta: "Rewritten as a self-contained Compound Design resource" },
+  { name: "Motion Review", kind: "SPECIALIST · SKILL + AGENT", version: "0.3.0-alpha.1", score: "—", cel: "E1", summary: "Asks whether motion should exist at all before asking how it should move, then checks interruption, exit and reduced-motion behaviour.", delta: "Rewritten as a self-contained Compound Design resource" },
+  { name: "Quality Gate", kind: "QUALITY · SKILL", version: "0.2.0", score: "8.75", cel: "E1", summary: "Separates construction quality from evidence and evaluates the evaluator itself before allowing any promotion claim.", delta: "Carried into v0.3 unchanged" },
+  { name: "Resource Lab", kind: "LEARNING · SKILL", version: "0.2.0", score: "8.65", cel: "E1", summary: "Improves resources through reproduced failures, hypotheses, eval-first changes, holdouts and falsification attempts.", delta: "Carried into v0.3 unchanged" },
+  { name: "AI Interaction Review", kind: "SPECIALIST · SKILL", version: "0.1.0", score: "8.35", cel: "E1", summary: "Reviews only user-facing AI for fit, reliance, legibility, human control, proportional autonomy and model evolution.", delta: "Carried into v0.3 unchanged" },
 ];
 
 const construction = [
@@ -54,12 +53,18 @@ const aiGates = [
 ];
 
 const infrastructure = [
-  ["01", "Resource Registry", "One canonical machine-readable place for purpose, version, provenance, CDQI, CEL and evidence debt."],
-  ["02", "Deterministic lint", "Checks semver, provenance, CEL boundaries, inflated runtime claims and vendor-certification language."],
-  ["03", "Evidence Debt", "Shows exactly what remains unproven instead of hiding uncertainty behind a score."],
-  ["04", "Learning Ledger", "Turns safe observations from real work into future regressions without extra model calls."],
-  ["05", "Resource Value Audit", "A Compound resource may be simplified or deleted when a simpler path is equal or better."],
-  ["06", "Local Stress Lane", "Optional zero-API-cost stress testing can find fragility, but it never impersonates formal E2 evidence."],
+  ["01", "Work system", "Six skills for the loop, plus strategy, refresh, setup and handoff. Each declares its scope, its write authority and what it may never do."],
+  ["02", "Specialists as agents", "An agent is a specialist dispatched into its own context; a skill is the procedure. An agent that restates its skill fails a deterministic test."],
+  ["03", "Durable learning", "One learning per run, only when a future reader would otherwise rediscover it — and a maintenance pass whose outcomes include deletion."],
+  ["04", "Discoverability", "A learning carries the literal signals that will recur, and Frame and Model run a bounded deterministic search before asking anything."],
+  ["05", "Shared finding contract", "Four reviewers, one shape: evidence, impact, severity, confidence, and observed / inferred / not-verified."],
+  ["06", "Installable plugin", "One canonical implementation read by Claude Code, Codex and Cursor. Self-contained: it clones nothing at runtime."],
+];
+
+const install = [
+  ["01", "Add the marketplace", "/plugin marketplace add DaniloAmaralUX/compoundmetrics"],
+  ["02", "Install the plugin", "/plugin install compound-design@compound-design"],
+  ["03", "Set up a project", "cd-setup — diagnoses, offers each fix, changes nothing you own without asking"],
 ];
 
 export default function CompoundDesignPage() {
@@ -67,20 +72,20 @@ export default function CompoundDesignPage() {
     <main className={styles.page}>
       <nav className={styles.nav} aria-label="Compound Design">
         <div className={styles.brand}><span className={styles.mark}>CD</span><span>Compound Design</span></div>
-        <div className={styles.navMeta}><span className={styles.liveDot} /> POC · v0.2.1 · EVIDENCE INFRASTRUCTURE</div>
+        <div className={styles.navMeta}><span className={styles.liveDot} /> CANDIDATE · v0.3.0-alpha.1 · WORK SYSTEM</div>
       </nav>
 
       <header className={styles.hero}>
-        <div className={styles.eyebrow}>AI-NATIVE DESIGN ENGINEERING · VERSIONED RESOURCES</div>
+        <div className={styles.eyebrow}>DESIGN ENGINEERING WORK SYSTEM · HUMANS + AI AGENTS</div>
         <h1>Build the application.<br />Improve the system that builds the next one.</h1>
-        <p>v0.2.1 improves the evidence system without pretending the evidence level improved: resources now have canonical metadata, explicit evidence debt, deterministic claim checks and a learning path from real work.</p>
+        <p>A loop you can install: frame the problem, model the behaviour, build it, verify it against what was decided, polish what works, then keep the one thing worth keeping where the next run will find it.</p>
         <div className={styles.heroStats}>
-          <div><strong>07</strong><span>stages</span></div>
-          <div><strong>06</strong><span>resources</span></div>
+          <div><strong>06</strong><span>loop stages</span></div>
+          <div><strong>15</strong><span>skills · 6 agents</span></div>
           <div><strong>E1</strong><span>evidence unchanged</span></div>
           <div><strong>0</strong><span>paid runtime used</span></div>
         </div>
-        <p className={styles.disclaimer}>This release improves infrastructure, not outcome claims. Runtime uplift remains not measured; no E2/E3 or vendor-certification claim is made.</p>
+        <p className={styles.disclaimer}>A candidate release: the architecture and the behaviour changed, and nothing was shown to work better. Runtime uplift remains not measured, v0.2.1 remains the stable evidence baseline, and the controlled-runtime pilot has never been executed.</p>
       </header>
 
       <section className={styles.evidenceSection} aria-labelledby="manifesto-title">
@@ -119,7 +124,7 @@ export default function CompoundDesignPage() {
       </section>
 
       <section className={styles.timelineSection} aria-labelledby="process-title">
-        <div className={styles.sectionHeading}><span>THE PROCESS</span><h2 id="process-title">A loop that leaves the next project stronger.</h2></div>
+        <div className={styles.sectionHeading}><span>THE LOOP</span><h2 id="process-title">A loop that leaves the next project stronger.</h2><p>Craft is not a stage. It happens through specialists and decisions inside Model, Verify and Polish, and only when the work has a question that needs them. Nothing forces a small change through six stages.</p></div>
         <div className={styles.timeline}><div className={styles.rail} />
           {stages.map((stage, index) => (
             <article className={styles.stage} key={stage.name}>
@@ -157,12 +162,12 @@ export default function CompoundDesignPage() {
       </section>
 
       <section className={styles.aiSection} aria-labelledby="infra-title">
-        <div className={styles.sectionHeading}><span>v0.2.1 · EVIDENCE INFRASTRUCTURE</span><h2 id="infra-title">The framework now knows what it has — and what it still does not know.</h2><p>This release improves traceability, falsifiability and learning without spending model/API budget or promoting any resource above E1.</p></div>
+        <div className={styles.sectionHeading}><span>v0.3.0-alpha.1 · WORK SYSTEM</span><h2 id="infra-title">From a framework you read to a system you run.</h2><p>Six loop skills, five specialists, four operational skills and six agents, distributed as one installable plugin. No resource was promoted above E1 and no runtime was executed to build it.</p></div>
         <div className={styles.gateGrid}>{infrastructure.map(([n, title, copy]) => <article key={title}><span>{n}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
       </section>
 
       <section className={styles.resourcesSection} aria-labelledby="resources-title">
-        <div className={styles.sectionHeading}><span>RESOURCE SYSTEM · FRAMEWORK v0.2.1</span><h2 id="resources-title">The resources did not need fake version bumps.</h2><p>Resource behavior versions remain where they were. The framework around them improved: registry, evidence debt, learning capture and deletion/simplification criteria were added.</p></div>
+        <div className={styles.sectionHeading}><span>RESOURCES · CANDIDATE v0.3.0-alpha.1</span><h2 id="resources-title">A rewritten resource does not inherit evidence.</h2><p>Interface Review and Motion Review were rewritten as self-contained Compound Design resources and re-earned E1 through the deterministic contract suite. Three resources were carried over unchanged and keep the evidence they already had. A dash means construction quality has not been audited yet — it is never assumed.</p></div>
         <div className={styles.resourceGrid}>{resources.map((resource) => (
           <article className={styles.resourceCard} key={resource.name}>
             <div className={styles.resourceTop}><div><span className={styles.kind}>{resource.kind} · v{resource.version}</span><h3>{resource.name}</h3></div><div className={styles.score}><strong>{resource.score}</strong><span>CDQI</span></div></div>
@@ -195,6 +200,12 @@ export default function CompoundDesignPage() {
         ].map(([n,title,copy]) => <div className={styles.loopItem} key={n}><span>{n}</span><div><strong>{title}</strong><p>{copy}</p></div></div>)}</div>
       </section>
 
+      <section className={styles.aiSection} aria-labelledby="install-title">
+        <div className={styles.sectionHeading}><span>INSTALL</span><h2 id="install-title">One plugin, read directly by three hosts.</h2><p>Claude Code, Codex and Cursor read the same canonical skills through their own manifest, so there is no mirrored copy to drift. The installed plugin is self-contained: it clones nothing and needs no upstream checkout.</p></div>
+        <div className={styles.gateGrid}>{install.map(([n, title, cmd]) => <article key={title}><span>{n}</span><h3>{title}</h3><p>{cmd}</p></article>)}</div>
+        <div className={styles.nativeLoop}><span>install</span><i>→</i><span>cd-setup</span><i>→</i><span>frame</span><i>→</i><span>model</span><i>→</i><span>build</span><i>→</i><span>verify</span><i>→</i><span>polish</span><i>→</i><span>compound</span></div>
+      </section>
+
       <section className={styles.versionSection}>
         <div className={styles.sectionHeading}><span>CONTINUOUS VERSIONS</span><h2>Versions are earned by a better system, not a bigger prompt.</h2></div>
         <div className={styles.versions}>
@@ -205,7 +216,7 @@ export default function CompoundDesignPage() {
         <div className={styles.nativeLoop}><span>real work</span><i>→</i><span>learning ledger</span><i>→</i><span>failure</span><i>→</i><span>eval</span><i>→</i><span>minimal change</span><i>→</i><span>falsify</span><i>→</i><span>earned version</span></div>
       </section>
 
-      <footer className={styles.footer}><div><strong>Compound Design · v0.2.1</strong><span>Evidence infrastructure improved. Evidence level unchanged.</span></div><span>POC · 2026</span></footer>
+      <footer className={styles.footer}><div><strong>Compound Design · v0.3.0-alpha.1</strong><span>Work system added. Evidence level unchanged. Runtime uplift not measured.</span></div><span>CANDIDATE · 2026</span></footer>
     </main>
   );
 }

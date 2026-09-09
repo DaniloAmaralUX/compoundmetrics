@@ -1,0 +1,10 @@
+{
+  "harness": "promptfoo 0.122.2",
+  "date": "2026-09-03",
+  "conditions": {
+    "baseline": { "model": "model-x-2026-03-01", "tools": ["Read", "Grep"], "permissions": "read-only" },
+    "candidate": { "model": "model-x-2026-08-15", "tools": ["Read", "Grep"], "permissions": "read-only" }
+  },
+  "cache": true,
+  "runs_per_task": 3
+}

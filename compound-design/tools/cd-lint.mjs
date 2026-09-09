@@ -12,20 +12,24 @@ const forbiddenCertification = /(?:claude|anthropic|openai|promptfoo)\s+(?:appro
 export function lintRegistry(registry) {
   const errors = [];
   if (registry.framework !== 'Compound Design') errors.push('framework must be Compound Design');
-  if (!/^\d+\.\d+\.\d+$/.test(registry.release ?? '')) errors.push('release must use semver');
+  if (!/^\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?$/.test(registry.release ?? '')) errors.push('release must use semver (a prerelease suffix is allowed for a candidate release)');
   if (!Array.isArray(registry.resources) || registry.resources.length === 0) errors.push('resources must be a non-empty array');
   const ids = new Set();
   for (const resource of registry.resources ?? []) {
     const prefix = resource.id ? `[${resource.id}]` : '[unknown]';
     if (!resource.id || ids.has(resource.id)) errors.push(`${prefix} id missing or duplicated`);
     ids.add(resource.id);
-    if (!/^\d+\.\d+\.\d+$/.test(resource.version ?? '')) errors.push(`${prefix} invalid semver`);
+    if (!/^\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?$/.test(resource.version ?? '')) errors.push(`${prefix} invalid semver`);
     if (!allowedCel.has(resource.cel)) errors.push(`${prefix} invalid CEL`);
-    if (typeof resource.cdqi !== 'number' || resource.cdqi < 0 || resource.cdqi > 10) errors.push(`${prefix} CDQI must be 0..10`);
+    // cdqi may be null: a construction score is judged, never assumed, so an unaudited resource carries no number.
+    if (resource.cdqi !== null && (typeof resource.cdqi !== 'number' || resource.cdqi < 0 || resource.cdqi > 10)) errors.push(`${prefix} CDQI must be 0..10 or null when not yet audited`);
     if (!resource.job || !resource.triggers?.length || !resource.nonGoals?.length) errors.push(`${prefix} missing contract fields`);
     if (!resource.upstream?.length || !resource.provenance) errors.push(`${prefix} provenance/upstream required`);
     if ((resource.cel === 'E0' || resource.cel === 'E1') && resource.runtimeUplift !== 'not measured') errors.push(`${prefix} E0/E1 runtime uplift must remain not measured`);
     if (!Array.isArray(resource.evidenceDebt)) errors.push(`${prefix} evidenceDebt must be an array`);
+    const status = resource.status ?? 'active';
+    if (status === 'superseded' && !resource.supersededBy) errors.push(`${prefix} superseded resources must name their successor`);
+    if (status === 'active' && resource.cel !== 'E0' && resource.cel !== 'E1') errors.push(`${prefix} no active resource may exceed E1 in this release`);
     const text = JSON.stringify(resource);
     if (forbiddenCertification.test(text)) errors.push(`${prefix} vendor-certification language is forbidden`);
   }
@@ -40,7 +44,10 @@ function selfTest() {
     ['invalid CDQI', r => { r.resources[0].cdqi = 11; }],
     ['missing provenance', r => { r.resources[0].upstream = []; }],
     ['invalid CEL', r => { r.resources[0].cel = 'E9'; }],
-    ['vendor certification', r => { r.resources[0].job = 'Claude Approved resource for orchestration'; }]
+    ['vendor certification', r => { r.resources[0].job = 'Claude Approved resource for orchestration'; }],
+    ['out-of-range CDQI where null is the only alternative', r => { r.resources[0].cdqi = -1; }],
+    ['superseded without a successor', r => { r.resources[0].status = 'superseded'; delete r.resources[0].supersededBy; }],
+    ['active resource above E1 in a candidate release', r => { r.resources[0].cel = 'E2'; r.resources[0].runtimeUplift = 'demonstrated'; }]
   ];
   let passed = 0;
   for (const [name, mutate] of mutations) {

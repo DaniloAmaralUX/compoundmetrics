@@ -1,0 +1,8 @@
+{
+  "candidate": "empty-state-review-skill v0.2.1",
+  "previous": "empty-state-review-skill v0.2.0",
+  "tasks": 8, "holdout_task_ids": ["T7", "T8"], "runs_per_task": 3, "fresh_runs": true, "same_model_snapshot": true, "cache": false,
+  "mean_score": { "candidate": 70.0, "previous": 61.0 },
+  "delta": "+9.0",
+  "holdout_mean_score": { "candidate": 72.5, "previous": 58.0 }
+}

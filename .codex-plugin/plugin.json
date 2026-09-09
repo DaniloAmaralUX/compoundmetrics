@@ -1,0 +1,40 @@
+{
+  "name": "compound-design",
+  "version": "0.3.0-alpha.1",
+  "description": "Design engineering work system for humans and AI agents: frame, model, build, verify, polish, then compound what was learned.",
+  "author": {
+    "name": "Danilo do Amaral"
+  },
+  "homepage": "https://github.com/DaniloAmaralUX/compoundmetrics",
+  "repository": "https://github.com/DaniloAmaralUX/compoundmetrics",
+  "license": "UNLICENSED",
+  "keywords": [
+    "design-engineering",
+    "interface-review",
+    "motion-review",
+    "accessibility",
+    "ai-interaction",
+    "durable-learning",
+    "evidence"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Compound Design",
+    "shortDescription": "Design engineering work system for humans and AI agents: frame, model, build, verify, polish, then compound what was learned.",
+    "longDescription": "Compound Design is a work system for design engineers building web applications with AI agents. It runs a loop — frame the problem, model the behaviour, build it, verify it against what was decided, polish what works, then capture the one learning worth keeping — with specialist reviewers for interface craft, motion and user-facing AI, and an evidence system that keeps claims inside what has actually been measured.",
+    "developerName": "Danilo do Amaral",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/DaniloAmaralUX/compoundmetrics",
+    "defaultPrompt": [
+      "Frame the problem before we build this",
+      "Review this interface for what materially costs the user",
+      "What did this work teach that is worth keeping?"
+    ],
+    "screenshots": []
+  }
+}

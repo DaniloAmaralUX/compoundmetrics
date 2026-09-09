@@ -1,0 +1,9 @@
+{
+  "suite": "release-notes-writer contract checks",
+  "kind": "deterministic",
+  "date": "2026-09-02",
+  "assertions": 24,
+  "passed": 24,
+  "failed": 0,
+  "checks": ["frontmatter valid", "sections present", "forbidden phrases absent", "output schema parses"]
+}

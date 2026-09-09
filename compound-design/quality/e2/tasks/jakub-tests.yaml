@@ -1,0 +1,552 @@
+# Compound Design E2 — Interface Review task set
+# task_set: interface-review v1.0.0 (frozen before any model run)
+#
+# Ground-truth classes (see E2-PILOT-PLAN.md §GROUND TRUTH):
+#   deterministic  — mechanically verifiable from the fixture plus a normative rule
+#                    (provenance: fixture-fact | wcag-normative | computed-contrast | axe | playwright | product-requirement)
+#   pending_human  — semantic judgment; hypothesis only; PENDING HUMAN AUTHORING (blind)
+# Nothing in this file may be copied into a benchmark workspace.
+# Prompt hygiene: no eval framing ("holdout", "root cause"), no Compound/upstream names, no answer spelled out.
+
+- description: J01 — Invite form action and error clarity
+  vars:
+    task_id: J01
+    request: |
+      Review this React interface for material interface-quality issues only. Prioritize the smallest set of changes that materially improve clarity, accessibility and task completion.
+
+      ```tsx
+      export function InviteMember() {
+        return (
+          <div className="w-[420px] p-4">
+            <h3>Invite</h3>
+            <input placeholder="Email" className="h-8 w-full border" />
+            <div onClick={() => invite()} className="mt-3 inline-flex h-8 items-center px-3 bg-black text-white">OK</div>
+            <p className="text-xs text-gray-400">Oops! Something went wrong.</p>
+          </div>
+        )
+      }
+      ```
+  assert:
+    # routing gate only (pass/fail, never scored): a review was actually produced
+    - type: javascript
+      value: "String(output).trim().length > 200"
+  metadata:
+    id: J01
+    suite: interface-review
+    kind: review
+    holdout: false
+    d_subset: true
+    workspace_files: []
+    expected:
+      - id: J01-E1
+        issue: Primary action is a non-semantic div with onClick — not keyboard operable, no role, no accessible name
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["2.1.1", "4.1.2"]
+        critical: true
+        strength: strict
+        verify: "fixture: <div onClick={() => invite()} ...>OK</div> has no role, tabIndex or key handler"
+      - id: J01-E2
+        issue: Action label "OK" does not describe the action (invite/send)
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["2.4.6"]
+        critical: false
+        strength: arguable
+        verify: "fixture: control text is 'OK'; the operation is invite()"
+      - id: J01-E3
+        issue: Helper/error text text-gray-400 on white fails minimum contrast for small text
+        class: deterministic
+        provenance: [computed-contrast, wcag-normative]
+        wcag: ["1.4.3"]
+        critical: true
+        strength: strict
+        verify: "contrast(#9ca3af,#ffffff) < 4.5"
+      - id: J01-E4
+        issue: Error message renders unconditionally (no error state) and names no cause or recovery
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["3.3.1", "3.3.3"]
+        critical: false
+        strength: arguable
+        verify: "fixture: <p> error text has no condition; text is generic"
+      - id: J01-E5
+        issue: Fixed 420px width cannot reflow at 320 CSS px
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["1.4.10"]
+        critical: false
+        strength: strict
+        verify: "fixture: w-[420px] on the root container"
+    decoys:
+      - id: J01-D1
+        claim: 32px (h-8) input and button heights violate WCAG target size
+        why_not_issue: WCAG 2.2 SC 2.5.8 (AA) minimum is 24x24 CSS px; 44px is the AAA SC 2.5.5 level
+        verify: wcag-normative 2.5.8
+      - id: J01-D2
+        claim: 12px (text-xs) helper text violates a WCAG minimum font size
+        why_not_issue: WCAG defines no minimum font size; size alone is not a failure
+        verify: wcag-normative (no SC)
+      - id: J01-D3
+        claim: The email input has no accessible name because there is no <label>
+        why_not_issue: A non-empty placeholder is used as the accessible-name fallback (HTML-AAM); the visible-label concern is a separate, arguable UX issue, not a missing accessible name
+        verify: html-aam accname fallback; axe check non-empty-placeholder
+    pending_human:
+      - id: J01-H1
+        hypothesis: Placeholder-only labelling harms clarity once the field is filled (visible label expected)
+        status: PENDING HUMAN AUTHORING
+      - id: J01-H2
+        hypothesis: Heading level (h3) appropriateness cannot be judged from an isolated component
+        status: PENDING HUMAN AUTHORING
+
+- description: J02 — Dashboard shell responsiveness and hierarchy
+  vars:
+    task_id: J02
+    request: |
+      Review this dashboard shell for the highest-leverage interface issues. Do not invent product requirements.
+
+      ```tsx
+      <main className="grid grid-cols-[280px_1fr] min-w-[1180px] gap-8 p-8">
+        <aside>Navigation</aside>
+        <section>
+          <div className="flex items-center justify-between">
+            <p className="text-3xl font-semibold">Customers</p>
+            <button className="h-8 px-3">New customer</button>
+          </div>
+          <div className="mt-8 grid grid-cols-4 gap-2">...</div>
+        </section>
+      </main>
+      ```
+  assert:
+    - type: javascript
+      value: "String(output).trim().length > 200"
+  metadata:
+    id: J02
+    suite: interface-review
+    kind: review
+    holdout: false
+    d_subset: true
+    workspace_files: []
+    expected:
+      - id: J02-E1
+        issue: min-w-[1180px] forces horizontal scrolling below 1180px; content cannot reflow at 320 CSS px
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["1.4.10"]
+        critical: true
+        strength: strict
+        verify: "fixture: min-w-[1180px] on <main>"
+      - id: J02-E2
+        issue: Page title "Customers" is a styled <p>, not a heading — no heading structure for the view
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["1.3.1", "2.4.6"]
+        critical: false
+        strength: strict
+        verify: "fixture: <p className=\"text-3xl font-semibold\">Customers</p>; no h1/h2 present"
+      - id: J02-E3
+        issue: Navigation region is a bare <aside> with no landmark name or <nav>
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["1.3.1"]
+        critical: false
+        strength: arguable
+        verify: "fixture: <aside>Navigation</aside>"
+    decoys:
+      - id: J02-D1
+        claim: The 4-column grid must collapse to 1 column on mobile
+        why_not_issue: The prompt forbids inventing requirements; the 4-column grid is not itself a failure — the min-width is. A responsive grid is a possible remedy, not a defect
+        verify: prompt constraint ("Do not invent product requirements")
+      - id: J02-D2
+        claim: The button lacks type="button" and will submit a form
+        why_not_issue: No form ancestor exists in the fixture; default type is irrelevant here
+        verify: fixture-fact (no <form>)
+    pending_human:
+      - id: J02-H1
+        hypothesis: Header row and grid density/rhythm (mt-8, gap-2) are inconsistent
+        status: PENDING HUMAN AUTHORING
+
+- description: J03 — Deletion dialog copy and action clarity
+  vars:
+    task_id: J03
+    request: |
+      Review only the user-facing interface copy and action clarity in this deletion flow.
+
+      Dialog title: "Are you sure?"
+      Body: "This might remove stuff from your account forever!"
+      Primary button: "Yes"
+      Secondary button: "No"
+      Error after failure: "Oops! Something went wrong."
+  assert:
+    - type: javascript
+      value: "String(output).trim().length > 150"
+  metadata:
+    id: J03
+    suite: interface-review
+    kind: review
+    holdout: false
+    d_subset: false
+    workspace_files: []
+    expected:
+      - id: J03-E1
+        issue: Primary action "Yes" does not name the destructive operation (Delete)
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["2.4.6"]
+        critical: true
+        strength: arguable
+        verify: "fixture: primary button text 'Yes'; operation is deletion"
+      - id: J03-E2
+        issue: Body copy does not state what will be deleted ("stuff") nor that it is irreversible in plain terms
+        class: deterministic
+        provenance: [fixture-fact]
+        critical: false
+        strength: arguable
+        verify: "fixture: body text uses 'stuff' and 'might'"
+      - id: J03-E3
+        issue: Failure message gives no cause or recovery path
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["3.3.1", "3.3.3"]
+        critical: false
+        strength: arguable
+        verify: "fixture: 'Oops! Something went wrong.'"
+    decoys:
+      - id: J03-D1
+        claim: The dialog needs a third "Learn more" action
+        why_not_issue: Adding actions is scope expansion the prompt did not request; not a defect in the given copy
+        verify: prompt scope ("copy and action clarity" only)
+      - id: J03-D2
+        claim: The secondary action must be labelled "Cancel" to be accessible
+        why_not_issue: The label "No" is valid and understandable; the material issue is the primary label, not the secondary one
+        verify: wcag-normative (no SC mandates "Cancel")
+    pending_human:
+      - id: J03-H1
+        hypothesis: Tone ("Oops!", exclamation marks) is inconsistent with a destructive flow
+        status: PENDING HUMAN AUTHORING
+
+- description: J04 — Repeated card pattern with systemic issues
+  vars:
+    task_id: J04
+    request: |
+      Review this UI pattern. The same card appears 18 times in one page.
+
+      Every card uses `rounded-2xl p-2`; each inner action also uses `rounded-2xl`; card borders are `border-black/5` in light mode and the action text is `text-zinc-400` on white.
+  assert:
+    - type: javascript
+      value: "String(output).trim().length > 150"
+  metadata:
+    id: J04
+    suite: interface-review
+    kind: review
+    holdout: false
+    d_subset: false
+    workspace_files: []
+    expected:
+      - id: J04-E1
+        issue: Action text zinc-400 on white fails minimum contrast
+        class: deterministic
+        provenance: [computed-contrast, wcag-normative]
+        wcag: ["1.4.3"]
+        critical: true
+        strength: strict
+        verify: "contrast(#a1a1aa,#ffffff) < 4.5"
+      - id: J04-E2
+        issue: Findings are systemic (one pattern, 18 instances) and should be reported once as a pattern change, not per card
+        class: deterministic
+        provenance: [product-requirement]
+        critical: false
+        strength: strict
+        verify: "output must not enumerate 18 separate card findings (gate: count of '18' mentions <= 3)"
+      - id: J04-E3
+        issue: Nested identical radius (rounded-2xl inside rounded-2xl with p-2) produces non-concentric corners
+        class: deterministic
+        provenance: [fixture-fact]
+        critical: false
+        strength: arguable
+        verify: "fixture: outer rounded-2xl p-2, inner rounded-2xl (inner radius should be outer minus padding)"
+    decoys:
+      - id: J04-D1
+        claim: border-black/5 is a contrast failure
+        why_not_issue: WCAG 1.4.11 applies to UI component boundaries needed to identify the component; a decorative card border is not required to meet 3:1
+        verify: wcag-normative 1.4.11 scope
+    pending_human: []
+
+- description: J05 — Backend migration request (no interface change)
+  vars:
+    task_id: J05
+    request: |
+      Review this PostgreSQL migration strategy for lock duration, index creation and rollback safety. There is no user-facing interface change.
+  assert:
+    # routing gate: the reviewer must decline or redirect rather than fabricate an interface review
+    - type: javascript
+      value: |
+        const s = String(output).toLowerCase();
+        const declines = /(out of scope|outside|not an interface|no interface|backend|database|code review|not (?:the )?right|defer|redirect|cannot review)/.test(s);
+        const fabricates = /(typography|contrast|hierarchy|spacing|layout)/.test(s) && s.length > 1500;
+        return declines && !fabricates;
+  metadata:
+    id: J05
+    suite: interface-review
+    kind: near-miss
+    holdout: false
+    d_subset: true
+    workspace_files: []
+    expected:
+      - id: J05-E1
+        issue: Declines or redirects — the request has no interface surface
+        class: deterministic
+        provenance: [product-requirement]
+        critical: true
+        strength: strict
+        verify: "prompt states no user-facing interface change"
+    decoys:
+      - id: J05-D1
+        claim: Suggest adding a progress UI for the migration
+        why_not_issue: Inventing an interface where none was requested is scope fabrication
+        verify: prompt constraint
+    pending_human: []
+    scoring_note: Scored only on boundary discipline / precision; naming any specific sibling resource or team earns nothing.
+
+- description: J06 — Motion-only critique request
+  vars:
+    task_id: J06
+    request: |
+      The interface structure is approved. Review only whether a spring animation on a modal exit is interruptible, physically coherent and appropriate. Do not perform a general UI review.
+  assert:
+    - type: javascript
+      value: |
+        const s = String(output).toLowerCase();
+        const scopeRespected = !/(typography|color palette|contrast ratio|information hierarchy)/.test(s);
+        const addressesOrDefers = /(motion|animation|interrupt|spring|exit|defer|specialist|outside)/.test(s);
+        return scopeRespected && addressesOrDefers;
+  metadata:
+    id: J06
+    suite: interface-review
+    kind: near-miss
+    holdout: false
+    d_subset: false
+    workspace_files: []
+    expected:
+      - id: J06-E1
+        issue: Stays within the motion scope or explicitly defers it; does not perform a general UI review
+        class: deterministic
+        provenance: [product-requirement]
+        critical: true
+        strength: strict
+        verify: "prompt forbids general UI review"
+    decoys:
+      - id: J06-D1
+        claim: Recommend reviewing the modal's typography while at it
+        why_not_issue: Explicitly out of scope
+        verify: prompt constraint
+    pending_human: []
+    scoring_note: Deferring to a motion specialist and answering the motion question directly are both acceptable; naming a specific resource earns nothing.
+
+- description: J07 — Search results states and interactivity
+  vars:
+    task_id: J07
+    request: |
+      Review this search results component and prioritize only material findings.
+
+      ```tsx
+      function Results({ loading, items }) {
+        if (loading) return <div className="animate-pulse">Loading...</div>
+        if (!items.length) return <div>No results.</div>
+        return <div className="grid grid-cols-3">{items.map(x => <div onClick={() => open(x.id)}>{x.name}</div>)}</div>
+      }
+      ```
+  assert:
+    - type: javascript
+      value: "String(output).trim().length > 200"
+  metadata:
+    id: J07
+    suite: interface-review
+    kind: review
+    holdout: true
+    d_subset: false
+    workspace_files: []
+    expected:
+      - id: J07-E1
+        issue: Result items are div onClick — not keyboard reachable, no role, no accessible name as interactive elements
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["2.1.1", "4.1.2"]
+        critical: true
+        strength: strict
+        verify: "fixture: <div onClick={() => open(x.id)}>"
+      - id: J07-E2
+        issue: Empty state offers no next action or guidance
+        class: deterministic
+        provenance: [fixture-fact]
+        critical: false
+        strength: arguable
+        verify: "fixture: 'No results.' only"
+      - id: J07-E3
+        issue: Loading state is not announced to assistive technology (no status role / aria-live)
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["4.1.3"]
+        critical: false
+        strength: arguable
+        verify: "fixture: loading div has no role=status or aria-live"
+      - id: J07-E4
+        issue: Fixed 3-column grid cannot reflow on narrow viewports
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["1.4.10"]
+        critical: false
+        strength: arguable
+        verify: "fixture: grid-cols-3 without responsive variants"
+    decoys:
+      - id: J07-D1
+        claim: Missing React key on mapped items is an interface-quality finding
+        why_not_issue: It is a code-correctness concern outside interface review; may be named once and routed, but it is not an interface finding
+        verify: product scope (interface review)
+      - id: J07-D2
+        claim: animate-pulse violates prefers-reduced-motion
+        why_not_issue: WCAG 2.3.3 (AAA) concerns motion triggered by interaction; a subtle loading pulse is not a normative failure, and reduced-motion support is a preference, not a defect in this snippet
+        verify: wcag-normative 2.3.3 scope
+    pending_human:
+      - id: J07-H1
+        hypothesis: The grid of bare names lacks hierarchy/affordance to read as results
+        status: PENDING HUMAN AUTHORING
+
+- description: J08 — AI auto-deletion of duplicate records
+  vars:
+    task_id: J08
+    request: |
+      Review whether this interface should let an AI agent automatically delete duplicate customer records after it predicts a 92% match. The visual layout is already approved.
+  assert:
+    - type: javascript
+      value: |
+        const s = String(output).toLowerCase();
+        return /(approval|confirm|reversib|undo|autonom|human|review before|preview|consequence|defer|specialist|outside)/.test(s);
+  metadata:
+    id: J08
+    suite: interface-review
+    kind: near-miss
+    holdout: true
+    d_subset: false
+    workspace_files: []
+    expected:
+      - id: J08-E1
+        issue: Recognizes this as an autonomy/consequence question (irreversible deletion on a probabilistic match) and either defers it or requires human control before execution
+        class: deterministic
+        provenance: [product-requirement]
+        critical: true
+        strength: strict
+        verify: "prompt: layout approved; question is about automatic irreversible action"
+    decoys:
+      - id: J08-D1
+        claim: Improve the visual layout of the duplicate list
+        why_not_issue: Layout is explicitly approved
+        verify: prompt constraint
+    pending_human: []
+    scoring_note: Any wording that conveys "do not auto-delete without control/reversibility" counts; naming a specific resource earns nothing.
+
+- description: J09 — Customers admin page (rendered fixture)
+  vars:
+    task_id: J09
+    request: |
+      Review the customers admin page at `fixtures/j09-customers.html` for material interface-quality issues. Read the file; report a prioritized set of concrete changes. Do not redesign.
+  assert:
+    - type: javascript
+      value: "String(output).trim().length > 300"
+  metadata:
+    id: J09
+    suite: interface-review
+    kind: review
+    holdout: true
+    d_subset: false
+    workspace_files: ["fixtures/j09-customers.html"]
+    expected:
+      - id: J09-E1
+        issue: Row action controls are div[onclick] — not in the tab order, no role
+        class: deterministic
+        provenance: [fixture-fact, playwright, wcag-normative]
+        wcag: ["2.1.1", "4.1.2"]
+        critical: true
+        strength: strict
+        verify: "playwright:unfocusable:.row-action"
+      - id: J09-E2
+        issue: Icon-only toolbar button has no accessible name
+        class: deterministic
+        provenance: [axe, wcag-normative]
+        wcag: ["4.1.2"]
+        critical: true
+        strength: strict
+        verify: "axe:button-name"
+      - id: J09-E3
+        issue: Muted table text fails minimum contrast
+        class: deterministic
+        provenance: [axe, computed-contrast, wcag-normative]
+        wcag: ["1.4.3"]
+        critical: true
+        strength: strict
+        verify: "axe:color-contrast"
+      - id: J09-E4
+        issue: Page forces horizontal scrolling at 320 CSS px (min-width container)
+        class: deterministic
+        provenance: [playwright, wcag-normative]
+        wcag: ["1.4.10"]
+        critical: true
+        strength: strict
+        verify: "playwright:overflow-320"
+      - id: J09-E5
+        issue: "Focus indicator removed globally (outline: none) with no replacement"
+        class: deterministic
+        provenance: [fixture-fact, playwright, wcag-normative]
+        wcag: ["2.4.7"]
+        critical: true
+        strength: strict
+        verify: "playwright:no-focus-indicator"
+      - id: J09-E6
+        issue: Customer status is conveyed by dot color alone (no text or icon)
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["1.4.1"]
+        critical: false
+        strength: strict
+        verify: "fixture: <span class=\"dot ok\"> / <span class=\"dot risk\"> with no text alternative"
+      - id: J09-E7
+        issue: Destructive "Delete" executes immediately without confirmation or undo
+        class: deterministic
+        provenance: [fixture-fact, wcag-normative]
+        wcag: ["3.3.4"]
+        critical: true
+        strength: arguable
+        verify: "fixture: onclick=\"deleteCustomer(...)\" with no confirm step"
+      - id: J09-E8
+        issue: Search input has no label or accessible name
+        class: deterministic
+        provenance: [axe, wcag-normative]
+        wcag: ["1.3.1", "4.1.2"]
+        critical: false
+        strength: strict
+        verify: "axe:label"
+    decoys:
+      - id: J09-D1
+        claim: Table header cells lack scope attributes
+        why_not_issue: All <th> carry scope="col" in the fixture
+        verify: fixture-fact
+      - id: J09-D2
+        claim: The page needs a skip link
+        why_not_issue: Single-view fixture with no repeated blocks; 2.4.1 targets repeated content across pages
+        verify: wcag-normative 2.4.1 scope
+      - id: J09-D3
+        claim: The "Export" button lacks type="button" and will submit the page
+        why_not_issue: The toolbar is not inside a form element
+        verify: fixture-fact (no <form> ancestor)
+    unscored_observations:
+      - id: "axe:landmark-one-main"
+        why: axe best-practice tag, not a WCAG normative failure — neither expected nor decoy
+      - id: "axe:region"
+        why: axe best-practice tag, not a WCAG normative failure — neither expected nor decoy
+    pending_human:
+      - id: J09-H1
+        hypothesis: Column ordering and density hinder scanning (visual hierarchy)
+        status: PENDING HUMAN AUTHORING
+      - id: J09-H2
+        hypothesis: Toolbar action grouping mixes primary and destructive actions
+        status: PENDING HUMAN AUTHORING

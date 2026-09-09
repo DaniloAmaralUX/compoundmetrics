@@ -1,3 +1,12 @@
+// FROZEN — v0.2 contract-suite runner. LEGACY EVIDENCE.
+//
+// This produced `compound-design/quality/releases/v0.2-contract-eval.json` against the v0.2 tree,
+// where the resources lived under `.claude/`. It is retained so that result stays reproducible from
+// git history (check out the v0.2.1 tree and run it); it is not run by CI and not run against the
+// current tree, where those paths intentionally no longer exist.
+//
+// The active suite is `compound-design/quality/evals/v0.3-contract-suite.json`, run by
+// `node compound-design/tools/cd.mjs contracts`.
 import fs from "node:fs";
 import path from "node:path";
 

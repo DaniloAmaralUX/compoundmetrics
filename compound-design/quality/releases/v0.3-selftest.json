@@ -1,0 +1,207 @@
+{
+  "ran_at": "2026-09-09",
+  "passed": 40,
+  "total": 40,
+  "results": [
+    {
+      "name": "config: local layer overrides repo layer",
+      "ok": true,
+      "why": "apply-local"
+    },
+    {
+      "name": "config: invalid value falls through to the next layer",
+      "ok": true,
+      "why": "report-only"
+    },
+    {
+      "name": "config: docs_root in the local layer is ignored",
+      "ok": true,
+      "why": "docs"
+    },
+    {
+      "name": "config: docs_root fails closed and never falls back to docs",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "config: docs_root rejects traversal",
+      "ok": true,
+      "why": "../escape"
+    },
+    {
+      "name": "config: docs_root rejects absolute",
+      "ok": true,
+      "why": "/etc"
+    },
+    {
+      "name": "config: docs_root rejects repository root",
+      "ok": true,
+      "why": "."
+    },
+    {
+      "name": "config: docs_root rejects under .git",
+      "ok": true,
+      "why": ".git/hooks"
+    },
+    {
+      "name": "config: docs_root rejects empty",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "config: a plain repo-relative directory is accepted",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "config: docs_root rejects a symlink escaping the repository",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "claims: flags an inflated uplift claim",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "claims: flags vendor endorsement",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "claims: flags runtime verification",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "claims: does NOT flag the isolated word E2",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "claims: does NOT flag the isolated word validated",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "claims: does NOT flag a negated claim",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "claims: does NOT flag a forbidden-terms list entry",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "claims: does NOT flag the CEL ladder definition",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "discovery: a signal surfaces the learning in a different later context",
+      "ok": true,
+      "why": "[\"CD-SOL-1\"]"
+    },
+    {
+      "name": "discovery: concept plus area surfaces the learning",
+      "ok": true,
+      "why": "[\"CD-SOL-1\"]"
+    },
+    {
+      "name": "discovery: superseded documents never surface",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "discovery: weak matches are dropped rather than padded",
+      "ok": true,
+      "why": "[]"
+    },
+    {
+      "name": "discovery: results are bounded",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "frontmatter: inline arrays parse",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "frontmatter: block arrays parse with colons inside quotes",
+      "ok": true,
+      "why": "[\"lit: eral\"]"
+    },
+    {
+      "name": "schema: unknown property rejected",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "schema: required property enforced",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "schema: a valid object passes",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "contracts: every declared skill passes",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "contracts: every declared agent passes",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "contracts: an agent with no skill reference is rejected",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "contracts: an agent restating a procedure is rejected",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "contracts: an agent with no tool policy is rejected",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "contracts: an agent with no non-trigger is rejected",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "contracts: a hidden upstream runtime dependency is rejected",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "contracts: a skill missing a required section is rejected",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "contracts: an artifact writer without the root block is rejected",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "contracts: an inflated claim inside a skill is rejected",
+      "ok": true,
+      "why": ""
+    },
+    {
+      "name": "plugin: the package validates",
+      "ok": true,
+      "why": ""
+    }
+  ]
+}

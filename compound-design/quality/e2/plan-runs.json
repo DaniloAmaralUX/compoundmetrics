@@ -1,0 +1,126 @@
+{
+  "computed_at": "2026-09-09T11:05:42.795Z",
+  "executed": false,
+  "paid_model_calls": 0,
+  "repeat": 3,
+  "blocks": [
+    {
+      "block": "Interface Review A/B/C",
+      "agent_runs": 81,
+      "judge_outputs": 81,
+      "conditions": {
+        "A": 27,
+        "B": 27,
+        "C": 27
+      }
+    },
+    {
+      "block": "Condition D (diagnostic subset)",
+      "agent_runs": 9,
+      "judge_outputs": 9,
+      "conditions": {
+        "D": 9
+      }
+    },
+    {
+      "block": "Quality Gate A/C",
+      "agent_runs": 66,
+      "judge_outputs": 66,
+      "conditions": {
+        "A": 33,
+        "C": 33
+      }
+    },
+    {
+      "block": "Smoke (1 task per condition) + negative control",
+      "agent_runs": 7,
+      "judge_outputs": 0,
+      "conditions": {
+        "A": 2,
+        "B": 1,
+        "C": 3,
+        "D": 1
+      }
+    },
+    {
+      "block": "Judge calibration on synthetic known-negatives (empty / off-topic / confident-wrong) per suite",
+      "agent_runs": 0,
+      "judge_outputs": 6,
+      "conditions": {}
+    }
+  ],
+  "total_agent_runs": 163,
+  "total_judge_outputs": 162,
+  "judge_calls": {
+    "grouped": 162,
+    "per_dimension": 1134
+  },
+  "assumptions": {
+    "tokens_per_run": {
+      "A": {
+        "input": 6000,
+        "output": 1500
+      },
+      "B": {
+        "input": 30000,
+        "output": 2000
+      },
+      "C": {
+        "input": 20000,
+        "output": 2000
+      },
+      "D": {
+        "input": 12000,
+        "output": 2000
+      },
+      "judge": {
+        "input": 4000,
+        "output": 800
+      }
+    },
+    "prices_usd_per_mtok": {
+      "claude-sonnet-5": {
+        "input": 2,
+        "output": 10
+      },
+      "claude-opus-5": {
+        "input": 5,
+        "output": 25
+      },
+      "claude-haiku-4-5": {
+        "input": 1,
+        "output": 5
+      },
+      "claude-sonnet-4-6": {
+        "input": 3,
+        "output": 15
+      }
+    },
+    "price_snapshot": "first-party API, cached 2026-06-24",
+    "note": "Estimates only. Replace with measured smoke telemetry before a full run. Batch API (−50%) applies to judge calls, not to Agent SDK runs."
+  },
+  "scenarios": [
+    {
+      "tested": "claude-sonnet-5",
+      "judge": "claude-opus-5",
+      "note": "same vendor, different model — NOT an independent model family (E3 needs cross-model)",
+      "usd_judge_grouped": 14.61,
+      "usd_judge_per_dimension": 53.49
+    },
+    {
+      "tested": "claude-opus-5",
+      "judge": "claude-sonnet-5",
+      "note": "judge less capable than tested model",
+      "usd_judge_grouped": 22.93,
+      "usd_judge_per_dimension": 38.48
+    },
+    {
+      "tested": "claude-sonnet-4-6",
+      "judge": "claude-opus-5",
+      "note": "original config default; previous generation",
+      "usd_judge_grouped": 18.68,
+      "usd_judge_per_dimension": 57.56
+    }
+  ],
+  "blocked_command": "E2_PAID_RUNTIME_CONFIRMED=YES npm run e2:runtime:DANGEROUS-PAID -- --suite jakub --model <id> --judge <id> --execute"
+}

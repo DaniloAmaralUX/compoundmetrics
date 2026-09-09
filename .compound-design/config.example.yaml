@@ -1,0 +1,67 @@
+# Compound Design — repository configuration (example)
+#
+# Copy to .compound-design/config.yaml for team defaults, then uncomment only
+# what you want to change. `cd-setup` will offer to do that for you.
+#
+# Layers, and how a key resolves:
+#   .compound-design/config.local.yaml   per-checkout override, gitignored, never created by setup
+#   .compound-design/config.yaml         team defaults, tracked
+#   the skill's own default              when neither file sets an active value
+# The first active (non-commented) value wins. An invalid or empty value falls
+# through to the next layer — except docs_root, which fails closed.
+#
+# This file is generated and tracked. Do not edit it as configuration; edit
+# config.yaml. Never put credentials, tokens or host flags in either file.
+
+# --- Artifact root ---------------------------------------------------------
+# Every artifact Compound Design writes lives under one repo-relative root:
+#   <root>/frames/  <root>/plans/  <root>/solutions/  <root>/handoffs/
+# Unset -> `docs`.
+#
+# Unlike every other key here, docs_root is read ONLY from config.yaml (a value
+# in config.local.yaml is ignored), and an unusable value STOPS the run instead
+# of falling back — silently writing to `docs` would put artifacts in the very
+# place you configured away from.
+#
+# It must be a repo-relative directory whose real, symlink-resolved path stays
+# inside the repository, and is neither the repository root nor under .git/.
+#
+# docs_root: .compound-design/artifacts
+
+# --- Strategy anchor -------------------------------------------------------
+# Where cd-strategy writes and cd-frame / cd-model read the project anchor.
+# Unset -> STRATEGY.md at the repository root.
+#
+# strategy_path: docs/STRATEGY.md
+
+# --- Framework evidence ----------------------------------------------------
+# Where the framework's own quality, registry and learning infrastructure lives.
+# Consumed by cd-quality-gate and cd-resource-lab. Unset -> compound-design.
+# Change this only if you vendored Compound Design's own infrastructure elsewhere.
+#
+# evidence_root: compound-design
+
+# --- Review mode -----------------------------------------------------------
+# What a review may do by default. `report-only` writes nothing; `apply-local`
+# permits local edits limited to findings already in the report, and still never
+# commits or pushes. An instruction for the current run overrides this.
+# Consumed by cd-verify, cd-interface-review, cd-motion-review.
+# Unset -> report-only.
+#
+# default_review_mode: apply-local
+
+# --- Runtime policy --------------------------------------------------------
+# `zero-cost` means no Compound Design skill may propose or start a run that
+# spends model or API budget beyond the session you are already in; benchmark
+# and evaluation lanes stay blocked behind their own explicit authorization.
+# `allow-paid` only lifts the proposal ban — it never bypasses a runtime guard.
+# Consumed by cd-quality-gate and cd-resource-lab. Unset -> zero-cost.
+#
+# runtime_policy: allow-paid
+
+# --- Provenance policy -----------------------------------------------------
+# `strict` requires adapted or copied upstream material to carry its source and
+# license before a resource can be promoted. `relaxed` reports it instead of
+# blocking. Consumed by cd-quality-gate and cd-resource-lab. Unset -> strict.
+#
+# provenance_policy: relaxed

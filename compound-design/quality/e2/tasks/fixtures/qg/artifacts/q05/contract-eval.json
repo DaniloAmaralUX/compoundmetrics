@@ -1,0 +1,1 @@
+{ "suite": "dashboard-review-skill contracts", "kind": "deterministic", "assertions": 31, "passed": 31, "failed": 0, "critical_assertions_passed": "31/31", "date": "2026-08-30" }

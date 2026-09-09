@@ -1,7 +1,7 @@
 # Compound Design E2 — Source Parity Check
 
-Status: PRE-BENCHMARK
-Branch: `compound-design-framework`
+Status: PRE-BENCHMARK (verified 2026-09-09, zero-cost)
+Repository: `compoundmetrics` (standalone)
 Purpose: identify where Compound Design adds intentional value vs where it accidentally duplicates or drifts from upstream resources before controlled runtime tests.
 
 ## Decision rule
@@ -133,3 +133,28 @@ The benchmark must compare:
 - C — Compound `jakub` v0.2.0;
 
 No v0.3 decision is allowed from source inspection alone.
+
+
+---
+
+## Verification record — 2026-09-09 (read-only, no model runtime)
+
+- `jakubkrehel/skills`: remote `HEAD == 267330e1adfc66a718fb65fa6918c1f06d0a689e` (equal to the pin in `SOURCES.md`; **no drift**). Plugin manifest `interfaces` v1.6.3, MIT. Vendored for the benchmark by `e2 fetch-upstream` (gitignored, SHA-verified, LICENSE preserved).
+- `emilkowalski/skills`: remote `HEAD == d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7` (equal to the pin; no drift). Reference only.
+- `EveryInc/compound-engineering-plugin`: `HEAD == b36047e1b4b2123df2f3529bf04b5f2a7c5f84e4`, MIT. Reference only.
+
+### Upstream `better-interface` contract (verbatim facts used to design condition B and the anchors)
+
+- Severity: `HIGH` (blocks a task, misleads, hides content/controls, data-loss risk, repeated systemic failure) · `MEDIUM` (harms comprehension, efficiency, adaptability, consistency) · `LOW` (isolated polish).
+- Cap: at most 15 findings; escalation triggers rank above the cap; "never pad to reach the cap".
+- 13 escalation triggers are `HIGH` on sight (no accessible name; no visible focus; pointer-only reachability; ignores `prefers-reduced-motion`; clipped at 320px/200% zoom; failing contrast; meaning by color alone; destructive action without confirm/undo; truncation without access; content behind an uncued edge; error naming no recovery; semantic color misuse; state change by motion alone).
+- Consolidation: one root cause is one finding, every location listed in the same row.
+- Verification: "A check you cannot run is Not verified, never a finding." Read-only by default.
+- Verdict: `Block` when any `HIGH` remains, `Approve` otherwise; `Approve` claims the coverage reported.
+- Remediation order: Delete → use the platform → reuse what the project has → correct the value → add.
+- `interface-review` is user-invoked (`disable-model-invocation: true`) and resolves git scope; it hands severity/verdict to `better-interface`. Not applicable to inline benchmark tasks → **B = `better-interface` stack, model-invoked via the local plugin.**
+- No evals or tests ship upstream.
+
+### Consequence for the benchmark
+
+Ground truth must not be the upstream checklist (that would teach to B's test). Expected items therefore carry provenance limited to fixture facts, WCAG normative rules, computed contrast, axe, Playwright and explicit product requirements; decoys penalize checklist over-flagging; semantic items stay `PENDING HUMAN AUTHORING`. The severity-model duplication in Compound `jakub` remains the central hypothesis for the Resource Value Audit (`E2-PILOT-PLAN.md` §16).

@@ -1,103 +1,766 @@
 {
   "framework": "Compound Design",
-  "release": "0.2.1",
-  "releaseTheme": "Evidence Infrastructure",
+  "release": "0.3.0-alpha.1",
+  "releaseTheme": "Work System",
+  "releaseStage": "candidate",
+  "pluginVersion": "0.3.0-alpha.1",
   "updatedAt": "2026-09-09",
   "evidencePolicy": {
     "currentLevel": "E1",
     "runtimeUplift": "not measured",
-    "rule": "CDQI measures construction quality. CEL measures evidence maturity. They must never be merged into one claim."
+    "rule": "CDQI measures construction quality. CEL measures evidence maturity. They must never be merged into one claim.",
+    "stableEvidenceBaseline": "0.2.1",
+    "versionRule": "Plugin version and evidence level are independent. A candidate release may ship new resources at E0; a resource reaches E1 only by passing its deterministic contract suite, and nothing in this release exceeds E1."
   },
   "resources": [
     {
-      "id": "cd",
-      "publicName": "Design Guide",
-      "kind": "orchestrator",
-      "version": "0.2.0",
-      "job": "Route the smallest sufficient Design Engineering path and delegate specialist work.",
-      "triggers": ["multi-stage design engineering work", "system-level orchestration"],
-      "nonGoals": ["replace specialist skills", "claim runtime uplift without evidence"],
-      "upstream": ["Every Compound Engineering", "Jakub Krehel skills", "Emil Kowalski skills"],
-      "provenance": "composed-and-authored",
-      "cdqi": 8.45,
+      "id": "cd-frame",
+      "publicName": "Frame",
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-frame/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Establish the problem, user, outcome, constraints, non-goals, risks and success conditions before anything is designed.",
+      "triggers": [
+        "work whose problem statement is still moving",
+        "a request that arrived as a solution",
+        "start of multi-stage work"
+      ],
+      "nonGoals": [
+        "designing the solution",
+        "writing implementation plans",
+        "product strategy"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "Every Compound Engineering (mechanisms, MIT)"
+      ],
+      "provenance": "composed-and-authored, upstream-informed",
+      "cdqi": null,
       "cel": "E1",
       "runtimeUplift": "not measured",
-      "evidenceDebt": ["controlled runtime baseline", "repeated runs", "routing delta", "efficiency delta"]
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ]
     },
     {
-      "id": "jakub",
+      "id": "cd-model",
+      "publicName": "Model",
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-model/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Decide how the product must behave: entities, routes, states, transitions, edge cases and the contract Build implements.",
+      "triggers": [
+        "behaviour must be decided before code",
+        "more than one screen, role or state",
+        "agentic or AI-mediated feature"
+      ],
+      "nonGoals": [
+        "problem definition",
+        "implementation",
+        "visual craft",
+        "evidence policy"
+      ],
+      "upstream": [
+        "Compound Design authored resource"
+      ],
+      "provenance": "authored",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ]
+    },
+    {
+      "id": "cd-build",
+      "publicName": "Build",
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-build/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Implement a decided contract inside the existing architecture, verify locally, and report exactly what changed.",
+      "triggers": [
+        "a behaviour contract needs implementing",
+        "a small local change with obvious behaviour"
+      ],
+      "nonGoals": [
+        "deciding behaviour",
+        "publishing or merging",
+        "absorbing work it did not create"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "Every Compound Engineering (mechanisms, MIT)"
+      ],
+      "provenance": "composed-and-authored, upstream-informed",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ]
+    },
+    {
+      "id": "cd-verify",
+      "publicName": "Verify",
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-verify/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Check the built result against what was decided: requirements, behaviour, states, accessibility and responsiveness.",
+      "triggers": [
+        "after Build and before shipping",
+        "behaviour of existing work is in doubt",
+        "a claim needs checking"
+      ],
+      "nonGoals": [
+        "deciding what should have been built",
+        "implementing fixes under report-only",
+        "resource evidence decisions"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "Every Compound Engineering (mechanisms, MIT)"
+      ],
+      "provenance": "composed-and-authored, upstream-informed",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ]
+    },
+    {
+      "id": "cd-polish",
+      "publicName": "Polish",
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-polish/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Make a working interface deliberate: hierarchy, typography, spacing, colour, copy, feel and consistency.",
+      "triggers": [
+        "behaviour is correct and the result feels unconsidered",
+        "before showing work to users",
+        "a surface has drifted"
+      ],
+      "nonGoals": [
+        "repairing broken behaviour",
+        "redesign",
+        "changing logic or data"
+      ],
+      "upstream": [
+        "Compound Design authored resource"
+      ],
+      "provenance": "authored",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ]
+    },
+    {
+      "id": "cd-compound",
+      "publicName": "Compound",
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-compound/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Capture the one learning a future person or agent would otherwise rediscover, and make it discoverable.",
+      "triggers": [
+        "work produced a non-obvious correction or mechanism",
+        "a reproduced failure",
+        "a human correction that will recur"
+      ],
+      "nonGoals": [
+        "documenting work that taught nothing",
+        "maintaining the store over time",
+        "performing a promotion"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "Every Compound Engineering (mechanisms, MIT)"
+      ],
+      "provenance": "composed-and-authored, upstream-informed",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ]
+    },
+    {
+      "id": "cd-strategy",
+      "publicName": "Strategy",
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-strategy/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Create and maintain the project anchor stating what the product is, who it serves and how it succeeds.",
+      "triggers": [
+        "no anchor exists and Frame keeps re-litigating direction",
+        "direction changed",
+        "a section is stale"
+      ],
+      "nonGoals": [
+        "feature planning",
+        "prioritisation",
+        "implementation decisions"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "Every Compound Engineering (mechanisms, MIT)"
+      ],
+      "provenance": "composed-and-authored, upstream-informed",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ]
+    },
+    {
+      "id": "cd-compound-refresh",
+      "publicName": "Compound Refresh",
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-compound-refresh/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Audit the durable learning store against the codebase and apply one outcome per document, including deletion.",
+      "triggers": [
+        "the store has grown and is not trusted",
+        "the codebase moved",
+        "discovery returns noise or nothing"
+      ],
+      "nonGoals": [
+        "capturing new learnings",
+        "changing product code",
+        "editing the guidance layer it audits"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "Every Compound Engineering (mechanisms, MIT)"
+      ],
+      "provenance": "composed-and-authored, upstream-informed",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ]
+    },
+    {
+      "id": "cd-setup",
+      "publicName": "Setup",
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-setup/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Diagnose whether Compound Design can run in a repository and offer to create or repair its repo-local configuration.",
+      "triggers": [
+        "after installing or upgrading the plugin",
+        "a skill reports missing configuration",
+        "before anything that writes"
+      ],
+      "nonGoals": [
+        "installing tools",
+        "editing an existing valid config",
+        "touching global host configuration"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "Every Compound Engineering (mechanisms, MIT)"
+      ],
+      "provenance": "composed-and-authored, upstream-informed",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ]
+    },
+    {
+      "id": "cd-handoff",
+      "publicName": "Handoff",
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-handoff/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Write a pointer-first handoff so another session, host or person can continue, or read one to orient.",
+      "triggers": [
+        "work crosses a session, host or person",
+        "a session ends with work in progress",
+        "resuming from a handoff"
+      ],
+      "nonGoals": [
+        "continuing the work automatically",
+        "replacing the artifacts it points at",
+        "mutating fragile state"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "Every Compound Engineering (mechanisms, MIT)"
+      ],
+      "provenance": "composed-and-authored, upstream-informed",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ]
+    },
+    {
+      "id": "cd-interface-review",
       "publicName": "Interface Review",
-      "kind": "agent",
-      "version": "0.2.0",
-      "job": "Prioritize material interface-craft findings and route non-interface work away.",
-      "triggers": ["interface critique", "craft review", "visual hierarchy review"],
-      "nonGoals": ["backend correctness", "motion-only review", "AI reliance review"],
-      "upstream": ["jakubkrehel/skills"],
-      "provenance": "upstream-informed-wrapper",
-      "cdqi": 8.55,
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-interface-review/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Review an interface for the defects that materially cost a user, and report them with evidence and impact.",
+      "triggers": [
+        "interface craft is in question",
+        "Verify or Polish needs interface judgment",
+        "a surface drifted from the product"
+      ],
+      "nonGoals": [
+        "redesign",
+        "backend, tests, security or performance",
+        "motion timing alone",
+        "AI reliance"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "jakubkrehel/skills (heuristics, MIT)"
+      ],
+      "provenance": "authored, upstream-informed heuristics",
+      "cdqi": null,
       "cel": "E1",
       "runtimeUplift": "not measured",
-      "evidenceDebt": ["A/B/C benchmark", "upstream parity value", "blind human craft score", "token/latency delta"]
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ],
+      "supersedes": "jakub"
     },
     {
-      "id": "emi",
+      "id": "cd-motion-review",
       "publicName": "Motion Review",
-      "kind": "agent",
-      "version": "0.2.0",
-      "job": "Review motion and interaction with restraint, purpose and recovery in mind.",
-      "triggers": ["motion review", "interaction feel", "animation quality"],
-      "nonGoals": ["generic interface review", "backend behavior", "AI governance"],
-      "upstream": ["emilkowalski/skills"],
-      "provenance": "upstream-informed-wrapper",
-      "cdqi": 8.5,
+      "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-motion-review/SKILL.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Decide whether motion should exist at all, then whether it is interruptible, coherent and respectful of preference.",
+      "triggers": [
+        "an interaction animates and its quality is in question",
+        "a surface feels slow or disorienting"
+      ],
+      "nonGoals": [
+        "layout, hierarchy, typography or copy",
+        "undecided behaviour",
+        "backend concerns"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "emilkowalski/skills (heuristics, MIT)"
+      ],
+      "provenance": "authored, upstream-informed heuristics",
+      "cdqi": null,
       "cel": "E1",
       "runtimeUplift": "not measured",
-      "evidenceDebt": ["runtime benchmark", "motion holdouts", "human review"]
+      "evidenceDebt": [
+        "runtime behaviour in real work",
+        "routing accuracy",
+        "effect on outcomes"
+      ],
+      "supersedes": "emi"
     },
     {
       "id": "cd-quality-gate",
       "publicName": "Quality Gate",
       "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-quality-gate/SKILL.md",
       "version": "0.2.0",
       "job": "Decide whether a reusable AI resource has enough construction quality and evidence for its claims.",
-      "triggers": ["resource review", "promotion decision", "evidence audit"],
-      "nonGoals": ["implement the resource", "invent missing evidence", "certify vendors"],
-      "upstream": ["Compound Design authored resource"],
+      "triggers": [
+        "resource review",
+        "promotion decision",
+        "evidence audit"
+      ],
+      "nonGoals": [
+        "implement the resource",
+        "invent missing evidence",
+        "certify vendors"
+      ],
+      "upstream": [
+        "Compound Design authored resource"
+      ],
       "provenance": "authored",
       "cdqi": 8.75,
       "cel": "E1",
       "runtimeUplift": "not measured",
-      "evidenceDebt": ["controlled decision benchmark", "evidence-inflation false-positive test", "critical-boundary runtime test"]
+      "evidenceDebt": [
+        "controlled runtime decision benchmark",
+        "evidence-inflation false-positive test",
+        "critical-boundary runtime test"
+      ]
     },
     {
       "id": "cd-resource-lab",
       "publicName": "Resource Lab",
       "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-resource-lab/SKILL.md",
       "version": "0.2.0",
       "job": "Improve reusable resources through reproduced failures, eval-first hypotheses, holdouts and falsification.",
-      "triggers": ["resource improvement", "failure-driven iteration", "version candidate"],
-      "nonGoals": ["change prompts without a reproduced problem", "promote on construction score alone"],
-      "upstream": ["Compound Design authored resource", "Anthropic Skill Creator as evidence provider", "Promptfoo as harness"],
+      "triggers": [
+        "resource improvement",
+        "failure-driven iteration",
+        "version candidate"
+      ],
+      "nonGoals": [
+        "change prompts without a reproduced problem",
+        "promote on construction score alone"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "Anthropic Skill Creator as evidence provider",
+        "Promptfoo as harness"
+      ],
       "provenance": "authored",
       "cdqi": 8.65,
       "cel": "E1",
       "runtimeUplift": "not measured",
-      "evidenceDebt": ["runtime improvement cycle", "failure corpus", "cross-version regression history"]
+      "evidenceDebt": [
+        "runtime improvement cycle",
+        "failure corpus",
+        "cross-version regression history"
+      ]
     },
     {
       "id": "cd-ai-interaction-review",
       "publicName": "AI Interaction Review",
       "kind": "skill",
+      "status": "active",
+      "path": "skills/cd-ai-interaction-review/SKILL.md",
       "version": "0.1.0",
       "job": "Review user-facing AI for fit, reliance, legibility, control, autonomy and evolution.",
-      "triggers": ["user-facing AI", "agentic action", "AI-assisted decision"],
-      "nonGoals": ["ordinary UI review with no material AI behavior", "legal certification", "security audit replacement"],
-      "upstream": ["Microsoft HAX", "Google PAIR", "mixed-initiative interaction research", "39 Principles synthesis"],
+      "triggers": [
+        "user-facing AI",
+        "agentic action",
+        "AI-assisted decision"
+      ],
+      "nonGoals": [
+        "ordinary UI review with no material AI behaviour",
+        "legal certification",
+        "security audit replacement"
+      ],
+      "upstream": [
+        "Microsoft HAX",
+        "Google PAIR",
+        "mixed-initiative interaction research"
+      ],
       "provenance": "authored-synthesis",
       "cdqi": 8.35,
       "cel": "E1",
       "runtimeUplift": "not measured",
-      "evidenceDebt": ["task-level reliance evals", "autonomy holdouts", "model-change regression set"]
+      "evidenceDebt": [
+        "task-level reliance evals",
+        "autonomy holdouts",
+        "model-change regression set"
+      ]
+    },
+    {
+      "id": "compound-design",
+      "publicName": "Design Guide",
+      "kind": "orchestrator",
+      "status": "active",
+      "path": "agents/compound-design.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Route design-engineering work through the smallest sufficient set of stages and dispatch specialists deliberately.",
+      "triggers": [
+        "multi-stage work whose shape is unclear",
+        "several specialists may be needed"
+      ],
+      "nonGoals": [
+        "performing a stage's procedure when its skill exists",
+        "invoking a specialist because it exists"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "Every Compound Engineering (mechanisms, MIT)"
+      ],
+      "provenance": "composed-and-authored, upstream-informed",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "routing accuracy in real work",
+        "over-orchestration rate"
+      ],
+      "supersedes": "cd"
+    },
+    {
+      "id": "interface-reviewer",
+      "publicName": "Interface Reviewer",
+      "kind": "agent",
+      "status": "active",
+      "path": "agents/interface-reviewer.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Dispatch the interface-craft specialist in an isolated read-only context and return findings under the shared contract.",
+      "triggers": [
+        "an interface exists and its craft is in question",
+        "Verify or Polish needs interface judgment"
+      ],
+      "nonGoals": [
+        "backend, data, tests, security or performance",
+        "motion timing alone",
+        "AI reliance"
+      ],
+      "upstream": [
+        "Compound Design authored resource"
+      ],
+      "provenance": "authored",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "routing accuracy",
+        "finding quality in real work"
+      ],
+      "supersedes": "jakub"
+    },
+    {
+      "id": "motion-reviewer",
+      "publicName": "Motion Reviewer",
+      "kind": "agent",
+      "status": "active",
+      "path": "agents/motion-reviewer.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Dispatch the motion and interaction specialist in an isolated read-only context.",
+      "triggers": [
+        "an interaction animates",
+        "a surface feels slow, jumpy or disorienting"
+      ],
+      "nonGoals": [
+        "layout, hierarchy, typography or copy",
+        "undecided behaviour"
+      ],
+      "upstream": [
+        "Compound Design authored resource"
+      ],
+      "provenance": "authored",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "routing accuracy",
+        "finding quality in real work"
+      ],
+      "supersedes": "emi"
+    },
+    {
+      "id": "ai-interaction-reviewer",
+      "publicName": "AI Interaction Reviewer",
+      "kind": "agent",
+      "status": "active",
+      "path": "agents/ai-interaction-reviewer.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Dispatch the user-facing AI specialist only when AI behaviour materially affects the user or an action.",
+      "triggers": [
+        "generated content, AI recommendations or agentic actions in the product"
+      ],
+      "nonGoals": [
+        "deterministic interfaces",
+        "AI used only in the build process"
+      ],
+      "upstream": [
+        "Compound Design authored resource"
+      ],
+      "provenance": "authored",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "non-trigger accuracy",
+        "finding quality in real work"
+      ]
+    },
+    {
+      "id": "evidence-reviewer",
+      "publicName": "Evidence Reviewer",
+      "kind": "agent",
+      "status": "active",
+      "path": "agents/evidence-reviewer.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Dispatch the evidence and claims specialist for promotion decisions and claim discipline.",
+      "triggers": [
+        "a resource is proposed for promotion",
+        "an evidence level is asserted",
+        "a claim may exceed measurement"
+      ],
+      "nonGoals": [
+        "ordinary product review",
+        "implementation work"
+      ],
+      "upstream": [
+        "Compound Design authored resource"
+      ],
+      "provenance": "authored",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "decision correctness in runtime",
+        "false-positive routing"
+      ]
+    },
+    {
+      "id": "learning-curator",
+      "publicName": "Learning Curator",
+      "kind": "agent",
+      "status": "active",
+      "path": "agents/learning-curator.md",
+      "version": "0.3.0-alpha.1",
+      "job": "Dispatch the durable-learning specialist to capture what deserves to survive and to keep the store healthy.",
+      "triggers": [
+        "work produced a non-obvious correction",
+        "the store may be stale, overlapping or undiscoverable"
+      ],
+      "nonGoals": [
+        "routine progress notes",
+        "work that taught nothing",
+        "changing a resource"
+      ],
+      "upstream": [
+        "Compound Design authored resource",
+        "Every Compound Engineering (mechanisms, MIT)"
+      ],
+      "provenance": "composed-and-authored, upstream-informed",
+      "cdqi": null,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "durability judgment in real work",
+        "store health over time"
+      ]
+    },
+    {
+      "id": "jakub",
+      "publicName": "Interface Review (v0.2)",
+      "kind": "agent",
+      "status": "superseded",
+      "path": "compound-design/quality/e2/legacy-resources/v0.2/agents/jakub.md",
+      "version": "0.2.0",
+      "job": "Prioritize material interface-craft findings and route non-interface work away.",
+      "triggers": [
+        "interface critique",
+        "craft review"
+      ],
+      "nonGoals": [
+        "backend correctness",
+        "motion-only review"
+      ],
+      "upstream": [
+        "jakubkrehel/skills"
+      ],
+      "provenance": "upstream-informed-wrapper",
+      "cdqi": 8.55,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "A/B/C benchmark",
+        "upstream parity value",
+        "blind human craft score",
+        "token/latency delta"
+      ],
+      "supersededBy": "cd-interface-review"
+    },
+    {
+      "id": "emi",
+      "publicName": "Motion Review (v0.2)",
+      "kind": "agent",
+      "status": "superseded",
+      "path": "compound-design/quality/e2/legacy-resources/v0.2/agents/emi.md",
+      "version": "0.2.0",
+      "job": "Review motion and interaction with restraint, purpose and recovery in mind.",
+      "triggers": [
+        "motion review",
+        "interaction feel"
+      ],
+      "nonGoals": [
+        "generic interface review",
+        "backend behaviour"
+      ],
+      "upstream": [
+        "emilkowalski/skills"
+      ],
+      "provenance": "upstream-informed-wrapper",
+      "cdqi": 8.5,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "runtime benchmark",
+        "motion holdouts",
+        "human review"
+      ],
+      "supersededBy": "cd-motion-review"
+    },
+    {
+      "id": "cd",
+      "publicName": "Design Guide (v0.2)",
+      "kind": "orchestrator",
+      "status": "superseded",
+      "path": "compound-design/quality/e2/legacy-resources/v0.2/agents/cd.md",
+      "version": "0.2.0",
+      "job": "Route the smallest sufficient Design Engineering path and delegate specialist work.",
+      "triggers": [
+        "multi-stage design engineering work",
+        "system-level orchestration"
+      ],
+      "nonGoals": [
+        "replace specialist skills",
+        "claim runtime uplift without evidence"
+      ],
+      "upstream": [
+        "Every Compound Engineering",
+        "jakubkrehel/skills",
+        "emilkowalski/skills"
+      ],
+      "provenance": "composed-and-authored",
+      "cdqi": 8.45,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": [
+        "controlled runtime baseline",
+        "repeated runs",
+        "routing delta",
+        "efficiency delta"
+      ],
+      "supersededBy": "compound-design"
     }
   ]
 }

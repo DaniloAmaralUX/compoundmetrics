@@ -1,0 +1,50 @@
+{
+  "file": "j09-customers.html",
+  "generated_by": "e2 fixtures (playwright-core + axe-core, local, no network)",
+  "observations": [
+    {
+      "id": "playwright:overflow-320",
+      "detail": "horizontal overflow at 320 CSS px"
+    },
+    {
+      "id": "playwright:unfocusable:.row-action",
+      "detail": "element with onclick not in tab order: .row-action"
+    },
+    {
+      "id": "playwright:no-focus-indicator",
+      "detail": "focused <input> has no visible outline or box-shadow"
+    },
+    {
+      "id": "axe:button-name",
+      "impact": "critical",
+      "nodes": 1,
+      "detail": "Buttons must have discernible text"
+    },
+    {
+      "id": "axe:color-contrast",
+      "impact": "serious",
+      "nodes": 10,
+      "detail": "Elements must meet minimum color contrast ratio thresholds"
+    },
+    {
+      "id": "axe:label",
+      "impact": "critical",
+      "nodes": 1,
+      "detail": "Form elements must have labels"
+    },
+    {
+      "id": "axe:landmark-one-main",
+      "impact": "moderate",
+      "nodes": 1,
+      "detail": "Document should have one main landmark"
+    },
+    {
+      "id": "axe:region",
+      "impact": "moderate",
+      "nodes": 1,
+      "detail": "All page content should be contained by landmarks"
+    }
+  ],
+  "axe_version": "4.13.0",
+  "playwright_core_version": "1.63.0"
+}

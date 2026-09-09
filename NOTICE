@@ -39,6 +39,12 @@ Design.
 - `geist` (Geist Sans and Geist Mono) — SIL Open Font License 1.1
 - `typescript`, `eslint`, `eslint-config-next` — MIT / Apache-2.0 (dev only)
 
+## v0.3.0-alpha.1 — self-contained runtime
+
+The plugin distributed from this repository contains no third-party source. Interface Review and Motion Review were rewritten as Compound Design resources; the upstream skills that informed their heuristics are cited in `compound-design/SOURCES.md` and are not loaded, required or shipped at runtime. The pinned upstream checkout under `compound-design/vendor/` is fetched only to run benchmark condition B, is gitignored, and is not redistributed.
+
+Architecture mechanisms adapted from Every's Compound Engineering (MIT, Copyright (c) 2025 Every) are recorded with their source commit in `compound-design/research/EVERY-ARCHITECTURE-SNAPSHOT.md`. No upstream author or vendor endorses Compound Design.
+
 ## Provenance of this repository
 
 - The framework, evidence model, registry, evals and learning system were
@@ -47,3 +53,10 @@ Design.
 - The public page implementation (`src/app/page.tsx`, `page.module.css`) was
   extracted from the author's `studio-dev-ui` repository. No other part of
   that application is carried here.
+
+## E2 benchmark harness (compound-design/quality/e2)
+
+- `promptfoo` — MIT — evaluation harness, pinned; used only with a deterministic `exec:` provider in this repository's zero-cost mode.
+- `playwright-core` — Apache-2.0 — renders fixtures locally to derive deterministic observations.
+- `axe-core` — MPL-2.0 — automated accessibility checks on fixtures (supplementary signal, not a substitute for human review).
+- `e2 fetch-upstream` clones `jakubkrehel/skills` at the pinned commit into `compound-design/vendor/` (gitignored) for benchmark condition B, preserving its MIT LICENSE. Nothing from it is redistributed by this repository.
