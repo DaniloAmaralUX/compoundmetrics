@@ -1,10 +1,10 @@
 {
-  "frozen_at": "2026-09-09T11:06:58.987Z",
+  "frozen_at": "2026-09-09T11:07:22.476Z",
   "status": "E2 PRE-REGISTERED · ZERO-COST PREPARATION · PRIMARY RUBRIC FROZEN · RUNTIME NOT EXECUTED · COST BLOCKED · CEL E1",
   "repo": {
-    "sha": "1401b680bb813bf4ad8c2096729dba21e08412a5",
+    "sha": "e7f82deef1788ecec3c232439b15af12027ed623",
     "branch": "claude/compound-design-standalone-hwoxi3",
-    "dirty": true
+    "dirty": false
   },
   "harness": {
     "node": "v22.22.2",
