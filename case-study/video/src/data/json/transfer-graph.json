@@ -1,0 +1,1650 @@
+{
+ "generated_at": "2026-09-09T16:26:53Z",
+ "method": "Read-only research on 2026-09-09. Sources: case-study/history/CHRONOLOGY.md (the 'Relationships that the sources support' list was the starting hypothesis set), case-study/history/TOOLS-MANIFEST.json (tool ids, resources_created/resources_reused), compound-design/SOURCES.md, NOTICE, compound-design/registry/resource-registry.json (provenance / upstream / supersedes / supersededBy per resource), compound-design/learning/LEDGER.md, docs/solutions, docs/frames, docs/plans, compound-design/releases/*.md, compound-design/research/*.md, compound-design/quality/e2 (RESOURCE-MANIFEST.json, CANDIDATE-LANE.md, releases/), case-study/design-benchmark/rubric and case-study/scripts, git history of compoundmetrics (main + case-study branch) and of the readable repositories under .research/history/ (studio-dev-ui, supernova-catalogo incl. branch compound-design-framework, processo, geistlabsds, studio-ds, design-engineering-guide) and /home/user/compound-labs-design. Where two repositories were claimed to share a file, the files were compared by md5 at the named commits. Rule applied: an edge is verified:true only when a file path + line, a commit, or a quoted string shows it; anything the brief or the chronology implies without such a source is verified:false with the reason, or listed under none_verified. External nodes carry only 'informed' edges; where the only attribution is a commit subject rather than an attribution file, the edge says so in its note. Third-party upstreams outside the brief's external list (Canvas UI, React Bits, Supernova tokens, Iconiq, tweakcn, shadcn registry-template) are modelled as resources labelled third-party so that their 'reused' edges keep their evidence. No network, no model runtime, no state-changing git command. Nothing was inferred from plausibility.",
+ "nodes": [
+  {
+   "id": "tool-09",
+   "type": "tool",
+   "label": "Compound Labs Design (compound-labs-design)",
+   "tool_id": "tool-09",
+   "path": "/home/user/compound-labs-design"
+  },
+  {
+   "id": "tool-12",
+   "type": "tool",
+   "label": "Canvas UI fork → Dev Studio UI → Studio Dev UI (studio-dev-ui)",
+   "tool_id": "tool-12",
+   "path": "/home/user/compoundmetrics/.research/history/studio-dev-ui"
+  },
+  {
+   "id": "tool-13",
+   "type": "tool",
+   "label": "Design Engineering Guide (design-engineering-guide)",
+   "tool_id": "tool-13",
+   "path": "/home/user/compoundmetrics/.research/history/design-engineering-guide"
+  },
+  {
+   "id": "tool-18",
+   "type": "tool",
+   "label": "Studio DS (studio-ds)",
+   "tool_id": "tool-18",
+   "path": "/home/user/compoundmetrics/.research/history/studio-ds"
+  },
+  {
+   "id": "tool-20",
+   "type": "tool",
+   "label": "Supernova UI + Supernova Catálogo (supernova-catalogo)",
+   "tool_id": "tool-20",
+   "path": "/home/user/compoundmetrics/.research/history/supernova-catalogo"
+  },
+  {
+   "id": "tool-21",
+   "type": "tool",
+   "label": "Geist Labs DS (geistlabsds)",
+   "tool_id": "tool-21",
+   "path": "/home/user/compoundmetrics/.research/history/geistlabsds"
+  },
+  {
+   "id": "tool-23",
+   "type": "tool",
+   "label": "Processo (processo)",
+   "tool_id": "tool-23",
+   "path": "/home/user/compoundmetrics/.research/history/processo"
+  },
+  {
+   "id": "tool-24",
+   "type": "tool",
+   "label": "Compound Metrics / Compound Design (compoundmetrics)",
+   "tool_id": "tool-24",
+   "path": "/home/user/compoundmetrics"
+  },
+  {
+   "id": "ext-every",
+   "type": "external",
+   "label": "Every / Compound Engineering plugin (MIT, b36047e)"
+  },
+  {
+   "id": "ext-jakub",
+   "type": "external",
+   "label": "Jakub Krehel — interface skills (MIT, 267330e)"
+  },
+  {
+   "id": "ext-emil",
+   "type": "external",
+   "label": "Emil Kowalski — design engineering skills (MIT, d23d7f8)"
+  },
+  {
+   "id": "ext-lifeline",
+   "type": "external",
+   "label": "Evil Rabbit — Lifeline (MIT, 8ddbb3d)"
+  },
+  {
+   "id": "ext-brad-frost",
+   "type": "external",
+   "label": "Brad Frost — Atomic Design"
+  },
+  {
+   "id": "res-canvas-ui-upstream",
+   "type": "resource",
+   "label": "Canvas UI 1.0 (DavidHDev/canvas-ui, third-party upstream fork base)"
+  },
+  {
+   "id": "res-react-bits-registry",
+   "type": "resource",
+   "label": "React Bits registry (third-party upstream, 166 items)"
+  },
+  {
+   "id": "res-supernova-tokens",
+   "type": "resource",
+   "label": "Supernova tokens (third-party design-token source)"
+  },
+  {
+   "id": "res-iconiq-preset",
+   "type": "resource",
+   "label": "Iconiq preset (third-party shadcn preset)"
+  },
+  {
+   "id": "res-tweakcn-themes",
+   "type": "resource",
+   "label": "tweakcn theme presets (third-party, Apache-2.0)"
+  },
+  {
+   "id": "res-shadcn-registry-template",
+   "type": "resource",
+   "label": "shadcn registry-template (third-party bootstrap)"
+  },
+  {
+   "id": "res-cd-audit-skill-external-repo",
+   "type": "resource",
+   "label": "compound-design-audit skill in DaniloAmaralUX/skills (repository NOT readable here)"
+  },
+  {
+   "id": "res-cld-skills",
+   "type": "resource",
+   "label": "skill: compound-design-ui / -type / -color (Compound Labs Design)",
+   "path": "/home/user/compound-labs-design/skills"
+  },
+  {
+   "id": "res-cld-audit-page",
+   "type": "resource",
+   "label": "audit: /audit interactive checklist (54 items, 9 categories, v3.6.0)",
+   "path": "/home/user/compound-labs-design/audit.html"
+  },
+  {
+   "id": "res-cld-plugin",
+   "type": "resource",
+   "label": "skill/plugin: compound-labs-design (cl-design, cl-review, cl-audit)",
+   "path": "/home/user/compound-labs-design/compound-labs-design"
+  },
+  {
+   "id": "res-cl-audit",
+   "type": "resource",
+   "label": "command: /cl-audit (8-category audit playbook)",
+   "path": "/home/user/compound-labs-design/compound-labs-design/commands/cl-audit.md"
+  },
+  {
+   "id": "res-frozen-rubric",
+   "type": "eval",
+   "label": "eval: frozen Compound Design Audit rubric (instrument A) for the case-study benchmark",
+   "path": "/home/user/compoundmetrics/case-study/design-benchmark/rubric"
+  },
+  {
+   "id": "res-source-craft-instrument",
+   "type": "eval",
+   "label": "eval: source/craft instrument B (cl-audit playbook categories, static subset)",
+   "path": "/home/user/compoundmetrics/case-study/scripts/audit-source.mjs"
+  },
+  {
+   "id": "res-case-study-deterministic",
+   "type": "eval",
+   "label": "eval: case-study deterministic audit + capture scripts",
+   "path": "/home/user/compoundmetrics/case-study/scripts/audit-deterministic.mjs"
+  },
+  {
+   "id": "res-sdu-honesty-gate",
+   "type": "resource",
+   "label": "pattern: gallery build-time honesty gate (studio-dev-ui)",
+   "path": "/home/user/compoundmetrics/.research/history/studio-dev-ui"
+  },
+  {
+   "id": "res-sdu-url-engine",
+   "type": "resource",
+   "label": "component: playground URL engine / universal sandbox (studio-dev-ui)",
+   "path": "/home/user/compoundmetrics/.research/history/studio-dev-ui"
+  },
+  {
+   "id": "res-sdu-design-contract",
+   "type": "resource",
+   "label": "contract: design contract + audit matrix (studio-dev-ui docs/product)",
+   "path": "/home/user/compoundmetrics/.research/history/studio-dev-ui"
+  },
+  {
+   "id": "res-sdu-solutions",
+   "type": "resource",
+   "label": "pattern: docs/solutions one-note-per-problem (studio-dev-ui)",
+   "path": "/home/user/compoundmetrics/.research/history/studio-dev-ui"
+  },
+  {
+   "id": "res-sdu-cd-page",
+   "type": "resource",
+   "label": "component: Compound Design v0.2 / v0.2.1 POC page (studio-dev-ui src/app/compound-design)",
+   "path": "/home/user/compoundmetrics/.research/history/studio-dev-ui"
+  },
+  {
+   "id": "res-cd-framework-v02",
+   "type": "resource",
+   "label": "framework: Compound Design v0.1 → v0.2.1 (supernova-catalogo@compound-design-framework)",
+   "path": "/home/user/compoundmetrics/.research/history/supernova-catalogo"
+  },
+  {
+   "id": "res-legacy-jakub",
+   "type": "agent",
+   "label": "agent: jakub (Interface Review v0.2, superseded)",
+   "path": "/home/user/compoundmetrics/compound-design/quality/e2/legacy-resources/v0.2/agents/jakub.md"
+  },
+  {
+   "id": "res-legacy-emi",
+   "type": "agent",
+   "label": "agent: emi (Motion Review v0.2, superseded)",
+   "path": "/home/user/compoundmetrics/compound-design/quality/e2/legacy-resources/v0.2/agents/emi.md"
+  },
+  {
+   "id": "res-legacy-cd",
+   "type": "agent",
+   "label": "agent: cd (Design Guide v0.2 orchestrator, superseded)",
+   "path": "/home/user/compoundmetrics/compound-design/quality/e2/legacy-resources/v0.2/agents/cd.md"
+  },
+  {
+   "id": "res-registry",
+   "type": "registry",
+   "label": "registry: resource-registry.json",
+   "path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json"
+  },
+  {
+   "id": "res-ledger",
+   "type": "resource",
+   "label": "ledger: compound-design/learning/LEDGER.md",
+   "path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md"
+  },
+  {
+   "id": "res-e2-pack",
+   "type": "eval",
+   "label": "eval: E2 pre-registered benchmark pack (protocol, task sets, promptfoo configs)",
+   "path": "/home/user/compoundmetrics/compound-design/quality/e2"
+  },
+  {
+   "id": "res-e2-legacy-manifest",
+   "type": "eval",
+   "label": "eval: legacy-resources RESOURCE-MANIFEST.json (byte-equivalence to baseline 5fc74f1)",
+   "path": "/home/user/compoundmetrics/compound-design/quality/e2/legacy-resources/v0.2/RESOURCE-MANIFEST.json"
+  },
+  {
+   "id": "res-e2-candidate-lane",
+   "type": "eval",
+   "label": "eval: E2 candidate lane v0.3 (reuses frozen pilot inputs)",
+   "path": "/home/user/compoundmetrics/compound-design/quality/e2/candidate-v0.3/CANDIDATE-LANE.md"
+  },
+  {
+   "id": "res-cd-quality-gate",
+   "type": "skill",
+   "label": "skill: cd-quality-gate (Quality Gate, v0.2.0 carried over)",
+   "path": "/home/user/compoundmetrics/skills/cd-quality-gate/SKILL.md"
+  },
+  {
+   "id": "res-cd-resource-lab",
+   "type": "skill",
+   "label": "skill: cd-resource-lab (Resource Lab, v0.2.0 carried over)",
+   "path": "/home/user/compoundmetrics/skills/cd-resource-lab/SKILL.md"
+  },
+  {
+   "id": "res-cd-ai-interaction-review",
+   "type": "skill",
+   "label": "skill: cd-ai-interaction-review (v0.1.0 carried over)",
+   "path": "/home/user/compoundmetrics/skills/cd-ai-interaction-review/SKILL.md"
+  },
+  {
+   "id": "res-every-snapshot",
+   "type": "resource",
+   "label": "research: EVERY-ARCHITECTURE-SNAPSHOT.md (mechanism-by-mechanism adopt/adapt/defer/reject)",
+   "path": "/home/user/compoundmetrics/compound-design/research/EVERY-ARCHITECTURE-SNAPSHOT.md"
+  },
+  {
+   "id": "res-cd-frame",
+   "type": "skill",
+   "label": "skill: cd-frame (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/skills/cd-frame/SKILL.md"
+  },
+  {
+   "id": "res-cd-build",
+   "type": "skill",
+   "label": "skill: cd-build (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/skills/cd-build/SKILL.md"
+  },
+  {
+   "id": "res-cd-verify",
+   "type": "skill",
+   "label": "skill: cd-verify (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/skills/cd-verify/SKILL.md"
+  },
+  {
+   "id": "res-cd-compound",
+   "type": "skill",
+   "label": "skill: cd-compound (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/skills/cd-compound/SKILL.md"
+  },
+  {
+   "id": "res-cd-strategy",
+   "type": "skill",
+   "label": "skill: cd-strategy (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/skills/cd-strategy/SKILL.md"
+  },
+  {
+   "id": "res-cd-compound-refresh",
+   "type": "skill",
+   "label": "skill: cd-compound-refresh (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/skills/cd-compound-refresh/SKILL.md"
+  },
+  {
+   "id": "res-cd-setup",
+   "type": "skill",
+   "label": "skill: cd-setup (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/skills/cd-setup/SKILL.md"
+  },
+  {
+   "id": "res-cd-handoff",
+   "type": "skill",
+   "label": "skill: cd-handoff (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/skills/cd-handoff/SKILL.md"
+  },
+  {
+   "id": "res-cd-model",
+   "type": "skill",
+   "label": "skill: cd-model (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/skills/cd-model/SKILL.md"
+  },
+  {
+   "id": "res-cd-interface-review",
+   "type": "skill",
+   "label": "skill: cd-interface-review (Interface Review, v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/skills/cd-interface-review/SKILL.md"
+  },
+  {
+   "id": "res-cd-motion-review",
+   "type": "skill",
+   "label": "skill: cd-motion-review (Motion Review, v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/skills/cd-motion-review/SKILL.md"
+  },
+  {
+   "id": "res-compound-design-agent",
+   "type": "agent",
+   "label": "agent: compound-design (Design Guide, v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/agents/compound-design.md"
+  },
+  {
+   "id": "res-interface-reviewer",
+   "type": "agent",
+   "label": "agent: interface-reviewer (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/agents/interface-reviewer.md"
+  },
+  {
+   "id": "res-motion-reviewer",
+   "type": "agent",
+   "label": "agent: motion-reviewer (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/agents/motion-reviewer.md"
+  },
+  {
+   "id": "res-learning-curator",
+   "type": "agent",
+   "label": "agent: learning-curator (v0.3.0-alpha.1)",
+   "path": "/home/user/compoundmetrics/agents/learning-curator.md"
+  },
+  {
+   "id": "res-finding-contract",
+   "type": "contract",
+   "label": "contract: FINDING-CONTRACT.md",
+   "path": "/home/user/compoundmetrics/compound-design/FINDING-CONTRACT.md"
+  },
+  {
+   "id": "res-discoverability-contract",
+   "type": "contract",
+   "label": "contract: DISCOVERABILITY-CONTRACT.md",
+   "path": "/home/user/compoundmetrics/compound-design/DISCOVERABILITY-CONTRACT.md"
+  },
+  {
+   "id": "res-v03-contract-eval",
+   "type": "eval",
+   "label": "eval: v0.3-contract-eval.json (26 checks; basis of E0 → E1 promotion)",
+   "path": "/home/user/compoundmetrics/compound-design/quality/releases/v0.3-contract-eval.json"
+  },
+  {
+   "id": "res-claim-guard",
+   "type": "resource",
+   "label": "rule: claim-guard (cd.mjs)",
+   "path": "/home/user/compoundmetrics/compound-design/tools/cd.mjs"
+  },
+  {
+   "id": "res-e2-ci-guard",
+   "type": "resource",
+   "label": "rule: e2-ci-guard",
+   "path": "/home/user/compoundmetrics/compound-design/quality/e2"
+  },
+  {
+   "id": "res-ledger-008",
+   "type": "resource",
+   "label": "ledger entry CD-20260909-008 (registry schema never executed)",
+   "path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md"
+  },
+  {
+   "id": "res-ledger-011",
+   "type": "resource",
+   "label": "ledger entry CD-20260909-011 (word bans make evidence documents unwritable)",
+   "path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md"
+  },
+  {
+   "id": "res-ledger-012",
+   "type": "resource",
+   "label": "ledger entry CD-20260909-012 (guard must distinguish stating a rule from breaking it)",
+   "path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md"
+  },
+  {
+   "id": "res-ledger-013",
+   "type": "resource",
+   "label": "ledger entry CD-20260909-013 (axe contrast measured mid-animation)",
+   "path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md"
+  },
+  {
+   "id": "res-frame-pe",
+   "type": "resource",
+   "label": "frame: docs/frames/2026-09-09-product-experience.md (cd-frame output)",
+   "path": "/home/user/compoundmetrics/docs/frames/2026-09-09-product-experience.md"
+  },
+  {
+   "id": "res-plan-pe",
+   "type": "resource",
+   "label": "plan: docs/plans/2026-09-09-product-experience-ia.md (cd-model output)",
+   "path": "/home/user/compoundmetrics/docs/plans/2026-09-09-product-experience-ia.md"
+  },
+  {
+   "id": "res-pe-references",
+   "type": "resource",
+   "label": "research: PRODUCT-EXPERIENCE-REFERENCES.md (Evil Rabbit main + lifeline studied read-only)",
+   "path": "/home/user/compoundmetrics/compound-design/research/PRODUCT-EXPERIENCE-REFERENCES.md"
+  },
+  {
+   "id": "res-timeline-component",
+   "type": "component",
+   "label": "component: src/components/Timeline.tsx (/project timeline)",
+   "path": "/home/user/compoundmetrics/src/components/Timeline.tsx"
+  },
+  {
+   "id": "res-site-check",
+   "type": "eval",
+   "label": "check: scripts/site-check.mjs (routes, links, axe, keyboard)",
+   "path": "/home/user/compoundmetrics/scripts/site-check.mjs"
+  },
+  {
+   "id": "res-solution-axe",
+   "type": "resource",
+   "label": "solution: docs/solutions/2026-09-09-axe-contrast-during-entrance-animation.md (CD-SOL-20260909-01)",
+   "path": "/home/user/compoundmetrics/docs/solutions/2026-09-09-axe-contrast-during-entrance-animation.md"
+  },
+  {
+   "id": "res-site-check-wait-rule",
+   "type": "rule",
+   "label": "rule: run automated accessibility checks on the page at rest (wait for entrance animations; ignore ERR_ABORTED prefetches)",
+   "path": "/home/user/compoundmetrics/docs/solutions/2026-09-09-axe-contrast-during-entrance-animation.md"
+  },
+  {
+   "id": "res-processo-timeline",
+   "type": "component",
+   "label": "component: Pitang process timeline on the Lifeline boilerplate (processo lib/lifeline-processo.ts)",
+   "path": "/home/user/compoundmetrics/.research/history/processo"
+  },
+  {
+   "id": "res-geist-timeline",
+   "type": "component",
+   "label": "component: LAB / DESIGN research timeline app on the Lifeline boilerplate (geistlabsds timeline/)",
+   "path": "/home/user/compoundmetrics/.research/history/geistlabsds"
+  },
+  {
+   "id": "res-studio-ds-registry",
+   "type": "registry",
+   "label": "registry: Studio DS catalog pipeline + registry.json",
+   "path": "/home/user/compoundmetrics/.research/history/studio-ds"
+  },
+  {
+   "id": "res-de-guide-kb",
+   "type": "resource",
+   "label": "knowledge base: design-engineering-guide (practices, skills, tools)",
+   "path": "/home/user/compoundmetrics/.research/history/design-engineering-guide"
+  }
+ ],
+ "edges": [
+  {
+   "id": "E01",
+   "from": "tool-09",
+   "to": "res-cld-skills",
+   "type": "created",
+   "evidence": "compound-labs-design d08ec62 2026-07-13 'Initial commit: portfolio site + Compound Labs Design skill/plugin'; 5db6ab5 2026-07-16 'Alinha o site aos skills do Jakub (UI/Type/Color)'; files skills/compound-design-{ui,type,color}.html present at 364430b",
+   "evidence_path": "/home/user/compound-labs-design",
+   "verified": true
+  },
+  {
+   "id": "E02",
+   "from": "tool-09",
+   "to": "res-cld-audit-page",
+   "type": "created",
+   "evidence": "compound-labs-design edbfdd1 2026-07-16 body: '/audit: 54 itens em 9 categorias (fundamentos, hierarquia, estilo, acessibilidade, navegação, carga cognitiva, onboarding, confiança, formulários)'; audit.html at 364430b contains 54 [data-audit-check] inputs in 9 distinct data-cat values (counted from source)",
+   "evidence_path": "/home/user/compound-labs-design/audit.html",
+   "verified": true
+  },
+  {
+   "id": "E03",
+   "from": "tool-09",
+   "to": "res-cld-plugin",
+   "type": "created",
+   "evidence": "compound-labs-design d08ec62 2026-07-13 'Initial commit: … Compound Labs Design skill/plugin'; tree compound-labs-design/{commands/cl-design.md,cl-review.md,cl-audit.md, skills/compound-labs-design/SKILL.md, references/{standards,pipeline,review-checklist,audit-playbook}.md}",
+   "evidence_path": "/home/user/compound-labs-design/compound-labs-design",
+   "verified": true
+  },
+  {
+   "id": "E04",
+   "from": "res-cld-plugin",
+   "to": "res-cl-audit",
+   "type": "created",
+   "evidence": "commands/cl-audit.md lines 5-8: 'Use a skill compound-labs-design no modo Audit. Siga references/audit-playbook.md: … audite pelas 8 categorias'; file history d08ec62 (2026-07-13), fab874d",
+   "evidence_path": "/home/user/compound-labs-design/compound-labs-design/commands/cl-audit.md",
+   "verified": true
+  },
+  {
+   "id": "E05",
+   "from": "ext-jakub",
+   "to": "res-cld-skills",
+   "type": "informed",
+   "evidence": "compound-labs-design 7beab4f 2026-07-13 'Adiciona página /skills e clona skills do Jakub Krehel (MIT, estudo)'; 5db6ab5 2026-07-16 'Alinha o site aos skills do Jakub (UI/Type/Color) — autoridade de design'; CHRONOLOGY.md line 44",
+   "evidence_path": "/home/user/compound-labs-design",
+   "verified": true,
+   "note": "Evidence is commit subjects, not an attribution file: 90e89f6 2026-07-15 'Remove referências a autores externos' removed external author references from the site. The repository's own attribution file for this upstream does not exist at 364430b."
+  },
+  {
+   "id": "E06",
+   "from": "ext-emil",
+   "to": "tool-09",
+   "type": "informed",
+   "evidence": "compound-labs-design e32c47a 2026-07-14 'Cards (Emil design-eng pass): afordância, feedback e estado'; 364430b 2026-07-16 'review-animations (Emil): barra de progresso na GPU'; CHRONOLOGY.md line 44",
+   "evidence_path": "/home/user/compound-labs-design",
+   "verified": true,
+   "note": "Commit subjects only (see E05 note). Target is the site's motion/cards polish, not a named resource."
+  },
+  {
+   "id": "E07",
+   "from": "res-cld-audit-page",
+   "to": "res-frozen-rubric",
+   "type": "eval-created",
+   "evidence": "case-study/design-benchmark/rubric/RUBRIC-MANIFEST.json: source_repository DaniloAmaralUX/compound-labs-design, source_sha 364430b9d553c6b9f87e4ff3cbc0f31eaa5d1a33, item_count 54, 9 categories, audit_html_sha256 11034e8b…; rubric/README.md paragraph 1: 'derived mechanically from scripts/build-audit.mjs and cross-checked against the [data-audit-check] inputs of audit.html'; FREEZE.md 'Current audit' section",
+   "evidence_path": "/home/user/compoundmetrics/case-study/design-benchmark/rubric/RUBRIC-MANIFEST.json",
+   "verified": true
+  },
+  {
+   "id": "E08",
+   "from": "res-cl-audit",
+   "to": "res-source-craft-instrument",
+   "type": "eval-created",
+   "evidence": "case-study/scripts/audit-source.mjs line 1: 'Source / craft audit (instrument B — the cl-audit playbook's 8 categories), deterministic subset'; rubric/README.md last paragraph: 'The Source / Craft instrument (B) is the cl-audit command of the plugin … (commands/cl-audit.md → references/audit-playbook.md, \"8 categorias\")'; METHODOLOGY.md line 45",
+   "evidence_path": "/home/user/compoundmetrics/case-study/scripts/audit-source.mjs",
+   "verified": true
+  },
+  {
+   "id": "E09",
+   "from": "res-cld-audit-page",
+   "to": "res-cl-audit",
+   "type": "informed",
+   "evidence": "CHRONOLOGY.md line 40 claims '/audit checklist → the plugin command cl-audit'. Sources contradict the direction: commands/cl-audit.md exists at d08ec62 (2026-07-13) and audits by 8 playbook categories; the /audit page was added at edbfdd1 (2026-07-16) with 54 items in 9 different categories; neither file references the other.",
+   "evidence_path": "/home/user/compound-labs-design/compound-labs-design/commands/cl-audit.md",
+   "verified": false,
+   "note": "Two distinct audit instruments in one repository (A: /audit page; B: cl-audit playbook). No source shows either derived from the other. The chronology's arrow is not supported."
+  },
+  {
+   "id": "E10",
+   "from": "res-cd-audit-skill-external-repo",
+   "to": "res-cld-audit-page",
+   "type": "reused",
+   "evidence": "compound-labs-design scripts/build-audit.mjs lines 2-3: 'Os itens do checklist são curados a partir das referências da skill compound-design-audit (repo DaniloAmaralUX/skills)'; line 16 CMD 'npx skills add DaniloAmaralUX/skills --skill compound-design-audit'. The DaniloAmaralUX/skills repository is not readable here (.research/history/skills is remotion-dev/skills, origin https://github.com/remotion-dev/skills.git).",
+   "evidence_path": "/home/user/compound-labs-design/scripts/build-audit.mjs",
+   "verified": false,
+   "note": "The source names its upstream but the upstream repository could not be read, so the items were not compared."
+  },
+  {
+   "id": "E11",
+   "from": "res-canvas-ui-upstream",
+   "to": "tool-12",
+   "type": "reused",
+   "evidence": "studio-dev-ui 775f281 2026-07-16 'first commit', 0af5a53 2026-07-21 'Canvas UI 1.0 - Add files, components, demos, playground, landing page, set up registry'; TOOLS-MANIFEST.json tool-12 notes: 'Early Vercel deployments carry githubOrg DavidHDev / repo canvas-ui'; authorship field: 'commits before 2026-08-13 are the upstream fork (DavidHDev/canvas-ui)'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/studio-dev-ui",
+   "verified": true
+  },
+  {
+   "id": "E12",
+   "from": "res-react-bits-registry",
+   "to": "tool-12",
+   "type": "reused",
+   "evidence": "studio-dev-ui c460129 2026-08-23 'feat: migrate to Studio Dev UI Registry with React Bits integration' body: 'Create canonical source for React Bits: src/data/react-bits-components.ts … Registry now includes 96 Canvas UI + 166 React Bits = 262 total items'; d29948d 'restore: add library.json and 166 react-bits registry endpoints'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/studio-dev-ui",
+   "verified": true
+  },
+  {
+   "id": "E13",
+   "from": "tool-12",
+   "to": "res-sdu-honesty-gate",
+   "type": "created",
+   "evidence": "studio-dev-ui 79fa261 2026-08-13 'feat(gallery): preview pipeline with a build-time honesty gate'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/studio-dev-ui",
+   "verified": true
+  },
+  {
+   "id": "E14",
+   "from": "tool-12",
+   "to": "res-sdu-url-engine",
+   "type": "created",
+   "evidence": "studio-dev-ui 058cdf2 2026-08-13 'feat(playground): definition-driven controls, universal sandbox and URL engine'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/studio-dev-ui",
+   "verified": true
+  },
+  {
+   "id": "E15",
+   "from": "tool-12",
+   "to": "res-sdu-design-contract",
+   "type": "created",
+   "evidence": "studio-dev-ui 8265803 2026-08-13 'docs: PRD, audit matrix, design contract and solution notes'; tree at 8265803: docs/product/AUDIT-MATRIX.md, PRD-*.md, DEPENDENCY-POLICY.md",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/studio-dev-ui",
+   "verified": true
+  },
+  {
+   "id": "E16",
+   "from": "tool-12",
+   "to": "res-sdu-solutions",
+   "type": "created",
+   "evidence": "studio-dev-ui 8265803 2026-08-13 body: 'docs/solutions/ keeps one note per problem actually solved'; tree: docs/solutions/build/contratos-compartilhados-fora-do-typecheck.md, docs/solutions/sandbox-preview/{canal-de-valores-postmessage,preview-so-e-ready-se-roda}.md",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/studio-dev-ui",
+   "verified": true
+  },
+  {
+   "id": "E17",
+   "from": "tool-12",
+   "to": "res-sdu-cd-page",
+   "type": "created",
+   "evidence": "studio-dev-ui e0e40e7 2026-09-09 'feat: add Compound Design POC timeline' (src/app/compound-design/page.tsx, 259 lines); 05ee94f 'style: add original lifeline-inspired Compound Design UI' (page.module.css, 224 lines); efaaeb4 'feat(cd): publish Compound Design v0.2 evidence POC'; 5fcede3 'present v0.2.1 evidence infrastructure'; 231889f 'refactor(compound-design): use authorial public resource names'; branch origin/compound-design-poc",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/studio-dev-ui",
+   "verified": true
+  },
+  {
+   "id": "E18",
+   "from": "ext-lifeline",
+   "to": "res-sdu-cd-page",
+   "type": "informed",
+   "evidence": "studio-dev-ui 05ee94f 2026-09-09 'style: add original lifeline-inspired Compound Design UI' (only file: src/app/compound-design/page.module.css); page.tsx at 231889f lines 121-123 render a timelineSection with a rail",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/studio-dev-ui",
+   "verified": true,
+   "note": "Commit subject names Lifeline as inspiration; no attribution file for it exists in studio-dev-ui. The compoundmetrics NOTICE covers the later Timeline component, not this page."
+  },
+  {
+   "id": "E19",
+   "from": "res-cd-framework-v02",
+   "to": "res-sdu-cd-page",
+   "type": "reused",
+   "evidence": "compound-design/quality/releases/V0.2-DEPLOYMENT.md lines 7-12: 'Project: studio-dev-ui / Branch: compound-design-poc / Deployment URL … /compound-design'; v0.2.1-VALIDATION.md line 51: 'deployed from the isolated compound-design-poc branch and the /compound-design route returned HTTP 200'; studio-dev-ui 5fcede3 'present v0.2.1 evidence infrastructure'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/quality/releases/V0.2-DEPLOYMENT.md",
+   "verified": true
+  },
+  {
+   "id": "E20",
+   "from": "res-sdu-cd-page",
+   "to": "tool-24",
+   "type": "migrated",
+   "evidence": "Byte comparison: studio-dev-ui 231889f:src/app/compound-design/page.tsx md5 d62a5d823d2d2d6a1b58d7b3d5c4f82b == compoundmetrics 18ffcf2:src/app/page.tsx; page.module.css md5 88e5e654d9533e4b74c53507753c2e18 identical in both; 18ffcf2 body: 'src/app/page.tsx + page.module.css extracted verbatim from the current public implementation'; NOTICE lines 71-73: 'extracted from the author's studio-dev-ui repository'",
+   "evidence_path": "/home/user/compoundmetrics/NOTICE",
+   "verified": true
+  },
+  {
+   "id": "E21",
+   "from": "res-supernova-tokens",
+   "to": "tool-20",
+   "type": "reused",
+   "evidence": "supernova-catalogo bcb35b3 2026-09-06 'feat: fundação do Supernova Catálogo com preset Iconiq sobre tokens Supernova'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/supernova-catalogo",
+   "verified": true
+  },
+  {
+   "id": "E22",
+   "from": "res-iconiq-preset",
+   "to": "tool-20",
+   "type": "reused",
+   "evidence": "supernova-catalogo bcb35b3 2026-09-06 'feat: fundação do Supernova Catálogo com preset Iconiq sobre tokens Supernova'; 25d9439 'uma família de primitivos só, sobre o preset oficial do shadcn'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/supernova-catalogo",
+   "verified": true
+  },
+  {
+   "id": "E23",
+   "from": "tool-20",
+   "to": "res-cd-framework-v02",
+   "type": "created",
+   "evidence": "supernova-catalogo branch origin/compound-design-framework: 9dc05c2 'chore: initialize Compound Design private workspace' (parent a34cb1d on main) → 848bb21 'feat(cd): evolve Compound Design to v0.2 evidence architecture' → 5023a5a 'feat(cd): add v0.2.1 evidence infrastructure' → 7af6553 'docs(cd): record v0.2.1 zero-cost validation' (all 2026-09-09)",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/supernova-catalogo",
+   "verified": true
+  },
+  {
+   "id": "E24",
+   "from": "ext-jakub",
+   "to": "res-legacy-jakub",
+   "type": "informed",
+   "evidence": "supernova-catalogo 8642462 'feat: add Compound Design specialist agents and upstream skill sources' adds .claude/agents/jakub.md and .gitmodules submodule compound-design/vendor/jakub-skills → https://github.com/jakubkrehel/skills.git; legacy jakub.md line 9: 'informed by the vendored MIT-licensed interface skills under compound-design/vendor/jakub-skills'; SOURCES.md lines 5-13; registry line 672-700 (provenance 'upstream-informed-wrapper', upstream jakubkrehel/skills)",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/SOURCES.md",
+   "verified": true
+  },
+  {
+   "id": "E25",
+   "from": "ext-emil",
+   "to": "res-legacy-emi",
+   "type": "informed",
+   "evidence": "supernova-catalogo 8642462 adds .claude/agents/emi.md and submodule compound-design/vendor/emil-skills → https://github.com/emilkowalski/skills.git; legacy emi.md line 9: 'informed by the vendored MIT-licensed skills under compound-design/vendor/emil-skills'; SOURCES.md lines 15-23; registry lines 703-730",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/SOURCES.md",
+   "verified": true
+  },
+  {
+   "id": "E26",
+   "from": "ext-every",
+   "to": "res-legacy-cd",
+   "type": "informed",
+   "evidence": "registry lines 733-763: resource 'cd' upstream ['Every Compound Engineering', 'jakubkrehel/skills', 'emilkowalski/skills'], provenance 'composed-and-authored'; SOURCES.md lines 25-27 'Every / Compound Engineering — compounding workflow thesis'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E27",
+   "from": "ext-lifeline",
+   "to": "res-cd-framework-v02",
+   "type": "informed",
+   "evidence": "supernova-catalogo 7c6e0f6 'chore(cd): register Lifeline reference submodule' and 3835232 'chore(cd): pin Lifeline reference source'; .gitmodules at 3835232: [submodule \"compound-design/vendor/lifeline-reference\"] url = https://github.com/evilrabbit/lifeline.git",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/supernova-catalogo",
+   "verified": true,
+   "note": "Reference registered as a vendored submodule on the framework branch; what it informed there is not stated in the commit bodies (empty)."
+  },
+  {
+   "id": "E28",
+   "from": "tool-20",
+   "to": "res-e2-pack",
+   "type": "created",
+   "evidence": "supernova-catalogo compound-design-framework: 97ee27c 'docs(cd): preregister E2 benchmark protocol', 644b77e 'test(cd): add fixed E2 jakub task set', 5eb2afa 'add fixed E2 quality-gate task set', e742fb2 'add Promptfoo E2 Jakub A/B/C config', 5275b1f 'add Promptfoo E2 quality-gate config', aa142c9 'add E2 source parity check'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/supernova-catalogo",
+   "verified": true
+  },
+  {
+   "id": "E29",
+   "from": "tool-20",
+   "to": "res-registry",
+   "type": "created",
+   "evidence": "supernova-catalogo 7af6553 tree contains compound-design/registry/resource-registry.json and resource.schema.json; compoundmetrics 4c492a8 'feat: migrate canonical resource registry'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/supernova-catalogo",
+   "verified": true
+  },
+  {
+   "id": "E30",
+   "from": "tool-20",
+   "to": "res-ledger",
+   "type": "created",
+   "evidence": "supernova-catalogo 7af6553:compound-design/learning/LEDGER.md md5 aca4e3b7fe8be85d919b21381c7a67c0 == compoundmetrics 18ffcf2:compound-design/learning/LEDGER.md",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/supernova-catalogo",
+   "verified": true
+  },
+  {
+   "id": "E31",
+   "from": "res-cd-framework-v02",
+   "to": "tool-24",
+   "type": "migrated",
+   "evidence": "NOTICE lines 66-70: 'The framework, evidence model, registry, evals and learning system were extracted from the author's supernova-catalogo repository (branch compound-design-framework)'; compoundmetrics main: 4d66480 'docs: migrate Compound Design framework overview', 4c492a8 'feat: migrate canonical resource registry', f9b70a3, 26a415e, efe10bb, 2f66f44, 79fa9ff 'feat: migrate Compound Design orchestrator'; 18ffcf2 body: 'Full compound-design/ tree and .claude/ agents + skills migrated from the framework source'",
+   "evidence_path": "/home/user/compoundmetrics/NOTICE",
+   "verified": true,
+   "note": "CHRONOLOGY.md line 41 says 'the migration commits in compoundmetrics name the source branch'. They do not: the seven 'migrate' commit bodies are empty. The source branch is named in NOTICE (18ffcf2). The transfer itself is verified by the byte-identical files in E32-E35."
+  },
+  {
+   "id": "E32",
+   "from": "res-legacy-jakub",
+   "to": "tool-24",
+   "type": "migrated",
+   "evidence": "md5 658644b12c3051d5d1e53e0fda51339f identical for supernova-catalogo 7af6553:.claude/agents/jakub.md, compoundmetrics 18ffcf2:.claude/agents/jakub.md and the pinned legacy-resources/v0.2/agents/jakub.md",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/quality/e2/legacy-resources/v0.2/agents/jakub.md",
+   "verified": true
+  },
+  {
+   "id": "E33",
+   "from": "res-legacy-emi",
+   "to": "tool-24",
+   "type": "migrated",
+   "evidence": "md5 d432eae2b45bab1412d49634e120e31f identical for supernova-catalogo 7af6553:.claude/agents/emi.md, compoundmetrics 18ffcf2:.claude/agents/emi.md and legacy-resources/v0.2/agents/emi.md",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/quality/e2/legacy-resources/v0.2/agents/emi.md",
+   "verified": true
+  },
+  {
+   "id": "E34",
+   "from": "res-legacy-cd",
+   "to": "tool-24",
+   "type": "migrated",
+   "evidence": "md5 1044e2e749586208ea76050f9df14ed8 identical for supernova-catalogo 7af6553:.claude/agents/cd.md, compoundmetrics 18ffcf2:.claude/agents/cd.md and legacy-resources/v0.2/agents/cd.md",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/quality/e2/legacy-resources/v0.2/agents/cd.md",
+   "verified": true
+  },
+  {
+   "id": "E35",
+   "from": "res-ledger",
+   "to": "tool-24",
+   "type": "migrated",
+   "evidence": "LEDGER.md md5 aca4e3b7fe8be85d919b21381c7a67c0 identical at supernova-catalogo 7af6553 and compoundmetrics 18ffcf2 (41 lines; entries were appended later in 1401b68, 7c31d66, 921d751)",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md",
+   "verified": true
+  },
+  {
+   "id": "E36",
+   "from": "res-registry",
+   "to": "tool-24",
+   "type": "migrated",
+   "evidence": "compoundmetrics 4c492a8 'feat: migrate canonical resource registry'; 18ffcf2 body: 'files already edited in this repo (public resource names, evidence-level wording) are kept as-is'. Content differs from 7af6553 (md5 9625ae16… vs ad3ff464…) because public names had been edited on the poc branch first.",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E37",
+   "from": "res-e2-pack",
+   "to": "tool-24",
+   "type": "migrated",
+   "evidence": "compoundmetrics 1401b68 'feat(e2): pre-register zero-cost E2 pilot harness (runtime not executed)'; LEDGER.md entries CD-20260909-001..007 (project compoundmetrics-e2-pilot, resource e2-benchmark-pack, resource_version 0.2.1) record the pack being made runnable in the standalone; MIGRATION-v0.2-to-v0.3.md line 43: task digests unchanged (jakub 864a379d4a1c, qg cb752312fb06)",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md",
+   "verified": true,
+   "note": "Task files were reorganised (tasks.json does not exist at supernova 7af6553), so no byte comparison; the transfer is evidenced by the ledger entries and digests."
+  },
+  {
+   "id": "E38",
+   "from": "res-cd-framework-v02",
+   "to": "res-cd-quality-gate",
+   "type": "reused",
+   "evidence": "registry lines 401-431: cd-quality-gate version 0.2.0, cdqi 8.75, status active; c61b896 body: 'three carried-over skills'; supernova-catalogo 45c0314 'feat: add Compound Design quality gate skill', 832995c 'integrate CDQI scoring into quality gate'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E39",
+   "from": "res-cd-framework-v02",
+   "to": "res-cd-resource-lab",
+   "type": "reused",
+   "evidence": "registry lines 432-463: cd-resource-lab version 0.2.0, cdqi 8.65; supernova-catalogo 30be24d 'feat(cd): add resource improvement lab', 7197974 'add Compound Design resource improvement agent'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E40",
+   "from": "res-cd-framework-v02",
+   "to": "res-cd-ai-interaction-review",
+   "type": "reused",
+   "evidence": "registry lines 464-496: cd-ai-interaction-review version 0.1.0, cdqi 8.35, provenance 'authored-synthesis', upstream Microsoft HAX / Google PAIR; c61b896 body 'three carried-over skills'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E41",
+   "from": "res-e2-pack",
+   "to": "res-ledger",
+   "type": "failure",
+   "evidence": "LEDGER.md lines 47-171: seven entries CD-20260909-001..007, each 'resource: e2-benchmark-pack', with human_correction (e2 fetch-upstream, per-condition workspaces, holdout gate, assertion demotion, evaluateOptions.repeat, echo provider, failureReason classifier) and candidate_eval 'e2 self-test #…'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md",
+   "verified": true
+  },
+  {
+   "id": "E42",
+   "from": "res-registry",
+   "to": "res-ledger-008",
+   "type": "failure",
+   "evidence": "LEDGER.md lines 176-191: CD-20260909-008 'publicName had been added … but never added to the schema, which declares additionalProperties:false'; lesson 'a schema that is never executed is documentation, not a contract'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md",
+   "verified": true
+  },
+  {
+   "id": "E43",
+   "from": "res-ledger-008",
+   "to": "res-registry",
+   "type": "promoted",
+   "evidence": "LEDGER.md line 185 human_correction: 'added publicName, status, supersedes, supersededBy and path to the schema … wrote a schema validator into cd.mjs and wired cd:registry into CI'; v0.3.0-alpha.1-WORK-SYSTEM.md line 35: 'The registry schema gained publicName, status, supersedes, supersededBy, path … and is now actually executed by cd:registry'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md",
+   "verified": true
+  },
+  {
+   "id": "E44",
+   "from": "res-claim-guard",
+   "to": "res-ledger-011",
+   "type": "failure",
+   "evidence": "LEDGER.md lines 229-245: CD-20260909-011 resource claim-guard; observed 'a word ban makes the evidence documents unwritable'; correction 'matched claim phrases rather than words'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md",
+   "verified": true
+  },
+  {
+   "id": "E45",
+   "from": "res-ledger-011",
+   "to": "res-e2-ci-guard",
+   "type": "failure",
+   "evidence": "LEDGER.md lines 247-262: CD-20260909-012 resource e2-ci-guard: 'exactly the failure already fixed once in the claim guard, reintroduced in a second guard'; lesson line 262: 'the same guard bug recurred in a second place because the first fix was applied to one guard rather than turned into a rule for all of them'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md",
+   "verified": true,
+   "note": "A recorded non-transfer: the learning from 011 did not reach the second guard before it was built. Recorded as type 'failure' from the earlier learning to the later resource."
+  },
+  {
+   "id": "E46",
+   "from": "res-ledger-012",
+   "to": "res-frame-pe",
+   "type": "reused",
+   "evidence": "docs/frames/2026-09-09-product-experience.md lines 37-40: 'PRIOR LEARNING CD-20260909-012 · a guard must distinguish stating a rule from breaking it · applies to the literal-drift and claim gates this phase adds to the site. CD-20260909-011 · word bans make evidence documents unwritable · the Field Guide must be able to define E2 and \"proven\" without tripping the claim guard.'",
+   "evidence_path": "/home/user/compoundmetrics/docs/frames/2026-09-09-product-experience.md",
+   "verified": true
+  },
+  {
+   "id": "E47",
+   "from": "res-ledger-011",
+   "to": "res-frame-pe",
+   "type": "reused",
+   "evidence": "docs/frames/2026-09-09-product-experience.md lines 39-40 (see E46)",
+   "evidence_path": "/home/user/compoundmetrics/docs/frames/2026-09-09-product-experience.md",
+   "verified": true
+  },
+  {
+   "id": "E48",
+   "from": "res-frame-pe",
+   "to": "res-plan-pe",
+   "type": "created",
+   "evidence": "docs/frames/…product-experience.md line 57: 'NEXT cd-model → docs/plans/2026-09-09-product-experience-ia.md'; docs/plans/2026-09-09-product-experience-ia.md line 3: 'produced with cd-model from the frame of the same date'; both in commit ccc1683 'research: study the design references, frame and model the product experience'",
+   "evidence_path": "/home/user/compoundmetrics/docs/plans/2026-09-09-product-experience-ia.md",
+   "verified": true
+  },
+  {
+   "id": "E49",
+   "from": "tool-24",
+   "to": "res-site-check",
+   "type": "created",
+   "evidence": "compoundmetrics 921d751 'checks: site:check, CI, guards widened to src, and one learning kept' adds scripts/site-check.mjs (287 lines); package.json lines 27-28 'site:check', 'site:check:static'; .github/workflows/ci.yml line 55 'npm run site:check:static'",
+   "evidence_path": "/home/user/compoundmetrics/scripts/site-check.mjs",
+   "verified": true
+  },
+  {
+   "id": "E50",
+   "from": "res-site-check",
+   "to": "res-ledger-013",
+   "type": "failure",
+   "evidence": "LEDGER.md lines 265-280: CD-20260909-013, resource site-check, resource_version 0.3.0-alpha.1, observed 'nine serious color-contrast violations on /project that vanished a second later — axe measured timeline markers mid-fade (opacity 0.35 → 1, staggered up to 1 s); a second batch of \"requestfailed\" came from Link prefetches aborted on page close'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/learning/LEDGER.md",
+   "verified": true
+  },
+  {
+   "id": "E51",
+   "from": "res-ledger-013",
+   "to": "res-solution-axe",
+   "type": "promoted",
+   "evidence": "LEDGER.md line 280: 'recorded as docs/solutions/2026-09-09-axe-contrast-during-entrance-animation.md'; solution frontmatter lines 1-11 (id CD-SOL-20260909-01, signals [\"color-contrast\", \"axe.run\", \"animation-delay\", \"opacity: 0.35\", \"requestfailed\", \"ERR_ABORTED\"]); both files added in the same commit 921d751",
+   "evidence_path": "/home/user/compoundmetrics/docs/solutions/2026-09-09-axe-contrast-during-entrance-animation.md",
+   "verified": true
+  },
+  {
+   "id": "E52",
+   "from": "res-solution-axe",
+   "to": "res-site-check-wait-rule",
+   "type": "promoted",
+   "evidence": "solution doc lines 21-23 '## The rule — An automated accessibility check is a measurement of the page at rest. Wait for entrance animations to finish … and treat an aborted prefetch as noise'; lines 25-27 '## The fix that was applied — scripts/site-check.mjs waits 1.6 s after networkidle before injecting axe, and ignores requestfailed events whose error is ERR_ABORTED'",
+   "evidence_path": "/home/user/compoundmetrics/docs/solutions/2026-09-09-axe-contrast-during-entrance-animation.md",
+   "verified": true
+  },
+  {
+   "id": "E53",
+   "from": "res-site-check-wait-rule",
+   "to": "res-site-check",
+   "type": "reused",
+   "evidence": "scripts/site-check.mjs line 208: 'await page.waitForTimeout(1600); // entrance animations (timeline rail, marker settle) end; axe measures the page at rest'; line 189: 'if (why.includes(\"ERR_ABORTED\")) return; // a Link prefetch cancelled by navigation or close, not a broken asset'",
+   "evidence_path": "/home/user/compoundmetrics/scripts/site-check.mjs",
+   "verified": true,
+   "note": "Rule and reuse land in the same commit (921d751) inside the same tool; the reuse is in the resource that produced the failure, not in a later tool."
+  },
+  {
+   "id": "E54",
+   "from": "res-discoverability-contract",
+   "to": "res-solution-axe",
+   "type": "reused",
+   "evidence": "DISCOVERABILITY-CONTRACT.md line 11: 'A file under <root>/solutions/ is discoverable only if it carries this frontmatter. cd-compound writes it'; solution frontmatter lines 1-11 carries id/areas/concepts/applies_to/signals/supersedes/status; PRODUCT-EXPERIENCE-REFERENCES.md line 109: 'a durable learning … which cd discover surfaces for a different later context'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/DISCOVERABILITY-CONTRACT.md",
+   "verified": true
+  },
+  {
+   "id": "E55",
+   "from": "res-site-check-wait-rule",
+   "to": "res-case-study-deterministic",
+   "type": "reused",
+   "evidence": "case-study/scripts/audit-deterministic.mjs line 144 waits 2000 ms after load before axeRun (line 146); capture.mjs line 93 ignores requestfailed whose errorText matches ERR_ABORTED. Neither file cites CD-20260909-013 or the solution document; no comment states the rule.",
+   "evidence_path": "/home/user/compoundmetrics/case-study/scripts/audit-deterministic.mjs",
+   "verified": false,
+   "note": "The same behaviour is present in later work, but without attribution it cannot be distinguished from an independent choice. Not inferred."
+  },
+  {
+   "id": "E56",
+   "from": "ext-lifeline",
+   "to": "res-processo-timeline",
+   "type": "informed",
+   "evidence": "processo 6692884 2026-09-08 'Add lifeline boilerplate with the Pitang process timeline' body: 'Bring in the evilrabbit/lifeline boilerplate and replace its demo timeline with the process flow'; LICENSE at 6692884: 'MIT License — Copyright (c) 2026 Evil Rabbit'; README.md line 9 at 6692884: 'Built on the Lifeline boilerplate by Evil Rabbit'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/processo",
+   "verified": true,
+   "note": "This is a boilerplate copy under MIT (more than inspiration); recorded as 'informed' because external nodes carry only that type. Attribution file: LICENSE + README at 6692884."
+  },
+  {
+   "id": "E57",
+   "from": "tool-23",
+   "to": "res-processo-timeline",
+   "type": "created",
+   "evidence": "processo 6692884: lib/lifeline-processo.ts, app/page.tsx, app/embed/page.tsx; 28e53d1 merge of claude/lifeline-boilerplate-timeline-asj1xa",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/processo",
+   "verified": true
+  },
+  {
+   "id": "E58",
+   "from": "ext-lifeline",
+   "to": "res-geist-timeline",
+   "type": "informed",
+   "evidence": "geistlabsds 28e765d 2026-09-08 'Pesquisa: linha do tempo como app separado sobre o Lifeline' body: 'O boilerplate é o Lifeline, de Evil Rabbit (MIT, licença incluída). Sobre ele, quatro ajustes marcados no código … O conteúdo fica em lib/lifeline-pesquisa.ts'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/geistlabsds",
+   "verified": true,
+   "note": "Boilerplate copy under MIT with the licence included (per commit body). Recorded as 'informed' by the external-node rule."
+  },
+  {
+   "id": "E59",
+   "from": "tool-21",
+   "to": "res-geist-timeline",
+   "type": "created",
+   "evidence": "geistlabsds 28e765d 2026-09-08 (timeline/ app, Vercel project lab-design-timeline)",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/geistlabsds",
+   "verified": true
+  },
+  {
+   "id": "E60",
+   "from": "ext-lifeline",
+   "to": "res-pe-references",
+   "type": "informed",
+   "evidence": "PRODUCT-EXPERIENCE-REFERENCES.md line 12 (evilrabbit/lifeline, commit 8ddbb3d…, MIT © 2026 Evil Rabbit, 'The interaction model is adapted; the implementation is not imported'), lines 35-51 (mechanisms observed, ADAPT/SIMPLIFY/REJECT decisions, Attribution); SOURCES.md lines 64-66; NOTICE lines 36-52",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/research/PRODUCT-EXPERIENCE-REFERENCES.md",
+   "verified": true
+  },
+  {
+   "id": "E61",
+   "from": "res-pe-references",
+   "to": "res-timeline-component",
+   "type": "informed",
+   "evidence": "src/components/Timeline.tsx lines 8-13 docblock: 'One rail, six markers, one panel. Horizontal on desktop, vertical on mobile … The rail draws in once and the markers settle from muted to full … Interaction model adapted from Evil Rabbit's Lifeline (MIT); the implementation is this file.'; NOTICE lines 45-50 name the same four adapted mechanisms; file added in 2a4f1e6 after ccc1683 (references study)",
+   "evidence_path": "/home/user/compoundmetrics/src/components/Timeline.tsx",
+   "verified": true
+  },
+  {
+   "id": "E62",
+   "from": "tool-23",
+   "to": "res-timeline-component",
+   "type": "reused",
+   "evidence": "CHRONOLOGY.md line 43 claims 'Evil Rabbit Lifeline (MIT) → processo → the product-experience timeline interaction in compoundmetrics'. No file in compoundmetrics outside case-study/ mentions processo (grep over *.md, *.json, *.ts, *.tsx, *.css). Timeline.tsx line 12, NOTICE lines 45-50, SOURCES.md line 66 and PRODUCT-EXPERIENCE-REFERENCES.md line 12 attribute the interaction model directly to evilrabbit/lifeline at 8ddbb3d, studied read-only on 2026-09-09.",
+   "evidence_path": "/home/user/compoundmetrics/src/components/Timeline.tsx",
+   "verified": false,
+   "note": "The processo link in this chain is not shown by any source. Lifeline reached compoundmetrics directly (E60-E61); processo and geistlabsds are sibling adopters of the same upstream, not intermediaries."
+  },
+  {
+   "id": "E63",
+   "from": "ext-every",
+   "to": "res-every-snapshot",
+   "type": "informed",
+   "evidence": "EVERY-ARCHITECTURE-SNAPSHOT.md lines 5-12 (repository EveryInc/compound-engineering-plugin, commit b36047e1…, MIT © 2025 Every) and decision table lines 86-93 (mechanisms 1-8 ADOPT); SOURCES.md line 60; NOTICE line 64",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/research/EVERY-ARCHITECTURE-SNAPSHOT.md",
+   "verified": true
+  },
+  {
+   "id": "E64-cd-frame",
+   "from": "ext-every",
+   "to": "res-cd-frame",
+   "type": "informed",
+   "evidence": "resource-registry.json from line 17: id cd-frame, provenance 'composed-and-authored, upstream-informed', upstream ['Compound Design authored resource', 'Every Compound Engineering (mechanisms, MIT)']; SOURCES.md line 60 lists the mechanisms informed",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E64-cd-build",
+   "from": "ext-every",
+   "to": "res-cd-build",
+   "type": "informed",
+   "evidence": "resource-registry.json from line 81: id cd-build, provenance 'composed-and-authored, upstream-informed', upstream ['Compound Design authored resource', 'Every Compound Engineering (mechanisms, MIT)']; SOURCES.md line 60 lists the mechanisms informed",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E64-cd-verify",
+   "from": "ext-every",
+   "to": "res-cd-verify",
+   "type": "informed",
+   "evidence": "resource-registry.json from line 112: id cd-verify, provenance 'composed-and-authored, upstream-informed', upstream ['Compound Design authored resource', 'Every Compound Engineering (mechanisms, MIT)']; SOURCES.md line 60 lists the mechanisms informed",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E64-cd-compound",
+   "from": "ext-every",
+   "to": "res-cd-compound",
+   "type": "informed",
+   "evidence": "resource-registry.json from line 175: id cd-compound, provenance 'composed-and-authored, upstream-informed', upstream ['Compound Design authored resource', 'Every Compound Engineering (mechanisms, MIT)']; SOURCES.md line 60 lists the mechanisms informed",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E64-cd-strategy",
+   "from": "ext-every",
+   "to": "res-cd-strategy",
+   "type": "informed",
+   "evidence": "resource-registry.json from line 207: id cd-strategy, provenance 'composed-and-authored, upstream-informed', upstream ['Compound Design authored resource', 'Every Compound Engineering (mechanisms, MIT)']; SOURCES.md line 60 lists the mechanisms informed",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E64-cd-compound-refresh",
+   "from": "ext-every",
+   "to": "res-cd-compound-refresh",
+   "type": "informed",
+   "evidence": "resource-registry.json from line 239: id cd-compound-refresh, provenance 'composed-and-authored, upstream-informed', upstream ['Compound Design authored resource', 'Every Compound Engineering (mechanisms, MIT)']; SOURCES.md line 60 lists the mechanisms informed",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E64-cd-setup",
+   "from": "ext-every",
+   "to": "res-cd-setup",
+   "type": "informed",
+   "evidence": "resource-registry.json from line 271: id cd-setup, provenance 'composed-and-authored, upstream-informed', upstream ['Compound Design authored resource', 'Every Compound Engineering (mechanisms, MIT)']; SOURCES.md line 60 lists the mechanisms informed",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E64-cd-handoff",
+   "from": "ext-every",
+   "to": "res-cd-handoff",
+   "type": "informed",
+   "evidence": "resource-registry.json from line 303: id cd-handoff, provenance 'composed-and-authored, upstream-informed', upstream ['Compound Design authored resource', 'Every Compound Engineering (mechanisms, MIT)']; SOURCES.md line 60 lists the mechanisms informed",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E65",
+   "from": "ext-every",
+   "to": "res-compound-design-agent",
+   "type": "informed",
+   "evidence": "resource-registry.json from line 497: id compound-design, upstream includes 'Every Compound Engineering (mechanisms, MIT)'; supersedes 'cd' (line 524)",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E66",
+   "from": "ext-every",
+   "to": "res-learning-curator",
+   "type": "informed",
+   "evidence": "resource-registry.json from line 642: id learning-curator, upstream includes 'Every Compound Engineering (mechanisms, MIT)'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E67",
+   "from": "res-every-snapshot",
+   "to": "res-cd-compound",
+   "type": "informed",
+   "evidence": "EVERY-ARCHITECTURE-SNAPSHOT.md line 58: 'ce-compound writes one learning per run into <root>/solutions/, gated by an eligibility test …'; line 93 mechanism 8 'Durable-learning eligibility bar; one learning per run — ADOPT'; skills/cd-compound/SKILL.md lines 27, 45, 68: 'writing one learning per run under <root>/solutions/', 'Effort spent and diff size do not establish durability'",
+   "evidence_path": "/home/user/compoundmetrics/skills/cd-compound/SKILL.md",
+   "verified": true
+  },
+  {
+   "id": "E68",
+   "from": "ext-jakub",
+   "to": "res-cd-interface-review",
+   "type": "informed",
+   "evidence": "SOURCES.md line 58: 'Informed the escalation classes, the cheapest-fix ordering and the \"a check you cannot run is not verified\" rule now expressed in skills/cd-interface-review/SKILL.md'; SKILL.md lines 83-85 '## Provenance … adapted from the MIT-licensed interface skills of Jakub Krehel'; registry lines 335-366 (provenance 'authored, upstream-informed heuristics', upstream 'jakubkrehel/skills (heuristics, MIT)')",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/SOURCES.md",
+   "verified": true
+  },
+  {
+   "id": "E69",
+   "from": "ext-emil",
+   "to": "res-cd-motion-review",
+   "type": "informed",
+   "evidence": "SOURCES.md line 59: 'Informed the motion decision order and the delete-first remediation ordering in skills/cd-motion-review/SKILL.md'; SKILL.md lines 81-83 '## Provenance … adapted from the MIT-licensed design-engineering skills of Emil Kowalski'; registry lines 369-398",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/SOURCES.md",
+   "verified": true
+  },
+  {
+   "id": "E70",
+   "from": "res-legacy-jakub",
+   "to": "res-cd-interface-review",
+   "type": "superseded",
+   "evidence": "registry line 366 supersedes 'jakub', line 700 supersededBy 'cd-interface-review'; v0.3.0-alpha.1-WORK-SYSTEM.md line 44 'jakub → cd-interface-review + interface-reviewer — rewritten; re-earned E1, inherited nothing'; MIGRATION-v0.2-to-v0.3.md line 9",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E71",
+   "from": "res-legacy-jakub",
+   "to": "res-interface-reviewer",
+   "type": "superseded",
+   "evidence": "registry line 554 supersedes 'jakub' (interface-reviewer); release doc line 44; MIGRATION line 9",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E72",
+   "from": "res-legacy-emi",
+   "to": "res-cd-motion-review",
+   "type": "superseded",
+   "evidence": "registry line 398 supersedes 'emi', line 730 supersededBy 'cd-motion-review'; release doc line 45; MIGRATION line 10",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E73",
+   "from": "res-legacy-emi",
+   "to": "res-motion-reviewer",
+   "type": "superseded",
+   "evidence": "registry line 583 supersedes 'emi' (motion-reviewer); release doc line 45",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E74",
+   "from": "res-legacy-cd",
+   "to": "res-compound-design-agent",
+   "type": "superseded",
+   "evidence": "registry line 524 supersedes 'cd', line 763 supersededBy 'compound-design'; release doc line 46 'cd → compound-design agent — rewritten; re-earned E1'; MIGRATION line 11",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/registry/resource-registry.json",
+   "verified": true
+  },
+  {
+   "id": "E75",
+   "from": "res-legacy-jakub",
+   "to": "res-e2-legacy-manifest",
+   "type": "reused",
+   "evidence": "RESOURCE-MANIFEST.json: baseline_commit 5fc74f11…, byte_equivalent_all true, files['agents/jakub.md'] sha256 2b13502d… == baseline .claude/agents/jakub.md; MIGRATION line 33 '.claude/agents/*.md → legacy-resources/v0.2/agents/ — superseded resources, retained as frozen benchmark inputs'; LEDGER CD-20260909-009",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/quality/e2/legacy-resources/v0.2/RESOURCE-MANIFEST.json",
+   "verified": true
+  },
+  {
+   "id": "E76",
+   "from": "res-legacy-emi",
+   "to": "res-e2-legacy-manifest",
+   "type": "reused",
+   "evidence": "RESOURCE-MANIFEST.json files entry agents/emi.md (byte_equivalent true to baseline 5fc74f1); MIGRATION line 33",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/quality/e2/legacy-resources/v0.2/RESOURCE-MANIFEST.json",
+   "verified": true
+  },
+  {
+   "id": "E77",
+   "from": "res-legacy-cd",
+   "to": "res-e2-legacy-manifest",
+   "type": "reused",
+   "evidence": "RESOURCE-MANIFEST.json files entry agents/cd.md (byte_equivalent true to baseline 5fc74f1); MIGRATION line 33",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/quality/e2/legacy-resources/v0.2/RESOURCE-MANIFEST.json",
+   "verified": true
+  },
+  {
+   "id": "E78",
+   "from": "res-e2-pack",
+   "to": "res-e2-candidate-lane",
+   "type": "reused",
+   "evidence": "CANDIDATE-LANE.md lines 1-9: 'Task sets, fixtures, ground truth, rubrics, holdouts, gates and the primary decision rules are reused unchanged; this lane only adds a condition'; release doc line 30",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/quality/e2/candidate-v0.3/CANDIDATE-LANE.md",
+   "verified": true
+  },
+  {
+   "id": "E79",
+   "from": "tool-24",
+   "to": "res-v03-contract-eval",
+   "type": "eval-created",
+   "evidence": "c61b896 body: 'compound-design/quality/releases/v0.3-contract-eval.json — 26 checks, all groups passed'; file present",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/quality/releases/v0.3-contract-eval.json",
+   "verified": true
+  },
+  {
+   "id": "E80-res-cd-interface-review",
+   "from": "res-v03-contract-eval",
+   "to": "res-cd-interface-review",
+   "type": "promoted",
+   "evidence": "c61b896 'feat(v0.3): promote v0.3 resources E0 → E1 on the contract suite' body: 'Eighteen resources move from E0 to E1 on the strength of that recorded artifact, in a commit separate from the one that created them'; v0.3.0-alpha.1-WORK-SYSTEM.md line 57 and line 109",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md",
+   "verified": true
+  },
+  {
+   "id": "E80-res-cd-motion-review",
+   "from": "res-v03-contract-eval",
+   "to": "res-cd-motion-review",
+   "type": "promoted",
+   "evidence": "c61b896 'feat(v0.3): promote v0.3 resources E0 → E1 on the contract suite' body: 'Eighteen resources move from E0 to E1 on the strength of that recorded artifact, in a commit separate from the one that created them'; v0.3.0-alpha.1-WORK-SYSTEM.md line 57 and line 109",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md",
+   "verified": true
+  },
+  {
+   "id": "E80-res-compound-design-agent",
+   "from": "res-v03-contract-eval",
+   "to": "res-compound-design-agent",
+   "type": "promoted",
+   "evidence": "c61b896 'feat(v0.3): promote v0.3 resources E0 → E1 on the contract suite' body: 'Eighteen resources move from E0 to E1 on the strength of that recorded artifact, in a commit separate from the one that created them'; v0.3.0-alpha.1-WORK-SYSTEM.md line 57 and line 109",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md",
+   "verified": true
+  },
+  {
+   "id": "E80-res-interface-reviewer",
+   "from": "res-v03-contract-eval",
+   "to": "res-interface-reviewer",
+   "type": "promoted",
+   "evidence": "c61b896 'feat(v0.3): promote v0.3 resources E0 → E1 on the contract suite' body: 'Eighteen resources move from E0 to E1 on the strength of that recorded artifact, in a commit separate from the one that created them'; v0.3.0-alpha.1-WORK-SYSTEM.md line 57 and line 109",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md",
+   "verified": true
+  },
+  {
+   "id": "E80-res-motion-reviewer",
+   "from": "res-v03-contract-eval",
+   "to": "res-motion-reviewer",
+   "type": "promoted",
+   "evidence": "c61b896 'feat(v0.3): promote v0.3 resources E0 → E1 on the contract suite' body: 'Eighteen resources move from E0 to E1 on the strength of that recorded artifact, in a commit separate from the one that created them'; v0.3.0-alpha.1-WORK-SYSTEM.md line 57 and line 109",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md",
+   "verified": true
+  },
+  {
+   "id": "E80-res-learning-curator",
+   "from": "res-v03-contract-eval",
+   "to": "res-learning-curator",
+   "type": "promoted",
+   "evidence": "c61b896 'feat(v0.3): promote v0.3 resources E0 → E1 on the contract suite' body: 'Eighteen resources move from E0 to E1 on the strength of that recorded artifact, in a commit separate from the one that created them'; v0.3.0-alpha.1-WORK-SYSTEM.md line 57 and line 109",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md",
+   "verified": true
+  },
+  {
+   "id": "E80-res-cd-frame",
+   "from": "res-v03-contract-eval",
+   "to": "res-cd-frame",
+   "type": "promoted",
+   "evidence": "c61b896 'feat(v0.3): promote v0.3 resources E0 → E1 on the contract suite' body: 'Eighteen resources move from E0 to E1 on the strength of that recorded artifact, in a commit separate from the one that created them'; v0.3.0-alpha.1-WORK-SYSTEM.md line 57 and line 109",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md",
+   "verified": true
+  },
+  {
+   "id": "E80-res-cd-model",
+   "from": "res-v03-contract-eval",
+   "to": "res-cd-model",
+   "type": "promoted",
+   "evidence": "c61b896 'feat(v0.3): promote v0.3 resources E0 → E1 on the contract suite' body: 'Eighteen resources move from E0 to E1 on the strength of that recorded artifact, in a commit separate from the one that created them'; v0.3.0-alpha.1-WORK-SYSTEM.md line 57 and line 109",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md",
+   "verified": true
+  },
+  {
+   "id": "E80-res-cd-compound",
+   "from": "res-v03-contract-eval",
+   "to": "res-cd-compound",
+   "type": "promoted",
+   "evidence": "c61b896 'feat(v0.3): promote v0.3 resources E0 → E1 on the contract suite' body: 'Eighteen resources move from E0 to E1 on the strength of that recorded artifact, in a commit separate from the one that created them'; v0.3.0-alpha.1-WORK-SYSTEM.md line 57 and line 109",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md",
+   "verified": true
+  },
+  {
+   "id": "E81",
+   "from": "tool-24",
+   "to": "res-finding-contract",
+   "type": "created",
+   "evidence": "compound-design/FINDING-CONTRACT.md added in 7c31d66 'feat(v0.3): work system, native plugin architecture, legacy migration'",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/FINDING-CONTRACT.md",
+   "verified": true
+  },
+  {
+   "id": "E82",
+   "from": "tool-24",
+   "to": "res-discoverability-contract",
+   "type": "created",
+   "evidence": "compound-design/DISCOVERABILITY-CONTRACT.md added in 7c31d66; release doc line 22",
+   "evidence_path": "/home/user/compoundmetrics/compound-design/DISCOVERABILITY-CONTRACT.md",
+   "verified": true
+  },
+  {
+   "id": "E83",
+   "from": "tool-18",
+   "to": "res-studio-ds-registry",
+   "type": "created",
+   "evidence": "studio-ds 3ae48cd 2026-08-05 'feat(registry): catalog pipeline + Studio signature theme [F1]' body: 'catalog/ is the single author-time surface; registry.json is generated'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/studio-ds",
+   "verified": true
+  },
+  {
+   "id": "E84",
+   "from": "res-tweakcn-themes",
+   "to": "tool-18",
+   "type": "reused",
+   "evidence": "studio-ds 1bc295c 2026-08-05 'feat(registry): 36 tweakcn themes + attribution [F2]' body: 'port tweakcn presets (Apache-2.0) as registry:theme items; NOTICE with tweakcn attribution'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/studio-ds",
+   "verified": true
+  },
+  {
+   "id": "E85",
+   "from": "res-shadcn-registry-template",
+   "to": "tool-18",
+   "type": "reused",
+   "evidence": "studio-ds 88ad32e 2026-08-05 'chore: bootstrap Studio DS from registry-template (npm, registry build chain, gitignore /public/r)'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/studio-ds",
+   "verified": true
+  },
+  {
+   "id": "E86",
+   "from": "tool-13",
+   "to": "res-de-guide-kb",
+   "type": "created",
+   "evidence": "design-engineering-guide 3b95bae 2026-07-20 'Base de conhecimento: migração UX/UI Designer → Design Engineer'; 0f9f480 'Adiciona AGENTS.md/CLAUDE.md como contexto para agentes'",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/design-engineering-guide",
+   "verified": true
+  },
+  {
+   "id": "E87",
+   "from": "tool-20",
+   "to": "tool-21",
+   "type": "reused",
+   "evidence": "geistlabsds commit subjects 225610e / ef68280 'Supernova: componentes, blocos, temas, acervo, guia e roteiro' and 0eba833 'Copy na voz do Supernova' (2026-09-08). Commit bodies are empty and no file was read that names the supernova-catalogo repository or its tokens.",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/geistlabsds",
+   "verified": false,
+   "note": "Subjects suggest Supernova material was carried into geistlabsds; nothing read proves what was reused or from where."
+  },
+  {
+   "id": "E88",
+   "from": "ext-brad-frost",
+   "to": "tool-20",
+   "type": "informed",
+   "evidence": "supernova-catalogo README.md line 43 '| Organização | atomic design com direção de dependência testada |' and src/design/atomic-direction.test.ts line 7 'Atomic design só é contrato se a direção das dependências for verificável.' The term is used; Brad Frost is not named anywhere in any readable repository (grep 'brad frost' over compoundmetrics, compound-labs-design and all .research/history repos: 0 hits).",
+   "evidence_path": "/home/user/compoundmetrics/.research/history/supernova-catalogo",
+   "verified": false,
+   "note": "No attribution file. The brief's external node exists only as an unattributed term."
+  },
+  {
+   "id": "E89",
+   "from": "res-sdu-solutions",
+   "to": "tool-24",
+   "type": "informed",
+   "evidence": "studio-dev-ui 8265803 (2026-08-13) introduced docs/solutions/ 'one note per problem actually solved'; compoundmetrics docs/solutions/README.md (7c31d66) describes the same shape. No compoundmetrics file attributes the pattern to studio-dev-ui; SOURCES.md line 60, EVERY-ARCHITECTURE-SNAPSHOT.md lines 22/48/58/93 and registry cd-compound provenance attribute it to Every's <root>/solutions/ mechanism.",
+   "evidence_path": "/home/user/compoundmetrics/docs/solutions/README.md",
+   "verified": false,
+   "note": "A plausible internal precedent with no attribution. The documented lineage points to Every (E63, E67), not to studio-dev-ui."
+  },
+  {
+   "id": "E90",
+   "from": "res-cld-skills",
+   "to": "res-legacy-jakub",
+   "type": "informed",
+   "evidence": "CHRONOLOGY.md line 44 chains 'Jakub/Emil → compound-labs-design skills → compoundmetrics legacy resources'. The second arrow has no source: supernova-catalogo 8642462 vendors jakubkrehel/skills directly as a submodule; legacy jakub.md line 9 names that vendored checkout; no file in supernova-catalogo or compoundmetrics references compound-labs-design (grep 'compound-labs' in both repos' logs: 0 hits).",
+   "evidence_path": "/home/user/compound-labs-design",
+   "verified": false,
+   "note": "Both descend from the same upstream (E05, E24) independently. The chronology's middle hop is not supported."
+  }
+ ],
+ "end_to_end_chains": [
+  {
+   "name": "Site check failure → ledger CD-20260909-013 → solution doc → wait-before-axe rule → reused in scripts/site-check.mjs → discoverable via the contract",
+   "edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54"
+   ],
+   "fully_verified": true,
+   "note": "Every link is shown by file content (LEDGER.md 265-280; solution doc 21-27; site-check.mjs 189, 208; DISCOVERABILITY-CONTRACT.md 11). Caveat recorded on E53: the reuse is inside the same tool and commit (921d751); the only later work with the same behaviour (case-study scripts, E55) does not cite the rule, so reuse in a *later tool* is not shown."
+  },
+  {
+   "name": "compound-labs-design /audit checklist (54 items) → frozen rubric (instrument A); cl-audit playbook → source/craft instrument B",
+   "edges": [
+    "E02",
+    "E07",
+    "E03",
+    "E04",
+    "E08"
+   ],
+   "fully_verified": true,
+   "note": "Two verified branches. The chronology's single chain '/audit → cl-audit → rubric' is NOT supported as stated: E09 (the /audit → cl-audit hop) is unverified because cl-audit predates the /audit page and neither references the other; the benchmark froze the /audit page as instrument A and uses cl-audit separately as instrument B."
+  },
+  {
+   "name": "Evil Rabbit Lifeline → compoundmetrics Timeline component (direct)",
+   "edges": [
+    "E60",
+    "E61"
+   ],
+   "fully_verified": true,
+   "note": "Attributed in NOTICE, SOURCES.md, PRODUCT-EXPERIENCE-REFERENCES.md and the component docblock."
+  },
+  {
+   "name": "Evil Rabbit Lifeline → processo → compoundmetrics Timeline (as claimed in CHRONOLOGY.md line 43)",
+   "edges": [
+    "E56",
+    "E57",
+    "E62"
+   ],
+   "fully_verified": false,
+   "note": "E56/E57 verified (processo is a Lifeline boilerplate copy under MIT). E62 unverified: nothing in compoundmetrics names processo; the attribution goes straight to evilrabbit/lifeline @8ddbb3d."
+  },
+  {
+   "name": "Jakub / Emil upstream → v0.2 wrapper agents (supernova-catalogo) → migrated byte-identical → superseded by v0.3 rewrites → promoted E0→E1 → legacy copies pinned for E2",
+   "edges": [
+    "E24",
+    "E25",
+    "E32",
+    "E33",
+    "E70",
+    "E72",
+    "E68",
+    "E69",
+    "E80-res-cd-interface-review",
+    "E80-res-cd-motion-review",
+    "E75",
+    "E76"
+   ],
+   "fully_verified": true
+  },
+  {
+   "name": "Registry violated its own schema → ledger CD-20260909-008 → schema fields + validator wired into CI",
+   "edges": [
+    "E42",
+    "E43"
+   ],
+   "fully_verified": true
+  },
+  {
+   "name": "Ledger CD-20260909-011/012 (guard learnings) → reused as PRIOR LEARNING in the product-experience frame → plan",
+   "edges": [
+    "E44",
+    "E45",
+    "E46",
+    "E47",
+    "E48"
+   ],
+   "fully_verified": true,
+   "note": "E45 records a failure-to-transfer inside the chain (the same bug recurred in a second guard before the learning was generalised)."
+  },
+  {
+   "name": "supernova-catalogo@compound-design-framework → compoundmetrics standalone (v0.2.1) → studio-dev-ui page → compoundmetrics /",
+   "edges": [
+    "E23",
+    "E31",
+    "E35",
+    "E19",
+    "E17",
+    "E20"
+   ],
+   "fully_verified": true,
+   "note": "Migration proven by byte-identical files (LEDGER, three agents, page.tsx, page.module.css) plus NOTICE. The chronology's statement that the migrate commits name the source branch is inaccurate (their bodies are empty)."
+  },
+  {
+   "name": "Every Compound Engineering → architecture snapshot → v0.3 loop skills (cd-compound durable-learning bar)",
+   "edges": [
+    "E63",
+    "E67",
+    "E64-cd-compound"
+   ],
+   "fully_verified": true
+  }
+ ],
+ "none_verified": [
+  {
+   "claim": "v0-era tools (tool-01 … tool-08: v0 Labs, accounting dashboards, storefront, Laudo, form builder, Dashboard Contabilidade, Fino Acabamento, AuditContábil) taught any rule, pattern or resource reused by a later tool",
+   "why": "No repository is readable for any of them; TOOLS-MANIFEST.json lists resources_created [] and resources_reused [] for each; CHRONOLOGY.md marks them NOT CAPTURED. No later file, commit or ledger entry references them.",
+   "tool_ids": [
+    "tool-01",
+    "tool-02",
+    "tool-03",
+    "tool-04",
+    "tool-05",
+    "tool-06",
+    "tool-07",
+    "tool-08"
+   ]
+  },
+  {
+   "claim": "Client / internal projects (tool-10 Agno, tool-11 SESI, tool-14 Ouvidoria, tool-15 NIM, tool-16 Studio Workspace, tool-17 Tramontina, tool-19 Labs Hub, tool-22 Compound Design Academy) transferred anything to the framework",
+   "why": "Repositories not readable (privacy review-required for client work); manifest lists no resources; no readable repository mentions them.",
+   "tool_ids": [
+    "tool-10",
+    "tool-11",
+    "tool-14",
+    "tool-15",
+    "tool-16",
+    "tool-17",
+    "tool-19",
+    "tool-22"
+   ]
+  },
+  {
+   "claim": "design-engineering-guide (tool-13) knowledge base informed any later tool or resource",
+   "why": "Two commits (3b95bae, 0f9f480, 2026-07-20). No later repository or compoundmetrics file references it.",
+   "tool_ids": [
+    "tool-13"
+   ]
+  },
+  {
+   "claim": "studio-ds (tool-18) registry / catalog pipeline was reused by studio-dev-ui, supernova-catalogo or geistlabsds",
+   "why": "grep 'studio-ds' over the three later repositories' logs: 0 hits. Similar shapes (shadcn registry, catalog) are not evidence of transfer.",
+   "tool_ids": [
+    "tool-18"
+   ]
+  },
+  {
+   "claim": "processo (tool-23) is the intermediary between Lifeline and the compoundmetrics Timeline (CHRONOLOGY.md line 43)",
+   "why": "See edge E62. compoundmetrics attributes the interaction model to evilrabbit/lifeline directly; processo is never named outside case-study/.",
+   "edge": "E62"
+  },
+  {
+   "claim": "The /audit checklist produced the cl-audit command (CHRONOLOGY.md line 40)",
+   "why": "See edge E09. cl-audit (d08ec62, 07-13) predates /audit (edbfdd1, 07-16); different category sets (8 vs 9); no cross-reference.",
+   "edge": "E09"
+  },
+  {
+   "claim": "compound-labs-design skills fed the compoundmetrics legacy resources (CHRONOLOGY.md line 44, second arrow)",
+   "why": "See edge E90. The legacy agents were built on a direct jakubkrehel/skills submodule in supernova-catalogo; compound-labs-design is never referenced there.",
+   "edge": "E90"
+  },
+  {
+   "claim": "The /audit page's items come from the compound-design-audit skill in DaniloAmaralUX/skills",
+   "why": "Named by build-audit.mjs, but that repository is not readable here (.research/history/skills is remotion-dev/skills). See edge E10.",
+   "edge": "E10"
+  },
+  {
+   "claim": "The wait-before-axe rule (CD-20260909-013) was reused by the case-study scripts",
+   "why": "Same behaviour present (2000 ms wait before axe; ERR_ABORTED ignored) without any citation. See edge E55.",
+   "edge": "E55"
+  },
+  {
+   "claim": "studio-dev-ui docs/solutions notes (8265803) are the origin of the compoundmetrics docs/solutions pattern",
+   "why": "No attribution; the documented lineage is Every's <root>/solutions/. See edge E89.",
+   "edge": "E89"
+  },
+  {
+   "claim": "Supernova UI tokens / components were reused in geistlabsds",
+   "why": "Commit subjects only; bodies empty; no file read. See edge E87.",
+   "edge": "E87"
+  },
+  {
+   "claim": "Brad Frost's Atomic Design informed any tool with attribution",
+   "why": "The term 'atomic design' appears in supernova-catalogo (README.md line 43, src/design/atomic-direction.test.ts line 7) with no author attribution; 'Brad Frost' appears nowhere. See edge E88.",
+   "edge": "E88"
+  },
+  {
+   "claim": "Canvas UI fork / React Bits code taught a rule that reached Compound Design",
+   "why": "The upstream fork and registry are reused inside studio-dev-ui (E11, E12) and explicitly not carried into compoundmetrics (18ffcf2 body: 'Deliberately not carried over: gallery, Canvas UI, React Bits catalog'). No learning from them is recorded in the ledger or docs/solutions.",
+   "tool_ids": [
+    "tool-12"
+   ]
+  }
+ ],
+ "counts": {
+  "nodes": 80,
+  "edges": 105,
+  "verified_edges": 97,
+  "unverified_edges": 8
+ }
+}

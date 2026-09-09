@@ -6,6 +6,11 @@
   "type": "module",
   "scripts": {
     "studio": "remotion studio src/index.ts",
+    "sync": "node scripts/sync-data.mjs",
+    "captions": "node scripts/write-captions.mjs",
+    "check": "tsc --noEmit && node scripts/check-no-literal-numbers.mjs",
+    "check:frame": "remotion still src/index.ts CompoundEvolution out/check-frame.png --frame=60",
+    "render:all": "bash scripts/render-all.sh",
     "render:master": "remotion render src/index.ts CompoundEvolution out/compound-design-master.mp4",
     "render:vertical": "remotion render src/index.ts CompoundEvolutionVertical out/compound-design-vertical.mp4",
     "render:teaser": "remotion render src/index.ts CompoundTeaser out/compound-design-teaser.mp4",
