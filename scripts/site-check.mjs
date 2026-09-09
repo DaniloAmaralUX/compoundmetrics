@@ -50,6 +50,7 @@ const routes = [
   "/resources",
   "/evidence",
   "/learn",
+  "/case-study",
   ...registry.resources.filter((r) => r.status === "active").map((r) => `/resources/${r.id}`),
   ...conceptIds.map((id) => `/learn/${id}`),
 ];
@@ -178,7 +179,7 @@ const base = `http://127.0.0.1:${server.address().port}`;
 const browser = await chromium.launch({ executablePath, headless: true, args: ["--no-sandbox"] });
 
 const VIEWPORTS = [1440, 1280, 820, 390, 320];
-const sample = ["/", "/how-it-works", "/lab", "/project", "/resources", "/resources/cd-interface-review", "/evidence", "/learn", "/learn/holdout"];
+const sample = ["/", "/how-it-works", "/lab", "/project", "/resources", "/resources/cd-interface-review", "/evidence", "/learn", "/learn/holdout", "/case-study"];
 for (const route of sample) {
   let clean = true;
   for (const w of VIEWPORTS) {

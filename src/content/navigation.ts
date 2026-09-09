@@ -13,6 +13,7 @@ export const navigation: NavItem[] = [
   { href: "/resources", label: "Resources", outcome: "I understand what capability has been encoded." },
   { href: "/evidence", label: "Evidence", outcome: "I understand what has and hasn't been demonstrated." },
   { href: "/learn", label: "Field Guide", outcome: "I can explain the vocabulary." },
+  { href: "/case-study", label: "Case Study", outcome: "I can tell which line of the story the record supports." },
 ];
 
 export const canonical = {

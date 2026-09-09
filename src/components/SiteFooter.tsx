@@ -20,6 +20,7 @@ export function SiteFooter() {
         <div className={styles.footerLinks}>
           <Link href="/evidence">Evidence</Link>
           <Link href="/learn">Field Guide</Link>
+          <Link href="/case-study">Case Study</Link>
           <a href={REPO} rel="noopener">
             Repository
           </a>

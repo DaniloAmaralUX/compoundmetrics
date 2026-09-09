@@ -9,7 +9,7 @@
   "stated_count_in_brief": 17,
   "tool_candidates": 24,
   "verified_by_repository": 8,
-  "reconciliation": "The brief says 17 tools. The account's metadata supports 24 tool candidates (after merging duplicate Vercel projects and excluding a template and an unnamed project). Nine are verified against a readable repository; the rest are inferred from Vercel project names and dates and are marked medium or low confidence. The two counts are not reconciled here — the author should confirm which candidates count as tools; nothing was removed to reach 17.",
+  "reconciliation": "The brief says 17 tools. The account's metadata supports 24 tool candidates (after merging duplicate Vercel projects and excluding a template and an unnamed project). Eight are verified against a readable repository; the rest are inferred from Vercel project names and dates and are marked medium or low confidence. The two counts are not reconciled here — the author should confirm which candidates count as tools; nothing was removed to reach 17.",
   "excluded": [
     {
       "project": "nextjs-boilerplate",

@@ -126,6 +126,11 @@ export function Markdown({ text }: { text: string }) {
   return <div className={styles.md}>{out}</div>;
 }
 
+/** One line of the same inline subset (bold, inline code, links), for content rendered outside a Markdown block. */
+export function Inline({ text }: { text: string }) {
+  return <>{inline(text)}</>;
+}
+
 function inline(text: string): ReactNode[] {
   const nodes: ReactNode[] = [];
   const re = /(`[^`]+`)|(\*\*[^*]+\*\*)|(\[[^\]]+\]\([^)]+\))/g;
