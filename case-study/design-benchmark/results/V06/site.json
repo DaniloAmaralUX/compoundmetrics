@@ -7,12 +7,12 @@
  "source_sha": "da0840cde632a6e2fc99a23371097d828211eba2",
  "date_range": "2026-09-07 → 2026-09-08",
  "overall": {
-  "PASS": 10,
-  "FAIL": 12,
-  "N/A": 1,
-  "NOT_VERIFIED": 31,
-  "score": 45.5,
-  "coverage": 41.5
+  "PASS": 28,
+  "FAIL": 15,
+  "N/A": 5,
+  "NOT_VERIFIED": 6,
+  "score": 65.1,
+  "coverage": 87.8
  },
  "deterministic_only": {
   "PASS": 10,
@@ -23,117 +23,167 @@
   "coverage": 100
  },
  "judgment_only": {
-  "PASS": 0,
-  "FAIL": 0,
-  "N/A": 0,
-  "NOT_VERIFIED": 31,
-  "score": null,
-  "coverage": 0
+  "PASS": 18,
+  "FAIL": 3,
+  "N/A": 4,
+  "NOT_VERIFIED": 6,
+  "score": 85.7,
+  "coverage": 77.8
  },
  "categories": {
   "fundamentos": {
-   "PASS": 0,
-   "FAIL": 0,
+   "PASS": 4,
+   "FAIL": 1,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": null,
-   "coverage": 0
+   "NOT_VERIFIED": 0,
+   "score": 80,
+   "coverage": 100
   },
   "hierarquia": {
-   "PASS": 1,
+   "PASS": 6,
    "FAIL": 1,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": 50,
-   "coverage": 28.6
+   "NOT_VERIFIED": 0,
+   "score": 85.7,
+   "coverage": 100
   },
   "estilo": {
-   "PASS": 3,
-   "FAIL": 2,
+   "PASS": 4,
+   "FAIL": 3,
    "N/A": 0,
-   "NOT_VERIFIED": 2,
-   "score": 60,
-   "coverage": 71.4
+   "NOT_VERIFIED": 0,
+   "score": 57.1,
+   "coverage": 100
   },
   "acessibilidade": {
-   "PASS": 2,
+   "PASS": 3,
    "FAIL": 6,
    "N/A": 0,
-   "NOT_VERIFIED": 1,
-   "score": 25,
-   "coverage": 88.9
+   "NOT_VERIFIED": 0,
+   "score": 33.3,
+   "coverage": 100
   },
   "navegacao": {
-   "PASS": 3,
+   "PASS": 5,
    "FAIL": 1,
    "N/A": 0,
-   "NOT_VERIFIED": 2,
-   "score": 75,
-   "coverage": 66.7
+   "NOT_VERIFIED": 0,
+   "score": 83.3,
+   "coverage": 100
   },
   "carga": {
-   "PASS": 1,
+   "PASS": 2,
    "FAIL": 0,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
+   "NOT_VERIFIED": 4,
    "score": 100,
-   "coverage": 16.7
+   "coverage": 33.3
   },
   "onboarding": {
-   "PASS": 0,
+   "PASS": 3,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "N/A": 1,
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "confianca": {
-   "PASS": 0,
+   "PASS": 1,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "N/A": 3,
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "formularios": {
    "PASS": 0,
-   "FAIL": 2,
+   "FAIL": 3,
    "N/A": 1,
-   "NOT_VERIFIED": 3,
+   "NOT_VERIFIED": 2,
    "score": 0,
-   "coverage": 40
+   "coverage": 60
   }
  },
  "items": {
   "fundamentos/jtbd": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/jtbd",
+     "state": "PASS",
+     "reason": "README, CLAUDE.md, AGENTS.md and the docs introduction all open with the same one-sentence statement of what the site is and does (a shadcn-compatible design system whose components install into the user's project via the shadcn CLI).",
+     "evidence_file": "README.md",
+     "quote": "LAB / DESIGN é o design system do LAB / DESIGN: fundamentos, componentes, blocos e temas com prévia real e código que entra no seu projeto pelo CLI do shadcn."
+    }
+   ]
   },
   "fundamentos/macro-bet": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/macro-bet",
+     "state": "FAIL",
+     "reason": "Documentation exists (README, CLAUDE.md, docs intro, guide, roteiro, commit bodies) but none states a product/business bet or hypothesis and ties design decisions to it. Decisions are explained by convention/provenance/tooling, and the strategic context is explicitly deferred to an external repository's memory (supernova-ui .claude/memory) that is not in this worktree. grep for aposta/hipótese returned nothing.",
+     "evidence_file": "README.md",
+     "quote": "O contexto do projeto (pesquisa, decisões, diário) vive na memória interna do repositório `DaniloAmaralUX/supernova-ui`, em `.claude/memory/`."
+    }
+   ]
   },
   "fundamentos/convencao": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "fundamentos/convencao",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "ENTRY uses a conventional top nav, header search with Ctrl+K, hero with install command and two CTAs, then a card grid; DISCOVERY is the standard sidebar / content / 'On This Page' docs layout with Copy Page and prev/next controls. No novel patterns beyond familiar docs-site conventions.",
+     "evidence_file": "ENTRY-desktop-first-screen.png; DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "fundamentos/restricoes": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/restricoes",
+     "state": "PASS",
+     "reason": "CLAUDE.md (committed with the first POC commit b421d2b, before subsequent rounds) records stack and design-system constraints: implementation over shadcn/Radix/Tailwind, allowed imports for registry files, single-source tokens/roadmap that must not be hand-edited, gates (check/build/typecheck) and language rules. The roteiro page and constants/roadmap.ts also record the network constraint that prevented CLI validation. Time and team constraints are not recorded, but stack and design-system constraints are.",
+     "evidence_file": "CLAUDE.md",
+     "quote": "`registry/new-york/<nome>.tsx` (só depende de `@/lib/utils`, `radix-ui`, `class-variance-authority`, `lucide-react`) → item em `registry.json` → ... Gates: `pnpm check`, `pnpm build`, depois `pnpm typecheck` ... Sem afrouxar regra para passar."
+    }
+   ]
   },
   "fundamentos/documentado": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/documentado",
+     "state": "PASS",
+     "reason": "Decision rationale is recorded in the in-repo guide (adopt/adapt/do-not-adopt verdicts with reasons for each pattern from the four sample registries, plus 'Regras de origem' and 'Erros comuns'), in the roteiro page (why no item passed CLI validation), and in commit bodies that explain why (e.g. 53963f5 explains the rename and why SUPERNOVA_THEMES became SUPERNOVA_SHADCN_THEMES; da0840c explains why constants/origin.ts became the single source of the public domain).",
+     "evidence_file": "content/docs/(root)/criar-componente.mdx",
+     "quote": "**Badges `links: { doc, api }`.** Não adotar: o roteiro não guarda links externos; a proveniência fica no JSDoc e na página."
+    }
+   ]
   },
   "hierarquia/cta-3s": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, INTERACTION",
+   "evidence": [
+    {
+     "id": "hierarquia/cta-3s",
+     "state": "PASS",
+     "surface": "ENTRY, INTERACTION",
+     "reason": "ENTRY has exactly one filled white primary button ('Fundamentos →') next to an outlined secondary ('Componentes'); INTERACTION has one filled 'Enviar' while Salvar / Ver código / Compartilhar are outlined. DISCOVERY/DETAIL are reading surfaces with only secondary controls.",
+     "evidence_file": "ENTRY-desktop-first-screen.png; INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/headings": {
    "state": "FAIL",
@@ -160,24 +210,60 @@
    ]
   },
   "hierarquia/leitura": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/leitura",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "ENTRY reads pill → large centred title → lede → command block → CTAs → cards by size and position alone; DISCOVERY/DETAIL read title → lede → body → h2 sections. Sizes and weights step down consistently.",
+     "evidence_file": "ENTRY-desktop-first-screen.png; DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/proximidade": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DISCOVERY, INTERACTION",
+   "evidence": [
+    {
+     "id": "hierarquia/proximidade",
+     "state": "PASS",
+     "surface": "DISCOVERY, INTERACTION",
+     "reason": "Sidebar groups (Seções / Fundamentos / Componentes) are separated by a heading and a larger gap than the items inside them; in the Playground each slider label and value sit directly above their own track with wider gaps between parameters; cards keep title and demo together inside a border.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png; INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/whitespace": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "hierarquia/whitespace",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "The hero title/CTA block has roughly 100 px of empty space above and below it, far more than the ~16 px gaps inside the card grid; on DISCOVERY the page title carries more margin than any body paragraph or h2.",
+     "evidence_file": "ENTRY-desktop.png; DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/cor-destaque": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/cor-destaque",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Blue appears only on the roadmap status pill in the hero, the keyboard focus ring and the 'Azul' badge demo; primary actions are neutral white, and red/green/amber appear only on semantic demos (Error button, Publicado, Em revisão, Sucesso note). Syntax colours stay inside code blocks.",
+     "evidence_file": "ENTRY-desktop-first-screen.png; state-INTERACTION-focus-first.png"
+    }
+   ]
   },
   "hierarquia/escala-tipo": {
    "state": "PASS",
@@ -231,9 +317,18 @@
    ]
   },
   "estilo/paleta": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "estilo/paleta",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Colours read as a system: near-black surfaces with a grey text scale, one blue accent, and red/green/amber semantic colours used only for error/success/warning demos and notes. No stray decorative colours outside code syntax highlighting.",
+     "evidence_file": "ENTRY-desktop.png; DETAIL-desktop-first-screen.png"
+    }
+   ]
   },
   "estilo/elevacao": {
    "state": "PASS",
@@ -270,23 +365,34 @@
     {
      "surface": "ENTRY",
      "state": "FAIL",
-     "measured": 6,
+     "measured": 5,
      "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-     "evidence": "distinct radii: 5px, 6px, 12px, 4px, 3.35544e+07px, 8px"
+     "evidence": "distinct radii: 5px, 6px, 12px, 4px, 8px"
     },
     {
      "surface": "DETAIL",
      "state": "FAIL",
-     "measured": 7,
+     "measured": 6,
      "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-     "evidence": "distinct radii: 6px, 5px, 8px, 12px, 0px 0px 8px 8px, 4px, 3.35544e+07px"
+     "evidence": "distinct radii: 6px, 5px, 8px, 12px, 0px 0px 8px 8px, 4px"
     }
    ]
   },
   "estilo/icones": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "estilo/icones",
+     "state": "FAIL",
+     "surface": "ENTRY",
+     "reason": "Header icons, the copy/plus/grid icons and the arrow inside the 'Fundamentos →' button are 16 px, ~2 px-stroke outline icons of one family, but the nine card headers use a thin hairline '→' glyph (~12 px, ~1 px stroke) that reads as a text arrow, so two arrow styles with different stroke weight and optical size sit on the same screen.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "Card-corner arrows: thin hairline glyph ~12 px; button/header arrows: 2 px-stroke outline icon ~16 px",
+     "expected_value": "All inline icons share one family, stroke weight and optical size"
+    }
+   ]
   },
   "estilo/motion": {
    "state": "PASS",
@@ -464,9 +570,18 @@
    ]
   },
   "acessibilidade/nao-so-cor": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DETAIL, DISCOVERY",
+   "evidence": [
+    {
+     "id": "acessibilidade/nao-so-cor",
+     "state": "PASS",
+     "surface": "ENTRY, DETAIL, DISCOVERY",
+     "reason": "State indicators carry text or icon in addition to colour: '✓ Publicado' badge (check + label), 'Sucesso:' note prefix, 'Error'/'Warning' button labels, spinner plus 'Carregando' text on the loading button; active sidebar/tab items get a filled pill background, not colour alone.",
+     "evidence_file": "ENTRY-desktop-first-screen.png; DETAIL-mobile-first-screen.png; DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "acessibilidade/alt-aria": {
    "state": "PASS",
@@ -606,14 +721,32 @@
    "evidence": []
   },
   "navegacao/busca": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY, DETAIL",
+   "evidence": [
+    {
+     "id": "navegacao/busca",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY, DETAIL",
+     "reason": "Volume is high (three sidebar groups, a 77-item roadmap, 54 blocks) and every desktop docs surface shows a header search field with a visible 'Ctrl K' keyboard shortcut. On mobile the search box is not in the header and not visible in the captured top of the open menu, so mobile reachability could not be confirmed; INTERACTION is a chrome-less block without search.",
+     "evidence_file": "ENTRY-desktop-first-screen.png; state-ENTRY-mobile-nav-open.png"
+    }
+   ]
   },
   "navegacao/mobile-nav": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY, DETAIL",
+   "evidence": [
+    {
+     "id": "navegacao/mobile-nav",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY, DETAIL",
+     "reason": "At 390 px the header shows a hamburger icon with the visible label 'Menu' in a ~44 px bar; tapping opens a full-height drawer with grouped links in ~44 px rows and a clear close (X). INTERACTION has no site navigation on any viewport (standalone Playground block), so its 'mobile-nav-open' capture opened the preset combobox instead.",
+     "evidence_file": "state-ENTRY-mobile-nav-open.png; state-DISCOVERY-mobile-nav-open.png; state-INTERACTION-mobile-nav-open.png"
+    }
+   ]
   },
   "navegacao/links": {
    "state": "PASS",
@@ -621,7 +754,7 @@
    "per_surface": {
     "ENTRY": "N/A",
     "DISCOVERY": "PASS",
-    "DETAIL": "PASS",
+    "DETAIL": "N/A",
     "INTERACTION": "N/A"
    },
    "evidence": []
@@ -638,69 +771,186 @@
    "evidence": []
   },
   "carga/disclosure": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL, INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/disclosure",
+     "state": "PASS",
+     "surface": "DETAIL, INTERACTION",
+     "reason": "DETAIL shows each demo first with its code block collapsed behind an 'Expand' control, a Copy Page split button with a dropdown, and a TOC summarising sections; INTERACTION tucks secondary actions behind a '...' overflow button and hides the parameter panel on mobile.",
+     "evidence_file": "DETAIL-desktop.png; INTERACTION-mobile.png"
+    }
+   ]
   },
   "carga/feedback": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/feedback",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION",
+     "reason": "The only captured post-interaction states are a focus ring on the preset select and the preset dropdown opened; no capture shows the response to clicking Enviar, Salvar, the reset button or a copy button, so immediate feedback on the primary actions cannot be judged.",
+     "evidence_file": "state-INTERACTION-focus-first.png; state-INTERACTION-mobile-nav-open.png"
+    }
+   ]
   },
   "carga/loading": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/loading",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION",
+     "reason": "The Playground 'Enviar' triggers a model call (long operation) but no loading state of it was captured. DETAIL documents a spinner + 'Carregando' button pattern, which shows the design has a loading component, but its use on the actual operation is not shown.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png; DETAIL-mobile-first-screen.png"
+    }
+   ]
   },
   "carga/prevencao": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION, ENTRY",
+   "evidence": [
+    {
+     "id": "carga/prevencao",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION, ENTRY",
+     "reason": "Forms exist (Playground prompt textarea, header search, Input demo) but no typing, blur or submit-empty state was captured, so inline validation before submit cannot be observed.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "carga/recuperacao": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/recuperacao",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION",
+     "reason": "The Playground has an icon-only reset button (↺) beside Enviar that would discard the typed prompt; no capture shows whether it asks for confirmation or offers undo. No other destructive action is visible.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/valor-rapido": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "onboarding/valor-rapido",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "Within the first 900 px the landing gives the product name, a one-line value statement, a copyable install command with package-manager tabs and two CTAs straight into Fundamentos/Componentes, with live component demos immediately below. The mobile first screen (captured scrolled) still shows the install command and both CTAs.",
+     "evidence_file": "ENTRY-desktop-first-screen.png; ENTRY-mobile-first-screen.png"
+    }
+   ]
   },
   "onboarding/empty-states": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "onboarding/empty-states",
+     "state": "PASS",
+     "surface": "INTERACTION",
+     "reason": "The empty Playground prompt shows the example placeholder 'Escreva um slogan para uma sorveteria', the 'Carregar predefinição…' dropdown lists ready-made example prompts under an 'Exemplos' heading, and 'Enviar' is the visible next step.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png; state-INTERACTION-mobile-nav-open.png"
+    }
+   ]
   },
   "onboarding/dicas-contexto": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL, ENTRY",
+   "evidence": [
+    {
+     "id": "onboarding/dicas-contexto",
+     "state": "PASS",
+     "surface": "DETAIL, ENTRY",
+     "reason": "Help is inline at the point of use rather than a tour: each DETAIL section opens with a one-line explanation directly above its demo ('primary para a ação principal da tela…', 'loading troca o prefixo pelo indicador…'), the search field shows its 'Ctrl K' shortcut inline, and slider values sit next to their labels. Playground parameter labels (Temperatura, Top P) carry no visible help, but hover on them was not captured.",
+     "evidence_file": "DETAIL-desktop-first-screen.png; DETAIL-mobile-first-screen.png; ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/progresso-fluxo": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "onboarding/progresso-fluxo",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No multi-step flow exists on any captured surface; the '9 de 77 itens do roteiro publicados' pill is roadmap status, not a user-progress stepper.",
+     "evidence_file": "ENTRY-desktop.png; INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "confianca/depoimentos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/depoimentos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No testimonials or quotes appear on ENTRY, DISCOVERY, DETAIL or INTERACTION.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "confianca/numeros": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "confianca/numeros",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "Numbers shown are specific counts rather than vague claims: '9 de 77 itens do roteiro publicados', '54 blocos, 140 layouts e 24 efeitos', '8 presets', '77 itens no roteiro, 9 publicados', each attributed to the Roteiro page or named upstream repositories.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "confianca/logos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/logos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No pricing or signup decision point exists on any surface; the only attribution (built on a named starter, MIT) sits in the footer.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "confianca/seguranca": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/seguranca",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No personal, payment or sensitive data is collected: the inputs are a documentation search, a URL demo field and a demo Playground prompt; there is no signup, email or checkout form.",
+     "evidence_file": "ENTRY-desktop.png; INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "formularios/labels": {
    "state": "FAIL",
@@ -739,7 +989,16 @@
   "formularios/erro-inline": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "formularios/erro-inline",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION",
+     "reason": "A form exists (Playground with Enviar) but no form-submit-empty capture was provided, so the placement and wording of validation messages cannot be observed.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "formularios/tipos-campo": {
    "state": "N/A",
@@ -777,14 +1036,34 @@
    ]
   },
   "formularios/opcionais": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "formularios/opcionais",
+     "state": "FAIL",
+     "surface": "INTERACTION",
+     "reason": "The Playground form has several fields (prompt textarea, preset select, Modelo select, Temperatura / Tamanho máximo / Top P sliders) submitted by Enviar, and none of the labels carries a required or optional marker; the prompt field has only a placeholder and no label at all.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png",
+     "measured_value": "0 of 6 fields marked required or optional",
+     "expected_value": "Required or optional fields consistently marked with a visible marker"
+    }
+   ]
   },
   "formularios/submit-estado": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "formularios/submit-estado",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION",
+     "reason": "No submitting, success or failure state of the Playground form was captured. The only observable fact is that 'Enviar' is enabled while the prompt is empty (not disabled without explanation).",
+     "evidence_file": "INTERACTION-desktop-first-screen.png; INTERACTION-mobile.png"
+    }
+   ]
   }
  }
 }

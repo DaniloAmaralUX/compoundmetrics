@@ -1,0 +1,220 @@
+{
+ "label": "DESIGN-B",
+ "files_viewed": [
+  "ENTRY-desktop-first-screen.png",
+  "ENTRY-desktop.png",
+  "ENTRY-mobile-first-screen.png",
+  "DISCOVERY-desktop-first-screen.png",
+  "DISCOVERY-mobile-first-screen.png",
+  "DISCOVERY-mobile.png",
+  "DETAIL-desktop-first-screen.png",
+  "DETAIL-desktop.png",
+  "DETAIL-mobile-first-screen.png",
+  "INTERACTION-desktop-first-screen.png",
+  "state-ENTRY-focus-first.png",
+  "state-DISCOVERY-focus-first.png",
+  "state-DETAIL-focus-first.png",
+  "state-ENTRY-mobile-nav-open.png",
+  "state-DISCOVERY-mobile-nav-open.png",
+  "state-DETAIL-mobile-nav-open.png",
+  "state-INTERACTION-mobile-nav-open.png"
+ ],
+ "per_surface_notes": "ENTRY: hero (H1, lede, install command + Copy, filled primary CTA + outlined secondary), secondary 'namespace' block, footer. DISCOVERY: 'Components' page with two demo cards (Copy Button, Status Badge). DETAIL and INTERACTION are byte-identical captures of the 'Themes' page: 37 theme cards in a 3-col grid, each with Apply (or 'Active' with check), two preview tiles, truncated install command + Copy. No inputs/forms on any surface; no hover/click/form states captured. The state-*-mobile-nav-open.png files show the theme toggle pressed (light mode) — there is no hamburger; nav links are inline at 390px. Fonts fell back to system fonts; not penalised.",
+ "verdicts": [
+  {
+   "id": "fundamentos/convencao",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "ENTRY uses a conventional logo-left/links/utility-icons top bar, H1 + lede + primary/secondary button pair, code block with Copy, and a link footer; DISCOVERY is a standard card grid with title, description, demo area and command. The only novelty (apply a theme live to the site) is purposeful and explained in the lede.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/cta-3s",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "On ENTRY a single filled indigo button 'Browse 37 themes ->' is the only saturated element; 'Components' beside it is an outlined secondary and the Copy buttons are ghost-style, so one primary action is identifiable immediately.",
+   "evidence_file": "ENTRY-desktop-first-screen.png",
+   "measured_value": "1 filled accent button",
+   "expected_value": "exactly one primary CTA"
+  },
+  {
+   "id": "hierarquia/leitura",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Size/weight/position give an unambiguous order: large bold H1 -> lighter grey lede -> monospace install command -> accent CTA on ENTRY; on DISCOVERY/DETAIL the page title, subtitle, then card titles, then card bodies follow the same descending scale.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/proximidade",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "The Copy button sits tight against its command block, the CTA pair is grouped under the command, and a visibly larger gap separates the hero from the secondary 'Prefer a namespace?' block; on DETAIL each card encloses title/source/previews/command with consistent internal spacing and larger gutters between cards.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/whitespace",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "The hero block (H1, lede, command, CTAs) is surrounded by the widest margins on the page, and the gap between the CTA row and the secondary namespace section (~50px) is larger than any gap inside either group, signalling the hero's importance.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "hierarquia/cor-destaque",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "The indigo accent appears only on the primary CTA on ENTRY; nav, footer, secondary buttons and Copy actions are neutral. On DISCOVERY/DETAIL coloured elements are status badges (semantic) and theme preview tiles (content), not decoration of the chrome.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "estilo/paleta",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Colours read as a system: near-black background, two greys for surfaces/code blocks, white and muted-grey text, one indigo accent, and five semantic status colours (grey/amber/blue/red/green) on the Status Badge demo. The many colours inside theme preview tiles on DETAIL are catalog content, not UI chrome.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "estilo/icones",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "All inline icons (copy, arrow-right, check, brush on Apply, GitHub mark, moon/sun toggle) are single-weight outline glyphs at the same optical size, consistent with one icon family.",
+   "evidence_file": "DETAIL-desktop-first-screen.png"
+  },
+  {
+   "id": "acessibilidade/nao-so-cor",
+   "state": "PASS",
+   "surface": "DISCOVERY, DETAIL",
+   "reason": "Status badges carry a text label plus a leading dot, not colour alone (Planning/Building/In review/Blocked/Done), and the applied theme is marked 'Active' with a check icon in addition to its different button treatment. No error/success states exist elsewhere.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "navegacao/busca",
+   "state": "FAIL",
+   "surface": "DETAIL",
+   "reason": "The Themes page lists 37 named theme cards in a 3-column grid spanning ~3270px of scroll, and there is no search or filter input anywhere in the header or above the grid; finding a theme by name (e.g. 'Mono', last card) requires scrolling the whole page.",
+   "evidence_file": "DETAIL-desktop.png",
+   "measured_value": "37 items, 0 search/filter inputs",
+   "expected_value": "a keyboard-reachable search/filter when volume exceeds ~15 items"
+  },
+  {
+   "id": "navegacao/mobile-nav",
+   "state": "PASS",
+   "surface": "all (390px)",
+   "reason": "At 390px the two nav links 'Themes' and 'Components' plus the two icon buttons are visible inline in a ~56px header, nothing is hidden behind a gesture and the row does not overflow; the mobile-nav-open captures merely show the theme toggle pressed because no menu toggle exists.",
+   "evidence_file": "ENTRY-mobile-first-screen.png"
+  },
+  {
+   "id": "carga/disclosure",
+   "state": "PASS",
+   "surface": "ENTRY, DETAIL",
+   "reason": "ENTRY leads with the single one-line install command and pushes the advanced namespace configuration into a smaller, secondary block below; theme cards on DETAIL show a truncated command with a Copy action instead of the full URL, and the 'Active' state hides the Apply button.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "carga/feedback",
+   "state": "NOT_VERIFIED",
+   "surface": "INTERACTION",
+   "reason": "INTERACTION captures are identical to DETAIL and contain no post-click state; the Copy Button description promises an icon cross-fade and toast, and an 'Active' check state exists for the applied theme, but no click/hover/after-action screenshot was captured to confirm immediate feedback.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "carga/loading",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "The only operations are clipboard copy and switching CSS theme tokens, both instantaneous on static content; no long operation exists that would need a loading state.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "carga/prevencao",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No form or text input exists on ENTRY, DISCOVERY, DETAIL or INTERACTION.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "carga/recuperacao",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No destructive action exists; Apply switches the site theme and is trivially reversible by applying another card, and Copy only writes to the clipboard.",
+   "evidence_file": "DETAIL-desktop.png"
+  },
+  {
+   "id": "onboarding/valor-rapido",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "The first screen states the value in one line, shows the exact install command with a Copy button and a 'Browse 37 themes' CTA above the fold on both desktop and 390px mobile, so the core content is reachable without any preceding step.",
+   "evidence_file": "ENTRY-mobile-first-screen.png"
+  },
+  {
+   "id": "onboarding/empty-states",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No list, search or data view can be empty; every surface renders fixed catalog content.",
+   "evidence_file": "DETAIL-desktop.png"
+  },
+  {
+   "id": "onboarding/dicas-contexto",
+   "state": "PASS",
+   "surface": "ENTRY, DETAIL",
+   "reason": "Help is inline at the point of doubt: 'Prefer a namespace? Add it once to your components.json' and 'Then install any item as ...' sit beside the relevant code blocks, the Themes subtitle explains 'Apply any of them to this site to see it live, then copy one command', and each component card carries a usage note (e.g. 'Requires a mounted sonner <Toaster />'). No tour is used.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/progresso-fluxo",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No multi-step flow exists; every action is a single click.",
+   "evidence_file": "DETAIL-desktop.png"
+  },
+  {
+   "id": "confianca/depoimentos",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No testimonials appear on any surface.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/numeros",
+   "state": "PASS",
+   "surface": "ENTRY, DETAIL",
+   "reason": "The only numbers shown are specific and verifiable: 'Browse 37 themes' / '37 installable themes' matches the 37 cards rendered on the Themes page, and the footer sources them ('36 themes adapted from tweakcn (Apache-2.0)' plus the site's own theme). No vague quantities are used.",
+   "evidence_file": "DETAIL-desktop.png",
+   "measured_value": "37 stated, 37 cards counted",
+   "expected_value": "specific, sourced numbers"
+  },
+  {
+   "id": "confianca/logos",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "There is no pricing or signup decision point on any surface; the site offers an open install command with no account or purchase step.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/seguranca",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No surface collects data: there are no inputs, forms, payment or account flows.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "formularios/erro-inline",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No form exists on any captured surface.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "formularios/opcionais",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No form exists on any captured surface.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "formularios/submit-estado",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No form or submit button exists on any captured surface.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  }
+ ]
+}

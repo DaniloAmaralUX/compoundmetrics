@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1400" viewBox="0 0 1080 1400" role="img" aria-labelledby="t d">
+<title id="t">Atomic AI Design — six layers and the feedback loop</title>
+<desc id="d">Five stacked bands, atomic at the bottom and product at the top, each with example units from the Compound Design repository. A sixth layer, feedback, is an arrow leaving the product band, passing real use, observation, failure, learning and new atom, and returning into the atomic band.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d7ff57"/></marker></defs>
+<rect width="1080" height="1400" fill="#0b0c0b"/>
+<text x="60" y="78" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="36" fill="#efeee9" font-weight="600">Atomic AI Design</text>
+<text x="60" y="110" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#d7ff57">Design knowledge as composable capability.</text>
+<text x="1020" y="140" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8f918b" text-anchor="end">authorial model · hypothesis under test · CEL E1 · runtime uplift not measured</text>
+<rect x="60" y="200" width="720" height="180" rx="6" fill="none" stroke="rgba(239,238,233,0.30)" stroke-width="1"/>
+<rect x="60" y="200" width="4" height="180" rx="2" fill="#d7ff57"/>
+<text x="88" y="236" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#7d7f7a">05</text>
+<text x="122" y="238" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#d7ff57" font-weight="600" letter-spacing="0.08em">PRODUCT</text>
+<text x="88" y="262" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#efeee9" opacity="0.86">the interface a project ships — built with the system, judged against it</text>
+<rect x="88" y="276" width="144" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="100" y="293" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">compoundmetrics /</text>
+<rect x="240" y="276" width="216" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="252" y="293" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">compound-labs-design /audit</text>
+<rect x="464" y="276" width="115" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="476" y="293" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">studio-dev-ui</text>
+<rect x="88" y="308" width="364" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="100" y="325" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">TOOLS-MANIFEST.json · 24 candidates, 8 verified</text>
+<path d="M102,402.0 L96,411.0 L108,411.0 z" fill="#7d7f7a"/>
+<text x="120" y="410.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#7d7f7a">composes into</text>
+<rect x="60" y="410" width="720" height="180" rx="6" fill="none" stroke="rgba(239,238,233,0.30)" stroke-width="1"/>
+<rect x="60" y="410" width="4" height="180" rx="2" fill="#d7ff57"/>
+<text x="88" y="446" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#7d7f7a">04</text>
+<text x="122" y="448" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#d7ff57" font-weight="600" letter-spacing="0.08em">SYSTEM</text>
+<text x="88" y="472" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#efeee9" opacity="0.86">organisms that route to one another — a registry, a ledger, gates</text>
+<rect x="88" y="486" width="402" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="100" y="503" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">Frame → Model → Build → Verify → Polish → Compound</text>
+<rect x="498" y="486" width="180" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="510" y="503" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">resource-registry.json</text>
+<rect x="88" y="518" width="130" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="100" y="535" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">cd.mjs discover</text>
+<rect x="226" y="518" width="173" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="238" y="535" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">CD-EVIDENCE-LEVELS.md</text>
+<rect x="407" y="518" width="151" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="419" y="535" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">globals.css tokens</text>
+<path d="M102,612.0 L96,621.0 L108,621.0 z" fill="#7d7f7a"/>
+<text x="120" y="620.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#7d7f7a">composes into</text>
+<rect x="60" y="620" width="720" height="180" rx="6" fill="none" stroke="rgba(239,238,233,0.30)" stroke-width="1"/>
+<rect x="60" y="620" width="4" height="180" rx="2" fill="#d7ff57"/>
+<text x="88" y="656" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#7d7f7a">03</text>
+<text x="122" y="658" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#d7ff57" font-weight="600" letter-spacing="0.08em">ORGANISM</text>
+<text x="88" y="682" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#efeee9" opacity="0.86">a bounded resource with a routing contract and an evaluation path</text>
+<rect x="88" y="696" width="137" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="100" y="713" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">skills/cd-verify</text>
+<rect x="233" y="696" width="151" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="245" y="713" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">skills/cd-compound</text>
+<rect x="392" y="696" width="194" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="404" y="713" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">agents/evidence-reviewer</text>
+<rect x="88" y="728" width="194" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="100" y="745" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">v0.3-contract-suite.json</text>
+<rect x="290" y="728" width="155" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="302" y="745" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">rubric/ · 54 items</text>
+<path d="M102,822.0 L96,831.0 L108,831.0 z" fill="#7d7f7a"/>
+<text x="120" y="830.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#7d7f7a">composes into</text>
+<rect x="60" y="830" width="720" height="180" rx="6" fill="none" stroke="rgba(239,238,233,0.30)" stroke-width="1"/>
+<rect x="60" y="830" width="4" height="180" rx="2" fill="#d7ff57"/>
+<text x="88" y="866" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#7d7f7a">02</text>
+<text x="122" y="868" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#d7ff57" font-weight="600" letter-spacing="0.08em">MOLECULAR</text>
+<text x="88" y="892" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#efeee9" opacity="0.86">atoms that only make sense together</text>
+<rect x="88" y="906" width="263" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="100" y="923" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">rule + check · site-check.mjs:208</text>
+<rect x="359" y="906" width="285" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="371" y="923" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">learning + signals · docs/solutions/</text>
+<rect x="88" y="938" width="306" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="100" y="955" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">FINDING-CONTRACT.md · 9 fields, 5 gates</text>
+<rect x="402" y="938" width="252" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="414" y="955" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">prompt + expected + expectations</text>
+<path d="M102,1032.0 L96,1041.0 L108,1041.0 z" fill="#7d7f7a"/>
+<text x="120" y="1040.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#7d7f7a">composes into</text>
+<rect x="60" y="1040" width="720" height="180" rx="6" fill="none" stroke="rgba(239,238,233,0.30)" stroke-width="1"/>
+<rect x="60" y="1040" width="4" height="180" rx="2" fill="#d7ff57"/>
+<text x="88" y="1076" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#7d7f7a">01</text>
+<text x="122" y="1078" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#d7ff57" font-weight="600" letter-spacing="0.08em">ATOMIC</text>
+<text x="88" y="1102" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#efeee9" opacity="0.86">one thing the work learned and can state in a sentence</text>
+<rect x="88" y="1116" width="144" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="100" y="1133" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">--accent: #d7ff57</text>
+<rect x="240" y="1116" width="130" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="252" y="1133" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">CD-20260909-013</text>
+<rect x="378" y="1116" width="194" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="390" y="1133" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">measure the page at rest</text>
+<rect x="88" y="1148" width="202" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="100" y="1165" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">IR-03 · major · observed</text>
+<rect x="298" y="1148" width="137" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="310" y="1165" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">fundamentos/jtbd</text>
+<rect x="443" y="1148" width="144" height="26" rx="13" fill="none" stroke="rgba(239,238,233,0.14)"/>
+<text x="455" y="1165" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#efeee9">evals.json prompt</text>
+<text x="920" y="170" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#d7ff57" font-weight="600" text-anchor="middle" letter-spacing="0.08em">06  FEEDBACK</text>
+<text x="920" y="188" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#efeee9" text-anchor="middle" opacity="0.86">what the product sends back down</text>
+<path d="M780,290.0 L920,290.0 L920,1130.0 L782,1130.0" fill="none" stroke="#d7ff57" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="828.0" y="332.0" width="184" height="36" rx="4" fill="#0b0c0b" stroke="#d7ff57" stroke-width="1.5"/>
+<text x="920" y="355.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#efeee9" text-anchor="middle" letter-spacing="0.06em">REAL USE</text>
+<rect x="828.0" y="512.0" width="184" height="36" rx="4" fill="#0b0c0b" stroke="#d7ff57" stroke-width="1.5"/>
+<text x="920" y="535.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#efeee9" text-anchor="middle" letter-spacing="0.06em">OBSERVATION</text>
+<rect x="828.0" y="692.0" width="184" height="36" rx="4" fill="#0b0c0b" stroke="#d7ff57" stroke-width="1.5"/>
+<text x="920" y="715.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#efeee9" text-anchor="middle" letter-spacing="0.06em">FAILURE</text>
+<rect x="828.0" y="872.0" width="184" height="36" rx="4" fill="#0b0c0b" stroke="#d7ff57" stroke-width="1.5"/>
+<text x="920" y="895.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#efeee9" text-anchor="middle" letter-spacing="0.06em">LEARNING</text>
+<rect x="828.0" y="1052.0" width="184" height="36" rx="4" fill="#0b0c0b" stroke="#d7ff57" stroke-width="1.5"/>
+<text x="920" y="1075.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#efeee9" text-anchor="middle" letter-spacing="0.06em">NEW ATOM</text>
+<text x="920" y="280.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#7d7f7a" text-anchor="middle">PRODUCT →</text>
+<text x="920" y="1152.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#7d7f7a" text-anchor="middle">→ ATOMIC</text>
+<text x="60" y="1316" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8f918b">A lens, not a taxonomy: the same file can sit in more than one layer depending on how it is used.</text>
+<text x="60" y="1336" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8f918b">Composition alone is a library; the loop is what "compound" means.</text>
+<text x="60" y="1356" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#7d7f7a">Examples are real paths in DaniloAmaralUX/compoundmetrics at the case-study freeze (2026-09-09).</text>
+<text x="60" y="1376" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#7d7f7a">Verified chain: site-check → CD-20260909-013 → docs/solutions → rule in site-check.mjs. See ATOMIC-AI-DESIGN.md.</text>
+</svg>

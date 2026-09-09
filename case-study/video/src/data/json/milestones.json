@@ -1,0 +1,393 @@
+{
+ "generated_at": "2026-09-09T15:42:12Z",
+ "principle": "Milestones are design states, not deployments. Duplicate deployments of the same commit are listed under equivalent_deployments and count once. Merge rules between candidate milestones are declared here BEFORE fingerprints are computed.",
+ "excluded": [
+  {
+   "what": "studio-dev-ui commits 775f281 → 2026-08-12",
+   "why": "upstream fork state (DavidHDev/canvas-ui); not the author's design"
+  },
+  {
+   "what": "tool-01 … tool-08, tool-10, tool-11, tool-14 … tool-17, tool-19, tool-22",
+   "why": "no readable repository in this session; client work additionally marked privacy: review-required; recorded in TOOLS-MANIFEST.json as NOT CAPTURED"
+  },
+  {
+   "what": "tool-13 design-engineering-guide",
+   "why": "documentation only, no interface to capture"
+  },
+  {
+   "what": "lab-design-timeline, supernova-ui",
+   "why": "repository not readable / not attached"
+  }
+ ],
+ "milestone_count": 11,
+ "milestones": [
+  {
+   "id": "V01",
+   "build": "M01",
+   "tool_ids": [
+    "tool-09"
+   ],
+   "name": "Compound Labs Design (site + /audit)",
+   "repo": "DaniloAmaralUX/compound-labs-design",
+   "source_sha": "364430b9d553c6b9f87e4ff3cbc0f31eaa5d1a33",
+   "representative_url": "https://compound-labs-design.vercel.app/",
+   "equivalent_deployments": [
+    "dpl_y6YbQ7RJcAVeF1fjESkj6axyCYWJ (production, 2026-07-16)"
+   ],
+   "date_range": "2026-07-13 → 2026-07-16",
+   "serve": "static",
+   "root": ".",
+   "surfaces": {
+    "ENTRY": "/index.html",
+    "DISCOVERY": "/skills.html",
+    "DETAIL": "/skills/compound-design-ui.html",
+    "INTERACTION": "/audit.html",
+    "MOBILE_ENTRY": "/index.html"
+   },
+   "why_distinct": "First artifact named Compound. Static HTML/CSS with OKLCH tokens, Inter + Geist Mono; carries the audit instrument itself. Different repository, stack and shell from every later milestone.",
+   "confidence": "high",
+   "visual_fingerprint": "ahash:f1cffffffffffc3ffc3ffc3ffe7ffffffffff1fff01ffffff1fff1fff7fff1ff|dom:272b95d41dd4|css:7952c7b54c9a|typo:585e0ff8e316|color:5e5e8892aefd",
+   "capture_method": "exact commit built locally (see scripts/build-milestones.sh) and rendered with playwright-core 1.63 + local Chromium; the sandbox cannot reach *.vercel.app",
+   "entry_title": "Compound Design — Design engineering para produtos com IA"
+  },
+  {
+   "id": "V02",
+   "build": "M07",
+   "tool_ids": [
+    "tool-18"
+   ],
+   "name": "Studio DS v1 (landing, themes gallery, components)",
+   "repo": "DaniloAmaralUX/studio-ds",
+   "source_sha": "54fcaf0e4cb86a989e2eeb2b1452eb9b7b5d3038",
+   "representative_url": "https://studio-ds.vercel.app/ (project created 2026-08-05; deployment id not recoverable from the API list)",
+   "equivalent_deployments": [],
+   "date_range": "2026-08-05 (8 commits, one day)",
+   "serve": "next-start",
+   "root": ".",
+   "surfaces": {
+    "ENTRY": "/",
+    "DISCOVERY": "/components",
+    "DETAIL": "/themes",
+    "INTERACTION": "/themes",
+    "MOBILE_ENTRY": "/"
+   },
+   "why_distinct": "Design-system registry site with live theme application; shadcn-style shell. Different repository and visual family from V01 and from the studio-dev-ui line.",
+   "confidence": "high",
+   "visual_fingerprint": "ahash:3c0000000fc00fc00ff00e000c000ff00fe00fe00be000000000000000001bc0|dom:66190ad95b5e|css:d1c26d76104e|typo:3089a924b0d2|color:b3f4b792b635",
+   "capture_method": "exact commit built locally (see scripts/build-milestones.sh) and rendered with playwright-core 1.63 + local Chromium; the sandbox cannot reach *.vercel.app",
+   "entry_title": "Studio DS"
+  },
+  {
+   "id": "V03",
+   "build": "M03",
+   "tool_ids": [
+    "tool-12"
+   ],
+   "name": "Dev Studio UI — authorial rebuild (\"the sea, actually moving\")",
+   "repo": "DaniloAmaralUX/studio-dev-ui",
+   "source_sha": "781d086",
+   "representative_url": "(studio-dev-ui, 2026-08-13; Vercel projects for this repo were created 2026-08-22, so this state may never have been deployed to the studio-dev-ui project — recorded as a source milestone)",
+   "equivalent_deployments": [],
+   "date_range": "2026-08-13",
+   "serve": "static",
+   "root": "out",
+   "surfaces": {
+    "ENTRY": "/",
+    "DISCOVERY": "/components",
+    "DETAIL": "/docs/components/glass",
+    "INTERACTION": "/playground",
+    "MOBILE_ENTRY": "/"
+   },
+   "why_distinct": "First commit after the canvas-ui fork where the shell, hero and gallery are the author's. The fork state before it (2026-07-16 → 2026-08-12, upstream DavidHDev/canvas-ui) is excluded from the benchmark because it is not the author's design.",
+   "confidence": "medium (deployment not proven; source proven)",
+   "visual_fingerprint": "ahash:000000000000000003c000000000030000003ffc3ffc3ffc3ffc3ffc3ffc3dfc|dom:be6b08c08847|css:26cec4809150|typo:9dd74d6ad4a8|color:0a669834668c",
+   "capture_method": "exact commit built locally (see scripts/build-milestones.sh) and rendered with playwright-core 1.63 + local Chromium; the sandbox cannot reach *.vercel.app",
+   "entry_title": "Dev Studio UI: Copy-Paste Components That Look Good"
+  },
+  {
+   "id": "V04",
+   "build": "M04",
+   "tool_ids": [
+    "tool-12"
+   ],
+   "name": "Studio Dev UI — registry + originals (main 2026-08-24)",
+   "repo": "DaniloAmaralUX/studio-dev-ui",
+   "source_sha": "d0e89313d04246196db5352d240070a091e0b549",
+   "representative_url": "https://studio-dev-ui.vercel.app/ (production at the time; deployment id not retained)",
+   "equivalent_deployments": [
+    "studio-dev-ui-originals project created 2026-08-24 (same source line)"
+   ],
+   "date_range": "2026-08-22 → 2026-08-24",
+   "serve": "static",
+   "root": "out",
+   "surfaces": {
+    "ENTRY": "/",
+    "DISCOVERY": "/gallery",
+    "DETAIL": "/docs/components/glass",
+    "INTERACTION": "/playground",
+    "MOBILE_ENTRY": "/"
+   },
+   "why_distinct": "Same repository as V03 but with the registry, gallery honesty gate and playground URL engine added. Kept separate from V03 pending fingerprint comparison; MERGE RULE: if the perceptual hash of ENTRY differs by ≤ 6 bits AND the DOM signature is identical, V03 and V04 collapse into one milestone.",
+   "confidence": "medium",
+   "visual_fingerprint": "ahash:0000000000000000028000000000030000003ffc3ffc3ffc3ffc3ffc3ffc3ffc|dom:6cc4fb2d6ee9|css:b73922520955|typo:fc7aa704dd8d|color:e6c96b3357a4",
+   "capture_method": "exact commit built locally (see scripts/build-milestones.sh) and rendered with playwright-core 1.63 + local Chromium; the sandbox cannot reach *.vercel.app",
+   "entry_title": "Studio Dev UI: Copy-Paste Components That Look Good"
+  },
+  {
+   "id": "V05",
+   "build": "M06",
+   "tool_ids": [
+    "tool-20"
+   ],
+   "name": "Supernova Catálogo (Iconiq preset over Supernova tokens)",
+   "repo": "DaniloAmaralUX/supernova-catalogo",
+   "source_sha": "7af65530482bc304c54e14b6b84b03c75c97807b",
+   "representative_url": "https://supernova-catalogo.vercel.app/ (project created 2026-09-07)",
+   "equivalent_deployments": [],
+   "date_range": "2026-09-06 → 2026-09-09",
+   "serve": "static",
+   "root": "out",
+   "surfaces": {
+    "ENTRY": "/",
+    "DISCOVERY": "/c/auth",
+    "DETAIL": "/c/auth/centered-signup",
+    "INTERACTION": "/c/forms",
+    "MOBILE_ENTRY": "/"
+   },
+   "why_distinct": "Catalogue of screens over a token system; light, dense, component-catalogue shell. Also the repository whose compound-design-framework branch produced the v0.1 → v0.2.1 framework (the branch is documentation, not UI).",
+   "confidence": "high",
+   "visual_fingerprint": "ahash:e0030000c000c000f800ff00c000ff00f80000000000c000fc00e400fe00fc00|dom:1a8fbcf8818f|css:b3769dfd0b63|typo:9d44d12a2844|color:f124069238d3",
+   "capture_method": "exact commit built locally (see scripts/build-milestones.sh) and rendered with playwright-core 1.63 + local Chromium; the sandbox cannot reach *.vercel.app",
+   "entry_title": "Supernova Catálogo"
+  },
+  {
+   "id": "V06",
+   "build": "M08",
+   "tool_ids": [
+    "tool-21"
+   ],
+   "name": "Geist Labs DS (lab-design)",
+   "repo": "DaniloAmaralUX/geistlabsds",
+   "source_sha": "da0840cde632a6e2fc99a23371097d828211eba2",
+   "representative_url": "https://lab-design.vercel.app/ (project created 2026-09-08)",
+   "equivalent_deployments": [
+    "lab-design-timeline project created 2026-09-08 (timeline as a separate app over Lifeline; not captured)"
+   ],
+   "date_range": "2026-09-07 → 2026-09-08",
+   "serve": "next-start",
+   "root": ".",
+   "surfaces": {
+    "ENTRY": "/",
+    "DISCOVERY": "/docs/fundamentos",
+    "DETAIL": "/docs/components/button",
+    "INTERACTION": "/blocos/playground",
+    "MOBILE_ENTRY": "/"
+   },
+   "why_distinct": "Documentation-style design-system lab (fumadocs, MDX) on Geist, with themes; a different shell family from the catalogue and gallery lines.",
+   "confidence": "high",
+   "visual_fingerprint": "ahash:f41f0000000003c003c007e007e007e0030003c00000000073d2000000007b9e|dom:2c7a69f380d7|css:ae427b4896e0|typo:fb2fab0e3154|color:5aa67e5152b3",
+   "capture_method": "exact commit built locally (see scripts/build-milestones.sh) and rendered with playwright-core 1.63 + local Chromium; the sandbox cannot reach *.vercel.app",
+   "entry_title": "LAB / DESIGN - Fundamentos, componentes, blocos e temas"
+  },
+  {
+   "id": "V07",
+   "build": "M09",
+   "tool_ids": [
+    "tool-23"
+   ],
+   "name": "Processo (Lifeline-style timeline)",
+   "repo": "DaniloAmaralUX/processo",
+   "source_sha": "28e53d1ab20b46b2ace378c0c67234e8a34bc151",
+   "representative_url": "https://processo.vercel.app/ (project created 2026-09-08)",
+   "equivalent_deployments": [],
+   "date_range": "2026-09-08",
+   "serve": "next-start",
+   "root": ".",
+   "surfaces": {
+    "ENTRY": "/",
+    "DISCOVERY": "/lifeline",
+    "DETAIL": null,
+    "INTERACTION": "/lifeline",
+    "MOBILE_ENTRY": "/"
+   },
+   "why_distinct": "Single-purpose timeline interaction adapted from Evil Rabbit's Lifeline (MIT). No discovery/detail structure; the interaction is the product.",
+   "confidence": "high",
+   "visual_fingerprint": "ahash:300000000000000000008040936003f01ff81ff80000000000000000000027fc|dom:e61ba0a5e5b4|css:6f86c42e2572|typo:c806a4da1cea|color:094fb69d4e85",
+   "capture_method": "exact commit built locally (see scripts/build-milestones.sh) and rendered with playwright-core 1.63 + local Chromium; the sandbox cannot reach *.vercel.app",
+   "entry_title": "Processo"
+  },
+  {
+   "id": "V08",
+   "build": "M10",
+   "tool_ids": [
+    "tool-24"
+   ],
+   "name": "Compound Metrics v0.2.1 (standalone extraction, single page)",
+   "repo": "DaniloAmaralUX/compoundmetrics",
+   "source_sha": "18ffcf22c99a9797e739827e00adac5a6a102e99",
+   "representative_url": "(compoundmetrics, 2026-09-09 morning; first Vercel project deploy)",
+   "equivalent_deployments": [],
+   "date_range": "2026-09-09",
+   "serve": "static",
+   "root": "out",
+   "surfaces": {
+    "ENTRY": "/",
+    "DISCOVERY": null,
+    "DETAIL": null,
+    "INTERACTION": null,
+    "MOBILE_ENTRY": "/"
+   },
+   "why_distinct": "First standalone Compound Design site: one dark editorial page. MERGE RULE with V10: if ENTRY perceptual hash differs by ≤ 6 bits and the DOM signature is identical, V08 and V10 are one design milestone with two content versions.",
+   "confidence": "high",
+   "visual_fingerprint": "ahash:20000000000000001ff81ff81ff80ff00d7007f00000000004a0000000000000|dom:8b8967ca33e2|css:c13b10567927|typo:859e89f3e879|color:16e2112db001",
+   "capture_method": "exact commit built locally (see scripts/build-milestones.sh) and rendered with playwright-core 1.63 + local Chromium; the sandbox cannot reach *.vercel.app",
+   "entry_title": "Compound Design v0.2.1 — Evidence Infrastructure"
+  },
+  {
+   "id": "V09",
+   "build": "M11",
+   "tool_ids": [
+    "tool-12",
+    "tool-24"
+   ],
+   "name": "Studio Dev UI main 2026-09-09 (hosts the Compound Design v0.2 POC page)",
+   "repo": "DaniloAmaralUX/studio-dev-ui",
+   "source_sha": "231889f0098213a96ccc069ba5557a18cc9f0cfb",
+   "representative_url": "https://studio-dev-ui.vercel.app/",
+   "equivalent_deployments": [
+    "dpl_9DGd7MszCu9hF3ykiBspfM6DkyGW (production 2026-09-09 09:14 UTC)",
+    "https://studio-dev-nejva0nnb-danilos-projects-94eff717.vercel.app/ (same deployment)"
+   ],
+   "date_range": "2026-09-09",
+   "serve": "static",
+   "root": "out",
+   "surfaces": {
+    "ENTRY": "/",
+    "DISCOVERY": "/gallery",
+    "DETAIL": "/compound-design",
+    "INTERACTION": "/playground",
+    "MOBILE_ENTRY": "/"
+   },
+   "why_distinct": "Same shell line as V04 plus the /compound-design page. MERGE RULE with V04 as declared on V04; the /compound-design surface is new regardless.",
+   "confidence": "high",
+   "visual_fingerprint": "ahash:20000000000000001ff81ff81ff80ff00d7007f00000000004a0000000000000|dom:4ea2ae54789e|css:91d2a0e4b9fd|typo:7f6d1f533eca|color:16e2112db001",
+   "capture_method": "exact commit built locally (see scripts/build-milestones.sh) and rendered with playwright-core 1.63 + local Chromium; the sandbox cannot reach *.vercel.app",
+   "entry_title": "Compound Design v0.2.1 — Evidence Infrastructure"
+  },
+  {
+   "id": "V10",
+   "build": "M12",
+   "tool_ids": [
+    "tool-24"
+   ],
+   "name": "Compound Design v0.3.0-alpha.1 — production",
+   "repo": "DaniloAmaralUX/compoundmetrics",
+   "source_sha": "a7f8319859263924a90d2f293be5cfd3c1c9cbab",
+   "representative_url": "https://compoundmetrics.vercel.app/",
+   "equivalent_deployments": [
+    "dpl_6Av1MuU5xvbQAnS6uBkWVvKcUoA9 (production, compoundmetrics)",
+    "dpl_rJaafo9dBEAnsqyFvLQtKBFTHxHP (project cd.guide, https://cdguide-seven.vercel.app/, same commit)"
+   ],
+   "date_range": "2026-09-09",
+   "serve": "static",
+   "root": "out",
+   "surfaces": {
+    "ENTRY": "/",
+    "DISCOVERY": null,
+    "DETAIL": null,
+    "INTERACTION": null,
+    "MOBILE_ENTRY": "/"
+   },
+   "why_distinct": "v0.3 content (work system) poured into the v0.2 single-page layout. See merge rule on V08.",
+   "confidence": "high",
+   "visual_fingerprint": "ahash:20000000000000001ff81ff81ff80ff00d700ff00000000005a0000000000000|dom:c826737fa171|css:c13b10567927|typo:9d6fb8a08439|color:46105a383b43",
+   "capture_method": "exact commit built locally (see scripts/build-milestones.sh) and rendered with playwright-core 1.63 + local Chromium; the sandbox cannot reach *.vercel.app",
+   "entry_title": "Compound Design v0.3.0-alpha.1 — Work System"
+  },
+  {
+   "id": "V11",
+   "build": "M13",
+   "tool_ids": [
+    "tool-24"
+   ],
+   "name": "Compound Design — Product Experience (preview, 8 routes)",
+   "repo": "DaniloAmaralUX/compoundmetrics",
+   "source_sha": "921d751aff5df8e14d998f993e2d171db842719d",
+   "representative_url": "https://compoundmetrics-git-claude-com-014611-danilos-projects-94eff717.vercel.app/",
+   "equivalent_deployments": [
+    "dpl_4qtC9oEDZ44USUgxByVBXB7Xf399 (preview, branch claude/compound-design-product-experience)"
+   ],
+   "date_range": "2026-09-09",
+   "serve": "static",
+   "root": "out",
+   "surfaces": {
+    "ENTRY": "/",
+    "DISCOVERY": "/resources",
+    "DETAIL": "/resources/cd-interface-review",
+    "INTERACTION": "/lab",
+    "MOBILE_ENTRY": "/"
+   },
+   "why_distinct": "Multi-route editorial product site with content model, Field Guide, Lab. Different shell, navigation, type scale and page structure from V10.",
+   "confidence": "high",
+   "visual_fingerprint": "ahash:10000000000000003fc03fc03fc03fc03dc0300035c03fe03fc000000000275c|dom:92a6d3c02197|css:50fddf4b9f05|typo:bee0a12efd49|color:5a5eed6d0558",
+   "capture_method": "exact commit built locally (see scripts/build-milestones.sh) and rendered with playwright-core 1.63 + local Chromium; the sandbox cannot reach *.vercel.app",
+   "entry_title": "Compound Design"
+  }
+ ],
+ "merge_evaluation": {
+  "rule": "declared per milestone before capture: merge only if ENTRY ahash Hamming distance ≤ 6 bits (256-bit hash) AND DOM signature identical",
+  "evaluated_at": "2026-09-09T15:52:12.554Z",
+  "pairs": [
+   {
+    "a": "V03",
+    "b": "V04",
+    "ahash_hamming": 3,
+    "dom_identical": false,
+    "css_identical": false,
+    "typography_identical": false,
+    "merged": false
+   },
+   {
+    "a": "V04",
+    "b": "V09",
+    "ahash_hamming": 115,
+    "dom_identical": false,
+    "css_identical": false,
+    "typography_identical": false,
+    "merged": false
+   },
+   {
+    "a": "V08",
+    "b": "V10",
+    "ahash_hamming": 2,
+    "dom_identical": false,
+    "css_identical": true,
+    "typography_identical": false,
+    "merged": false
+   },
+   {
+    "a": "V08",
+    "b": "V09",
+    "ahash_hamming": 0,
+    "dom_identical": false,
+    "css_identical": false,
+    "typography_identical": false,
+    "merged": false
+   },
+   {
+    "a": "V10",
+    "b": "V11",
+    "ahash_hamming": 62,
+    "dom_identical": false,
+    "css_identical": false,
+    "typography_identical": false,
+    "merged": false
+   }
+  ],
+  "notes": [
+   "V03/V04: hero near-identical (3 bits) but DOM signature differs (section order / nav changed) → kept separate by the declared rule; visually they are one design family with two structural versions.",
+   "V08/V10: 2 bits apart, same CSS bundle hash, DOM signature differs only because v0.3 content added sections → kept separate by the letter of the rule. For the evolution narrative they are ONE design with two content versions; EVOLUTION.md treats V08→V10 as a content delta, not a design delta.",
+   "V08/V09: 0 bits apart — studio-dev-ui main at 231889f serves the Compound Design v0.2.1 page at its root (same title). V09's ENTRY is therefore the same page as V08's; V09 is kept as a milestone only for its gallery/playground surfaces (DISCOVERY/DETAIL/INTERACTION), and its ENTRY score is not counted as an independent data point in averages (see SUMMARY.json duplicates)."
+  ]
+ }
+}

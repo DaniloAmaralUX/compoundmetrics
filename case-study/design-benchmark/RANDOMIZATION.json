@@ -16,6 +16,35 @@
  ],
  "count": 11,
  "note": "Order and labels are public. The label→milestone mapping lives in RANDOMIZATION.mapping.json and is revealed only after judgment.json files are frozen (their SHA-256 is recorded in RANDOMIZATION.json by aggregate.mjs before reveal).",
- "judgment_frozen": null,
- "mapping_revealed": false
+ "judgment_frozen": {
+  "at": "2026-09-09T16:51:35.421Z",
+  "sha256": {
+   "DESIGN-A": "a8aa0690470a5fe5fd56a9c262f01c73ccb65db9dcf58163fc50a3a16e96729e",
+   "DESIGN-B": "51c00903208449db0a4babf40157b0f4f7f9d330a9636036138295882e8600f3",
+   "DESIGN-C": "34c96a93990edbdf9fdef7b582d5eabf76ac5f809241dcdee26d1317968bd35e",
+   "DESIGN-D": "c2a2aadc74116c1685a0427526ae81a93ba8598548adca4d03e991d6e66987c6",
+   "DESIGN-E": "5fc4e57b8198080d291b56261cd8634bbf09edaa73bee2ab9222c308f8f8edc1",
+   "DESIGN-F": "f4aee3642400f6570be6514ec8f3466c45567300328935ccb93150a48eb04585",
+   "DESIGN-G": "15cd3d6c32230da122d8a037d1827e4be3cc0828d7c871ee9c70286f3f64600c",
+   "DESIGN-H": "4443c42351008dcbbd4ff334d0aa225a31b2dd2b002745d85a8569099e8bbbcb",
+   "DESIGN-I": "fdc532a0d618fb6d0db999683ef10c650da8b145fda1529c8d6799c166d2d476",
+   "DESIGN-J": "b36c56337c603fefa8d47e2c800771719779b1f628fc41ec10ca5fc8bd53f42c",
+   "DESIGN-K": "7f58b528fc4634dd31bc0aa4747419cc1f11d1f682bdeb907eb0c1be66dcb6df"
+  }
+ },
+ "mapping_revealed": true,
+ "mapping": {
+  "DESIGN-A": "V07",
+  "DESIGN-B": "V02",
+  "DESIGN-C": "V09",
+  "DESIGN-D": "V11",
+  "DESIGN-E": "V01",
+  "DESIGN-F": "V08",
+  "DESIGN-G": "V10",
+  "DESIGN-H": "V06",
+  "DESIGN-I": "V04",
+  "DESIGN-J": "V03",
+  "DESIGN-K": "V05"
+ },
+ "revealed_at": "2026-09-09T16:51:35.422Z"
 }

@@ -1,0 +1,50 @@
+{
+ "milestone": "V08",
+ "verdicts": [
+  {
+   "id": "fundamentos/jtbd",
+   "state": "PASS",
+   "reason": "README.md opens with a single sentence stating what the repository/site is and does (the standalone home of the Compound Design evidence system plus the public page that presents it); package.json description repeats it in one line.",
+   "evidence_file": "README.md",
+   "quote": "Compound Metrics is the standalone home of the Compound Design evidence system: a framework for turning useful human + AI working patterns into reusable, versioned, testable resources — and the public page that presents it."
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "state": "PASS",
+   "reason": "The design critique states the product bet (evidence architecture over catalog breadth or polish) and ties the page/UI decision to it: the POC evidence UI must show version, construction and evidence separately. README and GOVERNANCE restate the bet ('Build the application. Improve the system that builds the next one.'; 'Evidence before claims').",
+   "evidence_file": "compound-design/docs/V0.2-DESIGN-CRITIQUE.md",
+   "quote": "### Direction C — evidence architecture ... makes future claims falsifiable; keeps scope small. ... Decision: choose. ... 5. **POC evidence UI** — the demo shows version, construction and evidence separately."
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "state": "PASS",
+   "reason": "Stack and design-system constraints are recorded: README 'Running the site' fixes the stack (standalone Next.js app, static export to out/, no catalog/gallery/registry build step) and the 'Layout direction' section sets a boundary for the next presentation iteration; the extraction commit body records the dependency constraint (next, react, react-dom, geist only) and what was deliberately left out; the cd orchestrator requires inspecting the existing design system/shadcn/ui before inventing UI. Time and team constraints are not recorded, but the rule accepts stack/design-system constraints.",
+   "evidence_file": "README.md",
+   "quote": "The public page is a standalone Next.js app. The route `/` renders Compound Design directly. ... The build has no catalog, gallery or registry step: `npm run build` runs `next build` and nothing else. ... That work is separate from the evidence architecture and must not overwrite provenance, quality history or evaluation contracts."
+  },
+  {
+   "id": "fundamentos/documentado",
+   "state": "PASS",
+   "reason": "Decision rationale is recorded in several places: the design critique documents divergence/decision per direction with pros and risks; V0.2-EVIDENCE.md has a 'Why this version exists' section; a learning ledger exists; GOVERNANCE.md mandates 'the reason for change'; and the latest commit body explains why the app was extracted, what was kept and what was deliberately not carried over.",
+   "evidence_file": "compound-design/quality/releases/V0.2-EVIDENCE.md",
+   "quote": "## Why this version exists\n\nv0.1 established a coherent resource architecture. Its main weakness was epistemic: a single readiness score risked being read as proof.\n\nv0.2 makes the framework harder to fool."
+  }
+ ],
+ "docs_found": [
+  "/home/user/compoundmetrics/case-study/design-benchmark/rubric/ITEM-CLASSIFICATION.json",
+  "/home/user/compoundmetrics/.research/builds/M10/README.md",
+  "/home/user/compoundmetrics/.research/builds/M10/GOVERNANCE.md",
+  "/home/user/compoundmetrics/.research/builds/M10/CONTRIBUTING.md",
+  "/home/user/compoundmetrics/.research/builds/M10/NOTICE",
+  "/home/user/compoundmetrics/.research/builds/M10/package.json",
+  "/home/user/compoundmetrics/.research/builds/M10/compound-design/README.md",
+  "/home/user/compoundmetrics/.research/builds/M10/compound-design/docs/V0.2-DESIGN-CRITIQUE.md",
+  "/home/user/compoundmetrics/.research/builds/M10/compound-design/docs/COMPOUND-DESIGN-POC-V0.1-PROCESS.md",
+  "/home/user/compoundmetrics/.research/builds/M10/compound-design/learning/LEDGER.md",
+  "/home/user/compoundmetrics/.research/builds/M10/compound-design/quality/releases/V0.2-EVIDENCE.md",
+  "/home/user/compoundmetrics/.research/builds/M10/compound-design/quality/STATUS.md",
+  "/home/user/compoundmetrics/.research/builds/M10/.claude/agents/cd.md",
+  "git log -30 of /home/user/compoundmetrics/.research/builds/M10 (12 commits; extraction commit body read in full)"
+ ],
+ "instrument": "source review of the exact commit worktree (unblinded by nature: fundamentos/* items need repository docs)"
+}

@@ -7,12 +7,12 @@
  "source_sha": "54fcaf0e4cb86a989e2eeb2b1452eb9b7b5d3038",
  "date_range": "2026-08-05 (8 commits, one day)",
  "overall": {
-  "PASS": 11,
-  "FAIL": 7,
-  "N/A": 5,
-  "NOT_VERIFIED": 31,
-  "score": 61.1,
-  "coverage": 36.7
+  "PASS": 27,
+  "FAIL": 10,
+  "N/A": 16,
+  "NOT_VERIFIED": 1,
+  "score": 73,
+  "coverage": 97.4
  },
  "deterministic_only": {
   "PASS": 11,
@@ -23,117 +23,169 @@
   "coverage": 100
  },
  "judgment_only": {
-  "PASS": 0,
-  "FAIL": 0,
-  "N/A": 0,
-  "NOT_VERIFIED": 31,
-  "score": null,
-  "coverage": 0
+  "PASS": 16,
+  "FAIL": 3,
+  "N/A": 11,
+  "NOT_VERIFIED": 1,
+  "score": 84.2,
+  "coverage": 95
  },
  "categories": {
   "fundamentos": {
-   "PASS": 0,
-   "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": null,
-   "coverage": 0
-  },
-  "hierarquia": {
-   "PASS": 2,
-   "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": 100,
-   "coverage": 28.6
-  },
-  "estilo": {
    "PASS": 3,
    "FAIL": 2,
    "N/A": 0,
-   "NOT_VERIFIED": 2,
+   "NOT_VERIFIED": 0,
    "score": 60,
-   "coverage": 71.4
+   "coverage": 100
+  },
+  "hierarquia": {
+   "PASS": 7,
+   "FAIL": 0,
+   "N/A": 0,
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
+  },
+  "estilo": {
+   "PASS": 5,
+   "FAIL": 2,
+   "N/A": 0,
+   "NOT_VERIFIED": 0,
+   "score": 71.4,
+   "coverage": 100
   },
   "acessibilidade": {
-   "PASS": 4,
+   "PASS": 5,
    "FAIL": 4,
    "N/A": 0,
-   "NOT_VERIFIED": 1,
-   "score": 50,
-   "coverage": 88.9
+   "NOT_VERIFIED": 0,
+   "score": 55.6,
+   "coverage": 100
   },
   "navegacao": {
-   "PASS": 1,
-   "FAIL": 1,
+   "PASS": 2,
+   "FAIL": 2,
    "N/A": 2,
-   "NOT_VERIFIED": 2,
+   "NOT_VERIFIED": 0,
    "score": 50,
-   "coverage": 50
+   "coverage": 100
   },
   "carga": {
-   "PASS": 1,
+   "PASS": 2,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 5,
+   "N/A": 3,
+   "NOT_VERIFIED": 1,
    "score": 100,
-   "coverage": 16.7
+   "coverage": 66.7
   },
   "onboarding": {
-   "PASS": 0,
+   "PASS": 2,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "N/A": 2,
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "confianca": {
-   "PASS": 0,
+   "PASS": 1,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "N/A": 3,
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "formularios": {
    "PASS": 0,
    "FAIL": 0,
-   "N/A": 3,
-   "NOT_VERIFIED": 3,
+   "N/A": 6,
+   "NOT_VERIFIED": 0,
    "score": null,
-   "coverage": 0
+   "coverage": null
   }
  },
  "items": {
   "fundamentos/jtbd": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/jtbd",
+     "state": "PASS",
+     "reason": "README opens with a one-sentence statement of the site's job: an installable design system distributed as a shadcn registry, with the site itself running the flagship theme.",
+     "evidence_file": "README.md",
+     "quote": "A design system you can install. Themes and components, distributed as a shadcn registry — the site itself runs the flagship theme it ships."
+    }
+   ]
   },
   "fundamentos/macro-bet": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/macro-bet",
+     "state": "FAIL",
+     "reason": "Documentation exists (README, NOTICE, commit bodies) but none states a product/business bet nor ties design decisions to one. The README describes what the registry contains and how it is built; 'dogfooding' is mentioned as a mechanism, never framed as a bet or hypothesis. No brief, PRD, plan, AGENTS.md or CLAUDE.md in the worktree.",
+     "evidence_file": "README.md",
+     "quote": "`catalog/` is the single author-time surface. `registry.json` is generated from it ... the gallery, install commands and site pages all derive from the same catalog"
+    }
+   ]
   },
   "fundamentos/convencao": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "fundamentos/convencao",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "ENTRY uses a conventional logo-left/links/utility-icons top bar, H1 + lede + primary/secondary button pair, code block with Copy, and a link footer; DISCOVERY is a standard card grid with title, description, demo area and command. The only novelty (apply a theme live to the site) is purposeful and explained in the lede.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "fundamentos/restricoes": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/restricoes",
+     "state": "FAIL",
+     "reason": "No document records stack/time/team/design-system constraints before the build. The only doc is README.md, which describes the stack (Next, shadcn registry, Geist) after the fact as architecture, not as recorded constraints; the bootstrap commit ('bootstrap Studio DS from registry-template') has no constraint rationale. No brief/plan/PRD found.",
+     "evidence_file": "README.md",
+     "quote": "`catalog/` is the single author-time surface. `registry.json` is generated from it (`scripts/build-registry.ts`), `shadcn build` compiles `public/r/*.json`"
+    }
+   ]
   },
   "fundamentos/documentado": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/documentado",
+     "state": "PASS",
+     "reason": "Decision rationale is recorded in commit bodies (e.g. 54fcaf0: 'studio-ds.vercel.app is taken by an unrelated project; the canonical public domain becomes studio-ds-ui.vercel.app'; 1bc295c: 'build script wipes public/r before shadcn build (no stale artifacts)'; f6d1471: 'status-badge embeds the status token vars (self-sufficient install)') and in source comments explaining measured token choices. No ADRs or docs/solutions folder, but the 'why' is consistently captured.",
+     "evidence_file": "catalog/studio-theme.ts",
+     "quote": "as text on light they measured below APCA 60 / WCAG 3:1 (building 2.44:1, done 2.37:1), so ink keeps C and H and lowers L to the measured minimum."
+    }
+   ]
   },
   "hierarquia/cta-3s": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "hierarquia/cta-3s",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "On ENTRY a single filled indigo button 'Browse 37 themes ->' is the only saturated element; 'Components' beside it is an outlined secondary and the Copy buttons are ghost-style, so one primary action is identifiable immediately.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "1 filled accent button",
+     "expected_value": "exactly one primary CTA"
+    }
+   ]
   },
   "hierarquia/headings": {
    "state": "PASS",
@@ -147,24 +199,60 @@
    "evidence": []
   },
   "hierarquia/leitura": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/leitura",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Size/weight/position give an unambiguous order: large bold H1 -> lighter grey lede -> monospace install command -> accent CTA on ENTRY; on DISCOVERY/DETAIL the page title, subtitle, then card titles, then card bodies follow the same descending scale.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/proximidade": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/proximidade",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "The Copy button sits tight against its command block, the CTA pair is grouped under the command, and a visibly larger gap separates the hero from the secondary 'Prefer a namespace?' block; on DETAIL each card encloses title/source/previews/command with consistent internal spacing and larger gutters between cards.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/whitespace": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "hierarquia/whitespace",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "The hero block (H1, lede, command, CTAs) is surrounded by the widest margins on the page, and the gap between the CTA row and the secondary namespace section (~50px) is larger than any gap inside either group, signalling the hero's importance.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "hierarquia/cor-destaque": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/cor-destaque",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "The indigo accent appears only on the primary CTA on ENTRY; nav, footer, secondary buttons and Copy actions are neutral. On DISCOVERY/DETAIL coloured elements are status badges (semantic) and theme preview tiles (content), not decoration of the chrome.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/escala-tipo": {
    "state": "PASS",
@@ -218,9 +306,18 @@
    ]
   },
   "estilo/paleta": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "estilo/paleta",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Colours read as a system: near-black background, two greys for surfaces/code blocks, white and muted-grey text, one indigo accent, and five semantic status colours (grey/amber/blue/red/green) on the Status Badge demo. The many colours inside theme preview tiles on DETAIL are catalog content, not UI chrome.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "estilo/elevacao": {
    "state": "PASS",
@@ -257,23 +354,32 @@
     {
      "surface": "DETAIL",
      "state": "FAIL",
-     "measured": 24,
+     "measured": 23,
      "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-     "evidence": "distinct radii: 3.35544e+07px, 8.75px, 8px, 12px, 15px, 10px, 6px, 4px"
+     "evidence": "distinct radii: 8.75px, 8px, 12px, 15px, 10px, 6px, 4px, 5.6px"
     },
     {
      "surface": "INTERACTION",
      "state": "FAIL",
-     "measured": 24,
+     "measured": 23,
      "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-     "evidence": "distinct radii: 3.35544e+07px, 8.75px, 8px, 12px, 15px, 10px, 6px, 4px"
+     "evidence": "distinct radii: 8.75px, 8px, 12px, 15px, 10px, 6px, 4px, 5.6px"
     }
    ]
   },
   "estilo/icones": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "estilo/icones",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "All inline icons (copy, arrow-right, check, brush on Apply, GitHub mark, moon/sun toggle) are single-weight outline glyphs at the same optical size, consistent with one icon family.",
+     "evidence_file": "DETAIL-desktop-first-screen.png"
+    }
+   ]
   },
   "estilo/motion": {
    "state": "PASS",
@@ -411,9 +517,18 @@
    ]
   },
   "acessibilidade/nao-so-cor": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DISCOVERY, DETAIL",
+   "evidence": [
+    {
+     "id": "acessibilidade/nao-so-cor",
+     "state": "PASS",
+     "surface": "DISCOVERY, DETAIL",
+     "reason": "Status badges carry a text label plus a leading dot, not colour alone (Planning/Building/In review/Blocked/Done), and the applied theme is marked 'Active' with a check icon in addition to its different button treatment. No error/success states exist elsewhere.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "acessibilidade/alt-aria": {
    "state": "PASS",
@@ -580,14 +695,34 @@
    "evidence": []
   },
   "navegacao/busca": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL",
+   "evidence": [
+    {
+     "id": "navegacao/busca",
+     "state": "FAIL",
+     "surface": "DETAIL",
+     "reason": "The Themes page lists 37 named theme cards in a 3-column grid spanning ~3270px of scroll, and there is no search or filter input anywhere in the header or above the grid; finding a theme by name (e.g. 'Mono', last card) requires scrolling the whole page.",
+     "evidence_file": "DETAIL-desktop.png",
+     "measured_value": "37 items, 0 search/filter inputs",
+     "expected_value": "a keyboard-reachable search/filter when volume exceeds ~15 items"
+    }
+   ]
   },
   "navegacao/mobile-nav": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all (390px)",
+   "evidence": [
+    {
+     "id": "navegacao/mobile-nav",
+     "state": "PASS",
+     "surface": "all (390px)",
+     "reason": "At 390px the two nav links 'Themes' and 'Components' plus the two icon buttons are visible inline in a ~56px header, nothing is hidden behind a gesture and the row does not overflow; the mobile-nav-open captures merely show the theme toggle pressed because no menu toggle exists.",
+     "evidence_file": "ENTRY-mobile-first-screen.png"
+    }
+   ]
   },
   "navegacao/links": {
    "state": "N/A",
@@ -612,69 +747,188 @@
    "evidence": []
   },
   "carga/disclosure": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DETAIL",
+   "evidence": [
+    {
+     "id": "carga/disclosure",
+     "state": "PASS",
+     "surface": "ENTRY, DETAIL",
+     "reason": "ENTRY leads with the single one-line install command and pushes the advanced namespace configuration into a smaller, secondary block below; theme cards on DETAIL show a truncated command with a Copy action instead of the full URL, and the 'Active' state hides the Apply button.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "carga/feedback": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/feedback",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION",
+     "reason": "INTERACTION captures are identical to DETAIL and contain no post-click state; the Copy Button description promises an icon cross-fade and toast, and an 'Active' check state exists for the applied theme, but no click/hover/after-action screenshot was captured to confirm immediate feedback.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "carga/loading": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/loading",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "The only operations are clipboard copy and switching CSS theme tokens, both instantaneous on static content; no long operation exists that would need a loading state.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "carga/prevencao": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/prevencao",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No form or text input exists on ENTRY, DISCOVERY, DETAIL or INTERACTION.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "carga/recuperacao": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/recuperacao",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No destructive action exists; Apply switches the site theme and is trivially reversible by applying another card, and Copy only writes to the clipboard.",
+     "evidence_file": "DETAIL-desktop.png"
+    }
+   ]
   },
   "onboarding/valor-rapido": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "onboarding/valor-rapido",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "The first screen states the value in one line, shows the exact install command with a Copy button and a 'Browse 37 themes' CTA above the fold on both desktop and 390px mobile, so the core content is reachable without any preceding step.",
+     "evidence_file": "ENTRY-mobile-first-screen.png"
+    }
+   ]
   },
   "onboarding/empty-states": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "onboarding/empty-states",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No list, search or data view can be empty; every surface renders fixed catalog content.",
+     "evidence_file": "DETAIL-desktop.png"
+    }
+   ]
   },
   "onboarding/dicas-contexto": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DETAIL",
+   "evidence": [
+    {
+     "id": "onboarding/dicas-contexto",
+     "state": "PASS",
+     "surface": "ENTRY, DETAIL",
+     "reason": "Help is inline at the point of doubt: 'Prefer a namespace? Add it once to your components.json' and 'Then install any item as ...' sit beside the relevant code blocks, the Themes subtitle explains 'Apply any of them to this site to see it live, then copy one command', and each component card carries a usage note (e.g. 'Requires a mounted sonner <Toaster />'). No tour is used.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/progresso-fluxo": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "onboarding/progresso-fluxo",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No multi-step flow exists; every action is a single click.",
+     "evidence_file": "DETAIL-desktop.png"
+    }
+   ]
   },
   "confianca/depoimentos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/depoimentos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No testimonials appear on any surface.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "confianca/numeros": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DETAIL",
+   "evidence": [
+    {
+     "id": "confianca/numeros",
+     "state": "PASS",
+     "surface": "ENTRY, DETAIL",
+     "reason": "The only numbers shown are specific and verifiable: 'Browse 37 themes' / '37 installable themes' matches the 37 cards rendered on the Themes page, and the footer sources them ('36 themes adapted from tweakcn (Apache-2.0)' plus the site's own theme). No vague quantities are used.",
+     "evidence_file": "DETAIL-desktop.png",
+     "measured_value": "37 stated, 37 cards counted",
+     "expected_value": "specific, sourced numbers"
+    }
+   ]
   },
   "confianca/logos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/logos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "There is no pricing or signup decision point on any surface; the site offers an open install command with no account or purchase step.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "confianca/seguranca": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/seguranca",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No surface collects data: there are no inputs, forms, payment or account flows.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "formularios/labels": {
    "state": "N/A",
@@ -688,9 +942,18 @@
    "evidence": []
   },
   "formularios/erro-inline": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/erro-inline",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No form exists on any captured surface.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "formularios/tipos-campo": {
    "state": "N/A",
@@ -715,14 +978,32 @@
    "evidence": []
   },
   "formularios/opcionais": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/opcionais",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No form exists on any captured surface.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "formularios/submit-estado": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/submit-estado",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No form or submit button exists on any captured surface.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   }
  }
 }

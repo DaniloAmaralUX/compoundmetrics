@@ -1,0 +1,49 @@
+{
+ "milestone": "V04",
+ "verdicts": [
+  {
+   "id": "fundamentos/jtbd",
+   "state": "PASS",
+   "reason": "README opens with a one-sentence job statement, and the PRD restates the core job as a single quoted sentence in §1 ('Encontrar um componente, experimentar seus estados e tokens, combiná-lo com outros componentes e exportar código reproduzível.').",
+   "evidence_file": "README.md",
+   "quote": "A design-engineering library for discovering, testing, and installing crafted UI experiences."
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "state": "PASS",
+   "reason": "PRD §1 states the product bet (evolve from an effects library into a component workbench; 'Components, Playground e Studio formam o núcleo'), §16 sets a north-star metric on configured components that reach save/fork/export, and DESIGN.md (declared as the PRD §15.6 deliverable) turns that bet into surface rules — 'Preview é o padrão', 'O preview é grande', 'Customize fica embaixo do preview... Proibido criar uma variante lite'. Risk table also ties scope decisions to the bet: 'Component workbench é o núcleo; Community e Board exigem PRDs próprios'.",
+   "evidence_file": "docs/product/PRD-CANVAS-UI.md",
+   "quote": "O Canvas UI evoluirá de uma biblioteca e documentação de efeitos visuais para um **component workbench** ... Components, Playground e Studio formam o núcleo."
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "state": "PASS",
+   "reason": "The PRD (v1.0 Proposed, dated 12/08/2026, before the build) records stack constraints (RF-CAT-05 Base UI as initial shadcn variant; RF-CAT-04 pinned snapshot; RNF-COMP-02 Windows/Node 22 + Linux CI; §15.6 'Não será instalada outra camada de skills nesta fase'; §18 autonomous push/PR/deploy blocked). DEPENDENCY-POLICY.md pins exact versions (DialKit 1.4.3, Sandpack 2.20.0, MCP SDK 1.29.0, shadcn/React Bits SHAs) and DESIGN.md fixes the design-system constraints (Geist Sans/Mono, 4px base, OKLCH tokens only, lucide-react). QWEN.md records the team constraint: 'The product owner is a designer, not a software engineer.'",
+   "evidence_file": "docs/product/PRD-CANVAS-UI.md",
+   "quote": "RF-CAT-05 — Base UI será a variante shadcn inicial; Radix e React Aria serão variantes quando oficialmente existentes. ... RNF-COMP-02 — Fluxo assistido deve funcionar em Windows/Node 22 e CI Linux."
+  },
+  {
+   "id": "fundamentos/documentado",
+   "state": "PASS",
+   "reason": "docs/solutions/ holds eight problem→root-cause→solution records (url-state, sandbox-preview, build); AUDIT-MATRIX.md records rationale per requirement (e.g. visual regression 'excluída de propósito porque baselines de screenshot são específicos de plataforma'); DESIGN.md justifies rules (e.g. §1.6 image outline exception 'porque o valor precisa ser puro, não temático'); commit bodies in the last 30 (feat(hero), feat(credits)) explain why, e.g. 'Liquid required the experimental html-in-canvas flag ... so nearly every visitor saw a still photograph'.",
+   "evidence_file": "docs/solutions/url-state/estado-de-view-derivado-da-url.md",
+   "quote": "## Causa raiz — A aba vivia em dois lugares: `useState` local **e** query string ... Para estado que o produto promete ser compartilhável por URL ... a URL é a **única** fonte"
+  }
+ ],
+ "docs_found": [
+  "README.md",
+  "DESIGN.md",
+  "QWEN.md",
+  "docs/product/PRD-CANVAS-UI.md",
+  "docs/product/PRD-BOARD.md",
+  "docs/product/HANDOFF-CLAUDE-CODE.md",
+  "docs/product/AUDIT-MATRIX.md",
+  "docs/product/IMPLEMENTATION-STATUS.md",
+  "docs/product/DEPENDENCY-POLICY.md",
+  "docs/solutions/url-state/estado-de-view-derivado-da-url.md",
+  "docs/solutions/sandbox-preview/preview-so-e-ready-se-roda.md",
+  "docs/quality/launch-readiness-report.md",
+  "git log -30 (commit subjects and bodies)"
+ ],
+ "instrument": "source review of the exact commit worktree (unblinded by nature: fundamentos/* items need repository docs)"
+}

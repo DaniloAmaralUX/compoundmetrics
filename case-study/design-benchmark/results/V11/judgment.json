@@ -1,0 +1,243 @@
+{
+ "label": "DESIGN-D",
+ "files_viewed": [
+  "ENTRY-desktop-first-screen.png",
+  "DISCOVERY-desktop-first-screen.png",
+  "DETAIL-desktop-first-screen.png",
+  "INTERACTION-desktop-first-screen.png",
+  "ENTRY-desktop.png",
+  "ENTRY-mobile-first-screen.png",
+  "INTERACTION-desktop.png",
+  "DISCOVERY-desktop.png",
+  "DETAIL-desktop.png",
+  "ENTRY-mobile.png",
+  "INTERACTION-mobile.png",
+  "DISCOVERY-mobile.png",
+  "DETAIL-mobile.png",
+  "INTERACTION-mobile-first-screen.png",
+  "DISCOVERY-mobile-first-screen.png",
+  "DETAIL-mobile-first-screen.png",
+  "state-INTERACTION-form-submit-empty.png",
+  "state-ENTRY-mobile-nav-open.png",
+  "state-INTERACTION-mobile-nav-open.png",
+  "state-DETAIL-mobile-nav-open.png",
+  "state-DISCOVERY-mobile-nav-open.png",
+  "state-INTERACTION-focus-first.png",
+  "state-INTERACTION-hover-first.png",
+  "state-ENTRY-hover-first.png",
+  "state-ENTRY-focus-first.png",
+  "state-DISCOVERY-hover-first.png",
+  "state-DETAIL-focus-first.png"
+ ],
+ "per_surface_notes": "ENTRY: dark editorial home; top nav (7 items, active underline), eyebrow + very large headline + lede, no action in the first screen; first action link ('Explore the project') ~4400px down a 6166px page; page ends with two equal-weight links. DISCOVERY: index of ~21 resources grouped under 5 headings with a loop-order link row and a release meta panel; no search. DETAIL: single resource page with meta sidebar, term tooltips (i), a collapsed '+ Read the full procedure' disclosure, a text-only 'Known failures' empty state. INTERACTION: lab page containing a signup-form specimen (the page itself says four defects are seeded); form shows a generic 'Please fix the errors below.' banner, an unlabelled email field marked only by a red border, no per-field message, no required/optional markers; after submit (state-INTERACTION-form-submit-empty.png) the button greys out with no message and a 'Reset the form' link appears; page states 'No model, no network', so nothing loads or is sent. Mobile (390): 'Menu' text toggle in a ~64px header; all four state-*-mobile-nav-open.png files show a term tooltip popover, not an open menu, so the open-nav state was never captured. No testimonials, logos, pricing or real signup anywhere. Fonts fell back to system fonts; not penalised.",
+ "verdicts": [
+  {
+   "id": "fundamentos/convencao",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "Both surfaces use familiar patterns: logo left / horizontal nav right with an active underline, eyebrow + headline + lede hero, divider-separated lists, footer link row, and a labelled 'Menu' toggle on mobile. Novelty is limited to a small timeline strip and a '≠' comparison block.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/cta-3s",
+   "state": "FAIL",
+   "surface": "ENTRY",
+   "reason": "The ENTRY first screen (desktop and mobile) contains only a headline, a paragraph and a timeline strip; no button or link-styled action is visible. The first action link ('Explore the project →') sits roughly 4400px down the 6166px page and the page ends with two equal-weight links ('Watch Compound happen →' / 'Understand the mechanism →') that compete.",
+   "evidence_file": "ENTRY-desktop-first-screen.png",
+   "measured_value": "0 actions in the first 900px of ENTRY; first action at ~y4400 of 6166; two equal CTAs at page end (ENTRY-desktop.png)",
+   "expected_value": "One primary action identifiable within 3s on ENTRY"
+  },
+  {
+   "id": "hierarquia/leitura",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "On every surface the order is unambiguous from size/weight/position: small mono eyebrow, very large headline, mid-size lede, then body sections. DETAIL and DISCOVERY add a clearly subordinate right-hand meta column.",
+   "evidence_file": "DETAIL-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/proximidade",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Related items sit closer than unrelated ones: eyebrow hugs its heading, list rows keep title+description tight with dividers between rows, form labels sit directly above inputs, and section gaps are several times larger than intra-section spacing.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "hierarquia/whitespace",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "The hero headline on each page is surrounded by the largest empty space on the page; secondary sections are denser, and the DETAIL sidebar is set off by generous margins. Whitespace scales with importance.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/cor-destaque",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "The lime accent appears on actionable or state elements (active nav underline, link arrows, active step border, focus ring, hover, tooltip 'Learn about' links) and on a few emphasised items ('Learning'/'Resource' in the timeline, 'Repeat'). Red is reserved for the form error state. The accent is not used decoratively across body content.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "estilo/paleta",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Colours read as a system: near-black ground, warm off-white text, two grey tiers for secondary text/dividers, one lime accent, a cream card for the form specimen, and semantic red (error) / amber (observed defect) used only where those meanings apply.",
+   "evidence_file": "INTERACTION-desktop.png"
+  },
+  {
+   "id": "estilo/icones",
+   "state": "FAIL",
+   "surface": "ENTRY, DISCOVERY, DETAIL",
+   "reason": "Drawn icons (lime '→' link arrows, circled-i term icons) are mixed with typographic glyphs used as icons: the '↻' before 'Repeat' on ENTRY and after 'compound' on DISCOVERY is a thin, tiny mono glyph, the '←' in 'All resources' on DETAIL is a heavier text glyph underlined with its label, unlike the lime '→' arrows beside it. Stroke weight and optical size do not match across these inline icons.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "↻ (thin mono glyph) and ← (text glyph, DETAIL-desktop.png) vs lime drawn → arrows and ⓘ icons on the same pages",
+   "expected_value": "Inline icons of one family / stroke weight / optical size"
+  },
+  {
+   "id": "acessibilidade/nao-so-cor",
+   "state": "FAIL",
+   "surface": "INTERACTION (nav states PASS on all)",
+   "reason": "Nav active state uses underline + colour and the error banner carries text, but the invalid email field in the form specimen is marked only by a red border: no label, no icon, no adjacent text. After submit the button's only state change is turning grey with no text (state-INTERACTION-form-submit-empty.png).",
+   "evidence_file": "INTERACTION-desktop.png",
+   "measured_value": "Email field: red border only, no message or icon; submit: grey-only state",
+   "expected_value": "State/error also carries text or an icon"
+  },
+  {
+   "id": "navegacao/busca",
+   "state": "FAIL",
+   "surface": "DISCOVERY",
+   "reason": "DISCOVERY indexes about 21 resource pages (15 skills + 6 agents, each a DETAIL destination) in addition to the 7 primary nav pages and a field guide, i.e. well above the ~15-destination threshold, and no search input or search control appears in the header or on any surface.",
+   "evidence_file": "DISCOVERY-desktop.png",
+   "measured_value": "~28+ destinations, 0 search controls",
+   "expected_value": "Search present and keyboard-operable when volume is high"
+  },
+  {
+   "id": "navegacao/mobile-nav",
+   "state": "NOT_VERIFIED",
+   "surface": "all (mobile)",
+   "reason": "At 390px the nav is behind a text 'Menu' toggle in the header, but none of the four state-*-mobile-nav-open.png captures shows the menu open (each shows a term tooltip popover instead), so target size, labelling of the open state and the drawer pattern cannot be verified.",
+   "evidence_file": "state-ENTRY-mobile-nav-open.png"
+  },
+  {
+   "id": "carga/disclosure",
+   "state": "PASS",
+   "surface": "DETAIL, INTERACTION",
+   "reason": "Detail is revealed on demand: DETAIL collapses the full procedure behind '+ Read the full procedure (86 lines · 12 sections)', term definitions open in small popovers from ⓘ triggers, and INTERACTION splits the lab into four tabbed steps with only the active step expanded.",
+   "evidence_file": "DETAIL-desktop.png"
+  },
+  {
+   "id": "carga/feedback",
+   "state": "PASS",
+   "surface": "INTERACTION",
+   "reason": "Submitting the specimen produces an immediate visible change: the 'Create account' button changes to a grey state and a 'Reset the form' link appears next to the legend. The feedback is minimal (the error banner was already present before submit) but the click is not silent.",
+   "evidence_file": "state-INTERACTION-form-submit-empty.png"
+  },
+  {
+   "id": "carga/loading",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "All surfaces are static content; the INTERACTION page states 'Nothing. No model, no network, no randomness', so no operation is long enough to need a loading state.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "carga/prevencao",
+   "state": "NOT_VERIFIED",
+   "surface": "INTERACTION",
+   "reason": "The email field already shows a red border with 'ana@' typed, but no typing or blur state was captured, so it cannot be determined whether validation happens while typing/on blur or only on submit.",
+   "evidence_file": "INTERACTION-desktop.png"
+  },
+  {
+   "id": "carga/recuperacao",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No destructive actions exist on any surface; the only reversible control is a 'Reset the form' link on the inert demo specimen after submit, which discards nothing of consequence.",
+   "evidence_file": "state-INTERACTION-form-submit-empty.png"
+  },
+  {
+   "id": "onboarding/valor-rapido",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Each first screen goes straight to the core content with no gate: ENTRY states the thesis in the hero, DISCOVERY lists resources immediately below the hero, DETAIL opens on the resource description and INTERACTION shows the specimen form within the first screen.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/empty-states",
+   "state": "FAIL",
+   "surface": "DETAIL",
+   "reason": "The 'Known failures' block on DETAIL is an empty state that explains itself ('No failure has been recorded against this resource in the Learning Ledger. That is a statement about the ledger, not about the resource.') but offers no next step or link.",
+   "evidence_file": "DETAIL-desktop-first-screen.png",
+   "measured_value": "Explanatory text only, no CTA/link",
+   "expected_value": "Empty state explains and offers a next step"
+  },
+  {
+   "id": "onboarding/dicas-contexto",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Help appears at the point of doubt: technical terms carry ⓘ triggers that open a small popover with a one-sentence definition and a 'Learn about …' link (seen in state-ENTRY-mobile-nav-open.png and state-INTERACTION-mobile-nav-open.png), and the form carries 'Takes about a minute.' No tour is used.",
+   "evidence_file": "state-INTERACTION-mobile-nav-open.png"
+  },
+  {
+   "id": "onboarding/progresso-fluxo",
+   "state": "PASS",
+   "surface": "INTERACTION",
+   "reason": "The lab flow shows a four-step strip (01 Frame · 02 Verify · 03 Polish · 04 Compound) with the current step marked by a lime top border and bright label while the remaining steps are dimmed, so position and remaining steps are visible.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "confianca/depoimentos",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No testimonials appear on any captured surface.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/numeros",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "Numbers used as status/proof are specific and sourced: '15 skills · 6 agents · v0.3.0-alpha.1', 'Paid model calls in preparing the experiment: 0', 'Read at build time from 3 repository records', CDQI scores like 8.35. No vague quantities ('thousands of…') are used.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/logos",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No pricing or real signup decision point exists; the signup form on INTERACTION is an explicitly inert demo specimen, not a conversion point.",
+   "evidence_file": "INTERACTION-desktop.png"
+  },
+  {
+   "id": "confianca/seguranca",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No data is collected: the only form is the lab specimen and the page states 'No model, no network' and 'the same click always produces the same result'.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "formularios/erro-inline",
+   "state": "FAIL",
+   "surface": "INTERACTION",
+   "reason": "The invalid submission shows only a generic banner at the top of the card ('Please fix the errors below.'); the offending email field has a red border with no label, no adjacent message and no instruction on how to fix it.",
+   "evidence_file": "INTERACTION-desktop.png",
+   "measured_value": "Generic top banner + red border on unlabelled field, 0 per-field messages",
+   "expected_value": "Message next to the field that says how to fix it"
+  },
+  {
+   "id": "formularios/opcionais",
+   "state": "FAIL",
+   "surface": "INTERACTION",
+   "reason": "The three-field form (Full name, unlabelled email, Password) shows no required or optional marker on any field.",
+   "evidence_file": "INTERACTION-desktop.png",
+   "measured_value": "0 of 3 fields marked required or optional",
+   "expected_value": "Required or optional fields consistently marked with a visible marker"
+  },
+  {
+   "id": "formularios/submit-estado",
+   "state": "FAIL",
+   "surface": "INTERACTION",
+   "reason": "After submit the 'Create account' button turns grey (disabled look) with no submitting, success or failure message and no explanation of why it is disabled; the pre-existing banner is unchanged.",
+   "evidence_file": "state-INTERACTION-form-submit-empty.png",
+   "measured_value": "Button greyed, no state text",
+   "expected_value": "Submitting/success/failure visible; button never disabled without explanation"
+  }
+ ],
+ "milestone": "V11",
+ "blind_label": "DESIGN-D",
+ "frozen_sha256": "c2a2aadc74116c1685a0427526ae81a93ba8598548adca4d03e991d6e66987c6"
+}

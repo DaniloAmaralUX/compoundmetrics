@@ -1,0 +1,3977 @@
+{
+ "generated_at": "2026-09-09T17:13:14.610Z",
+ "fps": 30,
+ "compositions": {
+  "master": {
+   "fps": 30,
+   "durationInFrames": 3240
+  },
+  "vertical": {
+   "fps": 30,
+   "durationInFrames": 1620
+  },
+  "teaser": {
+   "fps": 30,
+   "durationInFrames": 450
+  }
+ },
+ "shots": [
+  {
+   "id": "MS-01",
+   "composition": "master",
+   "scene": "Hook",
+   "kind": "hook-statement",
+   "start": 0,
+   "end": 72,
+   "sources": [],
+   "text_keys": [
+    "T.hook.1"
+   ],
+   "data_keys": [
+    "tools.stated_count_in_brief"
+   ],
+   "memory_rail": [],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "hidden",
+    "edges": []
+   }
+  },
+  {
+   "id": "MS-02",
+   "composition": "master",
+   "scene": "Hook",
+   "kind": "hook-nodes",
+   "start": 72,
+   "end": 150,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.hook.2"
+   ],
+   "data_keys": [
+    "tools.stated_count_in_brief",
+    "tools.tools[].id",
+    "tools.tools[].confidence",
+    "transfer-graph.nodes[type=tool].label"
+   ],
+   "memory_rail": [],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "field",
+    "edges": []
+   }
+  },
+  {
+   "id": "MS-03",
+   "composition": "master",
+   "scene": "Hook",
+   "kind": "hook-system",
+   "start": 150,
+   "end": 216,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.hook.3",
+    "L.tools.caption"
+   ],
+   "data_keys": [
+    "tools.tool_candidates",
+    "tools.verified_by_repository",
+    "transfer-graph.edges[verified=true].id"
+   ],
+   "memory_rail": [],
+   "constellation_edges": [
+    "*ghost:all-verified-6f"
+   ],
+   "constellation": {
+    "place": "field",
+    "edges": [],
+    "ghost": true
+   }
+  },
+  {
+   "id": "MS-04",
+   "composition": "master",
+   "scene": "Repetition",
+   "kind": "cuts",
+   "start": 216,
+   "end": 324,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    },
+    {
+     "milestone": "V04",
+     "src": "archive/V04/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    },
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    }
+   ],
+   "text_keys": [
+    "T.pattern.1",
+    "T.pattern.2",
+    "L.persistent[0]"
+   ],
+   "data_keys": [
+    "design-scores.delta.most_persistent_failures[0].id",
+    "design-scores.delta.most_persistent_failures[0].fails",
+    "design-scores.delta.most_persistent_failures[0].of",
+    "milestones[*].name"
+   ],
+   "memory_rail": [
+    "Interface"
+   ],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "parked",
+    "edges": []
+   }
+  },
+  {
+   "id": "MS-05",
+   "composition": "master",
+   "scene": "Repetition",
+   "kind": "cuts",
+   "start": 324,
+   "end": 432,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.pattern.3",
+    "T.pattern.4",
+    "L.persistent[1]"
+   ],
+   "data_keys": [
+    "design-scores.delta.most_persistent_failures[1].id",
+    "design-scores.delta.most_persistent_failures[1].fails",
+    "design-scores.delta.most_persistent_failures[1].of",
+    "milestones[*].name"
+   ],
+   "memory_rail": [
+    "Interface"
+   ],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "parked",
+    "edges": []
+   }
+  },
+  {
+   "id": "MS-06",
+   "composition": "master",
+   "scene": "Repetition",
+   "kind": "cuts",
+   "start": 432,
+   "end": 492,
+   "sources": [
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/primary_action"
+    },
+    {
+     "milestone": "V04",
+     "src": "archive/V04/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/primary_action"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/primary_action"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/primary_action"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/primary_action"
+    }
+   ],
+   "text_keys": [
+    "T.pattern.5",
+    "T.pattern.6",
+    "L.persistent[2]"
+   ],
+   "data_keys": [
+    "design-scores.delta.most_persistent_failures[2].id",
+    "design-scores.delta.most_persistent_failures[2].fails",
+    "design-scores.delta.most_persistent_failures[2].of"
+   ],
+   "memory_rail": [
+    "Interface"
+   ],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "parked",
+    "edges": []
+   }
+  },
+  {
+   "id": "MS-07",
+   "composition": "master",
+   "scene": "Repetition",
+   "kind": "grid",
+   "start": 492,
+   "end": 540,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V04",
+     "src": "archive/V04/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V08",
+     "src": "archive/V08/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V09",
+     "src": "archive/V09/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V10",
+     "src": "archive/V10/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.problem.1",
+    "T.problem.2"
+   ],
+   "data_keys": [
+    "milestones.milestone_count",
+    "design-scores.milestones[*].counts.FAIL"
+   ],
+   "memory_rail": [
+    "Interface"
+   ],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "parked",
+    "edges": []
+   }
+  },
+  {
+   "id": "MS-08",
+   "composition": "master",
+   "scene": "Extraction",
+   "kind": "finding",
+   "start": 540,
+   "end": 648,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.turn.1",
+    "L.node.label[res-ledger-013]",
+    "L.node.label[res-site-check]"
+   ],
+   "data_keys": [
+    "transfer-graph.nodes[res-site-check].label",
+    "transfer-graph.nodes[res-ledger-013].label",
+    "transfer-graph.edges[E50].type",
+    "milestones[V11].name"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50"
+   ],
+   "constellation": {
+    "place": "docked",
+    "edges": [
+     "E49",
+     "E50"
+    ]
+   }
+  },
+  {
+   "id": "MS-09",
+   "composition": "master",
+   "scene": "Extraction",
+   "kind": "resource",
+   "start": 648,
+   "end": 756,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/DETAIL-desktop.png",
+     "section_key": "DETAIL:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.turn.2",
+    "L.edge.type[E51]",
+    "L.edge.type[E52]",
+    "L.node.label[res-solution-axe]",
+    "L.node.label[res-site-check-wait-rule]"
+   ],
+   "data_keys": [
+    "transfer-graph.edges[E51].type",
+    "transfer-graph.edges[E52].type",
+    "transfer-graph.nodes[res-solution-axe].label",
+    "transfer-graph.nodes[res-site-check-wait-rule].label"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52"
+   ],
+   "constellation": {
+    "place": "docked",
+    "edges": [
+     "E51",
+     "E52"
+    ]
+   }
+  },
+  {
+   "id": "MS-10",
+   "composition": "master",
+   "scene": "Extraction",
+   "kind": "loop",
+   "start": 756,
+   "end": 864,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/DISCOVERY-desktop.png",
+     "section_key": "DISCOVERY:desktop/section:The loop, in order"
+    }
+   ],
+   "text_keys": [
+    "L.edge.type[E53]",
+    "L.edge.type[E54]",
+    "L.chain[0].name",
+    "L.node.type.count[*]"
+   ],
+   "data_keys": [
+    "transfer-graph.edges[E53].type",
+    "transfer-graph.edges[E54].type",
+    "transfer-graph.end_to_end_chains[0].name",
+    "transfer-graph.end_to_end_chains[0].fully_verified",
+    "transfer-graph.nodes[].type"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54"
+   ],
+   "constellation": {
+    "place": "docked",
+    "edges": [
+     "E53",
+     "E54"
+    ]
+   }
+  },
+  {
+   "id": "MS-11",
+   "composition": "master",
+   "scene": "Atomic AI Design",
+   "kind": "component-pushes",
+   "start": 864,
+   "end": 972,
+   "sources": [
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/DETAIL-desktop.png",
+     "section_key": "DETAIL:desktop/section:div-0"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/DETAIL-desktop.png",
+     "section_key": "DETAIL:desktop/section:div-0"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/DETAIL-desktop.png",
+     "section_key": "DETAIL:desktop/form"
+    }
+   ],
+   "text_keys": [
+    "T.atomic.1"
+   ],
+   "data_keys": [
+    "milestones[V03].name",
+    "milestones[V06].name",
+    "milestones[V05].name"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54"
+   ],
+   "constellation": {
+    "place": "docked",
+    "edges": []
+   }
+  },
+  {
+   "id": "MS-12",
+   "composition": "master",
+   "scene": "Atomic AI Design",
+   "kind": "atomic-layer",
+   "start": 972,
+   "end": 1098,
+   "sources": [
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/DETAIL-desktop.png",
+     "section_key": "DETAIL:desktop/section:div-1"
+    }
+   ],
+   "text_keys": [
+    "T.atomic.2",
+    "L.node.type.count[component]",
+    "L.node.type.count[resource]",
+    "L.node.type.count[rule]",
+    "L.node.type.count[eval]",
+    "L.node.type.count[skill]",
+    "L.node.type.count[agent]",
+    "L.node.type.count[contract]"
+   ],
+   "data_keys": [
+    "transfer-graph.nodes[].type"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54"
+   ],
+   "constellation": {
+    "place": "docked",
+    "edges": []
+   }
+  },
+  {
+   "id": "MS-13",
+   "composition": "master",
+   "scene": "Atomic AI Design",
+   "kind": "created",
+   "start": 1098,
+   "end": 1215,
+   "sources": [
+    {
+     "milestone": "V09",
+     "src": "archive/V09/surfaces/INTERACTION-desktop.png",
+     "section_key": "INTERACTION:desktop/section:aside-0"
+    },
+    {
+     "milestone": "V04",
+     "src": "archive/V04/surfaces/DISCOVERY-desktop.png",
+     "section_key": "DISCOVERY:desktop/section:div-0"
+    }
+   ],
+   "text_keys": [
+    "L.edge.type[created]"
+   ],
+   "data_keys": [
+    "transfer-graph.edges[type=created].id"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86"
+   ],
+   "constellation": {
+    "place": "grow",
+    "edges": [
+     "type:created"
+    ]
+   }
+  },
+  {
+   "id": "MS-14",
+   "composition": "master",
+   "scene": "Network",
+   "kind": "transfer",
+   "start": 1215,
+   "end": 1350,
+   "sources": [
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V08",
+     "src": "archive/V08/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.compound.1",
+    "L.edge.type[E23]",
+    "L.edge.type[E31]",
+    "L.node.label[res-cd-framework-v02]"
+   ],
+   "data_keys": [
+    "transfer-graph.edges[E23].type",
+    "transfer-graph.edges[E31].type",
+    "transfer-graph.nodes[res-cd-framework-v02].label",
+    "milestones[V05].date_range",
+    "milestones[V08].date_range"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E35",
+    "E36",
+    "E37",
+    "E32",
+    "E33",
+    "E34"
+   ],
+   "constellation": {
+    "place": "parked",
+    "edges": [
+     "E23",
+     "E31",
+     "E32",
+     "E33",
+     "E34",
+     "E35",
+     "E36",
+     "E37"
+    ]
+   }
+  },
+  {
+   "id": "MS-15",
+   "composition": "master",
+   "scene": "Network",
+   "kind": "identical",
+   "start": 1350,
+   "end": 1485,
+   "sources": [
+    {
+     "milestone": "V09",
+     "src": "archive/V09/surfaces/DETAIL-desktop.png",
+     "section_key": "DETAIL:desktop/hero"
+    },
+    {
+     "milestone": "V08",
+     "src": "archive/V08/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.compound.2",
+    "L.identical",
+    "L.edge.type[E20]"
+   ],
+   "data_keys": [
+    "milestones.merge_evaluation.pairs[V08,V09].ahash_hamming",
+    "transfer-graph.edges[E19].type",
+    "transfer-graph.edges[E17].type",
+    "transfer-graph.edges[E20].type",
+    "transfer-graph.edges[E38].type"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78"
+   ],
+   "constellation": {
+    "place": "parked",
+    "edges": [
+     "E19",
+     "E17",
+     "E20",
+     "E38",
+     "E39",
+     "E40",
+     "E78"
+    ]
+   }
+  },
+  {
+   "id": "MS-16",
+   "composition": "master",
+   "scene": "Network",
+   "kind": "fan",
+   "start": 1485,
+   "end": 1620,
+   "sources": [
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.compound.3",
+    "L.node.label[ext-lifeline]",
+    "L.graph.counts"
+   ],
+   "data_keys": [
+    "transfer-graph.nodes[ext-lifeline].label",
+    "transfer-graph.counts.verified_edges",
+    "transfer-graph.counts.edges",
+    "transfer-graph.counts.unverified_edges"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85"
+   ],
+   "constellation": {
+    "place": "parked",
+    "edges": [
+     "E56",
+     "E57",
+     "E58",
+     "E59",
+     "E60",
+     "E61",
+     "type:informed",
+     "E11",
+     "E12",
+     "E21",
+     "E22",
+     "E84",
+     "E85"
+    ]
+   }
+  },
+  {
+   "id": "MS-17",
+   "composition": "master",
+   "scene": "Audit",
+   "kind": "instrument",
+   "start": 1620,
+   "end": 1740,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/INTERACTION-desktop.png",
+     "section_key": "INTERACTION:desktop/hero"
+    },
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/INTERACTION-desktop.png",
+     "section_key": "INTERACTION:desktop/section:Progresso da auditoria"
+    }
+   ],
+   "text_keys": [
+    "T.audit.1",
+    "L.score.label",
+    "L.rubric.sha"
+   ],
+   "data_keys": [
+    "design-scores.label",
+    "design-scores.rubric_sha256",
+    "design-scores.meaning",
+    "transfer-graph.nodes[res-cld-audit-page].label"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08"
+   ],
+   "constellation": {
+    "place": "parked",
+    "edges": [
+     "E02",
+     "E07",
+     "E04",
+     "E08"
+    ]
+   }
+  },
+  {
+   "id": "MS-18",
+   "composition": "master",
+   "scene": "Audit",
+   "kind": "scores",
+   "start": 1740,
+   "end": 1890,
+   "sources": [
+    {
+     "milestone": "V04",
+     "src": "archive/V04/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.audit.2",
+    "L.score[V04]",
+    "L.coverage[V04]",
+    "L.score[V06]",
+    "L.coverage[V06]",
+    "L.score[V11]",
+    "L.coverage[V11]"
+   ],
+   "data_keys": [
+    "design-scores.milestones[V04].score",
+    "design-scores.milestones[V04].coverage",
+    "design-scores.milestones[V04].tool_ids",
+    "design-scores.milestones[V06].score",
+    "design-scores.milestones[V06].coverage",
+    "design-scores.milestones[V06].tool_ids",
+    "design-scores.milestones[V11].score",
+    "design-scores.milestones[V11].coverage",
+    "design-scores.milestones[V11].tool_ids"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08"
+   ],
+   "constellation": {
+    "place": "parked",
+    "edges": []
+   }
+  },
+  {
+   "id": "MS-19",
+   "composition": "master",
+   "scene": "Audit",
+   "kind": "deltas",
+   "start": 1890,
+   "end": 2010,
+   "sources": [
+    {
+     "milestone": "V09",
+     "src": "archive/V09/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V10",
+     "src": "archive/V10/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V08",
+     "src": "archive/V08/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/section:section-2"
+    },
+    {
+     "milestone": "V09",
+     "src": "archive/V09/surfaces/DISCOVERY-desktop.png",
+     "section_key": "DISCOVERY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "L.delta.improvement",
+    "L.delta.regression"
+   ],
+   "data_keys": [
+    "design-scores.delta.biggest_improvement.from",
+    "design-scores.delta.biggest_improvement.to",
+    "design-scores.delta.biggest_improvement.score_delta",
+    "design-scores.delta.biggest_improvement.category_delta",
+    "design-scores.delta.biggest_improvement.same_tool",
+    "design-scores.delta.biggest_regression.from",
+    "design-scores.delta.biggest_regression.to",
+    "design-scores.delta.biggest_regression.score_delta",
+    "design-scores.delta.biggest_regression.category_delta"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08",
+    "E79",
+    "E80-res-cd-interface-review",
+    "E80-res-cd-motion-review",
+    "E80-res-compound-design-agent",
+    "E80-res-interface-reviewer",
+    "E80-res-motion-reviewer",
+    "E80-res-learning-curator",
+    "E80-res-cd-frame",
+    "E80-res-cd-model",
+    "E80-res-cd-compound"
+   ],
+   "constellation": {
+    "place": "parked",
+    "edges": [
+     "E79",
+     "E80-*"
+    ]
+   }
+  },
+  {
+   "id": "MS-20",
+   "composition": "master",
+   "scene": "Audit",
+   "kind": "trend",
+   "start": 2010,
+   "end": 2106,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V04",
+     "src": "archive/V04/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V08",
+     "src": "archive/V08/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V09",
+     "src": "archive/V09/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V10",
+     "src": "archive/V10/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "L.trend",
+    "L.first_vs_last",
+    "L.persistent[0..2]",
+    "L.avg_note"
+   ],
+   "data_keys": [
+    "design-scores.chronological_trend[].milestone",
+    "design-scores.chronological_trend[].score",
+    "design-scores.chronological_trend[].coverage",
+    "design-scores.delta.first_vs_last.from",
+    "design-scores.delta.first_vs_last.to",
+    "design-scores.delta.first_vs_last.score_delta",
+    "design-scores.delta.most_persistent_failures[0..2].id",
+    "design-scores.average_note"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08",
+    "E79",
+    "E80-res-cd-interface-review",
+    "E80-res-cd-motion-review",
+    "E80-res-compound-design-agent",
+    "E80-res-interface-reviewer",
+    "E80-res-motion-reviewer",
+    "E80-res-learning-curator",
+    "E80-res-cd-frame",
+    "E80-res-cd-model",
+    "E80-res-cd-compound"
+   ],
+   "constellation": {
+    "place": "parked",
+    "edges": []
+   }
+  },
+  {
+   "id": "MS-21",
+   "composition": "master",
+   "scene": "Learning Yield",
+   "kind": "yield-counters",
+   "start": 2106,
+   "end": 2220,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/INTERACTION-desktop.png",
+     "section_key": "INTERACTION:desktop/section:The Lab"
+    }
+   ],
+   "text_keys": [
+    "T.audit.3",
+    "T.audit.4",
+    "L.yield.findings",
+    "L.yield.meaningful_failures"
+   ],
+   "data_keys": [
+    "learning-yield.findings",
+    "learning-yield.meaningful_failures",
+    "learning-yield.sources.findings",
+    "learning-yield.sources.ledger"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08",
+    "E79",
+    "E80-res-cd-interface-review",
+    "E80-res-cd-motion-review",
+    "E80-res-compound-design-agent",
+    "E80-res-interface-reviewer",
+    "E80-res-motion-reviewer",
+    "E80-res-learning-curator",
+    "E80-res-cd-frame",
+    "E80-res-cd-model",
+    "E80-res-cd-compound",
+    "E41",
+    "E42",
+    "E44",
+    "E45"
+   ],
+   "constellation": {
+    "place": "docked",
+    "edges": [
+     "E41",
+     "E42",
+     "E44",
+     "E45",
+     "E50"
+    ],
+    "pulse": "type:failure"
+   }
+  },
+  {
+   "id": "MS-22",
+   "composition": "master",
+   "scene": "Learning Yield",
+   "kind": "yield-ladder",
+   "start": 2220,
+   "end": 2370,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/INTERACTION-desktop.png",
+     "section_key": "INTERACTION:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "L.yield.products",
+    "L.yield.findings",
+    "L.yield.meaningful_failures",
+    "L.yield.durable_learnings",
+    "L.yield.resource_candidates",
+    "L.yield.evals",
+    "L.yield.skills_improved"
+   ],
+   "data_keys": [
+    "learning-yield.products",
+    "learning-yield.findings",
+    "learning-yield.meaningful_failures",
+    "learning-yield.durable_learnings",
+    "learning-yield.resource_candidates",
+    "learning-yield.evals",
+    "learning-yield.skills_improved"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval",
+    "Skill"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08",
+    "E79",
+    "E80-res-cd-interface-review",
+    "E80-res-cd-motion-review",
+    "E80-res-compound-design-agent",
+    "E80-res-interface-reviewer",
+    "E80-res-motion-reviewer",
+    "E80-res-learning-curator",
+    "E80-res-cd-frame",
+    "E80-res-cd-model",
+    "E80-res-cd-compound",
+    "E41",
+    "E42",
+    "E44",
+    "E45"
+   ],
+   "constellation": {
+    "place": "docked",
+    "edges": []
+   }
+  },
+  {
+   "id": "MS-23",
+   "composition": "master",
+   "scene": "Learning Yield",
+   "kind": "chain",
+   "start": 2370,
+   "end": 2538,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/DETAIL-desktop.png",
+     "section_key": "DETAIL:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "L.chain[0].name",
+    "L.node.label[res-ledger-013]",
+    "L.node.label[res-solution-axe]",
+    "L.node.label[res-site-check-wait-rule]",
+    "L.edge.type[promoted]",
+    "L.edge.type[superseded]"
+   ],
+   "data_keys": [
+    "transfer-graph.end_to_end_chains[0].edges",
+    "transfer-graph.end_to_end_chains[0].note",
+    "transfer-graph.edges[type=promoted].id",
+    "transfer-graph.edges[type=superseded].id",
+    "transfer-graph.nodes[type=agent].label"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval",
+    "Skill",
+    "Agent"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08",
+    "E79",
+    "E80-res-cd-interface-review",
+    "E80-res-cd-motion-review",
+    "E80-res-compound-design-agent",
+    "E80-res-interface-reviewer",
+    "E80-res-motion-reviewer",
+    "E80-res-learning-curator",
+    "E80-res-cd-frame",
+    "E80-res-cd-model",
+    "E80-res-cd-compound",
+    "E41",
+    "E42",
+    "E44",
+    "E45",
+    "E43",
+    "E70",
+    "E71",
+    "E72",
+    "E73",
+    "E74"
+   ],
+   "constellation": {
+    "place": "docked",
+    "edges": [
+     "E43",
+     "type:promoted",
+     "type:superseded"
+    ]
+   }
+  },
+  {
+   "id": "MS-24",
+   "composition": "master",
+   "scene": "Compound Design / Work System",
+   "kind": "converge",
+   "start": 2538,
+   "end": 2670,
+   "sources": [
+    {
+     "milestone": "V10",
+     "src": "archive/V10/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "L.entry_title[V10]",
+    "L.entry_title[V11]",
+    "L.graph.counts"
+   ],
+   "data_keys": [
+    "milestones[V10].entry_title",
+    "milestones[V11].entry_title",
+    "transfer-graph.counts.verified_edges",
+    "transfer-graph.counts.edges"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval",
+    "Skill",
+    "Agent",
+    "Work System"
+   ],
+   "constellation_edges": [
+    "*all-verified"
+   ],
+   "constellation": {
+    "place": "behind",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true,
+    "centroidLabel": true
+   }
+  },
+  {
+   "id": "MS-25",
+   "composition": "master",
+   "scene": "Compound Design / Work System",
+   "kind": "skills",
+   "start": 2670,
+   "end": 2805,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/DISCOVERY-desktop.png",
+     "section_key": "DISCOVERY:desktop/section:The loop, in order"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "L.node.type.list[skill]"
+   ],
+   "data_keys": [
+    "transfer-graph.nodes[type=skill].label",
+    "milestones[V11].name",
+    "milestones[V11].date_range"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval",
+    "Skill",
+    "Agent",
+    "Work System"
+   ],
+   "constellation_edges": [
+    "*all-verified"
+   ],
+   "constellation": {
+    "place": "behind",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true
+   }
+  },
+  {
+   "id": "MS-26",
+   "composition": "master",
+   "scene": "Compound Design / Work System",
+   "kind": "rail-morph",
+   "start": 2805,
+   "end": 2916,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/footer"
+    }
+   ],
+   "text_keys": [
+    "L.rail.final"
+   ],
+   "data_keys": [
+    "storyboard.RAIL_FINAL",
+    "transfer-graph.nodes[res-cd-frame].label",
+    "transfer-graph.nodes[res-cd-model].label",
+    "transfer-graph.nodes[res-cd-build].label",
+    "transfer-graph.nodes[res-cd-verify].label",
+    "transfer-graph.nodes[res-cd-compound].label"
+   ],
+   "memory_rail": [
+    "Frame",
+    "Model",
+    "Build",
+    "Verify",
+    "Polish",
+    "Compound"
+   ],
+   "constellation_edges": [
+    "*all-verified"
+   ],
+   "constellation": {
+    "place": "behind",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true
+   }
+  },
+  {
+   "id": "MS-27",
+   "composition": "master",
+   "scene": "Finale",
+   "kind": "mosaic",
+   "start": 2916,
+   "end": 3030,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V04",
+     "src": "archive/V04/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V08",
+     "src": "archive/V08/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V09",
+     "src": "archive/V09/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V10",
+     "src": "archive/V10/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.finale.1"
+   ],
+   "data_keys": [
+    "milestones[*].id"
+   ],
+   "memory_rail": [
+    "Frame",
+    "Model",
+    "Build",
+    "Verify",
+    "Polish",
+    "Compound"
+   ],
+   "constellation_edges": [
+    "*all-verified:dim"
+   ],
+   "constellation": {
+    "place": "dim",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true
+   }
+  },
+  {
+   "id": "MS-28",
+   "composition": "master",
+   "scene": "Finale",
+   "kind": "statement",
+   "start": 3030,
+   "end": 3135,
+   "sources": [],
+   "text_keys": [
+    "T.finale.2"
+   ],
+   "data_keys": [],
+   "memory_rail": [
+    "Frame",
+    "Model",
+    "Build",
+    "Verify",
+    "Polish",
+    "Compound"
+   ],
+   "constellation_edges": [
+    "*all-verified"
+   ],
+   "constellation": {
+    "place": "full",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true
+   }
+  },
+  {
+   "id": "MS-29",
+   "composition": "master",
+   "scene": "Finale",
+   "kind": "evidence",
+   "start": 3135,
+   "end": 3240,
+   "sources": [],
+   "text_keys": [
+    "T.finale.3",
+    "T.finale.4",
+    "L.evidence"
+   ],
+   "data_keys": [
+    "milestones.milestone_count",
+    "transfer-graph.counts.verified_edges",
+    "transfer-graph.counts.edges",
+    "design-scores.rubric_sha256",
+    "design-scores.generated_at",
+    "transfer-graph.generated_at",
+    "tools.generated_at"
+   ],
+   "memory_rail": [
+    "Frame",
+    "Model",
+    "Build",
+    "Verify",
+    "Polish",
+    "Compound"
+   ],
+   "constellation_edges": [
+    "*all-verified"
+   ],
+   "constellation": {
+    "place": "full",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true
+   }
+  },
+  {
+   "id": "VT-01",
+   "composition": "vertical",
+   "scene": "Hook",
+   "kind": "hook-statement",
+   "start": 0,
+   "end": 60,
+   "sources": [],
+   "text_keys": [
+    "T.hook.1"
+   ],
+   "data_keys": [
+    "tools.stated_count_in_brief"
+   ],
+   "memory_rail": [],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "hidden",
+    "edges": []
+   }
+  },
+  {
+   "id": "VT-02",
+   "composition": "vertical",
+   "scene": "Hook",
+   "kind": "hook-system",
+   "start": 60,
+   "end": 108,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    }
+   ],
+   "text_keys": [
+    "T.hook.3",
+    "L.tools.caption"
+   ],
+   "data_keys": [
+    "tools.tool_candidates",
+    "tools.verified_by_repository",
+    "tools.tools[].confidence"
+   ],
+   "memory_rail": [],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "lower",
+    "edges": [],
+    "ghost": true
+   }
+  },
+  {
+   "id": "VT-03",
+   "composition": "vertical",
+   "scene": "Repetition",
+   "kind": "cuts",
+   "start": 108,
+   "end": 189,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/nav"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/nav"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/nav"
+    },
+    {
+     "milestone": "V04",
+     "src": "archive/V04/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/nav"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/nav"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/nav"
+    },
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/nav"
+    }
+   ],
+   "text_keys": [
+    "T.pattern.1",
+    "T.pattern.2",
+    "L.persistent[0]"
+   ],
+   "data_keys": [
+    "design-scores.delta.most_persistent_failures[0].id",
+    "design-scores.delta.most_persistent_failures[0].fails",
+    "design-scores.delta.most_persistent_failures[0].of"
+   ],
+   "memory_rail": [
+    "Interface"
+   ],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "lower",
+    "edges": []
+   }
+  },
+  {
+   "id": "VT-04",
+   "composition": "vertical",
+   "scene": "Repetition",
+   "kind": "cuts",
+   "start": 189,
+   "end": 270,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    }
+   ],
+   "text_keys": [
+    "T.pattern.3",
+    "T.pattern.4",
+    "T.problem.1",
+    "T.problem.2"
+   ],
+   "data_keys": [
+    "design-scores.delta.most_persistent_failures[1].id"
+   ],
+   "memory_rail": [
+    "Interface"
+   ],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "lower",
+    "edges": []
+   }
+  },
+  {
+   "id": "VT-05",
+   "composition": "vertical",
+   "scene": "Extraction",
+   "kind": "finding",
+   "start": 270,
+   "end": 351,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    }
+   ],
+   "text_keys": [
+    "T.turn.1",
+    "L.node.label[res-ledger-013]"
+   ],
+   "data_keys": [
+    "transfer-graph.nodes[res-ledger-013].label",
+    "transfer-graph.edges[E50].type"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50"
+   ],
+   "constellation": {
+    "place": "lower",
+    "edges": [
+     "E49",
+     "E50"
+    ]
+   }
+  },
+  {
+   "id": "VT-06",
+   "composition": "vertical",
+   "scene": "Extraction",
+   "kind": "loop",
+   "start": 351,
+   "end": 432,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/DISCOVERY-mobile.png",
+     "section_key": "DISCOVERY:mobile/section:The loop, in order"
+    }
+   ],
+   "text_keys": [
+    "T.turn.2",
+    "L.edge.type[E51]",
+    "L.edge.type[E52]",
+    "L.edge.type[E53]"
+   ],
+   "data_keys": [
+    "transfer-graph.edges[E51].type",
+    "transfer-graph.edges[E52].type",
+    "transfer-graph.edges[E53].type"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54"
+   ],
+   "constellation": {
+    "place": "lower",
+    "edges": [
+     "E51",
+     "E52",
+     "E53",
+     "E54"
+    ]
+   }
+  },
+  {
+   "id": "VT-07",
+   "composition": "vertical",
+   "scene": "Atomic AI Design",
+   "kind": "component-pushes",
+   "start": 432,
+   "end": 519,
+   "sources": [
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/DETAIL-mobile.png",
+     "section_key": "DETAIL:mobile/section:div-0"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/DETAIL-mobile.png",
+     "section_key": "DETAIL:mobile/section:div-0"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/DETAIL-mobile.png",
+     "section_key": "DETAIL:mobile/form"
+    }
+   ],
+   "text_keys": [
+    "T.atomic.1"
+   ],
+   "data_keys": [
+    "milestones[V03].name",
+    "milestones[V06].name",
+    "milestones[V05].name"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54"
+   ],
+   "constellation": {
+    "place": "lower",
+    "edges": []
+   }
+  },
+  {
+   "id": "VT-08",
+   "composition": "vertical",
+   "scene": "Atomic AI Design",
+   "kind": "atomic-layer",
+   "start": 519,
+   "end": 606,
+   "sources": [
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/DETAIL-mobile.png",
+     "section_key": "DETAIL:mobile/section:div-1"
+    }
+   ],
+   "text_keys": [
+    "T.atomic.2",
+    "L.node.type.count[*]"
+   ],
+   "data_keys": [
+    "transfer-graph.nodes[].type"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86"
+   ],
+   "constellation": {
+    "place": "lower",
+    "edges": [
+     "type:created"
+    ]
+   }
+  },
+  {
+   "id": "VT-09",
+   "composition": "vertical",
+   "scene": "Network",
+   "kind": "transfer",
+   "start": 606,
+   "end": 708,
+   "sources": [
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V08",
+     "src": "archive/V08/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    }
+   ],
+   "text_keys": [
+    "T.compound.1",
+    "T.compound.2",
+    "L.edge.type[E31]"
+   ],
+   "data_keys": [
+    "transfer-graph.edges[E23].type",
+    "transfer-graph.edges[E31].type",
+    "transfer-graph.nodes[res-cd-framework-v02].label"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20"
+   ],
+   "constellation": {
+    "place": "lower",
+    "edges": [
+     "E23",
+     "E31",
+     "E32",
+     "E33",
+     "E34",
+     "E35",
+     "E36",
+     "E37",
+     "E19",
+     "E17",
+     "E20"
+    ]
+   }
+  },
+  {
+   "id": "VT-10",
+   "composition": "vertical",
+   "scene": "Network",
+   "kind": "fan",
+   "start": 708,
+   "end": 810,
+   "sources": [
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    }
+   ],
+   "text_keys": [
+    "T.compound.3",
+    "L.graph.counts"
+   ],
+   "data_keys": [
+    "transfer-graph.nodes[ext-lifeline].label",
+    "transfer-graph.counts.verified_edges",
+    "transfer-graph.counts.edges"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85"
+   ],
+   "constellation": {
+    "place": "lower",
+    "edges": [
+     "E56",
+     "E57",
+     "E58",
+     "E59",
+     "E60",
+     "E61",
+     "type:informed",
+     "E11",
+     "E12",
+     "E21",
+     "E22",
+     "E84",
+     "E85"
+    ]
+   }
+  },
+  {
+   "id": "VT-11",
+   "composition": "vertical",
+   "scene": "Audit",
+   "kind": "instrument",
+   "start": 810,
+   "end": 900,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/INTERACTION-mobile.png",
+     "section_key": "INTERACTION:mobile/hero"
+    },
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/INTERACTION-mobile.png",
+     "section_key": "INTERACTION:mobile/section:Progresso da auditoria"
+    }
+   ],
+   "text_keys": [
+    "T.audit.1",
+    "L.score.label"
+   ],
+   "data_keys": [
+    "design-scores.label",
+    "design-scores.rubric_sha256"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08"
+   ],
+   "constellation": {
+    "place": "lower",
+    "edges": [
+     "E02",
+     "E07",
+     "E04",
+     "E08"
+    ]
+   }
+  },
+  {
+   "id": "VT-12",
+   "composition": "vertical",
+   "scene": "Audit",
+   "kind": "scores",
+   "start": 900,
+   "end": 990,
+   "sources": [
+    {
+     "milestone": "V04",
+     "src": "archive/V04/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    }
+   ],
+   "text_keys": [
+    "T.audit.2",
+    "L.score[V04]",
+    "L.coverage[V04]",
+    "L.score[V11]",
+    "L.coverage[V11]"
+   ],
+   "data_keys": [
+    "design-scores.milestones[V04].score",
+    "design-scores.milestones[V04].coverage",
+    "design-scores.milestones[V11].score",
+    "design-scores.milestones[V11].coverage"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08"
+   ],
+   "constellation": {
+    "place": "lower",
+    "edges": []
+   }
+  },
+  {
+   "id": "VT-13",
+   "composition": "vertical",
+   "scene": "Audit",
+   "kind": "deltas",
+   "start": 990,
+   "end": 1053,
+   "sources": [
+    {
+     "milestone": "V09",
+     "src": "archive/V09/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V10",
+     "src": "archive/V10/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    }
+   ],
+   "text_keys": [
+    "L.delta.improvement",
+    "L.first_vs_last"
+   ],
+   "data_keys": [
+    "design-scores.delta.biggest_improvement.from",
+    "design-scores.delta.biggest_improvement.to",
+    "design-scores.delta.biggest_improvement.category_delta",
+    "design-scores.delta.first_vs_last.score_delta"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08",
+    "E79",
+    "E80-res-cd-interface-review",
+    "E80-res-cd-motion-review",
+    "E80-res-compound-design-agent",
+    "E80-res-interface-reviewer",
+    "E80-res-motion-reviewer",
+    "E80-res-learning-curator",
+    "E80-res-cd-frame",
+    "E80-res-cd-model",
+    "E80-res-cd-compound"
+   ],
+   "constellation": {
+    "place": "lower",
+    "edges": [
+     "E79",
+     "E80-*"
+    ]
+   }
+  },
+  {
+   "id": "VT-14",
+   "composition": "vertical",
+   "scene": "Learning Yield",
+   "kind": "yield-counters",
+   "start": 1053,
+   "end": 1161,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/INTERACTION-mobile.png",
+     "section_key": "INTERACTION:mobile/section:The Lab"
+    }
+   ],
+   "text_keys": [
+    "T.audit.3",
+    "T.audit.4"
+   ],
+   "data_keys": [
+    "learning-yield.findings",
+    "learning-yield.meaningful_failures"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08",
+    "E79",
+    "E80-res-cd-interface-review",
+    "E80-res-cd-motion-review",
+    "E80-res-compound-design-agent",
+    "E80-res-interface-reviewer",
+    "E80-res-motion-reviewer",
+    "E80-res-learning-curator",
+    "E80-res-cd-frame",
+    "E80-res-cd-model",
+    "E80-res-cd-compound",
+    "E41",
+    "E42",
+    "E44",
+    "E45"
+   ],
+   "constellation": {
+    "place": "lower",
+    "edges": [
+     "E41",
+     "E42",
+     "E44",
+     "E45"
+    ],
+    "pulse": "type:failure"
+   }
+  },
+  {
+   "id": "VT-15",
+   "composition": "vertical",
+   "scene": "Learning Yield",
+   "kind": "yield-ladder",
+   "start": 1161,
+   "end": 1269,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/INTERACTION-mobile.png",
+     "section_key": "INTERACTION:mobile/hero"
+    }
+   ],
+   "text_keys": [
+    "L.yield.products",
+    "L.yield.findings",
+    "L.yield.meaningful_failures",
+    "L.yield.durable_learnings",
+    "L.yield.resource_candidates",
+    "L.yield.evals",
+    "L.yield.skills_improved"
+   ],
+   "data_keys": [
+    "learning-yield.products",
+    "learning-yield.findings",
+    "learning-yield.meaningful_failures",
+    "learning-yield.durable_learnings",
+    "learning-yield.resource_candidates",
+    "learning-yield.evals",
+    "learning-yield.skills_improved"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval",
+    "Skill",
+    "Agent"
+   ],
+   "constellation_edges": [
+    "E49",
+    "E50",
+    "E51",
+    "E52",
+    "E53",
+    "E54",
+    "E01",
+    "E02",
+    "E03",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E23",
+    "E28",
+    "E29",
+    "E30",
+    "E57",
+    "E59",
+    "E81",
+    "E82",
+    "E83",
+    "E86",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E19",
+    "E20",
+    "E38",
+    "E39",
+    "E40",
+    "E78",
+    "E56",
+    "E58",
+    "E60",
+    "E61",
+    "E05",
+    "E06",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E18",
+    "E63",
+    "E64-cd-frame",
+    "E64-cd-build",
+    "E64-cd-verify",
+    "E64-cd-compound",
+    "E64-cd-strategy",
+    "E64-cd-compound-refresh",
+    "E64-cd-setup",
+    "E64-cd-handoff",
+    "E65",
+    "E66",
+    "E67",
+    "E68",
+    "E69",
+    "E11",
+    "E12",
+    "E21",
+    "E22",
+    "E84",
+    "E85",
+    "E07",
+    "E04",
+    "E08",
+    "E79",
+    "E80-res-cd-interface-review",
+    "E80-res-cd-motion-review",
+    "E80-res-compound-design-agent",
+    "E80-res-interface-reviewer",
+    "E80-res-motion-reviewer",
+    "E80-res-learning-curator",
+    "E80-res-cd-frame",
+    "E80-res-cd-model",
+    "E80-res-cd-compound",
+    "E41",
+    "E42",
+    "E44",
+    "E45",
+    "E43",
+    "E70",
+    "E71",
+    "E72",
+    "E73",
+    "E74"
+   ],
+   "constellation": {
+    "place": "lower",
+    "edges": [
+     "E43",
+     "type:promoted",
+     "type:superseded"
+    ]
+   }
+  },
+  {
+   "id": "VT-16",
+   "composition": "vertical",
+   "scene": "Compound Design / Work System",
+   "kind": "converge",
+   "start": 1269,
+   "end": 1365,
+   "sources": [
+    {
+     "milestone": "V10",
+     "src": "archive/V10/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    }
+   ],
+   "text_keys": [
+    "L.entry_title[V10]"
+   ],
+   "data_keys": [
+    "milestones[V10].entry_title",
+    "transfer-graph.counts.verified_edges"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval",
+    "Skill",
+    "Agent",
+    "Work System"
+   ],
+   "constellation_edges": [
+    "*all-verified"
+   ],
+   "constellation": {
+    "place": "behind",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true,
+    "centroidLabel": true
+   }
+  },
+  {
+   "id": "VT-17",
+   "composition": "vertical",
+   "scene": "Compound Design / Work System",
+   "kind": "rail-morph",
+   "start": 1365,
+   "end": 1458,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    }
+   ],
+   "text_keys": [
+    "L.rail.final"
+   ],
+   "data_keys": [
+    "storyboard.RAIL_FINAL"
+   ],
+   "memory_rail": [
+    "Frame",
+    "Model",
+    "Build",
+    "Verify",
+    "Polish",
+    "Compound"
+   ],
+   "constellation_edges": [
+    "*all-verified"
+   ],
+   "constellation": {
+    "place": "behind",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true
+   }
+  },
+  {
+   "id": "VT-18",
+   "composition": "vertical",
+   "scene": "Finale",
+   "kind": "mosaic",
+   "start": 1458,
+   "end": 1539,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V04",
+     "src": "archive/V04/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V08",
+     "src": "archive/V08/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V09",
+     "src": "archive/V09/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V10",
+     "src": "archive/V10/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-mobile.png",
+     "section_key": "ENTRY:mobile/hero"
+    }
+   ],
+   "text_keys": [
+    "T.finale.1"
+   ],
+   "data_keys": [
+    "milestones[*].id"
+   ],
+   "memory_rail": [
+    "Frame",
+    "Model",
+    "Build",
+    "Verify",
+    "Polish",
+    "Compound"
+   ],
+   "constellation_edges": [
+    "*all-verified:dim"
+   ],
+   "constellation": {
+    "place": "dim",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true
+   }
+  },
+  {
+   "id": "VT-19",
+   "composition": "vertical",
+   "scene": "Finale",
+   "kind": "evidence",
+   "start": 1539,
+   "end": 1620,
+   "sources": [],
+   "text_keys": [
+    "T.finale.2",
+    "T.finale.3",
+    "T.finale.4",
+    "L.evidence"
+   ],
+   "data_keys": [
+    "milestones.milestone_count",
+    "transfer-graph.counts.verified_edges",
+    "transfer-graph.counts.edges",
+    "design-scores.rubric_sha256"
+   ],
+   "memory_rail": [
+    "Frame",
+    "Model",
+    "Build",
+    "Verify",
+    "Polish",
+    "Compound"
+   ],
+   "constellation_edges": [
+    "*all-verified"
+   ],
+   "constellation": {
+    "place": "full",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true
+   }
+  },
+  {
+   "id": "TZ-01",
+   "composition": "teaser",
+   "scene": "Hook",
+   "kind": "hook-statement",
+   "start": 0,
+   "end": 45,
+   "sources": [],
+   "text_keys": [
+    "T.hook.1"
+   ],
+   "data_keys": [
+    "tools.stated_count_in_brief"
+   ],
+   "memory_rail": [],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "hidden",
+    "edges": []
+   }
+  },
+  {
+   "id": "TZ-02",
+   "composition": "teaser",
+   "scene": "Repetition",
+   "kind": "cuts",
+   "start": 45,
+   "end": 135,
+   "sources": [
+    {
+     "milestone": "V01",
+     "src": "archive/V01/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    },
+    {
+     "milestone": "V02",
+     "src": "archive/V02/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    },
+    {
+     "milestone": "V03",
+     "src": "archive/V03/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    },
+    {
+     "milestone": "V05",
+     "src": "archive/V05/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    },
+    {
+     "milestone": "V06",
+     "src": "archive/V06/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    },
+    {
+     "milestone": "V07",
+     "src": "archive/V07/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/nav"
+    }
+   ],
+   "text_keys": [
+    "T.pattern.1",
+    "T.pattern.2"
+   ],
+   "data_keys": [
+    "design-scores.delta.most_persistent_failures[0].id"
+   ],
+   "memory_rail": [
+    "Interface"
+   ],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "parked",
+    "edges": []
+   }
+  },
+  {
+   "id": "TZ-03",
+   "composition": "teaser",
+   "scene": "Repetition",
+   "kind": "cuts",
+   "start": 135,
+   "end": 195,
+   "sources": [
+    {
+     "milestone": "V04",
+     "src": "archive/V04/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V08",
+     "src": "archive/V08/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    },
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.pattern.3",
+    "T.pattern.4"
+   ],
+   "data_keys": [],
+   "memory_rail": [
+    "Interface",
+    "Pattern"
+   ],
+   "constellation_edges": [],
+   "constellation": {
+    "place": "parked",
+    "edges": []
+   }
+  },
+  {
+   "id": "TZ-04",
+   "composition": "teaser",
+   "scene": "Audit",
+   "kind": "scores",
+   "start": 195,
+   "end": 270,
+   "sources": [
+    {
+     "milestone": "V11",
+     "src": "archive/V11/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.audit.2",
+    "L.score[V11]",
+    "L.coverage[V11]"
+   ],
+   "data_keys": [
+    "design-scores.milestones[V11].score",
+    "design-scores.milestones[V11].coverage",
+    "design-scores.label"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval"
+   ],
+   "constellation_edges": [
+    "E02",
+    "E07",
+    "E04",
+    "E08"
+   ],
+   "constellation": {
+    "place": "parked",
+    "edges": [
+     "E02",
+     "E07",
+     "E04",
+     "E08"
+    ]
+   }
+  },
+  {
+   "id": "TZ-05",
+   "composition": "teaser",
+   "scene": "Network",
+   "kind": "converge",
+   "start": 270,
+   "end": 360,
+   "sources": [
+    {
+     "milestone": "V10",
+     "src": "archive/V10/surfaces/ENTRY-desktop.png",
+     "section_key": "ENTRY:desktop/hero"
+    }
+   ],
+   "text_keys": [
+    "T.compound.1",
+    "T.compound.2",
+    "T.compound.3",
+    "L.entry_title[V11]"
+   ],
+   "data_keys": [
+    "transfer-graph.counts.verified_edges",
+    "milestones[V11].entry_title"
+   ],
+   "memory_rail": [
+    "Interface",
+    "Pattern",
+    "Component",
+    "Audit",
+    "Eval",
+    "Skill",
+    "Agent",
+    "Work System"
+   ],
+   "constellation_edges": [
+    "*all-verified"
+   ],
+   "constellation": {
+    "place": "behind",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true,
+    "centroidLabel": true
+   }
+  },
+  {
+   "id": "TZ-06",
+   "composition": "teaser",
+   "scene": "Finale",
+   "kind": "statement",
+   "start": 360,
+   "end": 450,
+   "sources": [],
+   "text_keys": [
+    "T.finale.2",
+    "L.tools.caption"
+   ],
+   "data_keys": [
+    "tools.tool_candidates",
+    "tools.verified_by_repository"
+   ],
+   "memory_rail": [
+    "Frame",
+    "Model",
+    "Build",
+    "Verify",
+    "Polish",
+    "Compound"
+   ],
+   "constellation_edges": [
+    "*all-verified"
+   ],
+   "constellation": {
+    "place": "full",
+    "edges": [
+     "*all-verified"
+    ],
+    "converge": true
+   }
+  }
+ ]
+}

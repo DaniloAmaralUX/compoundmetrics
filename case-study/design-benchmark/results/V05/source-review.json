@@ -1,0 +1,43 @@
+{
+ "milestone": "V05",
+ "verdicts": [
+  {
+   "id": "fundamentos/jtbd",
+   "state": "PASS",
+   "reason": "README opens with a one-sentence statement of the site's job (a catalog of production-ready shadcn/ui designs on the Supernova palette: see it working, read the code, install with one command). docs/HISTORICO.md also frames the guiding question in one sentence.",
+   "evidence_file": "README.md",
+   "quote": "Designs prontos para produto, montados com shadcn/ui sobre a paleta da Supernova. Veja funcionando, leia o código, instale por um comando."
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "state": "PASS",
+   "reason": "docs/HISTORICO.md states the product bet explicitly (can Supernova's existing toolchain — registry, CLI, MCP, tokens — sustain a devl.dev-style catalog?), and ADR-001 ties the central design decision (single primitive family on the shadcn preset) to that bet, justifying it by tooling reach and the viability of covering the remaining 140 screens.",
+   "evidence_file": "docs/HISTORICO.md",
+   "quote": "A pergunta não era \"dá para copiar\", era \"a nossa toolchain — registry, CLI, MCP, tokens — sustenta um produto assim?\"."
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "state": "PASS",
+   "reason": "docs/HISTORICO.md records a pre-build survey (\"Levantamento antes de escrever código\") with licensing constraints (AGPL coss-ui excluded because the product is private; Iconiq MIT), stack constraints, and the design-system constraint (Supernova palette over the shadcn preset). README's \"Como está construído\" table and src/design/preset/PRESET.md record stack and design-system constraints (Next.js 16/React 19/Tailwind v4 static export; single primitive family; only supernova.css may declare literal colour). ADR-001 names the single decider (team constraint).",
+   "evidence_file": "docs/HISTORICO.md",
+   "quote": "Levantamento antes de escrever código: - O devl roda TanStack Start e é construído sobre coss-ui, que é AGPL-3.0. Isso fechou desde o primeiro dia a porta de copiar código deles: produto privado não convive com AGPL."
+  },
+  {
+   "id": "fundamentos/documentado",
+   "state": "PASS",
+   "reason": "A formal ADR (docs/adr/ADR-001-uma-tecnologia-so.md) records context, options A/B/C with trade-off tables, the decision and consequences; docs/HISTORICO.md narrates each change of direction and why; src/design/preset/PRESET.md has a \"Divergências declaradas\" table with a \"Por quê\" column; compound-design/learning/LEDGER.md defines a learning ledger. Commit subjects are conventional but bodies are empty, so the rationale lives in the docs rather than commits.",
+   "evidence_file": "docs/adr/ADR-001-uma-tecnologia-so.md",
+   "quote": "A troca central é craft de motion por coerência e alcance de ferramenta. [...] Contra isso pesam quatro coisas que só a opção B entrega: um vocabulário de variante em vez de três, uma camada de tema em vez de duas, 97 blocos oficiais como ponto de partida, e o MCP conseguindo ler o código de qualquer um deles"
+  }
+ ],
+ "docs_found": [
+  "README.md",
+  "docs/HISTORICO.md",
+  "docs/adr/ADR-001-uma-tecnologia-so.md",
+  "docs/roadmap/01-migrar-as-140-telas-restantes.md",
+  "src/design/preset/PRESET.md",
+  "compound-design/learning/LEDGER.md",
+  "git log -30 (subjects only; bodies empty)"
+ ],
+ "instrument": "source review of the exact commit worktree (unblinded by nature: fundamentos/* items need repository docs)"
+}

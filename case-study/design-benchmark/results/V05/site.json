@@ -7,12 +7,12 @@
  "source_sha": "7af65530482bc304c54e14b6b84b03c75c97807b",
  "date_range": "2026-09-06 → 2026-09-09",
  "overall": {
-  "PASS": 10,
-  "FAIL": 13,
-  "N/A": 0,
-  "NOT_VERIFIED": 31,
-  "score": 43.5,
-  "coverage": 42.6
+  "PASS": 27,
+  "FAIL": 19,
+  "N/A": 4,
+  "NOT_VERIFIED": 4,
+  "score": 58.7,
+  "coverage": 92
  },
  "deterministic_only": {
   "PASS": 10,
@@ -23,117 +23,167 @@
   "coverage": 100
  },
  "judgment_only": {
-  "PASS": 0,
-  "FAIL": 0,
-  "N/A": 0,
-  "NOT_VERIFIED": 31,
-  "score": null,
-  "coverage": 0
+  "PASS": 17,
+  "FAIL": 6,
+  "N/A": 4,
+  "NOT_VERIFIED": 4,
+  "score": 73.9,
+  "coverage": 85.2
  },
  "categories": {
   "fundamentos": {
-   "PASS": 0,
+   "PASS": 5,
    "FAIL": 0,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": null,
-   "coverage": 0
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "hierarquia": {
-   "PASS": 2,
+   "PASS": 7,
    "FAIL": 0,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
+   "NOT_VERIFIED": 0,
    "score": 100,
-   "coverage": 28.6
+   "coverage": 100
   },
   "estilo": {
-   "PASS": 2,
+   "PASS": 4,
    "FAIL": 3,
    "N/A": 0,
-   "NOT_VERIFIED": 2,
-   "score": 40,
-   "coverage": 71.4
+   "NOT_VERIFIED": 0,
+   "score": 57.1,
+   "coverage": 100
   },
   "acessibilidade": {
    "PASS": 5,
-   "FAIL": 3,
+   "FAIL": 4,
    "N/A": 0,
-   "NOT_VERIFIED": 1,
-   "score": 62.5,
-   "coverage": 88.9
+   "NOT_VERIFIED": 0,
+   "score": 55.6,
+   "coverage": 100
   },
   "navegacao": {
    "PASS": 0,
-   "FAIL": 4,
+   "FAIL": 6,
    "N/A": 0,
-   "NOT_VERIFIED": 2,
+   "NOT_VERIFIED": 0,
    "score": 0,
-   "coverage": 66.7
+   "coverage": 100
   },
   "carga": {
-   "PASS": 0,
+   "PASS": 1,
    "FAIL": 1,
-   "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": 0,
-   "coverage": 16.7
+   "N/A": 1,
+   "NOT_VERIFIED": 3,
+   "score": 50,
+   "coverage": 40
   },
   "onboarding": {
-   "PASS": 0,
+   "PASS": 2,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "N/A": 2,
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "confianca": {
-   "PASS": 0,
-   "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "PASS": 2,
+   "FAIL": 1,
+   "N/A": 1,
+   "NOT_VERIFIED": 0,
+   "score": 66.7,
+   "coverage": 100
   },
   "formularios": {
    "PASS": 1,
-   "FAIL": 2,
+   "FAIL": 4,
    "N/A": 0,
-   "NOT_VERIFIED": 3,
-   "score": 33.3,
-   "coverage": 50
+   "NOT_VERIFIED": 1,
+   "score": 20,
+   "coverage": 83.3
   }
  },
  "items": {
   "fundamentos/jtbd": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/jtbd",
+     "state": "PASS",
+     "reason": "README opens with a one-sentence statement of the site's job (a catalog of production-ready shadcn/ui designs on the Supernova palette: see it working, read the code, install with one command). docs/HISTORICO.md also frames the guiding question in one sentence.",
+     "evidence_file": "README.md",
+     "quote": "Designs prontos para produto, montados com shadcn/ui sobre a paleta da Supernova. Veja funcionando, leia o código, instale por um comando."
+    }
+   ]
   },
   "fundamentos/macro-bet": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/macro-bet",
+     "state": "PASS",
+     "reason": "docs/HISTORICO.md states the product bet explicitly (can Supernova's existing toolchain — registry, CLI, MCP, tokens — sustain a devl.dev-style catalog?), and ADR-001 ties the central design decision (single primitive family on the shadcn preset) to that bet, justifying it by tooling reach and the viability of covering the remaining 140 screens.",
+     "evidence_file": "docs/HISTORICO.md",
+     "quote": "A pergunta não era \"dá para copiar\", era \"a nossa toolchain — registry, CLI, MCP, tokens — sustenta um produto assim?\"."
+    }
+   ]
   },
   "fundamentos/convencao": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "fundamentos/convencao",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "ENTRY and DISCOVERY use a familiar catalogue pattern: brand bar top-left with a count top-right, hero headline + paragraph, sectioned card grid with title and filename under each thumbnail, and prev/next links in the footer. Novelty is limited to the monospace meta labels and the keyboard-shortcut bar on DETAIL, which is purposeful for a code catalogue.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "fundamentos/restricoes": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/restricoes",
+     "state": "PASS",
+     "reason": "docs/HISTORICO.md records a pre-build survey (\"Levantamento antes de escrever código\") with licensing constraints (AGPL coss-ui excluded because the product is private; Iconiq MIT), stack constraints, and the design-system constraint (Supernova palette over the shadcn preset). README's \"Como está construído\" table and src/design/preset/PRESET.md record stack and design-system constraints (Next.js 16/React 19/Tailwind v4 static export; single primitive family; only supernova.css may declare literal colour). ADR-001 names the single decider (team constraint).",
+     "evidence_file": "docs/HISTORICO.md",
+     "quote": "Levantamento antes de escrever código: - O devl roda TanStack Start e é construído sobre coss-ui, que é AGPL-3.0. Isso fechou desde o primeiro dia a porta de copiar código deles: produto privado não convive com AGPL."
+    }
+   ]
   },
   "fundamentos/documentado": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/documentado",
+     "state": "PASS",
+     "reason": "A formal ADR (docs/adr/ADR-001-uma-tecnologia-so.md) records context, options A/B/C with trade-off tables, the decision and consequences; docs/HISTORICO.md narrates each change of direction and why; src/design/preset/PRESET.md has a \"Divergências declaradas\" table with a \"Por quê\" column; compound-design/learning/LEDGER.md defines a learning ledger. Commit subjects are conventional but bodies are empty, so the rationale lives in the docs rather than commits.",
+     "evidence_file": "docs/adr/ADR-001-uma-tecnologia-so.md",
+     "quote": "A troca central é craft de motion por coerência e alcance de ferramenta. [...] Contra isso pesam quatro coisas que só a opção B entrega: um vocabulário de variante em vez de três, uma camada de tema em vez de duas, 97 blocos oficiais como ponto de partida, e o MCP conseguindo ler o código de qualquer um deles"
+    }
+   ]
   },
   "hierarquia/cta-3s": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DETAIL",
+   "evidence": [
+    {
+     "id": "hierarquia/cta-3s",
+     "state": "PASS",
+     "surface": "ENTRY, DETAIL",
+     "reason": "ENTRY has no button; its single action type is opening a design card, and the first cards are visible at the bottom of the 1440x900 first screen with nothing competing. On DETAIL the filled full-width 'Create account' button is clearly the primary action against the outlined GitHub/Google buttons.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/headings": {
    "state": "PASS",
@@ -147,24 +197,60 @@
    "evidence": []
   },
   "hierarquia/leitura": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/leitura",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Reading order can be numbered from size and position alone: on ENTRY the large serif headline (1), the paragraph beneath (2), then the '01 Layouts' section title (3); on DETAIL the card title 'Create your account' (1), the subtitle (2), then the OAuth buttons and form (3).",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/proximidade": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/proximidade",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Labels sit directly above their inputs and card titles/filenames sit tight under their thumbnails, with much larger gaps between cards and between sections (divider plus ~100px before each folder title). Related items are visibly closer than unrelated ones.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/whitespace": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DETAIL",
+   "evidence": [
+    {
+     "id": "hierarquia/whitespace",
+     "state": "PASS",
+     "surface": "ENTRY, DETAIL",
+     "reason": "The hero headline on ENTRY is surrounded by the largest whitespace on the page (roughly 150px above the pill and 100px below the paragraph before the divider), while card grids are packed tighter. On DETAIL the form card is centred in a large empty field.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/cor-destaque": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/cor-destaque",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "The only chromatic accents are a muted steel-blue on status counters ('12 DE 12 PRONTOS', 'PASTA 03 DE 18') and the hero pill, a saturated blue on the actionable 'Sign in'/'Terms'/'Privacy' links, and green check marks on the DETAIL reassurance badges. Body text, cards and chrome remain neutral grey, so the accent is reserved for status and actions.",
+     "evidence_file": "DETAIL-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/escala-tipo": {
    "state": "PASS",
@@ -218,9 +304,18 @@
    ]
   },
   "estilo/paleta": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "estilo/paleta",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Colours read as a system: near-black page ground, a slightly lighter card surface, grey borders, white/grey text, one blue accent, green for the check marks, plus third-party brand marks on the GitHub/Google buttons. No stray colours appear in the site chrome.",
+     "evidence_file": "DETAIL-desktop-first-screen.png"
+    }
+   ]
   },
   "estilo/elevacao": {
    "state": "PASS",
@@ -323,16 +418,25 @@
     {
      "surface": "DETAIL",
      "state": "FAIL",
-     "measured": 9,
+     "measured": 8,
      "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-     "evidence": "distinct radii: 4px, 3.35544e+07px, 10.08px, 36.4px, 14px, 30.8px, 36.4px 36.4px 0px 0px, 5px"
+     "evidence": "distinct radii: 4px, 10.08px, 36.4px, 14px, 30.8px, 36.4px 36.4px 0px 0px, 5px, 0px 0px 36.4px 36.4px"
     }
    ]
   },
   "estilo/icones": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL",
+   "evidence": [
+    {
+     "id": "estilo/icones",
+     "state": "PASS",
+     "surface": "DETAIL",
+     "reason": "Site-chrome icons are all thin-stroke outline glyphs of one optical size: the check marks in the top badges, the eye/eye-off toggle in the password field, and the arrow glyphs inside the keyboard-key chips of the bottom bar. The GitHub and Google marks are brand logos rather than a second icon family.",
+     "evidence_file": "DETAIL-desktop-first-screen.png"
+    }
+   ]
   },
   "estilo/motion": {
    "state": "PASS",
@@ -371,7 +475,7 @@
      "state": "FAIL",
      "measured": "10/12",
      "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
-     "evidence": "BUTTON \"GitHub\" outline=none 0px oklab(0.555999 -0.00000530481 0.000012964 / 0.918781); BUTTON \"Google\" outline=none 0px oklab(0.555999 -0.00000530481 0.000012964 / 0.8478)"
+     "evidence": "BUTTON \"GitHub\" outline=none 0px oklab(0.555999 -0.00000530481 0.000012964 / 0.8478); BUTTON \"Google\" outline=none 0px oklab(0.555999 -0.00000530481 0.000012964 / 0.8478)"
     }
    ]
   },
@@ -427,9 +531,20 @@
    ]
   },
   "acessibilidade/nao-so-cor": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL",
+   "evidence": [
+    {
+     "id": "acessibilidade/nao-so-cor",
+     "state": "FAIL",
+     "surface": "DETAIL",
+     "reason": "The 'Create account' button is rendered in a flat grey (measured ~rgb(126,126,126)) with darker label text, signalling a disabled state by colour alone with no text or icon explaining it; the password strength meter is three unlabelled grey bars. Positive states elsewhere (badges with check icon + text, 'x DE y PRONTOS') do carry text.",
+     "evidence_file": "DETAIL-desktop-first-screen.png",
+     "measured_value": "Disabled-looking grey submit button and 3-bar strength meter with no text or icon",
+     "expected_value": "State conveyed by text or icon in addition to colour"
+    }
+   ]
   },
   "acessibilidade/alt-aria": {
    "state": "PASS",
@@ -566,68 +681,57 @@
    ]
   },
   "navegacao/busca": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY, INTERACTION, DETAIL",
+   "evidence": [
+    {
+     "id": "navegacao/busca",
+     "state": "FAIL",
+     "surface": "ENTRY, DISCOVERY, INTERACTION, DETAIL",
+     "reason": "Content volume is high (header states '158 DESIGNS · 18 PASTAS') but no search input or search button exists on any surface: the header has only the brand and count, and the DETAIL keyboard bar offers índice/anterior/seguinte/pasta/aleatório/escuro/código with no search.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "No search control on any of the four surfaces; 158 items across 18 folders",
+     "expected_value": "A keyboard-reachable search input or button for a catalogue of this volume"
+    }
+   ]
   },
   "navegacao/mobile-nav": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL (fails); ENTRY, DISCOVERY, INTERACTION (pass)",
+   "evidence": [
+    {
+     "id": "navegacao/mobile-nav",
+     "state": "FAIL",
+     "surface": "DETAIL (fails); ENTRY, DISCOVERY, INTERACTION (pass)",
+     "reason": "On ENTRY/DISCOVERY/INTERACTION at 390 wide the navigation is the visible index and prev/next footer links with comfortable targets. On DETAIL at 390 wide the two fixed bottom bars (back link + keyboard-shortcut chips) stack to ~180px and overlap the form, covering the Terms checkbox and most of the 'Create account' button; state-DETAIL-mobile-nav-open.png shows the same bars covering the pricing card's price.",
+     "evidence_file": "DETAIL-mobile-first-screen.png",
+     "measured_value": "Fixed nav bars overlap the checkbox and submit button at 390x844",
+     "expected_value": "Navigation visible or behind a labelled >=44px toggle without overflowing onto content"
+    }
+   ]
   },
   "navegacao/links": {
    "state": "FAIL",
    "mode": "deterministic",
    "per_surface": {
-    "ENTRY": "FAIL",
-    "DISCOVERY": "FAIL",
+    "ENTRY": "N/A",
+    "DISCOVERY": "N/A",
     "DETAIL": "FAIL",
-    "INTERACTION": "FAIL"
+    "INTERACTION": "N/A"
    },
    "evidence": [
-    {
-     "surface": "ENTRY",
-     "state": "FAIL",
-     "measured": {
-      "in_text": 158,
-      "distinguished": 0,
-      "axe": 0
-     },
-     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-     "evidence": "0/158 in-text links distinguished by more than colour; axe link-in-text-block 0"
-    },
-    {
-     "surface": "DISCOVERY",
-     "state": "FAIL",
-     "measured": {
-      "in_text": 14,
-      "distinguished": 0,
-      "axe": 0
-     },
-     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-     "evidence": "0/14 in-text links distinguished by more than colour; axe link-in-text-block 0"
-    },
     {
      "surface": "DETAIL",
      "state": "FAIL",
      "measured": {
-      "in_text": 5,
+      "in_text": 1,
       "distinguished": 0,
       "axe": 1
      },
      "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-     "evidence": "0/5 in-text links distinguished by more than colour; axe link-in-text-block 1"
-    },
-    {
-     "surface": "INTERACTION",
-     "state": "FAIL",
-     "measured": {
-      "in_text": 4,
-      "distinguished": 0,
-      "axe": 0
-     },
-     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-     "evidence": "0/4 in-text links distinguished by more than colour; axe link-in-text-block 0"
+     "evidence": "0/1 in-text links distinguished by more than colour; axe link-in-text-block 1"
     }
    ]
   },
@@ -672,69 +776,188 @@
    ]
   },
   "carga/disclosure": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY, DETAIL",
+   "evidence": [
+    {
+     "id": "carga/disclosure",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY, DETAIL",
+     "reason": "Complexity is revealed in layers: ENTRY lists folders with a one-line description and count, DISCOVERY shows one folder's cards, DETAIL opens a single design full-screen, and the code is kept behind the 'c CÓDIGO' shortcut rather than shown inline.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "carga/feedback": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION, DETAIL",
+   "evidence": [
+    {
+     "id": "carga/feedback",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION, DETAIL",
+     "reason": "INTERACTION has only navigation actions (card hover shows a brighter border in state-INTERACTION-hover-first.png). DETAIL has a form, but in state-DETAIL-form-submit-empty.png the only visible change is the password eye icon toggling to eye-off, so the capture does not show whether a submit produced feedback.",
+     "evidence_file": "state-DETAIL-form-submit-empty.png"
+    }
+   ]
   },
   "carga/loading": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY, INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/loading",
+     "state": "NOT_VERIFIED",
+     "surface": "ENTRY, DISCOVERY, INTERACTION",
+     "reason": "Full-page captures show unloaded thumbnails as plain bordered card boxes (9 of 12 in ENTRY folder 01, and the lower half of ENTRY is empty), but the screenshots cannot distinguish a designed placeholder from lazy content that had not mounted at capture time, and no spinner/skeleton was captured.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "carga/prevencao": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL",
+   "evidence": [
+    {
+     "id": "carga/prevencao",
+     "state": "NOT_VERIFIED",
+     "surface": "DETAIL",
+     "reason": "A three-field sign-up form exists on DETAIL, but no typing or blur state was captured (state-DETAIL-focus-first.png focuses the skip link, not a field), so inline validation cannot be verified.",
+     "evidence_file": "state-DETAIL-focus-first.png"
+    }
+   ]
   },
   "carga/recuperacao": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/recuperacao",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No destructive action appears on any surface: the catalogue pages only browse and the DETAIL form creates an account.",
+     "evidence_file": "DETAIL-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/valor-rapido": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "onboarding/valor-rapido",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "The first screen states what the site is ('158 designs em 18 pastas...') and the first design cards are already visible at the bottom of the 1440x900 viewport and just below the fold at 390 wide, so the core content is one scroll away.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/empty-states": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "onboarding/empty-states",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No surface shows an empty collection or empty result: every folder reports 'x DE x PRONTOS' and the DETAIL form is a sign-up. The blank card boxes are unloaded thumbnails, not an empty state.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "onboarding/dicas-contexto": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DETAIL",
+   "evidence": [
+    {
+     "id": "onboarding/dicas-contexto",
+     "state": "PASS",
+     "surface": "ENTRY, DETAIL",
+     "reason": "Help is placed at the point of use rather than in a tour: each folder has a one-line description under its title, the DETAIL password field carries 'At least 8 characters', the card says 'It only takes a minute', and the keyboard shortcuts are listed in the bottom bar where they apply.",
+     "evidence_file": "DETAIL-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/progresso-fluxo": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "onboarding/progresso-fluxo",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No multi-step flow exists on the captured surfaces; the DETAIL sign-up is a single step (a stepper appears only inside a thumbnail of another design).",
+     "evidence_file": "DETAIL-desktop-first-screen.png"
+    }
+   ]
   },
   "confianca/depoimentos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/depoimentos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No testimonials appear on any surface.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "confianca/numeros": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY, DETAIL",
+   "evidence": [
+    {
+     "id": "confianca/numeros",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY, DETAIL",
+     "reason": "Numbers used as claims are specific and self-sourced from the catalogue itself: '158 DESIGNS · 18 PASTAS', '12 DE 12 PRONTOS', '14 DE 14 PRONTOS', '4 DE 4 PRONTOS', and 'FREE FOR 14 DAYS' on DETAIL; no vague quantities appear.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "confianca/logos": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL",
+   "evidence": [
+    {
+     "id": "confianca/logos",
+     "state": "FAIL",
+     "surface": "DETAIL",
+     "reason": "DETAIL is a sign-up decision point; it shows risk-reversal badges (FREE FOR 14 DAYS / NO CREDIT CARD / CANCEL ANYTIME) but no social proof such as customer logos, ratings or user counts anywhere near the form. The catalogue surfaces have no decision point.",
+     "evidence_file": "DETAIL-desktop-first-screen.png",
+     "measured_value": "No logos, ratings or user counts on the sign-up surface",
+     "expected_value": "Social proof positioned at the sign-up decision point"
+    }
+   ]
   },
   "confianca/seguranca": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL",
+   "evidence": [
+    {
+     "id": "confianca/seguranca",
+     "state": "PASS",
+     "surface": "DETAIL",
+     "reason": "The data-collecting DETAIL form shows policy signals: an 'I agree to the Terms and Privacy' checkbox with links, a 'NO CREDIT CARD' badge, a password visibility toggle and a strength meter.",
+     "evidence_file": "DETAIL-desktop-first-screen.png"
+    }
+   ]
   },
   "formularios/labels": {
    "state": "FAIL",
@@ -762,7 +985,16 @@
   "formularios/erro-inline": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL",
+   "evidence": [
+    {
+     "id": "formularios/erro-inline",
+     "state": "NOT_VERIFIED",
+     "surface": "DETAIL",
+     "reason": "state-DETAIL-form-submit-empty.png shows no error message next to any field, but the only visible change versus the base capture is the password eye icon toggling to eye-off and the submit button appears disabled, so the capture does not show an invalid submission actually being processed.",
+     "evidence_file": "state-DETAIL-form-submit-empty.png"
+    }
+   ]
   },
   "formularios/tipos-campo": {
    "state": "PASS",
@@ -800,14 +1032,36 @@
    ]
   },
   "formularios/opcionais": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL",
+   "evidence": [
+    {
+     "id": "formularios/opcionais",
+     "state": "FAIL",
+     "surface": "DETAIL",
+     "reason": "The DETAIL form has three fields (Full name, Email, Password) plus a consent checkbox and none carries a visible required or optional marker: no asterisk, no '(optional)', no legend.",
+     "evidence_file": "DETAIL-desktop-first-screen.png",
+     "measured_value": "0 of 3 labelled fields marked required or optional",
+     "expected_value": "Required or optional fields consistently marked with a visible indicator"
+    }
+   ]
   },
   "formularios/submit-estado": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL",
+   "evidence": [
+    {
+     "id": "formularios/submit-estado",
+     "state": "FAIL",
+     "surface": "DETAIL",
+     "reason": "The 'Create account' button is rendered in a flat disabled grey (~rgb(126,126,126)) with dim label text before any input, and nothing on the card explains what must be completed to enable it; no submitting/success/failure state was captured either.",
+     "evidence_file": "DETAIL-desktop-first-screen.png",
+     "measured_value": "Disabled-looking submit button with no explanatory text",
+     "expected_value": "Submit never disabled without explanation; submitting/success/failure visible"
+    }
+   ]
   }
  }
 }

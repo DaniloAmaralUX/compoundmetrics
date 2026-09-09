@@ -1,0 +1,219 @@
+{
+ "label": "DESIGN-C",
+ "files_viewed": [
+  "ENTRY-desktop-first-screen.png",
+  "ENTRY-desktop.png",
+  "ENTRY-mobile-first-screen.png",
+  "DETAIL-desktop-first-screen.png",
+  "DETAIL-mobile-first-screen.png",
+  "DISCOVERY-desktop-first-screen.png",
+  "DISCOVERY-desktop.png",
+  "DISCOVERY-mobile-first-screen.png",
+  "DISCOVERY-mobile.png",
+  "INTERACTION-desktop-first-screen.png",
+  "INTERACTION-mobile-first-screen.png",
+  "state-DISCOVERY-mobile-nav-open.png",
+  "state-INTERACTION-mobile-nav-open.png",
+  "state-DISCOVERY-hover-first.png",
+  "state-DISCOVERY-focus-first.png",
+  "state-INTERACTION-hover-first.png",
+  "state-INTERACTION-focus-first.png"
+ ],
+ "per_surface_notes": "ENTRY and DETAIL are byte-identical captures (same file sizes, same content): a dark long-form manifesto/status page with header (logo + status string), hero, sections of cards, process steps, score cards and a footer — no navigation, no buttons, no visible links anywhere. DISCOVERY is a component-library browse view: top nav (5 items), search icon, theme toggle, sidebar with 'Search components' + category list, 'Browse All' title, search input, 'All Components' filter select, curated blurb card, card grid with 'NEW' badges; the full-page captures (desktop 16263px, mobile 47264px) are blank below the first ~1500px except the footer, apparently lazy-loaded thumbnails not rendered — not penalised. Mobile DISCOVERY header has search / theme / hamburger circle buttons (~32px visual) and the state-mobile-nav-open capture shows the search command palette (with 'esc' hint and quick links), not an opened nav menu. INTERACTION is a playground: sidebar (component picker, 'Copy for AI', 'Share' collapsed dropdowns, 11 slider controls with numeric values, colour swatch, Reset, 'Back to Docs'), main demo area with a dummy landing page, and a fallback-rendering toast with a copyable flag and close button; mobile hides controls behind a 'Controls' floating button. Only hover/focus states were captured for INTERACTION; no click/submit state, no form, no form-submit-empty capture. Fonts fell back to system faces and some images are missing — ignored.",
+ "verdicts": [
+  {
+   "id": "fundamentos/convencao",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "ENTRY uses a conventional landing structure (header, centred hero, eyebrow labels, section cards, footer); DISCOVERY uses the familiar docs/library pattern (top nav, left category sidebar with search, title, search input, filter select, card grid with badges). Novelty is limited to the dark editorial styling.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/cta-3s",
+   "state": "FAIL",
+   "surface": "ENTRY",
+   "reason": "The ENTRY first screen contains only a headline, a three-line subtitle, a 4-cell stats strip and a disclaimer line; there is no button, link or anchor anywhere on the full page, so no primary action can be identified. DISCOVERY (card grid + search) and INTERACTION (Back to Docs / Copy for AI) do offer actions, so the design as a whole is not a reading-only design.",
+   "evidence_file": "ENTRY-desktop-first-screen.png",
+   "measured_value": "0 actionable elements on ENTRY hero and full page (ENTRY-desktop.png)",
+   "expected_value": "one identifiable primary action on ENTRY"
+  },
+  {
+   "id": "hierarquia/leitura",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "On ENTRY the eye goes eyebrow → oversized headline → subtitle → stats strip by size and centring; on DISCOVERY the bold 'Browse All' title, then the curated card, then the grid; on INTERACTION the demo headline, then the sidebar controls. Order is numberable from size/weight/position.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/proximidade",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Related items sit tightly together (label/heading/description/key-value table inside each ENTRY card; step title, description and chips next to each numbered process node; slider label and value in one row on INTERACTION), while sections are separated by large gaps and hairlines.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "hierarquia/whitespace",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "The ENTRY hero headline has the largest empty margins on the page (roughly 130px above and generous space below), and each section heading is preceded by ~200px of space; DISCOVERY gives the 'Browse All' title and curated card more breathing room than the grid cards.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/cor-destaque",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY, INTERACTION",
+   "reason": "ENTRY reserves its lime accent for key data (status dot, CDQI scores 8.45–8.75, the current E1 evidence row, the 'NOW v0.2.1' card) and a cyan for E1 chips/labels; body, headings and cards stay neutral. DISCOVERY and INTERACTION use white for buttons only, with purple confined to component thumbnails (content).",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "estilo/paleta",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Colours read as a system: near-black backgrounds, a few grey surface/border steps, white and grey text, one lime accent plus a cyan secondary on ENTRY; DISCOVERY/INTERACTION are neutral with white actions. No stray colours outside thumbnails and demo content.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "estilo/icones",
+   "state": "PASS",
+   "surface": "DISCOVERY, INTERACTION",
+   "reason": "All inline icons (magnifier, moon, hamburger, sparkle, share, reset, back arrow, copy, close, chevrons) are thin single-stroke line icons of the same optical size; ENTRY only uses a dot and small arrows.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "acessibilidade/nao-so-cor",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY, INTERACTION",
+   "reason": "State indicators carry text: 'NEW' badges are text labels, the highlighted E1 row on ENTRY also reads 'E1 Deterministic', the current version card is labelled 'NOW', slider fills on INTERACTION are paired with numeric values, and the fallback state is an explicit toast message. No error/success state exists to check.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "navegacao/busca",
+   "state": "PASS",
+   "surface": "DISCOVERY",
+   "reason": "Volume is high (166 components, 5 nav sections) and search is present three times on DISCOVERY (sidebar 'Search components', main 'Search…' input, header search button) and on mobile as a command palette with an 'esc' hint; native text inputs are keyboard reachable.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "navegacao/mobile-nav",
+   "state": "NOT_VERIFIED",
+   "surface": "DISCOVERY, INTERACTION",
+   "reason": "At 390px DISCOVERY hides the nav behind a conventional hamburger button (visual circle ~32px; actual hit area and label not measurable), and the state-DISCOVERY-mobile-nav-open capture shows the search palette rather than the opened menu, so the nav contents and target sizes could not be checked; INTERACTION mobile shows only a back arrow and component picker.",
+   "evidence_file": "state-DISCOVERY-mobile-nav-open.png"
+  },
+  {
+   "id": "carga/disclosure",
+   "state": "PASS",
+   "surface": "INTERACTION, DISCOVERY",
+   "reason": "INTERACTION keeps 'Copy for AI' and 'Share' as collapsed dropdowns, truncates the component description, and on mobile hides all sliders behind a 'Controls' button; DISCOVERY collapses the category list into 'Browse the library' on mobile and puts filtering behind a select.",
+   "evidence_file": "INTERACTION-mobile-first-screen.png"
+  },
+  {
+   "id": "carga/feedback",
+   "state": "NOT_VERIFIED",
+   "surface": "INTERACTION",
+   "reason": "Only hover and focus states were captured (the header search button gains a visible ring in state-INTERACTION-hover-first.png); no click, copy, share or reset result was captured, so immediate feedback on action cannot be confirmed.",
+   "evidence_file": "state-INTERACTION-hover-first.png"
+  },
+  {
+   "id": "carga/loading",
+   "state": "NOT_VERIFIED",
+   "surface": "DISCOVERY, INTERACTION",
+   "reason": "Card frames below the first screen render as blank dark boxes with only a 'NEW' badge (DISCOVERY-mobile.png second card, lower rows of DISCOVERY-desktop.png) but it cannot be told whether these are pending lazy loads without a skeleton or dark canvas content; no spinner/skeleton state was captured on INTERACTION either.",
+   "evidence_file": "DISCOVERY-mobile.png"
+  },
+  {
+   "id": "carga/prevencao",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No form exists on any surface; the only inputs are single search boxes, a filter select and playground sliders, none of which take validated data (no form-submit-empty capture was produced).",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "carga/recuperacao",
+   "state": "N/A",
+   "surface": "INTERACTION",
+   "reason": "No destructive action is present; the only candidate is the playground 'Reset' link that restores default slider values, which is a low-stakes, immediately re-adjustable action, and the toast close only dismisses a notice.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/valor-rapido",
+   "state": "PASS",
+   "surface": "DISCOVERY, INTERACTION, ENTRY",
+   "reason": "DISCOVERY shows the component grid and search within the first screen and INTERACTION shows the live demo with its controls immediately; ENTRY's first screen states the proposition and key figures directly, though reaching the described resources requires long scrolling with no link.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/empty-states",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No empty state is shown on any captured surface (DISCOVERY shows '166 of 166 components'; no zero-result search or empty list was captured).",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/dicas-contexto",
+   "state": "PASS",
+   "surface": "INTERACTION, DISCOVERY",
+   "reason": "Help appears at the point of doubt: the INTERACTION toast explains the fallback rendering with the exact flag and a copy button next to the demo, the component picker carries a one-line description, the mobile search palette shows an 'esc' hint, and DISCOVERY's curated card explains the collection above the grid. No tour is used.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/progresso-fluxo",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "There is no multi-step user flow; the numbered 7-stage process on ENTRY is descriptive content, not a wizard.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/depoimentos",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No testimonials appear on any surface; the DISCOVERY 'Curated by' blurb is an editorial note, not a quote.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "confianca/numeros",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "Numbers used as proof are specific and labelled with their source metric: '07 stages / 06 resources / E1 / 0 paid runtime', CDQI scores such as 8.45 and 8.75 with the 0–10 scale and 15%/10% weights defined on the same page, and '166 of 166 components' on DISCOVERY; no vague quantities are used.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/logos",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No pricing or signup decision point exists on any surface; the 'Start free' buttons on INTERACTION are dummy content inside the demo component.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "confianca/seguranca",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No personal or payment data is collected; the only inputs are search fields and playground sliders.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "formularios/erro-inline",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "There is no form to submit invalidly; search inputs have no validation and no form-submit-empty state was captured.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "formularios/opcionais",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No multi-field form exists; the only fields are single search inputs.",
+   "evidence_file": "DISCOVERY-mobile-first-screen.png"
+  },
+  {
+   "id": "formularios/submit-estado",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No form with a submit button exists on any surface.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  }
+ ],
+ "milestone": "V09",
+ "blind_label": "DESIGN-C",
+ "frozen_sha256": "34c96a93990edbdf9fdef7b582d5eabf76ac5f809241dcdee26d1317968bd35e"
+}

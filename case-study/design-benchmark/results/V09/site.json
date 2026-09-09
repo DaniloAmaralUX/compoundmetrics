@@ -8,133 +8,185 @@
  "source_sha": "231889f0098213a96ccc069ba5557a18cc9f0cfb",
  "date_range": "2026-09-09",
  "overall": {
-  "PASS": 7,
+  "PASS": 24,
   "FAIL": 14,
-  "N/A": 2,
-  "NOT_VERIFIED": 31,
-  "score": 33.3,
-  "coverage": 40.4
+  "N/A": 13,
+  "NOT_VERIFIED": 3,
+  "score": 63.2,
+  "coverage": 92.7
  },
  "deterministic_only": {
   "PASS": 7,
-  "FAIL": 14,
-  "N/A": 2,
+  "FAIL": 13,
+  "N/A": 3,
   "NOT_VERIFIED": 0,
-  "score": 33.3,
+  "score": 35,
   "coverage": 100
  },
  "judgment_only": {
-  "PASS": 0,
-  "FAIL": 0,
-  "N/A": 0,
-  "NOT_VERIFIED": 31,
-  "score": null,
-  "coverage": 0
+  "PASS": 17,
+  "FAIL": 1,
+  "N/A": 10,
+  "NOT_VERIFIED": 3,
+  "score": 94.4,
+  "coverage": 85.7
  },
  "categories": {
   "fundamentos": {
-   "PASS": 0,
+   "PASS": 5,
    "FAIL": 0,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": null,
-   "coverage": 0
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "hierarquia": {
-   "PASS": 0,
-   "FAIL": 2,
-   "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": 0,
-   "coverage": 28.6
-  },
-  "estilo": {
-   "PASS": 2,
+   "PASS": 4,
    "FAIL": 3,
    "N/A": 0,
-   "NOT_VERIFIED": 2,
-   "score": 40,
-   "coverage": 71.4
+   "NOT_VERIFIED": 0,
+   "score": 57.1,
+   "coverage": 100
+  },
+  "estilo": {
+   "PASS": 4,
+   "FAIL": 3,
+   "N/A": 0,
+   "NOT_VERIFIED": 0,
+   "score": 57.1,
+   "coverage": 100
   },
   "acessibilidade": {
-   "PASS": 4,
+   "PASS": 5,
    "FAIL": 4,
    "N/A": 0,
-   "NOT_VERIFIED": 1,
-   "score": 50,
-   "coverage": 88.9
+   "NOT_VERIFIED": 0,
+   "score": 55.6,
+   "coverage": 100
   },
   "navegacao": {
-   "PASS": 1,
-   "FAIL": 2,
-   "N/A": 1,
-   "NOT_VERIFIED": 2,
-   "score": 33.3,
-   "coverage": 60
+   "PASS": 2,
+   "FAIL": 1,
+   "N/A": 2,
+   "NOT_VERIFIED": 1,
+   "score": 66.7,
+   "coverage": 75
   },
   "carga": {
-   "PASS": 0,
+   "PASS": 1,
    "FAIL": 1,
-   "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": 0,
-   "coverage": 16.7
+   "N/A": 2,
+   "NOT_VERIFIED": 2,
+   "score": 50,
+   "coverage": 50
   },
   "onboarding": {
-   "PASS": 0,
+   "PASS": 2,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "N/A": 2,
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "confianca": {
-   "PASS": 0,
+   "PASS": 1,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "N/A": 3,
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "formularios": {
    "PASS": 0,
    "FAIL": 2,
-   "N/A": 1,
-   "NOT_VERIFIED": 3,
+   "N/A": 4,
+   "NOT_VERIFIED": 0,
    "score": 0,
-   "coverage": 40
+   "coverage": 100
   }
  },
  "items": {
   "fundamentos/jtbd": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/jtbd",
+     "state": "PASS",
+     "reason": "README.md opens with a one-sentence job statement for the product, and docs/product/PRD-CANVAS-UI.md §1 states the core job in a single quoted sentence ('Encontrar um componente, experimentar seus estados e tokens, combiná-lo com outros componentes e exportar código reproduzível.'). Caveat: the public root of this build is the 'Compound Design v0.2.1' POC page (src/app/page.tsx re-exports src/app/compound-design/page.tsx); no README/PRD/brief in the repo describes that page — its only self-description is the metadata.description string in the page source. The documented job covers the Studio Dev UI surfaces (gallery, docs, playground, studio) that remain in the site.",
+     "evidence_file": "README.md",
+     "quote": "A design-engineering library for discovering, testing, and installing crafted UI experiences."
+    }
+   ]
   },
   "fundamentos/macro-bet": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/macro-bet",
+     "state": "PASS",
+     "reason": "PRD-CANVAS-UI.md states the product bet explicitly (evolve from an effects library into a component workbench; north-star metric = weekly configured components that reach save/fork/valid export) and derives principles from it ('Experimentar antes de cadastrar' → works without login; 'Preview e exportação devem concordar'). DESIGN.md §3 ties concrete UI decisions to that bet ('Preview é o padrão', 'Atribuição e licença sempre visíveis... requisito de licença, não enfeite', 'Customize fica embaixo do preview, usando os MESMOS SchemaControlRows'). Same caveat as jtbd: the Compound Design root page has no documented bet in the repo.",
+     "evidence_file": "docs/product/PRD-CANVAS-UI.md",
+     "quote": "O Canvas UI evoluirá de uma biblioteca e documentação de efeitos visuais para um **component workbench** ... Número semanal de componentes configurados que resultam em save, fork ou exportação válida."
+    }
+   ]
   },
   "fundamentos/convencao": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "fundamentos/convencao",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "ENTRY uses a conventional landing structure (header, centred hero, eyebrow labels, section cards, footer); DISCOVERY uses the familiar docs/library pattern (top nav, left category sidebar with search, title, search input, filter select, card grid with badges). Novelty is limited to the dark editorial styling.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "fundamentos/restricoes": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/restricoes",
+     "state": "PASS",
+     "reason": "Constraints are recorded before/at the start of the build: DESIGN.md is an explicit visual contract ('Este arquivo é contrato, não inspiração') fixing tokens-only colour, a six-step type scale, 4px spacing base, radius ladder, motion durations and lucide icons; docs/product/DEPENDENCY-POLICY.md pins stack and licence constraints (DialKit 1.4.3 exact, shadcn snapshot a85299a, Sandpack 2.20.0, MCP SDK 1.29.0, Node 22 Windows/Linux); PRD §14 records non-functional constraints (WCAG 2.2 AA, Lighthouse ≥90, browsers, sandbox CSP) and §15.6 the 'no extra skills layer' constraint; QWEN.md records the team constraint ('The product owner is a designer, not a software engineer'). HANDOFF-CLAUDE-CODE.md records time/scope gates ('Gates externos — não contornar').",
+     "evidence_file": "DESIGN.md",
+     "quote": "Este arquivo é **contrato**, não inspiração. Toda superfície nova ... é construída contra ele e validada contra ele ... Base **4px**. Passos em uso: `4, 6, 8, 12, 16, 24, 32, 48, 64, 96`."
+    }
+   ]
   },
   "fundamentos/documentado": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/documentado",
+     "state": "PASS",
+     "reason": "Decision rationale is recorded in docs/solutions/* (problem → root cause → solution → test guard, e.g. url-state/estado-de-view-derivado-da-url.md explains why tab state is derived from the URL instead of useState), in DESIGN.md (e.g. §1.6 explains why the image outline is the single exception to the token rule), and in docs/product/AUDIT-MATRIX.md / IMPLEMENTATION-STATUS.md (requirement-by-requirement evidence). Commit bodies in the last 30 commits are mostly empty (the compound-design commits have no body), so commits alone would not satisfy this item; the docs do.",
+     "evidence_file": "docs/solutions/url-state/estado-de-view-derivado-da-url.md",
+     "quote": "## Causa raiz — A aba vivia em dois lugares: `useState` local **e** query string ... Para estado que o produto promete ser compartilhável por URL ... a URL é a **única** fonte"
+    }
+   ]
   },
   "hierarquia/cta-3s": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "hierarquia/cta-3s",
+     "state": "FAIL",
+     "surface": "ENTRY",
+     "reason": "The ENTRY first screen contains only a headline, a three-line subtitle, a 4-cell stats strip and a disclaimer line; there is no button, link or anchor anywhere on the full page, so no primary action can be identified. DISCOVERY (card grid + search) and INTERACTION (Back to Docs / Copy for AI) do offer actions, so the design as a whole is not a reading-only design.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "0 actionable elements on ENTRY hero and full page (ENTRY-desktop.png)",
+     "expected_value": "one identifiable primary action on ENTRY"
+    }
+   ]
   },
   "hierarquia/headings": {
    "state": "FAIL",
@@ -161,24 +213,60 @@
    ]
   },
   "hierarquia/leitura": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/leitura",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "On ENTRY the eye goes eyebrow → oversized headline → subtitle → stats strip by size and centring; on DISCOVERY the bold 'Browse All' title, then the curated card, then the grid; on INTERACTION the demo headline, then the sidebar controls. Order is numberable from size/weight/position.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/proximidade": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/proximidade",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Related items sit tightly together (label/heading/description/key-value table inside each ENTRY card; step title, description and chips next to each numbered process node; slider label and value in one row on INTERACTION), while sections are separated by large gaps and hairlines.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "hierarquia/whitespace": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "hierarquia/whitespace",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "The ENTRY hero headline has the largest empty margins on the page (roughly 130px above and generous space below), and each section heading is preceded by ~200px of space; DISCOVERY gives the 'Browse All' title and curated card more breathing room than the grid cards.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/cor-destaque": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY, INTERACTION",
+   "evidence": [
+    {
+     "id": "hierarquia/cor-destaque",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY, INTERACTION",
+     "reason": "ENTRY reserves its lime accent for key data (status dot, CDQI scores 8.45–8.75, the current E1 evidence row, the 'NOW v0.2.1' card) and a cyan for E1 chips/labels; body, headings and cards stay neutral. DISCOVERY and INTERACTION use white for buttons only, with purple confined to component thumbnails (content).",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "hierarquia/escala-tipo": {
    "state": "FAIL",
@@ -254,9 +342,18 @@
    ]
   },
   "estilo/paleta": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "estilo/paleta",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Colours read as a system: near-black backgrounds, a few grey surface/border steps, white and grey text, one lime accent plus a cyan secondary on ENTRY; DISCOVERY/INTERACTION are neutral with white actions. No stray colours outside thumbnails and demo content.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "estilo/elevacao": {
    "state": "PASS",
@@ -343,9 +440,9 @@
     {
      "surface": "DISCOVERY",
      "state": "FAIL",
-     "measured": 7,
+     "measured": 6,
      "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-     "evidence": "distinct radii: 10px, 4px, 14px, 18px, 12px, 8px, 3.35544e+07px"
+     "evidence": "distinct radii: 10px, 4px, 14px, 18px, 12px, 8px"
     },
     {
      "surface": "DETAIL",
@@ -357,16 +454,25 @@
     {
      "surface": "INTERACTION",
      "state": "FAIL",
-     "measured": 6,
+     "measured": 5,
      "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-     "evidence": "distinct radii: 3.35544e+07px, 10px, 18px, 14px, 8px, 22px"
+     "evidence": "distinct radii: 10px, 18px, 14px, 8px, 22px"
     }
    ]
   },
   "estilo/icones": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DISCOVERY, INTERACTION",
+   "evidence": [
+    {
+     "id": "estilo/icones",
+     "state": "PASS",
+     "surface": "DISCOVERY, INTERACTION",
+     "reason": "All inline icons (magnifier, moon, hamburger, sparkle, share, reset, back arrow, copy, close, chevrons) are thin single-stroke line icons of the same optical size; ENTRY only uses a dot and small arrows.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "estilo/motion": {
    "state": "PASS",
@@ -446,9 +552,18 @@
    ]
   },
   "acessibilidade/nao-so-cor": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY, INTERACTION",
+   "evidence": [
+    {
+     "id": "acessibilidade/nao-so-cor",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY, INTERACTION",
+     "reason": "State indicators carry text: 'NEW' badges are text labels, the highlighted E1 row on ENTRY also reads 'E1 Deterministic', the current version card is labelled 'NOW', slider fills on INTERACTION are paired with numeric values, and the fallback state is an explicit toast message. No error/success state exists to check.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "acessibilidade/alt-aria": {
    "state": "PASS",
@@ -552,37 +667,43 @@
    "evidence": []
   },
   "navegacao/busca": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DISCOVERY",
+   "evidence": [
+    {
+     "id": "navegacao/busca",
+     "state": "PASS",
+     "surface": "DISCOVERY",
+     "reason": "Volume is high (166 components, 5 nav sections) and search is present three times on DISCOVERY (sidebar 'Search components', main 'Search…' input, header search button) and on mobile as a command palette with an 'esc' hint; native text inputs are keyboard reachable.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "navegacao/mobile-nav": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DISCOVERY, INTERACTION",
+   "evidence": [
+    {
+     "id": "navegacao/mobile-nav",
+     "state": "NOT_VERIFIED",
+     "surface": "DISCOVERY, INTERACTION",
+     "reason": "At 390px DISCOVERY hides the nav behind a conventional hamburger button (visual circle ~32px; actual hit area and label not measurable), and the state-DISCOVERY-mobile-nav-open capture shows the search palette rather than the opened menu, so the nav contents and target sizes could not be checked; INTERACTION mobile shows only a back arrow and component picker.",
+     "evidence_file": "state-DISCOVERY-mobile-nav-open.png"
+    }
+   ]
   },
   "navegacao/links": {
-   "state": "FAIL",
+   "state": "N/A",
    "mode": "deterministic",
    "per_surface": {
     "ENTRY": "N/A",
-    "DISCOVERY": "FAIL",
+    "DISCOVERY": "N/A",
     "DETAIL": "N/A",
     "INTERACTION": "N/A"
    },
-   "evidence": [
-    {
-     "surface": "DISCOVERY",
-     "state": "FAIL",
-     "measured": {
-      "in_text": 188,
-      "distinguished": 12,
-      "axe": 0
-     },
-     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-     "evidence": "12/188 in-text links distinguished by more than colour; axe link-in-text-block 0"
-    }
-   ]
+   "evidence": []
   },
   "carga/chunks": {
    "state": "FAIL",
@@ -613,69 +734,186 @@
    ]
   },
   "carga/disclosure": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION, DISCOVERY",
+   "evidence": [
+    {
+     "id": "carga/disclosure",
+     "state": "PASS",
+     "surface": "INTERACTION, DISCOVERY",
+     "reason": "INTERACTION keeps 'Copy for AI' and 'Share' as collapsed dropdowns, truncates the component description, and on mobile hides all sliders behind a 'Controls' button; DISCOVERY collapses the category list into 'Browse the library' on mobile and puts filtering behind a select.",
+     "evidence_file": "INTERACTION-mobile-first-screen.png"
+    }
+   ]
   },
   "carga/feedback": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/feedback",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION",
+     "reason": "Only hover and focus states were captured (the header search button gains a visible ring in state-INTERACTION-hover-first.png); no click, copy, share or reset result was captured, so immediate feedback on action cannot be confirmed.",
+     "evidence_file": "state-INTERACTION-hover-first.png"
+    }
+   ]
   },
   "carga/loading": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DISCOVERY, INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/loading",
+     "state": "NOT_VERIFIED",
+     "surface": "DISCOVERY, INTERACTION",
+     "reason": "Card frames below the first screen render as blank dark boxes with only a 'NEW' badge (DISCOVERY-mobile.png second card, lower rows of DISCOVERY-desktop.png) but it cannot be told whether these are pending lazy loads without a skeleton or dark canvas content; no spinner/skeleton state was captured on INTERACTION either.",
+     "evidence_file": "DISCOVERY-mobile.png"
+    }
+   ]
   },
   "carga/prevencao": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/prevencao",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No form exists on any surface; the only inputs are single search boxes, a filter select and playground sliders, none of which take validated data (no form-submit-empty capture was produced).",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "carga/recuperacao": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/recuperacao",
+     "state": "N/A",
+     "surface": "INTERACTION",
+     "reason": "No destructive action is present; the only candidate is the playground 'Reset' link that restores default slider values, which is a low-stakes, immediately re-adjustable action, and the toast close only dismisses a notice.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/valor-rapido": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DISCOVERY, INTERACTION, ENTRY",
+   "evidence": [
+    {
+     "id": "onboarding/valor-rapido",
+     "state": "PASS",
+     "surface": "DISCOVERY, INTERACTION, ENTRY",
+     "reason": "DISCOVERY shows the component grid and search within the first screen and INTERACTION shows the live demo with its controls immediately; ENTRY's first screen states the proposition and key figures directly, though reaching the described resources requires long scrolling with no link.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/empty-states": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "onboarding/empty-states",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No empty state is shown on any captured surface (DISCOVERY shows '166 of 166 components'; no zero-result search or empty list was captured).",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/dicas-contexto": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION, DISCOVERY",
+   "evidence": [
+    {
+     "id": "onboarding/dicas-contexto",
+     "state": "PASS",
+     "surface": "INTERACTION, DISCOVERY",
+     "reason": "Help appears at the point of doubt: the INTERACTION toast explains the fallback rendering with the exact flag and a copy button next to the demo, the component picker carries a one-line description, the mobile search palette shows an 'esc' hint, and DISCOVERY's curated card explains the collection above the grid. No tour is used.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/progresso-fluxo": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "onboarding/progresso-fluxo",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "There is no multi-step user flow; the numbered 7-stage process on ENTRY is descriptive content, not a wizard.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "confianca/depoimentos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/depoimentos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No testimonials appear on any surface; the DISCOVERY 'Curated by' blurb is an editorial note, not a quote.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "confianca/numeros": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "confianca/numeros",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "Numbers used as proof are specific and labelled with their source metric: '07 stages / 06 resources / E1 / 0 paid runtime', CDQI scores such as 8.45 and 8.75 with the 0–10 scale and 15%/10% weights defined on the same page, and '166 of 166 components' on DISCOVERY; no vague quantities are used.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "confianca/logos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/logos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No pricing or signup decision point exists on any surface; the 'Start free' buttons on INTERACTION are dummy content inside the demo component.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "confianca/seguranca": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/seguranca",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No personal or payment data is collected; the only inputs are search fields and playground sliders.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "formularios/labels": {
    "state": "FAIL",
@@ -701,9 +939,18 @@
    ]
   },
   "formularios/erro-inline": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/erro-inline",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "There is no form to submit invalidly; search inputs have no validation and no form-submit-empty state was captured.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "formularios/tipos-campo": {
    "state": "N/A",
@@ -761,14 +1008,32 @@
    ]
   },
   "formularios/opcionais": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/opcionais",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No multi-field form exists; the only fields are single search inputs.",
+     "evidence_file": "DISCOVERY-mobile-first-screen.png"
+    }
+   ]
   },
   "formularios/submit-estado": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/submit-estado",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No form with a submit button exists on any surface.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   }
  }
 }

@@ -1,0 +1,44 @@
+{
+ "milestone": "V02",
+ "verdicts": [
+  {
+   "id": "fundamentos/jtbd",
+   "state": "PASS",
+   "reason": "README opens with a one-sentence statement of the site's job: an installable design system distributed as a shadcn registry, with the site itself running the flagship theme.",
+   "evidence_file": "README.md",
+   "quote": "A design system you can install. Themes and components, distributed as a shadcn registry — the site itself runs the flagship theme it ships."
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "state": "FAIL",
+   "reason": "Documentation exists (README, NOTICE, commit bodies) but none states a product/business bet nor ties design decisions to one. The README describes what the registry contains and how it is built; 'dogfooding' is mentioned as a mechanism, never framed as a bet or hypothesis. No brief, PRD, plan, AGENTS.md or CLAUDE.md in the worktree.",
+   "evidence_file": "README.md",
+   "quote": "`catalog/` is the single author-time surface. `registry.json` is generated from it ... the gallery, install commands and site pages all derive from the same catalog"
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "state": "FAIL",
+   "reason": "No document records stack/time/team/design-system constraints before the build. The only doc is README.md, which describes the stack (Next, shadcn registry, Geist) after the fact as architecture, not as recorded constraints; the bootstrap commit ('bootstrap Studio DS from registry-template') has no constraint rationale. No brief/plan/PRD found.",
+   "evidence_file": "README.md",
+   "quote": "`catalog/` is the single author-time surface. `registry.json` is generated from it (`scripts/build-registry.ts`), `shadcn build` compiles `public/r/*.json`"
+  },
+  {
+   "id": "fundamentos/documentado",
+   "state": "PASS",
+   "reason": "Decision rationale is recorded in commit bodies (e.g. 54fcaf0: 'studio-ds.vercel.app is taken by an unrelated project; the canonical public domain becomes studio-ds-ui.vercel.app'; 1bc295c: 'build script wipes public/r before shadcn build (no stale artifacts)'; f6d1471: 'status-badge embeds the status token vars (self-sufficient install)') and in source comments explaining measured token choices. No ADRs or docs/solutions folder, but the 'why' is consistently captured.",
+   "evidence_file": "catalog/studio-theme.ts",
+   "quote": "as text on light they measured below APCA 60 / WCAG 3:1 (building 2.44:1, done 2.37:1), so ink keeps C and H and lowers L to the measured minimum."
+  }
+ ],
+ "docs_found": [
+  "README.md",
+  "NOTICE",
+  "LICENSE",
+  ".github/workflows/ci.yml",
+  "package.json",
+  "catalog/studio-theme.ts",
+  "tests/registry.test.ts",
+  "git log -30 (commits 54fcaf0, a4b1951, aafc729, f6d1471, 1bc295c, 3ae48cd, 88ad32e, 9f757fd)"
+ ],
+ "instrument": "source review of the exact commit worktree (unblinded by nature: fundamentos/* items need repository docs)"
+}

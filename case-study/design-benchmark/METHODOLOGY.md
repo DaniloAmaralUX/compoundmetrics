@@ -38,7 +38,9 @@ Rules and thresholds are the ones written in `ITEM-CLASSIFICATION.json` (for exa
 
 ## 5. Judgment checks
 
-Judgment items are scored by the session author on anonymised screenshots only (no URL, no milestone id, no chronology), in the randomised order, with the item text of the frozen rubric as the only reference. Each verdict carries a one-line reason. The judge is the same agent that built V08–V11 and captured all milestones; anonymisation cannot remove brand text visible inside screenshots. **This is a reduction of order/recency bias, not an independent evaluation** — the PRD says so and so does this file.
+Judgment items were scored in a **blinded pass by eleven independent model agents, one per anonymised design, each in a fresh context**: the judge received only the frozen rubric text, the item classification and the image folder `screens/blind/DESIGN-X/` (no URL, no milestone id, no chronology, no source code, no access to `RANDOMIZATION.mapping.json`, `archive/`, `history/` or `results/`). Order and labels came from the saved seed; the label→milestone mapping was read only after every judge's output had been written and hashed (`RANDOMIZATION.json.judgment_frozen`). Each verdict carries a one-line reason and the image file that drove it. The four `fundamentos/*` items that require repository documentation were scored separately, **unblinded**, by reading the milestone's exact worktree (`results/<V>/source-review.json`), because source review cannot be blinded.
+
+This is a reduction of order, recency and authorship bias (the session that built V08–V11 did not judge them), **not an independent human evaluation**: the judges are model agents, single-rater per design, and anonymisation cannot remove brand text visible inside screenshots. Model runtime was spent on these judges under the author's explicit authorisation for this production run; none of it is E2 or any experimental runtime (see `../FREEZE.md`).
 
 ## 6. Source / craft audit (instrument B)
 
@@ -50,7 +52,8 @@ The `cl-audit` playbook's 8 categories are applied only where the exact source o
 - Deployment ids before 2026-09 were not retained by the API; those milestones are anchored to commits.
 - 16 of the 24 tool candidates have no readable repository → **NOT CAPTURED**; the benchmark covers 7 tools / 11 milestones.
 - Two milestones (V04 / V11) were built with `typescript.ignoreBuildErrors` because an unrelated `video/` package failed type-checking; no UI source was changed.
-- The judgment pass is single-rater.
+- The judgment pass is single-rater per design (one agent each); two milestones that are the same design (V08/V10) received different source-review verdicts on two fundamentos items, which measures rater noise, not design change.
+- Some milestones render as fixed-viewport canvases (V07): their "full page" capture equals the first screen; the judge for that design reported it.
 
 ## 8. What this benchmark does not claim
 

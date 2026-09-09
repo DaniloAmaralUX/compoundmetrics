@@ -7,12 +7,12 @@
  "source_sha": "a7f8319859263924a90d2f293be5cfd3c1c9cbab",
  "date_range": "2026-09-09",
  "overall": {
-  "PASS": 7,
-  "FAIL": 4,
-  "N/A": 11,
-  "NOT_VERIFIED": 32,
-  "score": 63.6,
-  "coverage": 25.6
+  "PASS": 19,
+  "FAIL": 9,
+  "N/A": 25,
+  "NOT_VERIFIED": 1,
+  "score": 67.9,
+  "coverage": 96.6
  },
  "deterministic_only": {
   "PASS": 7,
@@ -23,117 +23,171 @@
   "coverage": 91.7
  },
  "judgment_only": {
-  "PASS": 0,
-  "FAIL": 0,
-  "N/A": 0,
-  "NOT_VERIFIED": 31,
-  "score": null,
-  "coverage": 0
+  "PASS": 12,
+  "FAIL": 5,
+  "N/A": 14,
+  "NOT_VERIFIED": 0,
+  "score": 70.6,
+  "coverage": 100
  },
  "categories": {
   "fundamentos": {
-   "PASS": 0,
-   "FAIL": 0,
+   "PASS": 3,
+   "FAIL": 2,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": null,
-   "coverage": 0
+   "NOT_VERIFIED": 0,
+   "score": 60,
+   "coverage": 100
   },
   "hierarquia": {
-   "PASS": 1,
-   "FAIL": 1,
+   "PASS": 5,
+   "FAIL": 2,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": 50,
-   "coverage": 28.6
+   "NOT_VERIFIED": 0,
+   "score": 71.4,
+   "coverage": 100
   },
   "estilo": {
-   "PASS": 1,
+   "PASS": 2,
    "FAIL": 3,
-   "N/A": 1,
-   "NOT_VERIFIED": 2,
-   "score": 25,
-   "coverage": 66.7
+   "N/A": 2,
+   "NOT_VERIFIED": 0,
+   "score": 40,
+   "coverage": 100
   },
   "acessibilidade": {
    "PASS": 4,
-   "FAIL": 0,
+   "FAIL": 1,
    "N/A": 4,
-   "NOT_VERIFIED": 1,
-   "score": 100,
-   "coverage": 80
+   "NOT_VERIFIED": 0,
+   "score": 80,
+   "coverage": 100
   },
   "navegacao": {
    "PASS": 0,
    "FAIL": 0,
-   "N/A": 3,
-   "NOT_VERIFIED": 3,
+   "N/A": 5,
+   "NOT_VERIFIED": 1,
    "score": null,
    "coverage": 0
   },
   "carga": {
-   "PASS": 1,
+   "PASS": 2,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 5,
+   "N/A": 4,
+   "NOT_VERIFIED": 0,
    "score": 100,
-   "coverage": 16.7
+   "coverage": 100
   },
   "onboarding": {
-   "PASS": 0,
+   "PASS": 2,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "N/A": 2,
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "confianca": {
-   "PASS": 0,
-   "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "PASS": 1,
+   "FAIL": 1,
+   "N/A": 2,
+   "NOT_VERIFIED": 0,
+   "score": 50,
+   "coverage": 100
   },
   "formularios": {
    "PASS": 0,
    "FAIL": 0,
-   "N/A": 3,
-   "NOT_VERIFIED": 3,
+   "N/A": 6,
+   "NOT_VERIFIED": 0,
    "score": null,
-   "coverage": 0
+   "coverage": null
   }
  },
  "items": {
   "fundamentos/jtbd": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/jtbd",
+     "state": "FAIL",
+     "reason": "Documentation is extensive but nowhere states the site's job in one sentence. STRATEGY.md and README.md state the framework/plugin's purpose (a paragraph, not the page's job); docs/frames/ holds only a README (no frame was written for the site); the page was 'extracted verbatim' from another repo (commit 18ffcf2) and later 'updated ... Visual baseline untouched; no redesign' (commit c61b896). The closest thing is the page's own <meta> description in src/app/page.tsx and the v0.2 critique line 'POC evidence UI — the demo shows version, construction and evidence separately', which describes a v0.2 feature of the page, not the v0.3 site's job.",
+     "evidence_file": "STRATEGY.md",
+     "quote": "A design engineer working through AI agents produces more interface than they can carefully judge, and the judgment they do apply disappears when the session ends."
+    }
+   ]
   },
   "fundamentos/macro-bet": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/macro-bet",
+     "state": "PASS",
+     "reason": "STRATEGY.md states the bet (knowledge should compound; an artifact must be earned; a claim may never exceed its evidence) and compound-design/docs/V0.2-DESIGN-CRITIQUE.md explicitly weighs 'Direction B — polish only (improve the public narrative and visual presentation)' against 'Direction C — evidence architecture', rejects B as insufficient, and derives the page decision 'POC evidence UI — the demo shows version, construction and evidence separately' from the chosen bet. Commit c61b896 carries the same logic into the v0.3 site: 'Site updated to the six-stage loop, the v0.3 resource set with a dash where construction is unaudited'.",
+     "evidence_file": "compound-design/docs/V0.2-DESIGN-CRITIQUE.md",
+     "quote": "### Direction B — polish only\nImprove the public narrative and visual presentation. ... Decision: useful but insufficient. ... 5. **POC evidence UI** — the demo shows version, construction and evidence separately."
+    }
+   ]
   },
   "fundamentos/convencao": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "fundamentos/convencao",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "ENTRY uses a conventional landing structure: top bar with logo mark + wordmark left and a status tag right, centered hero (eyebrow, headline, subhead, stat strip), then stacked sections of headline + paragraph + card grids and a footer. The only novelty is the absence of any nav/CTA and a numbered timeline for the loop, which reads as purposeful editorial layout; DISCOVERY was not captured.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "header/hero/feature-grid/footer pattern; timeline and stat strip are the only unusual elements",
+     "expected_value": "familiar patterns by default, limited purposeful novelty"
+    }
+   ]
   },
   "fundamentos/restricoes": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/restricoes",
+     "state": "FAIL",
+     "reason": "No document records stack/time/team/design-system constraints for the site before it was built. docs/frames and docs/plans contain only READMEs. The only constraint records are in the commit bodies of the commits that did the work (18ffcf2: 'Standalone package.json: next, react, react-dom, geist only ... layout.tsx and globals.css reduced to the document baseline the page needs (Geist Sans/Mono, dark ground) ... Static export config'; c61b896: 'Visual baseline untouched; no redesign'), i.e. recorded at build time, not before; time and team constraints are never recorded. NOTICE and package.json describe the stack after the fact.",
+     "evidence_file": "NOTICE",
+     "quote": "The public page implementation (`src/app/page.tsx`, `page.module.css`) was extracted from the author's `studio-dev-ui` repository. No other part of that application is carried here."
+    }
+   ]
   },
   "fundamentos/documentado": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/documentado",
+     "state": "PASS",
+     "reason": "Decision rationale is recorded in several places: compound-design/docs/V0.2-DESIGN-CRITIQUE.md (divergence/convergence with pros, risks and a decision per direction), compound-design/research/EVERY-ARCHITECTURE-SNAPSHOT.md (adopt/adapt/defer/reject with reasons, per commit 7c31d66), compound-design/learning/LEDGER.md (observed/expected/human_correction/lesson entries), the release record compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md, and commit bodies that explain why (e.g. 6aea1fd: 'actions/checkout defaults to a depth-1 clone, which does not contain that commit, so the gate could only ever pass locally'; 592cb34: 'a guard that cannot distinguish stating a rule from breaking it blocks the rule ... recorded as CD-20260909-012').",
+     "evidence_file": "compound-design/docs/V0.2-DESIGN-CRITIQUE.md",
+     "quote": "### Direction A — expand the catalog ... Risks: duplicated responsibilities; weaker routing; more maintenance; sophistication without proof. Decision: reject for v0.2."
+    }
+   ]
   },
   "hierarquia/cta-3s": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "hierarquia/cta-3s",
+     "state": "FAIL",
+     "surface": "ENTRY",
+     "reason": "The 1440x900 first screen contains no button, link or action of any kind: only the logo, a text status tag ('CANDIDATE · v0.3.0-alpha.1 · WORK SYSTEM'), headline, paragraph and a four-cell stat strip. The full page later has an 'Install' section with three command cards (/plugin marketplace add…, /plugin install…, cd-setup) but still no actionable element, so a product landing page that clearly wants adoption offers no identifiable primary action.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "0 buttons/links in first screen; 0 actionable elements on the full page (Install section is plain text)",
+     "expected_value": "one distinct primary action identifiable within 3 s"
+    }
+   ]
   },
   "hierarquia/headings": {
    "state": "PASS",
@@ -144,24 +198,68 @@
    "evidence": []
   },
   "hierarquia/leitura": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "hierarquia/leitura",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "On the first screen the reading order is unambiguous from size/weight/position: (1) the very large white 3-line headline, (2) the mid-grey paragraph under it, (3) the bordered 4-cell stat strip, with the small mono eyebrow above and the caveat note below. Each later section repeats eyebrow → large headline → paragraph → cards, and the mobile first screen preserves the same order.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "headline ≈ 5-6x body size, then subhead, then stat strip",
+     "expected_value": "first/second/third targets numberable from size, weight, position"
+    }
+   ]
   },
   "hierarquia/proximidade": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "hierarquia/proximidade",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "Related items are enclosed and tight: label/value pairs (Today/Risk/Question, Goal/Method/Constraint) sit in bordered mini-tables inside their card; each loop stage keeps its number, title, description and tag chips within one row separated from the next by a rule; section groups are separated by ~150-250 px gaps and hairline dividers, far more than the inner spacing.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "inner card spacing ~12-24 px vs inter-section gaps ~150-250 px with dividers",
+     "expected_value": "related items visibly closer than unrelated"
+    }
+   ]
   },
   "hierarquia/whitespace": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "hierarquia/whitespace",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "The hero headline is surrounded by the largest empty area on the page (roughly 150 px above the eyebrow and 120 px below the stat strip on desktop), while dense card grids sit tightly packed; every section headline gets a generous top margin after a hairline rule. Whitespace grows with importance.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "hero has ~2-3x the vertical padding of card grids",
+     "expected_value": "whitespace increases around the most important element(s)"
+    }
+   ]
   },
   "hierarquia/cor-destaque": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "hierarquia/cor-destaque",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "There are no actionable elements, so the lime accent is used only for 'important/current' values: the header status dot, the highlighted E1 row in the evidence ladder, the CDQI scores (8.75/8.65/8.35) and unaudited dashes, the E1/0 stats, the 'NOW' v0.2.1 version and the active loop step ring; body, headings and grids stay white/grey. A minor decorative use is the lime '01'/'02' indices on the Problem/Bet cards and range labels '0-10'/'E0-E4', but the accent is not spread across ordinary content.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "lime on ~15 key-value/current-state elements over an 10,816 px page; cyan reserved for evidence badges",
+     "expected_value": "accent only on actionable or important elements"
+    }
+   ]
   },
   "hierarquia/escala-tipo": {
    "state": "FAIL",
@@ -196,9 +294,20 @@
    ]
   },
   "estilo/paleta": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "estilo/paleta",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "Colours read as a system: near-black page, slightly lighter card fills, hairline grey borders, white headings, two grey text tiers, one lime accent for key values/current states and a cyan semantic colour for evidence-level badges ('E1 · CONTRACT-TESTED', 'NO INFLATION'). No stray colours appear anywhere on desktop or mobile.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "neutrals (4-5 tiers) + lime accent + cyan semantic",
+     "expected_value": "neutrals + one or two accents + semantic colours"
+    }
+   ]
   },
   "estilo/elevacao": {
    "state": "PASS",
@@ -255,9 +364,20 @@
    ]
   },
   "estilo/icones": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "estilo/icones",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "The surface contains no icon set: the only pictographic marks are a text status dot ('●') in the header, typographic arrows ('→') between flow-strip pills and before 'REPEAT', and em-dash placeholders in resource cards. These are text glyphs, not inline icons, so the na_condition (no icons) is met.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "0 icon glyphs; only ● and → text characters",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "estilo/motion": {
    "state": "N/A",
@@ -300,9 +420,20 @@
    "evidence": []
   },
   "acessibilidade/nao-so-cor": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "acessibilidade/nao-so-cor",
+     "state": "FAIL",
+     "surface": "ENTRY",
+     "reason": "State indicators exist and are mixed: the 'NOW' version card carries the text label 'NOW' and the header status carries the word 'CANDIDATE' beside its dot, but in the Evidence maturity ladder the current level (E1 Deterministic) is signalled only by a lime border and lime 'E1' text, with no 'current' label, check or icon on that row (the sibling rows are identical except for colour). The 'CONTRACT-TESTED' badges also rely on cyan only, though they contain text.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "E1 row in the CEL ladder: colour-only highlight (lime border/text), no text/icon marker",
+     "expected_value": "state also carried by text or an icon"
+    }
+   ]
   },
   "acessibilidade/alt-aria": {
    "state": "PASS",
@@ -355,14 +486,36 @@
    "evidence": []
   },
   "navegacao/busca": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "navegacao/busca",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "The site is a single scrolling page with no navigation destinations, no lists of pages, and no catalogue beyond six resource cards; content volume is far below the ~15-destination threshold, so search is not called for.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "1 page, 0 nav links, 6 resource cards",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "navegacao/mobile-nav": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "navegacao/mobile-nav",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "The header at 390 px shows only the 'CD' logo mark and the status text; there is no navigation on desktop either (no nav links, no menu toggle), and only one page exists. With a single page and no navigation, the na_condition applies; note that content stacks cleanly with no horizontal overflow on mobile.",
+     "evidence_file": "ENTRY-mobile-first-screen.png",
+     "measured_value": "0 nav items, no toggle, single page",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "navegacao/links": {
    "state": "N/A",
@@ -381,69 +534,212 @@
    "evidence": []
   },
   "carga/disclosure": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "carga/disclosure",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "Each section leads with an eyebrow, a headline and a one-paragraph summary before the detail cards (e.g. 'One number cannot mean well built and proven' + CDQI/CEL sentence, then the 7-row weight table and E0-E4 ladder), and the hero compresses the whole system into four stat cells and one caveat line. The page is long and dense (weight table, 18 tag chips, ledger notes all inline, nothing collapsible) but complexity is layered summary → detail rather than presented flat.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "every section: headline + summary paragraph before detail grid; no collapsible controls",
+     "expected_value": "complexity revealed progressively (summary → detail)"
+    }
+   ]
   },
   "carga/feedback": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "carga/feedback",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "The design has no actions at all — no buttons, forms, toggles or links styled as actions on the ENTRY surface — and no INTERACTION surface was captured; the na_condition (no actions beyond navigation) is met.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "0 interactive controls visible",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "carga/loading": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "carga/loading",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "All content is static marketing/explanatory text and cards; there is no operation (search, submit, fetch) that could require a loading state.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "static page, no async operations",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "carga/prevencao": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "carga/prevencao",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "There is no form or input anywhere on the ENTRY page (desktop or mobile); the Install section shows commands as plain text.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "0 inputs",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "carga/recuperacao": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "carga/recuperacao",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "No destructive (or any) actions exist on the captured surface.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "0 actions",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "onboarding/valor-rapido": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "onboarding/valor-rapido",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "The first screen states what the product is (eyebrow 'DESIGN ENGINEERING WORK SYSTEM · HUMANS + AI AGENTS'), the promise (headline), how it works in one paragraph ('A loop you can install: frame… model… build… verify… polish… compound') and four key facts, and the second scroll immediately explains the problem/bet and the six-stage loop. The core content is reached without any gate, though the absence of any action means the path stops at reading.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "value proposition and mechanism fully stated within first 900 px; loop detail by ~2,400 px",
+     "expected_value": "first screen leads quickly to value / core content"
+    }
+   ]
   },
   "onboarding/empty-states": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "onboarding/empty-states",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "The page is fully populated content; there is no list, search or data view that could be empty.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "no empty state present",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "onboarding/dicas-contexto": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "onboarding/dicas-contexto",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "Jargon is explained inline where it appears: 'CDQI measures construction. CEL measures evidence.' sits under the correction headline next to the two cards; each ladder level has a one-line gloss (E0 'Static review only', E2 'Baseline + repeated runs'); the resources intro explains 'A dash means construction quality has not been audited yet'; every stat cell has a caption. No tour is used.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "inline glosses for CDQI/CEL, E0-E4, dash placeholders, stat captions",
+     "expected_value": "contextual help at the point of doubt"
+    }
+   ]
   },
   "onboarding/progresso-fluxo": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "onboarding/progresso-fluxo",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "There is no interactive multi-step flow; the six-stage loop and install strip are explanatory content, not a user flow with position.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "no multi-step user flow",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "confianca/depoimentos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "confianca/depoimentos",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "No testimonials, quotes or customer voices appear anywhere on desktop or mobile.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "0 testimonials",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "confianca/numeros": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "confianca/numeros",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "Numbers used as proof are specific and their basis is shown on the page: '06 loop stages', '15 skills · 6 agents', '0 paid runtime used', CDQI scores 8.75 / 8.65 / 8.35 tied to the visible weight table (7 criteria, 15%/10%), evidence level E1 defined in the E0-E4 ladder. No vague 'thousands of users' style claims; the copy explicitly states uplift was not measured.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "specific integers/decimals with in-page definitions; no vague quantities",
+     "expected_value": "specific and sourced numbers"
+    }
+   ]
   },
   "confianca/logos": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "confianca/logos",
+     "state": "FAIL",
+     "surface": "ENTRY",
+     "reason": "The page has an adoption decision point — the 'Install' section with three command cards ('Add the marketplace', 'Install the plugin', 'Set up a project') — but no social proof sits there or anywhere else: no logos, user counts, ratings, badges from third parties or testimonials; the only proof-like elements are self-reported CDQI scores in a different section.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "Install section: 0 logos/badges/ratings; page-wide: 0 external social proof",
+     "expected_value": "social proof adjacent to the decision point"
+    }
+   ]
   },
   "confianca/seguranca": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "confianca/seguranca",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "No data is collected: there are no forms, inputs, payment or signup elements on the surface.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "0 data-collecting elements",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "formularios/labels": {
    "state": "N/A",
@@ -454,9 +750,20 @@
    "evidence": []
   },
   "formularios/erro-inline": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "formularios/erro-inline",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "There is no form on the captured surface and no form-submit-empty state was captured because none exists.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "0 forms",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "formularios/tipos-campo": {
    "state": "N/A",
@@ -475,14 +782,36 @@
    "evidence": []
   },
   "formularios/opcionais": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "formularios/opcionais",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "No form or field exists on the surface.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "0 fields",
+     "expected_value": "n/a"
+    }
+   ]
   },
   "formularios/submit-estado": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "formularios/submit-estado",
+     "state": "N/A",
+     "surface": "ENTRY",
+     "reason": "No form or submit control exists on the surface.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "0 submit buttons",
+     "expected_value": "n/a"
+    }
+   ]
   }
  }
 }

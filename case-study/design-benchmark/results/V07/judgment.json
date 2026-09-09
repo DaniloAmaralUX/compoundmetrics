@@ -1,0 +1,219 @@
+{
+ "label": "DESIGN-A",
+ "files_viewed": [
+  "ENTRY-desktop-first-screen.png",
+  "ENTRY-desktop.png",
+  "ENTRY-mobile-first-screen.png",
+  "DISCOVERY-desktop-first-screen.png",
+  "DISCOVERY-mobile-first-screen.png",
+  "INTERACTION-desktop-first-screen.png",
+  "INTERACTION-mobile-first-screen.png",
+  "state-ENTRY-focus-first.png",
+  "state-DISCOVERY-focus-first.png",
+  "state-DISCOVERY-hover-first.png",
+  "state-INTERACTION-hover-first.png"
+ ],
+ "per_surface_notes": "Material: 17 PNGs, but only 6 distinct images (md5-verified). Every *-desktop.png full-page capture is byte-identical to its *-desktop-first-screen.png (1440x900) and every *-mobile.png to its *-mobile-first-screen.png (390x844): the pages are fixed-viewport canvases that pan horizontally on desktop and scroll internally on mobile, so no scrolled content exists beyond the captured frame. DISCOVERY and INTERACTION are the same capture (a 'Lifeline' year timeline, steps 25-36 visible, years 2020-2026 on desktop); state-DISCOVERY-focus/hover and state-INTERACTION-focus/hover are one identical image showing a rectangular white focus outline on the header label. ENTRY is a 'Processo' horizontal timeline showing steps 05-07 with 01-04 offscreen to the left; footer holds a sun (theme) icon and a text chain of all seven steps, which is clipped at the right edge on mobile. No forms, inputs, CTA buttons, testimonials, pricing/signup, search, menus or destructive actions exist on any surface; no form-submit-empty or mobile-nav-open states were captured because none exist. DETAIL surface absent. Brand words visible in copy were ignored per blinding rules.",
+ "verdicts": [
+  {
+   "id": "fundamentos/convencao",
+   "state": "FAIL",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "On both desktop surfaces the entire content area is a fixed-height, horizontally panning timeline whose earlier columns (steps 01-04 on ENTRY; years before 2020 on DISCOVERY) sit offscreen with no scrollbar, arrows or cue, and the header carries only a page label with no conventional nav or link pattern. Mobile falls back to a familiar vertical list, but the desktop default is the novel pattern rather than a limited use of it.",
+   "evidence_file": "ENTRY-desktop-first-screen.png",
+   "measured_value": "Steps 05, 06, 07 visible at x=268-1207; PASSO/ETAPA row labels pinned left; no scroll affordance, no nav menu, only a 'Processo' label and a footer text chain",
+   "expected_value": "Familiar default (visible nav, conventional page scroll or an explicit carousel/scroll affordance) with novelty confined to one purposeful element"
+  },
+  {
+   "id": "hierarquia/cta-3s",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "Both captured pages are pure reading surfaces by design: a process timeline and a year timeline with no buttons, links-as-actions or forms; the only interactive elements are the header label and a footer theme toggle.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/leitura",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "On ENTRY the eye goes header label (bright, bold, top-left) -> step titles (larger, heavier, lighter grey) -> body paragraphs (mid grey) -> small step numbers and footer chain; on DISCOVERY the bold years read before the single grey description and the small legend. Mobile keeps the same size/weight tiers in a vertical list.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/proximidade",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Each step number sits directly above its title and the description sits ~35px below the dashed rule in the same column, while neighbouring columns are ~290px apart; on mobile the '05 -- Compound' row and its indented paragraphs are ~20px apart with ~60px between groups.",
+   "evidence_file": "ENTRY-mobile-first-screen.png"
+  },
+  {
+   "id": "hierarquia/whitespace",
+   "state": "FAIL",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "Whitespace is uniform, not hierarchical: ENTRY-desktop has an empty ~250px band above and ~300px below the timeline row with all three step columns given identical width and gap, and DISCOVERY spaces the years by fixed 80px ticks; the wider 2023 column is content overflow, not emphasis. Mobile lists use even spacing between all items.",
+   "evidence_file": "ENTRY-desktop-first-screen.png",
+   "measured_value": "Content band y~320-545 in a 900px frame; equal 290px column pitch for steps 05/06/07; no element receives more surrounding space than its siblings",
+   "expected_value": "Extra breathing room around the primary element (e.g. the current step or headline) relative to secondary items"
+  },
+  {
+   "id": "hierarquia/cor-destaque",
+   "state": "PASS",
+   "surface": "DISCOVERY",
+   "reason": "ENTRY is monochrome (white/grey on near-black). The only chromatic elements on DISCOVERY are the blue and pink legend dots for 'Mentors' and 'Met in person', which carry meaning and are not used decoratively elsewhere.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "estilo/paleta",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Colours read as a system: a near-black ground, a header/footer divider grey, four or five grey text tiers (white label, light-grey titles, mid-grey body, dim step numbers), and two categorical accents (blue, pink) confined to the DISCOVERY legend.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "estilo/icones",
+   "state": "FAIL",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "Pictograms mix families: ENTRY's footer uses a thin stroke-style sun icon while the 'Pitang Knowledge' title uses a typographic ↺ glyph as its inline icon, and DISCOVERY inlines a full-colour emoji (🎇) after 'Still going.'; stroke weight, colour treatment and optical size differ between the three.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png",
+   "measured_value": "Stroke sun icon (~16px, monochrome) + unicode ↺ glyph at text weight + colour emoji at text size",
+   "expected_value": "One icon family with consistent stroke weight and optical size"
+  },
+  {
+   "id": "acessibilidade/nao-so-cor",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "The only state captured is keyboard focus, which is drawn as a rectangular white outline around the header label (shape, not a colour shift alone). The DISCOVERY legend pairs each coloured dot with a text label; no error/success states exist.",
+   "evidence_file": "state-ENTRY-focus-first.png"
+  },
+  {
+   "id": "navegacao/busca",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "Content volume is small: two captured pages with seven process steps and a dozen year entries, well under ~15 destinations, so search is not called for.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "navegacao/mobile-nav",
+   "state": "FAIL",
+   "surface": "ENTRY (mobile)",
+   "reason": "The site has at least two pages (Processo, Lifeline) but the 390px ENTRY shows no menu, no labelled toggle and no link to the other page: the header holds only the 'Processo' label, and the footer step chain overflows and is clipped at the right edge ('Compound Engineering -> P...'). No mobile-nav-open state exists because there is no toggle.",
+   "evidence_file": "ENTRY-mobile-first-screen.png",
+   "measured_value": "Header: page label only; footer: sun icon + horizontally clipped text chain; zero visible nav targets",
+   "expected_value": "Visible navigation or a labelled >=44px toggle revealing comfortable targets"
+  },
+  {
+   "id": "carga/disclosure",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "There is no secondary complexity to disclose: every item is a number, a title and one or two sentences shown in full, with no deeper detail, settings or expandable content on any surface.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "carga/feedback",
+   "state": "NOT_VERIFIED",
+   "surface": "ENTRY, INTERACTION",
+   "reason": "The INTERACTION surface (Lifeline) has no actions beyond the header link, but ENTRY carries a theme-toggle sun icon in the footer whose click result was not captured, so immediate feedback for that action cannot be verified.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "carga/loading",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "All content is static text on both pages; no long operation (fetch, submit, upload) exists that would need a loading state.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "carga/prevencao",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No form or input field exists on any captured surface.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "carga/recuperacao",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No destructive action exists; the only interactions are the header label, a theme toggle and focus on the label.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/valor-rapido",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "The first screen is the core content itself: the process steps with titles and descriptions are readable immediately on desktop and mobile with no splash, gate or intermediate step, even though the sequence is shown from step 05 onward.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/empty-states",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No empty view exists; years without an event (2020-2022, 2024-2025) are simply blank cells within a populated timeline, not an empty state of a list or screen.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/dicas-contexto",
+   "state": "PASS",
+   "surface": "DISCOVERY, ENTRY",
+   "reason": "Help sits at the point of use rather than in a tour: DISCOVERY's footer legend explains the blue/pink dot codes inline ('Mentors', 'Met in person'), and on ENTRY the ↺ glyph on step 07 is explained by the adjacent line '↺ O ciclo recomeça'.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/progresso-fluxo",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "There is no multi-step user flow (no wizard, signup or checkout); the numbered steps are descriptive content, not a flow the user progresses through.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "confianca/depoimentos",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No testimonials appear on any surface.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "confianca/numeros",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "The only numbers are step indices (05-07, 25-36) and calendar years used as labels, not quantities offered as proof.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "confianca/logos",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No decision point (pricing, signup, purchase) exists on any surface.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "confianca/seguranca",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No data is collected: there are no inputs, payment or account surfaces.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "formularios/erro-inline",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No form exists on any captured surface.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "formularios/opcionais",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No form exists on any captured surface.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "formularios/submit-estado",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No form or submit button exists on any captured surface.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  }
+ ],
+ "milestone": "V07",
+ "blind_label": "DESIGN-A",
+ "frozen_sha256": "a8aa0690470a5fe5fd56a9c262f01c73ccb65db9dcf58163fc50a3a16e96729e"
+}
