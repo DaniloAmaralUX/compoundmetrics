@@ -685,5 +685,25 @@
     "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
    ]
   }
+ ],
+ "measurement_corrections": [
+  {
+   "when": "after the first deterministic run, before any judgment result was read",
+   "changed": "measurement only — no threshold, weight or rule text changed",
+   "items": [
+    {
+     "id": "estilo/radius",
+     "fix": "pill radii (rounded-full computes to 3.35544e+07px) were counted as a distinct value; now excluded as the rule text already said (50% / 9999px pills)"
+    },
+    {
+     "id": "navegacao/links",
+     "fix": "links inside <li> menus were counted as in-text links; now only anchors whose parent carries running text beyond the link itself count"
+    },
+    {
+     "id": "acessibilidade/teclado",
+     "fix": "tabindex=-1 was counted on any element carrying tabindex (e.g. scroll containers); now only on a/button/input/select/textarea"
+    }
+   ]
+  }
  ]
 }

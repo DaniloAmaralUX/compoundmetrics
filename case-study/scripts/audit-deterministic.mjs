@@ -41,7 +41,7 @@ const DOM_JS = (isMobile) => {
   R.spacing = { values: sp, multiples_of_4: sp4, pct: sp ? Math.round((sp4 / sp) * 1000) / 10 : null, off_grid_top: sorted(off).slice(0, 8) };
   // shadows / radius / motion
   const shadows = new Map(), radii = new Map(), durs = [];
-  for (const el of all) { const s = getComputedStyle(el); if (s.boxShadow && s.boxShadow !== "none") bump(shadows, s.boxShadow); const br = s.borderRadius; if (br && br !== "0px" && !/50%|9999|1e\+/.test(br)) bump(radii, br);
+  for (const el of all) { const s = getComputedStyle(el); if (s.boxShadow && s.boxShadow !== "none") bump(shadows, s.boxShadow); const br = s.borderRadius; if (br && br !== "0px" && !/50%|9999|e\+0?[5-9]|e\+[1-9]\d/.test(br)) bump(radii, br);
     const props = s.transitionProperty; if (props && props !== "all" && props !== "none" || (props === "all" && s.transitionDuration !== "0s")) { for (const d of s.transitionDuration.split(",")) { const ms = parseFloat(d) * (d.trim().endsWith("ms") ? 1 : 1000); if (ms > 0) durs.push(ms); } }
     if (s.animationName && s.animationName !== "none") for (const d of s.animationDuration.split(",")) { const ms = parseFloat(d) * (d.trim().endsWith("ms") ? 1 : 1000); if (ms > 0) durs.push(ms); } }
   R.shadows = { distinct: shadows.size, values: sorted(shadows).slice(0, 6).map(([k, v]) => [k.slice(0, 60), v]) };
@@ -49,7 +49,7 @@ const DOM_JS = (isMobile) => {
   R.motion = { declared: durs.length, le300: durs.filter((d) => d <= 300).length, gt300: sorted(new Map(durs.filter((d) => d > 300).map((d) => [d, 1]))).slice(0, 8).map((x) => x[0]) };
   // keyboard
   const inter = all.filter((el) => el.matches("a[href],button,input:not([type=hidden]),select,textarea,[role=button],[role=link],[tabindex]"));
-  const notFocusable = inter.filter((el) => el.getAttribute("tabindex") === "-1" && !el.closest("[aria-hidden=true]")).length;
+  const notFocusable = inter.filter((el) => el.matches("a[href],button,input,select,textarea") && el.getAttribute("tabindex") === "-1" && !el.closest("[aria-hidden=true]")).length;
   const positiveTab = inter.filter((el) => +el.getAttribute("tabindex") > 0).length;
   const roleNoTab = all.filter((el) => (el.getAttribute("role") === "button" || el.getAttribute("role") === "link") && !el.matches("a,button") && !(+el.getAttribute("tabindex") >= 0)).length;
   const hrefless = [...document.querySelectorAll("a:not([href])")].filter(vis).length;
@@ -67,7 +67,7 @@ const DOM_JS = (isMobile) => {
     breadcrumb: !!document.querySelector("nav[aria-label*=read i], .breadcrumb, [class*=breadcrumb], ol[class*=crumb]"), parent_link: [...document.querySelectorAll("main a, article a")].some((a) => { const p = location.pathname.replace(/\.html$/, "").split("/").filter(Boolean); if (p.length < 2) return false; const parent = "/" + p.slice(0, -1).join("/"); const h = a.getAttribute("href") || ""; return h.replace(/\.html$/, "") === parent || h.replace(/\.html$/, "") === parent + "/"; }),
     big_lists: [...document.querySelectorAll("ul,ol")].filter(vis).filter((l) => l.children.length > 9 && [...l.children].every((li) => li.querySelector("a"))).map((l) => l.children.length).slice(0, 5) };
   // links in text
-  const inText = [...document.querySelectorAll("p a, li a, dd a, td a")].filter(vis);
+  const inText = [...document.querySelectorAll("p a, li a, dd a, td a")].filter(vis).filter((a) => { const pt = (a.parentElement?.textContent || "").trim(); return pt.length > a.textContent.trim().length + 12; });
   const styled = inText.filter((a) => { const s = getComputedStyle(a); return s.textDecorationLine.includes("underline") || s.borderBottomWidth !== "0px" || (a.parentElement && getComputedStyle(a.parentElement).fontWeight !== s.fontWeight); });
   R.links = { in_text: inText.length, distinguished_not_only_color: styled.length };
   // forms

@@ -2,7 +2,7 @@
  "milestone": "V02",
  "build": "M07",
  "source_sha": "54fcaf0e4cb86a989e2eeb2b1452eb9b7b5d3038",
- "run_at": "2026-09-09T15:52:09.681Z",
+ "run_at": "2026-09-09T16:10:28.225Z",
  "classification_sha256": null,
  "surfaces": {
   "ENTRY": {
@@ -226,9 +226,9 @@
    },
    "estilo/radius": {
     "state": "PASS",
-    "measured": 4,
+    "measured": 3,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 3.35544e+07px, 8.75px, 15px, 10px"
+    "evidence": "distinct radii: 8.75px, 15px, 10px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -409,9 +409,9 @@
    },
    "estilo/radius": {
     "state": "FAIL",
-    "measured": 24,
+    "measured": 23,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 3.35544e+07px, 8.75px, 8px, 12px, 15px, 10px, 6px, 4px"
+    "evidence": "distinct radii: 8.75px, 8px, 12px, 15px, 10px, 6px, 4px, 5.6px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -592,9 +592,9 @@
    },
    "estilo/radius": {
     "state": "FAIL",
-    "measured": 24,
+    "measured": 23,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 3.35544e+07px, 8.75px, 8px, 12px, 15px, 10px, 6px, 4px"
+    "evidence": "distinct radii: 8.75px, 8px, 12px, 15px, 10px, 6px, 4px, 5.6px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -1179,12 +1179,8 @@
      "values": []
     },
     "radii": {
-     "distinct": 4,
+     "distinct": 3,
      "values": [
-      [
-       "3.35544e+07px",
-       10
-      ],
       [
        "8.75px",
        9
@@ -1554,12 +1550,8 @@
      ]
     },
     "radii": {
-     "distinct": 24,
+     "distinct": 23,
      "values": [
-      [
-       "3.35544e+07px",
-       232
-      ],
       [
        "8.75px",
        115
@@ -1587,6 +1579,10 @@
       [
        "4px",
        14
+      ],
+      [
+       "5.6px",
+       8
       ]
      ]
     },
@@ -1967,12 +1963,8 @@
      ]
     },
     "radii": {
-     "distinct": 24,
+     "distinct": 23,
      "values": [
-      [
-       "3.35544e+07px",
-       232
-      ],
       [
        "8.75px",
        115
@@ -2000,6 +1992,10 @@
       [
        "4px",
        14
+      ],
+      [
+       "5.6px",
+       8
       ]
      ]
     },

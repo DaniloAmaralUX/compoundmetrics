@@ -1,0 +1,728 @@
+{
+ "milestone": "V02",
+ "name": "Studio DS v1 (landing, themes gallery, components)",
+ "tool_ids": [
+  "tool-18"
+ ],
+ "source_sha": "54fcaf0e4cb86a989e2eeb2b1452eb9b7b5d3038",
+ "date_range": "2026-08-05 (8 commits, one day)",
+ "overall": {
+  "PASS": 11,
+  "FAIL": 7,
+  "N/A": 5,
+  "NOT_VERIFIED": 31,
+  "score": 61.1,
+  "coverage": 36.7
+ },
+ "deterministic_only": {
+  "PASS": 11,
+  "FAIL": 7,
+  "N/A": 5,
+  "NOT_VERIFIED": 0,
+  "score": 61.1,
+  "coverage": 100
+ },
+ "judgment_only": {
+  "PASS": 0,
+  "FAIL": 0,
+  "N/A": 0,
+  "NOT_VERIFIED": 31,
+  "score": null,
+  "coverage": 0
+ },
+ "categories": {
+  "fundamentos": {
+   "PASS": 0,
+   "FAIL": 0,
+   "N/A": 0,
+   "NOT_VERIFIED": 5,
+   "score": null,
+   "coverage": 0
+  },
+  "hierarquia": {
+   "PASS": 2,
+   "FAIL": 0,
+   "N/A": 0,
+   "NOT_VERIFIED": 5,
+   "score": 100,
+   "coverage": 28.6
+  },
+  "estilo": {
+   "PASS": 3,
+   "FAIL": 2,
+   "N/A": 0,
+   "NOT_VERIFIED": 2,
+   "score": 60,
+   "coverage": 71.4
+  },
+  "acessibilidade": {
+   "PASS": 4,
+   "FAIL": 4,
+   "N/A": 0,
+   "NOT_VERIFIED": 1,
+   "score": 50,
+   "coverage": 88.9
+  },
+  "navegacao": {
+   "PASS": 1,
+   "FAIL": 1,
+   "N/A": 2,
+   "NOT_VERIFIED": 2,
+   "score": 50,
+   "coverage": 50
+  },
+  "carga": {
+   "PASS": 1,
+   "FAIL": 0,
+   "N/A": 0,
+   "NOT_VERIFIED": 5,
+   "score": 100,
+   "coverage": 16.7
+  },
+  "onboarding": {
+   "PASS": 0,
+   "FAIL": 0,
+   "N/A": 0,
+   "NOT_VERIFIED": 4,
+   "score": null,
+   "coverage": 0
+  },
+  "confianca": {
+   "PASS": 0,
+   "FAIL": 0,
+   "N/A": 0,
+   "NOT_VERIFIED": 4,
+   "score": null,
+   "coverage": 0
+  },
+  "formularios": {
+   "PASS": 0,
+   "FAIL": 0,
+   "N/A": 3,
+   "NOT_VERIFIED": 3,
+   "score": null,
+   "coverage": 0
+  }
+ },
+ "items": {
+  "fundamentos/jtbd": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (source review, unblinded)",
+   "evidence": []
+  },
+  "fundamentos/macro-bet": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (source review, unblinded)",
+   "evidence": []
+  },
+  "fundamentos/convencao": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "fundamentos/restricoes": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (source review, unblinded)",
+   "evidence": []
+  },
+  "fundamentos/documentado": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (source review, unblinded)",
+   "evidence": []
+  },
+  "hierarquia/cta-3s": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "hierarquia/headings": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "hierarquia/leitura": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "hierarquia/proximidade": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "hierarquia/whitespace": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "hierarquia/cor-destaque": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "hierarquia/escala-tipo": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "estilo/espaco-base": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "FAIL",
+    "DISCOVERY": "FAIL",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "ENTRY",
+     "state": "FAIL",
+     "measured": 75,
+     "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+     "evidence": "60/80 spacing values are multiples of 4; off-grid: 6px×12, 10px×4, 2px×4"
+    },
+    {
+     "surface": "DISCOVERY",
+     "state": "FAIL",
+     "measured": 71.2,
+     "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+     "evidence": "84/118 spacing values are multiples of 4; off-grid: 6px×24, 2px×10"
+    },
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": 47.5,
+     "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+     "evidence": "1228/2586 spacing values are multiples of 4; off-grid: 6px×682, 10px×370, 2px×306"
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": 47.5,
+     "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+     "evidence": "1228/2586 spacing values are multiples of 4; off-grid: 6px×682, 10px×370, 2px×306"
+    }
+   ]
+  },
+  "estilo/paleta": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "estilo/elevacao": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "N/A",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "estilo/tipo-sistema": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "estilo/radius": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": 24,
+     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
+     "evidence": "distinct radii: 3.35544e+07px, 8.75px, 8px, 12px, 15px, 10px, 6px, 4px"
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": 24,
+     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
+     "evidence": "distinct radii: 3.35544e+07px, 8.75px, 8px, 12px, 15px, 10px, 6px, 4px"
+    }
+   ]
+  },
+  "estilo/icones": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "estilo/motion": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "acessibilidade/teclado": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "acessibilidade/foco": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "FAIL",
+    "DISCOVERY": "FAIL",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "ENTRY",
+     "state": "FAIL",
+     "measured": "4/12",
+     "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+     "evidence": "A \"Themes\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Components\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"GitHub repository\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Switch to light mode\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Browse 37 themes\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Components\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "surface": "DISCOVERY",
+     "state": "FAIL",
+     "measured": "5/12",
+     "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+     "evidence": "A \"Themes\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Components\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"GitHub repository\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Switch to light mode\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": "5/12",
+     "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+     "evidence": "A \"Themes\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Components\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"GitHub repository\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Switch to light mode\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": "5/12",
+     "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+     "evidence": "A \"Themes\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Components\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"GitHub repository\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Switch to light mode\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    }
+   ]
+  },
+  "acessibilidade/contraste": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "FAIL",
+    "DISCOVERY": "PASS",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "ENTRY",
+     "state": "FAIL",
+     "measured": 1,
+     "expected": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
+     "evidence": ".bg-primary: Fix any of the following:\n  Element has insufficient color contrast of 3.16 (foreground color: #fcfcfc, background color: #7e83f7, font size: 10.5pt (14px), font weight: normal). Expected contrast rat"
+    },
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": 40,
+     "expected": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
+     "evidence": ".gap-3.rounded-xl.bg-card:nth-child(1) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.16 (foreground color: #fcfcfc, background color: #7e83f7, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio  | .gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(1) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio  | .gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio "
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": 40,
+     "expected": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
+     "evidence": ".gap-3.rounded-xl.bg-card:nth-child(1) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.16 (foreground color: #fcfcfc, background color: #7e83f7, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio  | .gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(1) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio  | .gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio "
+    }
+   ]
+  },
+  "acessibilidade/alvos": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "FAIL",
+    "DISCOVERY": "FAIL",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "ENTRY",
+     "state": "FAIL",
+     "measured": 7.7,
+     "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+     "evidence": "1/13 targets meet the rule at 390×844; worst: A \"Themes\" 74×32; A \"Components\" 102×32; A \"GitHub repository\" 36×36; BUTTON \"Switch to light mode\" 36×36; BUTTON \"Copy\" 76×32; A \"Browse 37 themes\" 162×36; A \"Components\" 112×36; BUTTON \"Copy\" 76×32"
+    },
+    {
+     "surface": "DISCOVERY",
+     "state": "FAIL",
+     "measured": 8.3,
+     "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+     "evidence": "1/12 targets meet the rule at 390×844; worst: A \"Themes\" 74×32; A \"Components\" 102×32; A \"GitHub repository\" 36×36; BUTTON \"Switch to light mode\" 36×36; BUTTON \"Copy\" 76×32; BUTTON \"Copy\" 76×32; BUTTON \"Copy\" 76×32; A \"Danilo do Amaral\" 105×16"
+    },
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": 1.2,
+     "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+     "evidence": "1/83 targets meet the rule at 390×844; worst: A \"Themes\" 74×32; A \"Components\" 102×32; A \"GitHub repository\" 36×36; BUTTON \"Switch to light mode\" 36×36; BUTTON \"Active\" 78×32; BUTTON \"Copy\" 76×32; BUTTON \"Apply\" 77×32; BUTTON \"Copy\" 76×32"
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": 1.2,
+     "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+     "evidence": "1/83 targets meet the rule at 390×844; worst: A \"Themes\" 74×32; A \"Components\" 102×32; A \"GitHub repository\" 36×36; BUTTON \"Switch to light mode\" 36×36; BUTTON \"Active\" 78×32; BUTTON \"Copy\" 76×32; BUTTON \"Apply\" 77×32; BUTTON \"Copy\" 76×32"
+    }
+   ]
+  },
+  "acessibilidade/nao-so-cor": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "acessibilidade/alt-aria": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "acessibilidade/semantica": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "FAIL",
+    "DISCOVERY": "FAIL",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "ENTRY",
+     "state": "FAIL",
+     "measured": {
+      "main": false,
+      "nav": true,
+      "header": true,
+      "headings": 2,
+      "axe": [
+       "landmark-one-main×1"
+      ]
+     },
+     "expected": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+     "evidence": "main=false nav=true header=true headings=2; axe: landmark-one-main×1"
+    },
+    {
+     "surface": "DISCOVERY",
+     "state": "FAIL",
+     "measured": {
+      "main": false,
+      "nav": true,
+      "header": true,
+      "headings": 3,
+      "axe": [
+       "landmark-no-duplicate-banner×1",
+       "landmark-one-main×1",
+       "landmark-unique×1"
+      ]
+     },
+     "expected": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+     "evidence": "main=false nav=true header=true headings=3; axe: landmark-no-duplicate-banner×1, landmark-one-main×1, landmark-unique×1"
+    },
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": {
+      "main": false,
+      "nav": true,
+      "header": true,
+      "headings": 1,
+      "axe": [
+       "landmark-no-duplicate-banner×1",
+       "landmark-one-main×1",
+       "landmark-unique×1"
+      ]
+     },
+     "expected": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+     "evidence": "main=false nav=true header=true headings=1; axe: landmark-no-duplicate-banner×1, landmark-one-main×1, landmark-unique×1"
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": {
+      "main": false,
+      "nav": true,
+      "header": true,
+      "headings": 1,
+      "axe": [
+       "landmark-no-duplicate-banner×1",
+       "landmark-one-main×1",
+       "landmark-unique×1"
+      ]
+     },
+     "expected": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+     "evidence": "main=false nav=true header=true headings=1; axe: landmark-no-duplicate-banner×1, landmark-one-main×1, landmark-unique×1"
+    }
+   ]
+  },
+  "acessibilidade/reduced-motion": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "acessibilidade/zoom": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "navegacao/onde-estou": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "DISCOVERY": "FAIL",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "DISCOVERY",
+     "state": "FAIL",
+     "measured": {
+      "marked": 0,
+      "styled": 0
+     },
+     "expected": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+     "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
+    },
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": {
+      "marked": 0,
+      "styled": 0
+     },
+     "expected": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+     "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": {
+      "marked": 0,
+      "styled": 0
+     },
+     "expected": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+     "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
+    }
+   ]
+  },
+  "navegacao/menu-previsivel": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {},
+   "evidence": []
+  },
+  "navegacao/breadcrumbs": {
+   "state": "N/A",
+   "mode": "deterministic",
+   "per_surface": {},
+   "evidence": []
+  },
+  "navegacao/busca": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "navegacao/mobile-nav": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "navegacao/links": {
+   "state": "N/A",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "N/A",
+    "DISCOVERY": "N/A",
+    "DETAIL": "N/A",
+    "INTERACTION": "N/A"
+   },
+   "evidence": []
+  },
+  "carga/chunks": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "carga/disclosure": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "carga/feedback": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "carga/loading": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "carga/prevencao": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "carga/recuperacao": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "onboarding/valor-rapido": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "onboarding/empty-states": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "onboarding/dicas-contexto": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "onboarding/progresso-fluxo": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "confianca/depoimentos": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "confianca/numeros": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "confianca/logos": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "confianca/seguranca": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "formularios/labels": {
+   "state": "N/A",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "N/A",
+    "DISCOVERY": "N/A",
+    "DETAIL": "N/A",
+    "INTERACTION": "N/A"
+   },
+   "evidence": []
+  },
+  "formularios/erro-inline": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "formularios/tipos-campo": {
+   "state": "N/A",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "N/A",
+    "DISCOVERY": "N/A",
+    "DETAIL": "N/A",
+    "INTERACTION": "N/A"
+   },
+   "evidence": []
+  },
+  "formularios/input-16px": {
+   "state": "N/A",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "N/A",
+    "DISCOVERY": "N/A",
+    "DETAIL": "N/A",
+    "INTERACTION": "N/A"
+   },
+   "evidence": []
+  },
+  "formularios/opcionais": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "formularios/submit-estado": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  }
+ }
+}

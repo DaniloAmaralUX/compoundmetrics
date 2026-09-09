@@ -2,7 +2,7 @@
  "milestone": "V01",
  "build": "M01",
  "source_sha": "364430b9d553c6b9f87e4ff3cbc0f31eaa5d1a33",
- "run_at": "2026-09-09T15:51:42.096Z",
+ "run_at": "2026-09-09T16:09:46.808Z",
  "classification_sha256": null,
  "surfaces": {
   "ENTRY": {
@@ -129,14 +129,14 @@
     "evidence": "viewport meta \"width=device-width, initial-scale=1\"; horizontal overflow at CSS zoom 2: 0px"
    },
    "navegacao/links": {
-    "state": "FAIL",
+    "state": "N/A",
     "measured": {
-     "in_text": 2,
+     "in_text": 0,
      "distinguished": 0,
      "axe": 0
     },
     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-    "evidence": "0/2 in-text links distinguished by more than colour; axe link-in-text-block 0"
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
    },
    "carga/chunks": {
     "state": "PASS",
@@ -306,14 +306,14 @@
     "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
    },
    "navegacao/links": {
-    "state": "FAIL",
+    "state": "N/A",
     "measured": {
-     "in_text": 3,
+     "in_text": 0,
      "distinguished": 0,
      "axe": 0
     },
     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-    "evidence": "0/3 in-text links distinguished by more than colour; axe link-in-text-block 0"
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
    },
    "carga/chunks": {
     "state": "PASS",
@@ -1126,7 +1126,7 @@
      "big_lists": []
     },
     "links": {
-     "in_text": 2,
+     "in_text": 0,
      "distinguished_not_only_color": 0
     },
     "forms": {
@@ -1402,7 +1402,7 @@
      "big_lists": []
     },
     "links": {
-     "in_text": 3,
+     "in_text": 0,
      "distinguished_not_only_color": 0
     },
     "forms": {
