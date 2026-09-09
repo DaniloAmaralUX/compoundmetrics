@@ -97,6 +97,7 @@ export default function HomePage() {
         </Rows>
         <div className={styles.finalCta}>
           <CtaRow>
+            <Cta href="/guide">Read the guide</Cta>
             <Cta href="/lab">Watch Compound happen</Cta>
             <Cta href="/how-it-works">Understand the mechanism</Cta>
           </CtaRow>

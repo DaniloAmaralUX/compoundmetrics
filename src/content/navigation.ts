@@ -7,6 +7,7 @@ export interface NavItem {
 
 export const navigation: NavItem[] = [
   { href: "/", label: "Home", outcome: "I understand the idea." },
+  { href: "/guide", label: "Guide", outcome: "I can run the process." },
   { href: "/how-it-works", label: "How it Works", outcome: "I understand the mechanism." },
   { href: "/lab", label: "Lab", outcome: "I saw Compound happen." },
   { href: "/project", label: "Project", outcome: "I understand what this experiment is." },
