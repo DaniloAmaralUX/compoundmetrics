@@ -1,0 +1,224 @@
+{
+ "label": "DESIGN-H",
+ "files_viewed": [
+  "ENTRY-desktop-first-screen.png",
+  "DISCOVERY-desktop-first-screen.png",
+  "DETAIL-desktop-first-screen.png",
+  "INTERACTION-desktop-first-screen.png",
+  "ENTRY-desktop.png",
+  "ENTRY-mobile-first-screen.png",
+  "ENTRY-mobile.png",
+  "DISCOVERY-desktop.png",
+  "DISCOVERY-mobile-first-screen.png",
+  "DISCOVERY-mobile.png",
+  "DETAIL-desktop.png",
+  "DETAIL-mobile-first-screen.png",
+  "DETAIL-mobile.png",
+  "INTERACTION-mobile.png",
+  "state-ENTRY-mobile-nav-open.png",
+  "state-DISCOVERY-mobile-nav-open.png",
+  "state-DETAIL-mobile-nav-open.png",
+  "state-INTERACTION-mobile-nav-open.png",
+  "state-ENTRY-focus-first.png",
+  "state-ENTRY-hover-first.png",
+  "state-DETAIL-hover-first.png",
+  "state-INTERACTION-focus-first.png",
+  "(crops derived from ENTRY-desktop-first-screen.png, INTERACTION-desktop-first-screen.png, ENTRY-mobile.png)"
+ ],
+ "per_surface_notes": "ENTRY: docs landing (top nav, Ctrl+K search, hero with roadmap pill, install command, two CTAs, card grid). DISCOVERY: three-column docs page (sidebar, content, TOC). DETAIL: component page with demos, collapsed code blocks, props table, loading/disabled demos. INTERACTION: chrome-less Playground block (textarea, preset select, model select, sliders, Enviar + reset) with no site navigation on any viewport. Mobile captures show a sticky \"Menu\" header at a scrolled offset (hero appears above the header in ENTRY-mobile.png) — treated as a capture artefact. No form-submit-empty state was captured, so all interaction/form items that need it are NOT_VERIFIED. Hero install command rotates between targets (badge.json / authen…), producing slight baseline shifts between captures — ignored.",
+ "verdicts": [
+  {
+   "id": "fundamentos/convencao",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "ENTRY uses a conventional top nav, header search with Ctrl+K, hero with install command and two CTAs, then a card grid; DISCOVERY is the standard sidebar / content / 'On This Page' docs layout with Copy Page and prev/next controls. No novel patterns beyond familiar docs-site conventions.",
+   "evidence_file": "ENTRY-desktop-first-screen.png; DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/cta-3s",
+   "state": "PASS",
+   "surface": "ENTRY, INTERACTION",
+   "reason": "ENTRY has exactly one filled white primary button ('Fundamentos →') next to an outlined secondary ('Componentes'); INTERACTION has one filled 'Enviar' while Salvar / Ver código / Compartilhar are outlined. DISCOVERY/DETAIL are reading surfaces with only secondary controls.",
+   "evidence_file": "ENTRY-desktop-first-screen.png; INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/leitura",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "ENTRY reads pill → large centred title → lede → command block → CTAs → cards by size and position alone; DISCOVERY/DETAIL read title → lede → body → h2 sections. Sizes and weights step down consistently.",
+   "evidence_file": "ENTRY-desktop-first-screen.png; DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/proximidade",
+   "state": "PASS",
+   "surface": "DISCOVERY, INTERACTION",
+   "reason": "Sidebar groups (Seções / Fundamentos / Componentes) are separated by a heading and a larger gap than the items inside them; in the Playground each slider label and value sit directly above their own track with wider gaps between parameters; cards keep title and demo together inside a border.",
+   "evidence_file": "DISCOVERY-desktop-first-screen.png; INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/whitespace",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY",
+   "reason": "The hero title/CTA block has roughly 100 px of empty space above and below it, far more than the ~16 px gaps inside the card grid; on DISCOVERY the page title carries more margin than any body paragraph or h2.",
+   "evidence_file": "ENTRY-desktop.png; DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/cor-destaque",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Blue appears only on the roadmap status pill in the hero, the keyboard focus ring and the 'Azul' badge demo; primary actions are neutral white, and red/green/amber appear only on semantic demos (Error button, Publicado, Em revisão, Sucesso note). Syntax colours stay inside code blocks.",
+   "evidence_file": "ENTRY-desktop-first-screen.png; state-INTERACTION-focus-first.png"
+  },
+  {
+   "id": "estilo/paleta",
+   "state": "PASS",
+   "surface": "all",
+   "reason": "Colours read as a system: near-black surfaces with a grey text scale, one blue accent, and red/green/amber semantic colours used only for error/success/warning demos and notes. No stray decorative colours outside code syntax highlighting.",
+   "evidence_file": "ENTRY-desktop.png; DETAIL-desktop-first-screen.png"
+  },
+  {
+   "id": "estilo/icones",
+   "state": "FAIL",
+   "surface": "ENTRY",
+   "reason": "Header icons, the copy/plus/grid icons and the arrow inside the 'Fundamentos →' button are 16 px, ~2 px-stroke outline icons of one family, but the nine card headers use a thin hairline '→' glyph (~12 px, ~1 px stroke) that reads as a text arrow, so two arrow styles with different stroke weight and optical size sit on the same screen.",
+   "evidence_file": "ENTRY-desktop-first-screen.png",
+   "measured_value": "Card-corner arrows: thin hairline glyph ~12 px; button/header arrows: 2 px-stroke outline icon ~16 px",
+   "expected_value": "All inline icons share one family, stroke weight and optical size"
+  },
+  {
+   "id": "acessibilidade/nao-so-cor",
+   "state": "PASS",
+   "surface": "ENTRY, DETAIL, DISCOVERY",
+   "reason": "State indicators carry text or icon in addition to colour: '✓ Publicado' badge (check + label), 'Sucesso:' note prefix, 'Error'/'Warning' button labels, spinner plus 'Carregando' text on the loading button; active sidebar/tab items get a filled pill background, not colour alone.",
+   "evidence_file": "ENTRY-desktop-first-screen.png; DETAIL-mobile-first-screen.png; DISCOVERY-desktop-first-screen.png"
+  },
+  {
+   "id": "navegacao/busca",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY, DETAIL",
+   "reason": "Volume is high (three sidebar groups, a 77-item roadmap, 54 blocks) and every desktop docs surface shows a header search field with a visible 'Ctrl K' keyboard shortcut. On mobile the search box is not in the header and not visible in the captured top of the open menu, so mobile reachability could not be confirmed; INTERACTION is a chrome-less block without search.",
+   "evidence_file": "ENTRY-desktop-first-screen.png; state-ENTRY-mobile-nav-open.png"
+  },
+  {
+   "id": "navegacao/mobile-nav",
+   "state": "PASS",
+   "surface": "ENTRY, DISCOVERY, DETAIL",
+   "reason": "At 390 px the header shows a hamburger icon with the visible label 'Menu' in a ~44 px bar; tapping opens a full-height drawer with grouped links in ~44 px rows and a clear close (X). INTERACTION has no site navigation on any viewport (standalone Playground block), so its 'mobile-nav-open' capture opened the preset combobox instead.",
+   "evidence_file": "state-ENTRY-mobile-nav-open.png; state-DISCOVERY-mobile-nav-open.png; state-INTERACTION-mobile-nav-open.png"
+  },
+  {
+   "id": "carga/disclosure",
+   "state": "PASS",
+   "surface": "DETAIL, INTERACTION",
+   "reason": "DETAIL shows each demo first with its code block collapsed behind an 'Expand' control, a Copy Page split button with a dropdown, and a TOC summarising sections; INTERACTION tucks secondary actions behind a '...' overflow button and hides the parameter panel on mobile.",
+   "evidence_file": "DETAIL-desktop.png; INTERACTION-mobile.png"
+  },
+  {
+   "id": "carga/feedback",
+   "state": "NOT_VERIFIED",
+   "surface": "INTERACTION",
+   "reason": "The only captured post-interaction states are a focus ring on the preset select and the preset dropdown opened; no capture shows the response to clicking Enviar, Salvar, the reset button or a copy button, so immediate feedback on the primary actions cannot be judged.",
+   "evidence_file": "state-INTERACTION-focus-first.png; state-INTERACTION-mobile-nav-open.png"
+  },
+  {
+   "id": "carga/loading",
+   "state": "NOT_VERIFIED",
+   "surface": "INTERACTION",
+   "reason": "The Playground 'Enviar' triggers a model call (long operation) but no loading state of it was captured. DETAIL documents a spinner + 'Carregando' button pattern, which shows the design has a loading component, but its use on the actual operation is not shown.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png; DETAIL-mobile-first-screen.png"
+  },
+  {
+   "id": "carga/prevencao",
+   "state": "NOT_VERIFIED",
+   "surface": "INTERACTION, ENTRY",
+   "reason": "Forms exist (Playground prompt textarea, header search, Input demo) but no typing, blur or submit-empty state was captured, so inline validation before submit cannot be observed.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "carga/recuperacao",
+   "state": "NOT_VERIFIED",
+   "surface": "INTERACTION",
+   "reason": "The Playground has an icon-only reset button (↺) beside Enviar that would discard the typed prompt; no capture shows whether it asks for confirmation or offers undo. No other destructive action is visible.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/valor-rapido",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Within the first 900 px the landing gives the product name, a one-line value statement, a copyable install command with package-manager tabs and two CTAs straight into Fundamentos/Componentes, with live component demos immediately below. The mobile first screen (captured scrolled) still shows the install command and both CTAs.",
+   "evidence_file": "ENTRY-desktop-first-screen.png; ENTRY-mobile-first-screen.png"
+  },
+  {
+   "id": "onboarding/empty-states",
+   "state": "PASS",
+   "surface": "INTERACTION",
+   "reason": "The empty Playground prompt shows the example placeholder 'Escreva um slogan para uma sorveteria', the 'Carregar predefinição…' dropdown lists ready-made example prompts under an 'Exemplos' heading, and 'Enviar' is the visible next step.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png; state-INTERACTION-mobile-nav-open.png"
+  },
+  {
+   "id": "onboarding/dicas-contexto",
+   "state": "PASS",
+   "surface": "DETAIL, ENTRY",
+   "reason": "Help is inline at the point of use rather than a tour: each DETAIL section opens with a one-line explanation directly above its demo ('primary para a ação principal da tela…', 'loading troca o prefixo pelo indicador…'), the search field shows its 'Ctrl K' shortcut inline, and slider values sit next to their labels. Playground parameter labels (Temperatura, Top P) carry no visible help, but hover on them was not captured.",
+   "evidence_file": "DETAIL-desktop-first-screen.png; DETAIL-mobile-first-screen.png; ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/progresso-fluxo",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No multi-step flow exists on any captured surface; the '9 de 77 itens do roteiro publicados' pill is roadmap status, not a user-progress stepper.",
+   "evidence_file": "ENTRY-desktop.png; INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "confianca/depoimentos",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No testimonials or quotes appear on ENTRY, DISCOVERY, DETAIL or INTERACTION.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/numeros",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Numbers shown are specific counts rather than vague claims: '9 de 77 itens do roteiro publicados', '54 blocos, 140 layouts e 24 efeitos', '8 presets', '77 itens no roteiro, 9 publicados', each attributed to the Roteiro page or named upstream repositories.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/logos",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No pricing or signup decision point exists on any surface; the only attribution (built on a named starter, MIT) sits in the footer.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/seguranca",
+   "state": "N/A",
+   "surface": "all",
+   "reason": "No personal, payment or sensitive data is collected: the inputs are a documentation search, a URL demo field and a demo Playground prompt; there is no signup, email or checkout form.",
+   "evidence_file": "ENTRY-desktop.png; INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "formularios/erro-inline",
+   "state": "NOT_VERIFIED",
+   "surface": "INTERACTION",
+   "reason": "A form exists (Playground with Enviar) but no form-submit-empty capture was provided, so the placement and wording of validation messages cannot be observed.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png"
+  },
+  {
+   "id": "formularios/opcionais",
+   "state": "FAIL",
+   "surface": "INTERACTION",
+   "reason": "The Playground form has several fields (prompt textarea, preset select, Modelo select, Temperatura / Tamanho máximo / Top P sliders) submitted by Enviar, and none of the labels carries a required or optional marker; the prompt field has only a placeholder and no label at all.",
+   "evidence_file": "INTERACTION-desktop-first-screen.png",
+   "measured_value": "0 of 6 fields marked required or optional",
+   "expected_value": "Required or optional fields consistently marked with a visible marker"
+  },
+  {
+   "id": "formularios/submit-estado",
+   "state": "NOT_VERIFIED",
+   "surface": "INTERACTION",
+   "reason": "No submitting, success or failure state of the Playground form was captured. The only observable fact is that 'Enviar' is enabled while the prompt is empty (not disabled without explanation).",
+   "evidence_file": "INTERACTION-desktop-first-screen.png; INTERACTION-mobile.png"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "milestone": "V07",
+ "verdicts": [
+  {
+   "id": "fundamentos/jtbd",
+   "state": "PASS",
+   "reason": "The README opens with a single sentence stating what the site is for: a one-rail timeline of the process every software change goes through at Pitang. It is a content/purpose statement rather than a user-outcome phrasing, but it names the site's job in one sentence as the rule requires.",
+   "evidence_file": "README.md",
+   "quote": "A timeline of the process every software change goes through at Pitang, rendered on a single rail"
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "state": "FAIL",
+   "reason": "Documentation exists (README, commit bodies, data-file header comment) but none of it states a product or business bet, nor ties any design decision (single rail, steps instead of years, looping last step, removed GitHub link) to one. The README describes what the page shows and how to run it; the commit body lists what changed.",
+   "evidence_file": "README.md",
+   "quote": "The steps and their descriptions live in lib/lifeline-processo.ts; the page is app/page.tsx. Built on the Lifeline boilerplate by Evil Rabbit"
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "state": "PASS",
+   "reason": "Stack and design-system constraints are recorded: the project section states the site is built on the Lifeline boilerplate (shadcn registry, zinc palette) and the Requirements section fixes Next.js App Router + Tailwind, next/image and next-themes. Marginal: the Requirements text is inherited upstream component documentation and no time or team constraints are recorded anywhere; the README was committed together with the build (commit 6692884), not demonstrably before it.",
+   "evidence_file": "README.md",
+   "quote": "Next.js (App Router) with Tailwind CSS — the components use `next/image` and `next-themes` (theme flip during the fireworks). Tailwind v3 and v4 both work; the palette is plain `zinc` utilities"
+  },
+  {
+   "id": "fundamentos/documentado",
+   "state": "FAIL",
+   "reason": "No ADRs, ledger, docs/ or plan files exist in the worktree. The only candidates are the commit body of 6692884 and the header comment in lib/lifeline-processo.ts; both describe what was done (boilerplate brought in, demo data replaced, years repurposed as steps 1..N, column headers renamed) without recording why those decisions were taken over alternatives. Commit 6db573c ('Remove GitHub link from the nav') has no rationale body at all.",
+   "evidence_file": "lib/lifeline-processo.ts",
+   "quote": "Em vez de anos, os marcadores são passos: `birthYear`/`endYear` viram passo 1..N, `label` carrega o nome da etapa e `age` o número dela."
+  }
+ ],
+ "docs_found": [
+  "README.md",
+  "lib/lifeline-processo.ts",
+  ".gitignore",
+  "git log -30 (commits 28e53d1, 6db573c, 62d1413, 6692884, e783176)"
+ ],
+ "instrument": "source review of the exact commit worktree (unblinded by nature: fundamentos/* items need repository docs)"
+}

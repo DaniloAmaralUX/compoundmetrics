@@ -7,133 +7,185 @@
  "source_sha": "28e53d1ab20b46b2ace378c0c67234e8a34bc151",
  "date_range": "2026-09-08",
  "overall": {
-  "PASS": 13,
-  "FAIL": 5,
-  "N/A": 5,
-  "NOT_VERIFIED": 31,
-  "score": 72.2,
-  "coverage": 36.7
+  "PASS": 21,
+  "FAIL": 11,
+  "N/A": 21,
+  "NOT_VERIFIED": 1,
+  "score": 65.6,
+  "coverage": 97
  },
  "deterministic_only": {
-  "PASS": 13,
+  "PASS": 12,
   "FAIL": 5,
-  "N/A": 5,
+  "N/A": 6,
   "NOT_VERIFIED": 0,
-  "score": 72.2,
+  "score": 70.6,
   "coverage": 100
  },
  "judgment_only": {
-  "PASS": 0,
-  "FAIL": 0,
-  "N/A": 0,
-  "NOT_VERIFIED": 31,
-  "score": null,
-  "coverage": 0
+  "PASS": 9,
+  "FAIL": 6,
+  "N/A": 15,
+  "NOT_VERIFIED": 1,
+  "score": 60,
+  "coverage": 93.8
  },
  "categories": {
   "fundamentos": {
-   "PASS": 0,
-   "FAIL": 0,
+   "PASS": 2,
+   "FAIL": 3,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": null,
-   "coverage": 0
+   "NOT_VERIFIED": 0,
+   "score": 40,
+   "coverage": 100
   },
   "hierarquia": {
-   "PASS": 1,
-   "FAIL": 0,
-   "N/A": 1,
-   "NOT_VERIFIED": 5,
-   "score": 100,
-   "coverage": 16.7
+   "PASS": 4,
+   "FAIL": 1,
+   "N/A": 2,
+   "NOT_VERIFIED": 0,
+   "score": 80,
+   "coverage": 100
   },
   "estilo": {
    "PASS": 4,
-   "FAIL": 1,
-   "N/A": 0,
-   "NOT_VERIFIED": 2,
-   "score": 80,
-   "coverage": 71.4
+   "FAIL": 2,
+   "N/A": 1,
+   "NOT_VERIFIED": 0,
+   "score": 66.7,
+   "coverage": 100
   },
   "acessibilidade": {
-   "PASS": 6,
+   "PASS": 7,
    "FAIL": 2,
    "N/A": 0,
-   "NOT_VERIFIED": 1,
-   "score": 75,
-   "coverage": 88.9
+   "NOT_VERIFIED": 0,
+   "score": 77.8,
+   "coverage": 100
   },
   "navegacao": {
    "PASS": 1,
-   "FAIL": 2,
-   "N/A": 1,
-   "NOT_VERIFIED": 2,
-   "score": 33.3,
-   "coverage": 60
+   "FAIL": 3,
+   "N/A": 2,
+   "NOT_VERIFIED": 0,
+   "score": 25,
+   "coverage": 100
   },
   "carga": {
    "PASS": 1,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 5,
+   "N/A": 4,
+   "NOT_VERIFIED": 1,
    "score": 100,
-   "coverage": 16.7
+   "coverage": 50
   },
   "onboarding": {
-   "PASS": 0,
+   "PASS": 2,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "N/A": 2,
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "confianca": {
    "PASS": 0,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
+   "N/A": 4,
+   "NOT_VERIFIED": 0,
    "score": null,
-   "coverage": 0
+   "coverage": null
   },
   "formularios": {
    "PASS": 0,
    "FAIL": 0,
-   "N/A": 3,
-   "NOT_VERIFIED": 3,
+   "N/A": 6,
+   "NOT_VERIFIED": 0,
    "score": null,
-   "coverage": 0
+   "coverage": null
   }
  },
  "items": {
   "fundamentos/jtbd": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/jtbd",
+     "state": "PASS",
+     "reason": "The README opens with a single sentence stating what the site is for: a one-rail timeline of the process every software change goes through at Pitang. It is a content/purpose statement rather than a user-outcome phrasing, but it names the site's job in one sentence as the rule requires.",
+     "evidence_file": "README.md",
+     "quote": "A timeline of the process every software change goes through at Pitang, rendered on a single rail"
+    }
+   ]
   },
   "fundamentos/macro-bet": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/macro-bet",
+     "state": "FAIL",
+     "reason": "Documentation exists (README, commit bodies, data-file header comment) but none of it states a product or business bet, nor ties any design decision (single rail, steps instead of years, looping last step, removed GitHub link) to one. The README describes what the page shows and how to run it; the commit body lists what changed.",
+     "evidence_file": "README.md",
+     "quote": "The steps and their descriptions live in lib/lifeline-processo.ts; the page is app/page.tsx. Built on the Lifeline boilerplate by Evil Rabbit"
+    }
+   ]
   },
   "fundamentos/convencao": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "fundamentos/convencao",
+     "state": "FAIL",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "On both desktop surfaces the entire content area is a fixed-height, horizontally panning timeline whose earlier columns (steps 01-04 on ENTRY; years before 2020 on DISCOVERY) sit offscreen with no scrollbar, arrows or cue, and the header carries only a page label with no conventional nav or link pattern. Mobile falls back to a familiar vertical list, but the desktop default is the novel pattern rather than a limited use of it.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "Steps 05, 06, 07 visible at x=268-1207; PASSO/ETAPA row labels pinned left; no scroll affordance, no nav menu, only a 'Processo' label and a footer text chain",
+     "expected_value": "Familiar default (visible nav, conventional page scroll or an explicit carousel/scroll affordance) with novelty confined to one purposeful element"
+    }
+   ]
   },
   "fundamentos/restricoes": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/restricoes",
+     "state": "PASS",
+     "reason": "Stack and design-system constraints are recorded: the project section states the site is built on the Lifeline boilerplate (shadcn registry, zinc palette) and the Requirements section fixes Next.js App Router + Tailwind, next/image and next-themes. Marginal: the Requirements text is inherited upstream component documentation and no time or team constraints are recorded anywhere; the README was committed together with the build (commit 6692884), not demonstrably before it.",
+     "evidence_file": "README.md",
+     "quote": "Next.js (App Router) with Tailwind CSS — the components use `next/image` and `next-themes` (theme flip during the fireworks). Tailwind v3 and v4 both work; the palette is plain `zinc` utilities"
+    }
+   ]
   },
   "fundamentos/documentado": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/documentado",
+     "state": "FAIL",
+     "reason": "No ADRs, ledger, docs/ or plan files exist in the worktree. The only candidates are the commit body of 6692884 and the header comment in lib/lifeline-processo.ts; both describe what was done (boilerplate brought in, demo data replaced, years repurposed as steps 1..N, column headers renamed) without recording why those decisions were taken over alternatives. Commit 6db573c ('Remove GitHub link from the nav') has no rationale body at all.",
+     "evidence_file": "lib/lifeline-processo.ts",
+     "quote": "Em vez de anos, os marcadores são passos: `birthYear`/`endYear` viram passo 1..N, `label` carrega o nome da etapa e `age` o número dela."
+    }
+   ]
   },
   "hierarquia/cta-3s": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/cta-3s",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "Both captured pages are pure reading surfaces by design: a process timeline and a year timeline with no buttons, links-as-actions or forms; the only interactive elements are the header label and a footer theme toggle.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/headings": {
    "state": "N/A",
@@ -146,24 +198,62 @@
    "evidence": []
   },
   "hierarquia/leitura": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/leitura",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "On ENTRY the eye goes header label (bright, bold, top-left) -> step titles (larger, heavier, lighter grey) -> body paragraphs (mid grey) -> small step numbers and footer chain; on DISCOVERY the bold years read before the single grey description and the small legend. Mobile keeps the same size/weight tiers in a vertical list.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/proximidade": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/proximidade",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Each step number sits directly above its title and the description sits ~35px below the dashed rule in the same column, while neighbouring columns are ~290px apart; on mobile the '05 -- Compound' row and its indented paragraphs are ~20px apart with ~60px between groups.",
+     "evidence_file": "ENTRY-mobile-first-screen.png"
+    }
+   ]
   },
   "hierarquia/whitespace": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "hierarquia/whitespace",
+     "state": "FAIL",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "Whitespace is uniform, not hierarchical: ENTRY-desktop has an empty ~250px band above and ~300px below the timeline row with all three step columns given identical width and gap, and DISCOVERY spaces the years by fixed 80px ticks; the wider 2023 column is content overflow, not emphasis. Mobile lists use even spacing between all items.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "Content band y~320-545 in a 900px frame; equal 290px column pitch for steps 05/06/07; no element receives more surrounding space than its siblings",
+     "expected_value": "Extra breathing room around the primary element (e.g. the current step or headline) relative to secondary items"
+    }
+   ]
   },
   "hierarquia/cor-destaque": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DISCOVERY",
+   "evidence": [
+    {
+     "id": "hierarquia/cor-destaque",
+     "state": "PASS",
+     "surface": "DISCOVERY",
+     "reason": "ENTRY is monochrome (white/grey on near-black). The only chromatic elements on DISCOVERY are the blue and pink legend dots for 'Mentors' and 'Met in person', which carry meaning and are not used decoratively elsewhere.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/escala-tipo": {
    "state": "PASS",
@@ -186,9 +276,18 @@
    "evidence": []
   },
   "estilo/paleta": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "estilo/paleta",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Colours read as a system: a near-black ground, a header/footer divider grey, four or five grey text tiers (white label, light-grey titles, mid-grey body, dim step numbers), and two categorical accents (blue, pink) confined to the DISCOVERY legend.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "estilo/elevacao": {
    "state": "PASS",
@@ -211,19 +310,30 @@
    "evidence": []
   },
   "estilo/radius": {
-   "state": "PASS",
+   "state": "N/A",
    "mode": "deterministic",
    "per_surface": {
     "ENTRY": "N/A",
-    "DISCOVERY": "PASS",
-    "INTERACTION": "PASS"
+    "DISCOVERY": "N/A",
+    "INTERACTION": "N/A"
    },
    "evidence": []
   },
   "estilo/icones": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "estilo/icones",
+     "state": "FAIL",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "Pictograms mix families: ENTRY's footer uses a thin stroke-style sun icon while the 'Pitang Knowledge' title uses a typographic ↺ glyph as its inline icon, and DISCOVERY inlines a full-colour emoji (🎇) after 'Still going.'; stroke weight, colour treatment and optical size differ between the three.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png",
+     "measured_value": "Stroke sun icon (~16px, monochrome) + unicode ↺ glyph at text weight + colour emoji at text size",
+     "expected_value": "One icon family with consistent stroke weight and optical size"
+    }
+   ]
   },
   "estilo/motion": {
    "state": "FAIL",
@@ -309,9 +419,18 @@
    ]
   },
   "acessibilidade/nao-so-cor": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "acessibilidade/nao-so-cor",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "The only state captured is keyboard focus, which is drawn as a rectangular white outline around the header label (shape, not a colour shift alone). The DISCOVERY legend pairs each coloured dot with a text label; no error/success states exist.",
+     "evidence_file": "state-ENTRY-focus-first.png"
+    }
+   ]
   },
   "acessibilidade/alt-aria": {
    "state": "PASS",
@@ -450,14 +569,34 @@
    "evidence": []
   },
   "navegacao/busca": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "navegacao/busca",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "Content volume is small: two captured pages with seven process steps and a dozen year entries, well under ~15 destinations, so search is not called for.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "navegacao/mobile-nav": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY (mobile)",
+   "evidence": [
+    {
+     "id": "navegacao/mobile-nav",
+     "state": "FAIL",
+     "surface": "ENTRY (mobile)",
+     "reason": "The site has at least two pages (Processo, Lifeline) but the 390px ENTRY shows no menu, no labelled toggle and no link to the other page: the header holds only the 'Processo' label, and the footer step chain overflows and is clipped at the right edge ('Compound Engineering -> P...'). No mobile-nav-open state exists because there is no toggle.",
+     "evidence_file": "ENTRY-mobile-first-screen.png",
+     "measured_value": "Header: page label only; footer: sun icon + horizontally clipped text chain; zero visible nav targets",
+     "expected_value": "Visible navigation or a labelled >=44px toggle revealing comfortable targets"
+    }
+   ]
   },
   "navegacao/links": {
    "state": "PASS",
@@ -480,69 +619,186 @@
    "evidence": []
   },
   "carga/disclosure": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/disclosure",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "There is no secondary complexity to disclose: every item is a number, a title and one or two sentences shown in full, with no deeper detail, settings or expandable content on any surface.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "carga/feedback": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/feedback",
+     "state": "NOT_VERIFIED",
+     "surface": "ENTRY, INTERACTION",
+     "reason": "The INTERACTION surface (Lifeline) has no actions beyond the header link, but ENTRY carries a theme-toggle sun icon in the footer whose click result was not captured, so immediate feedback for that action cannot be verified.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "carga/loading": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/loading",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "All content is static text on both pages; no long operation (fetch, submit, upload) exists that would need a loading state.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "carga/prevencao": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/prevencao",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No form or input field exists on any captured surface.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "carga/recuperacao": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/recuperacao",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No destructive action exists; the only interactions are the header label, a theme toggle and focus on the label.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/valor-rapido": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "onboarding/valor-rapido",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "The first screen is the core content itself: the process steps with titles and descriptions are readable immediately on desktop and mobile with no splash, gate or intermediate step, even though the sequence is shown from step 05 onward.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/empty-states": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "onboarding/empty-states",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No empty view exists; years without an event (2020-2022, 2024-2025) are simply blank cells within a populated timeline, not an empty state of a list or screen.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/dicas-contexto": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DISCOVERY, ENTRY",
+   "evidence": [
+    {
+     "id": "onboarding/dicas-contexto",
+     "state": "PASS",
+     "surface": "DISCOVERY, ENTRY",
+     "reason": "Help sits at the point of use rather than in a tour: DISCOVERY's footer legend explains the blue/pink dot codes inline ('Mentors', 'Met in person'), and on ENTRY the ↺ glyph on step 07 is explained by the adjacent line '↺ O ciclo recomeça'.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/progresso-fluxo": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "onboarding/progresso-fluxo",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "There is no multi-step user flow (no wizard, signup or checkout); the numbered steps are descriptive content, not a flow the user progresses through.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "confianca/depoimentos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/depoimentos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No testimonials appear on any surface.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "confianca/numeros": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/numeros",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "The only numbers are step indices (05-07, 25-36) and calendar years used as labels, not quantities offered as proof.",
+     "evidence_file": "DISCOVERY-desktop-first-screen.png"
+    }
+   ]
   },
   "confianca/logos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/logos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No decision point (pricing, signup, purchase) exists on any surface.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "confianca/seguranca": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/seguranca",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No data is collected: there are no inputs, payment or account surfaces.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "formularios/labels": {
    "state": "N/A",
@@ -555,9 +811,18 @@
    "evidence": []
   },
   "formularios/erro-inline": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/erro-inline",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No form exists on any captured surface.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "formularios/tipos-campo": {
    "state": "N/A",
@@ -580,14 +845,32 @@
    "evidence": []
   },
   "formularios/opcionais": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/opcionais",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No form exists on any captured surface.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "formularios/submit-estado": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/submit-estado",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No form or submit button exists on any captured surface.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   }
  }
 }

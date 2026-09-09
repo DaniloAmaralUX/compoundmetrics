@@ -1,0 +1,44 @@
+{
+ "milestone": "V03",
+ "verdicts": [
+  {
+   "id": "fundamentos/jtbd",
+   "state": "PASS",
+   "reason": "The PRD states the product's job in one sentence (§1 Resumo executivo), and README.md gives a one-line description of the site/library. Persona §7.1 also carries a one-sentence JTBD for the primary user.",
+   "evidence_file": "docs/product/PRD-CANVAS-UI.md",
+   "quote": "Seu trabalho principal é: > Encontrar um componente, experimentar seus estados e tokens, combiná-lo com outros componentes e exportar código reproduzível."
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "state": "PASS",
+   "reason": "The PRD names the product bet (evolve from an effects library into a 'component workbench', with Components/Playground/Studio as the core and the 24 Canvas components preserved; risk table: 'Component workbench é o núcleo'). DESIGN.md §3 derives the surface/navigation decisions directly from that bet ('Duas caixas, uma navegação: Components — a biblioteca … Uso diário. Effects — os 24 Canvas … intocado'; 'Preview é o padrão'), and commit bodies (43c4ddd navigation order 'Screens lead, then Components (the daily library), then Effects'; f4ecc35 'a screen gallery whose files must be assembled by hand has not delivered a screen') tie concrete design choices to the workbench promise and PRD principles/metrics (preview-first, no infinite loading).",
+   "evidence_file": "DESIGN.md",
+   "quote": "Duas caixas, uma navegação: **Components** — a biblioteca: 62 shadcn (Base UI) + React Bits. Uso diário. **Effects** — os 24 Canvas. Efeitos de página, fluxo do Playground, intocado."
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "state": "PASS",
+   "reason": "Constraints are recorded before the build commits (PRD and DEPENDENCY-POLICY dated 2026-08-12; all build commits are 2026-08-13). Stack: README (Next.js 16, Tailwind v4, Cloudflare Workers), DEPENDENCY-POLICY pins exact versions (DialKit 1.4.3, Sandpack 2.20.0, MCP SDK 1.29.0, shadcn/React Bits snapshot SHAs, Node 22 Windows/Linux). PRD §14 RNFs fix browser support, WCAG 2.2 AA, perf budgets (+10% max regression), coverage thresholds; §6 non-goals and §15.6 'Não será instalada outra camada de skills nesta fase'. Design-system constraints: DESIGN.md (semantic tokens only, Geist Sans/Mono, six-step type scale, 4px spacing base, radius ladder). Team/time constraints are less explicit (phased plan in §17 and external gates in HANDOFF rather than calendar dates), but stack and design-system constraints are thoroughly recorded.",
+   "evidence_file": "docs/product/DEPENDENCY-POLICY.md",
+   "quote": "| DialKit | Control and motion engine | `1.4.3` exact | MIT | … | Sandpack | React preview runtime | `2.20.0` exact | … Dependency upgrades require tests, coverage, lint and a production build on Node 22 for Windows and Linux."
+  },
+  {
+   "id": "fundamentos/documentado",
+   "state": "PASS",
+   "reason": "Decision rationale is recorded in three places: docs/solutions/ holds one note per solved problem with Problem / Solution / Principle / Known cost sections (8 notes across build, sandbox-preview, url-state); commit bodies explain why (e.g. 781d086 on why the hero image is served locally and why the swell only runs on-screen; e0db3b6 on why axe specs exclude the sandbox frame; ee06de4 on why React Bits capabilities are not derived from declared deps); DESIGN.md states rationale for each visual rule and declares itself a contract with a change-log discipline. AUDIT-MATRIX.md records the phase C correction (claimed 164/166 previews were not verified).",
+   "evidence_file": "docs/solutions/sandbox-preview/preview-so-e-ready-se-roda.md",
+   "quote": "## Princípio — Um status derivado só vale se for derivado do artefato final, não da intenção do gerador. E o teste que prova o status tem que exercitar o artefato — `expect(código).toContain(...)` prova que escrevemos texto, `expect(parse(código)).toHaveNoErrors()` prova que escrevemos código."
+  }
+ ],
+ "docs_found": [
+  "README.md",
+  "DESIGN.md",
+  "docs/product/PRD-CANVAS-UI.md",
+  "docs/product/DEPENDENCY-POLICY.md",
+  "docs/product/HANDOFF-CLAUDE-CODE.md",
+  "docs/product/AUDIT-MATRIX.md",
+  "docs/solutions/sandbox-preview/preview-so-e-ready-se-roda.md",
+  "git log -30 (commit messages and bodies)"
+ ],
+ "instrument": "source review of the exact commit worktree (unblinded by nature: fundamentos/* items need repository docs)"
+}

@@ -1,0 +1,141 @@
+# Context7 substitute sources — Compound Design case study
+
+PRD §37 required every library API to be verified through Context7 before implementation. Context7 is not reachable from this sandbox, so the verification was done against two offline sources of equal or better authority: the vendor's own skills repository (pinned commit) and the type definitions of the exact package versions installed in this repository. This file records what was checked, where, and which decisions each check settled.
+
+Recorded on 2026-09-09T16:36Z (UTC). Every path below is absolute; every line number refers to the file as installed at that moment.
+
+## 1. Why Context7 was not used — verified, not assumed
+
+| Check | Command | Result |
+|---|---|---|
+| Direct reachability of context7.com | `curl -sS -m 10 https://context7.com/ -o /dev/null -w '%{http_code}'` | `curl: (56) CONNECT tunnel failed, response 403` — reported HTTP code `000` (no TLS session was ever established; the proxy refused the CONNECT). |
+| Proxy state | `curl -sS "$HTTPS_PROXY/__agentproxy/status"` | `enabled: true`, `port: 41803`, `selective: false`, `toolScoped: false`, CA bundle `/root/.ccr/ca-bundle.crt`. `noProxy` whitelists only local ranges plus `api.anthropic.com`, `registry.npmjs.org`, `jsr.io`, `pypi.org`, `files.pythonhosted.org`, `index.crates.io`, `proxy.golang.org`. `recentRelayFailures` shows the same `connect_rejected` / "gateway answered 403 to CONNECT (policy denial or upstream failure)" pattern for other non-allowlisted hosts (e.g. `www.google.com:443`, `accounts.google.com:443`). |
+
+Conclusion: the egress gateway applies a policy denial at the CONNECT stage for `context7.com`. This is not a transient failure and cannot be worked around without disabling TLS verification or bypassing the proxy, both of which are forbidden. The same block is recorded in `/home/user/compoundmetrics/case-study/FREEZE.md:37-38`.
+
+## 2. Substitute sources
+
+| # | Source | Identity / version | Location |
+|---|---|---|---|
+| A | `remotion-dev/skills` (official Remotion agent skills, maintained by the Remotion team) | commit `9ae8048a84690098b1059f7f5d30e6d05833b824`, committed 2026-09-09 14:07:55 +0200 ("Update template"); each SKILL.md front-matter declares `version: 4.0.523`, which is exactly the installed Remotion version | `/home/user/compoundmetrics/.research/history/skills` (origin `https://github.com/remotion-dev/skills.git`, blobless clone) |
+| B | Installed Remotion type definitions | `remotion` 4.0.523, `@remotion/transitions` 4.0.523, `@remotion/cli` 4.0.523 (also present: `@remotion/renderer`, `@remotion/player`, `@remotion/bundler`, `@remotion/media`, `@remotion/studio*` — all 4.0.523). `@remotion/fonts` and `@remotion/google-fonts` are **not** installed. | `/home/user/compoundmetrics/case-study/video/node_modules` (declared in `/home/user/compoundmetrics/case-study/video/package.json`) |
+| C | Installed Playwright + axe type definitions | `playwright-core` 1.63.0 (`types/types.d.ts`, 26 632 lines); `axe-core` 4.13.0 (`axe.d.ts`, 727 lines; runtime `axe.min.js`); Chromium 141.0.7390.37 at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome` | `/home/user/compoundmetrics/compound-design/quality/e2/node_modules` |
+
+Source A is the same material Context7 indexes for Remotion (Remotion publishes its docs and skills from the same team); source B/C are stricter than any documentation because a `.d.ts` mismatch fails the TypeScript build. Every claim in this document was checked against B/C by grepping the `.d.ts`; A was used for usage patterns and recommended structure.
+
+## 3. Verification table
+
+| library | version / date | APIs used | where verified | decisions influenced |
+|---|---|---|---|---|
+| playwright-core | 1.63.0 (installed; `package.json` `types: types/types.d.ts`) | `chromium.launch({ executablePath, headless, args })`; `browser.newContext({ viewport, deviceScaleFactor, reducedMotion, isMobile, hasTouch, locale, timezoneId, colorScheme })`; `browser.newPage()`; `browser.version()`; `browser.close()`; `context.newPage()`; `context.close()`; `page.goto(url, { waitUntil, timeout })`; `page.reload({ waitUntil })`; `page.waitForLoadState("networkidle", { timeout })`; `page.waitForTimeout()`; `page.evaluate(fn, arg)`; `page.addScriptTag({ path })`; `page.screenshot({ fullPage, animations: "disabled", caret: "hide" })`; `page.on("requestfailed")` + `request.failure()?.errorText` + `request.url()`; `response.status()`; `page.keyboard.press("Tab")`; `page.locator(sel).first()`, `.count()`, `.hover({ timeout })`, `.click({ timeout, force })`, `.scrollIntoViewIfNeeded()`; `page.close()` | `/home/user/compoundmetrics/compound-design/quality/e2/node_modules/playwright-core/types/types.d.ts` — see §4 for the line of every member | Capture archive can be produced with a single Chromium build and one context per (surface × viewport); mobile emulation is done with `isMobile`+`hasTouch`+390×844 viewport instead of a device descriptor; animations are frozen at the screenshot level (`animations: "disabled"`) *and* at the context level (`reducedMotion: "reduce"`) so the PNG hashes are stable across runs; `caret: "hide"` removes the text-caret nondeterminism after `Tab`. |
+| axe-core | 4.13.0 (installed; `main: axe.js`, injected file `axe.min.js`) | `axe.run(document, { runOnly: { type: "rule", values: [...] } })`; result fields `violations[].id/impact/nodes[].target/html/failureSummary`, `incomplete[].id/nodes` | `axe.d.ts:559-580` (`run` overloads; the promise-returning `run(context: ElementContext, options: RunOptions): Promise<T>` is at `:572-575`), `:124-141` (`RunOptions.runOnly`), `:11` (`RunOnlyType = 'rule' \| 'rules' \| 'tag' \| 'tags'`), `:115-118` (`RunOnly { type; values }`), `:147-152` (`AxeResults.violations`, `.incomplete`), `:154-159` (`Result.id/impact`), `:166-175` (`NodeResult.html/target/failureSummary`), `:5` (`ImpactValue`) | The deterministic audit runs an explicit rule allow-list (18 rules, `audit-deterministic.mjs:146`) with `type: "rule"` so that a future axe upgrade cannot silently add or drop a rule; `incomplete` is reported separately as "needs review" instead of being counted as a failure. |
+| remotion | 4.0.523 (installed) | `Composition`, `Still`, `Folder`, `AbsoluteFill`, `Sequence` (`from`, `durationInFrames`, `premountFor`, `layout`, `name`), `Series`/`Series.Sequence` (`offset`), `Img`, `staticFile`, `interpolate` (`extrapolateLeft/Right: "clamp"`, `easing`, `output: "perceptual-scale"`), `Easing.bezier`/`Easing.spring`/`Easing.linear`, `spring`, `useCurrentFrame`, `useVideoConfig`, `Interactive.*`, `CanvasImage` | `remotion/dist/cjs/index.d.ts` (public export surface, lines 98-161) plus the per-component `.d.ts` cited in §5 | Scene structure, timing model, asset loading and the fact that this version supports Studio-editable `Interactive.*` elements (see §5). |
+| @remotion/transitions | 4.0.523 (installed) | `TransitionSeries`, `TransitionSeries.Sequence`, `TransitionSeries.Transition`, `TransitionSeries.Overlay`, `fade()` from `@remotion/transitions/fade`, `slide({ direction })` from `@remotion/transitions/slide`, `linearTiming({ durationInFrames, easing })`, `springTiming({ config, durationInFrames })`, `timing.getDurationInFrames({ fps })` | `@remotion/transitions/dist/index.d.ts:1-3` (`linearTiming`, `springTiming`, `TransitionSeries` exports); `dist/TransitionSeries.d.ts:14-18` (`Sequence`, `Transition`, `Overlay` members; `:8-12` Sequence props `durationInFrames`, `offset`, `name`, layout); `dist/presentations/fade.d.ts:2-7`; `dist/presentations/slide.d.ts:3-9` (`SlideDirection = 'from-left' \| 'from-top' \| 'from-right' \| 'from-bottom'`); `dist/timings/linear-timing.d.ts:2-5`; `dist/timings/spring-timing.d.ts:3-8`; `dist/types.d.ts:5-6` (`TransitionTiming.getDurationInFrames`); `package.json` `exports` map contains `./fade` and `./slide` sub-paths | Scene cuts use `TransitionSeries` (not hand-rolled overlapping `Sequence`s); total composition length = sum of scene durations minus sum of transition durations (skills `transitions.md:186-195`), so `durationInFrames` on the `<Composition>` is computed from `getDurationInFrames({ fps })` rather than hard-coded. |
+| @remotion/cli (`Config`) | 4.0.523 (installed; `exports["./config"] → ./dist/config/index.js`) | `Config.setBrowserExecutable(path)`, `Config.setConcurrency(n)`, `Config.setChromiumOpenGlRenderer(renderer)` | `@remotion/cli/dist/config/index.d.ts:124` (`setBrowserExecutable: (newBrowserExecutablePath: BrowserExecutable) => void`; `BrowserExecutable = string \| null` in `@remotion/renderer/dist/browser-executable.d.ts:1`), `:175` (`setConcurrency: (newConcurrency: Concurrency) => void`; `Concurrency = number \| string \| null` in `dist/config/concurrency.d.ts:1`), `:160` (`setChromiumOpenGlRenderer: (renderer: 'swangle' \| 'angle' \| 'egl' \| 'swiftshader' \| 'vulkan' \| 'angle-egl') => void`), `:498` (`export declare const Config: FlatConfig`) | `remotion.config.ts` (not yet written — `case-study/video/` currently holds only `package.json`, `package-lock.json`, `node_modules`) will point `setBrowserExecutable` at the already-downloaded Playwright Chromium (`/opt/pw-browsers/chromium-1194/chrome-linux/chrome`) so the render never tries to download a browser through the blocked proxy; `setChromiumOpenGlRenderer('swangle')` for a headless software GL path; `setConcurrency` pinned to a small integer so renders are reproducible on the sandbox CPU. Deprecated namespaced forms (`Config.Puppeteer.*`, `Config.Rendering.*`) are typed `void` at `:485-496` and must not be used. |
+| remotion-dev/skills (docs) | commit `9ae8048a…` (2026-09-09), `version: 4.0.523` | Guidance only (no runtime API) | Files read: `skills/remotion-markup/SKILL.md` (365 lines), `multi-scene-video.md` (81), `transitions.md` (239), `compositions.md` (117), `sequencing.md` (169), `timing.md` (111), `images.md` (73), `local-fonts.md` (69), `skills/remotion-create/video-layout.md` (9), `skills/remotion-render/SKILL.md` (27) | See §6. |
+
+## 4. Scripts — exact API usage and where each member is declared
+
+All three scripts load `playwright-core` through `createRequire("/home/user/compoundmetrics/compound-design/quality/e2/package.json")`, so the version in use is the one in source C, not a global install. `T` below = `/home/user/compoundmetrics/compound-design/quality/e2/node_modules/playwright-core/types/types.d.ts`. Interface boundaries in `T`: `Page` 84-5912, `Frame` 5913-9138, `BrowserContext` 9139-11017, `Browser` 11018-12359, `Locator` 14240-17315, `BrowserType` 17316-, `Keyboard` 21877-, `Request` 22241-22544, `Response` 22545-, `LaunchOptions` 25376-, `BrowserContextOptions` 25728-, `PageScreenshotOptions` 26294-.
+
+### 4.1 `/home/user/compoundmetrics/case-study/scripts/capture.mjs` (149 lines)
+
+| Script line | API call | Declared at |
+|---|---|---|
+| 14 | `require("playwright-core").chromium` | `T:22196` `export const chromium: BrowserType` |
+| 147 | `chromium.launch({ executablePath: CHROME, headless: true, args: ["--no-sandbox"] })` | `T:17476` `launch(options?: LaunchOptions)`; `LaunchOptions.args` `T:25383`, `.executablePath` `T:25422`, `.headless` `T:25453` |
+| 91 | `browser.newContext({ viewport, deviceScaleFactor: 1, reducedMotion: "reduce", isMobile, hasTouch, locale: "pt-BR", timezoneId: "UTC", colorScheme: "dark" })` | `T:11229` `newContext(options?: BrowserContextOptions)`; `viewport` `T:26151`, `deviceScaleFactor` `T:25836`, `reducedMotion?: null\|"reduce"\|"no-preference"` `T:26041`, `isMobile` `T:25877`, `hasTouch` `T:25856`, `locale` `T:25890`, `timezoneId` `T:26136`, `colorScheme?: null\|"light"\|"dark"\|"no-preference"` `T:25823` |
+| 92 | `ctx.newPage()` | `T:10330` `BrowserContext.newPage(): Promise<Page>` |
+| 63 | `browser.newPage()` (hash helper) | `T:11241` `Browser.newPage(options?)` |
+| 93 | `page.on("requestfailed", r => r.failure()?.errorText, r.url())` | `T:1173` `on(event: 'requestfailed', listener: (request: Request) => any)`; `Request.failure(): null\|{ errorText: string }` `T:22271-22276`; `Request.url()` `T:22539` |
+| 94 | `page.goto(url, { waitUntil: "load", timeout: 60000 })` | `T:3513` `goto(url, options?)`; `waitUntil?: "load"\|"domcontentloaded"\|"networkidle"\|"commit"` `T:3550` |
+| 95 | `resp.status()` | `T:22680` `Response.status(): number` |
+| 78 | `page.waitForLoadState("networkidle", { timeout: 15000 })`, `page.waitForTimeout(1500)` | `T:5552`, `T:5747` |
+| 65, 78, 100, 101 | `page.evaluate(fn, arg)` / `page.evaluate(fn)` | `T:137` `evaluate<R, Arg>(pageFunction, arg, options?)` |
+| 97 | `page.screenshot({ fullPage: true, animations: "disabled", caret: "hide" })` | `T:4563` `screenshot(options?: PageScreenshotOptions): Promise<Buffer>`; `fullPage` `T:26340`, `animations?: "disabled"\|"allow"` `T:26303`, `caret?: "hide"\|"initial"` `T:26309` |
+| 103, 108, 109, 111, 114 | `page.screenshot({ fullPage: false, … })`, `page.screenshot({ animations: "disabled" })` | same as above |
+| 107 | `page.keyboard.press("Tab")` | `T:5819` `Page.keyboard: Keyboard`; `T:21976` `Keyboard.press(key, options?)` |
+| 109 | `page.locator("main a, main button").first()`, `.count()`, `.hover({ timeout: 2000 })` | `T:3979` `Page.locator(selector, options?)`; `Locator.first()` `T:15556`; `.count()` `T:15021`; `.hover(options?)` `T:15986` (`timeout` `T:16040`) |
+| 110-111 | `page.locator(...).first()`, `.scrollIntoViewIfNeeded()`, `.click({ timeout: 2000, force: true })` | `Locator.scrollIntoViewIfNeeded` `T:16627`; `Locator.click(options?)` `T:14897` (`force?: boolean` `T:14916`) |
+| 113-114 | `page.locator("header button, nav button, button[aria-expanded], button[aria-label*=menu i], …").first()`, `.click({ timeout: 2000 })` | as above |
+| 136 | `browser.version()` | `T:11786` `Browser.version(): string` |
+| 75, 118, 149 | `page.close()`, `ctx.close()`, `browser.close()` | `T:2430`, `T:10215`, `T:11164` |
+
+Non-Playwright calls in the same file are Node built-ins only (`node:fs`, `node:path`, `node:crypto`, `node:module`, global `fetch` at line 123).
+
+### 4.2 `/home/user/compoundmetrics/case-study/scripts/audit-deterministic.mjs` (166 lines)
+
+| Script line | API call | Declared at |
+|---|---|---|
+| 11-12 | `require("playwright-core").chromium`; `require.resolve("axe-core/axe.min.js")` | `T:22196`; file exists at `…/e2/node_modules/axe-core/axe.min.js` |
+| 131 | `chromium.launch({ executablePath, headless: true, args: ["--no-sandbox"] })` | `T:17476`, `T:25383`, `T:25422`, `T:25453` |
+| 140 | `browser.newContext({ viewport: {390×844}, deviceScaleFactor: 1, isMobile: true, hasTouch: true, reducedMotion: "no-preference" })` | `T:11229`; fields as in 4.1 (`reducedMotion: "no-preference"` is in the union at `T:26041`) |
+| 143 | `browser.newContext({ viewport: {1440×900}, deviceScaleFactor: 1, reducedMotion: "no-preference" })` | same |
+| 141, 144 | `ctx.newPage()`, `page.goto(url, { waitUntil: "load", timeout: 60000 })`, `page.waitForTimeout()` | `T:10330`, `T:3513`, `T:5747` |
+| 142, 145, 147 | `page.evaluate(DOM_JS, true/false)`, `page.evaluate(async () => {...})` | `T:137` |
+| 87 | `page.addScriptTag({ path: AXE })` | `T:2050` `addScriptTag(options?: {…})`; `path?: string` at `T:2060` |
+| 87 | in-page `axe.run(document, { runOnly: { type: "rule", values: rules } })` → `r.violations[].id/impact/nodes[].target/html/failureSummary`, `r.incomplete[].id/nodes` | `axe.d.ts:572-575` `run(context, options): Promise<T>`; `RunOptions.runOnly` `:125/:141`; `RunOnly` `:115-118`; `AxeResults` `:147-152`; `Result` `:154-159`; `NodeResult` `:166-175` |
+| 148 | `page.reload({ waitUntil: "load" })` | `T:4329` |
+| 92 | `page.keyboard.press("Tab")` | `T:5819`, `T:21976` |
+| 142, 153, 160-166 | `mctx.close()`, `ctx.close()`, `browser.close()` | `T:10215`, `T:11164` |
+
+### 4.3 `/home/user/compoundmetrics/case-study/scripts/lib/serve.mjs` (51 lines)
+
+Uses no third-party library: `node:http` (`createServer`, line 17), `node:fs`, `node:path`, `node:child_process` (`spawn("npx", ["next","start",…])`, line 36), `node:net` (`freePort`, line 13) and global `fetch` (line 41). Nothing to verify against a `.d.ts`; it exists so that capture and audit render the *exact built commit* from `127.0.0.1` instead of a `*.vercel.app` host that the proxy also blocks (`FREEZE.md:37`).
+
+Verdict for §4: every Playwright and axe member used by the three scripts exists, with the same option names and value unions, in the installed 1.63.0 / 4.13.0 type definitions. No deprecated member is used.
+
+## 5. Remotion APIs planned for the film
+
+`R` = `/home/user/compoundmetrics/case-study/video/node_modules/remotion/dist/cjs`, `X` = `/home/user/compoundmetrics/case-study/video/node_modules/@remotion/transitions/dist`. Public re-exports are in `R/index.d.ts`; the line in that file is given first, then the defining file.
+
+| API | Exists in 4.0.523? | Verified at | Notes for the film |
+|---|---|---|---|
+| `Composition` | yes | `R/index.d.ts:121`; `R/Composition.d.ts:58-62` (`CompositionProps`: `id`, `schema?`, dimensions/fps/duration or `calculateMetadata`, `component`/`lazyComponent`, `defaultProps`) | Master `CompoundEvolution` (1920×1080), `CompoundEvolutionVertical`, `CompoundTeaser` per `package.json` scripts. `defaultProps` inline object literal (skills `compositions.md:16-19`). |
+| `Still` | yes | `R/index.d.ts:146` (`export * from './Still.js'`); `R/Still.d.ts:4`; `StillProps` `R/Composition.d.ts:54-57` (no `durationInFrames`/`fps`) | `CompoundCover`, `CompoundContactSheet`, `CompoundEvolutionMap` stills. |
+| `Folder` | yes | `R/index.d.ts:127`; `R/Folder.d.ts:13-16` — prop is **`name: string`**, not `id` | Skills `multi-scene-video.md:49` shows `<Folder id="…">`, which contradicts the type; `compositions.md:68` uses `name`. The type wins: use `name`. Names limited to letters, digits, hyphens (`compositions.md:60`). |
+| `AbsoluteFill` | yes | `R/index.d.ts:98`; `R/AbsoluteFill.d.ts:221` (accepts `InteractiveBaseProps`: `name`, `from`, `durationInFrames`, `trimBefore`, `freeze`, `hidden`, `showInTimeline`) | Scene root; `name="Scene"` for Studio timeline (skills `SKILL.md:130-131`). |
+| `Sequence` — `premountFor`, `layout` | yes | `R/index.d.ts:142`; `R/Sequence.d.ts:85` (`Sequence`), `:81-83` (`SequenceProps.durationInFrames`), `:25` (`from`), `:26` (`trimBefore`), `:28` (`name`), `:5-13` (`AbsoluteFillLayout`: `layout?: 'absolute-fill'`, `premountFor?: number`, `postmountFor?`, `style`, `styleWhilePremounted`), `:14-16` (`LayoutAndStyle = AbsoluteFillLayout \| { layout: 'none' }`) | `premountFor` is only typed on the `absolute-fill` branch, so `<Sequence layout="none" premountFor={…}>` is a type error — premount at the absolute-fill wrapper level. Skills `sequencing.md:82-91`: "Always premount any `<Sequence>`". |
+| `Series` / `Series.Sequence` | yes | `R/index.d.ts:143`; `R/series/index.d.ts:3-7` (`durationInFrames` required, `offset?`, `layout`, `name`, `trimBefore`), `:14-16` (`Series.Sequence`) | Used inside a scene for non-overlapping beats; negative `offset` for overlaps (`sequencing.md:115-129`). |
+| `Img` | yes | `R/index.d.ts:132`; `R/Img.d.ts:5-15` (`src` required, `maxRetries`, `pauseWhenLoading`, `delayRenderTimeoutInMilliseconds`, `onImageFrame`, `effects`, plus `InteractiveBaseProps & InteractiveCropProps & InteractivePremountProps`), `:222` | Screenshots from `case-study/archive/**` are shown with `<Img src={staticFile(...)}>`; `Img` waits for decode before the frame is captured (no flicker of missing images). |
+| `staticFile` | yes | `R/index.d.ts:145`; `R/static-file.d.ts:28` `(path: string) => string` | Assets copied into `case-study/video/public/`; skills `SKILL.md:81-84`, `images.md:19-38`. |
+| `interpolate` (`extrapolateLeft/Right: "clamp"`, `easing`, `output`, `posterize`) | yes | `R/index.d.ts:138` (re-exported from `./no-react`); `R/interpolate.d.ts:1` (`ExtrapolateType = 'extend' \| 'identity' \| 'clamp' \| 'wrap'`), `:2` (`InterpolateOutputOption = 'linear' \| 'perceptual-scale'`), `:10-16` (`InterpolateOptions`: `easing` single or array, `extrapolateLeft`, `extrapolateRight`, `output`, `posterize`), `:23-27` (overloads: number, string and tuple outputs) | Always pass both clamps (skills `timing.md:12-20`); scale animations use `output: 'perceptual-scale'` (`timing.md:73-85`); array of `n-1` easings for multi-keyframe (`timing.md:87-98`). |
+| `Easing.bezier` | yes | `R/index.d.ts:126`; `R/easing.d.ts:25` `static bezier(x1, y1, x2, y2): (t) => number` | House curve `Easing.bezier(0.16, 1, 0.3, 1)` (skills `SKILL.md:39`, `timing.md:59-71`). |
+| `Easing.spring` | yes | `R/easing.d.ts:23` `static spring({ allowTail, durationRestThreshold, ...config }?: EasingSpringConfig)`; `EasingSpringConfig` `:2-5` (`damping`, `mass`, `stiffness`, `overshootClamping`, `allowTail`, `durationRestThreshold`) | Easing-function form usable inside `interpolate` (skills `timing.md:45-57`). Also `Easing.linear` `:13`, `Easing.in/out/inOut` `:26-28`. |
+| `spring()` | yes | `R/index.d.ts:144`; `R/spring/index.d.ts:2-12` (`frame`, `fps`, `config?: Partial<SpringConfig>`, `from`, `to`, `durationInFrames`, `durationRestThreshold`, `delay`, `reverse`); `SpringConfig` `R/spring/spring-utils.d.ts:8-12`; `measureSpring` `R/spring/index.d.ts:13` | Frame-driven springs for card entrances; `durationInFrames` to fit a beat. |
+| `useCurrentFrame` | yes | `R/index.d.ts:149`; `R/use-current-frame.d.ts:1` `() => number` | Local frame inside a `Sequence` starts at 0 (`sequencing.md:131-140`). |
+| `useVideoConfig` | yes | `R/index.d.ts:154`; `R/use-video-config.d.ts:2` `() => VideoConfig` | Source of `fps`, `width`, `height`, `durationInFrames`; overridden inside a sized `<Sequence width height durationInFrames>` (`sequencing.md:158-169`). |
+| `TransitionSeries` (+ `.Sequence`, `.Transition`, `.Overlay`) | yes | `X/index.d.ts:3`; `X/TransitionSeries.d.ts:14-18`; `.Sequence` props `:8-12` (`durationInFrames`, `offset?`, `name`, `trimBefore`, layout) | Scene container of the master film (`multi-scene-video.md:25-40`, `transitions.md:8-41`). |
+| `fade()` | yes | `X/presentations/fade.d.ts:7` `(props?: FadeProps) => TransitionPresentation<FadeProps>`; `FadeProps` `:2-6` (`enterStyle`, `exitStyle`, `shouldFadeOutExitingScene`); sub-path export `@remotion/transitions/fade` in `package.json` `exports` | Default cut between milestones. |
+| `slide()` | yes | `X/presentations/slide.d.ts:9`; `SlideDirection` `:3` = `'from-left' \| 'from-top' \| 'from-right' \| 'from-bottom'`; sub-path `@remotion/transitions/slide` | Directional cut for "next milestone" (`transitions.md:161-172`). |
+| `linearTiming` | yes | `X/index.d.ts:1`; `X/timings/linear-timing.d.ts:2-5` `({ durationInFrames, easing? })` | Fixed-length cuts; `getDurationInFrames({ fps })` on the returned `TransitionTiming` (`X/types.d.ts:5-6`). |
+| `springTiming` | yes | `X/index.d.ts:2`; `X/timings/spring-timing.d.ts:3-8` `({ config?, durationInFrames?, durationRestThreshold?, reverse? })` | Organic cuts; without `durationInFrames` the length depends on `fps` (`transitions.md:215`). |
+| `Interactive.*` | **yes** | `R/index.d.ts:133` exports `Interactive` and `InteractiveBaseProps`, `InteractiveCropProps`, `InteractivePremountProps`, `InteractiveProps`, `InteractiveTransformProps`; `R/Interactive.d.ts:20` (`export declare const Interactive`), members `:564-598`: `A, Article, Aside, Button, Circle, Code, Div, Ellipse, Em, Footer, G, H1…H6, Header, Label, Li, Line, Main, Nav, Ol, P, Path, Pre, Rect, Section, Small, Span, Strong, Svg, Text, Ul`; each accepts the native element props plus `durationInFrames`, `from`, `trimBefore`, `freeze`, `hidden`, `name`, `showInTimeline` and crop props (`:9-15`) | Skills `SKILL.md:24-47` recommend `Interactive.Div` with `name` and inline `interpolate()` in `style` so keyframes are editable in Studio. Adopted for titles/labels; plain elements remain valid. |
+| `CanvasImage` | **yes** | `R/index.d.ts:118-119`; `R/canvas-image/index.d.ts:1-2`; `CanvasImageProps` `R/canvas-image/props.d.ts:7-34` (`src`, `width?`, `height?`, `fit?: ImageFit`, `effects?`, `style`, `pauseWhenLoading`, `maxRetries`, `delayRenderTimeoutInMilliseconds`, `onError`, plus Interactive base/crop/premount props) | Skills `SKILL.md:86-111` now recommend `<CanvasImage>` for images. Both `Img` and `CanvasImage` exist; the film uses `Img` for full-page screenshots that must scroll (a DOM `<img>` inside a scrolling wrapper) and may use `CanvasImage` where an `effects` pipeline is wanted. |
+
+Not present in 4.0.523 (and therefore not to be used): `getImageDimensions` from `remotion` as shown in skills `images.md:49-54` — it is **not** in `R/index.d.ts:98-161` (that helper lives in `@remotion/media-utils`, which is installed). `Config` exported from `remotion` (`R/index.d.ts:175`) is an empty object; the real `Config` is `@remotion/cli/config`.
+
+## 6. Decisions taken from the skills docs (source A), with the line that drove each
+
+| Decision | Skills file:lines |
+|---|---|
+| One file per scene; scenes assembled with `TransitionSeries`; each scene also registered as its own `Composition` inside a `Folder` for isolated Studio editing; `durationInFrames` written inline (redundant literal is fine) | `remotion-markup/multi-scene-video.md:1-40, 42-81` |
+| Never use CSS `transition`/`animation` or Tailwind animation classes — every motion is `useCurrentFrame()` + `interpolate()` | `remotion-markup/SKILL.md:16-22` |
+| Prefer `scale`, `translate`, `rotate` CSS properties over a `transform` string; keep `interpolate()` inline in `style` | `remotion-markup/SKILL.md:49-79`; `timing.md:22-43` |
+| Clamp both sides of every `interpolate`; `output: 'perceptual-scale'` on scale animations | `remotion-markup/timing.md:12-20, 73-85` |
+| Composition duration = scenes − transitions, computed with `getDurationInFrames({ fps })`; overlays do not change duration | `remotion-markup/transitions.md:186-239` |
+| Overlays cannot be adjacent to a transition or another overlay | `remotion-markup/transitions.md:85-87` |
+| `premountFor` on every `Sequence`; `layout="none"` when no wrapper is wanted | `remotion-markup/sequencing.md:73-91`; `SKILL.md:206-211` |
+| Assets in `public/`, referenced via `staticFile()`; template literals for milestone-indexed image paths | `remotion-markup/SKILL.md:81-84`; `images.md:19-45` |
+| `Still` for cover / contact sheet / evolution map (no fps or duration) | `remotion-markup/compositions.md:83-101` |
+| Safe area and type minimums, scaled from the 1080-wide baseline: 1920-wide master → headline ≥ ~150 px, supporting text ≥ ~78 px, ≥ 142 px from the sides, ≥ 178 px top/bottom; one focal element per scene | `remotion-create/video-layout.md:1-9` |
+| Local fonts: skills recommend `@remotion/fonts` `loadFont()` — **not installed** (`node_modules/@remotion/` has no `fonts` package). Either add it with `npx remotion add @remotion/fonts` (cannot be done through the blocked proxy unless `registry.npmjs.org`, which is on the proxy's `noProxy` list, serves it) or load the woff2 through a plain `@font-face` in a global stylesheet with `staticFile()` URLs and `delayRender` until `document.fonts.ready`. Recorded as an open implementation choice. | `remotion-markup/local-fonts.md:1-34`; SKILL.md:280-286 |
+| Render with `npx remotion render` / `npx remotion still`; one-frame check `npx remotion still <id> --scale=0.25 --frame=30` before full renders | `remotion-render/SKILL.md:7-23`; `remotion-markup/SKILL.md:356-365` |
+
+## 7. Residual risks
+
+1. Source A is a snapshot of the vendor docs at one commit; it is pinned so the case study can be re-verified, but it does not carry Context7's cross-library index. Mitigation: every API in §4-§5 was also checked against the `.d.ts` (sources B/C), which is the stronger check.
+2. `Folder` prop naming disagrees between `multi-scene-video.md:49` (`id`) and the type (`name`); the type was followed.
+3. `getImageDimensions` is documented under `remotion` in `images.md` but exported from `@remotion/media-utils`; import from there if needed.
+4. `@remotion/fonts` is not installed; see §6.
+5. Playwright's `reducedMotion: "reduce"` only affects `prefers-reduced-motion`; sites that animate regardless still rely on `animations: "disabled"` at screenshot time, which is why capture uses both.

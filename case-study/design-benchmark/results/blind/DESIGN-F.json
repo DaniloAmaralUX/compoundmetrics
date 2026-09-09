@@ -1,0 +1,205 @@
+{
+ "label": "DESIGN-F",
+ "files_viewed": [
+  "ENTRY-desktop-first-screen.png",
+  "ENTRY-desktop.png",
+  "ENTRY-mobile-first-screen.png",
+  "ENTRY-mobile.png",
+  "state-ENTRY-focus-first.png",
+  "(scratchpad crops of ENTRY-desktop.png: d00-d07.png; of ENTRY-mobile.png: m_mid.png, m_footer.png)"
+ ],
+ "per_surface_notes": "Only the ENTRY surface was captured (desktop full/first-screen, mobile full/first-screen, focus-first state). DISCOVERY, DETAIL and INTERACTION are absent, and no form-submit-empty or mobile-nav-open state exists. The ENTRY page is a ~10,056 px tall (desktop) / ~15,477 px (mobile) single-page editorial layout: header with logo mark and a status eyebrow, hero headline + lead + 4-cell stat strip, then sections (problem/bet cards, 7-step timeline, CDQI/CEL cards, 6 feature cards, 6 resource score cards, 6 AI-critique cards, evidence boundary, learning steps, versions, footer). No buttons, links, forms, search or navigation menu are visible anywhere, so all form/interaction/navigation items resolve to N/A rather than NOT_VERIFIED. The focus-first capture is pixel-identical to the first screen (no visible focus ring), but that belongs to a deterministic item and was not scored here. Fonts fell back to system faces; not penalised.",
+ "verdicts": [
+  {
+   "id": "fundamentos/convencao",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "ENTRY-desktop.png uses familiar patterns: top bar with logo mark and status label, centred hero headline + lead + stat strip, eyebrow/heading/lead sections with card grids, a vertical numbered timeline and a footer. Novelty is limited to monospace eyebrows/values and a lime accent; no unconventional interaction is introduced. DISCOVERY was not captured.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "hierarquia/cta-3s",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No call to action exists anywhere on the page (ENTRY-desktop.png, ENTRY-mobile.png): the header carries only a logo mark and a status eyebrow, the hero has headline, lead and a stat strip, and no section, card or footer shows a button or link. The page is a pure reading/manifesto surface by design, so the na_condition applies rather than a FAIL for competing CTAs.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/leitura",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "In ENTRY-desktop-first-screen.png the order is unambiguous from size/weight/position: (1) the ~100px white headline, (2) the grey lead paragraph beneath it, (3) the bordered stat strip, then the small grey disclaimer. Inner sections repeat eyebrow → large heading → lead → cards, and the mobile first screen keeps the same order.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/proximidade",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Related items sit visibly closer than unrelated ones: label/value rows are enclosed inside their card (Today/Risk/Question inside 'The problem'), each timeline step keeps its title, description and tag chips tight while steps are separated by rules, and sections are separated by hairlines with large vertical gaps (ENTRY-desktop.png). Mobile stacking preserves the same grouping.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "hierarquia/whitespace",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Whitespace grows around the most important elements: the hero headline sits in ~150px of empty space above and below on the 1440×900 first screen, and each section heading is isolated by ~100–150px of padding from the preceding hairline, whereas dense card content is packed with ~16–24px gaps (ENTRY-desktop.png).",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "hierarquia/cor-destaque",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "The lime accent is confined to emphasis elements (header status dot, the highlighted current 'E1 Deterministic' row, CDQI scores, 'E1 / 0' evidence figures, the 'NOW v0.2.1' card) and a cyan secondary accent to the 'E1 · CONTRACT-TESTED' badges and 'NO INFLATION' label; backgrounds, borders and body text stay neutral. Minor spill onto the '01/02' card ordinals and '0-10 / E0-E4' range labels was noted but does not amount to decorating everything.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "estilo/paleta",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Colours read as a system across ENTRY-desktop.png: near-black page, slightly lighter card surfaces, hairline borders, white headings, two grey text tones, one lime primary accent and one cyan secondary accent used for evidence-status badges. No stray hues appear.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "estilo/icones",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No icon set is used on the surface: the only glyph-like elements are the 'CD' logo mark, a status dot in the header and typographic '→' arrows in the flow strip and '→ REPEAT' label (ENTRY-desktop.png). With no inline icons the na_condition is met.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "acessibilidade/nao-so-cor",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "State indicators carry text besides colour: the header shows a dot plus 'POC', the evidence badges read 'E1 · CONTRACT-TESTED', the current version card is labelled 'NOW', and the current evidence level is spelled out as 'E1 evidence unchanged' and 'E1 current CEL'. The lime-outlined E1 row in the CEL list itself has no extra marker, but the same state is stated in text elsewhere on the page (ENTRY-desktop.png). No error/success states exist.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "navegacao/busca",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "The site is a single scrolling page with no navigation menu and no linked destinations visible in header, body or footer (ENTRY-desktop.png, ENTRY-mobile.png); content volume is far below ~15 destinations, so search is not called for.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "navegacao/mobile-nav",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "At 390 wide (ENTRY-mobile-first-screen.png) the header holds only the 'CD' mark and the 'POC · v0.2.1 · EVIDENCE INFRASTRUCTURE' status text; there is no menu, toggle or link anywhere on the page, i.e. the site is a single page with no navigation, meeting the na_condition.",
+   "evidence_file": "ENTRY-mobile-first-screen.png"
+  },
+  {
+   "id": "carga/disclosure",
+   "state": "FAIL",
+   "surface": "ENTRY",
+   "reason": "The page has clear secondary complexity (seven CDQI weight rows, five CEL level definitions, tag chips for each of seven process steps, six resource cards with learning notes, six AI-critique questions, six learning steps, three version cards) and shows all of it expanded at once on a ~10,056px desktop / ~15,477px mobile scroll; no accordion, tooltip, popover, tab or 'show more' reveals detail on demand (ENTRY-desktop.png, ENTRY-mobile.png).",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "All detail expanded inline on a 10,056px page; zero disclosure controls visible",
+   "expected_value": "Summary first with detail revealed progressively (tooltip/popover/expand) as needed"
+  },
+  {
+   "id": "carga/feedback",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "The surface exposes no actions at all — no buttons, links, forms or toggles are visible on desktop or mobile (ENTRY-desktop.png) — so there is nothing beyond passive reading that could produce feedback; no INTERACTION surface was captured.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "carga/loading",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "All content is static text and cards rendered in one page (ENTRY-desktop.png); no operation, fetch or submission exists that would need a loading state.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "carga/prevencao",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No form or input field appears anywhere on the desktop or mobile page (ENTRY-desktop.png, ENTRY-mobile.png), so inline validation is not applicable.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "carga/recuperacao",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "There are no destructive (or any) actions on the surface — no delete, remove, reset or submit controls are visible (ENTRY-desktop.png).",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "onboarding/valor-rapido",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "The first screen (ENTRY-desktop-first-screen.png) states the proposition in the headline, explains what the release delivers in the lead ('canonical metadata, explicit evidence debt, deterministic claim checks and a learning path') and shows four key figures; the core content (why it exists, the 7-step loop, the resources) follows immediately on scroll with no gate or intermediate step. Mobile first screen delivers the same headline and lead.",
+   "evidence_file": "ENTRY-desktop-first-screen.png"
+  },
+  {
+   "id": "onboarding/empty-states",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "Every list and card on the page is populated; no empty list, zero-result or blank-state region is visible (ENTRY-desktop.png).",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "onboarding/dicas-contexto",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Jargon is explained inline at the point where it appears rather than via a tour: 'CDQI measures construction. CEL measures evidence.' sits directly above the two cards, each CEL row carries a one-line definition ('E0 Inspection — Static review only'), the CDQI card says what it measures, the hero stat strip is followed by a disclaimer sentence, and the 'NO INFLATION' block explains what the next evidence jump requires (ENTRY-desktop.png).",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "onboarding/progresso-fluxo",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No multi-step user flow exists; the numbered 01–07 timeline and 01–06 learning cards are descriptive content, not a wizard or checklist the user progresses through (ENTRY-desktop.png).",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/depoimentos",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No testimonial, quote, customer name or avatar appears anywhere on the page (ENTRY-desktop.png, ENTRY-mobile.png).",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/numeros",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Numbers shown as evidence are specific and sourced on the page: the hero strip gives exact counts ('07 stages', '06 resources', 'E1', '0 paid runtime used') that match the seven timeline steps and six resource cards, and each resource score (8.45, 8.55, 8.50, 8.75, 8.65, 8.35) is labelled 'CDQI' whose 0–10 scale and weight breakdown are displayed in the CDQI card. No vague 'thousands of' style quantities are used (ENTRY-desktop.png).",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/logos",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "There is no pricing, signup or other decision point on the surface — no CTA, plan, form or checkout is visible (ENTRY-desktop.png) — so the placement of social proof cannot be assessed.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "confianca/seguranca",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No data is collected: the page has no form, input, login or payment element on desktop or mobile (ENTRY-desktop.png, ENTRY-mobile.png).",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "formularios/erro-inline",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No form exists on the surface (ENTRY-desktop.png), and no form-submit-empty state was captured because there was nothing to submit.",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "formularios/opcionais",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No form or input fields are present anywhere on the page (ENTRY-desktop.png, ENTRY-mobile.png).",
+   "evidence_file": "ENTRY-desktop.png"
+  },
+  {
+   "id": "formularios/submit-estado",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No form or submit button exists on the surface (ENTRY-desktop.png), so submitting/success/failure states are not applicable.",
+   "evidence_file": "ENTRY-desktop.png"
+  }
+ ]
+}

@@ -7,12 +7,12 @@
  "source_sha": "921d751aff5df8e14d998f993e2d171db842719d",
  "date_range": "2026-09-09",
  "overall": {
-  "PASS": 11,
-  "FAIL": 11,
-  "N/A": 1,
-  "NOT_VERIFIED": 31,
-  "score": 50,
-  "coverage": 41.5
+  "PASS": 27,
+  "FAIL": 19,
+  "N/A": 6,
+  "NOT_VERIFIED": 2,
+  "score": 58.7,
+  "coverage": 95.8
  },
  "deterministic_only": {
   "PASS": 11,
@@ -23,117 +23,169 @@
   "coverage": 100
  },
  "judgment_only": {
-  "PASS": 0,
-  "FAIL": 0,
-  "N/A": 0,
-  "NOT_VERIFIED": 31,
-  "score": null,
-  "coverage": 0
+  "PASS": 16,
+  "FAIL": 8,
+  "N/A": 5,
+  "NOT_VERIFIED": 2,
+  "score": 66.7,
+  "coverage": 92.3
  },
  "categories": {
   "fundamentos": {
-   "PASS": 0,
+   "PASS": 5,
    "FAIL": 0,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": null,
-   "coverage": 0
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "hierarquia": {
-   "PASS": 0,
-   "FAIL": 2,
-   "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": 0,
-   "coverage": 28.6
-  },
-  "estilo": {
-   "PASS": 2,
+   "PASS": 4,
    "FAIL": 3,
    "N/A": 0,
-   "NOT_VERIFIED": 2,
-   "score": 40,
-   "coverage": 71.4
+   "NOT_VERIFIED": 0,
+   "score": 57.1,
+   "coverage": 100
+  },
+  "estilo": {
+   "PASS": 3,
+   "FAIL": 4,
+   "N/A": 0,
+   "NOT_VERIFIED": 0,
+   "score": 42.9,
+   "coverage": 100
   },
   "acessibilidade": {
    "PASS": 5,
-   "FAIL": 3,
+   "FAIL": 4,
    "N/A": 0,
-   "NOT_VERIFIED": 1,
-   "score": 62.5,
-   "coverage": 88.9
+   "NOT_VERIFIED": 0,
+   "score": 55.6,
+   "coverage": 100
   },
   "navegacao": {
    "PASS": 2,
-   "FAIL": 1,
+   "FAIL": 2,
    "N/A": 1,
-   "NOT_VERIFIED": 2,
-   "score": 66.7,
-   "coverage": 60
+   "NOT_VERIFIED": 1,
+   "score": 50,
+   "coverage": 80
   },
   "carga": {
-   "PASS": 1,
+   "PASS": 3,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 5,
+   "N/A": 2,
+   "NOT_VERIFIED": 1,
    "score": 100,
-   "coverage": 16.7
+   "coverage": 75
   },
   "onboarding": {
-   "PASS": 0,
-   "FAIL": 0,
+   "PASS": 3,
+   "FAIL": 1,
    "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "NOT_VERIFIED": 0,
+   "score": 75,
+   "coverage": 100
   },
   "confianca": {
-   "PASS": 0,
+   "PASS": 1,
    "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "N/A": 3,
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "formularios": {
    "PASS": 1,
-   "FAIL": 2,
+   "FAIL": 5,
    "N/A": 0,
-   "NOT_VERIFIED": 3,
-   "score": 33.3,
-   "coverage": 50
+   "NOT_VERIFIED": 0,
+   "score": 16.7,
+   "coverage": 100
   }
  },
  "items": {
   "fundamentos/jtbd": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/jtbd",
+     "state": "PASS",
+     "reason": "The frame document states the site's job in one sentence (each reader answers their question without first learning vocabulary) and the IA plan restates it as a one-line journey (SEE IT → UNDERSTAND IT → NAME IT → INSPECT IT → VERIFY IT). README also carries the two-line thesis the Home route opens with.",
+     "evidence_file": "docs/frames/2026-09-09-product-experience.md",
+     "quote": "OUTCOME        Each reader can answer their question without learning vocabulary first: Home → \"I understand the idea.\" How it Works → \"I understand the mechanism.\" Lab → \"I saw Compound happen.\""
+    }
+   ]
   },
   "fundamentos/macro-bet": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/macro-bet",
+     "state": "PASS",
+     "reason": "STRATEGY.md states the product bet (knowledge from humans and agents should compound; a claim never exceeds its evidence) and the design docs tie concrete decisions to it: the single accent colour is reserved for 'what compounds', the route order is 'experience first, mental model second, term third', and /evidence is designed around 'built well ≠ proven useful'. The site commit body repeats the accent decision in the same terms.",
+     "evidence_file": "compound-design/research/PRODUCT-EXPERIENCE-REFERENCES.md",
+     "quote": "**One accent, one meaning.** The lime mark appears when something compounds and nowhere else."
+    }
+   ]
   },
   "fundamentos/convencao": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "fundamentos/convencao",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "Both surfaces use familiar patterns: logo left / horizontal nav right with an active underline, eyebrow + headline + lede hero, divider-separated lists, footer link row, and a labelled 'Menu' toggle on mobile. Novelty is limited to a small timeline strip and a '≠' comparison block.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "fundamentos/restricoes": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/restricoes",
+     "state": "PASS",
+     "reason": "The frame (produced by cd-frame in the research commit that precedes the site build commit) has an explicit CONSTRAINTS block recording stack, dependency, runtime, content-source and licensing constraints, plus NON-GOALS. The references doc adds a dependency-decision table (none added) and STRATEGY.md records the team/runtime boundary (no paid runtime, no model calls).",
+     "evidence_file": "docs/frames/2026-09-09-product-experience.md",
+     "quote": "CONSTRAINTS    Static export on Next 16 with CSS modules and four runtime dependencies; no model runtime, no paid calls, no subagents; every factual value comes from the registry and release artifacts; `noindex` stays"
+    }
+   ]
   },
   "fundamentos/documentado": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/documentado",
+     "state": "PASS",
+     "reason": "Decision rationale is recorded in several places: a docs/solutions entry with 'What happened / The rule / Why it is worth keeping', a ledger entry CD-20260909-013, a per-reference adopt/adapt/reject table with reasons, an adversarial-review table listing what was upheld and what was fixed, and commit bodies (site:, checks:, research:) that explain why each design and check decision was made.",
+     "evidence_file": "docs/solutions/2026-09-09-axe-contrast-during-entrance-animation.md",
+     "quote": "## Why it is worth keeping\n\nThe same tool on the same page can produce a serious-looking failure and a clean pass a second apart. Anyone adding an entrance animation to a checked page will hit this again"
+    }
+   ]
   },
   "hierarquia/cta-3s": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "hierarquia/cta-3s",
+     "state": "FAIL",
+     "surface": "ENTRY",
+     "reason": "The ENTRY first screen (desktop and mobile) contains only a headline, a paragraph and a timeline strip; no button or link-styled action is visible. The first action link ('Explore the project →') sits roughly 4400px down the 6166px page and the page ends with two equal-weight links ('Watch Compound happen →' / 'Understand the mechanism →') that compete.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "0 actions in the first 900px of ENTRY; first action at ~y4400 of 6166; two equal CTAs at page end (ENTRY-desktop.png)",
+     "expected_value": "One primary action identifiable within 3s on ENTRY"
+    }
+   ]
   },
   "hierarquia/headings": {
    "state": "FAIL",
@@ -160,24 +212,60 @@
    ]
   },
   "hierarquia/leitura": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/leitura",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "On every surface the order is unambiguous from size/weight/position: small mono eyebrow, very large headline, mid-size lede, then body sections. DETAIL and DISCOVERY add a clearly subordinate right-hand meta column.",
+     "evidence_file": "DETAIL-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/proximidade": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/proximidade",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Related items sit closer than unrelated ones: eyebrow hugs its heading, list rows keep title+description tight with dividers between rows, form labels sit directly above inputs, and section gaps are several times larger than intra-section spacing.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "hierarquia/whitespace": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/whitespace",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "The hero headline on each page is surrounded by the largest empty space on the page; secondary sections are denser, and the DETAIL sidebar is set off by generous margins. Whitespace scales with importance.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/cor-destaque": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/cor-destaque",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "The lime accent appears on actionable or state elements (active nav underline, link arrows, active step border, focus ring, hover, tooltip 'Learn about' links) and on a few emphasised items ('Learning'/'Resource' in the timeline, 'Repeat'). Red is reserved for the form error state. The accent is not used decoratively across body content.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "hierarquia/escala-tipo": {
    "state": "FAIL",
@@ -246,9 +334,18 @@
    ]
   },
   "estilo/paleta": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "estilo/paleta",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Colours read as a system: near-black ground, warm off-white text, two grey tiers for secondary text/dividers, one lime accent, a cream card for the form specimen, and semantic red (error) / amber (observed defect) used only where those meanings apply.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "estilo/elevacao": {
    "state": "PASS",
@@ -312,9 +409,20 @@
    ]
   },
   "estilo/icones": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY, DETAIL",
+   "evidence": [
+    {
+     "id": "estilo/icones",
+     "state": "FAIL",
+     "surface": "ENTRY, DISCOVERY, DETAIL",
+     "reason": "Drawn icons (lime '→' link arrows, circled-i term icons) are mixed with typographic glyphs used as icons: the '↻' before 'Repeat' on ENTRY and after 'compound' on DISCOVERY is a thin, tiny mono glyph, the '←' in 'All resources' on DETAIL is a heavier text glyph underlined with its label, unlike the lime '→' arrows beside it. Stroke weight and optical size do not match across these inline icons.",
+     "evidence_file": "ENTRY-desktop.png",
+     "measured_value": "↻ (thin mono glyph) and ← (text glyph, DETAIL-desktop.png) vs lime drawn → arrows and ⓘ icons on the same pages",
+     "expected_value": "Inline icons of one family / stroke weight / optical size"
+    }
+   ]
   },
   "estilo/motion": {
    "state": "PASS",
@@ -331,63 +439,24 @@
    "state": "FAIL",
    "mode": "deterministic",
    "per_surface": {
-    "ENTRY": "FAIL",
-    "DISCOVERY": "FAIL",
-    "DETAIL": "FAIL",
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
     "INTERACTION": "FAIL"
    },
    "evidence": [
-    {
-     "surface": "ENTRY",
-     "state": "FAIL",
-     "measured": {
-      "interactive": 32,
-      "tabindex_minus1": 1,
-      "positive_tabindex": 0,
-      "role_without_tabindex": 0,
-      "anchors_without_href": 0
-     },
-     "expected": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
-     "evidence": "interactive 32; tabindex=-1 1; positive tabindex 0; role without tabindex 0; <a> without href 0"
-    },
-    {
-     "surface": "DISCOVERY",
-     "state": "FAIL",
-     "measured": {
-      "interactive": 47,
-      "tabindex_minus1": 1,
-      "positive_tabindex": 0,
-      "role_without_tabindex": 0,
-      "anchors_without_href": 0
-     },
-     "expected": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
-     "evidence": "interactive 47; tabindex=-1 1; positive tabindex 0; role without tabindex 0; <a> without href 0"
-    },
-    {
-     "surface": "DETAIL",
-     "state": "FAIL",
-     "measured": {
-      "interactive": 26,
-      "tabindex_minus1": 1,
-      "positive_tabindex": 0,
-      "role_without_tabindex": 0,
-      "anchors_without_href": 0
-     },
-     "expected": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
-     "evidence": "interactive 26; tabindex=-1 1; positive tabindex 0; role without tabindex 0; <a> without href 0"
-    },
     {
      "surface": "INTERACTION",
      "state": "FAIL",
      "measured": {
       "interactive": 29,
-      "tabindex_minus1": 4,
+      "tabindex_minus1": 3,
       "positive_tabindex": 0,
       "role_without_tabindex": 0,
       "anchors_without_href": 0
      },
      "expected": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
-     "evidence": "interactive 29; tabindex=-1 4; positive tabindex 0; role without tabindex 0; <a> without href 0"
+     "evidence": "interactive 29; tabindex=-1 3; positive tabindex 0; role without tabindex 0; <a> without href 0"
     }
    ]
   },
@@ -454,9 +523,20 @@
    ]
   },
   "acessibilidade/nao-so-cor": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION (nav states PASS on all)",
+   "evidence": [
+    {
+     "id": "acessibilidade/nao-so-cor",
+     "state": "FAIL",
+     "surface": "INTERACTION (nav states PASS on all)",
+     "reason": "Nav active state uses underline + colour and the error banner carries text, but the invalid email field in the form specimen is marked only by a red border: no label, no icon, no adjacent text. After submit the button's only state change is turning grey with no text (state-INTERACTION-form-submit-empty.png).",
+     "evidence_file": "INTERACTION-desktop.png",
+     "measured_value": "Email field: red border only, no message or icon; submit: grey-only state",
+     "expected_value": "State/error also carries text or an icon"
+    }
+   ]
   },
   "acessibilidade/alt-aria": {
    "state": "PASS",
@@ -566,14 +646,34 @@
    "evidence": []
   },
   "navegacao/busca": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DISCOVERY",
+   "evidence": [
+    {
+     "id": "navegacao/busca",
+     "state": "FAIL",
+     "surface": "DISCOVERY",
+     "reason": "DISCOVERY indexes about 21 resource pages (15 skills + 6 agents, each a DETAIL destination) in addition to the 7 primary nav pages and a field guide, i.e. well above the ~15-destination threshold, and no search input or search control appears in the header or on any surface.",
+     "evidence_file": "DISCOVERY-desktop.png",
+     "measured_value": "~28+ destinations, 0 search controls",
+     "expected_value": "Search present and keyboard-operable when volume is high"
+    }
+   ]
   },
   "navegacao/mobile-nav": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all (mobile)",
+   "evidence": [
+    {
+     "id": "navegacao/mobile-nav",
+     "state": "NOT_VERIFIED",
+     "surface": "all (mobile)",
+     "reason": "At 390px the nav is behind a text 'Menu' toggle in the header, but none of the four state-*-mobile-nav-open.png captures shows the menu open (each shows a term tooltip popover instead), so target size, labelling of the open state and the drawer pattern cannot be verified.",
+     "evidence_file": "state-ENTRY-mobile-nav-open.png"
+    }
+   ]
   },
   "navegacao/links": {
    "state": "FAIL",
@@ -581,7 +681,7 @@
    "per_surface": {
     "ENTRY": "FAIL",
     "DISCOVERY": "N/A",
-    "DETAIL": "PASS",
+    "DETAIL": "N/A",
     "INTERACTION": "N/A"
    },
    "evidence": [
@@ -610,69 +710,188 @@
    "evidence": []
   },
   "carga/disclosure": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL, INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/disclosure",
+     "state": "PASS",
+     "surface": "DETAIL, INTERACTION",
+     "reason": "Detail is revealed on demand: DETAIL collapses the full procedure behind '+ Read the full procedure (86 lines · 12 sections)', term definitions open in small popovers from ⓘ triggers, and INTERACTION splits the lab into four tabbed steps with only the active step expanded.",
+     "evidence_file": "DETAIL-desktop.png"
+    }
+   ]
   },
   "carga/feedback": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/feedback",
+     "state": "PASS",
+     "surface": "INTERACTION",
+     "reason": "Submitting the specimen produces an immediate visible change: the 'Create account' button changes to a grey state and a 'Reset the form' link appears next to the legend. The feedback is minimal (the error banner was already present before submit) but the click is not silent.",
+     "evidence_file": "state-INTERACTION-form-submit-empty.png"
+    }
+   ]
   },
   "carga/loading": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/loading",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "All surfaces are static content; the INTERACTION page states 'Nothing. No model, no network, no randomness', so no operation is long enough to need a loading state.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "carga/prevencao": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/prevencao",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION",
+     "reason": "The email field already shows a red border with 'ana@' typed, but no typing or blur state was captured, so it cannot be determined whether validation happens while typing/on blur or only on submit.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "carga/recuperacao": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/recuperacao",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No destructive actions exist on any surface; the only reversible control is a 'Reset the form' link on the inert demo specimen after submit, which discards nothing of consequence.",
+     "evidence_file": "state-INTERACTION-form-submit-empty.png"
+    }
+   ]
   },
   "onboarding/valor-rapido": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "onboarding/valor-rapido",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Each first screen goes straight to the core content with no gate: ENTRY states the thesis in the hero, DISCOVERY lists resources immediately below the hero, DETAIL opens on the resource description and INTERACTION shows the specimen form within the first screen.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/empty-states": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL",
+   "evidence": [
+    {
+     "id": "onboarding/empty-states",
+     "state": "FAIL",
+     "surface": "DETAIL",
+     "reason": "The 'Known failures' block on DETAIL is an empty state that explains itself ('No failure has been recorded against this resource in the Learning Ledger. That is a statement about the ledger, not about the resource.') but offers no next step or link.",
+     "evidence_file": "DETAIL-desktop-first-screen.png",
+     "measured_value": "Explanatory text only, no CTA/link",
+     "expected_value": "Empty state explains and offers a next step"
+    }
+   ]
   },
   "onboarding/dicas-contexto": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "onboarding/dicas-contexto",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Help appears at the point of doubt: technical terms carry ⓘ triggers that open a small popover with a one-sentence definition and a 'Learn about …' link (seen in state-ENTRY-mobile-nav-open.png and state-INTERACTION-mobile-nav-open.png), and the form carries 'Takes about a minute.' No tour is used.",
+     "evidence_file": "state-INTERACTION-mobile-nav-open.png"
+    }
+   ]
   },
   "onboarding/progresso-fluxo": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "onboarding/progresso-fluxo",
+     "state": "PASS",
+     "surface": "INTERACTION",
+     "reason": "The lab flow shows a four-step strip (01 Frame · 02 Verify · 03 Polish · 04 Compound) with the current step marked by a lime top border and bright label while the remaining steps are dimmed, so position and remaining steps are visible.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "confianca/depoimentos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/depoimentos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No testimonials appear on any captured surface.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "confianca/numeros": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "confianca/numeros",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "Numbers used as status/proof are specific and sourced: '15 skills · 6 agents · v0.3.0-alpha.1', 'Paid model calls in preparing the experiment: 0', 'Read at build time from 3 repository records', CDQI scores like 8.35. No vague quantities ('thousands of…') are used.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "confianca/logos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/logos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No pricing or real signup decision point exists; the signup form on INTERACTION is an explicitly inert demo specimen, not a conversion point.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "confianca/seguranca": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/seguranca",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No data is collected: the only form is the lab specimen and the page states 'No model, no network' and 'the same click always produces the same result'.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "formularios/labels": {
    "state": "FAIL",
@@ -698,9 +917,20 @@
    ]
   },
   "formularios/erro-inline": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "formularios/erro-inline",
+     "state": "FAIL",
+     "surface": "INTERACTION",
+     "reason": "The invalid submission shows only a generic banner at the top of the card ('Please fix the errors below.'); the offending email field has a red border with no label, no adjacent message and no instruction on how to fix it.",
+     "evidence_file": "INTERACTION-desktop.png",
+     "measured_value": "Generic top banner + red border on unlabelled field, 0 per-field messages",
+     "expected_value": "Message next to the field that says how to fix it"
+    }
+   ]
   },
   "formularios/tipos-campo": {
    "state": "PASS",
@@ -746,14 +976,36 @@
    ]
   },
   "formularios/opcionais": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "formularios/opcionais",
+     "state": "FAIL",
+     "surface": "INTERACTION",
+     "reason": "The three-field form (Full name, unlabelled email, Password) shows no required or optional marker on any field.",
+     "evidence_file": "INTERACTION-desktop.png",
+     "measured_value": "0 of 3 fields marked required or optional",
+     "expected_value": "Required or optional fields consistently marked with a visible marker"
+    }
+   ]
   },
   "formularios/submit-estado": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "formularios/submit-estado",
+     "state": "FAIL",
+     "surface": "INTERACTION",
+     "reason": "After submit the 'Create account' button turns grey (disabled look) with no submitting, success or failure message and no explanation of why it is disabled; the pre-existing banner is unchanged.",
+     "evidence_file": "state-INTERACTION-form-submit-empty.png",
+     "measured_value": "Button greyed, no state text",
+     "expected_value": "Submitting/success/failure visible; button never disabled without explanation"
+    }
+   ]
   }
  }
 }

@@ -1,0 +1,48 @@
+{
+ "milestone": "V06",
+ "verdicts": [
+  {
+   "id": "fundamentos/jtbd",
+   "state": "PASS",
+   "reason": "README, CLAUDE.md, AGENTS.md and the docs introduction all open with the same one-sentence statement of what the site is and does (a shadcn-compatible design system whose components install into the user's project via the shadcn CLI).",
+   "evidence_file": "README.md",
+   "quote": "LAB / DESIGN é o design system do LAB / DESIGN: fundamentos, componentes, blocos e temas com prévia real e código que entra no seu projeto pelo CLI do shadcn."
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "state": "FAIL",
+   "reason": "Documentation exists (README, CLAUDE.md, docs intro, guide, roteiro, commit bodies) but none states a product/business bet or hypothesis and ties design decisions to it. Decisions are explained by convention/provenance/tooling, and the strategic context is explicitly deferred to an external repository's memory (supernova-ui .claude/memory) that is not in this worktree. grep for aposta/hipótese returned nothing.",
+   "evidence_file": "README.md",
+   "quote": "O contexto do projeto (pesquisa, decisões, diário) vive na memória interna do repositório `DaniloAmaralUX/supernova-ui`, em `.claude/memory/`."
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "state": "PASS",
+   "reason": "CLAUDE.md (committed with the first POC commit b421d2b, before subsequent rounds) records stack and design-system constraints: implementation over shadcn/Radix/Tailwind, allowed imports for registry files, single-source tokens/roadmap that must not be hand-edited, gates (check/build/typecheck) and language rules. The roteiro page and constants/roadmap.ts also record the network constraint that prevented CLI validation. Time and team constraints are not recorded, but stack and design-system constraints are.",
+   "evidence_file": "CLAUDE.md",
+   "quote": "`registry/new-york/<nome>.tsx` (só depende de `@/lib/utils`, `radix-ui`, `class-variance-authority`, `lucide-react`) → item em `registry.json` → ... Gates: `pnpm check`, `pnpm build`, depois `pnpm typecheck` ... Sem afrouxar regra para passar."
+  },
+  {
+   "id": "fundamentos/documentado",
+   "state": "PASS",
+   "reason": "Decision rationale is recorded in the in-repo guide (adopt/adapt/do-not-adopt verdicts with reasons for each pattern from the four sample registries, plus 'Regras de origem' and 'Erros comuns'), in the roteiro page (why no item passed CLI validation), and in commit bodies that explain why (e.g. 53963f5 explains the rename and why SUPERNOVA_THEMES became SUPERNOVA_SHADCN_THEMES; da0840c explains why constants/origin.ts became the single source of the public domain).",
+   "evidence_file": "content/docs/(root)/criar-componente.mdx",
+   "quote": "**Badges `links: { doc, api }`.** Não adotar: o roteiro não guarda links externos; a proveniência fica no JSDoc e na página."
+  }
+ ],
+ "docs_found": [
+  "README.md",
+  "CLAUDE.md",
+  "AGENTS.md",
+  "content/docs/(root)/index.mdx",
+  "content/docs/(root)/criar-componente.mdx",
+  "content/docs/(root)/installation.mdx",
+  "content/docs/fundamentos/index.mdx",
+  "content/docs/fundamentos/roteiro.mdx",
+  "constants/roadmap.ts",
+  "data/acervo/README.md",
+  "docs/evidencias/2026-09-08/relatorio.txt",
+  "git log -30 (commits da0840c, 53963f5, 758282e, 225610e, ef68280, 105edfc, 849acce, b421d2b)"
+ ],
+ "instrument": "source review of the exact commit worktree (unblinded by nature: fundamentos/* items need repository docs)"
+}

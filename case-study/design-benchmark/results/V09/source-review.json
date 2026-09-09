@@ -1,0 +1,50 @@
+{
+ "milestone": "V09",
+ "verdicts": [
+  {
+   "id": "fundamentos/jtbd",
+   "state": "PASS",
+   "reason": "README.md opens with a one-sentence job statement for the product, and docs/product/PRD-CANVAS-UI.md §1 states the core job in a single quoted sentence ('Encontrar um componente, experimentar seus estados e tokens, combiná-lo com outros componentes e exportar código reproduzível.'). Caveat: the public root of this build is the 'Compound Design v0.2.1' POC page (src/app/page.tsx re-exports src/app/compound-design/page.tsx); no README/PRD/brief in the repo describes that page — its only self-description is the metadata.description string in the page source. The documented job covers the Studio Dev UI surfaces (gallery, docs, playground, studio) that remain in the site.",
+   "evidence_file": "README.md",
+   "quote": "A design-engineering library for discovering, testing, and installing crafted UI experiences."
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "state": "PASS",
+   "reason": "PRD-CANVAS-UI.md states the product bet explicitly (evolve from an effects library into a component workbench; north-star metric = weekly configured components that reach save/fork/valid export) and derives principles from it ('Experimentar antes de cadastrar' → works without login; 'Preview e exportação devem concordar'). DESIGN.md §3 ties concrete UI decisions to that bet ('Preview é o padrão', 'Atribuição e licença sempre visíveis... requisito de licença, não enfeite', 'Customize fica embaixo do preview, usando os MESMOS SchemaControlRows'). Same caveat as jtbd: the Compound Design root page has no documented bet in the repo.",
+   "evidence_file": "docs/product/PRD-CANVAS-UI.md",
+   "quote": "O Canvas UI evoluirá de uma biblioteca e documentação de efeitos visuais para um **component workbench** ... Número semanal de componentes configurados que resultam em save, fork ou exportação válida."
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "state": "PASS",
+   "reason": "Constraints are recorded before/at the start of the build: DESIGN.md is an explicit visual contract ('Este arquivo é contrato, não inspiração') fixing tokens-only colour, a six-step type scale, 4px spacing base, radius ladder, motion durations and lucide icons; docs/product/DEPENDENCY-POLICY.md pins stack and licence constraints (DialKit 1.4.3 exact, shadcn snapshot a85299a, Sandpack 2.20.0, MCP SDK 1.29.0, Node 22 Windows/Linux); PRD §14 records non-functional constraints (WCAG 2.2 AA, Lighthouse ≥90, browsers, sandbox CSP) and §15.6 the 'no extra skills layer' constraint; QWEN.md records the team constraint ('The product owner is a designer, not a software engineer'). HANDOFF-CLAUDE-CODE.md records time/scope gates ('Gates externos — não contornar').",
+   "evidence_file": "DESIGN.md",
+   "quote": "Este arquivo é **contrato**, não inspiração. Toda superfície nova ... é construída contra ele e validada contra ele ... Base **4px**. Passos em uso: `4, 6, 8, 12, 16, 24, 32, 48, 64, 96`."
+  },
+  {
+   "id": "fundamentos/documentado",
+   "state": "PASS",
+   "reason": "Decision rationale is recorded in docs/solutions/* (problem → root cause → solution → test guard, e.g. url-state/estado-de-view-derivado-da-url.md explains why tab state is derived from the URL instead of useState), in DESIGN.md (e.g. §1.6 explains why the image outline is the single exception to the token rule), and in docs/product/AUDIT-MATRIX.md / IMPLEMENTATION-STATUS.md (requirement-by-requirement evidence). Commit bodies in the last 30 commits are mostly empty (the compound-design commits have no body), so commits alone would not satisfy this item; the docs do.",
+   "evidence_file": "docs/solutions/url-state/estado-de-view-derivado-da-url.md",
+   "quote": "## Causa raiz — A aba vivia em dois lugares: `useState` local **e** query string ... Para estado que o produto promete ser compartilhável por URL ... a URL é a **única** fonte"
+  }
+ ],
+ "docs_found": [
+  "README.md",
+  "DESIGN.md",
+  "QWEN.md",
+  "docs/product/PRD-CANVAS-UI.md",
+  "docs/product/HANDOFF-CLAUDE-CODE.md",
+  "docs/product/DEPENDENCY-POLICY.md",
+  "docs/product/AUDIT-MATRIX.md",
+  "docs/product/IMPLEMENTATION-STATUS.md",
+  "docs/solutions/url-state/estado-de-view-derivado-da-url.md",
+  "docs/quality/launch-readiness-report.md",
+  ".claude/agents/amy.md",
+  "src/app/compound-design/page.tsx",
+  "src/app/page.tsx",
+  "git log -30 (worktree)"
+ ],
+ "instrument": "source review of the exact commit worktree (unblinded by nature: fundamentos/* items need repository docs)"
+}

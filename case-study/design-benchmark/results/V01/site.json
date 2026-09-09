@@ -7,133 +7,185 @@
  "source_sha": "364430b9d553c6b9f87e4ff3cbc0f31eaa5d1a33",
  "date_range": "2026-07-13 → 2026-07-16",
  "overall": {
-  "PASS": 12,
-  "FAIL": 10,
-  "N/A": 1,
-  "NOT_VERIFIED": 31,
-  "score": 54.5,
-  "coverage": 41.5
+  "PASS": 30,
+  "FAIL": 11,
+  "N/A": 11,
+  "NOT_VERIFIED": 2,
+  "score": 73.2,
+  "coverage": 95.3
  },
  "deterministic_only": {
   "PASS": 12,
-  "FAIL": 10,
-  "N/A": 1,
+  "FAIL": 9,
+  "N/A": 2,
   "NOT_VERIFIED": 0,
-  "score": 54.5,
+  "score": 57.1,
   "coverage": 100
  },
  "judgment_only": {
-  "PASS": 0,
-  "FAIL": 0,
-  "N/A": 0,
-  "NOT_VERIFIED": 31,
-  "score": null,
-  "coverage": 0
+  "PASS": 18,
+  "FAIL": 2,
+  "N/A": 9,
+  "NOT_VERIFIED": 2,
+  "score": 90,
+  "coverage": 90.9
  },
  "categories": {
   "fundamentos": {
-   "PASS": 0,
+   "PASS": 5,
    "FAIL": 0,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": null,
-   "coverage": 0
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "hierarquia": {
-   "PASS": 2,
+   "PASS": 7,
    "FAIL": 0,
    "N/A": 0,
-   "NOT_VERIFIED": 5,
+   "NOT_VERIFIED": 0,
    "score": 100,
-   "coverage": 28.6
+   "coverage": 100
   },
   "estilo": {
-   "PASS": 2,
+   "PASS": 4,
    "FAIL": 3,
    "N/A": 0,
-   "NOT_VERIFIED": 2,
-   "score": 40,
-   "coverage": 71.4
+   "NOT_VERIFIED": 0,
+   "score": 57.1,
+   "coverage": 100
   },
   "acessibilidade": {
-   "PASS": 7,
+   "PASS": 8,
    "FAIL": 1,
    "N/A": 0,
-   "NOT_VERIFIED": 1,
-   "score": 87.5,
-   "coverage": 88.9
+   "NOT_VERIFIED": 0,
+   "score": 88.9,
+   "coverage": 100
   },
   "navegacao": {
-   "PASS": 0,
-   "FAIL": 3,
-   "N/A": 1,
-   "NOT_VERIFIED": 2,
-   "score": 0,
-   "coverage": 60
+   "PASS": 1,
+   "FAIL": 2,
+   "N/A": 3,
+   "NOT_VERIFIED": 0,
+   "score": 33.3,
+   "coverage": 100
   },
   "carga": {
    "PASS": 1,
-   "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 5,
-   "score": 100,
-   "coverage": 16.7
+   "FAIL": 1,
+   "N/A": 2,
+   "NOT_VERIFIED": 2,
+   "score": 50,
+   "coverage": 50
   },
   "onboarding": {
-   "PASS": 0,
+   "PASS": 4,
    "FAIL": 0,
    "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "NOT_VERIFIED": 0,
+   "score": 100,
+   "coverage": 100
   },
   "confianca": {
    "PASS": 0,
-   "FAIL": 0,
-   "N/A": 0,
-   "NOT_VERIFIED": 4,
-   "score": null,
-   "coverage": 0
+   "FAIL": 1,
+   "N/A": 3,
+   "NOT_VERIFIED": 0,
+   "score": 0,
+   "coverage": 100
   },
   "formularios": {
    "PASS": 0,
    "FAIL": 3,
-   "N/A": 0,
-   "NOT_VERIFIED": 3,
+   "N/A": 3,
+   "NOT_VERIFIED": 0,
    "score": 0,
-   "coverage": 50
+   "coverage": 100
   }
  },
  "items": {
   "fundamentos/jtbd": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/jtbd",
+     "state": "PASS",
+     "reason": "The root README opens with a one-sentence statement of what the site is and who it serves (design systems, agent skills and tools for teams building products with AI); index.html <title> restates it as 'Design engineering para produtos com IA'. Note: the more precise one-sentence job statement in compound-labs-design/README.md ('Um processo de design UX/UI, com gates, para telas geradas em esteira agêntica') describes the plugin, not the site.",
+     "evidence_file": "README.md",
+     "quote": "Site estático do Compound Design — sistemas de design, skills de agente e ferramentas para times construindo produtos com IA. HTML + CSS puro, sem build."
+    }
+   ]
   },
   "fundamentos/macro-bet": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/macro-bet",
+     "state": "PASS",
+     "reason": "RESEARCH-SYNTHESIS.md states the product bet explicitly (rulebooks teach what is good but do not impose a gated process; that gap is 'a oportunidade do Compound Design') and its Insights→Opportunities table ties site/repo decisions to it ('Empacotar dia 1 + README com install em 1 linha + demo no site' to gain adoption). BLUEPRINT.md fixes the position ('pipeline de design que chama os princípios exatos em cada gate') and E6 ties README/install/demo furniture to the star-conversion bet; DOGFOOD-REVIEW.md ties the site's own contrast/focus/motion changes to demonstrating that the skill's ruler 'tem dente'.",
+     "evidence_file": "docs/compound-labs-design/RESEARCH-SYNTHESIS.md",
+     "quote": "A maior lacuna do mercado (e a oportunidade do Compound Design) é que os rulebooks existentes (S1, S2) ensinam *o que é bom* mas não impõem *um processo com gates* — e é justamente processo que a persona-alvo precisa."
+    }
+   ]
   },
   "fundamentos/convencao": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "fundamentos/convencao",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "ENTRY and DISCOVERY use a conventional top bar (logo left, nav pill right), centred hero with H1 + subtitle + single CTA, stacked link cards with trailing arrows, and a standard footer; the only novelty is the three-icon theme switcher, which is small and purposeful.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "fundamentos/restricoes": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/restricoes",
+     "state": "PASS",
+     "reason": "BLUEPRINT.md (dated 2026-07-13 via the synthesis, before the 07-14→07-16 build commits) records a locked 'Build Spec (travado)' with the file-tree constraint ('respeitando \"uma SKILL.md só\"'), the plugin-from-day-1 packaging constraint, and the design-system constraints the site then applies (OKLCH lightness thresholds, APCA Lc 60/75, named easing curves, duration table, hit areas 44/40px). Stack constraint for the site ('HTML + CSS puro, sem build') is recorded in README.md. Caveat: no explicit time or team constraint is recorded; the pass rests on stack + design-system constraints.",
+     "evidence_file": "docs/compound-labs-design/BLUEPRINT.md",
+     "quote": "### Arquitetura proposta (respeitando \"uma SKILL.md só\") ... `standards.md` — valores canônicos (curvas, durações, escala tipográfica, thresholds OKLCH, hit areas, concentric radius)"
+    }
+   ]
   },
   "fundamentos/documentado": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (source review, unblinded)",
-   "evidence": []
+   "evidence": [
+    {
+     "id": "fundamentos/documentado",
+     "state": "PASS",
+     "reason": "Decision rationale is recorded in two places. DOGFOOD-REVIEW.md keeps a Before | After | Why ledger for the site's contrast, focus-ring and motion changes, each citing the standards.md value that motivated it. The source repo's commit bodies at the pinned SHA (git -C /home/user/compound-labs-design log 364430b; the M01 directory is a git-archive export with no history of its own) explain why for each change, e.g. 364430b: 'as barras de progresso do /audit animavam width (propriedade de layout → dispara layout+paint a cada toggle)' → scaleX on GPU; 5db6ab5 lists 11 divergences with the rule each one violated. BLUEPRINT.md also records 'Decisões travadas' with reasons.",
+     "evidence_file": "docs/compound-labs-design/DOGFOOD-REVIEW.md",
+     "quote": "| `--muted: oklch(0.556 0 0)` como texto de leitura primário (`.intro`) | `oklch(0.47 0 0)` | #737373 em branco ≈ 4.74:1: passa WCAG AA raspando, **falha APCA Lc 60** e a regra de lightness-gap (fg L ≤ 0.45 em bg > 0.85). Texto primário não fica no piso. |"
+    }
+   ]
   },
   "hierarquia/cta-3s": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY",
+   "evidence": [
+    {
+     "id": "hierarquia/cta-3s",
+     "state": "PASS",
+     "surface": "ENTRY",
+     "reason": "On ENTRY the black filled 'Explorar skills' button centred under the H1 is immediately identifiable as the single primary action; the header 'Skills' pill uses the same black fill but is small and in the nav corner so it does not compete. DETAIL/INTERACTION likewise have one filled button ('Download .zip') with Copy/Exportar/Reiniciar outlined as secondary.",
+     "evidence_file": "ENTRY-desktop-first-screen.png",
+     "measured_value": "1 filled hero CTA + 1 small filled nav pill",
+     "expected_value": "one obvious primary action"
+    }
+   ]
   },
   "hierarquia/headings": {
    "state": "PASS",
@@ -147,24 +199,60 @@
    "evidence": []
   },
   "hierarquia/leitura": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/leitura",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Reading order is numberable from size/weight/position alone: ENTRY H1 'Compound Design' (largest, bold, centred) → grey subtitle → black CTA → section headings → cards. INTERACTION: bold page title → grey lead → INSTALL box → progress card → section headings with counters → items.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/proximidade": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/proximidade",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Related items sit closer than unrelated ones: each card holds its title and description tightly bordered; the INSTALL box groups the command field, Copy and Download; checklist items cluster under their category heading with the 'ref:' line hugging the group, and a large gap separates the next category.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "hierarquia/whitespace": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "hierarquia/whitespace",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "The hero block (badge, H1, subtitle, CTA) is surrounded by roughly 100px of empty space above and below on ENTRY and DISCOVERY, while the card lists and checklist items below are packed with ~12–16px gaps, so whitespace scales with importance.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "hierarquia/cor-destaque": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "hierarquia/cor-destaque",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "The action colour is the solid black fill, used only on buttons (hero CTA, nav pill, 'Download .zip'); the only chromatic elements are the small orange dot in the 'In Progress…' status badge and the tiny tri-colour dot in the author badge, neither decorating text or backgrounds.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "hierarquia/escala-tipo": {
    "state": "PASS",
@@ -218,9 +306,18 @@
    ]
   },
   "estilo/paleta": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "estilo/paleta",
+     "state": "PASS",
+     "surface": "all",
+     "reason": "Colours read as a system: near-black text and filled buttons, two or three greys for secondary text, borders, code chips and the INSTALL box, white surfaces, plus one semantic orange for the 'In Progress' status; no stray hues appear across the four surfaces.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "estilo/elevacao": {
    "state": "PASS",
@@ -294,9 +391,18 @@
    "evidence": []
   },
   "estilo/icones": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, DISCOVERY",
+   "evidence": [
+    {
+     "id": "estilo/icones",
+     "state": "PASS",
+     "surface": "ENTRY, DISCOVERY",
+     "reason": "Inline icons (sun, moon, monitor in the theme switcher, the wand logo, the card arrows) are all thin single-weight outline glyphs at the same optical size; the back links use a text '←' glyph, which visually matches the thin card arrows.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "estilo/motion": {
    "state": "FAIL",
@@ -414,9 +520,18 @@
    ]
   },
   "acessibilidade/nao-so-cor": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, INTERACTION",
+   "evidence": [
+    {
+     "id": "acessibilidade/nao-so-cor",
+     "state": "PASS",
+     "surface": "ENTRY, INTERACTION",
+     "reason": "Every state indicator present carries text or shape beyond colour: the 'In Progress…' badge pairs its orange dot with a label, progress is shown as '0/54 itens · 0%' and '0/5' counters next to the bars, and the focus state is a thick black outline box around the logo (state-ENTRY-focus-first.png), not a colour change alone.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "acessibilidade/alt-aria": {
    "state": "PASS",
@@ -524,48 +639,45 @@
    "evidence": []
   },
   "navegacao/busca": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "navegacao/busca",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "Content volume is small: ENTRY links to 3 cards, DISCOVERY to 3 skills, and the primary nav is a single Home/Skills pill, well under ~15 destinations, so search is not called for.",
+     "evidence_file": "DISCOVERY-desktop.png"
+    }
+   ]
   },
   "navegacao/mobile-nav": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all (390)",
+   "evidence": [
+    {
+     "id": "navegacao/mobile-nav",
+     "state": "PASS",
+     "surface": "all (390)",
+     "reason": "At 390px the navigation stays visible in the header (logo link, theme switcher, 'Skills'/'Home' pill) with no hamburger or gesture; the mobile-nav-open captures are identical to the first screens, confirming nothing is hidden, and the wrapped two-line logo does not overflow the viewport.",
+     "evidence_file": "ENTRY-mobile-first-screen.png",
+     "measured_value": "nav pill ~32px tall, visible on every mobile surface",
+     "expected_value": "visible nav or labelled ≥44px toggle"
+    }
+   ]
   },
   "navegacao/links": {
-   "state": "FAIL",
+   "state": "N/A",
    "mode": "deterministic",
    "per_surface": {
-    "ENTRY": "FAIL",
-    "DISCOVERY": "FAIL",
+    "ENTRY": "N/A",
+    "DISCOVERY": "N/A",
     "DETAIL": "N/A",
     "INTERACTION": "N/A"
    },
-   "evidence": [
-    {
-     "surface": "ENTRY",
-     "state": "FAIL",
-     "measured": {
-      "in_text": 2,
-      "distinguished": 0,
-      "axe": 0
-     },
-     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-     "evidence": "0/2 in-text links distinguished by more than colour; axe link-in-text-block 0"
-    },
-    {
-     "surface": "DISCOVERY",
-     "state": "FAIL",
-     "measured": {
-      "in_text": 3,
-      "distinguished": 0,
-      "axe": 0
-     },
-     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-     "evidence": "0/3 in-text links distinguished by more than colour; axe link-in-text-block 0"
-    }
-   ]
+   "evidence": []
   },
   "carga/chunks": {
    "state": "PASS",
@@ -579,69 +691,190 @@
    "evidence": []
   },
   "carga/disclosure": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION (ENTRY/DISCOVERY pass)",
+   "evidence": [
+    {
+     "id": "carga/disclosure",
+     "state": "FAIL",
+     "surface": "INTERACTION (ENTRY/DISCOVERY pass)",
+     "reason": "ENTRY and DISCOVERY disclose progressively (summary card → detail page), but INTERACTION shows all 54 checklist items with their full description and 'ref:' lines expanded at once on a 6709px page with no collapsible sections or on-demand detail. DETAIL likewise renders the whole skill document at once, though that is a reading doc.",
+     "evidence_file": "INTERACTION-desktop.png",
+     "measured_value": "54 items × title+description always expanded in 9 sections, no collapse/expand control, page height 6709px",
+     "expected_value": "complexity revealed summary → detail (collapsible sections or descriptions on demand)"
+    }
+   ]
   },
   "carga/feedback": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/feedback",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION",
+     "reason": "INTERACTION has actions (54 checkboxes, Copy, Exportar relatório, Reiniciar) but no post-click state was captured: all checkboxes are unchecked and no toast, checked state or updated counter is shown, so immediate feedback cannot be verified.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "carga/loading": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/loading",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "All content is static pages; the only operations are clipboard copy, a markdown export and a .zip download, none long enough to need a designed loading state.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "carga/prevencao": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "carga/prevencao",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "There is no data-entry form: the INSTALL command field is a read-only display beside a Copy button and the checklist is only checkboxes, so inline validation does not apply (no form-submit-empty capture exists).",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "carga/recuperacao": {
    "state": "NOT_VERIFIED",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "carga/recuperacao",
+     "state": "NOT_VERIFIED",
+     "surface": "INTERACTION",
+     "reason": "'Reiniciar' in the progress card is destructive (clears saved progress) but no capture shows what happens after clicking it, so the presence of a confirmation or undo cannot be verified from the screenshots.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "onboarding/valor-rapido": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "ENTRY, INTERACTION",
+   "evidence": [
+    {
+     "id": "onboarding/valor-rapido",
+     "state": "PASS",
+     "surface": "ENTRY, INTERACTION",
+     "reason": "ENTRY's first screen states what the site is in one line and puts the 'Explorar skills' CTA and the first project cards inside the 1440×900 fold; INTERACTION's first screen already shows the install command, the progress card and the first checklist section, so the core content is reached without extra steps.",
+     "evidence_file": "ENTRY-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/empty-states": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "onboarding/empty-states",
+     "state": "PASS",
+     "surface": "INTERACTION",
+     "reason": "The fresh zero-progress state ('0/54 itens · 0%') is explained in place — 'O progresso fica salvo neste navegador. Exportar copia um relatório em markdown.' — and the page lead tells the user the next step ('marque item a item aqui no navegador'), with the checklist starting directly below.",
+     "evidence_file": "INTERACTION-desktop-first-screen.png"
+    }
+   ]
   },
   "onboarding/dicas-contexto": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION, DISCOVERY",
+   "evidence": [
+    {
+     "id": "onboarding/dicas-contexto",
+     "state": "PASS",
+     "surface": "INTERACTION, DISCOVERY",
+     "reason": "Help appears at the point of use rather than as a tour: every checklist item carries a one-line explanation under its title and each section ends with a 'ref:' pointer, the progress card has an inline note about saving/exporting, and DISCOVERY tells the user 'Abra uma skill para o comando de install ou o download' right above the cards.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "onboarding/progresso-fluxo": {
-   "state": "NOT_VERIFIED",
+   "state": "PASS",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "INTERACTION",
+   "evidence": [
+    {
+     "id": "onboarding/progresso-fluxo",
+     "state": "PASS",
+     "surface": "INTERACTION",
+     "reason": "The 54-item audit checklist shows position and remaining work: an overall '0/54 itens · 0%' counter with a progress bar plus per-category counters (0/5, 0/7, 0/9…) each with their own bar.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "confianca/depoimentos": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/depoimentos",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No testimonials or quotes appear on any of the four surfaces.",
+     "evidence_file": "ENTRY-desktop.png"
+    }
+   ]
   },
   "confianca/numeros": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/numeros",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No numbers are used as proof; the only figures visible are the checklist counters (0/54), the version string v3.6.0 and the © 2026 footer.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "confianca/logos": {
-   "state": "NOT_VERIFIED",
+   "state": "FAIL",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "DETAIL, INTERACTION",
+   "evidence": [
+    {
+     "id": "confianca/logos",
+     "state": "FAIL",
+     "surface": "DETAIL, INTERACTION",
+     "reason": "The adoption decision point is the INSTALL box ('npx skills add …', Copy, 'Download .zip') on DETAIL and INTERACTION, and no social proof sits next to it — no stars, user counts, logos or ratings; the only trust text is 'Licença MIT' at the very bottom and 'Inspirado pela comunidade…' in DISCOVERY's footer.",
+     "evidence_file": "DETAIL-desktop.png",
+     "measured_value": "INSTALL box with no adjacent social proof; 'Licença MIT' ~4000px below",
+     "expected_value": "social proof (logos/badges/ratings) beside the install/download decision"
+    }
+   ]
   },
   "confianca/seguranca": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "confianca/seguranca",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No surface collects user data: there is no signup, payment or contact form; the only persisted state is the checklist, which the page explicitly says is saved locally in the browser.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   },
   "formularios/labels": {
    "state": "FAIL",
@@ -667,9 +900,18 @@
    ]
   },
   "formularios/erro-inline": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/erro-inline",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "There is no data-entry form to submit — only a read-only install command field with a Copy button and a checklist of checkboxes — so inline error messages do not apply.",
+     "evidence_file": "DETAIL-desktop.png"
+    }
+   ]
   },
   "formularios/tipos-campo": {
    "state": "FAIL",
@@ -982,14 +1224,32 @@
    ]
   },
   "formularios/opcionais": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/opcionais",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "No form with multiple input fields exists on any surface; the single visible text field is a read-only command display.",
+     "evidence_file": "DETAIL-desktop.png"
+    }
+   ]
   },
   "formularios/submit-estado": {
-   "state": "NOT_VERIFIED",
+   "state": "N/A",
    "mode": "judgment (blinded)",
-   "evidence": []
+   "surface": "all",
+   "evidence": [
+    {
+     "id": "formularios/submit-estado",
+     "state": "N/A",
+     "surface": "all",
+     "reason": "There is no form submission on any surface; Copy, Exportar relatório and Download .zip are not form submits and no submit button is present.",
+     "evidence_file": "INTERACTION-desktop.png"
+    }
+   ]
   }
  }
 }

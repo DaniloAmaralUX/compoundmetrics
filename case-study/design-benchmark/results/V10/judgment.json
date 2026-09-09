@@ -1,0 +1,259 @@
+{
+ "label": "DESIGN-G",
+ "files_viewed": [
+  "ENTRY-desktop-first-screen.png",
+  "ENTRY-desktop.png",
+  "ENTRY-mobile-first-screen.png",
+  "ENTRY-mobile.png",
+  "state-ENTRY-focus-first.png"
+ ],
+ "per_surface_notes": "Only the ENTRY surface was captured for DESIGN-G (5 files). No DISCOVERY, DETAIL or INTERACTION surfaces and no hover/mobile-nav-open/form-submit-empty states exist. ENTRY-desktop.png (1440x10816) and ENTRY-mobile.png (390x16647) were sliced into local crops in the scratchpad (judgeG/d00-d08, m00-m07) purely to read them at legible size; no other files were opened. The page is a single-page dark landing/manifesto: header with logo mark + wordmark and a text status tag on the right, no nav links, no buttons, no links styled as actions, no forms/inputs, no search. Content: hero (eyebrow, 3-line headline, paragraph, 4-stat strip, caveat), then sections 'Why this exists', 'The loop' (6 numbered stages with tag chips), 'The v0.2 correction' (CDQI weight table + E0-E4 ladder with E1 highlighted), 'Work system' 6-card grid, 'Resources' 6 cards with CDQI scores/dashes and 'E1 · CONTRACT-TESTED' badges, 'AI interaction quality' 6-card grid, 'Current evidence boundary' (E1 / 0 stats + 6 rules), 'Install' (3 command cards + flow strip), 'Continuous versions' (v0.1/v0.2/v0.2.1 with 'NOW'), footer. Mobile stacks everything in one column with no horizontal overflow observed; flow strips wrap onto two lines. Accent colours: lime (#d4ff3f-ish) on key values/current states and card indices; cyan on evidence badges and 'NO INFLATION'. Many items are N/A because the design has no forms, no actions, no testimonials, no navigation, no multi-step flow.",
+ "verdicts": [
+  {
+   "id": "fundamentos/convencao",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "ENTRY uses a conventional landing structure: top bar with logo mark + wordmark left and a status tag right, centered hero (eyebrow, headline, subhead, stat strip), then stacked sections of headline + paragraph + card grids and a footer. The only novelty is the absence of any nav/CTA and a numbered timeline for the loop, which reads as purposeful editorial layout; DISCOVERY was not captured.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "header/hero/feature-grid/footer pattern; timeline and stat strip are the only unusual elements",
+   "expected_value": "familiar patterns by default, limited purposeful novelty"
+  },
+  {
+   "id": "hierarquia/cta-3s",
+   "state": "FAIL",
+   "surface": "ENTRY",
+   "reason": "The 1440x900 first screen contains no button, link or action of any kind: only the logo, a text status tag ('CANDIDATE · v0.3.0-alpha.1 · WORK SYSTEM'), headline, paragraph and a four-cell stat strip. The full page later has an 'Install' section with three command cards (/plugin marketplace add…, /plugin install…, cd-setup) but still no actionable element, so a product landing page that clearly wants adoption offers no identifiable primary action.",
+   "evidence_file": "ENTRY-desktop-first-screen.png",
+   "measured_value": "0 buttons/links in first screen; 0 actionable elements on the full page (Install section is plain text)",
+   "expected_value": "one distinct primary action identifiable within 3 s"
+  },
+  {
+   "id": "hierarquia/leitura",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "On the first screen the reading order is unambiguous from size/weight/position: (1) the very large white 3-line headline, (2) the mid-grey paragraph under it, (3) the bordered 4-cell stat strip, with the small mono eyebrow above and the caveat note below. Each later section repeats eyebrow → large headline → paragraph → cards, and the mobile first screen preserves the same order.",
+   "evidence_file": "ENTRY-desktop-first-screen.png",
+   "measured_value": "headline ≈ 5-6x body size, then subhead, then stat strip",
+   "expected_value": "first/second/third targets numberable from size, weight, position"
+  },
+  {
+   "id": "hierarquia/proximidade",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Related items are enclosed and tight: label/value pairs (Today/Risk/Question, Goal/Method/Constraint) sit in bordered mini-tables inside their card; each loop stage keeps its number, title, description and tag chips within one row separated from the next by a rule; section groups are separated by ~150-250 px gaps and hairline dividers, far more than the inner spacing.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "inner card spacing ~12-24 px vs inter-section gaps ~150-250 px with dividers",
+   "expected_value": "related items visibly closer than unrelated"
+  },
+  {
+   "id": "hierarquia/whitespace",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "The hero headline is surrounded by the largest empty area on the page (roughly 150 px above the eyebrow and 120 px below the stat strip on desktop), while dense card grids sit tightly packed; every section headline gets a generous top margin after a hairline rule. Whitespace grows with importance.",
+   "evidence_file": "ENTRY-desktop-first-screen.png",
+   "measured_value": "hero has ~2-3x the vertical padding of card grids",
+   "expected_value": "whitespace increases around the most important element(s)"
+  },
+  {
+   "id": "hierarquia/cor-destaque",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "There are no actionable elements, so the lime accent is used only for 'important/current' values: the header status dot, the highlighted E1 row in the evidence ladder, the CDQI scores (8.75/8.65/8.35) and unaudited dashes, the E1/0 stats, the 'NOW' v0.2.1 version and the active loop step ring; body, headings and grids stay white/grey. A minor decorative use is the lime '01'/'02' indices on the Problem/Bet cards and range labels '0-10'/'E0-E4', but the accent is not spread across ordinary content.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "lime on ~15 key-value/current-state elements over an 10,816 px page; cyan reserved for evidence badges",
+   "expected_value": "accent only on actionable or important elements"
+  },
+  {
+   "id": "estilo/paleta",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Colours read as a system: near-black page, slightly lighter card fills, hairline grey borders, white headings, two grey text tiers, one lime accent for key values/current states and a cyan semantic colour for evidence-level badges ('E1 · CONTRACT-TESTED', 'NO INFLATION'). No stray colours appear anywhere on desktop or mobile.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "neutrals (4-5 tiers) + lime accent + cyan semantic",
+   "expected_value": "neutrals + one or two accents + semantic colours"
+  },
+  {
+   "id": "estilo/icones",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "The surface contains no icon set: the only pictographic marks are a text status dot ('●') in the header, typographic arrows ('→') between flow-strip pills and before 'REPEAT', and em-dash placeholders in resource cards. These are text glyphs, not inline icons, so the na_condition (no icons) is met.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "0 icon glyphs; only ● and → text characters",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "acessibilidade/nao-so-cor",
+   "state": "FAIL",
+   "surface": "ENTRY",
+   "reason": "State indicators exist and are mixed: the 'NOW' version card carries the text label 'NOW' and the header status carries the word 'CANDIDATE' beside its dot, but in the Evidence maturity ladder the current level (E1 Deterministic) is signalled only by a lime border and lime 'E1' text, with no 'current' label, check or icon on that row (the sibling rows are identical except for colour). The 'CONTRACT-TESTED' badges also rely on cyan only, though they contain text.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "E1 row in the CEL ladder: colour-only highlight (lime border/text), no text/icon marker",
+   "expected_value": "state also carried by text or an icon"
+  },
+  {
+   "id": "navegacao/busca",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "The site is a single scrolling page with no navigation destinations, no lists of pages, and no catalogue beyond six resource cards; content volume is far below the ~15-destination threshold, so search is not called for.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "1 page, 0 nav links, 6 resource cards",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "navegacao/mobile-nav",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "The header at 390 px shows only the 'CD' logo mark and the status text; there is no navigation on desktop either (no nav links, no menu toggle), and only one page exists. With a single page and no navigation, the na_condition applies; note that content stacks cleanly with no horizontal overflow on mobile.",
+   "evidence_file": "ENTRY-mobile-first-screen.png",
+   "measured_value": "0 nav items, no toggle, single page",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "carga/disclosure",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Each section leads with an eyebrow, a headline and a one-paragraph summary before the detail cards (e.g. 'One number cannot mean well built and proven' + CDQI/CEL sentence, then the 7-row weight table and E0-E4 ladder), and the hero compresses the whole system into four stat cells and one caveat line. The page is long and dense (weight table, 18 tag chips, ledger notes all inline, nothing collapsible) but complexity is layered summary → detail rather than presented flat.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "every section: headline + summary paragraph before detail grid; no collapsible controls",
+   "expected_value": "complexity revealed progressively (summary → detail)"
+  },
+  {
+   "id": "carga/feedback",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "The design has no actions at all — no buttons, forms, toggles or links styled as actions on the ENTRY surface — and no INTERACTION surface was captured; the na_condition (no actions beyond navigation) is met.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "0 interactive controls visible",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "carga/loading",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "All content is static marketing/explanatory text and cards; there is no operation (search, submit, fetch) that could require a loading state.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "static page, no async operations",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "carga/prevencao",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "There is no form or input anywhere on the ENTRY page (desktop or mobile); the Install section shows commands as plain text.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "0 inputs",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "carga/recuperacao",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No destructive (or any) actions exist on the captured surface.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "0 actions",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "onboarding/valor-rapido",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "The first screen states what the product is (eyebrow 'DESIGN ENGINEERING WORK SYSTEM · HUMANS + AI AGENTS'), the promise (headline), how it works in one paragraph ('A loop you can install: frame… model… build… verify… polish… compound') and four key facts, and the second scroll immediately explains the problem/bet and the six-stage loop. The core content is reached without any gate, though the absence of any action means the path stops at reading.",
+   "evidence_file": "ENTRY-desktop-first-screen.png",
+   "measured_value": "value proposition and mechanism fully stated within first 900 px; loop detail by ~2,400 px",
+   "expected_value": "first screen leads quickly to value / core content"
+  },
+  {
+   "id": "onboarding/empty-states",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "The page is fully populated content; there is no list, search or data view that could be empty.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "no empty state present",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "onboarding/dicas-contexto",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Jargon is explained inline where it appears: 'CDQI measures construction. CEL measures evidence.' sits under the correction headline next to the two cards; each ladder level has a one-line gloss (E0 'Static review only', E2 'Baseline + repeated runs'); the resources intro explains 'A dash means construction quality has not been audited yet'; every stat cell has a caption. No tour is used.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "inline glosses for CDQI/CEL, E0-E4, dash placeholders, stat captions",
+   "expected_value": "contextual help at the point of doubt"
+  },
+  {
+   "id": "onboarding/progresso-fluxo",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "There is no interactive multi-step flow; the six-stage loop and install strip are explanatory content, not a user flow with position.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "no multi-step user flow",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "confianca/depoimentos",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No testimonials, quotes or customer voices appear anywhere on desktop or mobile.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "0 testimonials",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "confianca/numeros",
+   "state": "PASS",
+   "surface": "ENTRY",
+   "reason": "Numbers used as proof are specific and their basis is shown on the page: '06 loop stages', '15 skills · 6 agents', '0 paid runtime used', CDQI scores 8.75 / 8.65 / 8.35 tied to the visible weight table (7 criteria, 15%/10%), evidence level E1 defined in the E0-E4 ladder. No vague 'thousands of users' style claims; the copy explicitly states uplift was not measured.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "specific integers/decimals with in-page definitions; no vague quantities",
+   "expected_value": "specific and sourced numbers"
+  },
+  {
+   "id": "confianca/logos",
+   "state": "FAIL",
+   "surface": "ENTRY",
+   "reason": "The page has an adoption decision point — the 'Install' section with three command cards ('Add the marketplace', 'Install the plugin', 'Set up a project') — but no social proof sits there or anywhere else: no logos, user counts, ratings, badges from third parties or testimonials; the only proof-like elements are self-reported CDQI scores in a different section.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "Install section: 0 logos/badges/ratings; page-wide: 0 external social proof",
+   "expected_value": "social proof adjacent to the decision point"
+  },
+  {
+   "id": "confianca/seguranca",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No data is collected: there are no forms, inputs, payment or signup elements on the surface.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "0 data-collecting elements",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "formularios/erro-inline",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "There is no form on the captured surface and no form-submit-empty state was captured because none exists.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "0 forms",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "formularios/opcionais",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No form or field exists on the surface.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "0 fields",
+   "expected_value": "n/a"
+  },
+  {
+   "id": "formularios/submit-estado",
+   "state": "N/A",
+   "surface": "ENTRY",
+   "reason": "No form or submit control exists on the surface.",
+   "evidence_file": "ENTRY-desktop.png",
+   "measured_value": "0 submit buttons",
+   "expected_value": "n/a"
+  }
+ ],
+ "milestone": "V10",
+ "blind_label": "DESIGN-G",
+ "frozen_sha256": "15cd3d6c32230da122d8a037d1827e4be3cc0828d7c871ee9c70286f3f64600c"
+}

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-09T16:08:55.597Z",
+ "generated_at": "2026-09-09T16:51:35.505Z",
  "label": "Compound Design Audit Score",
  "meaning": "performance against the frozen Compound Design Audit v3.6.0 ruler (54 items); not a universal design-quality score",
  "formula": {
@@ -16,52 +16,52 @@
     "tool-09"
    ],
    "date_range": "2026-07-13 → 2026-07-16",
-   "score": 54.5,
-   "coverage": 41.5,
+   "score": 73.2,
+   "coverage": 95.3,
    "counts": {
-    "PASS": 12,
-    "FAIL": 10,
-    "N/A": 1,
-    "NOT_VERIFIED": 31
+    "PASS": 30,
+    "FAIL": 11,
+    "N/A": 11,
+    "NOT_VERIFIED": 2
    },
-   "deterministic_score": 54.5,
-   "judgment_score": null,
+   "deterministic_score": 57.1,
+   "judgment_score": 90,
    "categories": {
     "fundamentos": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "hierarquia": {
      "score": 100,
-     "coverage": 28.6
+     "coverage": 100
     },
     "estilo": {
-     "score": 40,
-     "coverage": 71.4
+     "score": 57.1,
+     "coverage": 100
     },
     "acessibilidade": {
-     "score": 87.5,
-     "coverage": 88.9
+     "score": 88.9,
+     "coverage": 100
     },
     "navegacao": {
-     "score": 0,
-     "coverage": 60
+     "score": 33.3,
+     "coverage": 100
     },
     "carga": {
-     "score": 100,
-     "coverage": 16.7
+     "score": 50,
+     "coverage": 50
     },
     "onboarding": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "confianca": {
-     "score": null,
-     "coverage": 0
+     "score": 0,
+     "coverage": 100
     },
     "formularios": {
      "score": 0,
-     "coverage": 50
+     "coverage": 100
     }
    }
   },
@@ -72,52 +72,52 @@
     "tool-18"
    ],
    "date_range": "2026-08-05 (8 commits, one day)",
-   "score": 61.1,
-   "coverage": 36.7,
+   "score": 73,
+   "coverage": 97.4,
    "counts": {
-    "PASS": 11,
-    "FAIL": 7,
-    "N/A": 5,
-    "NOT_VERIFIED": 31
+    "PASS": 27,
+    "FAIL": 10,
+    "N/A": 16,
+    "NOT_VERIFIED": 1
    },
    "deterministic_score": 61.1,
-   "judgment_score": null,
+   "judgment_score": 84.2,
    "categories": {
     "fundamentos": {
-     "score": null,
-     "coverage": 0
+     "score": 60,
+     "coverage": 100
     },
     "hierarquia": {
      "score": 100,
-     "coverage": 28.6
+     "coverage": 100
     },
     "estilo": {
-     "score": 60,
-     "coverage": 71.4
+     "score": 71.4,
+     "coverage": 100
     },
     "acessibilidade": {
-     "score": 50,
-     "coverage": 88.9
+     "score": 55.6,
+     "coverage": 100
     },
     "navegacao": {
      "score": 50,
-     "coverage": 50
+     "coverage": 100
     },
     "carga": {
      "score": 100,
-     "coverage": 16.7
+     "coverage": 66.7
     },
     "onboarding": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "confianca": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "formularios": {
      "score": null,
-     "coverage": 0
+     "coverage": null
     }
    }
   },
@@ -128,52 +128,52 @@
     "tool-12"
    ],
    "date_range": "2026-08-13",
-   "score": 45.5,
-   "coverage": 41.5,
+   "score": 72.5,
+   "coverage": 93,
    "counts": {
-    "PASS": 10,
-    "FAIL": 12,
-    "N/A": 1,
-    "NOT_VERIFIED": 31
+    "PASS": 29,
+    "FAIL": 11,
+    "N/A": 11,
+    "NOT_VERIFIED": 3
    },
-   "deterministic_score": 45.5,
-   "judgment_score": null,
+   "deterministic_score": 47.6,
+   "judgment_score": 100,
    "categories": {
     "fundamentos": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "hierarquia": {
-     "score": 50,
-     "coverage": 28.6
+     "score": 85.7,
+     "coverage": 100
     },
     "estilo": {
-     "score": 40,
-     "coverage": 71.4
+     "score": 57.1,
+     "coverage": 100
     },
     "acessibilidade": {
-     "score": 75,
-     "coverage": 88.9
+     "score": 77.8,
+     "coverage": 100
     },
     "navegacao": {
-     "score": 25,
-     "coverage": 66.7
+     "score": 60,
+     "coverage": 100
     },
     "carga": {
-     "score": 0,
-     "coverage": 16.7
+     "score": 50,
+     "coverage": 50
     },
     "onboarding": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 66.7
     },
     "confianca": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "formularios": {
      "score": 0,
-     "coverage": 40
+     "coverage": 100
     }
    }
   },
@@ -184,52 +184,52 @@
     "tool-12"
    ],
    "date_range": "2026-08-22 → 2026-08-24",
-   "score": 31.8,
-   "coverage": 41.5,
+   "score": 62.5,
+   "coverage": 90.9,
    "counts": {
-    "PASS": 7,
+    "PASS": 25,
     "FAIL": 15,
-    "N/A": 1,
-    "NOT_VERIFIED": 31
+    "N/A": 10,
+    "NOT_VERIFIED": 4
    },
-   "deterministic_score": 31.8,
-   "judgment_score": null,
+   "deterministic_score": 33.3,
+   "judgment_score": 94.7,
    "categories": {
     "fundamentos": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "hierarquia": {
-     "score": 0,
-     "coverage": 28.6
+     "score": 71.4,
+     "coverage": 100
     },
     "estilo": {
-     "score": 40,
-     "coverage": 71.4
+     "score": 57.1,
+     "coverage": 100
     },
     "acessibilidade": {
-     "score": 50,
-     "coverage": 88.9
+     "score": 55.6,
+     "coverage": 100
     },
     "navegacao": {
-     "score": 25,
-     "coverage": 66.7
+     "score": 40,
+     "coverage": 100
     },
     "carga": {
-     "score": 0,
-     "coverage": 16.7
+     "score": 50,
+     "coverage": 40
     },
     "onboarding": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 66.7
     },
     "confianca": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "formularios": {
      "score": 0,
-     "coverage": 40
+     "coverage": 100
     }
    }
   },
@@ -240,52 +240,52 @@
     "tool-20"
    ],
    "date_range": "2026-09-06 → 2026-09-09",
-   "score": 43.5,
-   "coverage": 42.6,
+   "score": 58.7,
+   "coverage": 92,
    "counts": {
-    "PASS": 10,
-    "FAIL": 13,
-    "N/A": 0,
-    "NOT_VERIFIED": 31
+    "PASS": 27,
+    "FAIL": 19,
+    "N/A": 4,
+    "NOT_VERIFIED": 4
    },
    "deterministic_score": 43.5,
-   "judgment_score": null,
+   "judgment_score": 73.9,
    "categories": {
     "fundamentos": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "hierarquia": {
      "score": 100,
-     "coverage": 28.6
+     "coverage": 100
     },
     "estilo": {
-     "score": 40,
-     "coverage": 71.4
+     "score": 57.1,
+     "coverage": 100
     },
     "acessibilidade": {
-     "score": 62.5,
-     "coverage": 88.9
+     "score": 55.6,
+     "coverage": 100
     },
     "navegacao": {
      "score": 0,
-     "coverage": 66.7
+     "coverage": 100
     },
     "carga": {
-     "score": 0,
-     "coverage": 16.7
+     "score": 50,
+     "coverage": 40
     },
     "onboarding": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "confianca": {
-     "score": null,
-     "coverage": 0
+     "score": 66.7,
+     "coverage": 100
     },
     "formularios": {
-     "score": 33.3,
-     "coverage": 50
+     "score": 20,
+     "coverage": 83.3
     }
    }
   },
@@ -296,52 +296,52 @@
     "tool-21"
    ],
    "date_range": "2026-09-07 → 2026-09-08",
-   "score": 45.5,
-   "coverage": 41.5,
+   "score": 65.1,
+   "coverage": 87.8,
    "counts": {
-    "PASS": 10,
-    "FAIL": 12,
-    "N/A": 1,
-    "NOT_VERIFIED": 31
+    "PASS": 28,
+    "FAIL": 15,
+    "N/A": 5,
+    "NOT_VERIFIED": 6
    },
    "deterministic_score": 45.5,
-   "judgment_score": null,
+   "judgment_score": 85.7,
    "categories": {
     "fundamentos": {
-     "score": null,
-     "coverage": 0
+     "score": 80,
+     "coverage": 100
     },
     "hierarquia": {
-     "score": 50,
-     "coverage": 28.6
+     "score": 85.7,
+     "coverage": 100
     },
     "estilo": {
-     "score": 60,
-     "coverage": 71.4
+     "score": 57.1,
+     "coverage": 100
     },
     "acessibilidade": {
-     "score": 25,
-     "coverage": 88.9
+     "score": 33.3,
+     "coverage": 100
     },
     "navegacao": {
-     "score": 75,
-     "coverage": 66.7
+     "score": 83.3,
+     "coverage": 100
     },
     "carga": {
      "score": 100,
-     "coverage": 16.7
+     "coverage": 33.3
     },
     "onboarding": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "confianca": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "formularios": {
      "score": 0,
-     "coverage": 40
+     "coverage": 60
     }
    }
   },
@@ -352,52 +352,52 @@
     "tool-23"
    ],
    "date_range": "2026-09-08",
-   "score": 72.2,
-   "coverage": 36.7,
+   "score": 65.6,
+   "coverage": 97,
    "counts": {
-    "PASS": 13,
-    "FAIL": 5,
-    "N/A": 5,
-    "NOT_VERIFIED": 31
+    "PASS": 21,
+    "FAIL": 11,
+    "N/A": 21,
+    "NOT_VERIFIED": 1
    },
-   "deterministic_score": 72.2,
-   "judgment_score": null,
+   "deterministic_score": 70.6,
+   "judgment_score": 60,
    "categories": {
     "fundamentos": {
-     "score": null,
-     "coverage": 0
+     "score": 40,
+     "coverage": 100
     },
     "hierarquia": {
-     "score": 100,
-     "coverage": 16.7
+     "score": 80,
+     "coverage": 100
     },
     "estilo": {
-     "score": 80,
-     "coverage": 71.4
+     "score": 66.7,
+     "coverage": 100
     },
     "acessibilidade": {
-     "score": 75,
-     "coverage": 88.9
+     "score": 77.8,
+     "coverage": 100
     },
     "navegacao": {
-     "score": 33.3,
-     "coverage": 60
+     "score": 25,
+     "coverage": 100
     },
     "carga": {
      "score": 100,
-     "coverage": 16.7
+     "coverage": 50
     },
     "onboarding": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "confianca": {
      "score": null,
-     "coverage": 0
+     "coverage": null
     },
     "formularios": {
      "score": null,
-     "coverage": 0
+     "coverage": null
     }
    }
   },
@@ -408,52 +408,52 @@
     "tool-24"
    ],
    "date_range": "2026-09-09",
-   "score": 63.6,
-   "coverage": 25.6,
+   "score": 80.8,
+   "coverage": 96.3,
    "counts": {
-    "PASS": 7,
-    "FAIL": 4,
-    "N/A": 11,
-    "NOT_VERIFIED": 32
+    "PASS": 21,
+    "FAIL": 5,
+    "N/A": 27,
+    "NOT_VERIFIED": 1
    },
    "deterministic_score": 63.6,
-   "judgment_score": null,
+   "judgment_score": 93.3,
    "categories": {
     "fundamentos": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "hierarquia": {
-     "score": 50,
-     "coverage": 28.6
+     "score": 83.3,
+     "coverage": 100
     },
     "estilo": {
-     "score": 25,
-     "coverage": 66.7
+     "score": 40,
+     "coverage": 100
     },
     "acessibilidade": {
      "score": 100,
-     "coverage": 80
+     "coverage": 100
     },
     "navegacao": {
      "score": null,
      "coverage": 0
     },
     "carga": {
-     "score": 100,
-     "coverage": 16.7
+     "score": 50,
+     "coverage": 100
     },
     "onboarding": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "confianca": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "formularios": {
      "score": null,
-     "coverage": 0
+     "coverage": null
     }
    }
   },
@@ -465,52 +465,52 @@
     "tool-24"
    ],
    "date_range": "2026-09-09",
-   "score": 33.3,
-   "coverage": 40.4,
+   "score": 63.2,
+   "coverage": 92.7,
    "counts": {
-    "PASS": 7,
+    "PASS": 24,
     "FAIL": 14,
-    "N/A": 2,
-    "NOT_VERIFIED": 31
+    "N/A": 13,
+    "NOT_VERIFIED": 3
    },
-   "deterministic_score": 33.3,
-   "judgment_score": null,
+   "deterministic_score": 35,
+   "judgment_score": 94.4,
    "categories": {
     "fundamentos": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "hierarquia": {
-     "score": 0,
-     "coverage": 28.6
+     "score": 57.1,
+     "coverage": 100
     },
     "estilo": {
-     "score": 40,
-     "coverage": 71.4
+     "score": 57.1,
+     "coverage": 100
     },
     "acessibilidade": {
-     "score": 50,
-     "coverage": 88.9
+     "score": 55.6,
+     "coverage": 100
     },
     "navegacao": {
-     "score": 33.3,
-     "coverage": 60
+     "score": 66.7,
+     "coverage": 75
     },
     "carga": {
-     "score": 0,
-     "coverage": 16.7
+     "score": 50,
+     "coverage": 50
     },
     "onboarding": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "confianca": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "formularios": {
      "score": 0,
-     "coverage": 40
+     "coverage": 100
     }
    }
   },
@@ -521,32 +521,32 @@
     "tool-24"
    ],
    "date_range": "2026-09-09",
-   "score": 63.6,
-   "coverage": 25.6,
+   "score": 67.9,
+   "coverage": 96.6,
    "counts": {
-    "PASS": 7,
-    "FAIL": 4,
-    "N/A": 11,
-    "NOT_VERIFIED": 32
+    "PASS": 19,
+    "FAIL": 9,
+    "N/A": 25,
+    "NOT_VERIFIED": 1
    },
    "deterministic_score": 63.6,
-   "judgment_score": null,
+   "judgment_score": 70.6,
    "categories": {
     "fundamentos": {
-     "score": null,
-     "coverage": 0
+     "score": 60,
+     "coverage": 100
     },
     "hierarquia": {
-     "score": 50,
-     "coverage": 28.6
+     "score": 71.4,
+     "coverage": 100
     },
     "estilo": {
-     "score": 25,
-     "coverage": 66.7
+     "score": 40,
+     "coverage": 100
     },
     "acessibilidade": {
-     "score": 100,
-     "coverage": 80
+     "score": 80,
+     "coverage": 100
     },
     "navegacao": {
      "score": null,
@@ -554,19 +554,19 @@
     },
     "carga": {
      "score": 100,
-     "coverage": 16.7
+     "coverage": 100
     },
     "onboarding": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "confianca": {
-     "score": null,
-     "coverage": 0
+     "score": 50,
+     "coverage": 100
     },
     "formularios": {
      "score": null,
-     "coverage": 0
+     "coverage": null
     }
    }
   },
@@ -577,83 +577,86 @@
     "tool-24"
    ],
    "date_range": "2026-09-09",
-   "score": 50,
-   "coverage": 41.5,
+   "score": 58.7,
+   "coverage": 95.8,
    "counts": {
-    "PASS": 11,
-    "FAIL": 11,
-    "N/A": 1,
-    "NOT_VERIFIED": 31
+    "PASS": 27,
+    "FAIL": 19,
+    "N/A": 6,
+    "NOT_VERIFIED": 2
    },
    "deterministic_score": 50,
-   "judgment_score": null,
+   "judgment_score": 66.7,
    "categories": {
     "fundamentos": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "hierarquia": {
-     "score": 0,
-     "coverage": 28.6
+     "score": 57.1,
+     "coverage": 100
     },
     "estilo": {
-     "score": 40,
-     "coverage": 71.4
+     "score": 42.9,
+     "coverage": 100
     },
     "acessibilidade": {
-     "score": 62.5,
-     "coverage": 88.9
+     "score": 55.6,
+     "coverage": 100
     },
     "navegacao": {
-     "score": 66.7,
-     "coverage": 60
+     "score": 50,
+     "coverage": 80
     },
     "carga": {
      "score": 100,
-     "coverage": 16.7
+     "coverage": 75
     },
     "onboarding": {
-     "score": null,
-     "coverage": 0
+     "score": 75,
+     "coverage": 100
     },
     "confianca": {
-     "score": null,
-     "coverage": 0
+     "score": 100,
+     "coverage": 100
     },
     "formularios": {
-     "score": 33.3,
-     "coverage": 50
+     "score": 16.7,
+     "coverage": 100
     }
    }
   }
  ],
- "average_score_all_milestones": 51.3,
- "average_score_independent_designs": 50.1,
+ "average_score_all_milestones": 67.4,
+ "average_score_independent_designs": 67.3,
  "average_note": "average_score_independent_designs excludes V10 (same design as V08 with v0.3 content). V09 stays because its DISCOVERY/DETAIL/INTERACTION surfaces are its own even though its ENTRY equals V08's.",
  "delta": {
   "pairs": [
    {
     "from": "V01",
     "to": "V02",
-    "score_delta": 6.6,
-    "coverage_delta": -4.8,
+    "score_delta": -0.2,
+    "coverage_delta": 2.1,
     "category_delta": {
-     "fundamentos": null,
+     "fundamentos": -40,
      "hierarquia": 0,
-     "estilo": 20,
-     "acessibilidade": -37.5,
-     "navegacao": 50,
-     "carga": 0,
-     "onboarding": null,
-     "confianca": null,
+     "estilo": 14.3,
+     "acessibilidade": -33.3,
+     "navegacao": 16.7,
+     "carga": 50,
+     "onboarding": 0,
+     "confianca": 100,
      "formularios": null
     },
     "improved": [
      "estilo/tipo-sistema",
      "estilo/motion",
-     "navegacao/menu-previsivel"
+     "navegacao/menu-previsivel",
+     "carga/disclosure"
     ],
     "regressed": [
+     "fundamentos/macro-bet",
+     "fundamentos/restricoes",
      "estilo/radius",
      "acessibilidade/foco",
      "acessibilidade/contraste",
@@ -663,39 +666,46 @@
      "estilo/tipo-sistema",
      "estilo/motion",
      "navegacao/menu-previsivel",
-     "navegacao/links",
+     "carga/disclosure",
+     "confianca/logos",
      "formularios/labels",
      "formularios/tipos-campo",
      "formularios/input-16px"
     ],
     "new_failures": [
+     "fundamentos/macro-bet",
+     "fundamentos/restricoes",
      "estilo/radius",
      "acessibilidade/foco",
      "acessibilidade/contraste",
-     "acessibilidade/semantica"
+     "acessibilidade/semantica",
+     "navegacao/busca"
     ],
     "same_tool": false
    },
    {
     "from": "V02",
     "to": "V03",
-    "score_delta": -15.6,
-    "coverage_delta": 4.8,
+    "score_delta": -0.5,
+    "coverage_delta": -4.4,
     "category_delta": {
-     "fundamentos": null,
-     "hierarquia": -50,
-     "estilo": -20,
-     "acessibilidade": 25,
-     "navegacao": -25,
-     "carga": -100,
-     "onboarding": null,
-     "confianca": null,
+     "fundamentos": 40,
+     "hierarquia": -14.3,
+     "estilo": -14.3,
+     "acessibilidade": 22.2,
+     "navegacao": 10,
+     "carga": -50,
+     "onboarding": 0,
+     "confianca": 0,
      "formularios": null
     },
     "improved": [
+     "fundamentos/macro-bet",
+     "fundamentos/restricoes",
      "acessibilidade/foco",
      "acessibilidade/contraste",
-     "navegacao/onde-estou"
+     "navegacao/onde-estou",
+     "navegacao/busca"
     ],
     "regressed": [
      "hierarquia/escala-tipo",
@@ -704,16 +714,18 @@
      "carga/chunks"
     ],
     "removed_failures": [
+     "fundamentos/macro-bet",
+     "fundamentos/restricoes",
      "acessibilidade/foco",
      "acessibilidade/contraste",
-     "navegacao/onde-estou"
+     "navegacao/onde-estou",
+     "navegacao/busca"
     ],
     "new_failures": [
      "hierarquia/escala-tipo",
      "estilo/motion",
      "navegacao/menu-previsivel",
      "navegacao/breadcrumbs",
-     "navegacao/links",
      "carga/chunks",
      "formularios/labels",
      "formularios/input-16px"
@@ -723,48 +735,50 @@
    {
     "from": "V03",
     "to": "V04",
-    "score_delta": -13.7,
-    "coverage_delta": 0,
+    "score_delta": -10,
+    "coverage_delta": -2.1,
     "category_delta": {
-     "fundamentos": null,
-     "hierarquia": -50,
+     "fundamentos": 0,
+     "hierarquia": -14.3,
      "estilo": 0,
-     "acessibilidade": -25,
-     "navegacao": 0,
+     "acessibilidade": -22.2,
+     "navegacao": -20,
      "carga": 0,
-     "onboarding": null,
-     "confianca": null,
+     "onboarding": 0,
+     "confianca": 0,
      "formularios": 0
     },
     "improved": [],
     "regressed": [
      "hierarquia/headings",
      "acessibilidade/teclado",
-     "acessibilidade/zoom"
+     "acessibilidade/zoom",
+     "navegacao/mobile-nav"
     ],
     "removed_failures": [],
     "new_failures": [
      "hierarquia/headings",
      "acessibilidade/teclado",
-     "acessibilidade/zoom"
+     "acessibilidade/zoom",
+     "navegacao/mobile-nav"
     ],
     "same_tool": true
    },
    {
     "from": "V04",
     "to": "V05",
-    "score_delta": 11.7,
+    "score_delta": -3.8,
     "coverage_delta": 1.1,
     "category_delta": {
-     "fundamentos": null,
-     "hierarquia": 100,
+     "fundamentos": 0,
+     "hierarquia": 28.6,
      "estilo": 0,
-     "acessibilidade": 12.5,
-     "navegacao": -25,
+     "acessibilidade": 0,
+     "navegacao": -40,
      "carga": 0,
-     "onboarding": null,
-     "confianca": null,
-     "formularios": 33.3
+     "onboarding": 0,
+     "confianca": -33.3,
+     "formularios": 20
     },
     "improved": [
      "hierarquia/headings",
@@ -776,7 +790,9 @@
     "regressed": [
      "estilo/tipo-sistema",
      "acessibilidade/foco",
-     "navegacao/onde-estou"
+     "acessibilidade/nao-so-cor",
+     "navegacao/onde-estou",
+     "navegacao/busca"
     ],
     "removed_failures": [
      "hierarquia/headings",
@@ -788,48 +804,66 @@
     "new_failures": [
      "estilo/tipo-sistema",
      "acessibilidade/foco",
-     "navegacao/onde-estou"
+     "acessibilidade/nao-so-cor",
+     "navegacao/onde-estou",
+     "navegacao/busca",
+     "navegacao/links",
+     "confianca/logos",
+     "formularios/opcionais",
+     "formularios/submit-estado"
     ],
     "same_tool": false
    },
    {
     "from": "V05",
     "to": "V06",
-    "score_delta": 2,
-    "coverage_delta": -1.1,
+    "score_delta": 6.4,
+    "coverage_delta": -4.2,
     "category_delta": {
-     "fundamentos": null,
-     "hierarquia": -50,
-     "estilo": 20,
-     "acessibilidade": -37.5,
-     "navegacao": 75,
-     "carga": 100,
-     "onboarding": null,
-     "confianca": null,
-     "formularios": -33.3
+     "fundamentos": -20,
+     "hierarquia": -14.3,
+     "estilo": 0,
+     "acessibilidade": -22.3,
+     "navegacao": 83.3,
+     "carga": 50,
+     "onboarding": 0,
+     "confianca": 33.3,
+     "formularios": -20
     },
     "improved": [
      "estilo/tipo-sistema",
+     "acessibilidade/nao-so-cor",
      "navegacao/menu-previsivel",
      "navegacao/breadcrumbs",
+     "navegacao/busca",
+     "navegacao/mobile-nav",
      "navegacao/links",
      "carga/chunks"
     ],
     "regressed": [
+     "fundamentos/macro-bet",
      "hierarquia/headings",
+     "estilo/icones",
      "acessibilidade/teclado",
      "acessibilidade/contraste",
      "acessibilidade/zoom"
     ],
     "removed_failures": [
      "estilo/tipo-sistema",
+     "acessibilidade/nao-so-cor",
      "navegacao/menu-previsivel",
      "navegacao/breadcrumbs",
+     "navegacao/busca",
+     "navegacao/mobile-nav",
      "navegacao/links",
-     "carga/chunks"
+     "carga/chunks",
+     "confianca/logos",
+     "formularios/submit-estado"
     ],
     "new_failures": [
+     "fundamentos/macro-bet",
      "hierarquia/headings",
+     "estilo/icones",
      "acessibilidade/teclado",
      "acessibilidade/contraste",
      "acessibilidade/zoom"
@@ -839,30 +873,33 @@
    {
     "from": "V06",
     "to": "V07",
-    "score_delta": 26.7,
-    "coverage_delta": -4.8,
+    "score_delta": 0.5,
+    "coverage_delta": 9.2,
     "category_delta": {
-     "fundamentos": null,
-     "hierarquia": 50,
-     "estilo": 20,
-     "acessibilidade": 50,
-     "navegacao": -41.7,
+     "fundamentos": -40,
+     "hierarquia": -5.7,
+     "estilo": 9.6,
+     "acessibilidade": 44.5,
+     "navegacao": -58.3,
      "carga": 0,
-     "onboarding": null,
+     "onboarding": 0,
      "confianca": null,
      "formularios": null
     },
     "improved": [
      "estilo/espaco-base",
-     "estilo/radius",
      "acessibilidade/teclado",
      "acessibilidade/foco",
      "acessibilidade/contraste",
      "acessibilidade/zoom"
     ],
     "regressed": [
+     "fundamentos/convencao",
+     "fundamentos/documentado",
+     "hierarquia/whitespace",
      "estilo/motion",
-     "navegacao/menu-previsivel"
+     "navegacao/menu-previsivel",
+     "navegacao/mobile-nav"
     ],
     "removed_failures": [
      "hierarquia/headings",
@@ -873,86 +910,105 @@
      "acessibilidade/contraste",
      "acessibilidade/zoom",
      "formularios/labels",
-     "formularios/input-16px"
+     "formularios/input-16px",
+     "formularios/opcionais"
     ],
     "new_failures": [
+     "fundamentos/convencao",
+     "fundamentos/documentado",
+     "hierarquia/whitespace",
      "estilo/motion",
-     "navegacao/menu-previsivel"
+     "navegacao/menu-previsivel",
+     "navegacao/mobile-nav"
     ],
     "same_tool": false
    },
    {
     "from": "V07",
     "to": "V08",
-    "score_delta": -8.6,
-    "coverage_delta": -11.1,
+    "score_delta": 15.2,
+    "coverage_delta": -0.7,
     "category_delta": {
-     "fundamentos": null,
-     "hierarquia": -50,
-     "estilo": -55,
-     "acessibilidade": 25,
+     "fundamentos": 60,
+     "hierarquia": 3.3,
+     "estilo": -26.7,
+     "acessibilidade": 22.2,
      "navegacao": null,
-     "carga": 0,
-     "onboarding": null,
+     "carga": -50,
+     "onboarding": 0,
      "confianca": null,
      "formularios": null
     },
     "improved": [
+     "fundamentos/macro-bet",
+     "fundamentos/convencao",
+     "fundamentos/documentado",
+     "hierarquia/whitespace",
      "acessibilidade/semantica"
     ],
     "regressed": [
      "hierarquia/escala-tipo",
      "estilo/espaco-base",
-     "estilo/tipo-sistema",
-     "estilo/radius"
+     "estilo/tipo-sistema"
     ],
     "removed_failures": [
+     "fundamentos/macro-bet",
+     "fundamentos/convencao",
+     "fundamentos/documentado",
+     "hierarquia/whitespace",
+     "estilo/icones",
      "estilo/motion",
      "acessibilidade/alvos",
      "acessibilidade/semantica",
      "navegacao/onde-estou",
-     "navegacao/menu-previsivel"
+     "navegacao/menu-previsivel",
+     "navegacao/mobile-nav"
     ],
     "new_failures": [
      "hierarquia/escala-tipo",
      "estilo/espaco-base",
      "estilo/tipo-sistema",
-     "estilo/radius"
+     "estilo/radius",
+     "carga/disclosure"
     ],
     "same_tool": false
    },
    {
     "from": "V08",
     "to": "V09",
-    "score_delta": -30.3,
-    "coverage_delta": 14.8,
+    "score_delta": -17.6,
+    "coverage_delta": -3.6,
     "category_delta": {
-     "fundamentos": null,
-     "hierarquia": -50,
-     "estilo": 15,
-     "acessibilidade": -50,
+     "fundamentos": 0,
+     "hierarquia": -26.2,
+     "estilo": 17.1,
+     "acessibilidade": -44.4,
      "navegacao": null,
-     "carga": -100,
-     "onboarding": null,
-     "confianca": null,
+     "carga": 0,
+     "onboarding": 0,
+     "confianca": 0,
      "formularios": null
     },
-    "improved": [],
+    "improved": [
+     "carga/disclosure"
+    ],
     "regressed": [
      "hierarquia/headings",
      "acessibilidade/semantica",
      "acessibilidade/zoom",
      "carga/chunks"
     ],
-    "removed_failures": [],
+    "removed_failures": [
+     "carga/disclosure"
+    ],
     "new_failures": [
+     "hierarquia/cta-3s",
      "hierarquia/headings",
      "acessibilidade/teclado",
      "acessibilidade/alvos",
      "acessibilidade/semantica",
      "acessibilidade/zoom",
      "navegacao/menu-previsivel",
-     "navegacao/links",
      "carga/chunks",
      "formularios/labels",
      "formularios/input-16px"
@@ -962,17 +1018,17 @@
    {
     "from": "V09",
     "to": "V10",
-    "score_delta": 30.3,
-    "coverage_delta": -14.8,
+    "score_delta": 4.7,
+    "coverage_delta": 3.9,
     "category_delta": {
-     "fundamentos": null,
-     "hierarquia": 50,
-     "estilo": -15,
-     "acessibilidade": 50,
+     "fundamentos": -40,
+     "hierarquia": 14.3,
+     "estilo": -17.1,
+     "acessibilidade": 24.4,
      "navegacao": null,
-     "carga": 100,
-     "onboarding": null,
-     "confianca": null,
+     "carga": 50,
+     "onboarding": 0,
+     "confianca": -50,
      "formularios": null
     },
     "improved": [
@@ -981,7 +1037,11 @@
      "acessibilidade/zoom",
      "carga/chunks"
     ],
-    "regressed": [],
+    "regressed": [
+     "fundamentos/jtbd",
+     "fundamentos/restricoes",
+     "acessibilidade/nao-so-cor"
+    ],
     "removed_failures": [
      "hierarquia/headings",
      "acessibilidade/teclado",
@@ -989,118 +1049,151 @@
      "acessibilidade/semantica",
      "acessibilidade/zoom",
      "navegacao/menu-previsivel",
-     "navegacao/links",
      "carga/chunks",
      "formularios/labels",
      "formularios/input-16px"
     ],
-    "new_failures": [],
+    "new_failures": [
+     "fundamentos/jtbd",
+     "fundamentos/restricoes",
+     "acessibilidade/nao-so-cor",
+     "confianca/logos"
+    ],
     "same_tool": true
    },
    {
     "from": "V10",
     "to": "V11",
-    "score_delta": -13.6,
-    "coverage_delta": 15.9,
+    "score_delta": -9.2,
+    "coverage_delta": -0.8,
     "category_delta": {
-     "fundamentos": null,
-     "hierarquia": -50,
-     "estilo": 15,
-     "acessibilidade": -37.5,
+     "fundamentos": 40,
+     "hierarquia": -14.3,
+     "estilo": 2.9,
+     "acessibilidade": -24.4,
      "navegacao": null,
      "carga": 0,
-     "onboarding": null,
-     "confianca": null,
+     "onboarding": -25,
+     "confianca": 50,
      "formularios": null
     },
-    "improved": [],
+    "improved": [
+     "fundamentos/jtbd",
+     "fundamentos/restricoes"
+    ],
     "regressed": [
      "hierarquia/headings",
      "acessibilidade/zoom"
     ],
-    "removed_failures": [],
+    "removed_failures": [
+     "fundamentos/jtbd",
+     "fundamentos/restricoes",
+     "confianca/logos"
+    ],
     "new_failures": [
      "hierarquia/headings",
+     "estilo/icones",
      "acessibilidade/teclado",
      "acessibilidade/alvos",
      "acessibilidade/zoom",
+     "navegacao/busca",
      "navegacao/links",
+     "onboarding/empty-states",
      "formularios/labels",
-     "formularios/input-16px"
+     "formularios/erro-inline",
+     "formularios/input-16px",
+     "formularios/opcionais",
+     "formularios/submit-estado"
     ],
     "same_tool": true
    }
   ],
   "biggest_improvement": {
-   "from": "V09",
-   "to": "V10",
-   "score_delta": 30.3,
-   "coverage_delta": -14.8,
+   "from": "V07",
+   "to": "V08",
+   "score_delta": 15.2,
+   "coverage_delta": -0.7,
    "category_delta": {
-    "fundamentos": null,
-    "hierarquia": 50,
-    "estilo": -15,
-    "acessibilidade": 50,
+    "fundamentos": 60,
+    "hierarquia": 3.3,
+    "estilo": -26.7,
+    "acessibilidade": 22.2,
     "navegacao": null,
-    "carga": 100,
-    "onboarding": null,
+    "carga": -50,
+    "onboarding": 0,
     "confianca": null,
     "formularios": null
    },
    "improved": [
-    "hierarquia/headings",
-    "acessibilidade/semantica",
-    "acessibilidade/zoom",
-    "carga/chunks"
+    "fundamentos/macro-bet",
+    "fundamentos/convencao",
+    "fundamentos/documentado",
+    "hierarquia/whitespace",
+    "acessibilidade/semantica"
    ],
-   "regressed": [],
+   "regressed": [
+    "hierarquia/escala-tipo",
+    "estilo/espaco-base",
+    "estilo/tipo-sistema"
+   ],
    "removed_failures": [
-    "hierarquia/headings",
-    "acessibilidade/teclado",
+    "fundamentos/macro-bet",
+    "fundamentos/convencao",
+    "fundamentos/documentado",
+    "hierarquia/whitespace",
+    "estilo/icones",
+    "estilo/motion",
     "acessibilidade/alvos",
     "acessibilidade/semantica",
-    "acessibilidade/zoom",
+    "navegacao/onde-estou",
     "navegacao/menu-previsivel",
-    "navegacao/links",
-    "carga/chunks",
-    "formularios/labels",
-    "formularios/input-16px"
+    "navegacao/mobile-nav"
    ],
-   "new_failures": [],
-   "same_tool": true
+   "new_failures": [
+    "hierarquia/escala-tipo",
+    "estilo/espaco-base",
+    "estilo/tipo-sistema",
+    "estilo/radius",
+    "carga/disclosure"
+   ],
+   "same_tool": false
   },
   "biggest_regression": {
    "from": "V08",
    "to": "V09",
-   "score_delta": -30.3,
-   "coverage_delta": 14.8,
+   "score_delta": -17.6,
+   "coverage_delta": -3.6,
    "category_delta": {
-    "fundamentos": null,
-    "hierarquia": -50,
-    "estilo": 15,
-    "acessibilidade": -50,
+    "fundamentos": 0,
+    "hierarquia": -26.2,
+    "estilo": 17.1,
+    "acessibilidade": -44.4,
     "navegacao": null,
-    "carga": -100,
-    "onboarding": null,
-    "confianca": null,
+    "carga": 0,
+    "onboarding": 0,
+    "confianca": 0,
     "formularios": null
    },
-   "improved": [],
+   "improved": [
+    "carga/disclosure"
+   ],
    "regressed": [
     "hierarquia/headings",
     "acessibilidade/semantica",
     "acessibilidade/zoom",
     "carga/chunks"
    ],
-   "removed_failures": [],
+   "removed_failures": [
+    "carga/disclosure"
+   ],
    "new_failures": [
+    "hierarquia/cta-3s",
     "hierarquia/headings",
     "acessibilidade/teclado",
     "acessibilidade/alvos",
     "acessibilidade/semantica",
     "acessibilidade/zoom",
     "navegacao/menu-previsivel",
-    "navegacao/links",
     "carga/chunks",
     "formularios/labels",
     "formularios/input-16px"
@@ -1149,89 +1242,89 @@
     "of": 11
    },
    {
-    "id": "navegacao/links",
+    "id": "hierarquia/escala-tipo",
     "fails": 6,
     "of": 11
    },
    {
-    "id": "hierarquia/escala-tipo",
-    "fails": 6,
+    "id": "navegacao/onde-estou",
+    "fails": 5,
     "of": 11
    }
   ],
   "category_improved_most": {
-   "category": "navegacao",
+   "category": "confianca",
    "first": 0,
-   "last": 66.7,
-   "delta": 66.7
+   "last": 100,
+   "delta": 100
   },
   "category_improved_least": {
    "category": "hierarquia",
    "first": 100,
-   "last": 0,
-   "delta": -100
+   "last": 57.1,
+   "delta": -42.9
   },
   "first_vs_last": {
    "from": "V01",
    "to": "V11",
-   "score_delta": -4.5
+   "score_delta": -14.5
   }
  },
  "chronological_trend": [
   {
    "milestone": "V01",
-   "score": 54.5,
-   "coverage": 41.5
+   "score": 73.2,
+   "coverage": 95.3
   },
   {
    "milestone": "V02",
-   "score": 61.1,
-   "coverage": 36.7
+   "score": 73,
+   "coverage": 97.4
   },
   {
    "milestone": "V03",
-   "score": 45.5,
-   "coverage": 41.5
+   "score": 72.5,
+   "coverage": 93
   },
   {
    "milestone": "V04",
-   "score": 31.8,
-   "coverage": 41.5
+   "score": 62.5,
+   "coverage": 90.9
   },
   {
    "milestone": "V05",
-   "score": 43.5,
-   "coverage": 42.6
+   "score": 58.7,
+   "coverage": 92
   },
   {
    "milestone": "V06",
-   "score": 45.5,
-   "coverage": 41.5
+   "score": 65.1,
+   "coverage": 87.8
   },
   {
    "milestone": "V07",
-   "score": 72.2,
-   "coverage": 36.7
+   "score": 65.6,
+   "coverage": 97
   },
   {
    "milestone": "V08",
-   "score": 63.6,
-   "coverage": 25.6
+   "score": 80.8,
+   "coverage": 96.3
   },
   {
    "milestone": "V09",
-   "score": 33.3,
-   "coverage": 40.4
+   "score": 63.2,
+   "coverage": 92.7
   },
   {
    "milestone": "V10",
-   "score": 63.6,
-   "coverage": 25.6
+   "score": 67.9,
+   "coverage": 96.6
   },
   {
    "milestone": "V11",
-   "score": 50,
-   "coverage": 41.5
+   "score": 58.7,
+   "coverage": 95.8
   }
  ]
 }

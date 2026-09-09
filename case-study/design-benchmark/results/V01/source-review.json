@@ -1,0 +1,49 @@
+{
+ "milestone": "V01",
+ "verdicts": [
+  {
+   "id": "fundamentos/jtbd",
+   "state": "PASS",
+   "reason": "The root README opens with a one-sentence statement of what the site is and who it serves (design systems, agent skills and tools for teams building products with AI); index.html <title> restates it as 'Design engineering para produtos com IA'. Note: the more precise one-sentence job statement in compound-labs-design/README.md ('Um processo de design UX/UI, com gates, para telas geradas em esteira agêntica') describes the plugin, not the site.",
+   "evidence_file": "README.md",
+   "quote": "Site estático do Compound Design — sistemas de design, skills de agente e ferramentas para times construindo produtos com IA. HTML + CSS puro, sem build."
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "state": "PASS",
+   "reason": "RESEARCH-SYNTHESIS.md states the product bet explicitly (rulebooks teach what is good but do not impose a gated process; that gap is 'a oportunidade do Compound Design') and its Insights→Opportunities table ties site/repo decisions to it ('Empacotar dia 1 + README com install em 1 linha + demo no site' to gain adoption). BLUEPRINT.md fixes the position ('pipeline de design que chama os princípios exatos em cada gate') and E6 ties README/install/demo furniture to the star-conversion bet; DOGFOOD-REVIEW.md ties the site's own contrast/focus/motion changes to demonstrating that the skill's ruler 'tem dente'.",
+   "evidence_file": "docs/compound-labs-design/RESEARCH-SYNTHESIS.md",
+   "quote": "A maior lacuna do mercado (e a oportunidade do Compound Design) é que os rulebooks existentes (S1, S2) ensinam *o que é bom* mas não impõem *um processo com gates* — e é justamente processo que a persona-alvo precisa."
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "state": "PASS",
+   "reason": "BLUEPRINT.md (dated 2026-07-13 via the synthesis, before the 07-14→07-16 build commits) records a locked 'Build Spec (travado)' with the file-tree constraint ('respeitando \"uma SKILL.md só\"'), the plugin-from-day-1 packaging constraint, and the design-system constraints the site then applies (OKLCH lightness thresholds, APCA Lc 60/75, named easing curves, duration table, hit areas 44/40px). Stack constraint for the site ('HTML + CSS puro, sem build') is recorded in README.md. Caveat: no explicit time or team constraint is recorded; the pass rests on stack + design-system constraints.",
+   "evidence_file": "docs/compound-labs-design/BLUEPRINT.md",
+   "quote": "### Arquitetura proposta (respeitando \"uma SKILL.md só\") ... `standards.md` — valores canônicos (curvas, durações, escala tipográfica, thresholds OKLCH, hit areas, concentric radius)"
+  },
+  {
+   "id": "fundamentos/documentado",
+   "state": "PASS",
+   "reason": "Decision rationale is recorded in two places. DOGFOOD-REVIEW.md keeps a Before | After | Why ledger for the site's contrast, focus-ring and motion changes, each citing the standards.md value that motivated it. The source repo's commit bodies at the pinned SHA (git -C /home/user/compound-labs-design log 364430b; the M01 directory is a git-archive export with no history of its own) explain why for each change, e.g. 364430b: 'as barras de progresso do /audit animavam width (propriedade de layout → dispara layout+paint a cada toggle)' → scaleX on GPU; 5db6ab5 lists 11 divergences with the rule each one violated. BLUEPRINT.md also records 'Decisões travadas' with reasons.",
+   "evidence_file": "docs/compound-labs-design/DOGFOOD-REVIEW.md",
+   "quote": "| `--muted: oklch(0.556 0 0)` como texto de leitura primário (`.intro`) | `oklch(0.47 0 0)` | #737373 em branco ≈ 4.74:1: passa WCAG AA raspando, **falha APCA Lc 60** e a regra de lightness-gap (fg L ≤ 0.45 em bg > 0.85). Texto primário não fica no piso. |"
+  }
+ ],
+ "docs_found": [
+  "README.md",
+  "compound-labs-design/README.md",
+  ".claude-plugin/marketplace.json",
+  "docs/compound-labs-design/BLUEPRINT.md",
+  "docs/compound-labs-design/RESEARCH-SYNTHESIS.md",
+  "docs/compound-labs-design/DOGFOOD-REVIEW.md",
+  ".vercelignore",
+  ".gitignore",
+  "index.html (title/meta only)",
+  "/home/user/compound-labs-design git log at 364430b (last 9 commit messages; the M01 worktree is a git-archive export so `git -C M01 log` returns the parent compoundmetrics history, not V01's)",
+  "/home/user/compoundmetrics/case-study/design-benchmark/rubric/ITEM-CLASSIFICATION.json",
+  "/home/user/compoundmetrics/case-study/history/DESIGN-MILESTONES.json (V01 entry)",
+  "/home/user/compoundmetrics/case-study/scripts/build-milestones.sh (M01 export line)"
+ ],
+ "instrument": "source review of the exact commit worktree (unblinded by nature: fundamentos/* items need repository docs)"
+}

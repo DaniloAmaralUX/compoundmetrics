@@ -1,0 +1,54 @@
+{
+ "milestone": "V10",
+ "verdicts": [
+  {
+   "id": "fundamentos/jtbd",
+   "state": "FAIL",
+   "reason": "Documentation is extensive but nowhere states the site's job in one sentence. STRATEGY.md and README.md state the framework/plugin's purpose (a paragraph, not the page's job); docs/frames/ holds only a README (no frame was written for the site); the page was 'extracted verbatim' from another repo (commit 18ffcf2) and later 'updated ... Visual baseline untouched; no redesign' (commit c61b896). The closest thing is the page's own <meta> description in src/app/page.tsx and the v0.2 critique line 'POC evidence UI — the demo shows version, construction and evidence separately', which describes a v0.2 feature of the page, not the v0.3 site's job.",
+   "evidence_file": "STRATEGY.md",
+   "quote": "A design engineer working through AI agents produces more interface than they can carefully judge, and the judgment they do apply disappears when the session ends."
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "state": "PASS",
+   "reason": "STRATEGY.md states the bet (knowledge should compound; an artifact must be earned; a claim may never exceed its evidence) and compound-design/docs/V0.2-DESIGN-CRITIQUE.md explicitly weighs 'Direction B — polish only (improve the public narrative and visual presentation)' against 'Direction C — evidence architecture', rejects B as insufficient, and derives the page decision 'POC evidence UI — the demo shows version, construction and evidence separately' from the chosen bet. Commit c61b896 carries the same logic into the v0.3 site: 'Site updated to the six-stage loop, the v0.3 resource set with a dash where construction is unaudited'.",
+   "evidence_file": "compound-design/docs/V0.2-DESIGN-CRITIQUE.md",
+   "quote": "### Direction B — polish only\nImprove the public narrative and visual presentation. ... Decision: useful but insufficient. ... 5. **POC evidence UI** — the demo shows version, construction and evidence separately."
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "state": "FAIL",
+   "reason": "No document records stack/time/team/design-system constraints for the site before it was built. docs/frames and docs/plans contain only READMEs. The only constraint records are in the commit bodies of the commits that did the work (18ffcf2: 'Standalone package.json: next, react, react-dom, geist only ... layout.tsx and globals.css reduced to the document baseline the page needs (Geist Sans/Mono, dark ground) ... Static export config'; c61b896: 'Visual baseline untouched; no redesign'), i.e. recorded at build time, not before; time and team constraints are never recorded. NOTICE and package.json describe the stack after the fact.",
+   "evidence_file": "NOTICE",
+   "quote": "The public page implementation (`src/app/page.tsx`, `page.module.css`) was extracted from the author's `studio-dev-ui` repository. No other part of that application is carried here."
+  },
+  {
+   "id": "fundamentos/documentado",
+   "state": "PASS",
+   "reason": "Decision rationale is recorded in several places: compound-design/docs/V0.2-DESIGN-CRITIQUE.md (divergence/convergence with pros, risks and a decision per direction), compound-design/research/EVERY-ARCHITECTURE-SNAPSHOT.md (adopt/adapt/defer/reject with reasons, per commit 7c31d66), compound-design/learning/LEDGER.md (observed/expected/human_correction/lesson entries), the release record compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md, and commit bodies that explain why (e.g. 6aea1fd: 'actions/checkout defaults to a depth-1 clone, which does not contain that commit, so the gate could only ever pass locally'; 592cb34: 'a guard that cannot distinguish stating a rule from breaking it blocks the rule ... recorded as CD-20260909-012').",
+   "evidence_file": "compound-design/docs/V0.2-DESIGN-CRITIQUE.md",
+   "quote": "### Direction A — expand the catalog ... Risks: duplicated responsibilities; weaker routing; more maintenance; sophistication without proof. Decision: reject for v0.2."
+  }
+ ],
+ "docs_found": [
+  "README.md",
+  "STRATEGY.md",
+  "CONTRIBUTING.md",
+  "NOTICE",
+  "docs/CONCEPTS.md",
+  "docs/architecture.md",
+  "docs/development.md",
+  "docs/frames/README.md",
+  "docs/plans/README.md",
+  "docs/solutions/README.md",
+  "docs/handoffs/README.md",
+  "compound-design/docs/V0.2-DESIGN-CRITIQUE.md",
+  "compound-design/docs/COMPOUND-DESIGN-POC-V0.1-PROCESS.md",
+  "compound-design/learning/LEDGER.md",
+  "compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md",
+  "src/app/page.tsx",
+  "package.json",
+  "git log -30 (commits a7f8319, 6aea1fd, 592cb34, c61b896, 7c31d66, 1401b68, 18ffcf2 and earlier migration commits)"
+ ],
+ "instrument": "source review of the exact commit worktree (unblinded by nature: fundamentos/* items need repository docs)"
+}

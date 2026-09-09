@@ -1,12 +1,12 @@
 Version,Name,Date range,Score,Coverage,PASS,FAIL,N/A,NOT_VERIFIED,Antes de começar,Hierarquia visual,Estilo visual,Acessibilidade,Navegação e orientação,Carga cognitiva e feedback,Onboarding e estados vazios,Social proof e confiança,Formulários
-V01,Compound Labs Design (site + /audit),2026-07-13 → 2026-07-16,54.5,41.5,12,10,1,31,,100,40,87.5,0,100,,,0
-V02,Studio DS v1 (landing; themes gallery; components),2026-08-05 (8 commits, one day),61.1,36.7,11,7,5,31,,100,60,50,50,100,,,
-V03,Dev Studio UI — authorial rebuild ("the sea; actually moving"),2026-08-13,45.5,41.5,10,12,1,31,,50,40,75,25,0,,,0
-V04,Studio Dev UI — registry + originals (main 2026-08-24),2026-08-22 → 2026-08-24,31.8,41.5,7,15,1,31,,0,40,50,25,0,,,0
-V05,Supernova Catálogo (Iconiq preset over Supernova tokens),2026-09-06 → 2026-09-09,43.5,42.6,10,13,0,31,,100,40,62.5,0,0,,,33.3
-V06,Geist Labs DS (lab-design),2026-09-07 → 2026-09-08,45.5,41.5,10,12,1,31,,50,60,25,75,100,,,0
-V07,Processo (Lifeline-style timeline),2026-09-08,72.2,36.7,13,5,5,31,,100,80,75,33.3,100,,,
-V08,Compound Metrics v0.2.1 (standalone extraction; single page),2026-09-09,63.6,25.6,7,4,11,32,,50,25,100,,100,,,
-V09,Studio Dev UI main 2026-09-09 (hosts the Compound Design v0.2 POC page),2026-09-09,33.3,40.4,7,14,2,31,,0,40,50,33.3,0,,,0
-V10,Compound Design v0.3.0-alpha.1 — production,2026-09-09,63.6,25.6,7,4,11,32,,50,25,100,,100,,,
-V11,Compound Design — Product Experience (preview; 8 routes),2026-09-09,50,41.5,11,11,1,31,,0,40,62.5,66.7,100,,,33.3
+V01,Compound Labs Design (site + /audit),2026-07-13 → 2026-07-16,73.2,95.3,30,11,11,2,100,100,57.1,88.9,33.3,50,100,0,0
+V02,Studio DS v1 (landing; themes gallery; components),2026-08-05 (8 commits, one day),73,97.4,27,10,16,1,60,100,71.4,55.6,50,100,100,100,
+V03,Dev Studio UI — authorial rebuild ("the sea; actually moving"),2026-08-13,72.5,93,29,11,11,3,100,85.7,57.1,77.8,60,50,100,100,0
+V04,Studio Dev UI — registry + originals (main 2026-08-24),2026-08-22 → 2026-08-24,62.5,90.9,25,15,10,4,100,71.4,57.1,55.6,40,50,100,100,0
+V05,Supernova Catálogo (Iconiq preset over Supernova tokens),2026-09-06 → 2026-09-09,58.7,92,27,19,4,4,100,100,57.1,55.6,0,50,100,66.7,20
+V06,Geist Labs DS (lab-design),2026-09-07 → 2026-09-08,65.1,87.8,28,15,5,6,80,85.7,57.1,33.3,83.3,100,100,100,0
+V07,Processo (Lifeline-style timeline),2026-09-08,65.6,97,21,11,21,1,40,80,66.7,77.8,25,100,100,,
+V08,Compound Metrics v0.2.1 (standalone extraction; single page),2026-09-09,80.8,96.3,21,5,27,1,100,83.3,40,100,,50,100,100,
+V09,Studio Dev UI main 2026-09-09 (hosts the Compound Design v0.2 POC page),2026-09-09,63.2,92.7,24,14,13,3,100,57.1,57.1,55.6,66.7,50,100,100,0
+V10,Compound Design v0.3.0-alpha.1 — production,2026-09-09,67.9,96.6,19,9,25,1,60,71.4,40,80,,100,100,50,
+V11,Compound Design — Product Experience (preview; 8 routes),2026-09-09,58.7,95.8,27,19,6,2,100,57.1,42.9,55.6,50,100,75,100,16.7

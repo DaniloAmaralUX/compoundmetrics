@@ -1,0 +1,46 @@
+{
+ "milestone": "V11",
+ "verdicts": [
+  {
+   "id": "fundamentos/jtbd",
+   "state": "PASS",
+   "reason": "The frame document states the site's job in one sentence (each reader answers their question without first learning vocabulary) and the IA plan restates it as a one-line journey (SEE IT → UNDERSTAND IT → NAME IT → INSPECT IT → VERIFY IT). README also carries the two-line thesis the Home route opens with.",
+   "evidence_file": "docs/frames/2026-09-09-product-experience.md",
+   "quote": "OUTCOME        Each reader can answer their question without learning vocabulary first: Home → \"I understand the idea.\" How it Works → \"I understand the mechanism.\" Lab → \"I saw Compound happen.\""
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "state": "PASS",
+   "reason": "STRATEGY.md states the product bet (knowledge from humans and agents should compound; a claim never exceeds its evidence) and the design docs tie concrete decisions to it: the single accent colour is reserved for 'what compounds', the route order is 'experience first, mental model second, term third', and /evidence is designed around 'built well ≠ proven useful'. The site commit body repeats the accent decision in the same terms.",
+   "evidence_file": "compound-design/research/PRODUCT-EXPERIENCE-REFERENCES.md",
+   "quote": "**One accent, one meaning.** The lime mark appears when something compounds and nowhere else."
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "state": "PASS",
+   "reason": "The frame (produced by cd-frame in the research commit that precedes the site build commit) has an explicit CONSTRAINTS block recording stack, dependency, runtime, content-source and licensing constraints, plus NON-GOALS. The references doc adds a dependency-decision table (none added) and STRATEGY.md records the team/runtime boundary (no paid runtime, no model calls).",
+   "evidence_file": "docs/frames/2026-09-09-product-experience.md",
+   "quote": "CONSTRAINTS    Static export on Next 16 with CSS modules and four runtime dependencies; no model runtime, no paid calls, no subagents; every factual value comes from the registry and release artifacts; `noindex` stays"
+  },
+  {
+   "id": "fundamentos/documentado",
+   "state": "PASS",
+   "reason": "Decision rationale is recorded in several places: a docs/solutions entry with 'What happened / The rule / Why it is worth keeping', a ledger entry CD-20260909-013, a per-reference adopt/adapt/reject table with reasons, an adversarial-review table listing what was upheld and what was fixed, and commit bodies (site:, checks:, research:) that explain why each design and check decision was made.",
+   "evidence_file": "docs/solutions/2026-09-09-axe-contrast-during-entrance-animation.md",
+   "quote": "## Why it is worth keeping\n\nThe same tool on the same page can produce a serious-looking failure and a clean pass a second apart. Anyone adding an entrance animation to a checked page will hit this again"
+  }
+ ],
+ "docs_found": [
+  "README.md",
+  "STRATEGY.md",
+  "docs/frames/2026-09-09-product-experience.md",
+  "docs/plans/2026-09-09-product-experience-ia.md",
+  "docs/solutions/2026-09-09-axe-contrast-during-entrance-animation.md",
+  "docs/architecture.md",
+  "docs/development.md",
+  "compound-design/research/PRODUCT-EXPERIENCE-REFERENCES.md",
+  "compound-design/learning/LEDGER.md",
+  "git log -30 (commit bodies: checks:, site:, site(content):, research:, ci:, fix(e2):)"
+ ],
+ "instrument": "source review of the exact commit worktree (unblinded by nature: fundamentos/* items need repository docs)"
+}
