@@ -1,0 +1,7 @@
+/* Rodapé — heading "Follow Comet" seguido de um SVG grande (1154×1118 na referência). */
+.footer { padding: 96px 0 40px; }
+.inner { display: flex; flex-direction: column; gap: 40px; }
+.follow { align-self: flex-start; color: var(--fg); text-decoration: none; font: 500 18px/1 var(--font-body); border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+.follow:hover { border-color: var(--fg); }
+.follow:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wordmark { font-family: var(--font-display); font-size: clamp(96px, 22vw, 320px); line-height: 0.85; letter-spacing: -0.04em; color: var(--surface); user-select: none; }
