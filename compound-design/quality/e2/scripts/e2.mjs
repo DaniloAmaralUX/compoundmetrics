@@ -23,6 +23,9 @@ const require = createRequire(import.meta.url);
 
 // ---------------------------------------------------------------- constants
 const PAID_FLAG = "E2_PAID_RUNTIME_CONFIRMED";
+// The resources under test are pinned v0.2.0 snapshots, not the live plugin files: a pre-registered
+// benchmark must keep testing the version it was registered against even after the active resource moves on.
+const LEGACY_V02 = path.resolve(E2, "legacy-resources/v0.2");
 const BLOCK_MESSAGE = "Blocked: E2 model runtime requires explicit paid-runtime authorization.";
 
 export const UPSTREAM = {
@@ -42,7 +45,7 @@ export const SUITES = {
     id: "interface-review",
     tasks: path.join(E2, "tasks/jakub-tests.yaml"),
     fixtures: path.join(E2, "tasks/fixtures/jakub"),
-    conditions: ["A", "B", "C", "D"],
+    conditions: ["A", "B", "C", "D", "C1"],
     dSubset: ["J01", "J02", "J05"], // pre-registered diagnostic lane, fixed before any output
     minHoldoutShare: 0.3,
   },
@@ -287,15 +290,28 @@ function cmdWorkspaces(args) {
       copyDir(suite.fixtures, ws);
       const extras = [];
       if (key === "jakub" && (cond === "C" || cond === "D")) {
-        const src = path.join(REPO, ".claude/agents/jakub.md"), dst = path.join(ws, ".claude/agents/jakub.md");
-        fs.mkdirSync(path.dirname(dst), { recursive: true }); fs.copyFileSync(src, dst); extras.push(".claude/agents/jakub.md");
+        const src = path.join(LEGACY_V02, "agents/jakub.md"), dst = path.join(ws, ".claude/agents/jakub.md");
+        fs.mkdirSync(path.dirname(dst), { recursive: true }); fs.copyFileSync(src, dst); extras.push(".claude/agents/jakub.md (pinned v0.2.0 snapshot)");
+      }
+      if (key === "jakub" && cond === "C1") {
+        // candidate lane: the v0.3 rewrite, self-contained — agent plus the skill it runs, no vendor
+        for (const [src, f] of [[path.join(REPO, "agents/interface-reviewer.md"), ".claude/agents/interface-reviewer.md"],
+                               [path.join(REPO, "skills/cd-interface-review/SKILL.md"), ".claude/skills/cd-interface-review/SKILL.md"],
+                               [path.join(REPO, "compound-design/FINDING-CONTRACT.md"), "compound-design/FINDING-CONTRACT.md"]]) {
+          const dst = path.join(ws, f); fs.mkdirSync(path.dirname(dst), { recursive: true }); fs.copyFileSync(src, dst); extras.push(f);
+        }
       }
       if (key === "jakub" && cond === "C" && vendor) {
         copyDir(vendor.dir, path.join(ws, "compound-design/vendor/jakub-skills")); extras.push("compound-design/vendor/jakub-skills/** (pinned upstream, exact path the agent expects)");
       }
       if (key === "qg" && cond === "C") {
-        for (const f of [".claude/skills/cd-quality-gate/SKILL.md", "compound-design/quality/CD-QUALITY-INDEX.md", "compound-design/quality/CD-EVIDENCE-LEVELS.md"]) {
-          const dst = path.join(ws, f); fs.mkdirSync(path.dirname(dst), { recursive: true }); fs.copyFileSync(path.join(REPO, f), dst); extras.push(f);
+        const qgPairs = [
+          [path.join(LEGACY_V02, "skills/cd-quality-gate/SKILL.md"), ".claude/skills/cd-quality-gate/SKILL.md"],
+          [path.join(LEGACY_V02, "quality/CD-QUALITY-INDEX.md"), "compound-design/quality/CD-QUALITY-INDEX.md"],
+          [path.join(LEGACY_V02, "quality/CD-EVIDENCE-LEVELS.md"), "compound-design/quality/CD-EVIDENCE-LEVELS.md"],
+        ];
+        for (const [src, f] of qgPairs) {
+          const dst = path.join(ws, f); fs.mkdirSync(path.dirname(dst), { recursive: true }); fs.copyFileSync(src, dst); extras.push(f);
         }
       }
       // every task's workspace_files must exist and absent_files must not
@@ -454,6 +470,12 @@ function cmdFreeze() {
     upstream: { jakub: upstream, emil_reference: UPSTREAM.emil, every_reference: UPSTREAM.every },
     model: { tested: "NOT PINNED — chosen only at paid-runtime with explicit authorization", judge: "NOT PINNED", rule: "same vendor / different model ≠ independent model family" },
     runtime: { executed: false, paid_model_calls: 0, tool_permissions: ["Read", "Grep", "Glob"], max_turns: 12, max_budget_usd_per_run: 1.0, repeat: 3, cache: false },
+    resources_under_test: (() => {
+      const m = JSON.parse(readText(path.join(LEGACY_V02, "RESOURCE-MANIFEST.json")));
+      const problems = verifyLegacyManifest();
+      if (problems.length) fail(`cannot freeze: ${problems.join("; ")}`);
+      return { note: "Pinned v0.2.0 snapshots and every transitive runtime input they read. A task-set digest does not prove resource equivalence; RESOURCE-MANIFEST.json does.", manifest: rel(path.join(LEGACY_V02, "RESOURCE-MANIFEST.json")), baseline_commit: m.baseline_commit, byte_equivalent_all: m.byte_equivalent_all, inputs: Object.fromEntries(Object.entries(m.files).map(([k, v]) => [k, v.sha256])) };
+    })(),
     task_sets: Object.fromEntries(Object.entries(tasksOut.suites).map(([k, s]) => [k, { sha256: s.sha256, total: s.total, holdouts: s.holdouts }])),
     rubric: { primary: "BENCHMARK-PROTOCOL.md 7-dimension rubric (frozen: weights, thresholds, success rules unchanged)", diagnostic: "10-dimension secondary rubric (no score, no weights)" },
   };
@@ -482,11 +504,12 @@ function scanLoadableConfigs() {
 }
 function scanRuntimeTemplates() {
   const problems = [];
-  const dir = path.join(E2, "runtime-templates");
-  const tmpls = exists(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith(".tmpl")) : [];
+  const dirs = ["runtime-templates", "candidate-v0.3"].map((d) => path.join(E2, d)).filter(exists);
+  const tmpls = dirs.flatMap((d) => fs.readdirSync(d).filter((f) => f.endsWith(".tmpl")).map((f) => path.join(d, f)));
   if (tmpls.length === 0) problems.push("runtime-templates/*.tmpl missing");
-  for (const f of tmpls) {
-    const text = readText(path.join(dir, f));
+  for (const full of tmpls) {
+    const f = path.relative(E2, full);
+    const text = readText(full);
     if (!/apiKeyRequired:\s*true/.test(text)) problems.push(`${f}: apiKeyRequired must be true (never borrow a local Claude Code session)`);
     if (/apiKeyRequired:\s*false/.test(text)) problems.push(`${f}: apiKeyRequired: false is forbidden`);
     for (const ph of ["{{MODEL}}", "{{JUDGE_MODEL}}"]) if (!text.includes(ph)) problems.push(`${f}: placeholder ${ph} missing`);
@@ -513,7 +536,7 @@ function templateVars(overrides = {}) {
   return {
     MODEL: "MODEL-NOT-PINNED", JUDGE_MODEL: "JUDGE-NOT-PINNED",
     VENDOR_ABS: UPSTREAM.jakub.dir,
-    WS_JAKUB_A: path.join(ws, "jakub/A"), WS_JAKUB_B: path.join(ws, "jakub/B"), WS_JAKUB_C: path.join(ws, "jakub/C"), WS_JAKUB_D: path.join(ws, "jakub/D"),
+    WS_JAKUB_A: path.join(ws, "jakub/A"), WS_JAKUB_B: path.join(ws, "jakub/B"), WS_JAKUB_C: path.join(ws, "jakub/C"), WS_JAKUB_D: path.join(ws, "jakub/D"), WS_JAKUB_C1: path.join(ws, "jakub/C1"),
     WS_QG_A: path.join(ws, "qg/A"), WS_QG_C: path.join(ws, "qg/C"),
     TASKS_JAKUB: path.join(E2, "tasks/jakub-tests.yaml"), TASKS_QG: path.join(E2, "tasks/cd-quality-gate-tests.yaml"),
     RUBRIC_PRIMARY: path.join(E2, "rubrics/primary-7.md"),
@@ -539,8 +562,11 @@ function cmdValidate(args) {
   if (promptfooBin() && !args.includes("--skip-promptfoo")) {
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "e2-validate-"));
     const rendered = [];
-    for (const f of fs.readdirSync(path.join(E2, "runtime-templates")).filter((f) => f.endsWith(".tmpl"))) {
-      const out = path.join(tmp, f.replace(/\.tmpl$/, "")); fs.writeFileSync(out, renderTemplate(readText(path.join(E2, "runtime-templates", f)), templateVars())); rendered.push(out);
+    for (const dir of ["runtime-templates", "candidate-v0.3"]) {
+      const d = path.join(E2, dir); if (!exists(d)) continue;
+      for (const f of fs.readdirSync(d).filter((f) => f.endsWith(".tmpl"))) {
+        const out = path.join(tmp, `${dir}-${f.replace(/\.tmpl$/, "")}`); fs.writeFileSync(out, renderTemplate(readText(path.join(d, f)), templateVars())); rendered.push(out);
+      }
     }
     const r = runPromptfoo(["validate", "-c", path.join(E2, "promptfoo-dryrun.yaml"), ...rendered]);
     const text = (r.stdout + "\n" + r.stderr).trim();
@@ -562,7 +588,7 @@ export function extractResults(data) {
   if (Array.isArray(data?.outputs)) return data.outputs;
   fail("unrecognized results file shape");
 }
-function conditionOf(label) { const m = /^([ABCD])(?:-|$)/.exec(String(label ?? "")); return m ? m[1] : null; }
+function conditionOf(label) { const m = /^(C0|C1|[ABCD])(?:-|$)/.exec(String(label ?? "")); return m ? m[1] : null; }
 export function classifyRun(r, i, suiteKey) {
   const label = r.provider?.label ?? r.provider?.id ?? "";
   const cond = conditionOf(label);
@@ -590,6 +616,8 @@ export function classifyRun(r, i, suiteKey) {
   else if (cond === "C") {
     if (suiteKey === "qg") { if (!skillCalls.some((s) => /cd-quality-gate/.test(s))) { valid = false; why = hasRouteMeta ? "C did not invoke cd-quality-gate" : "no route metadata"; } }
     else if (agent !== "jakub") { valid = false; why = agent ? `C agent is ${agent}` : "C has no agent evidence"; }
+  } else if (cond === "C0") { if (agent !== "jakub") { valid = false; why = "C0 has no agent evidence for the released v0.2 resource"; }
+  } else if (cond === "C1") { if (agent !== "interface-reviewer") { valid = false; why = agent ? `C1 agent is ${agent}` : "C1 has no agent evidence"; } else if (vendorReads > 0) { valid = false; why = "C1 read a vendored upstream: the v0.3 resource must be self-contained"; }
   } else if (cond === "D") { if (agent !== "jakub") { valid = false; why = "D has no agent evidence"; } else if (vendorReads > 0) { valid = false; why = "D read vendor files (contaminated prompt-only lane)"; } }
   else { valid = false; why = `unknown condition label '${label}'`; }
   if (!valid) { run.status = "route_invalid"; run.reason = why; return run; }
@@ -878,6 +906,9 @@ async function cmdSelfTest() {
   expectTrue("CI workflows are zero-model-cost", scanCiWorkflows().length === 0, scanCiWorkflows().join("; "));
   expectTrue("loadable promptfoo configs are exec-only", scanLoadableConfigs().length === 0, scanLoadableConfigs().join("; "));
   expectTrue("runtime templates guarded (apiKeyRequired true, placeholders, repeat 3)", scanRuntimeTemplates().length === 0, scanRuntimeTemplates().join("; "));
+  // 16b. legacy resource equivalence
+  expectTrue("legacy v0.2 resources byte-equivalent to the baseline commit", verifyLegacyManifest().length === 0, verifyLegacyManifest().join("; "));
+  { const f = path.join(LEGACY_V02, "quality/CD-QUALITY-INDEX.md"); const orig = fs.readFileSync(f); try { fs.appendFileSync(f, "\nmutation\n"); expectTrue("edited legacy snapshot rejected", verifyLegacyManifest().some((p) => /content changed/.test(p))); } finally { fs.writeFileSync(f, orig); } }
   // 17. contrast helper sanity
   expectTrue("contrast helper: black on white = 21", Math.abs(contrastRatio("#000000", "#ffffff") - 21) < 0.01);
   // 18. model-graded assertion in frozen task file rejected
@@ -891,6 +922,35 @@ async function cmdSelfTest() {
   if (passed !== results.length) process.exit(1);
 }
 
+
+
+// ---------------------------------------------------------------- verify-legacy (resource equivalence, not task equivalence)
+export function verifyLegacyManifest() {
+  const manifestPath = path.join(LEGACY_V02, "RESOURCE-MANIFEST.json");
+  if (!exists(manifestPath)) fail(`legacy resource manifest missing: ${rel(manifestPath)}`);
+  const m = JSON.parse(readText(manifestPath));
+  const problems = [];
+  for (const [snap, rec] of Object.entries(m.files)) {
+    const f = path.join(LEGACY_V02, snap);
+    if (!exists(f)) { problems.push(`${snap}: snapshot missing`); continue; }
+    const now = sha256(fs.readFileSync(f));
+    if (now !== rec.sha256) problems.push(`${snap}: content changed since the manifest (${rec.sha256.slice(0, 12)} → ${now.slice(0, 12)})`);
+    if (rec.byte_equivalent !== true || rec.sha256 !== rec.baseline_sha256) problems.push(`${snap}: not byte-equivalent to ${rec.baseline_path} at ${m.baseline_commit}`);
+    // re-derive from git so the manifest cannot vouch for itself
+    const r = spawnSync("git", ["show", `${m.baseline_commit}:${rec.baseline_path}`], { cwd: REPO, encoding: "buffer" });
+    if (r.status === 0) { const base = sha256(r.stdout); if (base !== rec.sha256) problems.push(`${snap}: differs from the baseline blob (${base.slice(0, 12)})`); }
+    else problems.push(`${snap}: baseline blob unreadable at ${m.baseline_commit} (${rec.baseline_path})`);
+  }
+  const workspaceInputs = ["agents/jakub.md", "skills/cd-quality-gate/SKILL.md", "quality/CD-QUALITY-INDEX.md", "quality/CD-EVIDENCE-LEVELS.md"];
+  for (const w of workspaceInputs) if (!(w in m.files)) problems.push(`${w} is copied into a benchmark workspace but is not in the manifest`);
+  return problems;
+}
+function cmdVerifyLegacy() {
+  const problems = verifyLegacyManifest();
+  if (problems.length) fail(`legacy resource equivalence failed:\n - ${problems.join("\n - ")}`);
+  const m = JSON.parse(readText(path.join(LEGACY_V02, "RESOURCE-MANIFEST.json")));
+  log(`verify-legacy ok: ${Object.keys(m.files).length} pinned inputs byte-equivalent to ${m.baseline_commit.slice(0, 12)} (including the transitive documents the resource reads at runtime)`);
+}
 
 // ---------------------------------------------------------------- install (lean, reproducible, no browsers, no optional cloud/agent SDKs)
 function cmdInstall() {
@@ -910,6 +970,7 @@ function cmdInstall() {
 const HELP = `Compound Design E2 harness — zero-cost by default (no model is ever called by these commands)
 
   e2 install                      pinned harness deps (promptfoo/playwright-core/axe-core), no browsers, no model SDKs
+  e2 verify-legacy                prove the pinned v0.2 resources under test are byte-equivalent to the baseline commit
   e2 fetch-upstream [--offline]   clone/verify pinned jakubkrehel/skills (${UPSTREAM.jakub.sha.slice(0, 12)}), record drift, never move the pin
   e2 workspaces                   build disposable per-condition workspaces (.workspaces/), gate: no ground truth inside
   e2 freeze                       tasks/tasks.json + environment.json (SHAs, versions, holdouts, D subset)
@@ -930,6 +991,7 @@ async function main() {
     switch (cmd) {
       case "help": log(HELP); break;
       case "install": cmdInstall(args); break;
+      case "verify-legacy": cmdVerifyLegacy(args); break;
       case "fetch-upstream": cmdFetchUpstream(args); break;
       case "workspaces": cmdWorkspaces(args); break;
       case "freeze": cmdFreeze(args); break;

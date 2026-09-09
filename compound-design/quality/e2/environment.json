@@ -1,10 +1,10 @@
 {
-  "frozen_at": "2026-09-09T11:07:22.476Z",
+  "frozen_at": "2026-09-09T11:35:12.896Z",
   "status": "E2 PRE-REGISTERED · ZERO-COST PREPARATION · PRIMARY RUBRIC FROZEN · RUNTIME NOT EXECUTED · COST BLOCKED · CEL E1",
   "repo": {
-    "sha": "e7f82deef1788ecec3c232439b15af12027ed623",
-    "branch": "claude/compound-design-standalone-hwoxi3",
-    "dirty": false
+    "sha": "5fc74f11e7fc78ab8face72b89cf6544cc83b6ed",
+    "branch": "claude/compound-design-v0.3-work-system",
+    "dirty": true
   },
   "harness": {
     "node": "v22.22.2",
@@ -50,6 +50,21 @@
     "max_budget_usd_per_run": 1,
     "repeat": 3,
     "cache": false
+  },
+  "resources_under_test": {
+    "note": "Pinned v0.2.0 snapshots and every transitive runtime input they read. A task-set digest does not prove resource equivalence; RESOURCE-MANIFEST.json does.",
+    "manifest": "compound-design/quality/e2/legacy-resources/v0.2/RESOURCE-MANIFEST.json",
+    "baseline_commit": "5fc74f11e7fc78ab8face72b89cf6544cc83b6ed",
+    "byte_equivalent_all": true,
+    "inputs": {
+      "agents/jakub.md": "2b13502dd138f862aae08d7ceb27fdb20995cfcefe6cbad37bbe115f03a4bfbc",
+      "agents/emi.md": "ea91bbbb44179de0c170a13951742d8f392f58b3c74ccd04bc1d2cef05a7bfe9",
+      "agents/cd.md": "b7b0e8f558cf1f51fd59a51f7282e0d0d5bc53a0b22d29f468f9429d7cb64403",
+      "agents/resource-lab.md": "45f2f589525abe4bb25eef38763eb09a25e6ef3e10d480753567f501fac805ba",
+      "skills/cd-quality-gate/SKILL.md": "0a0df94bf2495202a79b282fc5d1b0467b539471e394405fda1d9dca8e77bc5e",
+      "quality/CD-QUALITY-INDEX.md": "2dbb80c52fc3126da6c5bcfb49e2d9120537888e56378436349a8a08b2c192dc",
+      "quality/CD-EVIDENCE-LEVELS.md": "08b1c326aea827d88391185ae006940a5d14dd50fa33099a7087119585fbbc8d"
+    }
   },
   "task_sets": {
     "jakub": {

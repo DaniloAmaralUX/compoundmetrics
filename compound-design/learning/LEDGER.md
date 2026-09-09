@@ -169,3 +169,77 @@ privacy: public-safe
 candidate_eval: yes — dry-run counts
 lesson: infra failures and model failures must never share a column
 ```
+
+## v0.3.0-alpha.1 — architecture round
+
+```yaml
+id: CD-20260909-008
+observed_at: 2026-09-09
+project: compoundmetrics-v0.3
+resource: resource-registry
+resource_version: 0.2.1
+model_runtime: none (deterministic)
+task: validate the registry while adding v0.3 resources
+expected: the registry conforms to resource.schema.json
+observed: `publicName` had been added to every resource in an earlier release but never added to the schema, which declares additionalProperties:false — so the registry had been violating its own schema, undetected, because nothing ever ran the schema against it
+human_correction: added publicName, status, supersedes, supersededBy and path to the schema; allowed cdqi null and a prerelease release; wrote a schema validator into cd.mjs and wired `cd:registry` into CI
+impact: medium
+reproducible: yes
+privacy: public-safe
+candidate_eval: yes — cd selftest "schema: unknown property rejected"
+lesson: a schema that is never executed is documentation, not a contract
+```
+
+```yaml
+id: CD-20260909-009
+observed_at: 2026-09-09
+project: compoundmetrics-v0.3
+resource: e2-benchmark-pack
+resource_version: 0.2.1
+model_runtime: none
+task: move the resources under E2 test out of the active runtime without disturbing the experiment
+expected: pinning the resource files is enough to keep the benchmark stable
+observed: the Quality Gate resource instructs the model to read two quality documents at runtime; those live documents were still being copied into the benchmark workspace, so editing them in v0.3 would have silently changed a benchmark input while every digest still matched
+human_correction: pinned the transitive runtime inputs alongside the resource; added RESOURCE-MANIFEST.json with byte-equivalence proof against the baseline commit, `e2 verify-legacy` re-deriving each baseline blob from git, and a mutation test
+impact: high
+reproducible: yes
+privacy: public-safe
+candidate_eval: yes — e2 self-test "legacy v0.2 resources byte-equivalent to the baseline commit"
+lesson: a task-set digest proves the tasks did not change and nothing else; a resource's inputs include everything it reads at runtime, not only its own file
+```
+
+```yaml
+id: CD-20260909-010
+observed_at: 2026-09-09
+project: compoundmetrics-v0.3
+resource: cd-plugin-validator
+resource_version: 0.3.0-alpha.1
+model_runtime: none
+task: forbid legacy runtime identifiers on active surfaces
+expected: a word-boundary match on the legacy id finds only legacy usage
+observed: `\bresource-lab\b` matched inside the active id `cd-resource-lab`, failing three healthy files; a hyphen is a word boundary
+human_correction: lookbehind excluding the active prefix, plus a comment explaining why
+impact: low
+reproducible: yes
+privacy: public-safe
+candidate_eval: no — covered by the plugin gate passing on the real tree
+lesson: an identifier ban needs to know which identifiers legitimately contain it
+```
+
+```yaml
+id: CD-20260909-011
+observed_at: 2026-09-09
+project: compoundmetrics-v0.3
+resource: claim-guard
+resource_version: 0.3.0-alpha.1
+model_runtime: none
+task: stop inflated evidence claims reaching an active surface
+expected: banning the words E2, validated and proven would work
+observed: a word ban makes the evidence documents unwritable — the CEL ladder has to say "demonstrated uplift in tested scope" to define E2, and the forbidden-terms list has to quote the terms it forbids
+human_correction: matched claim phrases rather than words, and skipped any line that negates, forbids or defines the phrase; added self-tests for both directions
+impact: medium
+reproducible: yes
+privacy: public-safe
+candidate_eval: yes — cd selftest claim cases, including the four negative ones
+lesson: a guard that cannot tell a rule from a violation blocks the rule
+```

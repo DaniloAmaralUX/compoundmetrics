@@ -39,6 +39,12 @@ Design.
 - `geist` (Geist Sans and Geist Mono) — SIL Open Font License 1.1
 - `typescript`, `eslint`, `eslint-config-next` — MIT / Apache-2.0 (dev only)
 
+## v0.3.0-alpha.1 — self-contained runtime
+
+The plugin distributed from this repository contains no third-party source. Interface Review and Motion Review were rewritten as Compound Design resources; the upstream skills that informed their heuristics are cited in `compound-design/SOURCES.md` and are not loaded, required or shipped at runtime. The pinned upstream checkout under `compound-design/vendor/` is fetched only to run benchmark condition B, is gitignored, and is not redistributed.
+
+Architecture mechanisms adapted from Every's Compound Engineering (MIT, Copyright (c) 2025 Every) are recorded with their source commit in `compound-design/research/EVERY-ARCHITECTURE-SNAPSHOT.md`. No upstream author or vendor endorses Compound Design.
+
 ## Provenance of this repository
 
 - The framework, evidence model, registry, evals and learning system were

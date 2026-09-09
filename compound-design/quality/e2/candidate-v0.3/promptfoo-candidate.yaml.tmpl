@@ -1,0 +1,90 @@
+# RUNTIME TEMPLATE — NOT LOADABLE AS-IS. Rendered only by `e2 paid-runtime` after E2_PAID_RUNTIME_CONFIRMED=YES.
+# Candidate lane: adds C1 (the v0.3 rewrite) alongside A, B and C0 (the released v0.2.0 resource).
+# Task set, rubric, limits and blinding are the frozen pilot's, unchanged. See CANDIDATE-LANE.md.
+# Same model, same tools, same turn/budget limits, isolated workspaces, no cache, fresh repeated runs.
+description: Compound Design E2 — Interface Review A/B/C0/C1 candidate lane (PAID RUNTIME — authorized render only)
+
+prompts:
+  - '{{request}}'
+
+providers:
+  - id: anthropic:claude-agent-sdk
+    label: A-base-model
+    config:
+      model: '{{MODEL}}'
+      working_dir: '{{WS_JAKUB_A}}'
+      apiKeyRequired: true
+      strict_mcp_config: true
+      persist_session: false
+      exclude_dynamic_sections: true
+      tools: [Read, Grep, Glob]
+      max_turns: 12
+      max_budget_usd: 1.0
+
+  - id: anthropic:claude-agent-sdk
+    label: B-upstream-direct
+    config:
+      model: '{{MODEL}}'
+      working_dir: '{{WS_JAKUB_B}}'
+      apiKeyRequired: true
+      strict_mcp_config: true
+      persist_session: false
+      exclude_dynamic_sections: true
+      tools: [Read, Grep, Glob, Skill]
+      plugins:
+        - type: local
+          path: '{{VENDOR_ABS}}'
+      skills: all
+      max_turns: 12
+      max_budget_usd: 1.0
+
+  - id: anthropic:claude-agent-sdk
+    label: C0-released-v0.2
+    config:
+      model: '{{MODEL}}'
+      working_dir: '{{WS_JAKUB_C}}'
+      apiKeyRequired: true
+      strict_mcp_config: true
+      persist_session: false
+      exclude_dynamic_sections: true
+      setting_sources: ['project']
+      agent: jakub
+      tools: [Read, Grep, Glob]
+      max_turns: 12
+      max_budget_usd: 1.0
+
+  - id: anthropic:claude-agent-sdk
+    label: C1-candidate-v0.3
+    config:
+      model: '{{MODEL}}'
+      working_dir: '{{WS_JAKUB_C1}}'
+      apiKeyRequired: true
+      strict_mcp_config: true
+      persist_session: false
+      exclude_dynamic_sections: true
+      setting_sources: ['project']
+      agent: interface-reviewer
+      tools: [Read, Grep, Glob, Skill]
+      max_turns: 12
+      max_budget_usd: 1.0
+
+# Judge: a different model from the tested one. Same vendor / different model is NOT an independent model family (E3).
+# The judge prompt is PENDING FUTURE MODEL CALIBRATION (known-negatives must fail before any score is trusted).
+defaultTest:
+  options:
+    provider: 'anthropic:messages:{{JUDGE_MODEL}}'
+    rubricPrompt: 'file://{{RUBRIC_PRIMARY}}'
+  assert:
+    - type: llm-rubric
+      value: 'Score with the frozen 7-dimension primary rubric. Return the JSON contract exactly.'
+      weight: 0
+
+evaluateOptions:
+  repeat: 3
+  cache: false
+  maxConcurrency: 2
+
+tests:
+  - 'file://{{TASKS_JAKUB}}'
+
+outputPath: '{{RESULTS_DIR}}/candidate-lane-results.json'

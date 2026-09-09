@@ -1,0 +1,74 @@
+{
+  "schema": "compound-design/resource-manifest@1",
+  "purpose": "Pinned v0.2.0 resources under E2 test, with every transitive runtime input they read. A task-set digest proves the tasks did not change; it proves nothing about the resource. This manifest is what proves resource equivalence.",
+  "release": "0.2.1",
+  "baseline_commit": "5fc74f11e7fc78ab8face72b89cf6544cc83b6ed",
+  "created_at": "2026-09-09",
+  "verification": "copy → byte-equivalence against the baseline commit → switch. Re-checked by `e2 verify-legacy` and by `e2 self-test`.",
+  "byte_equivalent_all": true,
+  "files": {
+    "agents/jakub.md": {
+      "sha256": "2b13502dd138f862aae08d7ceb27fdb20995cfcefe6cbad37bbe115f03a4bfbc",
+      "baseline_path": ".claude/agents/jakub.md",
+      "baseline_sha256": "2b13502dd138f862aae08d7ceb27fdb20995cfcefe6cbad37bbe115f03a4bfbc",
+      "byte_equivalent": true,
+      "bytes": 2496,
+      "under_e2_test": "jakub@0.2.0 — interface-review suite, condition C"
+    },
+    "agents/emi.md": {
+      "sha256": "ea91bbbb44179de0c170a13951742d8f392f58b3c74ccd04bc1d2cef05a7bfe9",
+      "baseline_path": ".claude/agents/emi.md",
+      "baseline_sha256": "ea91bbbb44179de0c170a13951742d8f392f58b3c74ccd04bc1d2cef05a7bfe9",
+      "byte_equivalent": true,
+      "bytes": 2192,
+      "under_e2_test": null
+    },
+    "agents/cd.md": {
+      "sha256": "b7b0e8f558cf1f51fd59a51f7282e0d0d5bc53a0b22d29f468f9429d7cb64403",
+      "baseline_path": ".claude/agents/cd.md",
+      "baseline_sha256": "b7b0e8f558cf1f51fd59a51f7282e0d0d5bc53a0b22d29f468f9429d7cb64403",
+      "byte_equivalent": true,
+      "bytes": 3983,
+      "under_e2_test": null
+    },
+    "agents/resource-lab.md": {
+      "sha256": "45f2f589525abe4bb25eef38763eb09a25e6ef3e10d480753567f501fac805ba",
+      "baseline_path": ".claude/agents/resource-lab.md",
+      "baseline_sha256": "45f2f589525abe4bb25eef38763eb09a25e6ef3e10d480753567f501fac805ba",
+      "byte_equivalent": true,
+      "bytes": 3726,
+      "under_e2_test": null
+    },
+    "skills/cd-quality-gate/SKILL.md": {
+      "sha256": "0a0df94bf2495202a79b282fc5d1b0467b539471e394405fda1d9dca8e77bc5e",
+      "baseline_path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "baseline_sha256": "0a0df94bf2495202a79b282fc5d1b0467b539471e394405fda1d9dca8e77bc5e",
+      "byte_equivalent": true,
+      "bytes": 3726,
+      "under_e2_test": "cd-quality-gate@0.2.0 — quality-gate suite, condition C"
+    },
+    "quality/CD-QUALITY-INDEX.md": {
+      "sha256": "2dbb80c52fc3126da6c5bcfb49e2d9120537888e56378436349a8a08b2c192dc",
+      "baseline_path": "compound-design/quality/CD-QUALITY-INDEX.md",
+      "baseline_sha256": "2dbb80c52fc3126da6c5bcfb49e2d9120537888e56378436349a8a08b2c192dc",
+      "byte_equivalent": true,
+      "bytes": 2912,
+      "under_e2_test": "cd-quality-gate@0.2.0 — transitive: the resource instructs the model to read it"
+    },
+    "quality/CD-EVIDENCE-LEVELS.md": {
+      "sha256": "08b1c326aea827d88391185ae006940a5d14dd50fa33099a7087119585fbbc8d",
+      "baseline_path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "baseline_sha256": "08b1c326aea827d88391185ae006940a5d14dd50fa33099a7087119585fbbc8d",
+      "byte_equivalent": true,
+      "bytes": 1720,
+      "under_e2_test": "cd-quality-gate@0.2.0 — transitive: the resource instructs the model to read it"
+    }
+  },
+  "external_runtime_inputs": {
+    "vendor/jakub-skills": {
+      "repo": "https://github.com/jakubkrehel/skills",
+      "pinned_sha": "267330e1adfc66a718fb65fa6918c1f06d0a689e",
+      "note": "Condition B loads this plugin and condition C reads it. Fetched by `e2 fetch-upstream`, gitignored, SHA-verified at fetch time; not vendored into this manifest."
+    }
+  }
+}

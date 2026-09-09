@@ -1,7 +1,8 @@
 name: ci
 
-# Zero model runtime. This workflow never calls a model, never runs a model CLI, never sets the
-# authorization flag for model runtime and never evaluates a promptfoo model provider. Cost of model calls: $0.
+# Zero model runtime. No job here calls a model, runs a host CLI against a provider, sets
+# E2_PAID_RUNTIME_CONFIRMED, reads an API secret, installs a plugin globally, or changes an
+# evidence level. Cost of model calls: $0. `cd plugin` and `e2 self-test` both assert it.
 on:
   push:
     branches: [main]
@@ -12,7 +13,29 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  work-system:
+    # Registry, resource contracts, plugin package, claim guard and their mutation tests.
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: registry rules + mutation self-test
+        run: npm run cd:lint
+      - name: registry against its schema and the evidence rules
+        run: npm run cd:registry
+      - name: resource contract suite (skills, agents, discoverability)
+        run: npm run cd:evals
+      - name: plugin package
+        run: npm run cd:plugin
+      - name: contextual claim guard
+        run: npm run cd:claims
+      - name: tooling self-test
+        run: npm run cd:selftest
+
+  app:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -22,14 +45,6 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-
-      # Evidence infrastructure: registry lint (with mutation self-test) and the deterministic E1 contract suite.
-      - name: registry lint
-        run: npm run cd:lint
-      - name: contract evals
-        run: npm run cd:evals
-
-      # App
       - name: typecheck
         run: npm run typecheck
       - name: lint
@@ -38,7 +53,8 @@ jobs:
         run: npm run build
 
   e2-harness:
-    # Deterministic E2 gates only: self-test mutations, task/config/CI gates, workspace isolation, freeze, exec-only dry run.
+    # Deterministic gates of the pre-registered benchmark only: mutation self-tests, task and
+    # config gates, frozen resource equivalence, workspace isolation, and an exec-provider dry run.
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -50,11 +66,13 @@ jobs:
         run: npm run e2:install
       - name: fetch pinned upstream (SHA-verified, drift recorded)
         run: npm run e2 -- fetch-upstream
+      - name: frozen resource equivalence
+        run: npm run e2 -- verify-legacy
       - name: self-test (mutations must be rejected)
         run: npm run e2 -- self-test
       - name: validate gates + promptfoo schema
         run: npm run e2 -- validate
-      - name: fixtures cross-check (committed observations; renders only if a local Chromium exists)
+      - name: fixtures cross-check
         run: npm run e2 -- fixtures
       - name: workspaces
         run: npm run e2 -- workspaces

@@ -1,0 +1,40 @@
+{
+  "version": "0.3.0",
+  "note": "Deterministic contract suite for the v0.3.0-alpha.1 work system. Passing it is E1 evidence — the resources declare and satisfy their contracts. It says nothing about runtime effectiveness, which remains not measured for every resource.",
+  "groups": {
+    "v0.3-skill": {
+      "note": "Authored or rewritten for v0.3. Each must satisfy the full skill contract.",
+      "resources": ["cd-frame", "cd-model", "cd-build", "cd-verify", "cd-polish", "cd-compound", "cd-strategy", "cd-compound-refresh", "cd-setup", "cd-handoff", "cd-interface-review", "cd-motion-review"],
+      "requiredSections": ["When to use", "When not to use", "Scope", "Inputs", "Procedure", "Write authority", "Artifact rule", "Output contract", "Forbidden", "Missing dependency", "Completion", "Provenance"]
+    },
+    "carried-over-skill": {
+      "note": "Carried into the v0.3 plugin byte-identical from v0.2. Their existing E1 evidence remains true because nothing about them changed; they are re-verified here against the same assertions the v0.2 suite used. They will be brought to the full v0.3 skill contract in a later release, which will require them to re-earn E1.",
+      "resources": ["cd-quality-gate", "cd-resource-lab", "cd-ai-interaction-review"],
+      "must": {
+        "cd-quality-gate": ["version: 0.2.0", "CDQI Construction Score", "Compound Evidence Level", "## Meta-evaluation", "Default minimum evidence level for `CD_APPROVED`: `E2`"],
+        "cd-resource-lab": ["version: 0.2.0", "### 2. Form a hypothesis", "### 3. Add the eval first", "### 7. Try to falsify the improvement", "holdout"],
+        "cd-ai-interaction-review": ["version: 0.1.0", "### 1. AI Fit", "### 2. Appropriate Reliance", "### 3. Legibility", "### 4. Human Control", "### 5. Proportional Autonomy", "### 6. Evolution"]
+      }
+    },
+    "v0.3-agent": {
+      "note": "Agents are resources and are tested as such: routing, non-trigger, skill reference, tool policy, no duplicated procedure, no hidden upstream dependency.",
+      "resources": ["compound-design", "interface-reviewer", "motion-reviewer", "ai-interaction-reviewer", "evidence-reviewer", "learning-curator"],
+      "requiredSections": ["Specialism", "Dispatch when", "Do not dispatch when", "Procedure", "Tool policy", "Returns", "Boundaries", "Provenance"],
+      "maxLines": 60
+    }
+  },
+  "artifactWriters": ["cd-frame", "cd-model", "cd-compound", "cd-compound-refresh", "cd-handoff"],
+  "findingEmitters": ["cd-verify", "cd-interface-review", "cd-motion-review"],
+  "discovery": {
+    "note": "Proves the discoverability contract mechanically: a learning captured in one context must surface for a different, later context, superseded documents must not surface, and weak matches must be dropped rather than padded.",
+    "fixtures": "compound-design/quality/evals/discovery-fixtures",
+    "requiredFrontmatter": ["id", "title", "date", "areas", "concepts", "applies_to", "signals", "status"],
+    "cases": [
+      { "name": "signal surfaces a prior learning in an unrelated later context", "context": "the settings page started throwing InvalidAuthenticityToken after we split the deploy", "expect_id": "CD-SOL-20260101-01" },
+      { "name": "concept and area surface it without the literal signal", "context": "adding a new form to the billing screen, worried about csrf handling", "expect_id": "CD-SOL-20260101-01" },
+      { "name": "superseded learning never surfaces", "context": "useRouter navigation is behaving oddly on the dashboard route", "expect_absent": ["CD-SOL-20260115-02"] },
+      { "name": "unrelated context returns nothing rather than noise", "context": "what should the invoice email subject line say", "expect_none": true },
+      { "name": "a second area learning is found on its own signal", "context": "the build is slow again, turbo cache seems to miss on CI", "expect_id": "CD-SOL-20260220-03" }
+    ]
+  }
+}

@@ -1,8 +1,8 @@
 {
   "name": "compoundmetrics",
-  "version": "0.2.1",
+  "version": "0.3.0-alpha.1",
   "private": true,
-  "description": "Compound Design — standalone home of the Compound Design evidence system and its public page.",
+  "description": "Compound Design — design engineering work system, durable learning system, plugin and evidence system.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,11 +10,18 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "cd:lint": "node compound-design/tools/cd-lint.mjs --self-test",
-    "cd:evals": "node compound-design/quality/scripts/run-contract-evals.mjs",
+    "cd:evals": "node compound-design/tools/cd.mjs contracts",
     "e2": "node compound-design/quality/e2/scripts/e2.mjs",
     "e2:install": "node compound-design/quality/e2/scripts/e2.mjs install",
     "e2:check": "node compound-design/quality/e2/scripts/e2.mjs self-test && node compound-design/quality/e2/scripts/e2.mjs validate && node compound-design/quality/e2/scripts/e2.mjs freeze && node compound-design/quality/e2/scripts/e2.mjs plan-runs",
-    "e2:runtime:DANGEROUS-PAID": "node compound-design/quality/e2/scripts/e2.mjs paid-runtime"
+    "e2:runtime:DANGEROUS-PAID": "node compound-design/quality/e2/scripts/e2.mjs paid-runtime",
+    "cd:registry": "node compound-design/tools/cd.mjs registry",
+    "cd:plugin": "node compound-design/tools/cd.mjs plugin",
+    "cd:claims": "node compound-design/tools/cd.mjs claims",
+    "cd:selftest": "node compound-design/tools/cd.mjs selftest",
+    "cd:setup-check": "node compound-design/tools/cd.mjs setup-check",
+    "cd:discover": "node compound-design/tools/cd.mjs discover",
+    "cd:all": "npm run cd:lint && npm run cd:registry && npm run cd:evals && npm run cd:plugin && npm run cd:claims && npm run cd:selftest"
   },
   "engines": {
     "node": ">=20.9"
