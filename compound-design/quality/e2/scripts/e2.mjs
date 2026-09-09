@@ -427,7 +427,9 @@ function taskSetDigest(key) {
   return h.digest("hex");
 }
 function cmdFreeze() {
-  const tasksOut = { task_set_version: "1.0.0", frozen_at: new Date().toISOString(), rule: "Task sets are versioned. Any change after model outputs exist requires a new version and a fresh holdout.", suites: {} };
+  // git state is captured BEFORE any file is written so that freeze is idempotent on a clean tree
+  const repoState = { sha: git(["rev-parse", "HEAD"]), branch: git(["rev-parse", "--abbrev-ref", "HEAD"]), dirty: git(["status", "--porcelain"]).length > 0 };
+  const tasksOut = { task_set_version: "1.0.0", rule: "Task sets are versioned. Any change after model outputs exist requires a new version and a fresh holdout.", suites: {} };
   for (const [key, suite] of Object.entries(SUITES)) {
     const tests = loadSuite(key);
     const v = validateTasks(key, tests);
@@ -447,7 +449,7 @@ function cmdFreeze() {
   const env = {
     frozen_at: new Date().toISOString(),
     status: "E2 PRE-REGISTERED · ZERO-COST PREPARATION · PRIMARY RUBRIC FROZEN · RUNTIME NOT EXECUTED · COST BLOCKED · CEL E1",
-    repo: { sha: git(["rev-parse", "HEAD"]), branch: git(["rev-parse", "--abbrev-ref", "HEAD"]), dirty: git(["status", "--porcelain"]).length > 0 },
+    repo: repoState,
     harness: harnessVersions(),
     upstream: { jakub: upstream, emil_reference: UPSTREAM.emil, every_reference: UPSTREAM.every },
     model: { tested: "NOT PINNED — chosen only at paid-runtime with explicit authorization", judge: "NOT PINNED", rule: "same vendor / different model ≠ independent model family" },
