@@ -1,0 +1,426 @@
+{
+ "ENTRY:desktop": {
+  "route": "/",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "hero": {
+   "x": 144,
+   "y": 0,
+   "width": 1152,
+   "height": 4478
+  },
+  "section:div-0": {
+   "x": 144,
+   "y": 0,
+   "width": 1152,
+   "height": 4478
+  },
+  "section:section-1": {
+   "x": 0,
+   "y": 4478,
+   "width": 1440,
+   "height": 842
+  },
+  "footer": {
+   "x": 10,
+   "y": 5863,
+   "width": 1420,
+   "height": 394
+  },
+  "h1": {
+   "x": 394,
+   "y": 144,
+   "width": 652,
+   "height": 125
+  },
+  "primary_action": {
+   "x": 996,
+   "y": 870,
+   "width": 35,
+   "height": 32
+  },
+  "_page": {
+   "width": 1440,
+   "height": 5320
+  }
+ },
+ "ENTRY:mobile": {
+  "route": "/",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 5209
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 5209
+  },
+  "section:section-1": {
+   "x": 0,
+   "y": 5209,
+   "width": 390,
+   "height": 1162
+  },
+  "footer": {
+   "x": 10,
+   "y": 6533,
+   "width": 370,
+   "height": 844
+  },
+  "h1": {
+   "x": 30,
+   "y": 112,
+   "width": 330,
+   "height": 75
+  },
+  "primary_action": {
+   "x": 0,
+   "y": 0,
+   "width": 0,
+   "height": 0
+  },
+  "_page": {
+   "width": 390,
+   "height": 6371
+  }
+ },
+ "DISCOVERY:desktop": {
+  "route": "/components",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 17,
+   "y": 80,
+   "width": 238,
+   "height": 742
+  },
+  "hero": {
+   "x": 336,
+   "y": 64,
+   "width": 1024,
+   "height": 3832
+  },
+  "section:article-0": {
+   "x": 336,
+   "y": 64,
+   "width": 1024,
+   "height": 3832
+  },
+  "footer": {
+   "x": 336,
+   "y": 3502,
+   "width": 1024,
+   "height": 394
+  },
+  "h1": {
+   "x": 336,
+   "y": 64,
+   "width": 1024,
+   "height": 36
+  },
+  "primary_action": {
+   "x": 341,
+   "y": 233,
+   "width": 102,
+   "height": 32
+  },
+  "_page": {
+   "width": 1440,
+   "height": 3936
+  }
+ },
+ "DISCOVERY:mobile": {
+  "route": "/components",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 0,
+   "height": 0
+  },
+  "hero": {
+   "x": 20,
+   "y": 109,
+   "width": 350,
+   "height": 10730
+  },
+  "section:article-0": {
+   "x": 20,
+   "y": 109,
+   "width": 350,
+   "height": 10730
+  },
+  "footer": {
+   "x": 20,
+   "y": 9995,
+   "width": 350,
+   "height": 844
+  },
+  "h1": {
+   "x": 20,
+   "y": 109,
+   "width": 350,
+   "height": 36
+  },
+  "primary_action": {
+   "x": 25,
+   "y": 334,
+   "width": 102,
+   "height": 32
+  },
+  "_page": {
+   "width": 390,
+   "height": 10879
+  }
+ },
+ "DETAIL:desktop": {
+  "route": "/docs/components/glass",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 17,
+   "y": 80,
+   "width": 238,
+   "height": 742
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 900
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 900
+  },
+  "section:div-1": {
+   "x": 1316,
+   "y": 843,
+   "width": 108,
+   "height": 42
+  },
+  "footer": {
+   "x": 464,
+   "y": 3438,
+   "width": 768,
+   "height": 418
+  },
+  "h1": {
+   "x": 464,
+   "y": 64,
+   "width": 576,
+   "height": 36
+  },
+  "primary_action": {
+   "x": 1120,
+   "y": 64,
+   "width": 112,
+   "height": 32
+  },
+  "_page": {
+   "width": 1440,
+   "height": 900
+  }
+ },
+ "DETAIL:mobile": {
+  "route": "/docs/components/glass",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 0,
+   "height": 0
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 844
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 844
+  },
+  "section:div-1": {
+   "x": 266,
+   "y": 787,
+   "width": 108,
+   "height": 42
+  },
+  "footer": {
+   "x": 20,
+   "y": 3613,
+   "width": 350,
+   "height": 844
+  },
+  "h1": {
+   "x": 20,
+   "y": 96,
+   "width": 222,
+   "height": 36
+  },
+  "primary_action": {
+   "x": 258,
+   "y": 96,
+   "width": 112,
+   "height": 32
+  },
+  "_page": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "INTERACTION:desktop": {
+  "route": "/playground",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 337,
+   "y": 65,
+   "width": 1022,
+   "height": 69
+  },
+  "hero": {
+   "x": 1338,
+   "y": 16,
+   "width": 86,
+   "height": 46
+  },
+  "section:div-0": {
+   "x": 1338,
+   "y": 16,
+   "width": 86,
+   "height": 46
+  },
+  "section:aside-1": {
+   "x": 16,
+   "y": 16,
+   "width": 240,
+   "height": 868
+  },
+  "section:div-2": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 900
+  },
+  "section:Browser flag notice": {
+   "x": 1104,
+   "y": 112,
+   "width": 320,
+   "height": 142
+  },
+  "footer": {
+   "x": 337,
+   "y": 4129,
+   "width": 1022,
+   "height": 281
+  },
+  "h1": {
+   "x": 464,
+   "y": 230,
+   "width": 768,
+   "height": 60
+  },
+  "_page": {
+   "width": 1440,
+   "height": 900
+  }
+ },
+ "INTERACTION:mobile": {
+  "route": "/playground",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 21,
+   "y": 97,
+   "width": 348,
+   "height": 69
+  },
+  "hero": {
+   "x": 16,
+   "y": 16,
+   "width": 358,
+   "height": 54
+  },
+  "section:div-0": {
+   "x": 16,
+   "y": 16,
+   "width": 358,
+   "height": 54
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 844
+  },
+  "section:div-2": {
+   "x": 266,
+   "y": 787,
+   "width": 108,
+   "height": 42
+  },
+  "section:Browser flag notice": {
+   "x": 16,
+   "y": 80,
+   "width": 358,
+   "height": 122
+  },
+  "footer": {
+   "x": 21,
+   "y": 4937,
+   "width": 348,
+   "height": 425
+  },
+  "h1": {
+   "x": 45,
+   "y": 230,
+   "width": 300,
+   "height": 80
+  },
+  "_page": {
+   "width": 390,
+   "height": 844
+  }
+ }
+}

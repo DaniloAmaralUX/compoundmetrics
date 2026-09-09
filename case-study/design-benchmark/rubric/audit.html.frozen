@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compound Design Audit — checklist de auditoria de UI</title>
+    <meta name="description" content="Checklist interativo de auditoria de UI: hierarquia, estilo visual, acessibilidade, navegação, carga cognitiva e mais. Rode no navegador ou instale como skill de agente." />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://compound-labs-design.vercel.app/audit" />
+    <script>
+      (function () {
+        try {
+          var m = localStorage.getItem("theme-mode") || "light";
+          var d = m === "dark" || (m === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.setAttribute("data-theme", d ? "dark" : "light");
+        } catch (e) {}
+      })();
+    </script>
+    <meta property="og:title" content="Compound Design Audit" />
+    <meta property="og:description" content="Checklist interativo de auditoria de UI: hierarquia, estilo visual, acessibilidade, navegação, carga cognitiva e mais. Rode no navegador ou instale como skill de agente." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://compound-labs-design.vercel.app/audit" />
+    <meta property="og:image" content="https://compound-labs-design.vercel.app/og.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
+      onload="this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
+    </noscript>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="nav enter" style="--i: 0">
+      <div class="nav-inner">
+        <a class="brand" href="/" aria-label="Compound Design — início">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 12 Q 12 16 4 26" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 15 Q 17 21 11 29" stroke="currentColor" stroke-width="1.5" opacity="0.55"/>
+              <path d="M17 10 Q 9 11 2 20" stroke="currentColor" stroke-width="1.5" opacity="0.55"/>
+              <circle cx="23" cy="9" r="4" fill="currentColor"/>
+            </svg>
+          </span>
+          Compound Design
+        </a>
+        <div class="nav-actions">
+          <div class="theme-toggle" role="group" aria-label="Tema">
+            <button type="button" data-mode="light" aria-label="Tema claro" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button>
+            <button type="button" data-mode="dark" aria-label="Tema escuro" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+            <button type="button" data-mode="system" aria-label="Tema do sistema" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></button>
+          </div>
+          <a class="btn btn-primary" href="/skills">Skills</a>
+        </div>
+      </div>
+    </nav>
+    <main class="skill-page audit-page">
+      <a class="back-link enter" style="--i: 1" href="/">← Início</a>
+      <h1 class="audit-title enter" style="--i: 1">Compound Design Audit</h1>
+      <p class="skill-lead enter" style="--i: 1">
+        Audite qualquer interface contra princípios de UX que funcionam: marque item a item aqui
+        no navegador, ou instale como skill e deixe seu agente auditar por você.
+      </p>
+
+      <section class="install-box enter" style="--i: 2">
+        <h2>Install</h2>
+        <div class="cmd-row">
+          <code>npx skills add DaniloAmaralUX/skills --skill compound-design-audit</code>
+          <button class="btn btn-ghost copy-cmd" type="button" data-copy="npx skills add DaniloAmaralUX/skills --skill compound-design-audit" aria-label="Copiar comando de install">Copy</button>
+        </div>
+        <div class="install-actions">
+          <a class="btn btn-primary" href="/downloads/compound-design-audit.zip" download>Download .zip</a>
+        </div>
+      </section>
+
+      <section class="audit-summary enter" style="--i: 2" aria-label="Progresso da auditoria">
+        <div class="audit-summary-row">
+          <p class="audit-score"><strong data-audit-done>0</strong><span class="muted">/54 itens</span> <span class="audit-score-pct muted" data-audit-pct>· 0%</span></p>
+          <div class="audit-summary-actions">
+            <button class="btn btn-ghost" type="button" data-audit-export>Exportar relatório</button>
+            <button class="btn btn-ghost audit-reset" type="button" data-audit-reset>Reiniciar</button>
+          </div>
+        </div>
+        <div class="audit-progress audit-progress-total" aria-hidden="true"><div class="audit-progress-fill" data-audit-fill></div></div>
+        <p class="audit-hint muted">O progresso fica salvo neste navegador. Exportar copia um relatório em markdown.</p>
+      </section>
+
+      <section class="audit-cat enter" style="--i: 3" data-cat-section="fundamentos">
+        <div class="audit-cat-head">
+          <h2>Antes de começar</h2>
+          <span class="audit-cat-count" data-cat-count="fundamentos" aria-live="off">0/5</span>
+        </div>
+        <div class="audit-progress" aria-hidden="true"><div class="audit-progress-fill" data-cat-fill="fundamentos"></div></div>
+        <ul class="audit-list">
+          <li class="audit-item">
+            <input type="checkbox" id="fundamentos-jtbd" data-audit-check data-cat="fundamentos" />
+            <label for="fundamentos-jtbd">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Job-to-be-done em uma frase</span>
+                <span class="audit-item-desc">“Quando [situação], quero [motivação], para [resultado].” Se o job da tela não cabe numa frase, a tela ainda não está definida.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="fundamentos-macro-bet" data-audit-check data-cat="fundamentos" />
+            <label for="fundamentos-macro-bet">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Decisão alinhada à aposta do negócio</span>
+                <span class="audit-item-desc">Cada escolha de design apoia de propósito uma aposta: velocidade, eficiência, precisão ou inovação — não por acidente.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="fundamentos-convencao" data-audit-check data-cat="fundamentos" />
+            <label for="fundamentos-convencao">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Convenção antes de novidade</span>
+                <span class="audit-item-desc">Usuários passam a maior parte do tempo em outros produtos. Padrão familiar por default; novidade só com justificativa.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="fundamentos-restricoes" data-audit-check data-cat="fundamentos" />
+            <label for="fundamentos-restricoes">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Restrições conhecidas</span>
+                <span class="audit-item-desc">Tempo, stack, time e sistema de design considerados antes de desenhar — não descobertos no meio.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="fundamentos-documentado" data-audit-check data-cat="fundamentos" />
+            <label for="fundamentos-documentado">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Raciocínio documentado</span>
+                <span class="audit-item-desc">O porquê da decisão registrado. O futuro time (e você) vão agradecer.</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+        <p class="audit-cat-ref">ref: <code>00-core-framework.md</code></p>
+      </section>
+
+      <section class="audit-cat enter" style="--i: 4" data-cat-section="hierarquia">
+        <div class="audit-cat-head">
+          <h2>Hierarquia visual</h2>
+          <span class="audit-cat-count" data-cat-count="hierarquia" aria-live="off">0/7</span>
+        </div>
+        <div class="audit-progress" aria-hidden="true"><div class="audit-progress-fill" data-cat-fill="hierarquia"></div></div>
+        <ul class="audit-list">
+          <li class="audit-item">
+            <input type="checkbox" id="hierarquia-cta-3s" data-audit-check data-cat="hierarquia" />
+            <label for="hierarquia-cta-3s">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Ação primária óbvia em 3 segundos</span>
+                <span class="audit-item-desc">Um único CTA primário por tela, distinto de tudo o mais. Se dois elementos competem, nenhum vence.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="hierarquia-headings" data-audit-check data-cat="hierarquia" />
+            <label for="hierarquia-headings">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Níveis de título distintos</span>
+                <span class="audit-item-desc">Diferença clara entre níveis (≈2:1 entre saltos de hierarquia) e um único H1 por página.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="hierarquia-leitura" data-audit-check data-cat="hierarquia" />
+            <label for="hierarquia-leitura">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Ordem de leitura clara</span>
+                <span class="audit-item-desc">Dá para numerar o que se lê primeiro, segundo e terceiro — tamanho, peso e posição guiam o olho.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="hierarquia-proximidade" data-audit-check data-cat="hierarquia" />
+            <label for="hierarquia-proximidade">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Agrupamento por proximidade</span>
+                <span class="audit-item-desc">Itens relacionados ficam juntos; não relacionados, separados. O espaçamento comunica a relação.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="hierarquia-whitespace" data-audit-check data-cat="hierarquia" />
+            <label for="hierarquia-whitespace">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Whitespace como hierarquia</span>
+                <span class="audit-item-desc">Mais espaço ao redor = mais importância. Respiro não é desperdício, é sinal.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="hierarquia-cor-destaque" data-audit-check data-cat="hierarquia" />
+            <label for="hierarquia-cor-destaque">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Cor de destaque reservada</span>
+                <span class="audit-item-desc">A cor de ação aparece só no que é acionável ou importante — não decorando tudo.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="hierarquia-escala-tipo" data-audit-check data-cat="hierarquia" />
+            <label for="hierarquia-escala-tipo">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Escala tipográfica consistente</span>
+                <span class="audit-item-desc">Todos os tamanhos vêm de uma escala definida; nenhum valor solto “porque coube”.</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+        <p class="audit-cat-ref">ref: <code>23-patterns-visual-hierarchy.md</code></p>
+      </section>
+
+      <section class="audit-cat enter" style="--i: 5" data-cat-section="estilo">
+        <div class="audit-cat-head">
+          <h2>Estilo visual</h2>
+          <span class="audit-cat-count" data-cat-count="estilo" aria-live="off">0/7</span>
+        </div>
+        <div class="audit-progress" aria-hidden="true"><div class="audit-progress-fill" data-cat-fill="estilo"></div></div>
+        <ul class="audit-list">
+          <li class="audit-item">
+            <input type="checkbox" id="estilo-espaco-base" data-audit-check data-cat="estilo" />
+            <label for="estilo-espaco-base">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Unidade base de espaçamento</span>
+                <span class="audit-item-desc">Base de 4 ou 8px com escala definida (4, 8, 12, 16, 24, 32…) aplicada de forma consistente.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="estilo-paleta" data-audit-check data-cat="estilo" />
+            <label for="estilo-paleta">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Paleta com papéis definidos</span>
+                <span class="audit-item-desc">Primária, neutros e cores semânticas (sucesso, erro, alerta) — sem cores avulsas fora do sistema.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="estilo-elevacao" data-audit-check data-cat="estilo" />
+            <label for="estilo-elevacao">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Elevação num sistema</span>
+                <span class="audit-item-desc">Sombras em níveis consistentes que comunicam profundidade — não uma sombra diferente por card.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="estilo-tipo-sistema" data-audit-check data-cat="estilo" />
+            <label for="estilo-tipo-sistema">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Sistema tipográfico enxuto</span>
+                <span class="audit-item-desc">No máximo duas famílias, pesos limitados e intencionais, line-height por papel (título vs. corpo).</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="estilo-radius" data-audit-check data-cat="estilo" />
+            <label for="estilo-radius">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Radius consistente e concêntrico</span>
+                <span class="audit-item-desc">Mesmos raios para os mesmos papéis; em elementos aninhados, raio interno = raio externo − padding.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="estilo-icones" data-audit-check data-cat="estilo" />
+            <label for="estilo-icones">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Ícones de um único estilo</span>
+                <span class="audit-item-desc">Mesma família, mesmo peso de traço, mesmo tamanho óptico — misturar estilos parece quebrado.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="estilo-motion" data-audit-check data-cat="estilo" />
+            <label for="estilo-motion">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Motion com propósito</span>
+                <span class="audit-item-desc">Anima só o que dá feedback ou continuidade: &lt; 300ms, curvas fortes, transform/opacity na GPU.</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+        <p class="audit-cat-ref">ref: <code>12-checklist-visual-style.md</code></p>
+      </section>
+
+      <section class="audit-cat enter" style="--i: 6" data-cat-section="acessibilidade">
+        <div class="audit-cat-head">
+          <h2>Acessibilidade</h2>
+          <span class="audit-cat-count" data-cat-count="acessibilidade" aria-live="off">0/9</span>
+        </div>
+        <div class="audit-progress" aria-hidden="true"><div class="audit-progress-fill" data-cat-fill="acessibilidade"></div></div>
+        <ul class="audit-list">
+          <li class="audit-item">
+            <input type="checkbox" id="acessibilidade-teclado" data-audit-check data-cat="acessibilidade" />
+            <label for="acessibilidade-teclado">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Teclado opera tudo</span>
+                <span class="audit-item-desc">Tab alcança todo interativo, Enter/Espaço acionam, Esc fecha. Nenhum fluxo exige mouse.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="acessibilidade-foco" data-audit-check data-cat="acessibilidade" />
+            <label for="acessibilidade-foco">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Foco sempre visível</span>
+                <span class="audit-item-desc">Anel de foco claro em todo elemento focável, alinhado ao radius do elemento.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="acessibilidade-contraste" data-audit-check data-cat="acessibilidade" />
+            <label for="acessibilidade-contraste">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Contraste de texto passa</span>
+                <span class="audit-item-desc">≥ 4.5:1 para texto normal, ≥ 3:1 para texto grande e elementos de UI essenciais.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="acessibilidade-alvos" data-audit-check data-cat="acessibilidade" />
+            <label for="acessibilidade-alvos">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Alvos de toque ≥ 44px</span>
+                <span class="audit-item-desc">Área clicável confortável no touch — expandida com padding ou pseudo-elemento se o visual for menor.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="acessibilidade-nao-so-cor" data-audit-check data-cat="acessibilidade" />
+            <label for="acessibilidade-nao-so-cor">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Cor não é o único indicador</span>
+                <span class="audit-item-desc">Erro, sucesso e estado têm texto ou ícone além da cor — daltônicos também precisam entender.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="acessibilidade-alt-aria" data-audit-check data-cat="acessibilidade" />
+            <label for="acessibilidade-alt-aria">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Alt text e aria-label presentes</span>
+                <span class="audit-item-desc">Imagens informativas com alt; decorativas com alt vazio; botões só de ícone com aria-label.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="acessibilidade-semantica" data-audit-check data-cat="acessibilidade" />
+            <label for="acessibilidade-semantica">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Markup semântico</span>
+                <span class="audit-item-desc">Headings reais, listas reais, &lt;button&gt; para ação e &lt;a&gt; para navegação, landmarks (main, nav).</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="acessibilidade-reduced-motion" data-audit-check data-cat="acessibilidade" />
+            <label for="acessibilidade-reduced-motion">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Reduced motion respeitado</span>
+                <span class="audit-item-desc">prefers-reduced-motion desativa ou suaviza animações — ninguém enjoa para usar seu produto.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="acessibilidade-zoom" data-audit-check data-cat="acessibilidade" />
+            <label for="acessibilidade-zoom">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Zoom a 200% funciona</span>
+                <span class="audit-item-desc">Nada quebra nem some com zoom do navegador; maximum-scale nunca bloqueado.</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+        <p class="audit-cat-ref">ref: <code>27-patterns-accessibility.md</code></p>
+      </section>
+
+      <section class="audit-cat enter" style="--i: 7" data-cat-section="navegacao">
+        <div class="audit-cat-head">
+          <h2>Navegação e orientação</h2>
+          <span class="audit-cat-count" data-cat-count="navegacao" aria-live="off">0/6</span>
+        </div>
+        <div class="audit-progress" aria-hidden="true"><div class="audit-progress-fill" data-cat-fill="navegacao"></div></div>
+        <ul class="audit-list">
+          <li class="audit-item">
+            <input type="checkbox" id="navegacao-onde-estou" data-audit-check data-cat="navegacao" />
+            <label for="navegacao-onde-estou">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Localização atual clara</span>
+                <span class="audit-item-desc">O item ativo do menu está destacado — o usuário sempre sabe onde está.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="navegacao-menu-previsivel" data-audit-check data-cat="navegacao" />
+            <label for="navegacao-menu-previsivel">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Menu previsível</span>
+                <span class="audit-item-desc">Mesma navegação, no mesmo lugar, em todas as páginas. Surpresa em navegação é custo.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="navegacao-breadcrumbs" data-audit-check data-cat="navegacao" />
+            <label for="navegacao-breadcrumbs">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Breadcrumbs em hierarquias fundas</span>
+                <span class="audit-item-desc">Com mais de dois níveis de profundidade, o caminho de volta fica visível.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="navegacao-busca" data-audit-check data-cat="navegacao" />
+            <label for="navegacao-busca">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Busca acessível quando há volume</span>
+                <span class="audit-item-desc">Muito conteúdo pede busca fácil de achar — e que funcione por teclado.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="navegacao-mobile-nav" data-audit-check data-cat="navegacao" />
+            <label for="navegacao-mobile-nav">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Padrão mobile adequado</span>
+                <span class="audit-item-desc">Bottom nav ou off-canvas com alvos confortáveis; nada escondido atrás de gestos não descobríveis.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="navegacao-links" data-audit-check data-cat="navegacao" />
+            <label for="navegacao-links">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Links parecem links</span>
+                <span class="audit-item-desc">Distinguíveis do texto corrente (não só por cor); visitado/hover/focus com estados claros.</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+        <p class="audit-cat-ref">ref: <code>31-patterns-navigation.md</code></p>
+      </section>
+
+      <section class="audit-cat enter" style="--i: 8" data-cat-section="carga">
+        <div class="audit-cat-head">
+          <h2>Carga cognitiva e feedback</h2>
+          <span class="audit-cat-count" data-cat-count="carga" aria-live="off">0/6</span>
+        </div>
+        <div class="audit-progress" aria-hidden="true"><div class="audit-progress-fill" data-cat-fill="carga"></div></div>
+        <ul class="audit-list">
+          <li class="audit-item">
+            <input type="checkbox" id="carga-chunks" data-audit-check data-cat="carga" />
+            <label for="carga-chunks">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Grupos de 7±2 itens</span>
+                <span class="audit-item-desc">Listas e menus divididos em pedaços digeríveis — a memória de trabalho é curta (Lei de Miller).</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="carga-disclosure" data-audit-check data-cat="carga" />
+            <label for="carga-disclosure">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Divulgação progressiva</span>
+                <span class="audit-item-desc">Complexidade revelada aos poucos: tooltip → popover → drawer → modal, na medida da necessidade.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="carga-feedback" data-audit-check data-cat="carga" />
+            <label for="carga-feedback">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Toda ação tem feedback imediato</span>
+                <span class="audit-item-desc">Clique, salvamento, envio: algo visível acontece na hora — o silêncio faz o usuário clicar de novo.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="carga-loading" data-audit-check data-cat="carga" />
+            <label for="carga-loading">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Estados de loading desenhados</span>
+                <span class="audit-item-desc">Skeleton ou spinner + progresso em operações longas; nunca tela congelada sem explicação.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="carga-prevencao" data-audit-check data-cat="carga" />
+            <label for="carga-prevencao">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Prevenção de erro antes do envio</span>
+                <span class="audit-item-desc">Validação inline enquanto digita ou ao sair do campo — não uma lista de erros depois do submit.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="carga-recuperacao" data-audit-check data-cat="carga" />
+            <label for="carga-recuperacao">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Recuperação sempre possível</span>
+                <span class="audit-item-desc">Undo ou confirmação em ações destrutivas; autosave onde perder trabalho dói.</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+        <p class="audit-cat-ref">ref: <code>22-patterns-cognitive-load.md</code></p>
+      </section>
+
+      <section class="audit-cat enter" style="--i: 9" data-cat-section="onboarding">
+        <div class="audit-cat-head">
+          <h2>Onboarding e estados vazios</h2>
+          <span class="audit-cat-count" data-cat-count="onboarding" aria-live="off">0/4</span>
+        </div>
+        <div class="audit-progress" aria-hidden="true"><div class="audit-progress-fill" data-cat-fill="onboarding"></div></div>
+        <ul class="audit-list">
+          <li class="audit-item">
+            <input type="checkbox" id="onboarding-valor-rapido" data-audit-check data-cat="onboarding" />
+            <label for="onboarding-valor-rapido">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Primeira experiência leva ao valor</span>
+                <span class="audit-item-desc">O caminho do signup ao primeiro “aha” é curto e guiado — cada passo extra perde gente.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="onboarding-empty-states" data-audit-check data-cat="onboarding" />
+            <label for="onboarding-empty-states">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Empty states ensinam</span>
+                <span class="audit-item-desc">Tela vazia diz o que é aquilo e como começar, com um CTA — não um vazio mudo.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="onboarding-dicas-contexto" data-audit-check data-cat="onboarding" />
+            <label for="onboarding-dicas-contexto">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Dicas no contexto certo</span>
+                <span class="audit-item-desc">Ajuda contextual no momento da dúvida vence tour gigante que ninguém lê.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="onboarding-progresso-fluxo" data-audit-check data-cat="onboarding" />
+            <label for="onboarding-progresso-fluxo">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Progresso visível em multi-etapas</span>
+                <span class="audit-item-desc">Stepper ou checklist mostra onde o usuário está e quanto falta.</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+        <p class="audit-cat-ref">ref: <code>29-patterns-onboarding.md</code></p>
+      </section>
+
+      <section class="audit-cat enter" style="--i: 10" data-cat-section="confianca">
+        <div class="audit-cat-head">
+          <h2>Social proof e confiança</h2>
+          <span class="audit-cat-count" data-cat-count="confianca" aria-live="off">0/4</span>
+        </div>
+        <div class="audit-progress" aria-hidden="true"><div class="audit-progress-fill" data-cat-fill="confianca"></div></div>
+        <ul class="audit-list">
+          <li class="audit-item">
+            <input type="checkbox" id="confianca-depoimentos" data-audit-check data-cat="confianca" />
+            <label for="confianca-depoimentos">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Depoimentos reais e específicos</span>
+                <span class="audit-item-desc">Nome, foto e contexto de verdade. Depoimento genérico sem rosto pesa contra, não a favor.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="confianca-numeros" data-audit-check data-cat="confianca" />
+            <label for="confianca-numeros">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Números específicos</span>
+                <span class="audit-item-desc">“12.482 times usam” convence mais que “milhares de clientes”. Especificidade é credibilidade.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="confianca-logos" data-audit-check data-cat="confianca" />
+            <label for="confianca-logos">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Prova social no ponto de decisão</span>
+                <span class="audit-item-desc">Logos, badges e avaliações perto de onde a decisão acontece (pricing, signup) — não só no rodapé.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="confianca-seguranca" data-audit-check data-cat="confianca" />
+            <label for="confianca-seguranca">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Sinais de segurança onde há dados</span>
+                <span class="audit-item-desc">Pagamento e dados sensíveis acompanhados de sinais claros de proteção e política.</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+        <p class="audit-cat-ref">ref: <code>24-patterns-social-proof.md</code></p>
+      </section>
+
+      <section class="audit-cat enter" style="--i: 11" data-cat-section="formularios">
+        <div class="audit-cat-head">
+          <h2>Formulários</h2>
+          <span class="audit-cat-count" data-cat-count="formularios" aria-live="off">0/6</span>
+        </div>
+        <div class="audit-progress" aria-hidden="true"><div class="audit-progress-fill" data-cat-fill="formularios"></div></div>
+        <ul class="audit-list">
+          <li class="audit-item">
+            <input type="checkbox" id="formularios-labels" data-audit-check data-cat="formularios" />
+            <label for="formularios-labels">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Todo input tem label visível</span>
+                <span class="audit-item-desc">Placeholder não é label: some ao digitar e falha com leitores de tela.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="formularios-erro-inline" data-audit-check data-cat="formularios" />
+            <label for="formularios-erro-inline">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Erro inline, junto ao campo</span>
+                <span class="audit-item-desc">A mensagem aparece ao lado do campo errado e diz como corrigir — não só “dados inválidos”.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="formularios-tipos-campo" data-audit-check data-cat="formularios" />
+            <label for="formularios-tipos-campo">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Tipos de campo corretos</span>
+                <span class="audit-item-desc">email, tel, number e autocomplete certos — teclado adequado no mobile e menos digitação.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="formularios-input-16px" data-audit-check data-cat="formularios" />
+            <label for="formularios-input-16px">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Texto de input ≥ 16px no mobile</span>
+                <span class="audit-item-desc">Abaixo disso o iOS força zoom na página inteira ao focar o campo.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="formularios-opcionais" data-audit-check data-cat="formularios" />
+            <label for="formularios-opcionais">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Opcional ou obrigatório: marcado</span>
+                <span class="audit-item-desc">Um dos dois sinalizado de forma consistente — o usuário não deveria adivinhar.</span>
+              </span>
+            </label>
+          </li>
+          <li class="audit-item">
+            <input type="checkbox" id="formularios-submit-estado" data-audit-check data-cat="formularios" />
+            <label for="formularios-submit-estado">
+              <span class="audit-box" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 4.8 9 10 3.5"/></svg>
+              </span>
+              <span class="audit-item-body">
+                <span class="audit-item-title">Submit comunica estado</span>
+                <span class="audit-item-desc">Enviando, sucesso e falha são visíveis; botão nunca fica desabilitado sem explicação.</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+        <p class="audit-cat-ref">ref: <code>26-patterns-error-handling.md</code></p>
+      </section>
+
+      <p class="skill-license muted enter" style="--i: 12">Licença MIT</p>
+    </main>
+    <footer class="enter" style="--i: 12">
+      <span>© 2026 Compound Design</span>
+      <span>v3.6.0</span>
+    </footer>
+    <script src="/theme.js" defer></script>
+    <script src="/audit.js" defer></script>
+  </body>
+</html>

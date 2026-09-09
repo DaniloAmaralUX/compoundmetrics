@@ -1,0 +1,501 @@
+{
+  "name": "Compound Design Audit",
+  "source_repository": "DaniloAmaralUX/compound-labs-design",
+  "source_sha": "364430b9d553c6b9f87e4ff3cbc0f31eaa5d1a33",
+  "source_files": [
+    "scripts/build-audit.mjs",
+    "audit.html"
+  ],
+  "version": "v3.6.0",
+  "item_count": 54,
+  "categories": [
+    {
+      "id": "fundamentos",
+      "title": "Antes de começar",
+      "ref": "00-core-framework.md",
+      "item_count": 5
+    },
+    {
+      "id": "hierarquia",
+      "title": "Hierarquia visual",
+      "ref": "23-patterns-visual-hierarchy.md",
+      "item_count": 7
+    },
+    {
+      "id": "estilo",
+      "title": "Estilo visual",
+      "ref": "12-checklist-visual-style.md",
+      "item_count": 7
+    },
+    {
+      "id": "acessibilidade",
+      "title": "Acessibilidade",
+      "ref": "27-patterns-accessibility.md",
+      "item_count": 9
+    },
+    {
+      "id": "navegacao",
+      "title": "Navegação e orientação",
+      "ref": "31-patterns-navigation.md",
+      "item_count": 6
+    },
+    {
+      "id": "carga",
+      "title": "Carga cognitiva e feedback",
+      "ref": "22-patterns-cognitive-load.md",
+      "item_count": 6
+    },
+    {
+      "id": "onboarding",
+      "title": "Onboarding e estados vazios",
+      "ref": "29-patterns-onboarding.md",
+      "item_count": 4
+    },
+    {
+      "id": "confianca",
+      "title": "Social proof e confiança",
+      "ref": "24-patterns-social-proof.md",
+      "item_count": 4
+    },
+    {
+      "id": "formularios",
+      "title": "Formulários",
+      "ref": "26-patterns-error-handling.md",
+      "item_count": 6
+    }
+  ],
+  "items": [
+    {
+      "id": "fundamentos/jtbd",
+      "category": "fundamentos",
+      "category_title": "Antes de começar",
+      "ref": "00-core-framework.md",
+      "label": "Job-to-be-done em uma frase",
+      "desc": "“Quando [situação], quero [motivação], para [resultado].” Se o job da tela não cabe numa frase, a tela ainda não está definida."
+    },
+    {
+      "id": "fundamentos/macro-bet",
+      "category": "fundamentos",
+      "category_title": "Antes de começar",
+      "ref": "00-core-framework.md",
+      "label": "Decisão alinhada à aposta do negócio",
+      "desc": "Cada escolha de design apoia de propósito uma aposta: velocidade, eficiência, precisão ou inovação — não por acidente."
+    },
+    {
+      "id": "fundamentos/convencao",
+      "category": "fundamentos",
+      "category_title": "Antes de começar",
+      "ref": "00-core-framework.md",
+      "label": "Convenção antes de novidade",
+      "desc": "Usuários passam a maior parte do tempo em outros produtos. Padrão familiar por default; novidade só com justificativa."
+    },
+    {
+      "id": "fundamentos/restricoes",
+      "category": "fundamentos",
+      "category_title": "Antes de começar",
+      "ref": "00-core-framework.md",
+      "label": "Restrições conhecidas",
+      "desc": "Tempo, stack, time e sistema de design considerados antes de desenhar — não descobertos no meio."
+    },
+    {
+      "id": "fundamentos/documentado",
+      "category": "fundamentos",
+      "category_title": "Antes de começar",
+      "ref": "00-core-framework.md",
+      "label": "Raciocínio documentado",
+      "desc": "O porquê da decisão registrado. O futuro time (e você) vão agradecer."
+    },
+    {
+      "id": "hierarquia/cta-3s",
+      "category": "hierarquia",
+      "category_title": "Hierarquia visual",
+      "ref": "23-patterns-visual-hierarchy.md",
+      "label": "Ação primária óbvia em 3 segundos",
+      "desc": "Um único CTA primário por tela, distinto de tudo o mais. Se dois elementos competem, nenhum vence."
+    },
+    {
+      "id": "hierarquia/headings",
+      "category": "hierarquia",
+      "category_title": "Hierarquia visual",
+      "ref": "23-patterns-visual-hierarchy.md",
+      "label": "Níveis de título distintos",
+      "desc": "Diferença clara entre níveis (≈2:1 entre saltos de hierarquia) e um único H1 por página."
+    },
+    {
+      "id": "hierarquia/leitura",
+      "category": "hierarquia",
+      "category_title": "Hierarquia visual",
+      "ref": "23-patterns-visual-hierarchy.md",
+      "label": "Ordem de leitura clara",
+      "desc": "Dá para numerar o que se lê primeiro, segundo e terceiro — tamanho, peso e posição guiam o olho."
+    },
+    {
+      "id": "hierarquia/proximidade",
+      "category": "hierarquia",
+      "category_title": "Hierarquia visual",
+      "ref": "23-patterns-visual-hierarchy.md",
+      "label": "Agrupamento por proximidade",
+      "desc": "Itens relacionados ficam juntos; não relacionados, separados. O espaçamento comunica a relação."
+    },
+    {
+      "id": "hierarquia/whitespace",
+      "category": "hierarquia",
+      "category_title": "Hierarquia visual",
+      "ref": "23-patterns-visual-hierarchy.md",
+      "label": "Whitespace como hierarquia",
+      "desc": "Mais espaço ao redor = mais importância. Respiro não é desperdício, é sinal."
+    },
+    {
+      "id": "hierarquia/cor-destaque",
+      "category": "hierarquia",
+      "category_title": "Hierarquia visual",
+      "ref": "23-patterns-visual-hierarchy.md",
+      "label": "Cor de destaque reservada",
+      "desc": "A cor de ação aparece só no que é acionável ou importante — não decorando tudo."
+    },
+    {
+      "id": "hierarquia/escala-tipo",
+      "category": "hierarquia",
+      "category_title": "Hierarquia visual",
+      "ref": "23-patterns-visual-hierarchy.md",
+      "label": "Escala tipográfica consistente",
+      "desc": "Todos os tamanhos vêm de uma escala definida; nenhum valor solto “porque coube”."
+    },
+    {
+      "id": "estilo/espaco-base",
+      "category": "estilo",
+      "category_title": "Estilo visual",
+      "ref": "12-checklist-visual-style.md",
+      "label": "Unidade base de espaçamento",
+      "desc": "Base de 4 ou 8px com escala definida (4, 8, 12, 16, 24, 32…) aplicada de forma consistente."
+    },
+    {
+      "id": "estilo/paleta",
+      "category": "estilo",
+      "category_title": "Estilo visual",
+      "ref": "12-checklist-visual-style.md",
+      "label": "Paleta com papéis definidos",
+      "desc": "Primária, neutros e cores semânticas (sucesso, erro, alerta) — sem cores avulsas fora do sistema."
+    },
+    {
+      "id": "estilo/elevacao",
+      "category": "estilo",
+      "category_title": "Estilo visual",
+      "ref": "12-checklist-visual-style.md",
+      "label": "Elevação num sistema",
+      "desc": "Sombras em níveis consistentes que comunicam profundidade — não uma sombra diferente por card."
+    },
+    {
+      "id": "estilo/tipo-sistema",
+      "category": "estilo",
+      "category_title": "Estilo visual",
+      "ref": "12-checklist-visual-style.md",
+      "label": "Sistema tipográfico enxuto",
+      "desc": "No máximo duas famílias, pesos limitados e intencionais, line-height por papel (título vs. corpo)."
+    },
+    {
+      "id": "estilo/radius",
+      "category": "estilo",
+      "category_title": "Estilo visual",
+      "ref": "12-checklist-visual-style.md",
+      "label": "Radius consistente e concêntrico",
+      "desc": "Mesmos raios para os mesmos papéis; em elementos aninhados, raio interno = raio externo − padding."
+    },
+    {
+      "id": "estilo/icones",
+      "category": "estilo",
+      "category_title": "Estilo visual",
+      "ref": "12-checklist-visual-style.md",
+      "label": "Ícones de um único estilo",
+      "desc": "Mesma família, mesmo peso de traço, mesmo tamanho óptico — misturar estilos parece quebrado."
+    },
+    {
+      "id": "estilo/motion",
+      "category": "estilo",
+      "category_title": "Estilo visual",
+      "ref": "12-checklist-visual-style.md",
+      "label": "Motion com propósito",
+      "desc": "Anima só o que dá feedback ou continuidade: < 300ms, curvas fortes, transform/opacity na GPU."
+    },
+    {
+      "id": "acessibilidade/teclado",
+      "category": "acessibilidade",
+      "category_title": "Acessibilidade",
+      "ref": "27-patterns-accessibility.md",
+      "label": "Teclado opera tudo",
+      "desc": "Tab alcança todo interativo, Enter/Espaço acionam, Esc fecha. Nenhum fluxo exige mouse."
+    },
+    {
+      "id": "acessibilidade/foco",
+      "category": "acessibilidade",
+      "category_title": "Acessibilidade",
+      "ref": "27-patterns-accessibility.md",
+      "label": "Foco sempre visível",
+      "desc": "Anel de foco claro em todo elemento focável, alinhado ao radius do elemento."
+    },
+    {
+      "id": "acessibilidade/contraste",
+      "category": "acessibilidade",
+      "category_title": "Acessibilidade",
+      "ref": "27-patterns-accessibility.md",
+      "label": "Contraste de texto passa",
+      "desc": "≥ 4.5:1 para texto normal, ≥ 3:1 para texto grande e elementos de UI essenciais."
+    },
+    {
+      "id": "acessibilidade/alvos",
+      "category": "acessibilidade",
+      "category_title": "Acessibilidade",
+      "ref": "27-patterns-accessibility.md",
+      "label": "Alvos de toque ≥ 44px",
+      "desc": "Área clicável confortável no touch — expandida com padding ou pseudo-elemento se o visual for menor."
+    },
+    {
+      "id": "acessibilidade/nao-so-cor",
+      "category": "acessibilidade",
+      "category_title": "Acessibilidade",
+      "ref": "27-patterns-accessibility.md",
+      "label": "Cor não é o único indicador",
+      "desc": "Erro, sucesso e estado têm texto ou ícone além da cor — daltônicos também precisam entender."
+    },
+    {
+      "id": "acessibilidade/alt-aria",
+      "category": "acessibilidade",
+      "category_title": "Acessibilidade",
+      "ref": "27-patterns-accessibility.md",
+      "label": "Alt text e aria-label presentes",
+      "desc": "Imagens informativas com alt; decorativas com alt vazio; botões só de ícone com aria-label."
+    },
+    {
+      "id": "acessibilidade/semantica",
+      "category": "acessibilidade",
+      "category_title": "Acessibilidade",
+      "ref": "27-patterns-accessibility.md",
+      "label": "Markup semântico",
+      "desc": "Headings reais, listas reais, <button> para ação e <a> para navegação, landmarks (main, nav)."
+    },
+    {
+      "id": "acessibilidade/reduced-motion",
+      "category": "acessibilidade",
+      "category_title": "Acessibilidade",
+      "ref": "27-patterns-accessibility.md",
+      "label": "Reduced motion respeitado",
+      "desc": "prefers-reduced-motion desativa ou suaviza animações — ninguém enjoa para usar seu produto."
+    },
+    {
+      "id": "acessibilidade/zoom",
+      "category": "acessibilidade",
+      "category_title": "Acessibilidade",
+      "ref": "27-patterns-accessibility.md",
+      "label": "Zoom a 200% funciona",
+      "desc": "Nada quebra nem some com zoom do navegador; maximum-scale nunca bloqueado."
+    },
+    {
+      "id": "navegacao/onde-estou",
+      "category": "navegacao",
+      "category_title": "Navegação e orientação",
+      "ref": "31-patterns-navigation.md",
+      "label": "Localização atual clara",
+      "desc": "O item ativo do menu está destacado — o usuário sempre sabe onde está."
+    },
+    {
+      "id": "navegacao/menu-previsivel",
+      "category": "navegacao",
+      "category_title": "Navegação e orientação",
+      "ref": "31-patterns-navigation.md",
+      "label": "Menu previsível",
+      "desc": "Mesma navegação, no mesmo lugar, em todas as páginas. Surpresa em navegação é custo."
+    },
+    {
+      "id": "navegacao/breadcrumbs",
+      "category": "navegacao",
+      "category_title": "Navegação e orientação",
+      "ref": "31-patterns-navigation.md",
+      "label": "Breadcrumbs em hierarquias fundas",
+      "desc": "Com mais de dois níveis de profundidade, o caminho de volta fica visível."
+    },
+    {
+      "id": "navegacao/busca",
+      "category": "navegacao",
+      "category_title": "Navegação e orientação",
+      "ref": "31-patterns-navigation.md",
+      "label": "Busca acessível quando há volume",
+      "desc": "Muito conteúdo pede busca fácil de achar — e que funcione por teclado."
+    },
+    {
+      "id": "navegacao/mobile-nav",
+      "category": "navegacao",
+      "category_title": "Navegação e orientação",
+      "ref": "31-patterns-navigation.md",
+      "label": "Padrão mobile adequado",
+      "desc": "Bottom nav ou off-canvas com alvos confortáveis; nada escondido atrás de gestos não descobríveis."
+    },
+    {
+      "id": "navegacao/links",
+      "category": "navegacao",
+      "category_title": "Navegação e orientação",
+      "ref": "31-patterns-navigation.md",
+      "label": "Links parecem links",
+      "desc": "Distinguíveis do texto corrente (não só por cor); visitado/hover/focus com estados claros."
+    },
+    {
+      "id": "carga/chunks",
+      "category": "carga",
+      "category_title": "Carga cognitiva e feedback",
+      "ref": "22-patterns-cognitive-load.md",
+      "label": "Grupos de 7±2 itens",
+      "desc": "Listas e menus divididos em pedaços digeríveis — a memória de trabalho é curta (Lei de Miller)."
+    },
+    {
+      "id": "carga/disclosure",
+      "category": "carga",
+      "category_title": "Carga cognitiva e feedback",
+      "ref": "22-patterns-cognitive-load.md",
+      "label": "Divulgação progressiva",
+      "desc": "Complexidade revelada aos poucos: tooltip → popover → drawer → modal, na medida da necessidade."
+    },
+    {
+      "id": "carga/feedback",
+      "category": "carga",
+      "category_title": "Carga cognitiva e feedback",
+      "ref": "22-patterns-cognitive-load.md",
+      "label": "Toda ação tem feedback imediato",
+      "desc": "Clique, salvamento, envio: algo visível acontece na hora — o silêncio faz o usuário clicar de novo."
+    },
+    {
+      "id": "carga/loading",
+      "category": "carga",
+      "category_title": "Carga cognitiva e feedback",
+      "ref": "22-patterns-cognitive-load.md",
+      "label": "Estados de loading desenhados",
+      "desc": "Skeleton ou spinner + progresso em operações longas; nunca tela congelada sem explicação."
+    },
+    {
+      "id": "carga/prevencao",
+      "category": "carga",
+      "category_title": "Carga cognitiva e feedback",
+      "ref": "22-patterns-cognitive-load.md",
+      "label": "Prevenção de erro antes do envio",
+      "desc": "Validação inline enquanto digita ou ao sair do campo — não uma lista de erros depois do submit."
+    },
+    {
+      "id": "carga/recuperacao",
+      "category": "carga",
+      "category_title": "Carga cognitiva e feedback",
+      "ref": "22-patterns-cognitive-load.md",
+      "label": "Recuperação sempre possível",
+      "desc": "Undo ou confirmação em ações destrutivas; autosave onde perder trabalho dói."
+    },
+    {
+      "id": "onboarding/valor-rapido",
+      "category": "onboarding",
+      "category_title": "Onboarding e estados vazios",
+      "ref": "29-patterns-onboarding.md",
+      "label": "Primeira experiência leva ao valor",
+      "desc": "O caminho do signup ao primeiro “aha” é curto e guiado — cada passo extra perde gente."
+    },
+    {
+      "id": "onboarding/empty-states",
+      "category": "onboarding",
+      "category_title": "Onboarding e estados vazios",
+      "ref": "29-patterns-onboarding.md",
+      "label": "Empty states ensinam",
+      "desc": "Tela vazia diz o que é aquilo e como começar, com um CTA — não um vazio mudo."
+    },
+    {
+      "id": "onboarding/dicas-contexto",
+      "category": "onboarding",
+      "category_title": "Onboarding e estados vazios",
+      "ref": "29-patterns-onboarding.md",
+      "label": "Dicas no contexto certo",
+      "desc": "Ajuda contextual no momento da dúvida vence tour gigante que ninguém lê."
+    },
+    {
+      "id": "onboarding/progresso-fluxo",
+      "category": "onboarding",
+      "category_title": "Onboarding e estados vazios",
+      "ref": "29-patterns-onboarding.md",
+      "label": "Progresso visível em multi-etapas",
+      "desc": "Stepper ou checklist mostra onde o usuário está e quanto falta."
+    },
+    {
+      "id": "confianca/depoimentos",
+      "category": "confianca",
+      "category_title": "Social proof e confiança",
+      "ref": "24-patterns-social-proof.md",
+      "label": "Depoimentos reais e específicos",
+      "desc": "Nome, foto e contexto de verdade. Depoimento genérico sem rosto pesa contra, não a favor."
+    },
+    {
+      "id": "confianca/numeros",
+      "category": "confianca",
+      "category_title": "Social proof e confiança",
+      "ref": "24-patterns-social-proof.md",
+      "label": "Números específicos",
+      "desc": "“12.482 times usam” convence mais que “milhares de clientes”. Especificidade é credibilidade."
+    },
+    {
+      "id": "confianca/logos",
+      "category": "confianca",
+      "category_title": "Social proof e confiança",
+      "ref": "24-patterns-social-proof.md",
+      "label": "Prova social no ponto de decisão",
+      "desc": "Logos, badges e avaliações perto de onde a decisão acontece (pricing, signup) — não só no rodapé."
+    },
+    {
+      "id": "confianca/seguranca",
+      "category": "confianca",
+      "category_title": "Social proof e confiança",
+      "ref": "24-patterns-social-proof.md",
+      "label": "Sinais de segurança onde há dados",
+      "desc": "Pagamento e dados sensíveis acompanhados de sinais claros de proteção e política."
+    },
+    {
+      "id": "formularios/labels",
+      "category": "formularios",
+      "category_title": "Formulários",
+      "ref": "26-patterns-error-handling.md",
+      "label": "Todo input tem label visível",
+      "desc": "Placeholder não é label: some ao digitar e falha com leitores de tela."
+    },
+    {
+      "id": "formularios/erro-inline",
+      "category": "formularios",
+      "category_title": "Formulários",
+      "ref": "26-patterns-error-handling.md",
+      "label": "Erro inline, junto ao campo",
+      "desc": "A mensagem aparece ao lado do campo errado e diz como corrigir — não só “dados inválidos”."
+    },
+    {
+      "id": "formularios/tipos-campo",
+      "category": "formularios",
+      "category_title": "Formulários",
+      "ref": "26-patterns-error-handling.md",
+      "label": "Tipos de campo corretos",
+      "desc": "email, tel, number e autocomplete certos — teclado adequado no mobile e menos digitação."
+    },
+    {
+      "id": "formularios/input-16px",
+      "category": "formularios",
+      "category_title": "Formulários",
+      "ref": "26-patterns-error-handling.md",
+      "label": "Texto de input ≥ 16px no mobile",
+      "desc": "Abaixo disso o iOS força zoom na página inteira ao focar o campo."
+    },
+    {
+      "id": "formularios/opcionais",
+      "category": "formularios",
+      "category_title": "Formulários",
+      "ref": "26-patterns-error-handling.md",
+      "label": "Opcional ou obrigatório: marcado",
+      "desc": "Um dos dois sinalizado de forma consistente — o usuário não deveria adivinhar."
+    },
+    {
+      "id": "formularios/submit-estado",
+      "category": "formularios",
+      "category_title": "Formulários",
+      "ref": "26-patterns-error-handling.md",
+      "label": "Submit comunica estado",
+      "desc": "Enviando, sucesso e falha são visíveis; botão nunca fica desabilitado sem explicação."
+    }
+  ]
+}

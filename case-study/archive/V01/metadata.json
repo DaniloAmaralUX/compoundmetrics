@@ -1,0 +1,482 @@
+{
+ "milestone": "V01",
+ "build": "M01",
+ "name": "Compound Labs Design (site + /audit)",
+ "tool_ids": [
+  "tool-09"
+ ],
+ "tools": [
+  "Compound Labs Design"
+ ],
+ "repository": "DaniloAmaralUX/compound-labs-design",
+ "source_sha": "364430b9d553c6b9f87e4ff3cbc0f31eaa5d1a33",
+ "representative_url": "https://compound-labs-design.vercel.app/",
+ "equivalent_deployments": [
+  "dpl_y6YbQ7RJcAVeF1fjESkj6axyCYWJ (production, 2026-07-16)"
+ ],
+ "date_range": "2026-07-13 → 2026-07-16",
+ "captured_at": "2026-09-09T15:45:53.234Z",
+ "capture_method": "exact commit built locally (static export served by scripts/lib/serve.mjs); playwright-core 1.63.0; Chromium 141.0.7390.37; reducedMotion=reduce, animations=disabled, deviceScaleFactor=1, colorScheme=dark",
+ "build_adjustments": [],
+ "viewports": {
+  "desktop": {
+   "width": 1440,
+   "height": 900
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "surfaces": {
+  "ENTRY": "/index.html",
+  "DISCOVERY": "/skills.html",
+  "DETAIL": "/skills/compound-design-ui.html",
+  "INTERACTION": "/audit.html",
+  "MOBILE_ENTRY": "/index.html"
+ },
+ "visual_fingerprint": {
+  "ahash16_entry_top_band": "f1cffffffffffc3ffc3ffc3ffe7ffffffffff1fff01ffffff1fff1fff7fff1ff",
+  "dom_signature": "272b95d41dd478138a8523841e081268ea470f52acf97c7ddc64e87e7dab9dec",
+  "css_sha256": "7952c7b54c9a2bd51e9e36099298f6b36d37e4f5262177d310871806ef93c256",
+  "typography": "585e0ff8e3167647cb590bd4e6db67cbab6662ebdb6787c6e15ee0ec198e56fb",
+  "color": "5e5e8892aefd419ddbceaeb1c590c17741fe7d2a574b4f0de4dc7ed9097b4cf8",
+  "section_order": [
+   "header.hero",
+   "section.enter",
+   "section.enter"
+  ],
+  "nav_links": [
+   "Compound Design",
+   "Skills",
+   "Danilo do Amaral",
+   "Explorar skills"
+  ],
+  "landmarks": [
+   "nav",
+   "main",
+   "header",
+   "section",
+   "section",
+   "footer"
+  ]
+ },
+ "fingerprint_detail": {
+  "ENTRY": {
+   "font_families": [
+    "Inter×17"
+   ],
+   "font_sizes": [
+    "16×9",
+    "13×4",
+    "20×2",
+    "40×1",
+    "11×1"
+   ],
+   "font_weights": [
+    "400×7",
+    "500×6",
+    "600×4"
+   ],
+   "text_colors": [
+    "oklch(0.47 0 0)×8",
+    "oklch(0.205 0 0)×7",
+    "oklch(1 0 0)×2"
+   ],
+   "background_colors": [
+    "oklch(0.205 0 0)×2",
+    "oklch(1 0 0 / 0.85)×1",
+    "oklch(0 0 0 / 0.05)×1",
+    "oklch(0.78 0.16 75)×1"
+   ],
+   "radii": [
+    "999px×8",
+    "12px×3",
+    "50%×2"
+   ],
+   "section_order": [
+    "header.hero",
+    "section.enter",
+    "section.enter"
+   ],
+   "landmarks": [
+    "nav",
+    "main",
+    "header",
+    "section",
+    "section",
+    "footer"
+   ],
+   "headings": [
+    "h1:Compound Design",
+    "h2:Projeto",
+    "h2:Skills"
+   ],
+   "nav_links": [
+    "Compound Design",
+    "Skills",
+    "Danilo do Amaral",
+    "Explorar skills"
+   ],
+   "title": "Compound Design — Design engineering para produtos com IA",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:42189/styles.css"
+   ]
+  },
+  "DISCOVERY": {
+   "font_families": [
+    "Inter×14"
+   ],
+   "font_sizes": [
+    "16×10",
+    "13×3",
+    "40×1"
+   ],
+   "font_weights": [
+    "400×8",
+    "500×4",
+    "600×2"
+   ],
+   "text_colors": [
+    "oklch(0.47 0 0)×8",
+    "oklch(0.205 0 0)×5",
+    "oklch(1 0 0)×1"
+   ],
+   "background_colors": [
+    "oklch(1 0 0 / 0.85)×1",
+    "oklch(0 0 0 / 0.05)×1",
+    "oklch(0.205 0 0)×1"
+   ],
+   "radii": [
+    "999px×5",
+    "12px×3"
+   ],
+   "section_order": [
+    "header.hero",
+    "section.enter",
+    "section.enter"
+   ],
+   "landmarks": [
+    "nav",
+    "main",
+    "header",
+    "section",
+    "section",
+    "footer"
+   ],
+   "headings": [
+    "h1:Skills"
+   ],
+   "nav_links": [
+    "Compound Design",
+    "Home"
+   ],
+   "title": "Skills — Compound Design",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:42189/styles.css"
+   ]
+  },
+  "DETAIL": {
+   "font_families": [
+    "Inter×122",
+    "Geist Mono×71",
+    "Arial×1"
+   ],
+   "font_sizes": [
+    "16×62",
+    "13×47",
+    "14×44",
+    "11×25",
+    "17×13",
+    "22×2",
+    "28×1"
+   ],
+   "font_weights": [
+    "400×130",
+    "700×34",
+    "600×26",
+    "500×4"
+   ],
+   "text_colors": [
+    "oklch(0.205 0 0)×90",
+    "oklch(0.2368 0 0)×73",
+    "oklch(0.47 0 0)×29",
+    "oklch(1 0 0)×2"
+   ],
+   "background_colors": [
+    "oklch(0 0 0 / 0.05)×79",
+    "oklch(0.205 0 0)×2",
+    "oklch(1 0 0 / 0.85)×1",
+    "oklch(1 0 0)×1"
+   ],
+   "radii": [
+    "5px×69",
+    "999px×7",
+    "12px×1",
+    "8px×1"
+   ],
+   "section_order": [
+    "a.back-link",
+    "h1.skill-slug",
+    "p.skill-lead",
+    "section.install-box",
+    "article.prose",
+    "p.skill-license"
+   ],
+   "landmarks": [
+    "nav",
+    "main",
+    "section",
+    "article",
+    "footer"
+   ],
+   "headings": [
+    "h1:compound-design-ui",
+    "h2:Install",
+    "h2:Details that make interfaces feel better",
+    "h3:Quick Reference #",
+    "h3:Core Principles #",
+    "h3:Common Mistakes #",
+    "h3:Review Output Format #",
+    "h3:Review Checklist #",
+    "h3:Reference Files #"
+   ],
+   "nav_links": [
+    "Compound Design",
+    "Skills"
+   ],
+   "title": "compound-design-ui — Compound Design",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:42189/styles.css"
+   ]
+  },
+  "INTERACTION": {
+   "font_families": [
+    "Inter×140",
+    "Geist Mono×19",
+    "Arial×3"
+   ],
+   "font_sizes": [
+    "13×84",
+    "16×55",
+    "20×9",
+    "12×9",
+    "18×3",
+    "32×1",
+    "17×1"
+   ],
+   "font_weights": [
+    "400×90",
+    "500×59",
+    "600×13"
+   ],
+   "text_colors": [
+    "oklch(0.47 0 0)×90",
+    "oklch(0.205 0 0)×70",
+    "oklch(1 0 0)×2"
+   ],
+   "background_colors": [
+    "oklch(0 0 0 / 0.05)×12",
+    "oklch(0.205 0 0)×2",
+    "oklch(1 0 0 / 0.85)×1",
+    "oklch(1 0 0)×1"
+   ],
+   "radii": [
+    "12px×56",
+    "6px×54",
+    "999px×19",
+    "8px×1"
+   ],
+   "section_order": [
+    "a.back-link",
+    "h1.audit-title",
+    "p.skill-lead",
+    "section.install-box",
+    "section.audit-summary",
+    "section.audit-cat",
+    "section.audit-cat",
+    "section.audit-cat",
+    "section.audit-cat",
+    "section.audit-cat",
+    "section.audit-cat",
+    "section.audit-cat",
+    "section.audit-cat",
+    "section.audit-cat",
+    "p.skill-license"
+   ],
+   "landmarks": [
+    "nav",
+    "main",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "footer"
+   ],
+   "headings": [
+    "h1:Compound Design Audit",
+    "h2:Install",
+    "h2:Antes de começar",
+    "h2:Hierarquia visual",
+    "h2:Estilo visual",
+    "h2:Acessibilidade",
+    "h2:Navegação e orientação",
+    "h2:Carga cognitiva e feedback",
+    "h2:Onboarding e estados vazios",
+    "h2:Social proof e confiança",
+    "h2:Formulários"
+   ],
+   "nav_links": [
+    "Compound Design",
+    "Skills"
+   ],
+   "title": "Compound Design Audit — checklist de auditoria de UI",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:42189/styles.css"
+   ]
+  }
+ },
+ "notes": [
+  "ENTRY desktop: 1 failed requests (https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap)",
+  "ENTRY mobile: 1 failed requests (https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap)",
+  "DISCOVERY desktop: 1 failed requests (https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap)",
+  "DISCOVERY mobile: 1 failed requests (https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap)",
+  "DETAIL desktop: 1 failed requests (https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap)",
+  "DETAIL mobile: 1 failed requests (https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap)",
+  "INTERACTION desktop: 1 failed requests (https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap)",
+  "INTERACTION mobile: 1 failed requests (https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap)"
+ ],
+ "files": {
+  "surfaces/ENTRY-desktop.png": {
+   "sha256": "086536b622f06863fc86cdec4a049162bb4dc3dc2de806137514292ba613f586",
+   "bytes": 75547
+  },
+  "desktop-full.png": {
+   "sha256": "086536b622f06863fc86cdec4a049162bb4dc3dc2de806137514292ba613f586",
+   "bytes": 75547
+  },
+  "surfaces/ENTRY-desktop-first-screen.png": {
+   "sha256": "3b3a553c10bcf9fd22c33e97fe3964744507b14b60ad4a697b066e04132782bc",
+   "bytes": 62813
+  },
+  "states/ENTRY-focus-first.png": {
+   "sha256": "aea36340221c193697b2ef8c41a63deac1b733f0a25c4361d51ff53d183c826a",
+   "bytes": 63475
+  },
+  "states/ENTRY-hover-first.png": {
+   "sha256": "685ca6c8101819044e46b82ec6df4b401beca67152bce3d6750239d89ae0714a",
+   "bytes": 63436
+  },
+  "surfaces/ENTRY-mobile.png": {
+   "sha256": "aa1ae58f9b9f030de9369b6d465c52243efaa44ca796ef401d4885b3b1dd93d0",
+   "bytes": 61055
+  },
+  "mobile-full.png": {
+   "sha256": "aa1ae58f9b9f030de9369b6d465c52243efaa44ca796ef401d4885b3b1dd93d0",
+   "bytes": 61055
+  },
+  "surfaces/ENTRY-mobile-first-screen.png": {
+   "sha256": "526f8ee696f94822c28ed422a2fee4d38cbfef1c7bd1d8c75b8ec59a9ed0e78c",
+   "bytes": 46015
+  },
+  "states/ENTRY-mobile-nav-open.png": {
+   "sha256": "526f8ee696f94822c28ed422a2fee4d38cbfef1c7bd1d8c75b8ec59a9ed0e78c",
+   "bytes": 46015
+  },
+  "surfaces/DISCOVERY-desktop.png": {
+   "sha256": "9d2d0dcd3513777c1e59e35a701c6fdb9e08669c1137e60595b81034bccb396e",
+   "bytes": 80744
+  },
+  "surfaces/DISCOVERY-desktop-first-screen.png": {
+   "sha256": "caefe138efae8973f0bb4f43966e3bb82679c027fa31b991611d6395369a783b",
+   "bytes": 72318
+  },
+  "states/DISCOVERY-focus-first.png": {
+   "sha256": "6e1ebcbb6dc3800e89e87f8d0e1d44bd08a5244e44600ec70d1a1c6766f12a32",
+   "bytes": 72964
+  },
+  "states/DISCOVERY-hover-first.png": {
+   "sha256": "33def7176fd9c6a63974f3657f21f588537b1e45fed9a6c257c7549453bfdf93",
+   "bytes": 73058
+  },
+  "surfaces/DISCOVERY-mobile.png": {
+   "sha256": "717ad51b30a7600b611639529abb38cbde368be26ac751f9bc034b145ae618ed",
+   "bytes": 68398
+  },
+  "surfaces/DISCOVERY-mobile-first-screen.png": {
+   "sha256": "f51343cb9e702820970ff5ea57cfc11605fbbe6077fc54b69d61e8b47c67c02a",
+   "bytes": 49110
+  },
+  "states/DISCOVERY-mobile-nav-open.png": {
+   "sha256": "f51343cb9e702820970ff5ea57cfc11605fbbe6077fc54b69d61e8b47c67c02a",
+   "bytes": 49110
+  },
+  "surfaces/DETAIL-desktop.png": {
+   "sha256": "af7815481774b9fc3687ff789b06be219d6f3f55de9b1e06913d9d689fce60db",
+   "bytes": 544280
+  },
+  "surfaces/DETAIL-desktop-first-screen.png": {
+   "sha256": "19462c565b43c2996d7b0843d85022fd03d58cb2ecf879cd97e70be5c1d76f73",
+   "bytes": 110927
+  },
+  "states/DETAIL-focus-first.png": {
+   "sha256": "2a5344c812f0500cfb0e9183dcbeff45b5aaf21fb949b91baaca467a47bb415d",
+   "bytes": 89853
+  },
+  "states/DETAIL-hover-first.png": {
+   "sha256": "a92890370283375c0db1f3ea9d2504c693366d01761f2e098851539c4e86ffc5",
+   "bytes": 87257
+  },
+  "surfaces/DETAIL-mobile.png": {
+   "sha256": "de494af893a337d8abb162c10f67a812c78f34453a254819a63295e5071bf954",
+   "bytes": 472875
+  },
+  "surfaces/DETAIL-mobile-first-screen.png": {
+   "sha256": "eea588ef5ee2f2e990269822c4ebcef0950bcc8b88da97a6ff7bc67104fd0574",
+   "bytes": 62605
+  },
+  "states/DETAIL-mobile-nav-open.png": {
+   "sha256": "eea588ef5ee2f2e990269822c4ebcef0950bcc8b88da97a6ff7bc67104fd0574",
+   "bytes": 62605
+  },
+  "surfaces/INTERACTION-desktop.png": {
+   "sha256": "f4baaa0fa49113bc81895816ec561cacf834cd39d57a2ef42f9a7310167100c1",
+   "bytes": 627080
+  },
+  "surfaces/INTERACTION-desktop-first-screen.png": {
+   "sha256": "3c4c1323f3f31afff75e7f04ffd83378d66454c25cd48c514a05b639efe5a9e9",
+   "bytes": 77288
+  },
+  "states/INTERACTION-focus-first.png": {
+   "sha256": "823372b3e7f53115c430b2059576234c2252a2dd2124a5be00bd99492a0a76f8",
+   "bytes": 82727
+  },
+  "states/INTERACTION-hover-first.png": {
+   "sha256": "6d952157d035ee93546a09aaaa66c385fbe9e956c4506400f0c43bd94983f55a",
+   "bytes": 81524
+  },
+  "surfaces/INTERACTION-mobile.png": {
+   "sha256": "13ccddea4190ca06a903855c71907846aed393c25e9706ae0c4490793a956244",
+   "bytes": 539508
+  },
+  "surfaces/INTERACTION-mobile-first-screen.png": {
+   "sha256": "7a304d71d06a4001c6d016db56cea31c73095e5dcf7e9c29cbafa2b3944c80c5",
+   "bytes": 59101
+  },
+  "states/INTERACTION-mobile-nav-open.png": {
+   "sha256": "7a304d71d06a4001c6d016db56cea31c73095e5dcf7e9c29cbafa2b3944c80c5",
+   "bytes": 59101
+  },
+  "sections.json": {
+   "sha256": "f56b76fd35eed6f7e7822782aba9d247b8cf536c1a0eff769f872f1df5a9b24b",
+   "bytes": 7670
+  }
+ }
+}

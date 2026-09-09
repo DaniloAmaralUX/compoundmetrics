@@ -1,0 +1,138 @@
+import type { ProjectStage } from "./types";
+
+// Every fact below names the document it was read from. Nothing is inferred from memory of the
+// project; where a document does not say something, the field says so.
+export const projectStages: ProjectStage[] = [
+  {
+    id: "thesis",
+    version: "v0",
+    name: "Thesis",
+    order: 0,
+    status: "done",
+    question: "Can design-engineering judgment compound across projects instead of resetting when the session ends?",
+    changed: "A bet was written down: a design engineer working through agents produces more interface than they can carefully judge, and the judgment they do apply disappears with the transcript. Knowledge from humans and agents should compound, so each unit of work is easier than the last.",
+    built: [
+      "the loop — frame, model, build, verify, polish, then keep the one thing worth keeping",
+      "two boundaries most tooling does not hold: an artifact must be earned, and a claim may never exceed its evidence",
+      "a definition of success that is not \"Compound Design wins\" but \"the framework can discover it is wrong\"",
+    ],
+    learned: "Nothing yet — a thesis is a question, not a result.",
+    unknown: "Everything the thesis claims.",
+    sources: [{ path: "STRATEGY.md", note: "Purpose, Positioning, How it succeeds" }, { path: "README.md" }],
+  },
+  {
+    id: "resources",
+    version: "v0.1",
+    name: "Resources",
+    order: 1,
+    status: "done",
+    question: "Can useful human + AI design practice be encoded as bounded, testable resources?",
+    changed: "The first resources: an orchestrator, an interface-craft specialist, a motion specialist, a quality gate and a resource lab — each with a scope, a routing boundary, an instruction contract and an evaluation path.",
+    built: [
+      "a fixed ten-point readiness rubric across seven dimensions",
+      "readiness scores between 8.0 and 8.4 for the five resources, explicitly labelled readiness, not verification",
+      "for each resource, the proof it still needed — A/B outcome deltas and repeated routing runs",
+    ],
+    learned: "A coherent architecture was possible. Its weakness was epistemic: a single readiness score risked being read as proof.",
+    unknown: "Any uplift over a base model or over the upstream skills used directly. Empirical false-positive and false-negative rates. Token and tool-call deltas.",
+    sources: [
+      { path: "compound-design/quality/releases/v0.1-readiness-audit.md", note: "What this audit proves; scorecards" },
+      { path: "compound-design/quality/releases/v0.1-scores.json", note: "verified: false; next_proof per resource" },
+      { path: "compound-design/quality/releases/V0.2-EVIDENCE.md", note: "Why this version exists" },
+    ],
+  },
+  {
+    id: "quality-system",
+    version: "v0.2",
+    name: "Quality system",
+    order: 2,
+    status: "done",
+    question: "How do we stop a construction score from being read as proof?",
+    changed: "Construction quality and evidence maturity became two separate measures. Every resource got an explicit primary job, non-goals, a severity model and an evidence-bearing output contract. A sixth resource, AI Interaction Review, added six bounded gates for user-facing AI.",
+    built: [
+      "CDQI v0.2 — a weighted construction rubric with runtime evidence deliberately removed from the number",
+      "CEL — five evidence levels, E0 to E4, each with the claim it allows and the claim it forbids",
+      "a deterministic contract suite whose passing qualifies resources for E1 and nothing more",
+      "meta-evaluation: the quality gate evaluates the evaluator before allowing a promotion claim",
+    ],
+    learned: "The framework became harder to fool. A resource can score 8.8 for construction at E0 — well designed, not shown to work — and the system now says so.",
+    unknown: "Runtime outcome uplift, statistical significance, vendor certification, independent corroboration, field evidence — each listed as not claimed.",
+    sources: [
+      { path: "compound-design/quality/releases/V0.2-EVIDENCE.md", note: "Changed; Evidence generated; Not claimed" },
+      { path: "compound-design/quality/CD-QUALITY-INDEX.md" },
+      { path: "compound-design/quality/CD-EVIDENCE-LEVELS.md" },
+      { path: "compound-design/quality/releases/v0.2-contract-eval.json", note: "frozen legacy evidence, not re-executed" },
+    ],
+  },
+  {
+    id: "evidence-infrastructure",
+    version: "v0.2.1",
+    name: "Evidence infrastructure",
+    order: 3,
+    status: "done",
+    question: "Can the separation between built and proven be made operational without spending model budget?",
+    changed: "The framework could now state, in machine-readable form, what each resource is for, where it came from, what is not its job, what evidence it has and what evidence is missing. A wrapper could be removed as a successful outcome.",
+    built: [
+      "a canonical resource registry with a JSON Schema and a deterministic lint with mutation self-tests",
+      "an explicit Evidence Debt ledger and a Learning Ledger with a safe entry template",
+      "a Wrapper Value Audit: what would actually be lost if the upstream were used directly",
+      "the first controlled-runtime experiment, pre-registered at zero cost — tasks, holdouts, ground truth, a frozen rubric, blinding, decision rules under which Compound loses — and an anti-billing lock that refuses to run without explicit authorisation",
+    ],
+    learned: "Preparation repays no evidence debt. Eleven reproducible failures of the experiment infrastructure itself were caught and recorded before any model ran.",
+    unknown: "No E2 run was executed, no uplift was measured, no resource moved above E1, and no v0.3 behaviour claim was justified.",
+    sources: [
+      { path: "compound-design/releases/v0.2.1-EVIDENCE-INFRASTRUCTURE.md" },
+      { path: "compound-design/quality/e2/E2-PILOT-PLAN.md", note: "status line; §14 falsification; §15 conditions under which Compound loses" },
+      { path: "compound-design/learning/LEDGER.md", note: "entries CD-20260909-001 to -011" },
+      { path: "compound-design/quality/EVIDENCE-DEBT.md", note: "E2 preparation state" },
+    ],
+  },
+  {
+    id: "work-system",
+    version: "v0.3.0-alpha.1",
+    name: "Work system",
+    order: 4,
+    status: "current",
+    question: "Can the framework become a system you run instead of a document you read?",
+    changed: "The loop became executable: skills with declared contracts, thin specialist agents that point at them, a shared finding shape for every reviewer, durable learning that a later run can find, and one canonical implementation installed by three hosts. Two specialists were rewritten from scratch as self-contained resources and re-earned their evidence level rather than inheriting it.",
+    built: [
+      "fifteen skills and six agents, each entering the registry at E0 and reaching E1 only by passing its contract suite, in a separate commit",
+      "a finding contract and a discoverability contract, both tested without a model",
+      "plugin manifests for Claude Code, Codex and Cursor over one canonical directory; the installed plugin clones nothing",
+      "a candidate benchmark lane that asks whether the rewrite lost anything the released version had — pre-registered, not run",
+    ],
+    learned: "A guard that cannot tell a rule from a violation blocks the rule. The same guard bug recurred in a second place because the first fix was applied to one guard rather than turned into a rule for all of them.",
+    unknown: "Whether any v0.3 resource improves an outcome over no resource, over direct upstream use, or over the resource it replaced. Whether discoverability changes decisions. Whether fifteen skills is the right number.",
+    sources: [
+      { path: "compound-design/releases/v0.3.0-alpha.1-WORK-SYSTEM.md", note: "Added; Superseded; Evidence state; Known unknowns" },
+      { path: "compound-design/learning/LEDGER.md", note: "CD-20260909-011, CD-20260909-012" },
+      { path: "compound-design/quality/releases/v0.3-contract-eval.json" },
+    ],
+  },
+  {
+    id: "controlled-runtime",
+    version: "next",
+    name: "Controlled runtime",
+    order: 5,
+    status: "next",
+    question: "Does any Compound resource outperform the relevant baseline — no resource, direct upstream use, or the version it replaced?",
+    changed: "Nothing yet. The experiment exists in full and waits on one thing the project has refused to assume: paid model runtime, explicitly authorised, with a budget.",
+    built: [
+      "the pre-registered pilot: nine interface-review tasks and eleven quality-gate tasks, holdouts above 30%, deterministic ground truth with decoys, a frozen seven-dimension rubric, blinded human review",
+      "ten pre-registered conditions under which Compound loses, evaluated mechanically",
+      "a resource value audit that treats removal or simplification as a valid result",
+    ],
+    learned: "Nothing yet.",
+    unknown: "Everything about uplift. Until this runs, `not measured` is the correct answer.",
+    sources: [
+      { path: "compound-design/quality/e2/E2-PILOT-PLAN.md" },
+      { path: "compound-design/quality/e2/candidate-v0.3/CANDIDATE-LANE.md" },
+      { path: "compound-design/quality/e2/BENCHMARK-PROTOCOL.md", note: "Version rule: the benchmark does not create a new version by itself" },
+    ],
+  },
+];
+
+export const projectIntro = {
+  headline: "Compound Design is an experiment in cumulative Design Engineering.",
+  body: "It asks whether the judgment spent on one project can be made to survive into the next — as a rule, an eval, a skill, a specialist — and whether that survival can be shown rather than asserted. This page is the experiment's accountability record: what it is, why it exists, where it stands, what it has demonstrated, what it has not, and what comes next.",
+};

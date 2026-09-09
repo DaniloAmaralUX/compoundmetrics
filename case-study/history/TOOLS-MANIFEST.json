@@ -1,0 +1,858 @@
+{
+  "generated_at": "2026-09-09T15:34:06.578083Z",
+  "sources": [
+    "Vercel project list (50 returned — the API caps at 50, so projects beyond that are UNKNOWN)",
+    "Vercel deployment metadata (get_deployment / list_deployments)",
+    "git history of attached or readable repositories",
+    "page content where fetchable through the Vercel MCP"
+  ],
+  "stated_count_in_brief": 17,
+  "tool_candidates": 24,
+  "verified_by_repository": 8,
+  "reconciliation": "The brief says 17 tools. The account's metadata supports 24 tool candidates (after merging duplicate Vercel projects and excluding a template and an unnamed project). Eight are verified against a readable repository; the rest are inferred from Vercel project names and dates and are marked medium or low confidence. The two counts are not reconciled here — the author should confirm which candidates count as tools; nothing was removed to reach 17.",
+  "excluded": [
+    {
+      "project": "nextjs-boilerplate",
+      "created": "2026-02-02",
+      "why": "a template, not a tool"
+    },
+    {
+      "project": "app",
+      "created": "2026-07-20",
+      "why": "unnamed, no link, no content recoverable"
+    }
+  ],
+  "tools": [
+    {
+      "id": "tool-01",
+      "name": "v0 Labs",
+      "purpose": "UNKNOWN — earliest v0.dev experiment on the account",
+      "context": "personal / exploratory",
+      "repository": null,
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "v0-labs-zek4f33pdew",
+          "created": "2025-01-15",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2025-01-15",
+      "design_family": "v0-generated",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "low",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": "No repository link; purpose not recoverable from metadata. Counted as a tool candidate only."
+    },
+    {
+      "id": "tool-02",
+      "name": "Accounting / financial dashboards (v0)",
+      "purpose": "Dashboard prototypes generated with v0",
+      "context": "personal / exploratory",
+      "repository": null,
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "v0-accounting-dashboard",
+          "created": "2025-11-02",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "v0-financial-dashboard-functiona",
+          "created": "2025-11-02",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2025-11-02",
+      "design_family": "v0-generated",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "low",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": "Two v0 projects created 25 minutes apart; treated as one tool. No repository."
+    },
+    {
+      "id": "tool-03",
+      "name": "Storefront with Nano Banana AI (v0)",
+      "purpose": "AI-assisted storefront prototype",
+      "context": "personal / exploratory",
+      "repository": null,
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "v0-storefront-w-nano-banana-ai-s",
+          "created": "2025-11-28",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2025-11-28",
+      "design_family": "v0-generated",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "low",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": "No repository."
+    },
+    {
+      "id": "tool-04",
+      "name": "Laudo Fácil / Laudo Genial",
+      "purpose": "SaaS for medical/technical reports (laudos)",
+      "context": "product idea",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "laudo-facil",
+        "access": "not attached"
+      },
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "v0-laudo-facil-saa-s",
+          "created": "2025-12-20",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "laudo-genial",
+          "created": "2026-02-16",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2025-12-20",
+      "design_family": "v0-generated → Next app",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "medium",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": "v0 origin in Dec 2025, repository-backed project in Feb 2026. Repository not attached to this session."
+    },
+    {
+      "id": "tool-05",
+      "name": "Form builder interface (v0)",
+      "purpose": "Form-builder UI prototype",
+      "context": "personal / exploratory",
+      "repository": null,
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "v0-form-builder-interface",
+          "created": "2025-12-24",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2025-12-24",
+      "design_family": "v0-generated",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "low",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-06",
+      "name": "Dashboard Contabilidade",
+      "purpose": "Accounting dashboard (two repository generations)",
+      "context": "professional / client-adjacent",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "dashboard-contabilidade",
+        "access": "not attached"
+      },
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "dashboard-contabilidade-2nhu",
+          "created": "2025-12-31",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "dashboard-contabilidade-rnvj",
+          "created": "2025-12-31",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "dashboard-contabilidade-v2",
+          "created": "2025-12-31",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2025-12-31",
+      "design_family": "dashboard",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "medium",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": "Repos dashboard-contabilidade and -dashboard-contabilidade-v2; three Vercel projects within 25 minutes → one tool, two generations."
+    },
+    {
+      "id": "tool-07",
+      "name": "Fino Acabamento v1",
+      "purpose": "UNKNOWN purpose (name suggests a finishing/construction business site)",
+      "context": "client",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "finoacabamentov1",
+        "access": "not attached"
+      },
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "finoacabamentov1-sw88",
+          "created": "2026-02-15",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-02-15",
+      "design_family": "UNKNOWN",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "low",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-08",
+      "name": "AuditContábil",
+      "purpose": "Accounting audit tool (two generations, incl. a v0 'oficial' rebuild)",
+      "context": "professional",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "auditcontabil",
+        "access": "not attached"
+      },
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "auditcontabil",
+          "created": "2026-07-12",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "auditcontabil-v0-oficial",
+          "created": "2026-07-20",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-07-12",
+      "design_family": "dashboard / audit",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "medium",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": "Second repo auditcontabil.v0.oficial on 2026-07-20."
+    },
+    {
+      "id": "tool-09",
+      "name": "Compound Labs Design",
+      "purpose": "Static site: Design Engineering skills (UI / Type / Color), the interactive Compound Design Audit (/audit, 54 items), a Claude Code plugin with cl-design / cl-review / cl-audit commands",
+      "context": "personal — the first artifact named Compound",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "compound-labs-design",
+        "access": "attached, read"
+      },
+      "first_known_sha": "d08ec62cec95c71b89e3941b98c0166d1925de7a",
+      "last_known_sha": "364430b9d553c6b9f87e4ff3cbc0f31eaa5d1a33",
+      "deployments": [
+        {
+          "project": "compound-labs-design",
+          "created": "2026-07-13",
+          "source": "Vercel project created"
+        },
+        {
+          "deployment": "dpl_y6YbQ7RJcAVeF1fjESkj6axyCYWJ",
+          "target": "production",
+          "sha": "364430b",
+          "created": "2026-07-16",
+          "url": "https://compound-labs-design.vercel.app/"
+        }
+      ],
+      "first_known_date": "2026-07-13",
+      "design_family": "static HTML/CSS, OKLCH tokens, Inter + Geist Mono",
+      "resources_created": [
+        "skill: compound-design-ui",
+        "skill: compound-design-type",
+        "skill: compound-design-color",
+        "tool: /audit checklist (54 items, 9 categories)",
+        "plugin: compound-labs-design (cl-design, cl-review, cl-audit)"
+      ],
+      "resources_reused": [],
+      "confidence": "high",
+      "captured": "yes (M01)",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": "27 commits between 2026-07-13 and 2026-07-16. The audit instrument frozen for this benchmark is this tool's /audit at 364430b."
+    },
+    {
+      "id": "tool-10",
+      "name": "Agno Handoff / AgnoHub",
+      "purpose": "Handoff and hub tooling around the Agno agent framework",
+      "context": "professional",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "agnohandoff",
+        "access": "not attached"
+      },
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "agnohandoff",
+          "created": "2026-07-15",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "agnohandoff-2jqi",
+          "created": "2026-07-15",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "agnohandoff-85m2",
+          "created": "2026-07-15",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "agnohub-v1",
+          "created": "2026-07-17",
+          "source": "Vercel project created",
+          "repo": "AGNOHUB-V1"
+        }
+      ],
+      "first_known_date": "2026-07-15",
+      "design_family": "app",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "medium",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-11",
+      "name": "SESI Seletivo (estrutura, handoff, protótipos, TR design)",
+      "purpose": "Selection-process product for SESI: structure, handoff package, prototypes, front prototype",
+      "context": "client",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "sesi-seletivo-estrutura",
+        "access": "not attached"
+      },
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "sesi-seletivo-estrutura",
+          "created": "2026-07-15",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "sesi-prototype-vagas",
+          "created": "2026-07-14",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "sesi-seletivo-handoff",
+          "created": "2026-07-20",
+          "source": "Vercel project created",
+          "repo": "SESI-SELETIVO-HANDOFF"
+        },
+        {
+          "project": "sesi-tr-design-front-prototype",
+          "created": "2026-07-20",
+          "source": "Vercel project created",
+          "repo": "Sesi_TR.Design-FrontPrototype"
+        },
+        {
+          "project": "sesi-prototipo-antigo",
+          "created": "2026-09-02",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "sesi-prototipo-v1-2",
+          "created": "2026-09-03",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-07-14",
+      "design_family": "client product",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "medium",
+      "captured": "no",
+      "privacy": "review-required (client work)",
+      "authorship": "author",
+      "notes": "Ten Vercel projects across four repositories between 2026-07-14 and 2026-09-03; counted as one tool with several deliverables."
+    },
+    {
+      "id": "tool-12",
+      "name": "Canvas UI fork → Dev Studio UI → Studio Dev UI",
+      "purpose": "Component gallery / registry / playground / studio, starting as a fork of DavidHDev/canvas-ui (Canvas UI 1.0, React Bits) and rebuilt on 2026-08-13 as Dev Studio UI, then Studio Dev UI Registry with React Bits integration, Studio Originals, and finally the host of the Compound Design v0.2 / v0.2.1 public page",
+      "context": "personal / open-source",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "studio-dev-ui",
+        "access": "attached, read"
+      },
+      "first_known_sha": "775f281719d4e68495e015a3c0a76a090c3ddc44",
+      "last_known_sha": "231889f0098213a96ccc069ba5557a18cc9f0cfb",
+      "deployments": [
+        {
+          "project": "canvas-ui-v1",
+          "created": "2026-08-22",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "studio-dev-ui",
+          "created": "2026-08-22",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "studio-dev-ui-originals",
+          "created": "2026-08-24",
+          "source": "Vercel project created"
+        },
+        {
+          "deployment": "dpl_9DGd7MszCu9hF3ykiBspfM6DkyGW",
+          "target": "production",
+          "sha": "231889f",
+          "created": "2026-09-09",
+          "url": "https://studio-dev-ui.vercel.app/",
+          "also": "https://studio-dev-nejva0nnb-danilos-projects-94eff717.vercel.app/ (same deployment)"
+        }
+      ],
+      "first_known_date": "2026-07-16",
+      "design_family": "gallery / registry (dark, editorial)",
+      "resources_created": [
+        "catalog contract + taxonomy",
+        "gallery honesty gate",
+        "playground URL engine",
+        "Compound Design POC timeline (2026-09-09)",
+        "Compound Design v0.2 evidence POC page"
+      ],
+      "resources_reused": [
+        "React Bits registry (upstream)",
+        "Canvas UI components (upstream fork)"
+      ],
+      "confidence": "high",
+      "captured": "yes (M03 2026-08-13, M04 2026-08-24, M11 2026-09-09)",
+      "privacy": "public-safe",
+      "authorship": "mixed: commits before 2026-08-13 are the upstream fork (DavidHDev/canvas-ui); the rebuild from 2026-08-13 is the author's",
+      "notes": "Early Vercel deployments carry githubOrg DavidHDev / repo canvas-ui, ref codex/canvas-ui-2-foundation — the fork origin is recorded, not hidden. The fork state is excluded from the author's benchmark."
+    },
+    {
+      "id": "tool-13",
+      "name": "Design Engineering Guide",
+      "purpose": "Knowledge base for the UX/UI Designer → Design Engineer migration (articles, bookmarks, practices, skills, tools) with AGENTS.md/CLAUDE.md for agents",
+      "context": "personal",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "design-engineering-guide",
+        "access": "readable"
+      },
+      "first_known_sha": "3b95baeec1cd8f4783596aeee108bc2901eb992d",
+      "last_known_sha": "0f9f4802ed739808e9f03feb41a4c8f8db93e1b4",
+      "deployments": [],
+      "first_known_date": "2026-07-20",
+      "design_family": "documentation (no UI)",
+      "resources_created": [
+        "knowledge base: practices, skills, tools"
+      ],
+      "resources_reused": [],
+      "confidence": "high",
+      "captured": "n/a (no interface)",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-14",
+      "name": "Ouvidoria Pitang portal / auditoria-teste",
+      "purpose": "Ombudsman portal for Pitang (audit test)",
+      "context": "client",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "auditoria-teste",
+        "access": "not attached"
+      },
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "auditoria-teste",
+          "created": "2026-07-22",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "ouvidoria-pitang-portal",
+          "created": "2026-07-22",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-07-22",
+      "design_family": "client portal",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "medium",
+      "captured": "no",
+      "privacy": "review-required (client work)",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-15",
+      "name": "NIM",
+      "purpose": "UNKNOWN",
+      "context": "UNKNOWN",
+      "repository": null,
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "nim-main",
+          "created": "2026-07-24",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-07-24",
+      "design_family": "UNKNOWN",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "low",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-16",
+      "name": "Studio Workspace",
+      "purpose": "Workspace app for the studio",
+      "context": "personal",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "studioworkspace",
+        "access": "not attached"
+      },
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "studioworkspace",
+          "created": "2026-07-24",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-07-24",
+      "design_family": "app",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "medium",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-17",
+      "name": "Tramontina",
+      "purpose": "UNKNOWN purpose (client name)",
+      "context": "client",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "tramontinaaaa",
+        "access": "not attached"
+      },
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "tramontina",
+          "created": "2026-08-05",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-08-05",
+      "design_family": "UNKNOWN",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "low",
+      "captured": "no",
+      "privacy": "review-required (client work)",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-18",
+      "name": "Studio DS",
+      "purpose": "Design-system registry site (shadcn registry, catalog, components)",
+      "context": "personal / open-source",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "studio-ds",
+        "access": "readable"
+      },
+      "first_known_sha": "9f757fdcdd532dd8cdf51a5da921a9a2a26a3445",
+      "last_known_sha": "54fcaf0e4cb86a989e2eeb2b1452eb9b7b5d3038",
+      "deployments": [
+        {
+          "project": "studio-ds",
+          "created": "2026-08-05",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-08-05",
+      "design_family": "design-system registry",
+      "resources_created": [
+        "registry.json + catalog"
+      ],
+      "resources_reused": [],
+      "confidence": "high",
+      "captured": "yes (M07)",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-19",
+      "name": "Labs Hub / base083",
+      "purpose": "UNKNOWN (no repository link)",
+      "context": "personal",
+      "repository": null,
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "labs-hub",
+          "created": "2026-09-03",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "base083",
+          "created": "2026-09-05",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-09-03",
+      "design_family": "UNKNOWN",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "low",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-20",
+      "name": "Supernova UI + Supernova Catálogo",
+      "purpose": "Design-system tokens (Supernova) and a catalogue built on an Iconiq preset over those tokens; the catalogue repository also hosts the compound-design-framework branch the framework was extracted from",
+      "context": "personal",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "supernova-catalogo",
+        "access": "attached, read"
+      },
+      "first_known_sha": "bcb35b3a85803e45572954b9fcc3c3f36d17afc9",
+      "last_known_sha": "7af65530482bc304c54e14b6b84b03c75c97807b",
+      "deployments": [
+        {
+          "project": "supernova-ui",
+          "created": "2026-09-05",
+          "source": "Vercel project created",
+          "repo": "supernova-ui (not readable)"
+        },
+        {
+          "project": "supernova-catalogo",
+          "created": "2026-09-07",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-09-05",
+      "design_family": "catalogue over tokens",
+      "resources_created": [
+        "Compound Design framework (v0.1 → v0.2.1) developed on branch compound-design-framework"
+      ],
+      "resources_reused": [
+        "Supernova tokens",
+        "Iconiq preset"
+      ],
+      "confidence": "high",
+      "captured": "yes (M06)",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-21",
+      "name": "Geist Labs DS (lab-design, lab-design-timeline)",
+      "purpose": "Design-system lab on Geist with a timeline; MDX content, examples, web kits",
+      "context": "personal",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "geistlabsds",
+        "access": "readable"
+      },
+      "first_known_sha": "5d21b2a6eb115e08112b09cbcfd24925367ae625",
+      "last_known_sha": "da0840cde632a6e2fc99a23371097d828211eba2",
+      "deployments": [
+        {
+          "project": "lab-design-timeline",
+          "created": "2026-09-08",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "lab-design",
+          "created": "2026-09-08",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-09-07",
+      "design_family": "design-system lab",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "high",
+      "captured": "attempted (M08)",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-22",
+      "name": "Compound Design Academy",
+      "purpose": "UNKNOWN (no repository link)",
+      "context": "personal",
+      "repository": null,
+      "first_known_sha": null,
+      "last_known_sha": null,
+      "deployments": [
+        {
+          "project": "compound-design-academy",
+          "created": "2026-09-07",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-09-07",
+      "design_family": "UNKNOWN",
+      "resources_created": [],
+      "resources_reused": [],
+      "confidence": "low",
+      "captured": "no",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-23",
+      "name": "Processo",
+      "purpose": "Lifeline-style timeline boilerplate (Next 16, shadcn registry)",
+      "context": "personal",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "processo",
+        "access": "readable"
+      },
+      "first_known_sha": "e78317657b212374dd9a4647dd40d7bd9d32579d",
+      "last_known_sha": "28e53d1ab20b46b2ace378c0c67234e8a34bc151",
+      "deployments": [
+        {
+          "project": "processo",
+          "created": "2026-09-08",
+          "source": "Vercel project created"
+        }
+      ],
+      "first_known_date": "2026-09-08",
+      "design_family": "timeline",
+      "resources_created": [],
+      "resources_reused": [
+        "Lifeline interaction model (Evil Rabbit, MIT)"
+      ],
+      "confidence": "high",
+      "captured": "yes (M09)",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    },
+    {
+      "id": "tool-24",
+      "name": "Compound Metrics / Compound Design (cd.guide)",
+      "purpose": "The standalone home of the Compound Design framework: evidence system, registry, E2 harness, work system v0.3.0-alpha.1, and the product-experience site",
+      "context": "personal — the system the case is about",
+      "repository": {
+        "owner": "DaniloAmaralUX",
+        "repo": "compoundmetrics",
+        "access": "this repository"
+      },
+      "first_known_sha": "50c7a6a",
+      "last_known_sha": "921d751aff5df8e14d998f993e2d171db842719d",
+      "deployments": [
+        {
+          "project": "compoundmetrics",
+          "created": "2026-09-09",
+          "source": "Vercel project created"
+        },
+        {
+          "project": "cd.guide",
+          "created": "2026-09-09",
+          "source": "Vercel project created",
+          "note": "second project importing the same repo; https://cdguide-seven.vercel.app/ = a7f8319"
+        },
+        {
+          "deployment": "dpl_6Av1MuU5xvbQAnS6uBkWVvKcUoA9",
+          "target": "production",
+          "sha": "a7f8319",
+          "url": "https://compoundmetrics.vercel.app/"
+        },
+        {
+          "deployment": "dpl_4qtC9oEDZ44USUgxByVBXB7Xf399",
+          "target": "preview",
+          "sha": "921d751"
+        }
+      ],
+      "first_known_date": "2026-09-09",
+      "design_family": "evidence system + editorial product site",
+      "resources_created": [
+        "15 skills",
+        "6 agents",
+        "finding contract",
+        "discoverability contract",
+        "registry v0.3",
+        "E2 pre-registered harness",
+        "site content model"
+      ],
+      "resources_reused": [
+        "v0.2.1 framework from supernova-catalogo@compound-design-framework",
+        "Interface/Motion heuristics (Jakub Krehel, Emil Kowalski, MIT)",
+        "Every Compound Engineering architecture (MIT)"
+      ],
+      "confidence": "high",
+      "captured": "yes (M10 v0.2.1, M12 v0.3.0-alpha.1, M13 product experience)",
+      "privacy": "public-safe",
+      "authorship": "author",
+      "notes": ""
+    }
+  ]
+}

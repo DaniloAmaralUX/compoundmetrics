@@ -1,0 +1,2742 @@
+{
+ "milestone": "V03",
+ "build": "M03",
+ "source_sha": "781d086",
+ "run_at": "2026-09-09T15:49:54.114Z",
+ "instrument": "cl-audit playbook (compound-labs-design@364430b, skills/compound-labs-design/references/audit-playbook.md) — deterministic pattern subset; Phase-3 vetting by reading is recorded as NOT_VERIFIED for categories with no static rule",
+ "files_scanned": 322,
+ "totals": {
+  "hover": 34,
+  "gatedHover": 1,
+  "tabular": 3,
+  "reduced": 54,
+  "anim": 278,
+  "numbers": 5931
+ },
+ "categories": {
+  "1-hierarquia": {
+   "state": "NOT_VERIFIED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "2-tipografia": {
+   "state": "CHECKED",
+   "findings": 149,
+   "files": 48,
+   "high": 0
+  },
+  "3-cor": {
+   "state": "CHECKED",
+   "findings": 106,
+   "files": 44,
+   "high": 0
+  },
+  "4-superficies": {
+   "state": "CHECKED",
+   "findings": 15,
+   "files": 10,
+   "high": 15
+  },
+  "5-motion-easing": {
+   "state": "CHECKED",
+   "findings": 20,
+   "files": 3,
+   "high": 0
+  },
+  "6-motion-physics": {
+   "state": "CHECKED",
+   "findings": 2,
+   "files": 1,
+   "high": 2
+  },
+  "7-performance": {
+   "state": "CHECKED",
+   "findings": 5,
+   "files": 4,
+   "high": 0
+  },
+  "8-acessibilidade": {
+   "state": "CHECKED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  }
+ },
+ "findings": [
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/app/(shell)/docs/components/dithered-object/page.tsx",
+   "line": 203,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/app/(shell)/docs/components/dithered-object/page.tsx",
+   "line": 68,
+   "snippet": "#066aff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/app/(shell)/docs/components/glass-object/page.tsx",
+   "line": 232,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/app/(shell)/docs/components/glass-object/page.tsx",
+   "line": 90,
+   "snippet": "#066aff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/app/(shell)/docs/components/particle-object/page.tsx",
+   "line": 217,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/app/(shell)/docs/components/particle-reveal/page.tsx",
+   "line": 86,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 148,
+   "snippet": "animation: hero-enter 600ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 163,
+   "snippet": "animation: hero-panel-enter 1000ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 170,
+   "snippet": "transition:\n    opacity 700ms cubic-bezier(0.23, 1, 0.32, 1),\n    transform 700ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 216,
+   "snippet": "animation: marquee-scroll var(--marquee-duration, 60s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 253,
+   "snippet": "animation: snippet-enter 300ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 273,
+   "snippet": "animation: hiw-cursor 2400ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 292,
+   "snippet": "animation: hiw-tile-selected 2400ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 306,
+   "snippet": "animation: hiw-type 1800ms steps(52) 300ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 316,
+   "snippet": "animation: hiw-caret 900ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 354,
+   "snippet": "animation: hiw-swap-old 2600ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 358,
+   "snippet": "animation: hiw-swap-new 2600ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 376,
+   "snippet": "animation: hiw-flash-line 2600ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 392,
+   "snippet": "transition:\n    opacity 350ms cubic-bezier(0.23, 1, 0.32, 1),\n    transform 350ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 412,
+   "snippet": "animation: hero-enter-fade 400ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 416,
+   "snippet": "animation: hero-enter-fade 400ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 421,
+   "snippet": "transition: opacity 300ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 539,
+   "snippet": "transition:\n    --fade-top 0.25s ease,\n    --fade-bottom 0.25s ease,\n    --sb-alpha 0.2s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 612,
+   "snippet": "transition: opacity 0.3s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "7-performance",
+   "check": "animated-layout-props",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 539,
+   "snippet": "transition:\n    --fade-top 0.25s ease,\n    --fade-bottom",
+   "description": "layout properties transitioned"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/app/layout.tsx",
+   "line": 64,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/app/layout.tsx",
+   "line": 65,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/canvasui/DitheredObject.tsx",
+   "line": 90,
+   "snippet": "#066aff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/canvasui/DitheredObject.tsx",
+   "line": 938,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/canvasui/DitheredObject.tsx",
+   "line": 1153,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/canvasui/GlassObject.tsx",
+   "line": 98,
+   "snippet": "#066aff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/canvasui/GlassObject.tsx",
+   "line": 837,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/canvasui/ParticleObject.tsx",
+   "line": 725,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/canvasui/ParticleReveal.tsx",
+   "line": 64,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/canvasui/ParticleReveal.tsx",
+   "line": 202,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/catalog/component-catalog.tsx",
+   "line": 36,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/catalog/component-catalog.tsx",
+   "line": 37,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/catalog/component-catalog.tsx",
+   "line": 141,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/catalog/component-catalog.tsx",
+   "line": 165,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/catalog/component-catalog.tsx",
+   "line": 182,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/catalog/component-catalog.tsx",
+   "line": 98,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/catalog/component-catalog.tsx",
+   "line": 120,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/common/flag-notice.tsx",
+   "line": 100,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/common/flag-notice.tsx",
+   "line": 110,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "6-motion-physics",
+   "check": "scale-zero",
+   "severity": "HIGH",
+   "file": "src/components/common/preview-video.tsx",
+   "line": 87,
+   "snippet": "scale-0",
+   "description": "scale(0) entrance/exit"
+  },
+  {
+   "category": "6-motion-physics",
+   "check": "scale-zero",
+   "severity": "HIGH",
+   "file": "src/components/common/preview-video.tsx",
+   "line": 87,
+   "snippet": "scale-0",
+   "description": "scale(0) entrance/exit"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/common/site-logo.tsx",
+   "line": 76,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/common/site-search.tsx",
+   "line": 389,
+   "snippet": "text-[14px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/common/site-search.tsx",
+   "line": 391,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/common/site-search.tsx",
+   "line": 398,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/common/site-search.tsx",
+   "line": 410,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/common/site-search.tsx",
+   "line": 389,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/demos/demo-controls.tsx",
+   "line": 226,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/demos/demo-controls.tsx",
+   "line": 233,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/demos/demo-controls.tsx",
+   "line": 267,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/demos/demo-controls.tsx",
+   "line": 274,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/demos/demo-controls.tsx",
+   "line": 289,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/demos/demo-controls.tsx",
+   "line": 390,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/api-reference.tsx",
+   "line": 19,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/api-reference.tsx",
+   "line": 22,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/api-reference.tsx",
+   "line": 25,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/api-reference.tsx",
+   "line": 41,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/api-reference.tsx",
+   "line": 44,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/api-reference.tsx",
+   "line": 49,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/api-reference.tsx",
+   "line": 55,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/code-block.tsx",
+   "line": 18,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/code-block.tsx",
+   "line": 29,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/code-block.tsx",
+   "line": 35,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/code-tabs.tsx",
+   "line": 46,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/code-tabs.tsx",
+   "line": 65,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/code-tabs.tsx",
+   "line": 70,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/component-doc.tsx",
+   "line": 97,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/component-doc.tsx",
+   "line": 110,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/component-doc.tsx",
+   "line": 180,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/component-doc.tsx",
+   "line": 198,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/copy-button.tsx",
+   "line": 39,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/copy-menu.tsx",
+   "line": 351,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/copy-menu.tsx",
+   "line": 395,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/dependency-tabs.tsx",
+   "line": 50,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/dependency-tabs.tsx",
+   "line": 68,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/docs-sidebar.tsx",
+   "line": 136,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/docs/highlight.ts",
+   "line": 88,
+   "snippet": "#404040",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/docs/highlight.ts",
+   "line": 89,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/docs/highlight.ts",
+   "line": 90,
+   "snippet": "#737373",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/docs/highlight.ts",
+   "line": 91,
+   "snippet": "#a3a3a3",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/docs/highlight.ts",
+   "line": 92,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/docs/highlight.ts",
+   "line": 96,
+   "snippet": "#b3b3b3",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/docs/highlight.ts",
+   "line": 97,
+   "snippet": "#fafafa",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/docs/highlight.ts",
+   "line": 98,
+   "snippet": "#8a8a8a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/docs/highlight.ts",
+   "line": 99,
+   "snippet": "#595959",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/docs/highlight.ts",
+   "line": 100,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/install-tabs.tsx",
+   "line": 60,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/install-tabs.tsx",
+   "line": 89,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/install-tabs.tsx",
+   "line": 107,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/link-cards.tsx",
+   "line": 29,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "7-performance",
+   "check": "animated-layout-props",
+   "severity": "MEDIUM",
+   "file": "src/components/docs/scrubber.tsx",
+   "line": 179,
+   "snippet": "transition: isDragging\n              ? \"none\"\n              : \"width",
+   "description": "layout properties transitioned"
+  },
+  {
+   "category": "7-performance",
+   "check": "animated-layout-props",
+   "severity": "MEDIUM",
+   "file": "src/components/docs/scrubber.tsx",
+   "line": 206,
+   "snippet": "transition: isDragging\n              ? \"none\"\n              : \"left",
+   "description": "layout properties transitioned"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/snippet-tabs.tsx",
+   "line": 56,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/snippet-tabs.tsx",
+   "line": 78,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/snippet-tabs.tsx",
+   "line": 84,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/docs/snippet-tabs.tsx",
+   "line": 90,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 68,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 78,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 94,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 134,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 144,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 207,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 226,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 229,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 239,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 245,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 250,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-item-panel.tsx",
+   "line": 303,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-sidebar.tsx",
+   "line": 58,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-sidebar.tsx",
+   "line": 63,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-sidebar.tsx",
+   "line": 135,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/gallery/library-sidebar.tsx",
+   "line": 174,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/agents.tsx",
+   "line": 108,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/agents.tsx",
+   "line": 138,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/agents.tsx",
+   "line": 183,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/credits.tsx",
+   "line": 24,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/credits.tsx",
+   "line": 27,
+   "snippet": "text-[28px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/credits.tsx",
+   "line": 31,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/credits.tsx",
+   "line": 38,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/credits.tsx",
+   "line": 41,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/cta.tsx",
+   "line": 49,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/cta.tsx",
+   "line": 60,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/landing/cta.tsx",
+   "line": 19,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/landing/cta.tsx",
+   "line": 34,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/faq.tsx",
+   "line": 60,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/footer.tsx",
+   "line": 87,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/footer.tsx",
+   "line": 90,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/footer.tsx",
+   "line": 99,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/framework-tabs.tsx",
+   "line": 37,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/framework-tabs.tsx",
+   "line": 54,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/framework-tabs.tsx",
+   "line": 62,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/gallery-marquee.tsx",
+   "line": 38,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/gallery-marquee.tsx",
+   "line": 41,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/gallery.tsx",
+   "line": 29,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/landing/hero-reel.tsx",
+   "line": 68,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/landing/hero-reel.tsx",
+   "line": 146,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/hero.tsx",
+   "line": 41,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/hero.tsx",
+   "line": 52,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/hero.tsx",
+   "line": 84,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/hero.tsx",
+   "line": 97,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/hero.tsx",
+   "line": 108,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/hero.tsx",
+   "line": 113,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/hero.tsx",
+   "line": 113,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/how-it-works.tsx",
+   "line": 59,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/how-it-works.tsx",
+   "line": 90,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/how-it-works.tsx",
+   "line": 246,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/landing/mobile-menu.tsx",
+   "line": 68,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/dithered-object-entry.tsx",
+   "line": 56,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/glass-object-entry.tsx",
+   "line": 53,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/glass-object-entry.tsx",
+   "line": 53,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/glass-object-entry.tsx",
+   "line": 72,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/glass-object-entry.tsx",
+   "line": 72,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/particle-object-entry.tsx",
+   "line": 56,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/particle-reveal-entry.tsx",
+   "line": 29,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/peel-entry.tsx",
+   "line": 40,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/peel-entry.tsx",
+   "line": 84,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/peel-entry.tsx",
+   "line": 43,
+   "snippet": "#3a382f",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/peel-entry.tsx",
+   "line": 43,
+   "snippet": "#ece9e2",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/entries/shared.tsx",
+   "line": 22,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 112,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 122,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 169,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 181,
+   "snippet": "text-[14px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 203,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 206,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 208,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 219,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 242,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 264,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 266,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 427,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 451,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 531,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 598,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 602,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 111,
+   "snippet": "#ece9e2",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 111,
+   "snippet": "#3a382f",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 112,
+   "snippet": "#2f5d8a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 118,
+   "snippet": "#c9c5b8",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 118,
+   "snippet": "#dedad0",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 122,
+   "snippet": "#a8a496",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 122,
+   "snippet": "#f2efe8",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 122,
+   "snippet": "#a8a496",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 135,
+   "snippet": "#b5b1a3",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 135,
+   "snippet": "#d3cfc2",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 145,
+   "snippet": "#b5b1a3",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 148,
+   "snippet": "#b5b1a3",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 152,
+   "snippet": "#b5b1a3",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 154,
+   "snippet": "#a03123",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 156,
+   "snippet": "#3f6b34",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 162,
+   "snippet": "#b5b1a3",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/components/playground/mock-site.tsx",
+   "line": 169,
+   "snippet": "#726e60",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/playground-actions.tsx",
+   "line": 173,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/playground-client.tsx",
+   "line": 50,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/playground-sidebar.tsx",
+   "line": 101,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/playground-sidebar.tsx",
+   "line": 107,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/playground-sidebar.tsx",
+   "line": 128,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/playground-sidebar.tsx",
+   "line": 201,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/preview-boundary.tsx",
+   "line": 23,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/playground/preview-boundary.tsx",
+   "line": 75,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/schema-controls.tsx",
+   "line": 34,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/playground/schema-controls.tsx",
+   "line": 65,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/screens/screen-browser.tsx",
+   "line": 44,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/studio/studio-client.tsx",
+   "line": 338,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/studio/studio-client.tsx",
+   "line": 110,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/studio/studio-client.tsx",
+   "line": 287,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/studio/studio-client.tsx",
+   "line": 323,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/studio/studio-client.tsx",
+   "line": 382,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/studio/studio-client.tsx",
+   "line": 400,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/components/ui/badge.tsx",
+   "line": 8,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/ui/button.tsx",
+   "line": 7,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/components/ui/button.tsx",
+   "line": 7,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/ui/input.tsx",
+   "line": 12,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/ui/textarea.tsx",
+   "line": 10,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/asciify-demo.tsx",
+   "line": 75,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/asciify-demo.tsx",
+   "line": 76,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/cloth-demo.tsx",
+   "line": 119,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/clouds-demo.tsx",
+   "line": 72,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/demo-image-cycler.tsx",
+   "line": 32,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/demos/demo-image-cycler.tsx",
+   "line": 80,
+   "snippet": "transition: shouldReduceMotion\n                ? `opacity 0.4s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/dithered-object-demo.tsx",
+   "line": 239,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/dithered-object-demo.tsx",
+   "line": 42,
+   "snippet": "#066aff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/dithered-object-demo.tsx",
+   "line": 43,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/dithered-object-demo.tsx",
+   "line": 44,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/demos/dithered-object-demo.tsx",
+   "line": 281,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/glass-object-demo.tsx",
+   "line": 282,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/glass-object-demo.tsx",
+   "line": 45,
+   "snippet": "#066aff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/glass-object-demo.tsx",
+   "line": 46,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/glass-object-demo.tsx",
+   "line": 47,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/glass-object-demo.tsx",
+   "line": 389,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/demos/glass-object-demo.tsx",
+   "line": 333,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/particle-object-demo.tsx",
+   "line": 245,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/particle-object-demo.tsx",
+   "line": 45,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/particle-object-demo.tsx",
+   "line": 46,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/particle-object-demo.tsx",
+   "line": 342,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/demos/particle-object-demo.tsx",
+   "line": 292,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/particle-reveal-demo.tsx",
+   "line": 114,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/particle-reveal-demo.tsx",
+   "line": 182,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/particle-reveal-demo.tsx",
+   "line": 154,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 129,
+   "snippet": "text-[15px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 132,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 138,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 156,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 179,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 203,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 238,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 260,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 263,
+   "snippet": "text-[14px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 281,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 284,
+   "snippet": "text-[14px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 290,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 295,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 332,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/peel-demo.tsx",
+   "line": 371,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/shatter-demo.tsx",
+   "line": 37,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/demos/shatter-demo.tsx",
+   "line": 38,
+   "snippet": "#0a0a0a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/DitheredObject/DitheredObjectVanilla.ts",
+   "line": 81,
+   "snippet": "#066aff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/DitheredObject/DitheredObjectVanilla.ts",
+   "line": 411,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/DitheredObject/DitheredObjectVanilla.ts",
+   "line": 529,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/GlassObject/GlassObjectVanilla.ts",
+   "line": 94,
+   "snippet": "#066aff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/GlassObject/GlassObjectVanilla.ts",
+   "line": 828,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/ParticleObject/ParticleObjectVanilla.ts",
+   "line": 721,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/ParticleReveal/ParticleRevealVanilla.ts",
+   "line": 54,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/ParticleReveal/ParticleRevealVanilla.ts",
+   "line": 192,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/gallery/react-bits-preview.test.ts",
+   "line": 69,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/gallery/react-bits-preview.test.ts",
+   "line": 93,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/lib/gallery/shadcn-preview.test.ts",
+   "line": 179,
+   "snippet": "animation: accordion-down 0.2s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/asciify.ts",
+   "line": 30,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/blaze.ts",
+   "line": 18,
+   "snippet": "#ff660d",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/blaze.ts",
+   "line": 19,
+   "snippet": "#ff6e1a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/bubble.ts",
+   "line": 8,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/bubble.ts",
+   "line": 9,
+   "snippet": "#4a74b8",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/bubble.ts",
+   "line": 10,
+   "snippet": "#69696a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/dithered-object.ts",
+   "line": 22,
+   "snippet": "#066aff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/droplets.ts",
+   "line": 23,
+   "snippet": "#8fb4ff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/grid.ts",
+   "line": 24,
+   "snippet": "#0055ff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/hex-float.ts",
+   "line": 34,
+   "snippet": "#101014",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/laser.ts",
+   "line": 22,
+   "snippet": "#0d59ff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/liquid.ts",
+   "line": 18,
+   "snippet": "#425bff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/magnify.ts",
+   "line": 8,
+   "snippet": "#cccccc",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/retro-dither.ts",
+   "line": 20,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/control-schemas/retro-dither.ts",
+   "line": 21,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/schema-values.test.ts",
+   "line": 33,
+   "snippet": "#00ff00",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/schema-values.test.ts",
+   "line": 73,
+   "snippet": "#00ff00",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/schema-values.test.ts",
+   "line": 98,
+   "snippet": "#ABCDEF",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/schema-values.test.ts",
+   "line": 103,
+   "snippet": "#abcdef",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/schema-values.test.ts",
+   "line": 175,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/schema-values.test.ts",
+   "line": 176,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/schema-values.test.ts",
+   "line": 177,
+   "snippet": "#425bff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/url-state.test.ts",
+   "line": 22,
+   "snippet": "#425bff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/url-state.test.ts",
+   "line": 63,
+   "snippet": "#ff0000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/lib/playground/url-state.test.ts",
+   "line": 69,
+   "snippet": "#ff0000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  }
+ ],
+ "findings_truncated": 0
+}

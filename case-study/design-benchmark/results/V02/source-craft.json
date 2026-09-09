@@ -1,0 +1,231 @@
+{
+ "milestone": "V02",
+ "build": "M07",
+ "source_sha": "54fcaf0e4cb86a989e2eeb2b1452eb9b7b5d3038",
+ "run_at": "2026-09-09T15:49:54.071Z",
+ "instrument": "cl-audit playbook (compound-labs-design@364430b, skills/compound-labs-design/references/audit-playbook.md) — deterministic pattern subset; Phase-3 vetting by reading is recorded as NOT_VERIFIED for categories with no static rule",
+ "files_scanned": 29,
+ "totals": {
+  "hover": 2,
+  "gatedHover": 0,
+  "tabular": 1,
+  "reduced": 1,
+  "anim": 7,
+  "numbers": 7725
+ },
+ "categories": {
+  "1-hierarquia": {
+   "state": "NOT_VERIFIED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "2-tipografia": {
+   "state": "CHECKED",
+   "findings": 3,
+   "files": 2,
+   "high": 0
+  },
+  "3-cor": {
+   "state": "CHECKED",
+   "findings": 12,
+   "files": 1,
+   "high": 0
+  },
+  "4-superficies": {
+   "state": "CHECKED",
+   "findings": 1,
+   "files": 1,
+   "high": 1
+  },
+  "5-motion-easing": {
+   "state": "CHECKED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "6-motion-physics": {
+   "state": "CHECKED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "7-performance": {
+   "state": "CHECKED",
+   "findings": 1,
+   "files": 1,
+   "high": 0
+  },
+  "8-acessibilidade": {
+   "state": "CHECKED",
+   "findings": 1,
+   "files": 1,
+   "high": 0
+  }
+ },
+ "findings": [
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 9,
+   "snippet": "#2b2b31",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 10,
+   "snippet": "#141417",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 13,
+   "snippet": "#9db9de",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 14,
+   "snippet": "#d3cdc9",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 15,
+   "snippet": "#e8b184",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 16,
+   "snippet": "#d98e63",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 19,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 20,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 21,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 24,
+   "snippet": "#000000",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 25,
+   "snippet": "#3a2c22",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "components/site/logo.tsx",
+   "line": 36,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/themes/mini-preview.tsx",
+   "line": 18,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "components/themes/mini-preview.tsx",
+   "line": 28,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "components/ui/button.tsx",
+   "line": 8,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "components/ui/button.tsx",
+   "line": 8,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "registry/studio/status-badge.tsx",
+   "line": 32,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "8-acessibilidade",
+   "check": "hover-without-gate",
+   "severity": "LOW",
+   "file": "(global)",
+   "line": 0,
+   "snippet": ":hover rules 2, @media (hover: hover) gates 0",
+   "description": "hover styles without an @media (hover: hover) gate (checked globally: count of :hover rules vs gated)"
+  }
+ ],
+ "findings_truncated": 0
+}

@@ -1,0 +1,212 @@
+{
+ "ENTRY:desktop": {
+  "route": "/",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 65
+  },
+  "hero": {
+   "x": 0,
+   "y": 64,
+   "width": 1440,
+   "height": 771
+  },
+  "section:Processo": {
+   "x": 0,
+   "y": 64,
+   "width": 1440,
+   "height": 771
+  },
+  "footer": {
+   "x": 0,
+   "y": 835,
+   "width": 1440,
+   "height": 65
+  },
+  "_page": {
+   "width": 1440,
+   "height": 900
+  }
+ },
+ "ENTRY:mobile": {
+  "route": "/",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 65
+  },
+  "hero": {
+   "x": 0,
+   "y": -757,
+   "width": 390,
+   "height": 1536
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": -757,
+   "width": 390,
+   "height": 1536
+  },
+  "footer": {
+   "x": 0,
+   "y": 779,
+   "width": 390,
+   "height": 65
+  },
+  "_page": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "DISCOVERY:desktop": {
+  "route": "/lifeline",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 65
+  },
+  "hero": {
+   "x": 0,
+   "y": 64,
+   "width": 1440,
+   "height": 771
+  },
+  "section:Your Name": {
+   "x": 0,
+   "y": 64,
+   "width": 1440,
+   "height": 771
+  },
+  "footer": {
+   "x": 0,
+   "y": 835,
+   "width": 1440,
+   "height": 65
+  },
+  "_page": {
+   "width": 1440,
+   "height": 900
+  }
+ },
+ "DISCOVERY:mobile": {
+  "route": "/lifeline",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 65
+  },
+  "hero": {
+   "x": 0,
+   "y": -1039,
+   "width": 390,
+   "height": 1818
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": -1039,
+   "width": 390,
+   "height": 1818
+  },
+  "footer": {
+   "x": 0,
+   "y": 779,
+   "width": 390,
+   "height": 65
+  },
+  "_page": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "INTERACTION:desktop": {
+  "route": "/lifeline",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 65
+  },
+  "hero": {
+   "x": 0,
+   "y": 64,
+   "width": 1440,
+   "height": 771
+  },
+  "section:Your Name": {
+   "x": 0,
+   "y": 64,
+   "width": 1440,
+   "height": 771
+  },
+  "footer": {
+   "x": 0,
+   "y": 835,
+   "width": 1440,
+   "height": 65
+  },
+  "_page": {
+   "width": 1440,
+   "height": 900
+  }
+ },
+ "INTERACTION:mobile": {
+  "route": "/lifeline",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 65
+  },
+  "hero": {
+   "x": 0,
+   "y": -1039,
+   "width": 390,
+   "height": 1818
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": -1039,
+   "width": 390,
+   "height": 1818
+  },
+  "footer": {
+   "x": 0,
+   "y": 779,
+   "width": 390,
+   "height": 65
+  },
+  "_page": {
+   "width": 390,
+   "height": 844
+  }
+ }
+}

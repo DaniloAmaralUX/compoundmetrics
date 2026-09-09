@@ -1,0 +1,342 @@
+{
+ "ENTRY:desktop": {
+  "route": "/",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 56
+  },
+  "hero": {
+   "x": 0,
+   "y": 56,
+   "width": 1440,
+   "height": 561
+  },
+  "section:section-0": {
+   "x": 0,
+   "y": 56,
+   "width": 1440,
+   "height": 561
+  },
+  "section:section-1": {
+   "x": 0,
+   "y": 617,
+   "width": 1440,
+   "height": 538
+  },
+  "footer": {
+   "x": 0,
+   "y": 1155,
+   "width": 1440,
+   "height": 96
+  },
+  "h1": {
+   "x": 529,
+   "y": 192,
+   "width": 383,
+   "height": 60
+  },
+  "primary_action": {
+   "x": 468,
+   "y": 364,
+   "width": 43,
+   "height": 28
+  },
+  "_page": {
+   "width": 1440,
+   "height": 1251
+  }
+ },
+ "ENTRY:mobile": {
+  "route": "/",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 246,
+   "width": 390,
+   "height": 56
+  },
+  "hero": {
+   "x": 0,
+   "y": 56,
+   "width": 390,
+   "height": 533
+  },
+  "section:section-0": {
+   "x": 0,
+   "y": 56,
+   "width": 390,
+   "height": 533
+  },
+  "section:section-1": {
+   "x": 0,
+   "y": 589,
+   "width": 390,
+   "height": 1454
+  },
+  "footer": {
+   "x": 0,
+   "y": 2043,
+   "width": 390,
+   "height": 56
+  },
+  "h1": {
+   "x": 80,
+   "y": 160,
+   "width": 230,
+   "height": 40
+  },
+  "primary_action": {
+   "x": 60,
+   "y": 340,
+   "width": 43,
+   "height": 28
+  },
+  "_page": {
+   "width": 436,
+   "height": 2099
+  }
+ },
+ "DISCOVERY:desktop": {
+  "route": "/docs/fundamentos",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 56
+  },
+  "hero": {
+   "x": 0,
+   "y": 56,
+   "width": 1440,
+   "height": 916
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 56,
+   "width": 1440,
+   "height": 916
+  },
+  "footer": {
+   "x": 0,
+   "y": 972,
+   "width": 1440,
+   "height": 96
+  },
+  "h1": {
+   "x": 368,
+   "y": 104,
+   "width": 225,
+   "height": 40
+  },
+  "primary_action": {
+   "x": 56,
+   "y": 158,
+   "width": 83,
+   "height": 30
+  },
+  "_page": {
+   "width": 1440,
+   "height": 1068
+  }
+ },
+ "DISCOVERY:mobile": {
+  "route": "/docs/fundamentos",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 527,
+   "width": 390,
+   "height": 56
+  },
+  "hero": {
+   "x": 0,
+   "y": 56,
+   "width": 390,
+   "height": 1313
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 56,
+   "width": 390,
+   "height": 1313
+  },
+  "footer": {
+   "x": 0,
+   "y": 1369,
+   "width": 390,
+   "height": 136
+  },
+  "h1": {
+   "x": 24,
+   "y": 80,
+   "width": 225,
+   "height": 40
+  },
+  "primary_action": {
+   "x": 0,
+   "y": 527,
+   "width": 0,
+   "height": 0
+  },
+  "_page": {
+   "width": 390,
+   "height": 1505
+  }
+ },
+ "DETAIL:desktop": {
+  "route": "/docs/components/button",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 1170,
+   "width": 1440,
+   "height": 56
+  },
+  "hero": {
+   "x": 0,
+   "y": 56,
+   "width": 1440,
+   "height": 5503
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 56,
+   "width": 1440,
+   "height": 5503
+  },
+  "footer": {
+   "x": 0,
+   "y": 5559,
+   "width": 1440,
+   "height": 96
+  },
+  "h1": {
+   "x": 368,
+   "y": 104,
+   "width": 112,
+   "height": 40
+  },
+  "primary_action": {
+   "x": 56,
+   "y": 1328,
+   "width": 83,
+   "height": 30
+  },
+  "_page": {
+   "width": 1440,
+   "height": 5655
+  }
+ },
+ "DETAIL:mobile": {
+  "route": "/docs/components/button",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 3294,
+   "width": 390,
+   "height": 56
+  },
+  "hero": {
+   "x": 0,
+   "y": 56,
+   "width": 390,
+   "height": 5721
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 56,
+   "width": 390,
+   "height": 5721
+  },
+  "footer": {
+   "x": 0,
+   "y": 5777,
+   "width": 390,
+   "height": 136
+  },
+  "h1": {
+   "x": 24,
+   "y": 80,
+   "width": 112,
+   "height": 40
+  },
+  "primary_action": {
+   "x": 0,
+   "y": 3294,
+   "width": 0,
+   "height": 0
+  },
+  "_page": {
+   "width": 390,
+   "height": 5913
+  }
+ },
+ "INTERACTION:desktop": {
+  "route": "/blocos/playground",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 900
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 900
+  },
+  "_page": {
+   "width": 1440,
+   "height": 900
+  }
+ },
+ "INTERACTION:mobile": {
+  "route": "/blocos/playground",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 881
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 881
+  },
+  "_page": {
+   "width": 390,
+   "height": 881
+  }
+ }
+}

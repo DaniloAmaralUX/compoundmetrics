@@ -12,5 +12,7 @@ export default defineConfig([
     "node_modules/**",
     "public/**",
     "compound-design/**",
+    ".research/**",
+    "scripts/**",
   ]),
 ]);

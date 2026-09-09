@@ -1,0 +1,322 @@
+{
+ "milestone": "V10",
+ "build": "M12",
+ "name": "Compound Design v0.3.0-alpha.1 — production",
+ "tool_ids": [
+  "tool-24"
+ ],
+ "tools": [
+  "Compound Metrics / Compound Design (cd.guide)"
+ ],
+ "repository": "DaniloAmaralUX/compoundmetrics",
+ "source_sha": "a7f8319859263924a90d2f293be5cfd3c1c9cbab",
+ "representative_url": "https://compoundmetrics.vercel.app/",
+ "equivalent_deployments": [
+  "dpl_6Av1MuU5xvbQAnS6uBkWVvKcUoA9 (production, compoundmetrics)",
+  "dpl_rJaafo9dBEAnsqyFvLQtKBFTHxHP (project cd.guide, https://cdguide-seven.vercel.app/, same commit)"
+ ],
+ "date_range": "2026-09-09",
+ "captured_at": "2026-09-09T15:50:47.960Z",
+ "capture_method": "exact commit built locally (static export served by scripts/lib/serve.mjs); playwright-core 1.63.0; Chromium 141.0.7390.37; reducedMotion=reduce, animations=disabled, deviceScaleFactor=1, colorScheme=dark",
+ "build_adjustments": [],
+ "viewports": {
+  "desktop": {
+   "width": 1440,
+   "height": 900
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "surfaces": {
+  "ENTRY": "/",
+  "DISCOVERY": null,
+  "DETAIL": null,
+  "INTERACTION": null,
+  "MOBILE_ENTRY": "/"
+ },
+ "visual_fingerprint": {
+  "ahash16_entry_top_band": "20000000000000001ff81ff81ff80ff00d700ff00000000005a0000000000000",
+  "dom_signature": "c826737fa171477cedfaa8c9f14d8b96465e3576af3692c2f2de9aad06498079",
+  "css_sha256": "c13b1056792748c3aaed27c7a2f13ec89f8047f7ac381e3f09c3273104d844ba",
+  "typography": "9d6fb8a08439e45ac1bd175415c4a1594948fb254fb964f46e6b53522d0e689a",
+  "color": "46105a383b436f558b36f29d48c6a5449c85eff912dacd460de7335864c57b9c",
+  "section_order": [
+   "nav.page-module___8aEwW__nav",
+   "header.page-module___8aEwW__hero",
+   "section.page-module___8aEwW__evidenceSection",
+   "section.page-module___8aEwW__timelineSection",
+   "section.page-module___8aEwW__evidenceSection",
+   "section.page-module___8aEwW__aiSection",
+   "section.page-module___8aEwW__resourcesSection",
+   "section.page-module___8aEwW__aiSection",
+   "section.page-module___8aEwW__verificationSection",
+   "section.page-module___8aEwW__aiSection",
+   "section.page-module___8aEwW__versionSection",
+   "footer.page-module___8aEwW__footer"
+  ],
+  "nav_links": [],
+  "landmarks": [
+   "main",
+   "nav",
+   "header",
+   "section",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "section",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "section",
+   "article",
+   "article",
+   "section",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "section",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "section",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "article",
+   "section",
+   "section",
+   "article",
+   "article",
+   "article",
+   "section",
+   "footer"
+  ]
+ },
+ "fingerprint_detail": {
+  "ENTRY": {
+   "font_families": [
+    "GeistMono×177",
+    "GeistSans×129"
+   ],
+   "font_sizes": [
+    "10×128",
+    "12×38",
+    "18×23",
+    "11×22",
+    "9×15",
+    "14×12",
+    "22×10",
+    "60×9",
+    "16×8",
+    "13×6",
+    "29×6",
+    "15×6",
+    "31×6",
+    "8×6"
+   ],
+   "font_weights": [
+    "500×145",
+    "400×83",
+    "700×33",
+    "520×21",
+    "540×21",
+    "600×2",
+    "560×1"
+   ],
+   "text_colors": [
+    "rgb(154, 154, 150)×104",
+    "rgb(93, 93, 89)×80",
+    "rgb(245, 245, 243)×64",
+    "rgb(199, 199, 195)×18",
+    "rgb(215, 255, 87)×14",
+    "rgb(212, 212, 208)×13",
+    "rgb(138, 232, 255)×7",
+    "rgb(184, 184, 180)×6"
+   ],
+   "background_colors": [
+    "rgba(255, 255, 255, 0.016)×24",
+    "rgba(255, 255, 255, 0.024)×18",
+    "rgb(7, 7, 7)×7",
+    "rgba(138, 232, 255, 0.024)×6",
+    "rgba(215, 255, 87, 0.035)×2",
+    "rgba(215, 255, 87, 0.024)×2",
+    "rgba(255, 255, 255, 0.04)×1",
+    "rgb(215, 255, 87)×1"
+   ],
+   "radii": [
+    "999px×24",
+    "16px×19",
+    "50%×7",
+    "10px×5",
+    "12px×3",
+    "7px×1",
+    "14px×1"
+   ],
+   "section_order": [
+    "nav.page-module___8aEwW__nav",
+    "header.page-module___8aEwW__hero",
+    "section.page-module___8aEwW__evidenceSection",
+    "section.page-module___8aEwW__timelineSection",
+    "section.page-module___8aEwW__evidenceSection",
+    "section.page-module___8aEwW__aiSection",
+    "section.page-module___8aEwW__resourcesSection",
+    "section.page-module___8aEwW__aiSection",
+    "section.page-module___8aEwW__verificationSection",
+    "section.page-module___8aEwW__aiSection",
+    "section.page-module___8aEwW__versionSection",
+    "footer.page-module___8aEwW__footer"
+   ],
+   "landmarks": [
+    "main",
+    "nav",
+    "header",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "article",
+    "section",
+    "section",
+    "article",
+    "article",
+    "article",
+    "section",
+    "footer"
+   ],
+   "headings": [
+    "h1:Build the application.Improve the system",
+    "h2:AI knowledge should become shared capabi",
+    "h3:Useful AI practice is often tribal.",
+    "h3:Make learning compound.",
+    "h3:Share what is useful",
+    "h3:Show evidence before claims",
+    "h3:Turn failures into learning",
+    "h2:A loop that leaves the next project stro",
+    "h3:Frame",
+    "h3:Model",
+    "h3:Build",
+    "h3:Verify",
+    "h3:Polish",
+    "h3:Compound",
+    "h2:One number cannot mean “well built” and ",
+    "h3:Construction quality",
+    "h3:Evidence maturity",
+    "h2:From a framework you read to a system yo",
+    "h3:Work system",
+    "h3:Specialists as agents",
+    "h3:Durable learning",
+    "h3:Discoverability",
+    "h3:Shared finding contract",
+    "h3:Installable plugin",
+    "h2:A rewritten resource does not inherit ev",
+    "h3:Design Guide",
+    "h3:Interface Review",
+    "h3:Motion Review",
+    "h3:Quality Gate",
+    "h3:Resource Lab",
+    "h3:AI Interaction Review",
+    "h2:AI needs a different critique than ordin",
+    "h3:AI Fit",
+    "h3:Reliance",
+    "h3:Legibility",
+    "h3:Human Control",
+    "h3:Autonomy",
+    "h3:Evolution",
+    "h2:E1 remains E1. Better infrastructure is ",
+    "h2:One plugin, read directly by three hosts",
+    "h3:Add the marketplace",
+    "h3:Install the plugin",
+    "h3:Set up a project",
+    "h2:Versions are earned by a better system, "
+   ],
+   "nav_links": [],
+   "title": "Compound Design v0.3.0-alpha.1 — Work System",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:41771/_next/static/chunks/02wotpzc9lkpa.css",
+    "http://127.0.0.1:41771/_next/static/chunks/44m0zzz0xbwgr.css"
+   ]
+  }
+ },
+ "notes": [],
+ "files": {
+  "surfaces/ENTRY-desktop.png": {
+   "sha256": "470580e81c1d07f7efed929859e504eb29ad97289a78f87952b5c6a92f9486d7",
+   "bytes": 1231497
+  },
+  "desktop-full.png": {
+   "sha256": "470580e81c1d07f7efed929859e504eb29ad97289a78f87952b5c6a92f9486d7",
+   "bytes": 1231497
+  },
+  "surfaces/ENTRY-desktop-first-screen.png": {
+   "sha256": "6f6536c0f8f3a531b6e887978de4731e4bc7b101cd10e0ebdd401517f4fa117d",
+   "bytes": 100673
+  },
+  "states/ENTRY-focus-first.png": {
+   "sha256": "6f6536c0f8f3a531b6e887978de4731e4bc7b101cd10e0ebdd401517f4fa117d",
+   "bytes": 100673
+  },
+  "surfaces/ENTRY-mobile.png": {
+   "sha256": "6a2c50f08beb794a67a91184321affe73fa5b81cc09a40683fbf1df39fefa0f8",
+   "bytes": 1142761
+  },
+  "mobile-full.png": {
+   "sha256": "6a2c50f08beb794a67a91184321affe73fa5b81cc09a40683fbf1df39fefa0f8",
+   "bytes": 1142761
+  },
+  "surfaces/ENTRY-mobile-first-screen.png": {
+   "sha256": "01cf4587c501cb10262de6d216d7c5e8178904f9e60510c06d9bbee3fd63351c",
+   "bytes": 58541
+  },
+  "sections.json": {
+   "sha256": "b046939dfa879bf90dde8bb76e264c9afcd9077034d3cf7cbcba23d475bd30d2",
+   "bytes": 3111
+  }
+ }
+}

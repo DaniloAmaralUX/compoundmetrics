@@ -1,0 +1,249 @@
+{
+ "milestone": "V01",
+ "build": "M01",
+ "source_sha": "364430b9d553c6b9f87e4ff3cbc0f31eaa5d1a33",
+ "run_at": "2026-09-09T15:49:54.061Z",
+ "instrument": "cl-audit playbook (compound-labs-design@364430b, skills/compound-labs-design/references/audit-playbook.md) — deterministic pattern subset; Phase-3 vetting by reading is recorded as NOT_VERIFIED for categories with no static rule",
+ "files_scanned": 10,
+ "totals": {
+  "hover": 23,
+  "gatedHover": 2,
+  "tabular": 11,
+  "reduced": 4,
+  "anim": 66,
+  "numbers": 759
+ },
+ "categories": {
+  "1-hierarquia": {
+   "state": "NOT_VERIFIED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "2-tipografia": {
+   "state": "CHECKED",
+   "findings": 1,
+   "files": 1,
+   "high": 0
+  },
+  "3-cor": {
+   "state": "CHECKED",
+   "findings": 8,
+   "files": 7,
+   "high": 0
+  },
+  "4-superficies": {
+   "state": "CHECKED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "5-motion-easing": {
+   "state": "CHECKED",
+   "findings": 6,
+   "files": 1,
+   "high": 0
+  },
+  "6-motion-physics": {
+   "state": "CHECKED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "7-performance": {
+   "state": "CHECKED",
+   "findings": 5,
+   "files": 1,
+   "high": 0
+  },
+  "8-acessibilidade": {
+   "state": "CHECKED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  }
+ },
+ "findings": [
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "404.html",
+   "line": 8,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "audit.html",
+   "line": 8,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "index.html",
+   "line": 11,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "skills/compound-design-color.html",
+   "line": 8,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "skills/compound-design-color.html",
+   "line": 200,
+   "snippet": "#3b82f6",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "skills/compound-design-type.html",
+   "line": 8,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "skills/compound-design-ui.html",
+   "line": 8,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "skills/compound-design-ui.html",
+   "line": 122,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "skills/compound-design-ui.html",
+   "line": 122,
+   "snippet": "transition: all",
+   "description": "transition: all"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "skills/compound-design-ui.html",
+   "line": 122,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "skills/compound-design-ui.html",
+   "line": 157,
+   "snippet": "transition: all",
+   "description": "transition: all"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "skills/compound-design-ui.html",
+   "line": 217,
+   "snippet": "transition: all",
+   "description": "transition: all"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "skills.html",
+   "line": 11,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "styles.css",
+   "line": 510,
+   "snippet": "font-size: 11px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "styles.css",
+   "line": 533,
+   "snippet": "animation: status-pulse 2.4s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "styles.css",
+   "line": 696,
+   "snippet": "animation: enter 500ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "styles.css",
+   "line": 710,
+   "snippet": "animation-duration: 300ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "styles.css",
+   "line": 1246,
+   "snippet": "transition:\n    opacity 300ms cubic-bezier(0.2, 0, 0, 1),\n    transform 300ms cubic-bezier(0.2, 0, 0",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "linear-ui",
+   "severity": "LOW",
+   "file": "styles.css",
+   "line": 645,
+   "snippet": "transition: opacity 120ms linear",
+   "description": "linear easing on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "linear-ui",
+   "severity": "LOW",
+   "file": "styles.css",
+   "line": 1137,
+   "snippet": "transition: transform 240ms linear",
+   "description": "linear easing on UI transitions"
+  }
+ ],
+ "findings_truncated": 0
+}

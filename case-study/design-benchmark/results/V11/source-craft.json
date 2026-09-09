@@ -1,0 +1,681 @@
+{
+ "milestone": "V11",
+ "build": "M13",
+ "source_sha": "921d751aff5df8e14d998f993e2d171db842719d",
+ "run_at": "2026-09-09T15:49:54.288Z",
+ "instrument": "cl-audit playbook (compound-labs-design@364430b, skills/compound-labs-design/references/audit-playbook.md) — deterministic pattern subset; Phase-3 vetting by reading is recorded as NOT_VERIFIED for categories with no static rule",
+ "files_scanned": 55,
+ "totals": {
+  "hover": 15,
+  "gatedHover": 12,
+  "tabular": 6,
+  "reduced": 3,
+  "anim": 45,
+  "numbers": 295
+ },
+ "categories": {
+  "1-hierarquia": {
+   "state": "NOT_VERIFIED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "2-tipografia": {
+   "state": "CHECKED",
+   "findings": 48,
+   "files": 11,
+   "high": 0
+  },
+  "3-cor": {
+   "state": "CHECKED",
+   "findings": 8,
+   "files": 2,
+   "high": 0
+  },
+  "4-superficies": {
+   "state": "CHECKED",
+   "findings": 5,
+   "files": 4,
+   "high": 5
+  },
+  "5-motion-easing": {
+   "state": "CHECKED",
+   "findings": 5,
+   "files": 4,
+   "high": 0
+  },
+  "6-motion-physics": {
+   "state": "CHECKED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "7-performance": {
+   "state": "CHECKED",
+   "findings": 2,
+   "files": 2,
+   "high": 0
+  },
+  "8-acessibilidade": {
+   "state": "CHECKED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  }
+ },
+ "findings": [
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "compound-design/quality/e2/tasks/fixtures/jakub/fixtures/j09-customers.html",
+   "line": 14,
+   "snippet": "font-size: 24px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "compound-design/quality/e2/tasks/fixtures/jakub/fixtures/j09-customers.html",
+   "line": 21,
+   "snippet": "font-size: 14px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "compound-design/quality/e2/tasks/fixtures/jakub/fixtures/j09-customers.html",
+   "line": 27,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "compound-design/quality/e2/tasks/fixtures/jakub/fixtures/j09-customers.html",
+   "line": 16,
+   "snippet": "#d4d4d4",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "compound-design/quality/e2/tasks/fixtures/jakub/fixtures/j09-customers.html",
+   "line": 17,
+   "snippet": "#d4d4d4",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "compound-design/quality/e2/tasks/fixtures/jakub/fixtures/j09-customers.html",
+   "line": 23,
+   "snippet": "#9a9a96",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "compound-design/quality/e2/tasks/fixtures/jakub/fixtures/j09-customers.html",
+   "line": 25,
+   "snippet": "#22c55e",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "compound-design/quality/e2/tasks/fixtures/jakub/fixtures/j09-customers.html",
+   "line": 26,
+   "snippet": "#ef4444",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "compound-design/quality/e2/tasks/fixtures/jakub/fixtures/j09-customers.html",
+   "line": 27,
+   "snippet": "#2563eb",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "compound-design/quality/e2/tasks/fixtures/jakub/fixtures/j09-customers.html",
+   "line": 28,
+   "snippet": "#b91c1c",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "compound-design/quality/e2/tasks/fixtures/jakub/fixtures/j09-customers.html",
+   "line": 10,
+   "snippet": "outline: none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/app/evidence/evidence.module.css",
+   "line": 61,
+   "snippet": "font-size: 14px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/app/evidence/evidence.module.css",
+   "line": 166,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/app/evidence/evidence.module.css",
+   "line": 210,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/app/evidence/evidence.module.css",
+   "line": 270,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "7-performance",
+   "check": "animated-layout-props",
+   "severity": "MEDIUM",
+   "file": "src/app/globals.css",
+   "line": 248,
+   "snippet": "transition: top",
+   "description": "layout properties transitioned"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/app/layout.tsx",
+   "line": 25,
+   "snippet": "#0b0c0b",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/app/project/project.module.css",
+   "line": 4,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/app/resources/resources.module.css",
+   "line": 14,
+   "snippet": "font-size: 14px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/ConceptLink.module.css",
+   "line": 46,
+   "snippet": "font-size: 14px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/ConceptLink.module.css",
+   "line": 99,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/FieldGuideSearch.module.css",
+   "line": 25,
+   "snippet": "outline: none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/FieldGuideSearch.module.css",
+   "line": 29,
+   "snippet": "outline: none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 75,
+   "snippet": "font-size: 11px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 84,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 125,
+   "snippet": "font-size: 22px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 131,
+   "snippet": "font-size: 14px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 140,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 151,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 158,
+   "snippet": "font-size: 15px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 176,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 206,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 222,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 278,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 362,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 374,
+   "snippet": "font-size: 11px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 414,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Lab.module.css",
+   "line": 494,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/components/Lab.module.css",
+   "line": 195,
+   "snippet": "outline: none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/components/Lab.module.css",
+   "line": 62,
+   "snippet": "transition: transform 320ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Markdown.module.css",
+   "line": 35,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Markdown.module.css",
+   "line": 45,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Markdown.module.css",
+   "line": 92,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Timeline.module.css",
+   "line": 91,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/Timeline.module.css",
+   "line": 107,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/components/Timeline.module.css",
+   "line": 14,
+   "snippet": "animation: draw 1.2s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/components/Timeline.module.css",
+   "line": 40,
+   "snippet": "animation: settle 600ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/editorial.module.css",
+   "line": 102,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/editorial.module.css",
+   "line": 127,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/editorial.module.css",
+   "line": 153,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/editorial.module.css",
+   "line": 263,
+   "snippet": "font-size: 32px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/editorial.module.css",
+   "line": 305,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/components/editorial.module.css",
+   "line": 70,
+   "snippet": "transition: width 320ms",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "7-performance",
+   "check": "animated-layout-props",
+   "severity": "MEDIUM",
+   "file": "src/components/editorial.module.css",
+   "line": 70,
+   "snippet": "transition: width",
+   "description": "layout properties transitioned"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/shell.module.css",
+   "line": 35,
+   "snippet": "font-size: 11px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/shell.module.css",
+   "line": 58,
+   "snippet": "font-size: 14px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/shell.module.css",
+   "line": 97,
+   "snippet": "font-size: 14px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/shell.module.css",
+   "line": 130,
+   "snippet": "font-size: 17px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/shell.module.css",
+   "line": 163,
+   "snippet": "font-size: 14px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/teach.module.css",
+   "line": 71,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/teach.module.css",
+   "line": 170,
+   "snippet": "font-size: 19px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/teach.module.css",
+   "line": 174,
+   "snippet": "font-size: 16px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/teach.module.css",
+   "line": 205,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/teach.module.css",
+   "line": 222,
+   "snippet": "font-size: 12px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/teach.module.css",
+   "line": 332,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/components/teach.module.css",
+   "line": 385,
+   "snippet": "font-size: 13px",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/components/teach.module.css",
+   "line": 28,
+   "snippet": "animation: travelX 7s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/content/lab.ts",
+   "line": 70,
+   "snippet": "outline: none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  }
+ ],
+ "findings_truncated": 0
+}

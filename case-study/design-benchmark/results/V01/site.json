@@ -1,0 +1,995 @@
+{
+ "milestone": "V01",
+ "name": "Compound Labs Design (site + /audit)",
+ "tool_ids": [
+  "tool-09"
+ ],
+ "source_sha": "364430b9d553c6b9f87e4ff3cbc0f31eaa5d1a33",
+ "date_range": "2026-07-13 → 2026-07-16",
+ "overall": {
+  "PASS": 12,
+  "FAIL": 10,
+  "N/A": 1,
+  "NOT_VERIFIED": 31,
+  "score": 54.5,
+  "coverage": 41.5
+ },
+ "deterministic_only": {
+  "PASS": 12,
+  "FAIL": 10,
+  "N/A": 1,
+  "NOT_VERIFIED": 0,
+  "score": 54.5,
+  "coverage": 100
+ },
+ "judgment_only": {
+  "PASS": 0,
+  "FAIL": 0,
+  "N/A": 0,
+  "NOT_VERIFIED": 31,
+  "score": null,
+  "coverage": 0
+ },
+ "categories": {
+  "fundamentos": {
+   "PASS": 0,
+   "FAIL": 0,
+   "N/A": 0,
+   "NOT_VERIFIED": 5,
+   "score": null,
+   "coverage": 0
+  },
+  "hierarquia": {
+   "PASS": 2,
+   "FAIL": 0,
+   "N/A": 0,
+   "NOT_VERIFIED": 5,
+   "score": 100,
+   "coverage": 28.6
+  },
+  "estilo": {
+   "PASS": 2,
+   "FAIL": 3,
+   "N/A": 0,
+   "NOT_VERIFIED": 2,
+   "score": 40,
+   "coverage": 71.4
+  },
+  "acessibilidade": {
+   "PASS": 7,
+   "FAIL": 1,
+   "N/A": 0,
+   "NOT_VERIFIED": 1,
+   "score": 87.5,
+   "coverage": 88.9
+  },
+  "navegacao": {
+   "PASS": 0,
+   "FAIL": 3,
+   "N/A": 1,
+   "NOT_VERIFIED": 2,
+   "score": 0,
+   "coverage": 60
+  },
+  "carga": {
+   "PASS": 1,
+   "FAIL": 0,
+   "N/A": 0,
+   "NOT_VERIFIED": 5,
+   "score": 100,
+   "coverage": 16.7
+  },
+  "onboarding": {
+   "PASS": 0,
+   "FAIL": 0,
+   "N/A": 0,
+   "NOT_VERIFIED": 4,
+   "score": null,
+   "coverage": 0
+  },
+  "confianca": {
+   "PASS": 0,
+   "FAIL": 0,
+   "N/A": 0,
+   "NOT_VERIFIED": 4,
+   "score": null,
+   "coverage": 0
+  },
+  "formularios": {
+   "PASS": 0,
+   "FAIL": 3,
+   "N/A": 0,
+   "NOT_VERIFIED": 3,
+   "score": 0,
+   "coverage": 50
+  }
+ },
+ "items": {
+  "fundamentos/jtbd": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (source review, unblinded)",
+   "evidence": []
+  },
+  "fundamentos/macro-bet": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (source review, unblinded)",
+   "evidence": []
+  },
+  "fundamentos/convencao": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "fundamentos/restricoes": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (source review, unblinded)",
+   "evidence": []
+  },
+  "fundamentos/documentado": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (source review, unblinded)",
+   "evidence": []
+  },
+  "hierarquia/cta-3s": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "hierarquia/headings": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "hierarquia/leitura": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "hierarquia/proximidade": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "hierarquia/whitespace": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "hierarquia/cor-destaque": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "hierarquia/escala-tipo": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "estilo/espaco-base": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "FAIL",
+    "DISCOVERY": "FAIL",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "ENTRY",
+     "state": "FAIL",
+     "measured": 57.7,
+     "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+     "evidence": "41/71 spacing values are multiples of 4; off-grid: 10px×16, 2px×8, 14px×2, 18px×2, 6px×2"
+    },
+    {
+     "surface": "DISCOVERY",
+     "state": "FAIL",
+     "measured": 65.4,
+     "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+     "evidence": "34/52 spacing values are multiples of 4; off-grid: 10px×10, 2px×6, 14px×2"
+    },
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": 31.5,
+     "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+     "evidence": "196/622 spacing values are multiples of 4; off-grid: 1px×138, 5px×138, 14px×45, 6px×30, 21px×28, 3px×22, 10px×11, 2px×6"
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": 52.6,
+     "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+     "evidence": "299/568 spacing values are multiples of 4; off-grid: 14px×127, 2px×60, 1px×54, 10px×24, 6px×2, 9px×2"
+    }
+   ]
+  },
+  "estilo/paleta": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "estilo/elevacao": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "estilo/tipo-sistema": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": {
+      "families": [
+       "Inter",
+       "Geist Mono",
+       "Arial"
+      ],
+      "weights": [
+       "400",
+       "700",
+       "600",
+       "500"
+      ]
+     },
+     "expected": "PASS when ≤ 2 distinct font families (first family of the stack, excluding system fallbacks for icon/emoji) AND ≤ 4 distinct font-weights are used by visible text; FAIL otherwise.",
+     "evidence": "3 families (Inter / Geist Mono / Arial), 4 weights (400, 700, 600, 500)"
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": {
+      "families": [
+       "Inter",
+       "Geist Mono",
+       "Arial"
+      ],
+      "weights": [
+       "400",
+       "500",
+       "600"
+      ]
+     },
+     "expected": "PASS when ≤ 2 distinct font families (first family of the stack, excluding system fallbacks for icon/emoji) AND ≤ 4 distinct font-weights are used by visible text; FAIL otherwise.",
+     "evidence": "3 families (Inter / Geist Mono / Arial), 3 weights (400, 500, 600)"
+    }
+   ]
+  },
+  "estilo/radius": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "estilo/icones": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "estilo/motion": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "FAIL",
+    "DISCOVERY": "FAIL",
+    "DETAIL": "FAIL",
+    "INTERACTION": "PASS"
+   },
+   "evidence": [
+    {
+     "surface": "ENTRY",
+     "state": "FAIL",
+     "measured": {
+      "declared": 27,
+      "le300": 22
+     },
+     "expected": "Collect declared transition-duration and animation-duration values (from computed style of elements with a transition or animation); PASS when ≥ 90 % are ≤ 300 ms; entrance/transformation animations explicitly marked in the source as continuity are counted separately and reported; FAIL otherwise.",
+     "evidence": "22/27 declared durations ≤ 300 ms; > 300: 500"
+    },
+    {
+     "surface": "DISCOVERY",
+     "state": "FAIL",
+     "measured": {
+      "declared": 28,
+      "le300": 23
+     },
+     "expected": "Collect declared transition-duration and animation-duration values (from computed style of elements with a transition or animation); PASS when ≥ 90 % are ≤ 300 ms; entrance/transformation animations explicitly marked in the source as continuity are counted separately and reported; FAIL otherwise.",
+     "evidence": "23/28 declared durations ≤ 300 ms; > 300: 500"
+    },
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": {
+      "declared": 44,
+      "le300": 36
+     },
+     "expected": "Collect declared transition-duration and animation-duration values (from computed style of elements with a transition or animation); PASS when ≥ 90 % are ≤ 300 ms; entrance/transformation animations explicitly marked in the source as continuity are counted separately and reported; FAIL otherwise.",
+     "evidence": "36/44 declared durations ≤ 300 ms; > 300: 500"
+    }
+   ]
+  },
+  "acessibilidade/teclado": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "acessibilidade/foco": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "acessibilidade/contraste": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "acessibilidade/alvos": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "FAIL",
+    "DISCOVERY": "FAIL",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "ENTRY",
+     "state": "FAIL",
+     "measured": 33.3,
+     "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+     "evidence": "3/9 targets meet the rule at 390×844; worst: BUTTON \"\" 26×26; BUTTON \"\" 26×26; BUTTON \"\" 26×26; A \"Skills\" 61×32; A \"Danilo do Amaral\" 152×28; A \"Explorar skills\" 147×36"
+    },
+    {
+     "surface": "DISCOVERY",
+     "state": "FAIL",
+     "measured": 50,
+     "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+     "evidence": "4/8 targets meet the rule at 390×844; worst: BUTTON \"\" 26×26; BUTTON \"\" 26×26; BUTTON \"\" 26×26; A \"Home\" 66×32"
+    },
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": 5.3,
+     "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+     "evidence": "1/19 targets meet the rule at 390×844; worst: BUTTON \"Tema claro\" 26×26; BUTTON \"Tema escuro\" 26×26; BUTTON \"Tema do sistema\" 26×26; A \"Skills\" 61×32; A \"← Skills\" 48×21; BUTTON \"Copy\" 62×32; A \"Download .zip\" 120×32; INPUT \"\" 13×13"
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": 1.6,
+     "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+     "evidence": "1/64 targets meet the rule at 390×844; worst: BUTTON \"Tema claro\" 26×26; BUTTON \"Tema escuro\" 26×26; BUTTON \"Tema do sistema\" 26×26; A \"Skills\" 61×32; A \"← Início\" 49×21; BUTTON \"Copy\" 62×32; A \"Download .zip\" 120×32; BUTTON \"Exportar relatório\" 132×32"
+    }
+   ]
+  },
+  "acessibilidade/nao-so-cor": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "acessibilidade/alt-aria": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "acessibilidade/semantica": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "acessibilidade/reduced-motion": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "acessibilidade/zoom": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "navegacao/onde-estou": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "DISCOVERY": "FAIL",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "DISCOVERY",
+     "state": "FAIL",
+     "measured": {
+      "marked": 0,
+      "styled": 0
+     },
+     "expected": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+     "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
+    },
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": {
+      "marked": 0,
+      "styled": 0
+     },
+     "expected": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+     "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": {
+      "marked": 0,
+      "styled": 0
+     },
+     "expected": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+     "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
+    }
+   ]
+  },
+  "navegacao/menu-previsivel": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {},
+   "evidence": [
+    {
+     "surface": "site",
+     "state": "FAIL",
+     "measured": 2,
+     "expected": "PASS when the text content of the primary nav is identical (after whitespace normalisation) across every captured surface of the milestone; FAIL otherwise.",
+     "evidence": "distinct primary-nav texts across 4 surfaces: 2"
+    }
+   ]
+  },
+  "navegacao/breadcrumbs": {
+   "state": "N/A",
+   "mode": "deterministic",
+   "per_surface": {},
+   "evidence": []
+  },
+  "navegacao/busca": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "navegacao/mobile-nav": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "navegacao/links": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "FAIL",
+    "DISCOVERY": "FAIL",
+    "DETAIL": "N/A",
+    "INTERACTION": "N/A"
+   },
+   "evidence": [
+    {
+     "surface": "ENTRY",
+     "state": "FAIL",
+     "measured": {
+      "in_text": 2,
+      "distinguished": 0,
+      "axe": 0
+     },
+     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
+     "evidence": "0/2 in-text links distinguished by more than colour; axe link-in-text-block 0"
+    },
+    {
+     "surface": "DISCOVERY",
+     "state": "FAIL",
+     "measured": {
+      "in_text": 3,
+      "distinguished": 0,
+      "axe": 0
+     },
+     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
+     "evidence": "0/3 in-text links distinguished by more than colour; axe link-in-text-block 0"
+    }
+   ]
+  },
+  "carga/chunks": {
+   "state": "PASS",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "PASS",
+    "DISCOVERY": "PASS",
+    "DETAIL": "PASS",
+    "INTERACTION": "PASS"
+   },
+   "evidence": []
+  },
+  "carga/disclosure": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "carga/feedback": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "carga/loading": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "carga/prevencao": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "carga/recuperacao": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "onboarding/valor-rapido": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "onboarding/empty-states": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "onboarding/dicas-contexto": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "onboarding/progresso-fluxo": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "confianca/depoimentos": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "confianca/numeros": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "confianca/logos": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "confianca/seguranca": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "formularios/labels": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "N/A",
+    "DISCOVERY": "N/A",
+    "DETAIL": "FAIL",
+    "INTERACTION": "PASS"
+   },
+   "evidence": [
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": {
+      "inputs": 11,
+      "visibly_labelled": 0,
+      "axe_label": 11
+     },
+     "expected": "PASS when every input has a visible label (axe label rule 0 violations AND label is not visually hidden only); FAIL otherwise.",
+     "evidence": "0/11 inputs with a visible label; axe label violations 11"
+    }
+   ]
+  },
+  "formularios/erro-inline": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "formularios/tipos-campo": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "N/A",
+    "DISCOVERY": "N/A",
+    "DETAIL": "N/A",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": {
+      "candidates": 11,
+      "ok": 0
+     },
+     "expected": "PASS when email/phone/number fields use the matching input type and autocomplete tokens; FAIL otherwise.",
+     "evidence": "0/11 email/tel/number-like fields carry a matching type, inputmode or autocomplete"
+    }
+   ]
+  },
+  "formularios/input-16px": {
+   "state": "FAIL",
+   "mode": "deterministic",
+   "per_surface": {
+    "ENTRY": "N/A",
+    "DISCOVERY": "N/A",
+    "DETAIL": "FAIL",
+    "INTERACTION": "FAIL"
+   },
+   "evidence": [
+    {
+     "surface": "DETAIL",
+     "state": "FAIL",
+     "measured": [
+      {
+       "name": "checkbox",
+       "px": 13.3333
+      },
+      {
+       "name": "checkbox",
+       "px": 13.3333
+      },
+      {
+       "name": "checkbox",
+       "px": 13.3333
+      },
+      {
+       "name": "checkbox",
+       "px": 13.3333
+      },
+      {
+       "name": "checkbox",
+       "px": 13.3333
+      },
+      {
+       "name": "checkbox",
+       "px": 13.3333
+      },
+      {
+       "name": "checkbox",
+       "px": 13.3333
+      },
+      {
+       "name": "checkbox",
+       "px": 13.3333
+      },
+      {
+       "name": "checkbox",
+       "px": 13.3333
+      },
+      {
+       "name": "checkbox",
+       "px": 13.3333
+      },
+      {
+       "name": "checkbox",
+       "px": 13.3333
+      }
+     ],
+     "expected": "PASS when every visible input/select/textarea has computed font-size ≥ 16 px at 390×844; FAIL otherwise.",
+     "evidence": "inputs below 16px at 390: checkbox=13.3333px, checkbox=13.3333px, checkbox=13.3333px, checkbox=13.3333px, checkbox=13.3333px, checkbox=13.3333px, checkbox=13.3333px, checkbox=13.3333px, checkbox=13.3333px, checkbox=13.3333px, checkbox=13.3333px"
+    },
+    {
+     "surface": "INTERACTION",
+     "state": "FAIL",
+     "measured": [
+      {
+       "name": "fundamentos-jtbd",
+       "px": 13.3333
+      },
+      {
+       "name": "fundamentos-macro-bet",
+       "px": 13.3333
+      },
+      {
+       "name": "fundamentos-convencao",
+       "px": 13.3333
+      },
+      {
+       "name": "fundamentos-restricoes",
+       "px": 13.3333
+      },
+      {
+       "name": "fundamentos-documentado",
+       "px": 13.3333
+      },
+      {
+       "name": "hierarquia-cta-3s",
+       "px": 13.3333
+      },
+      {
+       "name": "hierarquia-headings",
+       "px": 13.3333
+      },
+      {
+       "name": "hierarquia-leitura",
+       "px": 13.3333
+      },
+      {
+       "name": "hierarquia-proximidade",
+       "px": 13.3333
+      },
+      {
+       "name": "hierarquia-whitespace",
+       "px": 13.3333
+      },
+      {
+       "name": "hierarquia-cor-destaque",
+       "px": 13.3333
+      },
+      {
+       "name": "hierarquia-escala-tipo",
+       "px": 13.3333
+      },
+      {
+       "name": "estilo-espaco-base",
+       "px": 13.3333
+      },
+      {
+       "name": "estilo-paleta",
+       "px": 13.3333
+      },
+      {
+       "name": "estilo-elevacao",
+       "px": 13.3333
+      },
+      {
+       "name": "estilo-tipo-sistema",
+       "px": 13.3333
+      },
+      {
+       "name": "estilo-radius",
+       "px": 13.3333
+      },
+      {
+       "name": "estilo-icones",
+       "px": 13.3333
+      },
+      {
+       "name": "estilo-motion",
+       "px": 13.3333
+      },
+      {
+       "name": "acessibilidade-teclado",
+       "px": 13.3333
+      },
+      {
+       "name": "acessibilidade-foco",
+       "px": 13.3333
+      },
+      {
+       "name": "acessibilidade-contraste",
+       "px": 13.3333
+      },
+      {
+       "name": "acessibilidade-alvos",
+       "px": 13.3333
+      },
+      {
+       "name": "acessibilidade-nao-so-cor",
+       "px": 13.3333
+      },
+      {
+       "name": "acessibilidade-alt-aria",
+       "px": 13.3333
+      },
+      {
+       "name": "acessibilidade-semantica",
+       "px": 13.3333
+      },
+      {
+       "name": "acessibilidade-reduced-motion",
+       "px": 13.3333
+      },
+      {
+       "name": "acessibilidade-zoom",
+       "px": 13.3333
+      },
+      {
+       "name": "navegacao-onde-estou",
+       "px": 13.3333
+      },
+      {
+       "name": "navegacao-menu-previsivel",
+       "px": 13.3333
+      },
+      {
+       "name": "navegacao-breadcrumbs",
+       "px": 13.3333
+      },
+      {
+       "name": "navegacao-busca",
+       "px": 13.3333
+      },
+      {
+       "name": "navegacao-mobile-nav",
+       "px": 13.3333
+      },
+      {
+       "name": "navegacao-links",
+       "px": 13.3333
+      },
+      {
+       "name": "carga-chunks",
+       "px": 13.3333
+      },
+      {
+       "name": "carga-disclosure",
+       "px": 13.3333
+      },
+      {
+       "name": "carga-feedback",
+       "px": 13.3333
+      },
+      {
+       "name": "carga-loading",
+       "px": 13.3333
+      },
+      {
+       "name": "carga-prevencao",
+       "px": 13.3333
+      },
+      {
+       "name": "carga-recuperacao",
+       "px": 13.3333
+      },
+      {
+       "name": "onboarding-valor-rapido",
+       "px": 13.3333
+      },
+      {
+       "name": "onboarding-empty-states",
+       "px": 13.3333
+      },
+      {
+       "name": "onboarding-dicas-contexto",
+       "px": 13.3333
+      },
+      {
+       "name": "onboarding-progresso-fluxo",
+       "px": 13.3333
+      },
+      {
+       "name": "confianca-depoimentos",
+       "px": 13.3333
+      },
+      {
+       "name": "confianca-numeros",
+       "px": 13.3333
+      },
+      {
+       "name": "confianca-logos",
+       "px": 13.3333
+      },
+      {
+       "name": "confianca-seguranca",
+       "px": 13.3333
+      },
+      {
+       "name": "formularios-labels",
+       "px": 13.3333
+      },
+      {
+       "name": "formularios-erro-inline",
+       "px": 13.3333
+      },
+      {
+       "name": "formularios-tipos-campo",
+       "px": 13.3333
+      },
+      {
+       "name": "formularios-input-16px",
+       "px": 13.3333
+      },
+      {
+       "name": "formularios-opcionais",
+       "px": 13.3333
+      },
+      {
+       "name": "formularios-submit-estado",
+       "px": 13.3333
+      }
+     ],
+     "expected": "PASS when every visible input/select/textarea has computed font-size ≥ 16 px at 390×844; FAIL otherwise.",
+     "evidence": "inputs below 16px at 390: fundamentos-jtbd=13.3333px, fundamentos-macro-bet=13.3333px, fundamentos-convencao=13.3333px, fundamentos-restricoes=13.3333px, fundamentos-documentado=13.3333px, hierarquia-cta-3s=13.3333px, hierarquia-headings=13.3333px, hierarquia-leitura=13.3333px, hierarquia-proximidade=13.3333px, hierarquia-whitespace=13.3333px, hierarquia-cor-destaque=13.3333px, hierarquia-escala-tipo=13.3333px, estilo-espaco-base=13.3333px, estilo-paleta=13.3333px, estilo-elevacao=13.3333px, estilo-tipo-sistema=13.3333px, estilo-radius=13.3333px, estilo-icones=13.3333px, estilo-motion=13.3333px, acessibilidade-teclado=13.3333px, acessibilidade-foco=13.3333px, acessibilidade-contraste=13.3333px, acessibilidade-alvos=13.3333px, acessibilidade-nao-so-cor=13.3333px, acessibilidade-alt-aria=13.3333px, acessibilidade-semantica=13.3333px, acessibilidade-reduced-motion=13.3333px, acessibilidade-zoom=13.3333px, navegacao-onde-estou=13.3333px, navegacao-menu-previsivel=13.3333px, navegacao-breadcrumbs=13.3333px, navegacao-busca=13.3333px, navegacao-mobile-nav=13.3333px, navegacao-links=13.3333px, carga-chunks=13.3333px, carga-disclosure=13.3333px, carga-feedback=13.3333px, carga-loading=13.3333px, carga-prevencao=13.3333px, carga-recuperacao=13.3333px, onboarding-valor-rapido=13.3333px, onboarding-empty-states=13.3333px, onboarding-dicas-contexto=13.3333px, onboarding-progresso-fluxo=13.3333px, confianca-depoimentos=13.3333px, confianca-numeros=13.3333px, confianca-logos=13.3333px, confianca-seguranca=13.3333px, formularios-labels=13.3333px, formularios-erro-inline=13.3333px, formularios-tipos-campo=13.3333px, formularios-input-16px=13.3333px, formularios-opcionais=13.3333px, formularios-submit-estado=13.3333px"
+    }
+   ]
+  },
+  "formularios/opcionais": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  },
+  "formularios/submit-estado": {
+   "state": "NOT_VERIFIED",
+   "mode": "judgment (blinded)",
+   "evidence": []
+  }
+ }
+}

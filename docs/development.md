@@ -25,6 +25,17 @@ npm run cd:selftest    # mutation tests for every gate above
 npm run cd:all         # all of it
 ```
 
+The public site consumes the framework instead of restating it, and has its own deterministic checks:
+
+```bash
+npm run content        # regenerate src/content/generated/resources.json from skills/ and agents/
+npm run content:check  # fail if that file is stale (also runs as prebuild)
+npm run site:check:static   # routes, internal links, noindex, factual literals outside src/content, generated content
+npm run site:check     # the above plus browser checks: overflow at 1440/1280/820/390/320, axe, keyboard, search
+```
+
+The browser checks use the Playwright and axe-core pinned by the E2 harness (`npm run e2:install`) and a local Chromium; they never leave localhost.
+
 The official validator is worth running locally as an independent check:
 
 ```bash
