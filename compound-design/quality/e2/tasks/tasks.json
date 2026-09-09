@@ -1,6 +1,6 @@
 {
   "task_set_version": "1.0.0",
-  "frozen_at": "2026-09-09T11:05:42.577Z",
+  "frozen_at": "2026-09-09T11:06:58.961Z",
   "rule": "Task sets are versioned. Any change after model outputs exist requires a new version and a fresh holdout.",
   "suites": {
     "jakub": {
