@@ -1,0 +1,103 @@
+{
+  "framework": "Compound Design",
+  "release": "0.2.1",
+  "releaseTheme": "Evidence Infrastructure",
+  "updatedAt": "2026-09-09",
+  "evidencePolicy": {
+    "currentLevel": "E1",
+    "runtimeUplift": "not measured",
+    "rule": "CDQI measures construction quality. CEL measures evidence maturity. They must never be merged into one claim."
+  },
+  "resources": [
+    {
+      "id": "cd",
+      "publicName": "Design Guide",
+      "kind": "orchestrator",
+      "version": "0.2.0",
+      "job": "Route the smallest sufficient Design Engineering path and delegate specialist work.",
+      "triggers": ["multi-stage design engineering work", "system-level orchestration"],
+      "nonGoals": ["replace specialist skills", "claim runtime uplift without evidence"],
+      "upstream": ["Every Compound Engineering", "Jakub Krehel skills", "Emil Kowalski skills"],
+      "provenance": "composed-and-authored",
+      "cdqi": 8.45,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": ["controlled runtime baseline", "repeated runs", "routing delta", "efficiency delta"]
+    },
+    {
+      "id": "jakub",
+      "publicName": "Interface Review",
+      "kind": "agent",
+      "version": "0.2.0",
+      "job": "Prioritize material interface-craft findings and route non-interface work away.",
+      "triggers": ["interface critique", "craft review", "visual hierarchy review"],
+      "nonGoals": ["backend correctness", "motion-only review", "AI reliance review"],
+      "upstream": ["jakubkrehel/skills"],
+      "provenance": "upstream-informed-wrapper",
+      "cdqi": 8.55,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": ["A/B/C benchmark", "upstream parity value", "blind human craft score", "token/latency delta"]
+    },
+    {
+      "id": "emi",
+      "publicName": "Motion Review",
+      "kind": "agent",
+      "version": "0.2.0",
+      "job": "Review motion and interaction with restraint, purpose and recovery in mind.",
+      "triggers": ["motion review", "interaction feel", "animation quality"],
+      "nonGoals": ["generic interface review", "backend behavior", "AI governance"],
+      "upstream": ["emilkowalski/skills"],
+      "provenance": "upstream-informed-wrapper",
+      "cdqi": 8.5,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": ["runtime benchmark", "motion holdouts", "human review"]
+    },
+    {
+      "id": "cd-quality-gate",
+      "publicName": "Quality Gate",
+      "kind": "skill",
+      "version": "0.2.0",
+      "job": "Decide whether a reusable AI resource has enough construction quality and evidence for its claims.",
+      "triggers": ["resource review", "promotion decision", "evidence audit"],
+      "nonGoals": ["implement the resource", "invent missing evidence", "certify vendors"],
+      "upstream": ["Compound Design authored resource"],
+      "provenance": "authored",
+      "cdqi": 8.75,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": ["controlled decision benchmark", "evidence-inflation false-positive test", "critical-boundary runtime test"]
+    },
+    {
+      "id": "cd-resource-lab",
+      "publicName": "Resource Lab",
+      "kind": "skill",
+      "version": "0.2.0",
+      "job": "Improve reusable resources through reproduced failures, eval-first hypotheses, holdouts and falsification.",
+      "triggers": ["resource improvement", "failure-driven iteration", "version candidate"],
+      "nonGoals": ["change prompts without a reproduced problem", "promote on construction score alone"],
+      "upstream": ["Compound Design authored resource", "Anthropic Skill Creator as evidence provider", "Promptfoo as harness"],
+      "provenance": "authored",
+      "cdqi": 8.65,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": ["runtime improvement cycle", "failure corpus", "cross-version regression history"]
+    },
+    {
+      "id": "cd-ai-interaction-review",
+      "publicName": "AI Interaction Review",
+      "kind": "skill",
+      "version": "0.1.0",
+      "job": "Review user-facing AI for fit, reliance, legibility, control, autonomy and evolution.",
+      "triggers": ["user-facing AI", "agentic action", "AI-assisted decision"],
+      "nonGoals": ["ordinary UI review with no material AI behavior", "legal certification", "security audit replacement"],
+      "upstream": ["Microsoft HAX", "Google PAIR", "mixed-initiative interaction research", "39 Principles synthesis"],
+      "provenance": "authored-synthesis",
+      "cdqi": 8.35,
+      "cel": "E1",
+      "runtimeUplift": "not measured",
+      "evidenceDebt": ["task-level reliance evals", "autonomy holdouts", "model-change regression set"]
+    }
+  ]
+}
