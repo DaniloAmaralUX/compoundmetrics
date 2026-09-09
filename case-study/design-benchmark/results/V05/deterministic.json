@@ -2,7 +2,7 @@
  "milestone": "V05",
  "build": "M06",
  "source_sha": "7af65530482bc304c54e14b6b84b03c75c97807b",
- "run_at": "2026-09-09T15:53:44.224Z",
+ "run_at": "2026-09-09T16:12:08.323Z",
  "classification_sha256": null,
  "surfaces": {
   "ENTRY": {
@@ -52,9 +52,9 @@
    },
    "estilo/radius": {
     "state": "PASS",
-    "measured": 3,
+    "measured": 2,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 14px, 3.35544e+07px, 4px"
+    "evidence": "distinct radii: 14px, 4px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -129,14 +129,14 @@
     "evidence": "viewport meta \"width=device-width, initial-scale=1\"; horizontal overflow at CSS zoom 2: 0px"
    },
    "navegacao/links": {
-    "state": "FAIL",
+    "state": "N/A",
     "measured": {
-     "in_text": 158,
+     "in_text": 0,
      "distinguished": 0,
      "axe": 0
     },
     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-    "evidence": "0/158 in-text links distinguished by more than colour; axe link-in-text-block 0"
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
    },
    "carga/chunks": {
     "state": "FAIL",
@@ -226,9 +226,9 @@
    },
    "estilo/radius": {
     "state": "PASS",
-    "measured": 3,
+    "measured": 2,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 14px, 3.35544e+07px, 4px"
+    "evidence": "distinct radii: 14px, 4px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -312,14 +312,14 @@
     "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
    },
    "navegacao/links": {
-    "state": "FAIL",
+    "state": "N/A",
     "measured": {
-     "in_text": 14,
+     "in_text": 0,
      "distinguished": 0,
      "axe": 0
     },
     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-    "evidence": "0/14 in-text links distinguished by more than colour; axe link-in-text-block 0"
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
    },
    "carga/chunks": {
     "state": "FAIL",
@@ -410,9 +410,9 @@
    },
    "estilo/radius": {
     "state": "FAIL",
-    "measured": 9,
+    "measured": 8,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 4px, 3.35544e+07px, 10.08px, 36.4px, 14px, 30.8px, 36.4px 36.4px 0px 0px, 5px"
+    "evidence": "distinct radii: 4px, 10.08px, 36.4px, 14px, 30.8px, 36.4px 36.4px 0px 0px, 5px, 0px 0px 36.4px 36.4px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -439,7 +439,7 @@
     "state": "FAIL",
     "measured": "10/12",
     "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
-    "evidence": "BUTTON \"GitHub\" outline=none 0px oklab(0.555999 -0.00000530481 0.000012964 / 0.918781); BUTTON \"Google\" outline=none 0px oklab(0.555999 -0.00000530481 0.000012964 / 0.8478)"
+    "evidence": "BUTTON \"GitHub\" outline=none 0px oklab(0.555999 -0.00000530481 0.000012964 / 0.8478); BUTTON \"Google\" outline=none 0px oklab(0.555999 -0.00000530481 0.000012964 / 0.8478)"
    },
    "acessibilidade/contraste": {
     "state": "PASS",
@@ -509,12 +509,12 @@
    "navegacao/links": {
     "state": "FAIL",
     "measured": {
-     "in_text": 5,
+     "in_text": 1,
      "distinguished": 0,
      "axe": 1
     },
     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-    "evidence": "0/5 in-text links distinguished by more than colour; axe link-in-text-block 1"
+    "evidence": "0/1 in-text links distinguished by more than colour; axe link-in-text-block 1"
    },
    "carga/chunks": {
     "state": "PASS",
@@ -603,9 +603,9 @@
    },
    "estilo/radius": {
     "state": "PASS",
-    "measured": 3,
+    "measured": 2,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 14px, 3.35544e+07px, 4px"
+    "evidence": "distinct radii: 14px, 4px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -689,14 +689,14 @@
     "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
    },
    "navegacao/links": {
-    "state": "FAIL",
+    "state": "N/A",
     "measured": {
-     "in_text": 4,
+     "in_text": 0,
      "distinguished": 0,
      "axe": 0
     },
     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-    "evidence": "0/4 in-text links distinguished by more than colour; axe link-in-text-block 0"
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
    },
    "carga/chunks": {
     "state": "PASS",
@@ -848,15 +848,11 @@
      "values": []
     },
     "radii": {
-     "distinct": 3,
+     "distinct": 2,
      "values": [
       [
        "14px",
        316
-      ],
-      [
-       "3.35544e+07px",
-       3
       ],
       [
        "4px",
@@ -897,7 +893,7 @@
      ]
     },
     "links": {
-     "in_text": 158,
+     "in_text": 0,
      "distinguished_not_only_color": 0
     },
     "forms": {
@@ -1178,15 +1174,11 @@
      "values": []
     },
     "radii": {
-     "distinct": 3,
+     "distinct": 2,
      "values": [
       [
        "14px",
        28
-      ],
-      [
-       "3.35544e+07px",
-       3
       ],
       [
        "4px",
@@ -1223,7 +1215,7 @@
      ]
     },
     "links": {
-     "in_text": 14,
+     "in_text": 0,
      "distinguished_not_only_color": 0
     },
     "forms": {
@@ -1464,15 +1456,11 @@
      ]
     },
     "radii": {
-     "distinct": 9,
+     "distinct": 8,
      "values": [
       [
        "4px",
        9
-      ],
-      [
-       "3.35544e+07px",
-       8
       ],
       [
        "10.08px",
@@ -1496,6 +1484,10 @@
       ],
       [
        "5px",
+       1
+      ],
+      [
+       "0px 0px 36.4px 36.4px",
        1
       ]
      ]
@@ -1527,7 +1519,7 @@
      "big_lists": []
     },
     "links": {
-     "in_text": 5,
+     "in_text": 1,
      "distinguished_not_only_color": 0
     },
     "forms": {
@@ -1699,7 +1691,7 @@
      "tag": "A",
      "text": "←Acesso e onboarding·Cadastro ",
      "changed": true,
-     "outline": "solid 2px oklab(0.555999 -0.00000530481 0.000012964 / 0.8478)"
+     "outline": "solid 2px oklab(0.555999 -0.00000530481 0.000012964 / 0.847251)"
     },
     {
      "tag": "A",
@@ -1723,7 +1715,7 @@
      "tag": "A",
      "text": "↑/↓pasta",
      "changed": true,
-     "outline": "solid 2px oklab(0.555999 -0.00000530481 0.000012964 / 0.848348)"
+     "outline": "solid 2px oklab(0.555999 -0.00000530481 0.000012964 / 0.847251)"
     },
     {
      "tag": "BUTTON",
@@ -1735,7 +1727,7 @@
      "tag": "BUTTON",
      "text": "tescuro",
      "changed": true,
-     "outline": "solid 2px oklab(0.555999 -0.00000530481 0.000012964 / 0.847251)"
+     "outline": "solid 2px oklab(0.555999 -0.00000530481 0.000012964 / 0.728626)"
     },
     {
      "tag": "BUTTON",
@@ -1747,7 +1739,7 @@
      "tag": "BUTTON",
      "text": "GitHub",
      "changed": false,
-     "outline": "none 0px oklab(0.555999 -0.00000530481 0.000012964 / 0.918781)"
+     "outline": "none 0px oklab(0.555999 -0.00000530481 0.000012964 / 0.8478)"
     },
     {
      "tag": "BUTTON",
@@ -1849,15 +1841,11 @@
      "values": []
     },
     "radii": {
-     "distinct": 3,
+     "distinct": 2,
      "values": [
       [
        "14px",
        8
-      ],
-      [
-       "3.35544e+07px",
-       3
       ],
       [
        "4px",
@@ -1892,7 +1880,7 @@
      "big_lists": []
     },
     "links": {
-     "in_text": 4,
+     "in_text": 0,
      "distinguished_not_only_color": 0
     },
     "forms": {

@@ -2,7 +2,7 @@
  "milestone": "V06",
  "build": "M08",
  "source_sha": "da0840cde632a6e2fc99a23371097d828211eba2",
- "run_at": "2026-09-09T15:54:13.429Z",
+ "run_at": "2026-09-09T16:13:01.824Z",
  "classification_sha256": null,
  "surfaces": {
   "ENTRY": {
@@ -54,9 +54,9 @@
    },
    "estilo/radius": {
     "state": "FAIL",
-    "measured": 6,
+    "measured": 5,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 5px, 6px, 12px, 4px, 3.35544e+07px, 8px"
+    "evidence": "distinct radii: 5px, 6px, 12px, 4px, 8px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -316,12 +316,12 @@
    "navegacao/links": {
     "state": "PASS",
     "measured": {
-     "in_text": 31,
-     "distinguished": 31,
+     "in_text": 4,
+     "distinguished": 4,
      "axe": 0
     },
     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-    "evidence": "31/31 in-text links distinguished by more than colour; axe link-in-text-block 0"
+    "evidence": "4/4 in-text links distinguished by more than colour; axe link-in-text-block 0"
    },
    "carga/chunks": {
     "state": "PASS",
@@ -408,9 +408,9 @@
    },
    "estilo/radius": {
     "state": "FAIL",
-    "measured": 7,
+    "measured": 6,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 6px, 5px, 8px, 12px, 0px 0px 8px 8px, 4px, 3.35544e+07px"
+    "evidence": "distinct radii: 6px, 5px, 8px, 12px, 0px 0px 8px 8px, 4px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -503,14 +503,14 @@
     "evidence": "path depth 3; breadcrumb false; visible parent link true"
    },
    "navegacao/links": {
-    "state": "PASS",
+    "state": "N/A",
     "measured": {
-     "in_text": 27,
-     "distinguished": 27,
+     "in_text": 0,
+     "distinguished": 0,
      "axe": 0
     },
     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-    "evidence": "27/27 in-text links distinguished by more than colour; axe link-in-text-block 0"
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
    },
    "carga/chunks": {
     "state": "PASS",
@@ -594,9 +594,9 @@
    },
    "estilo/radius": {
     "state": "PASS",
-    "measured": 3,
+    "measured": 2,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 6px, 3.35544e+07px, 8px"
+    "evidence": "distinct radii: 6px, 8px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -845,7 +845,7 @@
      ]
     },
     "radii": {
-     "distinct": 6,
+     "distinct": 5,
      "values": [
       [
        "5px",
@@ -861,10 +861,6 @@
       ],
       [
        "4px",
-       2
-      ],
-      [
-       "3.35544e+07px",
        2
       ],
       [
@@ -1276,8 +1272,8 @@
      "big_lists": []
     },
     "links": {
-     "in_text": 31,
-     "distinguished_not_only_color": 31
+     "in_text": 4,
+     "distinguished_not_only_color": 4
     },
     "forms": {
      "inputs": 0,
@@ -1616,7 +1612,7 @@
      ]
     },
     "radii": {
-     "distinct": 7,
+     "distinct": 6,
      "values": [
       [
        "6px",
@@ -1641,10 +1637,6 @@
       [
        "4px",
        2
-      ],
-      [
-       "3.35544e+07px",
-       1
       ]
      ]
     },
@@ -1677,8 +1669,8 @@
      "big_lists": []
     },
     "links": {
-     "in_text": 27,
-     "distinguished_not_only_color": 27
+     "in_text": 0,
+     "distinguished_not_only_color": 0
     },
     "forms": {
      "inputs": 0,
@@ -1976,15 +1968,11 @@
      ]
     },
     "radii": {
-     "distinct": 3,
+     "distinct": 2,
      "values": [
       [
        "6px",
        15
-      ],
-      [
-       "3.35544e+07px",
-       6
       ],
       [
        "8px",

@@ -2,7 +2,7 @@
  "milestone": "V09",
  "build": "M11",
  "source_sha": "231889f0098213a96ccc069ba5557a18cc9f0cfb",
- "run_at": "2026-09-09T15:55:07.534Z",
+ "run_at": "2026-09-09T16:14:19.392Z",
  "classification_sha256": null,
  "surfaces": {
   "ENTRY": {
@@ -226,9 +226,9 @@
    },
    "estilo/radius": {
     "state": "FAIL",
-    "measured": 7,
+    "measured": 6,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 10px, 4px, 14px, 18px, 12px, 8px, 3.35544e+07px"
+    "evidence": "distinct radii: 10px, 4px, 14px, 18px, 12px, 8px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -314,14 +314,14 @@
     "evidence": "nav items 6; aria-current/active class 0; styled difference for current route 1"
    },
    "navegacao/links": {
-    "state": "FAIL",
+    "state": "N/A",
     "measured": {
-     "in_text": 188,
-     "distinguished": 12,
+     "in_text": 0,
+     "distinguished": 0,
      "axe": 0
     },
     "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
-    "evidence": "12/188 in-text links distinguished by more than colour; axe link-in-text-block 0"
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
    },
    "carga/chunks": {
     "state": "FAIL",
@@ -607,9 +607,9 @@
    },
    "estilo/radius": {
     "state": "FAIL",
-    "measured": 6,
+    "measured": 5,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 3.35544e+07px, 10px, 18px, 14px, 8px, 22px"
+    "evidence": "distinct radii: 10px, 18px, 14px, 8px, 22px"
    },
    "estilo/motion": {
     "state": "PASS",
@@ -1220,7 +1220,7 @@
      ]
     },
     "radii": {
-     "distinct": 7,
+     "distinct": 6,
      "values": [
       [
        "10px",
@@ -1245,10 +1245,6 @@
       [
        "8px",
        12
-      ],
-      [
-       "3.35544e+07px",
-       9
       ]
      ]
     },
@@ -1285,8 +1281,8 @@
      ]
     },
     "links": {
-     "in_text": 188,
-     "distinguished_not_only_color": 12
+     "in_text": 0,
+     "distinguished_not_only_color": 0
     },
     "forms": {
      "inputs": 3,
@@ -1496,25 +1492,25 @@
      "tag": "INPUT",
      "text": "",
      "changed": true,
-     "outline": "solid 2px oklab(0.707999 -0.00000712276 0.0000166297 / 0.847603)"
+     "outline": "solid 2px oklab(0.707999 -0.00000712276 0.0000166297 / 0.918562)"
     },
     {
      "tag": "A",
      "text": "ASCII Text",
      "changed": true,
-     "outline": "solid 2px oklab(0.707999 -0.00000712276 0.0000166297 / 0.847625)"
+     "outline": "solid 2px oklab(0.707999 -0.00000712276 0.0000166297 / 0.847614)"
     },
     {
      "tag": "A",
      "text": "Blur Text",
      "changed": true,
-     "outline": "solid 2px oklab(0.707999 -0.00000712276 0.0000166297 / 0.918568)"
+     "outline": "solid 2px oklab(0.707999 -0.00000712276 0.0000166297 / 0.847614)"
     },
     {
      "tag": "A",
      "text": "Circular Text",
      "changed": true,
-     "outline": "solid 2px oklab(0.707999 -0.00000712276 0.0000166297 / 0.847603)"
+     "outline": "solid 2px oklab(0.707999 -0.00000712276 0.0000166297 / 0.918555)"
     }
    ],
    "zoom": {
@@ -2002,12 +1998,8 @@
      ]
     },
     "radii": {
-     "distinct": 6,
+     "distinct": 5,
      "values": [
-      [
-       "3.35544e+07px",
-       29
-      ],
       [
        "10px",
        26

@@ -2,7 +2,7 @@
  "milestone": "V07",
  "build": "M09",
  "source_sha": "28e53d1ab20b46b2ace378c0c67234e8a34bc151",
- "run_at": "2026-09-09T15:54:43.196Z",
+ "run_at": "2026-09-09T16:13:53.926Z",
  "classification_sha256": null,
  "surfaces": {
   "ENTRY": {
@@ -228,10 +228,10 @@
     "evidence": "1 families (Geist), 3 weights (500, 400, 600)"
    },
    "estilo/radius": {
-    "state": "PASS",
-    "measured": 1,
+    "state": "N/A",
+    "measured": 0,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 3.35544e+07px"
+    "evidence": "distinct radii: "
    },
    "estilo/motion": {
     "state": "PASS",
@@ -264,7 +264,7 @@
     "state": "PASS",
     "measured": 0,
     "expected": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
-    "evidence": "axe color-contrast: 0 violations (14 needs-review)"
+    "evidence": "axe color-contrast: 0 violations (19 needs-review)"
    },
    "acessibilidade/alvos": {
     "state": "FAIL",
@@ -411,10 +411,10 @@
     "evidence": "1 families (Geist), 3 weights (500, 400, 600)"
    },
    "estilo/radius": {
-    "state": "PASS",
-    "measured": 1,
+    "state": "N/A",
+    "measured": 0,
     "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
-    "evidence": "distinct radii: 3.35544e+07px"
+    "evidence": "distinct radii: "
    },
    "estilo/motion": {
     "state": "PASS",
@@ -836,13 +836,8 @@
      ]
     },
     "radii": {
-     "distinct": 1,
-     "values": [
-      [
-       "3.35544e+07px",
-       3
-      ]
-     ]
+     "distinct": 0,
+     "values": []
     },
     "motion": {
      "declared": 233,
@@ -957,7 +952,7 @@
     "incomplete": [
      {
       "id": "color-contrast",
-      "nodes": 14
+      "nodes": 19
      }
     ]
    },
@@ -1057,13 +1052,8 @@
      ]
     },
     "radii": {
-     "distinct": 1,
-     "values": [
-      [
-       "3.35544e+07px",
-       3
-      ]
-     ]
+     "distinct": 0,
+     "values": []
     },
     "motion": {
      "declared": 233,
