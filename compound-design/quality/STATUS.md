@@ -1,15 +1,36 @@
-# Compound Design Resource Status — v0.2.1
+# Compound Design Resource Status — v0.3.0-alpha.1
 
-v0.2.1 is an Evidence Infrastructure hardening release. It does not change CEL or claim runtime uplift.
+v0.3.0-alpha.1 is a candidate release: the architecture and the behaviour changed, and nothing was shown to work better. v0.2.1 remains the stable evidence baseline. No resource exceeds E1 and runtime uplift is `not measured` for every one of them.
 
-| Resource | Version | CDQI | CEL | Decision | Runtime uplift |
-| --- | ---: | ---: | ---: | --- | --- |
-| `cd` | 0.2.0 | 8.45 | E1 | STRONG_CONSTRUCTION | not measured |
-| `jakub` | 0.2.0 | 8.55 | E1 | STRONG_CONSTRUCTION | not measured |
-| `emi` | 0.2.0 | 8.50 | E1 | STRONG_CONSTRUCTION | not measured |
-| `cd-quality-gate` | 0.2.0 | 8.75 | E1 | STRONG_CONSTRUCTION | not measured |
-| `cd-resource-lab` | 0.2.0 | 8.65 | E1 | STRONG_CONSTRUCTION | not measured |
-| `cd-ai-interaction-review` | 0.1.0 | 8.35 | E1 | STRONG_CONSTRUCTION | not measured |
+Resources authored or rewritten for this release entered the registry at `E0` and reached `E1` only by passing the deterministic contract suite (`compound-design/quality/releases/v0.3-contract-eval.json`), in a commit separate from the one that created them. `CDQI` stays `null` until a construction audit is written down.
+
+| Resource | Public name | Kind | Version | CDQI | CEL | Runtime uplift |
+| --- | --- | --- | ---: | ---: | ---: | --- |
+| `cd-frame` | Frame | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-model` | Model | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-build` | Build | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-verify` | Verify | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-polish` | Polish | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-compound` | Compound | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-strategy` | Strategy | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-compound-refresh` | Compound Refresh | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-setup` | Setup | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-handoff` | Handoff | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-interface-review` | Interface Review | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-motion-review` | Motion Review | skill | 0.3.0-alpha.1 | — | E1 | not measured |
+| `cd-quality-gate` | Quality Gate | skill | 0.2.0 | 8.75 | E1 | not measured |
+| `cd-resource-lab` | Resource Lab | skill | 0.2.0 | 8.65 | E1 | not measured |
+| `cd-ai-interaction-review` | AI Interaction Review | skill | 0.1.0 | 8.35 | E1 | not measured |
+| `compound-design` | Design Guide | orchestrator | 0.3.0-alpha.1 | — | E1 | not measured |
+| `interface-reviewer` | Interface Reviewer | agent | 0.3.0-alpha.1 | — | E1 | not measured |
+| `motion-reviewer` | Motion Reviewer | agent | 0.3.0-alpha.1 | — | E1 | not measured |
+| `ai-interaction-reviewer` | AI Interaction Reviewer | agent | 0.3.0-alpha.1 | — | E1 | not measured |
+| `evidence-reviewer` | Evidence Reviewer | agent | 0.3.0-alpha.1 | — | E1 | not measured |
+| `learning-curator` | Learning Curator | agent | 0.3.0-alpha.1 | — | E1 | not measured |
+
+Superseded, retained with their historical evidence: `jakub` → `cd-interface-review`, `emi` → `cd-motion-review`, `cd` → `compound-design`.
+
+A dash under CDQI means construction quality has not been audited. It is never assumed from a passing contract suite.
 
 ## v0.2.1 infrastructure
 

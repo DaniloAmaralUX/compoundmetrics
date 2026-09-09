@@ -1,4 +1,4 @@
-# Evidence Debt — v0.2.1
+# Evidence Debt — v0.3.0-alpha.1
 
 Evidence debt is the explicit gap between what a resource is built to do and what has actually been demonstrated.
 
@@ -21,6 +21,12 @@ It is not a defect score. It prevents unmeasured capability from being narrated 
 | `cd-quality-gate` | E1 | evidence boundaries are deterministic | decision correctness in model runtime, false-positive routing |
 | `cd-resource-lab` | E1 | failure→eval→change loop is explicit | measured improvement across real resource versions |
 | `cd-ai-interaction-review` | E1 | six AI interaction gates are explicit | reliance/autonomy outcome improvement in representative tasks |
+
+## v0.3 candidate resources (2026-09-09)
+
+Twelve skills and six agents authored or rewritten for v0.3 hold **E1**: their contracts are declared and deterministically checked. What none of them has is any runtime evidence at all — not against a base model, not against direct upstream use, and, for the two rewritten specialists, not against the v0.2 resource they replaced. The candidate lane in `quality/e2/candidate-v0.3/` exists so that last comparison is answerable; it has not been run.
+
+The discoverability mechanism is a second, narrower case: retrieval is proved mechanically, and its effect on any decision is unmeasured. Building a mechanism is not evidence that it helps.
 
 ## E2 preparation state (2026-09-09)
 

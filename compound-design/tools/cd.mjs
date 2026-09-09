@@ -12,7 +12,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
-import crypto from "node:crypto";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
@@ -26,7 +25,6 @@ const fail = (m) => { const e = new Error(m); e.isGate = true; throw e; };
 const exists = (p) => fs.existsSync(p);
 const read = (p) => fs.readFileSync(p, "utf8");
 const rel = (p) => path.relative(REPO, p) || ".";
-export const sha256 = (b) => crypto.createHash("sha256").update(b).digest("hex");
 function walk(dir, out = []) {
   if (!exists(dir)) return out;
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {

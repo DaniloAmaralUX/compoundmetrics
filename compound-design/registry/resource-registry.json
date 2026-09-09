@@ -37,10 +37,9 @@
       ],
       "provenance": "composed-and-authored, upstream-informed",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -70,10 +69,9 @@
       ],
       "provenance": "authored",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -102,10 +100,9 @@
       ],
       "provenance": "composed-and-authored, upstream-informed",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -135,10 +132,9 @@
       ],
       "provenance": "composed-and-authored, upstream-informed",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -167,10 +163,9 @@
       ],
       "provenance": "authored",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -200,10 +195,9 @@
       ],
       "provenance": "composed-and-authored, upstream-informed",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -233,10 +227,9 @@
       ],
       "provenance": "composed-and-authored, upstream-informed",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -266,10 +259,9 @@
       ],
       "provenance": "composed-and-authored, upstream-informed",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -299,10 +291,9 @@
       ],
       "provenance": "composed-and-authored, upstream-informed",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -332,10 +323,9 @@
       ],
       "provenance": "composed-and-authored, upstream-informed",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -366,10 +356,9 @@
       ],
       "provenance": "authored, upstream-informed heuristics",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -399,10 +388,9 @@
       ],
       "provenance": "authored, upstream-informed heuristics",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic contract suite",
         "runtime behaviour in real work",
         "routing accuracy",
         "effect on outcomes"
@@ -527,10 +515,9 @@
       ],
       "provenance": "composed-and-authored, upstream-informed",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic agent contract suite",
         "routing accuracy in real work",
         "over-orchestration rate"
       ],
@@ -558,10 +545,9 @@
       ],
       "provenance": "authored",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic agent contract suite",
         "routing accuracy",
         "finding quality in real work"
       ],
@@ -588,10 +574,9 @@
       ],
       "provenance": "authored",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic agent contract suite",
         "routing accuracy",
         "finding quality in real work"
       ],
@@ -617,10 +602,9 @@
       ],
       "provenance": "authored",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic agent contract suite",
         "non-trigger accuracy",
         "finding quality in real work"
       ]
@@ -647,10 +631,9 @@
       ],
       "provenance": "authored",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic agent contract suite",
         "decision correctness in runtime",
         "false-positive routing"
       ]
@@ -678,10 +661,9 @@
       ],
       "provenance": "composed-and-authored, upstream-informed",
       "cdqi": null,
-      "cel": "E0",
+      "cel": "E1",
       "runtimeUplift": "not measured",
       "evidenceDebt": [
-        "deterministic agent contract suite",
         "durability judgment in real work",
         "store health over time"
       ]
