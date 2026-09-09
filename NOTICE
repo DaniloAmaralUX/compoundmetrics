@@ -1,0 +1,49 @@
+# Notices and attribution
+
+Compound Metrics is the standalone home of the Compound Design framework and
+its public page. Public presentation uses the name **Compound Design** and the
+authorial resource names (Design Guide, Interface Review, Motion Review,
+Quality Gate, Resource Lab, AI Interaction Review). This file records the
+third-party and derived material behind that surface. Nothing here implies
+endorsement or certification by the parties named.
+
+## Upstream knowledge used by specialist resources
+
+The full source hierarchy, pinned commits and usage boundaries live in
+`compound-design/SOURCES.md`. Summary:
+
+- **Jakub Krehel — skills** (`https://github.com/jakubkrehel/skills`) — MIT,
+  Copyright (c) 2026 Jakub Krehel. Informs the internal `jakub` resource
+  (public name: Interface Review).
+- **Emil Kowalski — skills** (`https://github.com/emilkowalski/skills`) — MIT.
+  Informs the internal `emi` resource (public name: Motion Review).
+
+The vendored checkouts referenced by those resources
+(`compound-design/vendor/*`) are not included in this repository; the pinned
+commits are documented in `compound-design/SOURCES.md`. Any copied or
+substantially modified upstream material must keep its license and
+attribution.
+
+## Referenced research and evaluation sources
+
+Compound Design studies and cites, where relevant: Every / Compound
+Engineering, Microsoft HAX, Google PAIR, Anthropic, OpenAI, Promptfoo and
+shadcn/ui. See `compound-design/SOURCES.md` and
+`compound-design/research/AI-INTERACTION-SOURCE-MAP.md`. These references
+validate mechanisms or provide source material; they do not certify Compound
+Design.
+
+## Runtime and build dependencies
+
+- `next`, `react`, `react-dom` — MIT
+- `geist` (Geist Sans and Geist Mono) — SIL Open Font License 1.1
+- `typescript`, `eslint`, `eslint-config-next` — MIT / Apache-2.0 (dev only)
+
+## Provenance of this repository
+
+- The framework, evidence model, registry, evals and learning system were
+  extracted from the author's `supernova-catalogo` repository
+  (branch `compound-design-framework`).
+- The public page implementation (`src/app/page.tsx`, `page.module.css`) was
+  extracted from the author's `studio-dev-ui` repository. No other part of
+  that application is carried here.

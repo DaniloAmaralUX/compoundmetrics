@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "status": "initial-calibration",
+  "resources": [
+    {
+      "name": "jakub",
+      "primary_claim": "Improves interface review quality and gives concrete fixes without redesigning for novelty.",
+      "baseline": "general agent without the jakub specialist",
+      "evals": [
+        {
+          "id": "jakub-interface-review-001",
+          "task": "Review a dense admin dashboard for hierarchy, layout, typography, color, accessibility and component consistency.",
+          "must_observe": [
+            "prioritized findings",
+            "concrete fixes",
+            "distinguishes defects from taste",
+            "respects existing design system",
+            "flags reusable lessons"
+          ]
+        },
+        {
+          "id": "jakub-routing-negative-001",
+          "task": "Plan a database migration with no interface work.",
+          "must_not_observe": [
+            "jakub selected without a UI reason",
+            "visual redesign advice"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "emi",
+      "primary_claim": "Improves motion and interaction decisions while exercising restraint.",
+      "baseline": "general agent without the emi specialist",
+      "evals": [
+        {
+          "id": "emi-motion-review-001",
+          "task": "Review a modal, toast, command palette and route transition for motion quality and interaction feel.",
+          "must_observe": [
+            "motion tied to state, hierarchy or causality",
+            "interrupt and exit behavior",
+            "reduced-motion consideration",
+            "restraint where animation is unnecessary",
+            "reusable motion or interaction rule when justified"
+          ]
+        },
+        {
+          "id": "emi-routing-negative-001",
+          "task": "Model entities and permissions for an admin domain.",
+          "must_not_observe": [
+            "emi selected without an interaction or motion reason",
+            "decorative animation proposal"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cd",
+      "primary_claim": "Selects the right specialist, uses only necessary stages, and promotes only proven reusable learning.",
+      "baseline": "general agent without Compound Design orchestration",
+      "evals": [
+        {
+          "id": "cd-route-ui-001",
+          "task": "Audit a web admin screen whose main problem is visual hierarchy and accessibility.",
+          "must_observe": [
+            "routes interface craft to jakub or loads equivalent source material",
+            "does not force unrelated Compound Design stages"
+          ]
+        },
+        {
+          "id": "cd-route-motion-001",
+          "task": "The interface works but route transitions and modal interactions feel wrong. Improve the experience.",
+          "must_observe": [
+            "routes motion or interaction work to emi or equivalent source material",
+            "preserves functional behavior"
+          ]
+        },
+        {
+          "id": "cd-direct-model-001",
+          "task": "Map entities, routes, roles, permissions, states and edge cases for an admin users module.",
+          "must_observe": [
+            "handles system modeling directly",
+            "produces a coherent screen or flow relationship model"
+          ]
+        },
+        {
+          "id": "cd-no-over-orchestration-001",
+          "task": "Change one label from Members to Users.",
+          "must_not_observe": [
+            "full Frame to Compound ceremony",
+            "unnecessary specialist delegation"
+          ]
+        },
+        {
+          "id": "cd-promote-001",
+          "task": "A feature is complete. Decide what should become reusable Compound Design or Supernova material.",
+          "must_observe": [
+            "requires evidence of usefulness and generalizability",
+            "keeps local-only lessons local",
+            "proposes candidates rather than silently publishing"
+          ]
+        }
+      ]
+    }
+  ],
+  "run_policy": {
+    "repeat_default": 3,
+    "compare_conditions": ["baseline", "with_resource"],
+    "capture_when_available": [
+      "expectation_pass_rate",
+      "tool_calls",
+      "steps",
+      "errors",
+      "tokens",
+      "latency",
+      "estimated_cost",
+      "human_preference"
+    ],
+    "promotion_rule": "Critical failures block approval regardless of average score. CD_APPROVED is limited to the evaluated scope."
+  }
+}

@@ -1,0 +1,70 @@
+description: Compound Design E2 — Jakub A/B/C benchmark
+
+prompts:
+  - '{{request}}'
+
+providers:
+  - id: anthropic:claude-agent-sdk
+    label: A-base-model
+    config:
+      model: '{{env.CD_EVAL_MODEL | default("claude-sonnet-4-6")}}'
+      working_dir: ../../..
+      apiKeyRequired: false
+      strict_mcp_config: true
+      persist_session: false
+      exclude_dynamic_sections: true
+      tools: [Read, Grep, Glob, LS]
+      max_turns: 6
+      max_budget_usd: 0.25
+
+  - id: anthropic:claude-agent-sdk
+    label: B-upstream-jakub
+    config:
+      model: '{{env.CD_EVAL_MODEL | default("claude-sonnet-4-6")}}'
+      working_dir: ../../..
+      apiKeyRequired: false
+      strict_mcp_config: true
+      persist_session: false
+      exclude_dynamic_sections: true
+      tools: [Read, Grep, Glob, LS, Skill]
+      plugins:
+        - type: local
+          path: ../../vendor/jakub-skills
+      skills: all
+      max_turns: 6
+      max_budget_usd: 0.25
+
+  - id: anthropic:claude-agent-sdk
+    label: C-compound-jakub-v0.2
+    config:
+      model: '{{env.CD_EVAL_MODEL | default("claude-sonnet-4-6")}}'
+      working_dir: ../../..
+      apiKeyRequired: false
+      strict_mcp_config: true
+      persist_session: false
+      exclude_dynamic_sections: true
+      setting_sources: ['project']
+      agent: jakub
+      tools: [Read, Grep, Glob, LS]
+      max_turns: 6
+      max_budget_usd: 0.25
+
+defaultTest:
+  options:
+    repeat: 3
+
+tests:
+  - file://jakub-tests.yaml
+
+outputPath:
+  - results/jakub-e2.json
+  - results/jakub-e2.html
+
+# Run from this directory or pass -c explicitly:
+# npx promptfoo@latest eval -c compound-design/quality/e2/promptfoo-jakub.yaml --no-cache
+#
+# IMPORTANT:
+# - confirm B actually invokes the expected upstream skill from raw tool metadata;
+# - confirm C runs the named `jakub` agent from project settings;
+# - if either route is not observable, treat the run as invalid rather than scoring it;
+# - do not execute paid API runs without explicit budget approval.

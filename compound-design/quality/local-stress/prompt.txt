@@ -1,0 +1,6 @@
+You are running a supplemental Compound Design LOCAL-STRESS check.
+
+Task:
+{{task}}
+
+Return a concise review. Preserve evidence boundaries: if runtime uplift is not measured, say `not measured`. Do not claim vendor approval or certification. This lane is supplemental and must not promote CEL by itself.

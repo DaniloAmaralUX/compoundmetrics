@@ -1,0 +1,18 @@
+description: Compound Design local stress lane — supplemental, not E2
+
+providers:
+  - id: ollama:chat:llama3.2
+
+prompts:
+  - file://prompt.txt
+
+tests:
+  - vars:
+      task: "Review a representative resource task from the fixed eval set."
+    assert:
+      - type: contains
+        value: "not measured"
+
+# Run only when a local model is already installed:
+# npx promptfoo@latest eval -c promptfooconfig.example.yaml --repeat 3 --no-cache
+# Record provider/model/hardware. Keep CEL unchanged; classify as LOCAL-STRESS.

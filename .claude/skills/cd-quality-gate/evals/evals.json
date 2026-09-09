@@ -1,0 +1,31 @@
+{
+  "skill": "cd-quality-gate",
+  "version": "0.2.0",
+  "evals": [
+    {
+      "prompt": "A skill has CDQI 9.1 but only static inspection. Can it be CD_APPROVED?",
+      "expected_output": "No. Keep construction score separate from evidence; CEL is E0 and default approval requires E2.",
+      "expectations": [
+        "Does not convert 9.1 into effectiveness proof.",
+        "Reports CEL E0.",
+        "Does not return CD_APPROVED."
+      ]
+    },
+    {
+      "prompt": "A team says Claude rated our agent 9/10, therefore Anthropic has validated it.",
+      "expected_output": "Reject vendor-certification wording and require an evaluator artifact.",
+      "expectations": [
+        "Distinguishes model evaluation from vendor endorsement.",
+        "Requires evaluator/model/rubric artifact before external evidence claim."
+      ]
+    },
+    {
+      "prompt": "A new version improves the same runtime tasks versus the previous version across repeated runs, with deterministic expectations passing.",
+      "expected_output": "May qualify for E2 if the baseline and repeated runtime evidence are recorded.",
+      "expectations": [
+        "Requires exact baseline and run artifacts.",
+        "Does not automatically grant E3."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+description: Compound Design quality-gate routing and outcome checks
+
+prompts:
+  - '{{request}}'
+
+providers:
+  - id: anthropic:claude-agent-sdk
+    label: cd-quality-gate
+    config:
+      model: '{{env.CD_EVAL_MODEL | default("claude-sonnet-4-6")}}'
+      working_dir: .
+      setting_sources: ['project']
+      skills: ['cd-quality-gate']
+      append_allowed_tools: ['Read', 'Grep', 'Glob']
+
+# Run from repository root:
+# npx promptfoo@latest eval -c compound-design/quality/promptfooconfig.yaml --repeat 3 --no-cache -o compound-design/quality/results.json
+# npx promptfoo@latest view
+#
+# Add cost/latency thresholds only after collecting a baseline. Do not invent budgets before measurement.
+
+tests:
+  - description: Quality-gate work invokes the quality skill
+    vars:
+      request: >-
+        Evaluate whether this new Compound Design skill is ready to be promoted.
+        It has good documentation, but no baseline comparison and no repeated runs.
+    assert:
+      - type: skill-used
+        value: cd-quality-gate
+      - type: icontains-any
+        value: ['DRAFT', 'CANDIDATE', 'NEEDS_WORK']
+      - type: icontains
+        value: 'baseline'
+
+  - description: Unrelated implementation task should not route through the quality gate
+    vars:
+      request: >-
+        Rename the local TypeScript variable currentUserId to userId and explain the change briefly.
+    assert:
+      - type: not-skill-used
+        value: cd-quality-gate
+
+  - description: Tool count alone cannot approve an MCP resource
+    vars:
+      request: >-
+        Audit a proposed MCP integration for Compound Design. Its manifest is valid and 18 tools respond,
+        but no realistic multi-step agent workflow has been tested. Decide its readiness.
+    assert:
+      - type: skill-used
+        value: cd-quality-gate
+      - type: icontains-any
+        value: ['trajectory', 'tool-call', 'tool call', 'multi-step']
+      - type: not-icontains
+        value: 'CD_APPROVED'
+
+  - description: Complete evidence can produce scoped approval
+    vars:
+      request: >-
+        Evaluate a candidate resource that passes every critical deterministic check, is stable across repeated runs,
+        beats the baseline on its primary task, has correct attribution and licensing, has no critical failures,
+        and passed human craft review. Decide its current status and name the next regression eval.
+    assert:
+      - type: skill-used
+        value: cd-quality-gate
+      - type: icontains
+        value: 'CD_APPROVED'
+      - type: icontains-any
+        value: ['scope', 'scoped', 'evaluated']
+      - type: icontains-any
+        value: ['next eval', 'regression']

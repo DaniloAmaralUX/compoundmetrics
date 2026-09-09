@@ -1,0 +1,33 @@
+{
+  "name": "compoundmetrics",
+  "version": "0.2.1",
+  "private": true,
+  "description": "Compound Design — standalone home of the Compound Design evidence system and its public page.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "cd:lint": "node compound-design/tools/cd-lint.mjs --self-test",
+    "cd:evals": "node compound-design/quality/scripts/run-contract-evals.mjs"
+  },
+  "engines": {
+    "node": ">=20.9"
+  },
+  "dependencies": {
+    "geist": "^1.7.2",
+    "next": "16.3.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.4",
+    "typescript": "^5"
+  },
+  "license": "UNLICENSED"
+}

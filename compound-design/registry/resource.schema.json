@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://compound.design/schemas/resource-registry.schema.json",
+  "title": "Compound Design Resource Registry",
+  "type": "object",
+  "required": ["framework", "release", "evidencePolicy", "resources"],
+  "properties": {
+    "framework": { "const": "Compound Design" },
+    "release": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "releaseTheme": { "type": "string" },
+    "updatedAt": { "type": "string", "format": "date" },
+    "evidencePolicy": {
+      "type": "object",
+      "required": ["currentLevel", "runtimeUplift", "rule"],
+      "properties": {
+        "currentLevel": { "enum": ["E0", "E1", "E2", "E3", "E4"] },
+        "runtimeUplift": { "type": "string" },
+        "rule": { "type": "string", "minLength": 20 }
+      },
+      "additionalProperties": false
+    },
+    "resources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "version", "job", "triggers", "nonGoals", "upstream", "provenance", "cdqi", "cel", "runtimeUplift", "evidenceDebt"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "kind": { "enum": ["agent", "skill", "orchestrator", "resource"] },
+          "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+          "job": { "type": "string", "minLength": 20 },
+          "triggers": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "nonGoals": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "upstream": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "provenance": { "type": "string" },
+          "cdqi": { "type": "number", "minimum": 0, "maximum": 10 },
+          "cel": { "enum": ["E0", "E1", "E2", "E3", "E4"] },
+          "runtimeUplift": { "type": "string" },
+          "evidenceDebt": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

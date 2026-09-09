@@ -1,0 +1,101 @@
+{
+  "version": "0.2.0",
+  "resources": [
+    {
+      "path": ".claude/agents/cd.md",
+      "must": [
+        "version: 0.2.0",
+        "smallest sufficient path",
+        "cd-ai-interaction-review",
+        "CDQI Construction Score",
+        "CEL Evidence Level"
+      ]
+    },
+    {
+      "path": ".claude/agents/jakub.md",
+      "must": [
+        "version: 0.2.0",
+        "## Primary job",
+        "## Non-goals",
+        "## Severity",
+        "Severity → Finding → Evidence → Concrete change → Reusable lesson"
+      ]
+    },
+    {
+      "path": ".claude/agents/emi.md",
+      "must": [
+        "version: 0.2.0",
+        "## Primary job",
+        "## Non-goals",
+        "## Decision sequence",
+        "If the first answer is “no”, recommend no animation"
+      ]
+    },
+    {
+      "path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "must": [
+        "version: 0.2.0",
+        "CDQI Construction Score",
+        "Compound Evidence Level",
+        "## Meta-evaluation",
+        "Default minimum evidence level for `CD_APPROVED`: `E2`"
+      ]
+    },
+    {
+      "path": ".claude/skills/cd-resource-lab/SKILL.md",
+      "must": [
+        "version: 0.2.0",
+        "### 2. Form a hypothesis",
+        "### 3. Add the eval first",
+        "### 7. Try to falsify the improvement",
+        "holdout"
+      ]
+    },
+    {
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "must": [
+        "version: 0.1.0",
+        "### 1. AI Fit",
+        "### 2. Appropriate Reliance",
+        "### 3. Legibility",
+        "### 4. Human Control",
+        "### 5. Proportional Autonomy",
+        "### 6. Evolution"
+      ]
+    }
+  ],
+  "global": [
+    {
+      "path": "compound-design/quality/CD-QUALITY-INDEX.md",
+      "must": [
+        "construction score",
+        "Evidence is reported separately",
+        "v0.2 becomes the new baseline"
+      ]
+    },
+    {
+      "path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "must": [
+        "### E0",
+        "### E1",
+        "### E2",
+        "### E3",
+        "### E4"
+      ]
+    },
+    {
+      "path": "compound-design/quality/STATUS.md",
+      "must": [
+        "not measured",
+        "E1",
+        "STRONG_CONSTRUCTION"
+      ]
+    }
+  ],
+  "forbidden_anywhere": [
+    "Anthropic Certified",
+    "Claude Certified",
+    "OpenAI Certified",
+    "externally proven"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "skill": "cd-ai-interaction-review",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "prompt": "Review an AI assistant that drafts a marketing email but requires the user to click Send.",
+      "expected_output": "Focus on fit/reliance/legibility/control as relevant and avoid inventing high-risk autonomy concerns.",
+      "expectations": [
+        "Does not demand approval for the already-user-controlled Send action unless another risk exists.",
+        "Distinguishes generated draft from external action."
+      ]
+    },
+    {
+      "prompt": "Review an agent that can permanently delete customer records after a natural-language request.",
+      "expected_output": "Flag proportional autonomy and human control as critical concerns.",
+      "expectations": [
+        "Requires scope preview before deletion.",
+        "Requires explicit approval before irreversible action.",
+        "Treats rollback/reversibility as a core design requirement."
+      ]
+    },
+    {
+      "prompt": "Review a normal deterministic settings page with no AI behavior.",
+      "expected_output": "State that this skill should not be the primary reviewer.",
+      "expectations": [
+        "Routes away from AI Interaction Quality rather than fabricating AI findings."
+      ]
+    },
+    {
+      "prompt": "A product team upgrades its LLM provider and sees no build errors. Review the release risk.",
+      "expected_output": "Treat model behavior as a regression-sensitive dependency.",
+      "expectations": [
+        "Requests behavioral regression tests.",
+        "Does not treat successful compilation as sufficient verification."
+      ]
+    }
+  ]
+}

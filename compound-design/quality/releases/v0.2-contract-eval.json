@@ -1,0 +1,536 @@
+{
+  "suite": "0.2.0",
+  "evidence_level": "E1",
+  "passed": 88,
+  "failed": 0,
+  "assertions": [
+    {
+      "group": "resource",
+      "path": ".claude/agents/cd.md",
+      "check": "file_exists",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/cd.md",
+      "check": "contains:version: 0.2.0",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/cd.md",
+      "check": "contains:smallest sufficient path",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/cd.md",
+      "check": "contains:cd-ai-interaction-review",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/cd.md",
+      "check": "contains:CDQI Construction Score",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/cd.md",
+      "check": "contains:CEL Evidence Level",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/cd.md",
+      "check": "forbids:Anthropic Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/cd.md",
+      "check": "forbids:Claude Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/cd.md",
+      "check": "forbids:OpenAI Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/cd.md",
+      "check": "forbids:externally proven",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/jakub.md",
+      "check": "file_exists",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/jakub.md",
+      "check": "contains:version: 0.2.0",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/jakub.md",
+      "check": "contains:## Primary job",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/jakub.md",
+      "check": "contains:## Non-goals",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/jakub.md",
+      "check": "contains:## Severity",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/jakub.md",
+      "check": "contains:Severity → Finding → Evidence → Concrete change → Reusable lesson",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/jakub.md",
+      "check": "forbids:Anthropic Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/jakub.md",
+      "check": "forbids:Claude Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/jakub.md",
+      "check": "forbids:OpenAI Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/jakub.md",
+      "check": "forbids:externally proven",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/emi.md",
+      "check": "file_exists",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/emi.md",
+      "check": "contains:version: 0.2.0",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/emi.md",
+      "check": "contains:## Primary job",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/emi.md",
+      "check": "contains:## Non-goals",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/emi.md",
+      "check": "contains:## Decision sequence",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/emi.md",
+      "check": "contains:If the first answer is “no”, recommend no animation",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/emi.md",
+      "check": "forbids:Anthropic Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/emi.md",
+      "check": "forbids:Claude Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/emi.md",
+      "check": "forbids:OpenAI Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/agents/emi.md",
+      "check": "forbids:externally proven",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "check": "file_exists",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "check": "contains:version: 0.2.0",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "check": "contains:CDQI Construction Score",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "check": "contains:Compound Evidence Level",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "check": "contains:## Meta-evaluation",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "check": "contains:Default minimum evidence level for `CD_APPROVED`: `E2`",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "check": "forbids:Anthropic Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "check": "forbids:Claude Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "check": "forbids:OpenAI Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-quality-gate/SKILL.md",
+      "check": "forbids:externally proven",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-resource-lab/SKILL.md",
+      "check": "file_exists",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-resource-lab/SKILL.md",
+      "check": "contains:version: 0.2.0",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-resource-lab/SKILL.md",
+      "check": "contains:### 2. Form a hypothesis",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-resource-lab/SKILL.md",
+      "check": "contains:### 3. Add the eval first",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-resource-lab/SKILL.md",
+      "check": "contains:### 7. Try to falsify the improvement",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-resource-lab/SKILL.md",
+      "check": "contains:holdout",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-resource-lab/SKILL.md",
+      "check": "forbids:Anthropic Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-resource-lab/SKILL.md",
+      "check": "forbids:Claude Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-resource-lab/SKILL.md",
+      "check": "forbids:OpenAI Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-resource-lab/SKILL.md",
+      "check": "forbids:externally proven",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "file_exists",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "contains:version: 0.1.0",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "contains:### 1. AI Fit",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "contains:### 2. Appropriate Reliance",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "contains:### 3. Legibility",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "contains:### 4. Human Control",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "contains:### 5. Proportional Autonomy",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "contains:### 6. Evolution",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "forbids:Anthropic Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "forbids:Claude Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "forbids:OpenAI Certified",
+      "pass": true
+    },
+    {
+      "group": "resource",
+      "path": ".claude/skills/cd-ai-interaction-review/SKILL.md",
+      "check": "forbids:externally proven",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-QUALITY-INDEX.md",
+      "check": "file_exists",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-QUALITY-INDEX.md",
+      "check": "contains:construction score",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-QUALITY-INDEX.md",
+      "check": "contains:Evidence is reported separately",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-QUALITY-INDEX.md",
+      "check": "contains:v0.2 becomes the new baseline",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-QUALITY-INDEX.md",
+      "check": "forbids:Anthropic Certified",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-QUALITY-INDEX.md",
+      "check": "forbids:Claude Certified",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-QUALITY-INDEX.md",
+      "check": "forbids:OpenAI Certified",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-QUALITY-INDEX.md",
+      "check": "forbids:externally proven",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "check": "file_exists",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "check": "contains:### E0",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "check": "contains:### E1",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "check": "contains:### E2",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "check": "contains:### E3",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "check": "contains:### E4",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "check": "forbids:Anthropic Certified",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "check": "forbids:Claude Certified",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "check": "forbids:OpenAI Certified",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/CD-EVIDENCE-LEVELS.md",
+      "check": "forbids:externally proven",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/STATUS.md",
+      "check": "file_exists",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/STATUS.md",
+      "check": "contains:not measured",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/STATUS.md",
+      "check": "contains:E1",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/STATUS.md",
+      "check": "contains:STRONG_CONSTRUCTION",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/STATUS.md",
+      "check": "forbids:Anthropic Certified",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/STATUS.md",
+      "check": "forbids:Claude Certified",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/STATUS.md",
+      "check": "forbids:OpenAI Certified",
+      "pass": true
+    },
+    {
+      "group": "global",
+      "path": "compound-design/quality/STATUS.md",
+      "check": "forbids:externally proven",
+      "pass": true
+    }
+  ]
+}
