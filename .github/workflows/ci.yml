@@ -59,6 +59,11 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
+        with:
+          # `e2 verify-legacy` reads the frozen v0.2 resources out of the baseline commit with
+          # `git show <baseline_commit>:<path>`, which a depth-1 checkout does not contain.
+          # This job is the only one that needs history; the other two stay shallow.
+          fetch-depth: 0
       - uses: actions/setup-node@v5
         with:
           node-version: 22
