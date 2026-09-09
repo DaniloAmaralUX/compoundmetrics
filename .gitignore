@@ -32,3 +32,6 @@ compound-design/vendor/
 
 # Compound Design: per-checkout config override is never committed
 .compound-design/*.local.yaml
+
+# design references studied read-only for the product experience; never committed
+.research/
