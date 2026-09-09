@@ -21,7 +21,9 @@
     "cd:selftest": "node compound-design/tools/cd.mjs selftest",
     "cd:setup-check": "node compound-design/tools/cd.mjs setup-check",
     "cd:discover": "node compound-design/tools/cd.mjs discover",
-    "cd:all": "npm run cd:lint && npm run cd:registry && npm run cd:evals && npm run cd:plugin && npm run cd:claims && npm run cd:selftest"
+    "cd:all": "npm run cd:lint && npm run cd:registry && npm run cd:evals && npm run cd:plugin && npm run cd:claims && npm run cd:selftest",
+    "screens:sync": "node scripts/screen-sync.mjs",
+    "screens:check": "node scripts/screen-sync.mjs --check"
   },
   "engines": {
     "node": ">=20.9"
