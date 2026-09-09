@@ -37,13 +37,17 @@ The two counts are **not reconciled**. Nothing was removed to reach 17 and nothi
 
 ## Relationships that the sources support
 
-- `compound-labs-design` (V01) → skills `compound-design-ui/type/color` and the `/audit` checklist → the plugin command `cl-audit` → the audit rubric frozen here. **Verified by repository content.**
-- `supernova-catalogo@compound-design-framework` → `compoundmetrics` (v0.2.1 standalone extraction). **Verified**: the migration commits in `compoundmetrics` name the source branch.
-- `studio-dev-ui` → `compoundmetrics`: the v0.2 evidence POC page lived on studio-dev-ui before the standalone site. **Verified** (route `/compound-design` at `231889f`; commit messages "refactor(compound-design): use authorial public resource names").
-- Evil Rabbit Lifeline (MIT) → `processo` → the product-experience timeline interaction in `compoundmetrics` (V11). **Verified** by NOTICE/SOURCES attribution in `compoundmetrics` and the `processo` boilerplate history.
-- Interface / Motion heuristics (Jakub Krehel, Emil Kowalski, MIT) → `compound-labs-design` skills (2026-07-16 commit "Alinha o site aos skills do Jakub", "review-animations (Emil)") → `compoundmetrics` legacy resources. **Verified** by commit messages and SOURCES.md.
+Verified edge by edge in `knowledge/TRANSFER-GRAPH.json` (97 of 105 edges carry file-level evidence; 8 are marked unverified with the reason). Four relationships first written here from commit subjects were corrected after that pass:
 
-Everything else (for example that a v0-era dashboard taught a rule that a later tool reused) is **not verified** and is recorded as such in `knowledge/TRANSFER-GRAPH.json`.
+- `compound-labs-design` (V01) → the `/audit` checklist (54 items, 9 categories, commit `edbfdd1`) → the rubric frozen here (instrument A). **Verified.** The `cl-audit` playbook is a *sibling* instrument (8 categories) that predates `/audit` and does not reference it — the earlier "`/audit → cl-audit`" hop is **not supported**.
+- `supernova-catalogo@compound-design-framework` → `compoundmetrics` (v0.2.1 standalone extraction). **Verified by md5-identical files** (LEDGER, three agents) and by `NOTICE`, which names the source branch; the `migrate` commit bodies themselves are empty.
+- `studio-dev-ui` `/compound-design` page → `compoundmetrics` `/` (v0.2.1). **Verified**: `page.tsx` and `page.module.css` are md5-identical at `231889f` and `18ffcf2`; the studio-dev-ui root serves the same page (V09 ENTRY = V08 ENTRY).
+- Evil Rabbit Lifeline (MIT) → `compoundmetrics` Timeline component. **Verified** by `NOTICE`/`SOURCES.md` attribution to `evilrabbit/lifeline@8ddbb3d`. Lifeline is a four-way upstream: also `processo` (boilerplate copy), `geistlabsds` `28e765d`, and studio-dev-ui `05ee94f` "lifeline-inspired". `processo` is **not** on the path to compoundmetrics (nothing in compoundmetrics names it).
+- Interface / Motion heuristics (Jakub Krehel, Emil Kowalski, MIT) → v0.2 wrappers → migrated byte-identical → superseded by v0.3 rewrites → promoted E0→E1 (`c61b896`) → pinned for E2. **Verified.** The `compound-labs-design` skills and the compoundmetrics legacy agents descend from `jakubkrehel/skills` *independently* — no source shows one feeding the other.
+- Every Compound Engineering → `EVERY-ARCHITECTURE-SNAPSHOT` → `cd-compound`. **Verified** (attributed inspiration, MIT).
+- One end-to-end learning chain inside this repository: axe contrast defect during entrance animation → ledger `CD-20260909-013` → `docs/solutions/2026-09-09-axe-contrast-during-entrance-animation.md` → "page at rest" rule → `scripts/site-check.mjs`. **Verified**, with the caveat that rule and reuse land in the same commit and tool.
+
+Everything else (for example that a v0-era dashboard taught a rule that a later tool reused; Brad Frost's Atomic Design as a named source — the term appears once, unattributed, in supernova-catalogo) is **not verified** and is listed under `none_verified` in the graph.
 
 ## Uncertainties, explicitly
 
