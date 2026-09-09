@@ -1,0 +1,127 @@
+/*
+ * Guide — sections the Comet formula does not already provide (prose chapters, roles, lists,
+ * ladder, practices). Every value comes from the Comet tokens in comet.module.css.
+ */
+.chapters { padding: 40px 0 0; }
+.chapterList { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 6px; }
+.chapterList a { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 12px; border: 1px solid var(--line); border-radius: var(--radius-pill); color: var(--fg); text-decoration: none; font: 500 13px/1 var(--font-body); background: var(--surface-2); }
+.chapterList a:hover { background: var(--surface); }
+.chapterList a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.chapterList i { font: 500 11px/1 var(--font-mono); color: var(--fg-2); font-style: normal; }
+
+/* loop drawn inside the hero "screen" placeholder */
+.loopScreen { position: absolute; inset: auto 0 0; height: 78%; width: min(1040px, 100%); margin: 0 auto; padding: clamp(20px, 3vw, 40px); display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+.loopRow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+.loopNode { display: flex; flex-direction: column; gap: 6px; padding: 14px; min-height: 96px; }
+.loopNode b { font: 500 15px/1.1 var(--font-body); }
+.loopNode span { font: 500 11px/1.2 var(--font-mono); color: var(--fg-2); }
+.loopNode i { font: 400 12px/1.3 var(--font-body); font-style: italic; color: var(--fg-2); }
+.loopRepeat { align-self: center; font: 500 12px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-2); }
+
+/* prose chapter: eyebrow + title left, body right */
+.anchor { scroll-margin-top: 88px; }
+.chapter { padding: var(--section-gap) 0 0; scroll-margin-top: 88px; }
+.chapterInner { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; align-items: start; }
+.chapterTitle { font-size: clamp(32px, 4.4vw, 56px); }
+.prose { display: flex; flex-direction: column; gap: 18px; }
+.prose p { margin: 0; font-size: clamp(17px, 1.5vw, 19px); line-height: 1.55; color: var(--fg); }
+.prose p.muted { color: var(--fg-2); }
+.quote { margin: 8px 0 0; padding: 20px 24px; border-left: 2px solid var(--fg); font-family: var(--font-display); font-style: italic; font-size: clamp(20px, 2vw, 26px); line-height: 1.3; }
+
+/* stage cards: what is inside the Comet card figure */
+.stageActions { list-style: none; margin: 0 0 12px; padding: 0; display: flex; flex-direction: column; gap: 6px; position: relative; }
+.stageActions li { padding: 8px 10px; font-size: 13px; line-height: 1.35; }
+.stageMeta { display: grid; gap: 4px; margin-top: 8px; font: 400 13px/1.4 var(--font-body); color: var(--fg-2); }
+.stageMeta b { font-weight: 500; color: var(--fg); }
+.stageSkill { font: 500 12px/1 var(--font-mono); color: var(--fg-2); }
+
+/* roles */
+.roles { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--line); }
+.roleRow { display: grid; grid-template-columns: 180px minmax(0, 1fr) minmax(0, 1fr); gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.roleRow b { font: 500 17px/1.3 var(--font-body); }
+.roleRow span { font-size: 15px; line-height: 1.5; color: var(--fg-2); }
+.roleRow span i { display: block; font: 500 11px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-2); margin-bottom: 8px; font-style: normal; }
+
+/* plugin lists */
+.pluginGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; margin-top: 40px; }
+.installList { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.installList li { display: grid; grid-template-columns: 36px 1fr; gap: 12px; padding: 14px 16px; }
+.installList li span:first-child { font: 500 12px/1.4 var(--font-mono); color: var(--fg-2); }
+.installList b { display: block; font: 500 15px/1.3 var(--font-body); margin-bottom: 6px; }
+.installList code { font: 400 13px/1.4 var(--font-mono); color: var(--fg); word-break: break-all; }
+.kv { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.kv li { display: grid; grid-template-columns: minmax(150px, 2fr) minmax(0, 5fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.5; }
+.kv li code, .kv li b { font: 500 13px/1.5 var(--font-mono); color: var(--fg); }
+.kv li span { color: var(--fg-2); }
+.subTitle { margin: 0 0 14px; font: 500 12px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-2); }
+.note { margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: var(--fg-2); }
+
+/* film panel */
+.film { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 24px; padding: clamp(24px, 4vw, 56px); color: var(--bg); }
+.filmChain { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; font: 500 clamp(14px, 1.6vw, 20px)/1.3 var(--font-body); }
+.filmChain i { font-style: normal; color: rgba(251, 250, 244, 0.5); }
+.filmChain .hi { color: var(--orb-2); }
+.filmNote { margin: 0; font: 500 12px/1.3 var(--font-mono); color: rgba(251, 250, 244, 0.6); }
+.tileFrom { font: 500 13px/1.2 var(--font-body); color: var(--fg); }
+.tileTo { font: 500 12px/1.3 var(--font-mono); color: var(--fg-2); }
+
+/* beliefs to adopt, principles */
+.adopt { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.adopt li { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.adopt b { font: 400 clamp(20px, 2vw, 26px)/1.2 var(--font-display); }
+.adopt p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--fg-2); }
+.principles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; counter-reset: p; }
+.principles li { padding: 16px 18px; font: 500 16px/1.35 var(--font-body); counter-increment: p; display: grid; grid-template-columns: 28px 1fr; gap: 10px; }
+.principles li::before { content: counter(p, decimal-leading-zero); font: 500 12px/1.4 var(--font-mono); color: var(--fg-2); }
+
+/* ladder */
+.ladder { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.ladder li { position: relative; overflow: hidden; padding: 20px; border-radius: 20px; background: var(--surface-2); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; min-height: 200px; }
+.ladder li.key { background: var(--fg); color: var(--bg); }
+.ladder li.key p { color: rgba(251, 250, 244, 0.75); }
+.ladder li > span { font: 500 12px/1 var(--font-mono); color: var(--fg-2); }
+.ladder li.key > span { color: rgba(251, 250, 244, 0.7); }
+.ladder li b { font: 400 clamp(20px, 2vw, 24px)/1.15 var(--font-display); }
+.ladder li p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--fg-2); }
+.levels { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.levels li { display: grid; grid-template-columns: 80px minmax(0, 3fr) minmax(0, 4fr); gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.5; }
+.levels li > span:first-child { font: 500 13px/1.5 var(--font-mono); color: var(--fg-2); }
+.levels b { display: block; font-weight: 500; margin-bottom: 4px; }
+.levels p { margin: 0; color: var(--fg-2); }
+.move { display: block; padding: 12px 14px; }
+.move i { display: block; font: 500 11px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-2); font-style: normal; margin-bottom: 6px; }
+
+/* three questions */
+.questions { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; counter-reset: q; }
+.questions li { padding: 24px; min-height: 180px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; counter-increment: q; font: 400 clamp(20px, 2.2vw, 28px)/1.2 var(--font-display); }
+.questions li::before { content: counter(q, decimal-leading-zero); font: 500 12px/1 var(--font-mono); color: var(--fg-2); }
+
+/* practices */
+.practice { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 32px; padding: 32px 0; border-top: 1px solid var(--line); }
+.practiceHead { display: flex; flex-direction: column; gap: 10px; }
+.practiceTag { font: 500 11px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-2); }
+.practiceHead h3 { margin: 0; font: 400 clamp(22px, 2.4vw, 30px)/1.15 var(--font-display); }
+.practiceHead p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--fg-2); }
+.compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.compare > div { padding: 18px; }
+.compare h4 { margin: 0 0 10px; font: 500 12px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-2); }
+.compare ol { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45; }
+.compare .win { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.compare .win h4 { color: rgba(251, 250, 244, 0.7); }
+.points { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.5; }
+.code { margin: 0 0 14px; padding: 18px 20px; border-radius: 16px; background: var(--fg); color: var(--bg); font: 400 13px/1.6 var(--font-mono); white-space: pre-wrap; overflow-x: auto; }
+.soon { font: 500 12px/1 var(--font-mono); color: var(--fg-2); }
+
+@media (max-width: 1100px) { .loopRow { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 820px) {
+  .chapterInner, .pluginGrid, .adopt li, .practice, .compare, .principles, .questions { grid-template-columns: 1fr; }
+  .chapterInner { gap: 20px; }
+  .roleRow { grid-template-columns: 1fr; gap: 10px; }
+  .ladder { grid-template-columns: 1fr; }
+  .levels li { grid-template-columns: 60px 1fr; }
+  .levels li > *:last-child { grid-column: 2; }
+  .loopRow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .loopNode { min-height: auto; padding: 10px; }
+  .loopNode i { display: none; }
+}
+@media (max-width: 560px) { .loopRow { grid-template-columns: 1fr 1fr; } .loopNode b { font-size: 13px; } .loopNode span { display: none; } }

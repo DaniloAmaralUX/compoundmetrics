@@ -44,6 +44,7 @@ const registry = JSON.parse(fs.readFileSync(path.join(ROOT, "compound-design/reg
 const conceptIds = [...fs.readdirSync(path.join(ROOT, "src/content")).filter((f) => f.startsWith("concepts-")).flatMap((f) => [...fs.readFileSync(path.join(ROOT, "src/content", f), "utf8").matchAll(/^\s{4}id: "([a-z0-9-]+)",$/gm)].map((m) => m[1]))];
 const routes = [
   "/",
+  "/guide",
   "/how-it-works",
   "/lab",
   "/project",
@@ -179,7 +180,7 @@ const base = `http://127.0.0.1:${server.address().port}`;
 const browser = await chromium.launch({ executablePath, headless: true, args: ["--no-sandbox"] });
 
 const VIEWPORTS = [1440, 1280, 820, 390, 320];
-const sample = ["/", "/how-it-works", "/lab", "/project", "/resources", "/resources/cd-interface-review", "/evidence", "/learn", "/learn/holdout", "/case-study"];
+const sample = ["/", "/guide", "/how-it-works", "/lab", "/project", "/resources", "/resources/cd-interface-review", "/evidence", "/learn", "/learn/holdout", "/case-study"];
 for (const route of sample) {
   let clean = true;
   for (const w of VIEWPORTS) {
