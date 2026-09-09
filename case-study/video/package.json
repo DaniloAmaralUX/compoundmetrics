@@ -1,0 +1,27 @@
+{
+  "name": "compound-design-case-study-video",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Remotion film for the Compound Design case study. Isolated from the site runtime (PRD §27.1).",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render:master": "remotion render src/index.ts CompoundEvolution out/compound-design-master.mp4",
+    "render:vertical": "remotion render src/index.ts CompoundEvolutionVertical out/compound-design-vertical.mp4",
+    "render:teaser": "remotion render src/index.ts CompoundTeaser out/compound-design-teaser.mp4",
+    "still:cover": "remotion still src/index.ts CompoundCover out/compound-design-cover.png",
+    "still:contact": "remotion still src/index.ts CompoundContactSheet out/compound-design-contact-sheet.png",
+    "still:map": "remotion still src/index.ts CompoundEvolutionMap out/compound-design-evolution-map.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.523",
+    "@remotion/transitions": "4.0.523",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "remotion": "4.0.523"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "typescript": "5.9.3"
+  }
+}

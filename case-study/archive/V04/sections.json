@@ -1,0 +1,420 @@
+{
+ "ENTRY:desktop": {
+  "route": "/",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "hero": {
+   "x": 144,
+   "y": 0,
+   "width": 1152,
+   "height": 4454
+  },
+  "section:div-0": {
+   "x": 144,
+   "y": 0,
+   "width": 1152,
+   "height": 4454
+  },
+  "section:section-1": {
+   "x": 0,
+   "y": 4454,
+   "width": 1440,
+   "height": 842
+  },
+  "footer": {
+   "x": 10,
+   "y": 5236,
+   "width": 1420,
+   "height": 361
+  },
+  "h1": {
+   "x": 394,
+   "y": 144,
+   "width": 652,
+   "height": 125
+  },
+  "primary_action": {
+   "x": 996,
+   "y": 757,
+   "width": 35,
+   "height": 32
+  },
+  "_page": {
+   "width": 1440,
+   "height": 5296
+  }
+ },
+ "ENTRY:mobile": {
+  "route": "/",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 5137
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 5137
+  },
+  "section:section-1": {
+   "x": 0,
+   "y": 5137,
+   "width": 390,
+   "height": 1162
+  },
+  "footer": {
+   "x": 10,
+   "y": 5909,
+   "width": 370,
+   "height": 692
+  },
+  "h1": {
+   "x": 30,
+   "y": 112,
+   "width": 330,
+   "height": 75
+  },
+  "primary_action": {
+   "x": 0,
+   "y": 0,
+   "width": 0,
+   "height": 0
+  },
+  "_page": {
+   "width": 390,
+   "height": 6299
+  }
+ },
+ "DISCOVERY:desktop": {
+  "route": "/gallery",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 57
+  },
+  "hero": {
+   "x": 112,
+   "y": 96,
+   "width": 1216,
+   "height": 15702
+  },
+  "section:div-0": {
+   "x": 112,
+   "y": 96,
+   "width": 1216,
+   "height": 15702
+  },
+  "footer": {
+   "x": 112,
+   "y": 15862,
+   "width": 1216,
+   "height": 361
+  },
+  "h1": {
+   "x": 392,
+   "y": 96,
+   "width": 146,
+   "height": 36
+  },
+  "primary_action": {
+   "x": 1292,
+   "y": 96,
+   "width": 36,
+   "height": 36
+  },
+  "_page": {
+   "width": 1440,
+   "height": 16263
+  }
+ },
+ "DISCOVERY:mobile": {
+  "route": "/gallery",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 57
+  },
+  "hero": {
+   "x": 20,
+   "y": 96,
+   "width": 350,
+   "height": 46372
+  },
+  "section:div-0": {
+   "x": 20,
+   "y": 96,
+   "width": 350,
+   "height": 46372
+  },
+  "footer": {
+   "x": 20,
+   "y": 46532,
+   "width": 350,
+   "height": 692
+  },
+  "h1": {
+   "x": 20,
+   "y": 166,
+   "width": 350,
+   "height": 36
+  },
+  "primary_action": {
+   "x": 0,
+   "y": 0,
+   "width": 0,
+   "height": 0
+  },
+  "_page": {
+   "width": 390,
+   "height": 47264
+  }
+ },
+ "DETAIL:desktop": {
+  "route": "/docs/components/glass",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 17,
+   "y": 80,
+   "width": 238,
+   "height": 742
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 900
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 900
+  },
+  "section:div-1": {
+   "x": 1316,
+   "y": 843,
+   "width": 108,
+   "height": 42
+  },
+  "footer": {
+   "x": 464,
+   "y": 3438,
+   "width": 768,
+   "height": 361
+  },
+  "h1": {
+   "x": 464,
+   "y": 64,
+   "width": 576,
+   "height": 36
+  },
+  "primary_action": {
+   "x": 1120,
+   "y": 64,
+   "width": 112,
+   "height": 32
+  },
+  "_page": {
+   "width": 1440,
+   "height": 900
+  }
+ },
+ "DETAIL:mobile": {
+  "route": "/docs/components/glass",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 0,
+   "width": 0,
+   "height": 0
+  },
+  "hero": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 844
+  },
+  "section:div-0": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 844
+  },
+  "section:div-1": {
+   "x": 266,
+   "y": 787,
+   "width": 108,
+   "height": 42
+  },
+  "footer": {
+   "x": 20,
+   "y": 3613,
+   "width": 350,
+   "height": 692
+  },
+  "h1": {
+   "x": 20,
+   "y": 96,
+   "width": 222,
+   "height": 36
+  },
+  "primary_action": {
+   "x": 258,
+   "y": 96,
+   "width": 112,
+   "height": 32
+  },
+  "_page": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "INTERACTION:desktop": {
+  "route": "/playground",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 337,
+   "y": 65,
+   "width": 1022,
+   "height": 69
+  },
+  "hero": {
+   "x": 16,
+   "y": 16,
+   "width": 240,
+   "height": 868
+  },
+  "section:aside-0": {
+   "x": 16,
+   "y": 16,
+   "width": 240,
+   "height": 868
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 0,
+   "width": 1440,
+   "height": 900
+  },
+  "footer": {
+   "x": 337,
+   "y": 4129,
+   "width": 1022,
+   "height": 281
+  },
+  "h1": {
+   "x": 464,
+   "y": 230,
+   "width": 768,
+   "height": 60
+  },
+  "primary_action": {
+   "x": 29,
+   "y": 105,
+   "width": 214,
+   "height": 175
+  },
+  "_page": {
+   "width": 1440,
+   "height": 900
+  }
+ },
+ "INTERACTION:mobile": {
+  "route": "/playground",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 21,
+   "y": 97,
+   "width": 348,
+   "height": 69
+  },
+  "hero": {
+   "x": 16,
+   "y": 16,
+   "width": 358,
+   "height": 54
+  },
+  "section:div-0": {
+   "x": 16,
+   "y": 16,
+   "width": 358,
+   "height": 54
+  },
+  "section:div-1": {
+   "x": 0,
+   "y": 0,
+   "width": 390,
+   "height": 844
+  },
+  "section:div-2": {
+   "x": 266,
+   "y": 787,
+   "width": 108,
+   "height": 42
+  },
+  "footer": {
+   "x": 21,
+   "y": 4937,
+   "width": 348,
+   "height": 425
+  },
+  "h1": {
+   "x": 45,
+   "y": 230,
+   "width": 300,
+   "height": 80
+  },
+  "primary_action": {
+   "x": 0,
+   "y": 0,
+   "width": 0,
+   "height": 0
+  },
+  "_page": {
+   "width": 390,
+   "height": 844
+  }
+ }
+}

@@ -1,0 +1,546 @@
+{
+ "ENTRY:desktop": {
+  "route": "/index.html",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 384,
+   "y": 65,
+   "width": 672,
+   "height": 375
+  },
+  "hero": {
+   "x": 384,
+   "y": 65,
+   "width": 672,
+   "height": 375
+  },
+  "section:header-0": {
+   "x": 384,
+   "y": 65,
+   "width": 672,
+   "height": 375
+  },
+  "section:section-1": {
+   "x": 384,
+   "y": 496,
+   "width": 672,
+   "height": 274
+  },
+  "section:section-2": {
+   "x": 384,
+   "y": 826,
+   "width": 672,
+   "height": 151
+  },
+  "footer": {
+   "x": 360,
+   "y": 1073,
+   "width": 720,
+   "height": 70
+  },
+  "h1": {
+   "x": 523,
+   "y": 201,
+   "width": 394,
+   "height": 44
+  },
+  "_page": {
+   "width": 1440,
+   "height": 1142
+  }
+ },
+ "ENTRY:mobile": {
+  "route": "/index.html",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 20,
+   "y": 65,
+   "width": 350,
+   "height": 368
+  },
+  "hero": {
+   "x": 20,
+   "y": 65,
+   "width": 350,
+   "height": 368
+  },
+  "section:header-0": {
+   "x": 20,
+   "y": 65,
+   "width": 350,
+   "height": 368
+  },
+  "section:section-1": {
+   "x": 20,
+   "y": 489,
+   "width": 350,
+   "height": 350
+  },
+  "section:section-2": {
+   "x": 20,
+   "y": 895,
+   "width": 350,
+   "height": 176
+  },
+  "footer": {
+   "x": 0,
+   "y": 1168,
+   "width": 390,
+   "height": 70
+  },
+  "h1": {
+   "x": 37,
+   "y": 177,
+   "width": 315,
+   "height": 35
+  },
+  "_page": {
+   "width": 390,
+   "height": 1237
+  }
+ },
+ "DISCOVERY:desktop": {
+  "route": "/skills.html",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 384,
+   "y": 65,
+   "width": 672,
+   "height": 364
+  },
+  "hero": {
+   "x": 384,
+   "y": 65,
+   "width": 672,
+   "height": 364
+  },
+  "section:header-0": {
+   "x": 384,
+   "y": 65,
+   "width": 672,
+   "height": 364
+  },
+  "section:section-1": {
+   "x": 384,
+   "y": 485,
+   "width": 672,
+   "height": 358
+  },
+  "footer": {
+   "x": 360,
+   "y": 1021,
+   "width": 720,
+   "height": 70
+  },
+  "h1": {
+   "x": 663,
+   "y": 153,
+   "width": 114,
+   "height": 44
+  },
+  "_page": {
+   "width": 1440,
+   "height": 1091
+  }
+ },
+ "DISCOVERY:mobile": {
+  "route": "/skills.html",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 20,
+   "y": 65,
+   "width": 350,
+   "height": 382
+  },
+  "hero": {
+   "x": 20,
+   "y": 65,
+   "width": 350,
+   "height": 382
+  },
+  "section:header-0": {
+   "x": 20,
+   "y": 65,
+   "width": 350,
+   "height": 382
+  },
+  "section:section-1": {
+   "x": 20,
+   "y": 503,
+   "width": 350,
+   "height": 512
+  },
+  "section:section-2": {
+   "x": 20,
+   "y": 1071,
+   "width": 350,
+   "height": 51
+  },
+  "footer": {
+   "x": 0,
+   "y": 1218,
+   "width": 390,
+   "height": 70
+  },
+  "h1": {
+   "x": 149,
+   "y": 129,
+   "width": 91,
+   "height": 35
+  },
+  "_page": {
+   "width": 390,
+   "height": 1288
+  }
+ },
+ "DETAIL:desktop": {
+  "route": "/skills/compound-design-ui.html",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 1182,
+   "width": 1440,
+   "height": 65
+  },
+  "hero": {
+   "x": 384,
+   "y": 243,
+   "width": 672,
+   "height": 139
+  },
+  "section:section-0": {
+   "x": 384,
+   "y": 243,
+   "width": 672,
+   "height": 139
+  },
+  "section:article-1": {
+   "x": 384,
+   "y": 430,
+   "width": 672,
+   "height": 3994
+  },
+  "footer": {
+   "x": 360,
+   "y": 4606,
+   "width": 720,
+   "height": 70
+  },
+  "h1": {
+   "x": 384,
+   "y": 151,
+   "width": 672,
+   "height": 31
+  },
+  "primary_action": {
+   "x": 978,
+   "y": 283,
+   "width": 62,
+   "height": 32
+  },
+  "_page": {
+   "width": 1440,
+   "height": 4676
+  }
+ },
+ "DETAIL:mobile": {
+  "route": "/skills/compound-design-ui.html",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 5622,
+   "width": 390,
+   "height": 65
+  },
+  "hero": {
+   "x": 20,
+   "y": 187,
+   "width": 350,
+   "height": 54
+  },
+  "section:p-0": {
+   "x": 20,
+   "y": 187,
+   "width": 350,
+   "height": 54
+  },
+  "section:section-1": {
+   "x": 20,
+   "y": 265,
+   "width": 350,
+   "height": 179
+  },
+  "section:article-2": {
+   "x": 20,
+   "y": 492,
+   "width": 350,
+   "height": 5876
+  },
+  "footer": {
+   "x": 0,
+   "y": 6550,
+   "width": 390,
+   "height": 70
+  },
+  "h1": {
+   "x": 20,
+   "y": 151,
+   "width": 350,
+   "height": 26
+  },
+  "primary_action": {
+   "x": 36,
+   "y": 354,
+   "width": 62,
+   "height": 32
+  },
+  "_page": {
+   "width": 390,
+   "height": 6620
+  }
+ },
+ "INTERACTION:desktop": {
+  "route": "/audit.html",
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "nav": {
+   "x": 0,
+   "y": 1662,
+   "width": 1440,
+   "height": 65
+  },
+  "hero": {
+   "x": 384,
+   "y": 196,
+   "width": 672,
+   "height": 82
+  },
+  "section:p-0": {
+   "x": 384,
+   "y": 196,
+   "width": 672,
+   "height": 82
+  },
+  "section:section-1": {
+   "x": 384,
+   "y": 301,
+   "width": 672,
+   "height": 139
+  },
+  "section:Progresso da auditoria": {
+   "x": 384,
+   "y": 472,
+   "width": 672,
+   "height": 113
+  },
+  "section:section-3": {
+   "x": 384,
+   "y": 629,
+   "width": 672,
+   "height": 551
+  },
+  "section:section-4": {
+   "x": 384,
+   "y": 1224,
+   "width": 672,
+   "height": 690
+  },
+  "section:section-5": {
+   "x": 384,
+   "y": 1958,
+   "width": 672,
+   "height": 748
+  },
+  "section:section-6": {
+   "x": 384,
+   "y": 2750,
+   "width": 672,
+   "height": 867
+  },
+  "section:section-7": {
+   "x": 384,
+   "y": 3662,
+   "width": 672,
+   "height": 572
+  },
+  "section:section-8": {
+   "x": 384,
+   "y": 4277,
+   "width": 672,
+   "height": 650
+  },
+  "section:section-9": {
+   "x": 384,
+   "y": 4971,
+   "width": 672,
+   "height": 394
+  },
+  "section:section-10": {
+   "x": 384,
+   "y": 5409,
+   "width": 672,
+   "height": 433
+  },
+  "section:section-11": {
+   "x": 384,
+   "y": 5886,
+   "width": 672,
+   "height": 572
+  },
+  "footer": {
+   "x": 360,
+   "y": 6639,
+   "width": 720,
+   "height": 70
+  },
+  "h1": {
+   "x": 384,
+   "y": 151,
+   "width": 672,
+   "height": 35
+  },
+  "primary_action": {
+   "x": 978,
+   "y": 342,
+   "width": 62,
+   "height": 32
+  },
+  "_page": {
+   "width": 1440,
+   "height": 6709
+  }
+ },
+ "INTERACTION:mobile": {
+  "route": "/audit.html",
+  "viewport": {
+   "width": 390,
+   "height": 844
+  },
+  "nav": {
+   "x": 0,
+   "y": 2677,
+   "width": 390,
+   "height": 65
+  },
+  "hero": {
+   "x": 20,
+   "y": 151,
+   "width": 350,
+   "height": 70
+  },
+  "section:h1-0": {
+   "x": 20,
+   "y": 151,
+   "width": 350,
+   "height": 70
+  },
+  "section:p-1": {
+   "x": 20,
+   "y": 231,
+   "width": 350,
+   "height": 136
+  },
+  "section:section-2": {
+   "x": 20,
+   "y": 391,
+   "width": 350,
+   "height": 179
+  },
+  "section:Progresso da auditoria": {
+   "x": 20,
+   "y": 602,
+   "width": 350,
+   "height": 174
+  },
+  "section:section-4": {
+   "x": 20,
+   "y": 820,
+   "width": 350,
+   "height": 674
+  },
+  "section:section-5": {
+   "x": 20,
+   "y": 1539,
+   "width": 350,
+   "height": 885
+  },
+  "section:section-6": {
+   "x": 20,
+   "y": 2467,
+   "width": 350,
+   "height": 904
+  },
+  "section:section-7": {
+   "x": 20,
+   "y": 3416,
+   "width": 350,
+   "height": 1101
+  },
+  "section:section-8": {
+   "x": 20,
+   "y": 4561,
+   "width": 350,
+   "height": 753
+  },
+  "section:section-9": {
+   "x": 20,
+   "y": 5358,
+   "width": 350,
+   "height": 767
+  },
+  "section:section-10": {
+   "x": 20,
+   "y": 6169,
+   "width": 350,
+   "height": 530
+  },
+  "section:section-11": {
+   "x": 20,
+   "y": 6743,
+   "width": 350,
+   "height": 550
+  },
+  "footer": {
+   "x": 0,
+   "y": 8266,
+   "width": 390,
+   "height": 70
+  },
+  "h1": {
+   "x": 20,
+   "y": 151,
+   "width": 350,
+   "height": 70
+  },
+  "primary_action": {
+   "x": 36,
+   "y": 480,
+   "width": 62,
+   "height": 32
+  },
+  "_page": {
+   "width": 390,
+   "height": 8336
+  }
+ }
+}

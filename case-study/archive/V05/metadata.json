@@ -1,0 +1,528 @@
+{
+ "milestone": "V05",
+ "build": "M06",
+ "name": "Supernova Catálogo (Iconiq preset over Supernova tokens)",
+ "tool_ids": [
+  "tool-20"
+ ],
+ "tools": [
+  "Supernova UI + Supernova Catálogo"
+ ],
+ "repository": "DaniloAmaralUX/supernova-catalogo",
+ "source_sha": "7af65530482bc304c54e14b6b84b03c75c97807b",
+ "representative_url": "https://supernova-catalogo.vercel.app/ (project created 2026-09-07)",
+ "equivalent_deployments": [],
+ "date_range": "2026-09-06 → 2026-09-09",
+ "captured_at": "2026-09-09T15:48:56.467Z",
+ "capture_method": "exact commit built locally (static export served by scripts/lib/serve.mjs); playwright-core 1.63.0; Chromium 141.0.7390.37; reducedMotion=reduce, animations=disabled, deviceScaleFactor=1, colorScheme=dark",
+ "build_adjustments": [],
+ "viewports": {
+  "desktop": {
+   "width": 1440,
+   "height": 900
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "surfaces": {
+  "ENTRY": "/",
+  "DISCOVERY": "/c/auth",
+  "DETAIL": "/c/auth/centered-signup",
+  "INTERACTION": "/c/forms",
+  "MOBILE_ENTRY": "/"
+ },
+ "visual_fingerprint": {
+  "ahash16_entry_top_band": "e0030000c000c000f800ff00c000ff00f80000000000c000fc00e400fe00fc00",
+  "dom_signature": "1a8fbcf8818fc61fb8f9a4616dd56dfc0dc8fba569fe156c9be120b113a7e575",
+  "css_sha256": "b3769dfd0b6315e47c94efce12ea2fdb78a2709a2bf355e600d8f1b68f8edf84",
+  "typography": "9d44d12a2844aa13e3b10d8e88d623400cc52fc1bda43d1be95542820c26136e",
+  "color": "f124069238d32929124d27949b2901df6a365aad0b7ca389d6ba0a132ba00c2c",
+  "section_order": [
+   "section.border-border",
+   "div.flex"
+  ],
+  "nav_links": [
+   "Supernova Catálogo",
+   "Layouts",
+   "Formulários",
+   "Acesso e onboarding",
+   "Painéis",
+   "Tabelas",
+   "Filtros",
+   "Estados vazios",
+   "Configurações",
+   "Cards",
+   "Modais",
+   "Gráficos",
+   "Linhas do tempo",
+   "Calendários",
+   "Perfil",
+   "Avisos e faixas",
+   "Planos",
+   "Tours e dicas",
+   "Comentários"
+  ],
+  "landmarks": [
+   "header",
+   "main",
+   "section",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header",
+   "section",
+   "header"
+  ]
+ },
+ "fingerprint_detail": {
+  "ENTRY": {
+   "font_families": [
+    "GeistMono×196",
+    "Raleway×178",
+    "DM Sans×20"
+   ],
+   "font_sizes": [
+    "10×196",
+    "14×177",
+    "30×18",
+    "16×2",
+    "60×1"
+   ],
+   "font_weights": [
+    "400×394"
+   ],
+   "text_colors": [
+    "lab(66.128 -0.0000298023 0.0000119209)×215",
+    "lab(98.26 0 0)×179"
+   ],
+   "background_colors": [
+    "lab(7.78201 -0.0000149012 0)×158",
+    "lab(98.26 0 0)×2",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.85)×1",
+    "oklab(0.205 -0.00000207871 0.00000478327 / 0.6)×1"
+   ],
+   "radii": [
+    "14px×316",
+    "3.35544e+07px×3",
+    "4px×1"
+   ],
+   "section_order": [
+    "section.border-border",
+    "div.flex"
+   ],
+   "landmarks": [
+    "header",
+    "main",
+    "section",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header",
+    "section",
+    "header"
+   ],
+   "headings": [
+    "h1:Designs prontos,montados com o que já te",
+    "h2:Layouts",
+    "h2:Formulários",
+    "h2:Acesso e onboarding",
+    "h2:Painéis",
+    "h2:Tabelas",
+    "h2:Filtros",
+    "h2:Estados vazios",
+    "h2:Configurações",
+    "h2:Cards",
+    "h2:Modais",
+    "h2:Gráficos",
+    "h2:Linhas do tempo",
+    "h2:Calendários",
+    "h2:Perfil",
+    "h2:Avisos e faixas",
+    "h2:Planos",
+    "h2:Tours e dicas",
+    "h2:Comentários"
+   ],
+   "nav_links": [
+    "Supernova Catálogo",
+    "Layouts",
+    "Formulários",
+    "Acesso e onboarding",
+    "Painéis",
+    "Tabelas",
+    "Filtros",
+    "Estados vazios",
+    "Configurações",
+    "Cards",
+    "Modais",
+    "Gráficos",
+    "Linhas do tempo",
+    "Calendários",
+    "Perfil",
+    "Avisos e faixas",
+    "Planos",
+    "Tours e dicas",
+    "Comentários"
+   ],
+   "title": "Supernova Catálogo",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:42451/_next/static/chunks/17ehmgnrpra1r.css",
+    "http://127.0.0.1:42451/_next/static/chunks/2xcjd29w8jeec.css"
+   ]
+  },
+  "DISCOVERY": {
+   "font_families": [
+    "GeistMono×19",
+    "Raleway×18",
+    "DM Sans×2"
+   ],
+   "font_sizes": [
+    "10×19",
+    "14×15",
+    "16×2",
+    "18×2",
+    "48×1"
+   ],
+   "font_weights": [
+    "400×39"
+   ],
+   "text_colors": [
+    "lab(66.128 -0.0000298023 0.0000119209)×20",
+    "lab(98.26 0 0)×19"
+   ],
+   "background_colors": [
+    "lab(7.78201 -0.0000149012 0)×14",
+    "lab(98.26 0 0)×2",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.85)×1",
+    "oklab(0.205 -0.00000207871 0.00000478327 / 0.6)×1"
+   ],
+   "radii": [
+    "14px×28",
+    "3.35544e+07px×3",
+    "4px×1"
+   ],
+   "section_order": [
+    "div.border-border",
+    "ul.mt-12",
+    "nav.mt-24"
+   ],
+   "landmarks": [
+    "header",
+    "main",
+    "nav"
+   ],
+   "headings": [
+    "h1:Acesso e onboarding"
+   ],
+   "nav_links": [
+    "Supernova Catálogo",
+    "← AnteriorFormulários",
+    "Seguinte →Painéis"
+   ],
+   "title": "Acesso e onboarding · Supernova Catálogo",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:42451/_next/static/chunks/17ehmgnrpra1r.css",
+    "http://127.0.0.1:42451/_next/static/chunks/2xcjd29w8jeec.css"
+   ]
+  },
+  "DETAIL": {
+   "font_families": [
+    "GeistMono×21",
+    "DM Sans×16",
+    "Raleway×1"
+   ],
+   "font_sizes": [
+    "10×22",
+    "14×12",
+    "16×2",
+    "12×1",
+    "24×1"
+   ],
+   "font_weights": [
+    "400×28",
+    "500×10"
+   ],
+   "text_colors": [
+    "lab(98.26 0 0)×19",
+    "lab(66.128 -0.0000298023 0.0000119209)×16",
+    "oklab(0.707999 -0.00000712276 0.0000166297 / 0.5)×2",
+    "lab(7.78201 -0.0000149012 0)×1"
+   ],
+   "background_colors": [
+    "lab(7.78201 -0.0000149012 0)×9",
+    "lab(100 0 0 / 0.1)×5",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.6)×3",
+    "oklab(0.999998 -0.00000980496 0.0000234246 / 0.075)×3",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.85)×2",
+    "lab(2.75381 0 0)×1",
+    "oklab(0.921998 -0.00000908971 0.0000215769 / 0.1)×1",
+    "oklab(0.268999 -0.00000260025 0.00000627339 / 0.15)×1"
+   ],
+   "radii": [
+    "4px×9",
+    "3.35544e+07px×8",
+    "10.08px×7",
+    "36.4px×5",
+    "14px×2",
+    "30.8px×2",
+    "36.4px 36.4px 0px 0px×1",
+    "5px×1"
+   ],
+   "section_order": [
+    "div.relative"
+   ],
+   "landmarks": [
+    "nav",
+    "main",
+    "form"
+   ],
+   "headings": [],
+   "nav_links": [
+    "escíndice",
+    "←anterior",
+    "→seguinte",
+    "↑/↓pasta"
+   ],
+   "title": "Cadastro centralizado · Acesso e onboarding · Supernova Catálogo",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:42451/_next/static/chunks/17ehmgnrpra1r.css",
+    "http://127.0.0.1:42451/_next/static/chunks/2xcjd29w8jeec.css"
+   ]
+  },
+  "INTERACTION": {
+   "font_families": [
+    "GeistMono×9",
+    "Raleway×8",
+    "DM Sans×2"
+   ],
+   "font_sizes": [
+    "10×9",
+    "14×5",
+    "16×2",
+    "18×2",
+    "48×1"
+   ],
+   "font_weights": [
+    "400×19"
+   ],
+   "text_colors": [
+    "lab(66.128 -0.0000298023 0.0000119209)×10",
+    "lab(98.26 0 0)×9"
+   ],
+   "background_colors": [
+    "lab(7.78201 -0.0000149012 0)×4",
+    "lab(98.26 0 0)×2",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.85)×1",
+    "oklab(0.205 -0.00000207871 0.00000478327 / 0.6)×1"
+   ],
+   "radii": [
+    "14px×8",
+    "3.35544e+07px×3",
+    "4px×1"
+   ],
+   "section_order": [
+    "div.border-border",
+    "ul.mt-12",
+    "nav.mt-24"
+   ],
+   "landmarks": [
+    "header",
+    "main",
+    "nav"
+   ],
+   "headings": [
+    "h1:Formulários"
+   ],
+   "nav_links": [
+    "Supernova Catálogo",
+    "← AnteriorLayouts",
+    "Seguinte →Acesso e onboarding"
+   ],
+   "title": "Formulários · Supernova Catálogo",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:42451/_next/static/chunks/17ehmgnrpra1r.css",
+    "http://127.0.0.1:42451/_next/static/chunks/2xcjd29w8jeec.css"
+   ]
+  }
+ },
+ "notes": [],
+ "files": {
+  "surfaces/ENTRY-desktop.png": {
+   "sha256": "ef1269c9eb46aad04ab745f917025b62bba337f749e6f951739361a4508f0254",
+   "bytes": 347182
+  },
+  "desktop-full.png": {
+   "sha256": "ef1269c9eb46aad04ab745f917025b62bba337f749e6f951739361a4508f0254",
+   "bytes": 347182
+  },
+  "surfaces/ENTRY-desktop-first-screen.png": {
+   "sha256": "b866843602d460b6c21fab3b59484e2c27762bf62de751bc670a36fd3bb909ea",
+   "bytes": 96920
+  },
+  "states/ENTRY-focus-first.png": {
+   "sha256": "768a5ae77607a266c9d58034c9dfe1a49d832446abb9897fbfcdd14f2b159488",
+   "bytes": 98217
+  },
+  "states/ENTRY-hover-first.png": {
+   "sha256": "37fb5f7c1fae5a67f84a15554b721bd02ac8dc758c55056beb82f639e249714b",
+   "bytes": 98247
+  },
+  "surfaces/ENTRY-mobile.png": {
+   "sha256": "b90a7a265bd35b03d9732182abf157410b2944bc30fcf44b36c9ad3c6281df52",
+   "bytes": 185313
+  },
+  "mobile-full.png": {
+   "sha256": "b90a7a265bd35b03d9732182abf157410b2944bc30fcf44b36c9ad3c6281df52",
+   "bytes": 185313
+  },
+  "surfaces/ENTRY-mobile-first-screen.png": {
+   "sha256": "22fd063c435d5fccd5ef8576d9de7f74eed89eedcd3c28312ccd60c8532bdb20",
+   "bytes": 57603
+  },
+  "surfaces/DISCOVERY-desktop.png": {
+   "sha256": "3696314bc5d6d5226caba2f14a6e46c3dde1483609846499e61b2701cb1935cc",
+   "bytes": 478409
+  },
+  "surfaces/DISCOVERY-desktop-first-screen.png": {
+   "sha256": "a94ac132af27ed8d5a598306e195e1629246d32faf5cc9b3fbe88e26f9d64579",
+   "bytes": 169884
+  },
+  "states/DISCOVERY-focus-first.png": {
+   "sha256": "1ad70071b1e9207dacb1b146a33636f65770abd54cda83594a0585d642a96838",
+   "bytes": 170870
+  },
+  "states/DISCOVERY-hover-first.png": {
+   "sha256": "3ee2682d97c17ac0497d450a964509bfb197e4acf87f77c2b86e678f9402d2c9",
+   "bytes": 171498
+  },
+  "surfaces/DISCOVERY-mobile.png": {
+   "sha256": "9086fdd7e41deb80535a6c97006729fb1dbceca25ff8e81dbacfd2d6870bbd91",
+   "bytes": 181855
+  },
+  "surfaces/DISCOVERY-mobile-first-screen.png": {
+   "sha256": "1aa0de102202171b9a976520e50bd3457dd69b95e11b90cd5b5adc5ee4c9844c",
+   "bytes": 56192
+  },
+  "surfaces/DETAIL-desktop.png": {
+   "sha256": "358db9b1ec2864679c5601a22cea79715faeaf7c5b9b52c37a9ede15c212f307",
+   "bytes": 95005
+  },
+  "surfaces/DETAIL-desktop-first-screen.png": {
+   "sha256": "4675ca56516f75c96c1fe213279fc04864971672ddbb1e68c6ab2a3163d1ecf5",
+   "bytes": 94998
+  },
+  "states/DETAIL-focus-first.png": {
+   "sha256": "46e29c45431bf9d120bf87f813cd43b70c7a24a09da01da3880c598a06a95c98",
+   "bytes": 97519
+  },
+  "states/DETAIL-hover-first.png": {
+   "sha256": "64e99e62ba88f3679f4725cc51b0a514c213e9450e134c57607e8dbbff0878af",
+   "bytes": 98320
+  },
+  "states/DETAIL-form-submit-empty.png": {
+   "sha256": "e369b6fc90de049b4278eae6582dfbd891725f0fb941c1bfd5b641b9a7a6c1a6",
+   "bytes": 95162
+  },
+  "surfaces/DETAIL-mobile.png": {
+   "sha256": "e83f0b54f81f68b2544b609bc451e69dda155b51eb24bc7edc49b8dff1facb60",
+   "bytes": 58232
+  },
+  "surfaces/DETAIL-mobile-first-screen.png": {
+   "sha256": "14678ad7c7ae453e166a94f1f7c4c9e391ed691e349672f7f98147a03f8f56af",
+   "bytes": 58128
+  },
+  "states/DETAIL-mobile-nav-open.png": {
+   "sha256": "8f9fc9f1d9e63b6ef75bc5e7966497da1c09ec438e5904f8781e96e0f586c425",
+   "bytes": 48074
+  },
+  "surfaces/INTERACTION-desktop.png": {
+   "sha256": "a1736fa12b1807814334ca8896d0ac1175c7af946f879f37cbfefc1291235119",
+   "bytes": 128236
+  },
+  "surfaces/INTERACTION-desktop-first-screen.png": {
+   "sha256": "2020f0af40047c43a604049e7d426b4b0f56e529042009462a089e6acf6a6473",
+   "bytes": 99905
+  },
+  "states/INTERACTION-focus-first.png": {
+   "sha256": "1507330f80202c61e8127b764941ec3f6b57685619f1d6b4921c7beab11cb6cd",
+   "bytes": 100936
+  },
+  "states/INTERACTION-hover-first.png": {
+   "sha256": "562167cc41be6234499cfc8c7518e90e6be39d458a8f7f2a0a229fd8e51e4536",
+   "bytes": 101876
+  },
+  "surfaces/INTERACTION-mobile.png": {
+   "sha256": "432f41f90f543507b6c80323025ee5850caaf162f2e9e30fe751bd4638e24421",
+   "bytes": 96207
+  },
+  "surfaces/INTERACTION-mobile-first-screen.png": {
+   "sha256": "d3df7807bf2b034f0ddbb3ada41e969d787ccedf9648ce2e52453ba13f258593",
+   "bytes": 43136
+  },
+  "sections.json": {
+   "sha256": "2ba619384db8445bc8bbccbc74444f322d9d9399f79fed1a32669f1c1b34ef9f",
+   "bytes": 5146
+  }
+ }
+}

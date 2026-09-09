@@ -1,0 +1,3669 @@
+{
+ "milestone": "V05",
+ "build": "M06",
+ "source_sha": "7af65530482bc304c54e14b6b84b03c75c97807b",
+ "run_at": "2026-09-09T15:49:54.208Z",
+ "instrument": "cl-audit playbook (compound-labs-design@364430b, skills/compound-labs-design/references/audit-playbook.md) — deterministic pattern subset; Phase-3 vetting by reading is recorded as NOT_VERIFIED for categories with no static rule",
+ "files_scanned": 403,
+ "totals": {
+  "hover": 23,
+  "gatedHover": 0,
+  "tabular": 152,
+  "reduced": 3,
+  "anim": 310,
+  "numbers": 7849
+ },
+ "categories": {
+  "1-hierarquia": {
+   "state": "NOT_VERIFIED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "2-tipografia": {
+   "state": "CHECKED",
+   "findings": 872,
+   "files": 158,
+   "high": 0
+  },
+  "3-cor": {
+   "state": "CHECKED",
+   "findings": 164,
+   "files": 18,
+   "high": 0
+  },
+  "4-superficies": {
+   "state": "CHECKED",
+   "findings": 43,
+   "files": 41,
+   "high": 43
+  },
+  "5-motion-easing": {
+   "state": "CHECKED",
+   "findings": 17,
+   "files": 4,
+   "high": 0
+  },
+  "6-motion-physics": {
+   "state": "CHECKED",
+   "findings": 0,
+   "files": 0,
+   "high": 0
+  },
+  "7-performance": {
+   "state": "CHECKED",
+   "findings": 31,
+   "files": 20,
+   "high": 0
+  },
+  "8-acessibilidade": {
+   "state": "CHECKED",
+   "findings": 1,
+   "files": 1,
+   "high": 0
+  }
+ },
+ "findings": [
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/atoms/badge.tsx",
+   "line": 7,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/button.tsx",
+   "line": 7,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/atoms/button.tsx",
+   "line": 7,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/checkbox.tsx",
+   "line": 16,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/combobox.tsx",
+   "line": 272,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/command.tsx",
+   "line": 99,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/dialog.tsx",
+   "line": 64,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/input-group.tsx",
+   "line": 17,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/input-otp.tsx",
+   "line": 57,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/atoms/input-otp.tsx",
+   "line": 57,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/input.tsx",
+   "line": 10,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/item.tsx",
+   "line": 37,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/atoms/micro-rotulo.tsx",
+   "line": 26,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/atoms/pilula.tsx",
+   "line": 14,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/atoms/progress.tsx",
+   "line": 23,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/radio-group.tsx",
+   "line": 28,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/select.tsx",
+   "line": 46,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/atoms/selo-de-maturidade.tsx",
+   "line": 24,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "linear-ui",
+   "severity": "LOW",
+   "file": "src/design/atoms/sidebar.tsx",
+   "line": 220,
+   "snippet": "transition-[width] duration-200 ease-linear",
+   "description": "linear easing on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "linear-ui",
+   "severity": "LOW",
+   "file": "src/design/atoms/sidebar.tsx",
+   "line": 232,
+   "snippet": "transition-[left,right,width] duration-200 ease-linear",
+   "description": "linear easing on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "linear-ui",
+   "severity": "LOW",
+   "file": "src/design/atoms/sidebar.tsx",
+   "line": 291,
+   "snippet": "transition-all ease-linear",
+   "description": "linear easing on UI transitions"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "linear-ui",
+   "severity": "LOW",
+   "file": "src/design/atoms/sidebar.tsx",
+   "line": 407,
+   "snippet": "transition-[margin,opacity] duration-200 ease-linear",
+   "description": "linear easing on UI transitions"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/atoms/sidebar.tsx",
+   "line": 291,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/switch.tsx",
+   "line": 19,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/atoms/switch.tsx",
+   "line": 19,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/tabs.tsx",
+   "line": 83,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/atoms/tabs.tsx",
+   "line": 65,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/textarea.tsx",
+   "line": 9,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/atoms/toggle.tsx",
+   "line": 9,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/molecules/borda-luminosa.tsx",
+   "line": 88,
+   "snippet": "#120F17",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/molecules/borda-luminosa.tsx",
+   "line": 94,
+   "snippet": "#c084fc",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/molecules/borda-luminosa.tsx",
+   "line": 94,
+   "snippet": "#f472b6",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/molecules/borda-luminosa.tsx",
+   "line": 94,
+   "snippet": "#38bdf8",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/molecules/borda-luminosa.tsx",
+   "line": 205,
+   "snippet": "transition: isVisible ? 'opacity 0.25s ease-out' : 'opacity 0.75s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/molecules/borda-luminosa.tsx",
+   "line": 237,
+   "snippet": "transition: isVisible ? 'opacity 0.25s ease-out' : 'opacity 0.75s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/molecules/borda-luminosa.tsx",
+   "line": 250,
+   "snippet": "transition: isVisible ? 'opacity 0.25s ease-out' : 'opacity 0.75s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/molecules/botao-especular.tsx",
+   "line": 118,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/molecules/botao-especular.tsx",
+   "line": 121,
+   "snippet": "#f5f5f5",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/molecules/botao-especular.tsx",
+   "line": 122,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/molecules/botao-especular.tsx",
+   "line": 123,
+   "snippet": "#525252",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/molecules/botao-especular.tsx",
+   "line": 277,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/molecules/comando-de-instalacao.tsx",
+   "line": 49,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/molecules/devl/auth-shell.tsx",
+   "line": 71,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/molecules/devl/auth-shell.tsx",
+   "line": 81,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/molecules/devl/auth-shell.tsx",
+   "line": 91,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/molecules/devl/chart.tsx",
+   "line": 52,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/molecules/devl/chart.tsx",
+   "line": 52,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/molecules/devl/chart.tsx",
+   "line": 153,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/molecules/devl/chart.tsx",
+   "line": 183,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/molecules/legenda-de-teclas.tsx",
+   "line": 53,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/molecules/legenda-de-teclas.tsx",
+   "line": 54,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/molecules/legenda-de-teclas.tsx",
+   "line": 59,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/organisms/cartao-do-design.tsx",
+   "line": 87,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/organisms/painel-de-codigo.tsx",
+   "line": 91,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signin.tsx",
+   "line": 120,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signin.tsx",
+   "line": 223,
+   "snippet": "#EA4335",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signin.tsx",
+   "line": 227,
+   "snippet": "#34A853",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signin.tsx",
+   "line": 231,
+   "snippet": "#FBBC05",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signin.tsx",
+   "line": 235,
+   "snippet": "#4285F4",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/pages/auth/centered-signin.tsx",
+   "line": 173,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signup.tsx",
+   "line": 124,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signup.tsx",
+   "line": 197,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signup.tsx",
+   "line": 266,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signup.tsx",
+   "line": 346,
+   "snippet": "#EA4335",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signup.tsx",
+   "line": 350,
+   "snippet": "#34A853",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signup.tsx",
+   "line": 354,
+   "snippet": "#FBBC05",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/centered-signup.tsx",
+   "line": 358,
+   "snippet": "#4285F4",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/pages/auth/centered-signup.tsx",
+   "line": 174,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/check-email.tsx",
+   "line": 45,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/check-email.tsx",
+   "line": 76,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 179,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 19,
+   "snippet": "#0a0a0c",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 255,
+   "snippet": "#0a0a0c",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 255,
+   "snippet": "#0a0a0c",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 275,
+   "snippet": "#EA4335",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 279,
+   "snippet": "#34A853",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 283,
+   "snippet": "#FBBC05",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 287,
+   "snippet": "#4285F4",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 167,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 240,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 80,
+   "snippet": "animation: glass-blob-1 14s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 81,
+   "snippet": "animation: glass-blob-2 16s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 82,
+   "snippet": "animation: glass-blob-3 12s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 83,
+   "snippet": "animation: glass-blob-4 18s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/auth/glass-signup.tsx",
+   "line": 84,
+   "snippet": "animation: glass-blob-5 11s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 167,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 212,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 485,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 510,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 152,
+   "snippet": "#0a0a0c",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 413,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 425,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 434,
+   "snippet": "#1d1d2c",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 435,
+   "snippet": "#0a0a0f",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 438,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 439,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 442,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 443,
+   "snippet": "#b9b9d2",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 444,
+   "snippet": "#5a5a78",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 617,
+   "snippet": "#EA4335",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 621,
+   "snippet": "#34A853",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 625,
+   "snippet": "#FBBC05",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 629,
+   "snippet": "#4285F4",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 209,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/pages/auth/inset-login.tsx",
+   "line": 567,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/left-signin.tsx",
+   "line": 52,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/left-signin.tsx",
+   "line": 95,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/left-signin.tsx",
+   "line": 209,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/left-signin.tsx",
+   "line": 235,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/left-signin.tsx",
+   "line": 266,
+   "snippet": "#EA4335",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/left-signin.tsx",
+   "line": 270,
+   "snippet": "#34A853",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/left-signin.tsx",
+   "line": 274,
+   "snippet": "#FBBC05",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/left-signin.tsx",
+   "line": 278,
+   "snippet": "#4285F4",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/pages/auth/left-signin.tsx",
+   "line": 148,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/magic-link-sent.tsx",
+   "line": 66,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/auth/magic-link-sent.tsx",
+   "line": 134,
+   "snippet": "animation: \"magic-float-a 3s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/auth/magic-link-sent.tsx",
+   "line": 139,
+   "snippet": "animation: \"magic-float-b 4s ease-in-out infinite 0.4s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/auth/magic-link-sent.tsx",
+   "line": 144,
+   "snippet": "animation: \"magic-float-c 3.6s ease-in-out infinite 0.8s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/auth/magic-link-sent.tsx",
+   "line": 149,
+   "snippet": "animation: \"magic-float-a 3.4s ease-in-out infinite 1.2s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "5-motion-easing",
+   "check": "duration-gt-300",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/auth/magic-link-sent.tsx",
+   "line": 173,
+   "snippet": "animation: \"magic-pulse-dot 1.8s",
+   "description": "transition/animation duration > 300 ms (modals/drawers up to ~500 ms are exempt; reported, then vetted)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/onboarding.tsx",
+   "line": 90,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/onboarding.tsx",
+   "line": 123,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/onboarding.tsx",
+   "line": 171,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/onboarding.tsx",
+   "line": 205,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/onboarding.tsx",
+   "line": 241,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/onboarding.tsx",
+   "line": 269,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/auth/onboarding.tsx",
+   "line": 98,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/reset-password.tsx",
+   "line": 60,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/pages/auth/reset-password.tsx",
+   "line": 60,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/right-signin.tsx",
+   "line": 41,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/right-signin.tsx",
+   "line": 107,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/right-signin.tsx",
+   "line": 113,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/right-signin.tsx",
+   "line": 217,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/right-signin.tsx",
+   "line": 320,
+   "snippet": "#EA4335",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/right-signin.tsx",
+   "line": 324,
+   "snippet": "#34A853",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/right-signin.tsx",
+   "line": 328,
+   "snippet": "#FBBC05",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/right-signin.tsx",
+   "line": 332,
+   "snippet": "#4285F4",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/pages/auth/right-signin.tsx",
+   "line": 270,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/two-factor.tsx",
+   "line": 59,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/two-factor.tsx",
+   "line": 228,
+   "snippet": "#1d1d2c",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/two-factor.tsx",
+   "line": 229,
+   "snippet": "#0a0a0f",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/two-factor.tsx",
+   "line": 232,
+   "snippet": "#ffffff",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/two-factor.tsx",
+   "line": 233,
+   "snippet": "#b9b9d2",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/two-factor.tsx",
+   "line": 234,
+   "snippet": "#5a5a78",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/auth/waitlist.tsx",
+   "line": 48,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/agenda.tsx",
+   "line": 53,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/agenda.tsx",
+   "line": 82,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/agenda.tsx",
+   "line": 85,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/agenda.tsx",
+   "line": 98,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/agenda.tsx",
+   "line": 110,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/agenda.tsx",
+   "line": 120,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/agenda.tsx",
+   "line": 140,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/agenda.tsx",
+   "line": 146,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/date-range.tsx",
+   "line": 42,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/date-range.tsx",
+   "line": 66,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/date-range.tsx",
+   "line": 106,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/date-range.tsx",
+   "line": 131,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/date-range.tsx",
+   "line": 197,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/date-range.tsx",
+   "line": 200,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 263,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 284,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 309,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 324,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 346,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 374,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 391,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 407,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 413,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 456,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 478,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 564,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 576,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/calendars/holidays.tsx",
+   "line": 421,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/mini.tsx",
+   "line": 36,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/mini.tsx",
+   "line": 54,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/mini.tsx",
+   "line": 107,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/month.tsx",
+   "line": 147,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/month.tsx",
+   "line": 154,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 334,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 360,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 390,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 404,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 437,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 509,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 521,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 551,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 612,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 661,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 719,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 733,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 767,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 770,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 783,
+   "snippet": "text-[13px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 794,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 797,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 804,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 815,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 884,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 902,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 918,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/recurring.tsx",
+   "line": 932,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 204,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 241,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 263,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 268,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 323,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 367,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 380,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 388,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 395,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 399,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 414,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 433,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 496,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 510,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 515,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 577,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "4-superficies",
+   "check": "outline-none-no-replacement",
+   "severity": "HIGH",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 491,
+   "snippet": "outline-none",
+   "description": "focus outline removed (must be paired with a visible replacement)"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 277,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/calendars/timezone.tsx",
+   "line": 344,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/week.tsx",
+   "line": 61,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/week.tsx",
+   "line": 75,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/week.tsx",
+   "line": 97,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/week.tsx",
+   "line": 119,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/week.tsx",
+   "line": 174,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/week.tsx",
+   "line": 177,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/year-heatmap.tsx",
+   "line": 130,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/year-heatmap.tsx",
+   "line": 181,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/year-heatmap.tsx",
+   "line": 237,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/year-heatmap.tsx",
+   "line": 250,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/year-heatmap.tsx",
+   "line": 283,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/year-heatmap.tsx",
+   "line": 338,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/year-heatmap.tsx",
+   "line": 364,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/calendars/year-heatmap.tsx",
+   "line": 418,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/event.tsx",
+   "line": 103,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/event.tsx",
+   "line": 107,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/event.tsx",
+   "line": 117,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/event.tsx",
+   "line": 145,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/event.tsx",
+   "line": 151,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/integration.tsx",
+   "line": 120,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/integration.tsx",
+   "line": 132,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/integration.tsx",
+   "line": 139,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/invoice.tsx",
+   "line": 96,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/invoice.tsx",
+   "line": 110,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/media.tsx",
+   "line": 95,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/media.tsx",
+   "line": 113,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/media.tsx",
+   "line": 34,
+   "snippet": "#fde68a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/media.tsx",
+   "line": 35,
+   "snippet": "#fb7185",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/media.tsx",
+   "line": 47,
+   "snippet": "#a7f3d0",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/media.tsx",
+   "line": 48,
+   "snippet": "#3b82f6",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/media.tsx",
+   "line": 60,
+   "snippet": "#fbcfe8",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/media.tsx",
+   "line": 61,
+   "snippet": "#7c3aed",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 93,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 157,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 168,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 193,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 195,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 136,
+   "snippet": "#0f172a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 136,
+   "snippet": "#1e3a8a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 136,
+   "snippet": "#312e81",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 138,
+   "snippet": "#1f2937",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 138,
+   "snippet": "#7c2d12",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 138,
+   "snippet": "#be185d",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 139,
+   "snippet": "#064e3b",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 139,
+   "snippet": "#0f766e",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/payment-method.tsx",
+   "line": 139,
+   "snippet": "#0891b2",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/pricing.tsx",
+   "line": 76,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/pricing.tsx",
+   "line": 105,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 100,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 38,
+   "snippet": "#1f1f1f",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 38,
+   "snippet": "#d6d3d1",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 38,
+   "snippet": "#7c3aed",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 40,
+   "snippet": "#fde68a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 41,
+   "snippet": "#fb7185",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 51,
+   "snippet": "#0f172a",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 51,
+   "snippet": "#84cc16",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 51,
+   "snippet": "#f59e0b",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 51,
+   "snippet": "#e11d48",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 53,
+   "snippet": "#a7f3d0",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 54,
+   "snippet": "#3b82f6",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 63,
+   "snippet": "#1e293b",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 63,
+   "snippet": "#fef3c7",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 64,
+   "snippet": "#fbcfe8",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "3-cor",
+   "check": "raw-hex-in-components",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/product.tsx",
+   "line": 65,
+   "snippet": "#7c3aed",
+   "description": "raw hex colours in component files (outside token/theme files)"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/profile.tsx",
+   "line": 32,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/profile.tsx",
+   "line": 77,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/stat-tile.tsx",
+   "line": 126,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/task.tsx",
+   "line": 103,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/task.tsx",
+   "line": 126,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/task.tsx",
+   "line": 131,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/task.tsx",
+   "line": 146,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/task.tsx",
+   "line": 164,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/cards/task.tsx",
+   "line": 176,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/bar-grouped.tsx",
+   "line": 31,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/bar-grouped.tsx",
+   "line": 52,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/cohort-heatmap.tsx",
+   "line": 31,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/cohort-heatmap.tsx",
+   "line": 44,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/cohort-heatmap.tsx",
+   "line": 47,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/cohort-heatmap.tsx",
+   "line": 53,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/cohort-heatmap.tsx",
+   "line": 93,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/cohort-heatmap.tsx",
+   "line": 116,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/donut.tsx",
+   "line": 22,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/donut.tsx",
+   "line": 52,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/donut.tsx",
+   "line": 58,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/funnel.tsx",
+   "line": 21,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/funnel.tsx",
+   "line": 39,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/funnel.tsx",
+   "line": 55,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/funnel.tsx",
+   "line": 65,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/funnel.tsx",
+   "line": 69,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/funnel.tsx",
+   "line": 76,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/funnel.tsx",
+   "line": 115,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/funnel.tsx",
+   "line": 121,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "7-performance",
+   "check": "transition-all",
+   "severity": "MEDIUM",
+   "file": "src/design/pages/charts/funnel.tsx",
+   "line": 47,
+   "snippet": "transition-all",
+   "description": "transition: all"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/gauges.tsx",
+   "line": 26,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/gauges.tsx",
+   "line": 57,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/gauges.tsx",
+   "line": 91,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/gauges.tsx",
+   "line": 98,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/line-multi.tsx",
+   "line": 35,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/line-multi.tsx",
+   "line": 53,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/line-multi.tsx",
+   "line": 58,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/revenue-area.tsx",
+   "line": 99,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/revenue-area.tsx",
+   "line": 134,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/revenue-area.tsx",
+   "line": 143,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/scatter.tsx",
+   "line": 52,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/scatter.tsx",
+   "line": 136,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/waterfall.tsx",
+   "line": 82,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/charts/waterfall.tsx",
+   "line": 88,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/analytics.tsx",
+   "line": 44,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/analytics.tsx",
+   "line": 62,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/analytics.tsx",
+   "line": 67,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/analytics.tsx",
+   "line": 73,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/analytics.tsx",
+   "line": 99,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/analytics.tsx",
+   "line": 141,
+   "snippet": "text-[12px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/analytics.tsx",
+   "line": 147,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/analytics.tsx",
+   "line": 173,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/analytics.tsx",
+   "line": 200,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 67,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 94,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 112,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 122,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 125,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 136,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 139,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 152,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 156,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 169,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 174,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 178,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 194,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 200,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 216,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 260,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/engineering.tsx",
+   "line": 312,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/home.tsx",
+   "line": 42,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/home.tsx",
+   "line": 98,
+   "snippet": "text-[9px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/home.tsx",
+   "line": 101,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/home.tsx",
+   "line": 110,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/home.tsx",
+   "line": 120,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/home.tsx",
+   "line": 144,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/home.tsx",
+   "line": 164,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/home.tsx",
+   "line": 186,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 76,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 147,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 171,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 185,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 197,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 222,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 225,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 231,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 250,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 274,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 290,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 293,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/market.tsx",
+   "line": 300,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/metrics-overview.tsx",
+   "line": 62,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 47,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 67,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 76,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 87,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 97,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 110,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 121,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 131,
+   "snippet": "text-[11px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 152,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 157,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 169,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 175,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 183,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 201,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 227,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/revenue.tsx",
+   "line": 249,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/services.tsx",
+   "line": 124,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/services.tsx",
+   "line": 174,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/services.tsx",
+   "line": 192,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/services.tsx",
+   "line": 197,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/services.tsx",
+   "line": 202,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/services.tsx",
+   "line": 226,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/services.tsx",
+   "line": 244,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/services.tsx",
+   "line": 262,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  },
+  {
+   "category": "2-tipografia",
+   "check": "type-scale-loose",
+   "severity": "LOW",
+   "file": "src/design/pages/dashboards/services.tsx",
+   "line": 290,
+   "snippet": "text-[10px]",
+   "description": "hard-coded pixel font sizes outside a scale token"
+  }
+ ],
+ "findings_truncated": 728
+}

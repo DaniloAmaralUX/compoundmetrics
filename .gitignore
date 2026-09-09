@@ -35,3 +35,9 @@ compound-design/vendor/
 
 # design references studied read-only for the product experience; never committed
 .research/
+/.research/
+
+# Case study: disposable artifacts (reproducible from committed seeds/scripts) never committed
+case-study/video/node_modules/
+case-study/video/out/
+case-study/design-benchmark/screens/blind/

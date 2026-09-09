@@ -1,0 +1,2280 @@
+{
+ "milestone": "V02",
+ "build": "M07",
+ "source_sha": "54fcaf0e4cb86a989e2eeb2b1452eb9b7b5d3038",
+ "run_at": "2026-09-09T15:52:09.681Z",
+ "classification_sha256": null,
+ "surfaces": {
+  "ENTRY": {
+   "hierarquia/headings": {
+    "state": "PASS",
+    "measured": {
+     "h1_count": 1,
+     "level_skips": 0,
+     "h1_px": 36,
+     "h2_px": 14
+    },
+    "expected": "PASS when exactly one <h1> is present AND heading levels never skip (h1→h2→h3) AND computed font-size of h1 ≥ 1.5× h2 or h1 is visually distinct by weight; FAIL otherwise.",
+    "evidence": "h1 count 1, level skips 0, h1 36px vs h2 14px"
+   },
+   "hierarquia/escala-tipo": {
+    "state": "PASS",
+    "measured": 5,
+    "expected": "Collect distinct computed font-size values (px, rounded) of visible text nodes on the surface; PASS when ≤ 10 distinct values; FAIL when > 10.",
+    "evidence": "distinct computed font sizes: 14, 12, 16, 36, 18"
+   },
+   "estilo/espaco-base": {
+    "state": "FAIL",
+    "measured": 75,
+    "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+    "evidence": "60/80 spacing values are multiples of 4; off-grid: 6px×12, 10px×4, 2px×4"
+   },
+   "estilo/elevacao": {
+    "state": "PASS",
+    "measured": 1,
+    "expected": "Collect distinct non-none computed box-shadow values; PASS when ≤ 3 distinct values; FAIL when > 3.",
+    "evidence": "distinct box-shadow values: 1"
+   },
+   "estilo/tipo-sistema": {
+    "state": "PASS",
+    "measured": {
+     "families": [
+      "-apple-system",
+      "GeistMono"
+     ],
+     "weights": [
+      "400",
+      "500",
+      "600",
+      "700"
+     ]
+    },
+    "expected": "PASS when ≤ 2 distinct font families (first family of the stack, excluding system fallbacks for icon/emoji) AND ≤ 4 distinct font-weights are used by visible text; FAIL otherwise.",
+    "evidence": "2 families (-apple-system / GeistMono), 4 weights (400, 500, 600, 700)"
+   },
+   "estilo/radius": {
+    "state": "PASS",
+    "measured": 2,
+    "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
+    "evidence": "distinct radii: 8.75px, 4px"
+   },
+   "estilo/motion": {
+    "state": "PASS",
+    "measured": {
+     "declared": 12,
+     "le300": 12
+    },
+    "expected": "Collect declared transition-duration and animation-duration values (from computed style of elements with a transition or animation); PASS when ≥ 90 % are ≤ 300 ms; entrance/transformation animations explicitly marked in the source as continuity are counted separately and reported; FAIL otherwise.",
+    "evidence": "12/12 declared durations ≤ 300 ms; > 300: "
+   },
+   "acessibilidade/teclado": {
+    "state": "PASS",
+    "measured": {
+     "interactive": 13,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "expected": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
+    "evidence": "interactive 13; tabindex=-1 0; positive tabindex 0; role without tabindex 0; <a> without href 0"
+   },
+   "acessibilidade/foco": {
+    "state": "FAIL",
+    "measured": "4/12",
+    "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+    "evidence": "A \"Themes\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Components\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"GitHub repository\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Switch to light mode\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Browse 37 themes\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Components\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+   },
+   "acessibilidade/contraste": {
+    "state": "FAIL",
+    "measured": 1,
+    "expected": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
+    "evidence": ".bg-primary: Fix any of the following:\n  Element has insufficient color contrast of 3.16 (foreground color: #fcfcfc, background color: #7e83f7, font size: 10.5pt (14px), font weight: normal). Expected contrast rat"
+   },
+   "acessibilidade/alvos": {
+    "state": "FAIL",
+    "measured": 7.7,
+    "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+    "evidence": "1/13 targets meet the rule at 390×844; worst: A \"Themes\" 74×32; A \"Components\" 102×32; A \"GitHub repository\" 36×36; BUTTON \"Switch to light mode\" 36×36; BUTTON \"Copy\" 76×32; A \"Browse 37 themes\" 162×36; A \"Components\" 112×36; BUTTON \"Copy\" 76×32"
+   },
+   "acessibilidade/alt-aria": {
+    "state": "PASS",
+    "measured": 0,
+    "expected": "PASS when axe reports 0 violations for these rules; FAIL otherwise.",
+    "evidence": "axe image-alt / button-name / link-name / svg-img-alt: 0 violations"
+   },
+   "acessibilidade/semantica": {
+    "state": "FAIL",
+    "measured": {
+     "main": false,
+     "nav": true,
+     "header": true,
+     "headings": 2,
+     "axe": [
+      "landmark-one-main×1"
+     ]
+    },
+    "expected": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+    "evidence": "main=false nav=true header=true headings=2; axe: landmark-one-main×1"
+   },
+   "acessibilidade/reduced-motion": {
+    "state": "PASS",
+    "measured": true,
+    "expected": "PASS when at least one loaded stylesheet contains a prefers-reduced-motion media query that reaches the animated elements (heuristic: query present); FAIL when animations/transitions exist and no such query exists.",
+    "evidence": "prefers-reduced-motion query in loaded CSS: true; animations/transitions declared: 12"
+   },
+   "acessibilidade/zoom": {
+    "state": "PASS",
+    "measured": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "overflow_px_at_zoom2": 0
+    },
+    "expected": "PASS when the viewport meta has no maximum-scale < 2 and no user-scalable=no AND after applying CSS zoom 2 on the 1440 viewport document.scrollWidth ≤ viewport width + 2 px; FAIL otherwise.",
+    "evidence": "viewport meta \"width=device-width, initial-scale=1\"; horizontal overflow at CSS zoom 2: 0px"
+   },
+   "navegacao/links": {
+    "state": "N/A",
+    "measured": {
+     "in_text": 0,
+     "distinguished": 0,
+     "axe": 0
+    },
+    "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
+   },
+   "carga/chunks": {
+    "state": "PASS",
+    "measured": {
+     "nav_items": 2,
+     "big_lists": []
+    },
+    "expected": "PASS when the primary nav has ≤ 9 top-level items AND no visible menu/list of choices exceeds 9 items without grouping (heuristic: any <ul>/<ol> of links with > 9 direct children and no headings between); FAIL otherwise.",
+    "evidence": "primary nav 2 items; ungrouped link lists > 9: none"
+   },
+   "formularios/labels": {
+    "state": "N/A",
+    "measured": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "axe_label": 0
+    },
+    "expected": "PASS when every input has a visible label (axe label rule 0 violations AND label is not visually hidden only); FAIL otherwise.",
+    "evidence": "0/0 inputs with a visible label; axe label violations 0"
+   },
+   "formularios/tipos-campo": {
+    "state": "N/A",
+    "measured": {
+     "candidates": 0,
+     "ok": 0
+    },
+    "expected": "PASS when email/phone/number fields use the matching input type and autocomplete tokens; FAIL otherwise.",
+    "evidence": "0/0 email/tel/number-like fields carry a matching type, inputmode or autocomplete"
+   },
+   "formularios/input-16px": {
+    "state": "N/A",
+    "measured": [],
+    "expected": "PASS when every visible input/select/textarea has computed font-size ≥ 16 px at 390×844; FAIL otherwise.",
+    "evidence": "0 inputs all ≥ 16px at 390×844"
+   }
+  },
+  "DISCOVERY": {
+   "hierarquia/headings": {
+    "state": "PASS",
+    "measured": {
+     "h1_count": 1,
+     "level_skips": 0,
+     "h1_px": 24,
+     "h2_px": 16
+    },
+    "expected": "PASS when exactly one <h1> is present AND heading levels never skip (h1→h2→h3) AND computed font-size of h1 ≥ 1.5× h2 or h1 is visually distinct by weight; FAIL otherwise.",
+    "evidence": "h1 count 1, level skips 0, h1 24px vs h2 16px"
+   },
+   "hierarquia/escala-tipo": {
+    "state": "PASS",
+    "measured": 5,
+    "expected": "Collect distinct computed font-size values (px, rounded) of visible text nodes on the surface; PASS when ≤ 10 distinct values; FAIL when > 10.",
+    "evidence": "distinct computed font sizes: 14, 11, 16, 12, 24"
+   },
+   "estilo/espaco-base": {
+    "state": "FAIL",
+    "measured": 71.2,
+    "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+    "evidence": "84/118 spacing values are multiples of 4; off-grid: 6px×24, 2px×10"
+   },
+   "estilo/elevacao": {
+    "state": "N/A",
+    "measured": 0,
+    "expected": "Collect distinct non-none computed box-shadow values; PASS when ≤ 3 distinct values; FAIL when > 3.",
+    "evidence": "distinct box-shadow values: 0"
+   },
+   "estilo/tipo-sistema": {
+    "state": "PASS",
+    "measured": {
+     "families": [
+      "-apple-system",
+      "GeistMono"
+     ],
+     "weights": [
+      "400",
+      "500",
+      "600",
+      "700"
+     ]
+    },
+    "expected": "PASS when ≤ 2 distinct font families (first family of the stack, excluding system fallbacks for icon/emoji) AND ≤ 4 distinct font-weights are used by visible text; FAIL otherwise.",
+    "evidence": "2 families (-apple-system / GeistMono), 4 weights (400, 500, 600, 700)"
+   },
+   "estilo/radius": {
+    "state": "PASS",
+    "measured": 4,
+    "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
+    "evidence": "distinct radii: 3.35544e+07px, 8.75px, 15px, 10px"
+   },
+   "estilo/motion": {
+    "state": "PASS",
+    "measured": {
+     "declared": 13,
+     "le300": 13
+    },
+    "expected": "Collect declared transition-duration and animation-duration values (from computed style of elements with a transition or animation); PASS when ≥ 90 % are ≤ 300 ms; entrance/transformation animations explicitly marked in the source as continuity are counted separately and reported; FAIL otherwise.",
+    "evidence": "13/13 declared durations ≤ 300 ms; > 300: "
+   },
+   "acessibilidade/teclado": {
+    "state": "PASS",
+    "measured": {
+     "interactive": 12,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "expected": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
+    "evidence": "interactive 12; tabindex=-1 0; positive tabindex 0; role without tabindex 0; <a> without href 0"
+   },
+   "acessibilidade/foco": {
+    "state": "FAIL",
+    "measured": "5/12",
+    "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+    "evidence": "A \"Themes\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Components\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"GitHub repository\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Switch to light mode\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+   },
+   "acessibilidade/contraste": {
+    "state": "PASS",
+    "measured": 0,
+    "expected": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
+    "evidence": "axe color-contrast: 0 violations (0 needs-review)"
+   },
+   "acessibilidade/alvos": {
+    "state": "FAIL",
+    "measured": 8.3,
+    "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+    "evidence": "1/12 targets meet the rule at 390×844; worst: A \"Themes\" 74×32; A \"Components\" 102×32; A \"GitHub repository\" 36×36; BUTTON \"Switch to light mode\" 36×36; BUTTON \"Copy\" 76×32; BUTTON \"Copy\" 76×32; BUTTON \"Copy\" 76×32; A \"Danilo do Amaral\" 105×16"
+   },
+   "acessibilidade/alt-aria": {
+    "state": "PASS",
+    "measured": 0,
+    "expected": "PASS when axe reports 0 violations for these rules; FAIL otherwise.",
+    "evidence": "axe image-alt / button-name / link-name / svg-img-alt: 0 violations"
+   },
+   "acessibilidade/semantica": {
+    "state": "FAIL",
+    "measured": {
+     "main": false,
+     "nav": true,
+     "header": true,
+     "headings": 3,
+     "axe": [
+      "landmark-no-duplicate-banner×1",
+      "landmark-one-main×1",
+      "landmark-unique×1"
+     ]
+    },
+    "expected": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+    "evidence": "main=false nav=true header=true headings=3; axe: landmark-no-duplicate-banner×1, landmark-one-main×1, landmark-unique×1"
+   },
+   "acessibilidade/reduced-motion": {
+    "state": "PASS",
+    "measured": true,
+    "expected": "PASS when at least one loaded stylesheet contains a prefers-reduced-motion media query that reaches the animated elements (heuristic: query present); FAIL when animations/transitions exist and no such query exists.",
+    "evidence": "prefers-reduced-motion query in loaded CSS: true; animations/transitions declared: 13"
+   },
+   "acessibilidade/zoom": {
+    "state": "PASS",
+    "measured": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "overflow_px_at_zoom2": 0
+    },
+    "expected": "PASS when the viewport meta has no maximum-scale < 2 and no user-scalable=no AND after applying CSS zoom 2 on the 1440 viewport document.scrollWidth ≤ viewport width + 2 px; FAIL otherwise.",
+    "evidence": "viewport meta \"width=device-width, initial-scale=1\"; horizontal overflow at CSS zoom 2: 0px"
+   },
+   "navegacao/onde-estou": {
+    "state": "FAIL",
+    "measured": {
+     "marked": 0,
+     "styled": 0
+    },
+    "expected": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+    "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
+   },
+   "navegacao/links": {
+    "state": "N/A",
+    "measured": {
+     "in_text": 0,
+     "distinguished": 0,
+     "axe": 0
+    },
+    "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
+   },
+   "carga/chunks": {
+    "state": "PASS",
+    "measured": {
+     "nav_items": 2,
+     "big_lists": []
+    },
+    "expected": "PASS when the primary nav has ≤ 9 top-level items AND no visible menu/list of choices exceeds 9 items without grouping (heuristic: any <ul>/<ol> of links with > 9 direct children and no headings between); FAIL otherwise.",
+    "evidence": "primary nav 2 items; ungrouped link lists > 9: none"
+   },
+   "formularios/labels": {
+    "state": "N/A",
+    "measured": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "axe_label": 0
+    },
+    "expected": "PASS when every input has a visible label (axe label rule 0 violations AND label is not visually hidden only); FAIL otherwise.",
+    "evidence": "0/0 inputs with a visible label; axe label violations 0"
+   },
+   "formularios/tipos-campo": {
+    "state": "N/A",
+    "measured": {
+     "candidates": 0,
+     "ok": 0
+    },
+    "expected": "PASS when email/phone/number fields use the matching input type and autocomplete tokens; FAIL otherwise.",
+    "evidence": "0/0 email/tel/number-like fields carry a matching type, inputmode or autocomplete"
+   },
+   "formularios/input-16px": {
+    "state": "N/A",
+    "measured": [],
+    "expected": "PASS when every visible input/select/textarea has computed font-size ≥ 16 px at 390×844; FAIL otherwise.",
+    "evidence": "0 inputs all ≥ 16px at 390×844"
+   }
+  },
+  "DETAIL": {
+   "hierarquia/headings": {
+    "state": "PASS",
+    "measured": {
+     "h1_count": 1,
+     "level_skips": 0,
+     "h1_px": 24,
+     "h2_px": null
+    },
+    "expected": "PASS when exactly one <h1> is present AND heading levels never skip (h1→h2→h3) AND computed font-size of h1 ≥ 1.5× h2 or h1 is visually distinct by weight; FAIL otherwise.",
+    "evidence": "h1 count 1, level skips 0, h1 24px vs h2 nullpx"
+   },
+   "hierarquia/escala-tipo": {
+    "state": "PASS",
+    "measured": 7,
+    "expected": "Collect distinct computed font-size values (px, rounded) of visible text nodes on the surface; PASS when ≤ 10 distinct values; FAIL when > 10.",
+    "evidence": "distinct computed font sizes: 14, 12, 10, 9, 16, 11, 24"
+   },
+   "estilo/espaco-base": {
+    "state": "FAIL",
+    "measured": 47.5,
+    "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+    "evidence": "1228/2586 spacing values are multiples of 4; off-grid: 6px×682, 10px×370, 2px×306"
+   },
+   "estilo/elevacao": {
+    "state": "PASS",
+    "measured": 1,
+    "expected": "Collect distinct non-none computed box-shadow values; PASS when ≤ 3 distinct values; FAIL when > 3.",
+    "evidence": "distinct box-shadow values: 1"
+   },
+   "estilo/tipo-sistema": {
+    "state": "PASS",
+    "measured": {
+     "families": [
+      "-apple-system",
+      "GeistMono"
+     ],
+     "weights": [
+      "500",
+      "400",
+      "600",
+      "700"
+     ]
+    },
+    "expected": "PASS when ≤ 2 distinct font families (first family of the stack, excluding system fallbacks for icon/emoji) AND ≤ 4 distinct font-weights are used by visible text; FAIL otherwise.",
+    "evidence": "2 families (-apple-system / GeistMono), 4 weights (500, 400, 600, 700)"
+   },
+   "estilo/radius": {
+    "state": "FAIL",
+    "measured": 24,
+    "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
+    "evidence": "distinct radii: 3.35544e+07px, 8.75px, 8px, 12px, 15px, 10px, 6px, 4px"
+   },
+   "estilo/motion": {
+    "state": "PASS",
+    "measured": {
+     "declared": 152,
+     "le300": 152
+    },
+    "expected": "Collect declared transition-duration and animation-duration values (from computed style of elements with a transition or animation); PASS when ≥ 90 % are ≤ 300 ms; entrance/transformation animations explicitly marked in the source as continuity are counted separately and reported; FAIL otherwise.",
+    "evidence": "152/152 declared durations ≤ 300 ms; > 300: "
+   },
+   "acessibilidade/teclado": {
+    "state": "PASS",
+    "measured": {
+     "interactive": 83,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "expected": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
+    "evidence": "interactive 83; tabindex=-1 0; positive tabindex 0; role without tabindex 0; <a> without href 0"
+   },
+   "acessibilidade/foco": {
+    "state": "FAIL",
+    "measured": "5/12",
+    "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+    "evidence": "A \"Themes\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Components\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"GitHub repository\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Switch to light mode\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+   },
+   "acessibilidade/contraste": {
+    "state": "FAIL",
+    "measured": 40,
+    "expected": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
+    "evidence": ".gap-3.rounded-xl.bg-card:nth-child(1) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.16 (foreground color: #fcfcfc, background color: #7e83f7, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio  | .gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(1) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio  | .gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio "
+   },
+   "acessibilidade/alvos": {
+    "state": "FAIL",
+    "measured": 1.2,
+    "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+    "evidence": "1/83 targets meet the rule at 390×844; worst: A \"Themes\" 74×32; A \"Components\" 102×32; A \"GitHub repository\" 36×36; BUTTON \"Switch to light mode\" 36×36; BUTTON \"Active\" 78×32; BUTTON \"Copy\" 76×32; BUTTON \"Apply\" 77×32; BUTTON \"Copy\" 76×32"
+   },
+   "acessibilidade/alt-aria": {
+    "state": "PASS",
+    "measured": 0,
+    "expected": "PASS when axe reports 0 violations for these rules; FAIL otherwise.",
+    "evidence": "axe image-alt / button-name / link-name / svg-img-alt: 0 violations"
+   },
+   "acessibilidade/semantica": {
+    "state": "FAIL",
+    "measured": {
+     "main": false,
+     "nav": true,
+     "header": true,
+     "headings": 1,
+     "axe": [
+      "landmark-no-duplicate-banner×1",
+      "landmark-one-main×1",
+      "landmark-unique×1"
+     ]
+    },
+    "expected": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+    "evidence": "main=false nav=true header=true headings=1; axe: landmark-no-duplicate-banner×1, landmark-one-main×1, landmark-unique×1"
+   },
+   "acessibilidade/reduced-motion": {
+    "state": "PASS",
+    "measured": true,
+    "expected": "PASS when at least one loaded stylesheet contains a prefers-reduced-motion media query that reaches the animated elements (heuristic: query present); FAIL when animations/transitions exist and no such query exists.",
+    "evidence": "prefers-reduced-motion query in loaded CSS: true; animations/transitions declared: 152"
+   },
+   "acessibilidade/zoom": {
+    "state": "PASS",
+    "measured": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "overflow_px_at_zoom2": 0
+    },
+    "expected": "PASS when the viewport meta has no maximum-scale < 2 and no user-scalable=no AND after applying CSS zoom 2 on the 1440 viewport document.scrollWidth ≤ viewport width + 2 px; FAIL otherwise.",
+    "evidence": "viewport meta \"width=device-width, initial-scale=1\"; horizontal overflow at CSS zoom 2: 0px"
+   },
+   "navegacao/onde-estou": {
+    "state": "FAIL",
+    "measured": {
+     "marked": 0,
+     "styled": 0
+    },
+    "expected": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+    "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
+   },
+   "navegacao/links": {
+    "state": "N/A",
+    "measured": {
+     "in_text": 0,
+     "distinguished": 0,
+     "axe": 0
+    },
+    "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
+   },
+   "carga/chunks": {
+    "state": "PASS",
+    "measured": {
+     "nav_items": 2,
+     "big_lists": []
+    },
+    "expected": "PASS when the primary nav has ≤ 9 top-level items AND no visible menu/list of choices exceeds 9 items without grouping (heuristic: any <ul>/<ol> of links with > 9 direct children and no headings between); FAIL otherwise.",
+    "evidence": "primary nav 2 items; ungrouped link lists > 9: none"
+   },
+   "formularios/labels": {
+    "state": "N/A",
+    "measured": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "axe_label": 0
+    },
+    "expected": "PASS when every input has a visible label (axe label rule 0 violations AND label is not visually hidden only); FAIL otherwise.",
+    "evidence": "0/0 inputs with a visible label; axe label violations 0"
+   },
+   "formularios/tipos-campo": {
+    "state": "N/A",
+    "measured": {
+     "candidates": 0,
+     "ok": 0
+    },
+    "expected": "PASS when email/phone/number fields use the matching input type and autocomplete tokens; FAIL otherwise.",
+    "evidence": "0/0 email/tel/number-like fields carry a matching type, inputmode or autocomplete"
+   },
+   "formularios/input-16px": {
+    "state": "N/A",
+    "measured": [],
+    "expected": "PASS when every visible input/select/textarea has computed font-size ≥ 16 px at 390×844; FAIL otherwise.",
+    "evidence": "0 inputs all ≥ 16px at 390×844"
+   }
+  },
+  "INTERACTION": {
+   "hierarquia/headings": {
+    "state": "PASS",
+    "measured": {
+     "h1_count": 1,
+     "level_skips": 0,
+     "h1_px": 24,
+     "h2_px": null
+    },
+    "expected": "PASS when exactly one <h1> is present AND heading levels never skip (h1→h2→h3) AND computed font-size of h1 ≥ 1.5× h2 or h1 is visually distinct by weight; FAIL otherwise.",
+    "evidence": "h1 count 1, level skips 0, h1 24px vs h2 nullpx"
+   },
+   "hierarquia/escala-tipo": {
+    "state": "PASS",
+    "measured": 7,
+    "expected": "Collect distinct computed font-size values (px, rounded) of visible text nodes on the surface; PASS when ≤ 10 distinct values; FAIL when > 10.",
+    "evidence": "distinct computed font sizes: 14, 12, 10, 9, 16, 11, 24"
+   },
+   "estilo/espaco-base": {
+    "state": "FAIL",
+    "measured": 47.5,
+    "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+    "evidence": "1228/2586 spacing values are multiples of 4; off-grid: 6px×682, 10px×370, 2px×306"
+   },
+   "estilo/elevacao": {
+    "state": "PASS",
+    "measured": 1,
+    "expected": "Collect distinct non-none computed box-shadow values; PASS when ≤ 3 distinct values; FAIL when > 3.",
+    "evidence": "distinct box-shadow values: 1"
+   },
+   "estilo/tipo-sistema": {
+    "state": "PASS",
+    "measured": {
+     "families": [
+      "-apple-system",
+      "GeistMono"
+     ],
+     "weights": [
+      "500",
+      "400",
+      "600",
+      "700"
+     ]
+    },
+    "expected": "PASS when ≤ 2 distinct font families (first family of the stack, excluding system fallbacks for icon/emoji) AND ≤ 4 distinct font-weights are used by visible text; FAIL otherwise.",
+    "evidence": "2 families (-apple-system / GeistMono), 4 weights (500, 400, 600, 700)"
+   },
+   "estilo/radius": {
+    "state": "FAIL",
+    "measured": 24,
+    "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
+    "evidence": "distinct radii: 3.35544e+07px, 8.75px, 8px, 12px, 15px, 10px, 6px, 4px"
+   },
+   "estilo/motion": {
+    "state": "PASS",
+    "measured": {
+     "declared": 152,
+     "le300": 152
+    },
+    "expected": "Collect declared transition-duration and animation-duration values (from computed style of elements with a transition or animation); PASS when ≥ 90 % are ≤ 300 ms; entrance/transformation animations explicitly marked in the source as continuity are counted separately and reported; FAIL otherwise.",
+    "evidence": "152/152 declared durations ≤ 300 ms; > 300: "
+   },
+   "acessibilidade/teclado": {
+    "state": "PASS",
+    "measured": {
+     "interactive": 83,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "expected": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
+    "evidence": "interactive 83; tabindex=-1 0; positive tabindex 0; role without tabindex 0; <a> without href 0"
+   },
+   "acessibilidade/foco": {
+    "state": "FAIL",
+    "measured": "5/12",
+    "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+    "evidence": "A \"Themes\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"Components\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); A \"GitHub repository\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Switch to light mode\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5); BUTTON \"Copy\" outline=none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+   },
+   "acessibilidade/contraste": {
+    "state": "FAIL",
+    "measured": 40,
+    "expected": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
+    "evidence": ".gap-3.rounded-xl.bg-card:nth-child(1) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.16 (foreground color: #fcfcfc, background color: #7e83f7, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio  | .gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(1) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio  | .gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2: Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio "
+   },
+   "acessibilidade/alvos": {
+    "state": "FAIL",
+    "measured": 1.2,
+    "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+    "evidence": "1/83 targets meet the rule at 390×844; worst: A \"Themes\" 74×32; A \"Components\" 102×32; A \"GitHub repository\" 36×36; BUTTON \"Switch to light mode\" 36×36; BUTTON \"Active\" 78×32; BUTTON \"Copy\" 76×32; BUTTON \"Apply\" 77×32; BUTTON \"Copy\" 76×32"
+   },
+   "acessibilidade/alt-aria": {
+    "state": "PASS",
+    "measured": 0,
+    "expected": "PASS when axe reports 0 violations for these rules; FAIL otherwise.",
+    "evidence": "axe image-alt / button-name / link-name / svg-img-alt: 0 violations"
+   },
+   "acessibilidade/semantica": {
+    "state": "FAIL",
+    "measured": {
+     "main": false,
+     "nav": true,
+     "header": true,
+     "headings": 1,
+     "axe": [
+      "landmark-no-duplicate-banner×1",
+      "landmark-one-main×1",
+      "landmark-unique×1"
+     ]
+    },
+    "expected": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+    "evidence": "main=false nav=true header=true headings=1; axe: landmark-no-duplicate-banner×1, landmark-one-main×1, landmark-unique×1"
+   },
+   "acessibilidade/reduced-motion": {
+    "state": "PASS",
+    "measured": true,
+    "expected": "PASS when at least one loaded stylesheet contains a prefers-reduced-motion media query that reaches the animated elements (heuristic: query present); FAIL when animations/transitions exist and no such query exists.",
+    "evidence": "prefers-reduced-motion query in loaded CSS: true; animations/transitions declared: 152"
+   },
+   "acessibilidade/zoom": {
+    "state": "PASS",
+    "measured": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "overflow_px_at_zoom2": 0
+    },
+    "expected": "PASS when the viewport meta has no maximum-scale < 2 and no user-scalable=no AND after applying CSS zoom 2 on the 1440 viewport document.scrollWidth ≤ viewport width + 2 px; FAIL otherwise.",
+    "evidence": "viewport meta \"width=device-width, initial-scale=1\"; horizontal overflow at CSS zoom 2: 0px"
+   },
+   "navegacao/onde-estou": {
+    "state": "FAIL",
+    "measured": {
+     "marked": 0,
+     "styled": 0
+    },
+    "expected": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+    "evidence": "nav items 2; aria-current/active class 0; styled difference for current route 0"
+   },
+   "navegacao/links": {
+    "state": "N/A",
+    "measured": {
+     "in_text": 0,
+     "distinguished": 0,
+     "axe": 0
+    },
+    "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
+   },
+   "carga/chunks": {
+    "state": "PASS",
+    "measured": {
+     "nav_items": 2,
+     "big_lists": []
+    },
+    "expected": "PASS when the primary nav has ≤ 9 top-level items AND no visible menu/list of choices exceeds 9 items without grouping (heuristic: any <ul>/<ol> of links with > 9 direct children and no headings between); FAIL otherwise.",
+    "evidence": "primary nav 2 items; ungrouped link lists > 9: none"
+   },
+   "formularios/labels": {
+    "state": "N/A",
+    "measured": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "axe_label": 0
+    },
+    "expected": "PASS when every input has a visible label (axe label rule 0 violations AND label is not visually hidden only); FAIL otherwise.",
+    "evidence": "0/0 inputs with a visible label; axe label violations 0"
+   },
+   "formularios/tipos-campo": {
+    "state": "N/A",
+    "measured": {
+     "candidates": 0,
+     "ok": 0
+    },
+    "expected": "PASS when email/phone/number fields use the matching input type and autocomplete tokens; FAIL otherwise.",
+    "evidence": "0/0 email/tel/number-like fields carry a matching type, inputmode or autocomplete"
+   },
+   "formularios/input-16px": {
+    "state": "N/A",
+    "measured": [],
+    "expected": "PASS when every visible input/select/textarea has computed font-size ≥ 16 px at 390×844; FAIL otherwise.",
+    "evidence": "0 inputs all ≥ 16px at 390×844"
+   }
+  }
+ },
+ "site_level": {
+  "navegacao/menu-previsivel": {
+   "state": "PASS",
+   "measured": 1,
+   "expected": "PASS when the text content of the primary nav is identical (after whitespace normalisation) across every captured surface of the milestone; FAIL otherwise.",
+   "evidence": "distinct primary-nav texts across 4 surfaces: 1"
+  },
+  "navegacao/breadcrumbs": {
+   "state": "N/A",
+   "measured": null,
+   "expected": "On surfaces whose path depth ≥ 3 segments, PASS when a breadcrumb (nav[aria-label*=bread], .breadcrumb, ol with links to ancestors) or a visible parent link exists; FAIL otherwise.",
+   "evidence": "no captured surface deeper than two levels"
+  }
+ },
+ "raw": {
+  "ENTRY": {
+   "desktop": {
+    "headings": {
+     "h1_count": 1,
+     "heading_count": 2,
+     "level_skips": 0,
+     "h1_px": 36,
+     "h2_px": 14,
+     "h1_weight": "700",
+     "h2_weight": "500",
+     "sequence": [
+      1,
+      2
+     ]
+    },
+    "type": {
+     "distinct_sizes": 5,
+     "sizes": [
+      [
+       14,
+       20
+      ],
+      [
+       12,
+       2
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       36,
+       1
+      ],
+      [
+       18,
+       1
+      ]
+     ],
+     "families": [
+      [
+       "-apple-system",
+       21
+      ],
+      [
+       "GeistMono",
+       4
+      ]
+     ],
+     "weights": [
+      [
+       "400",
+       15
+      ],
+      [
+       "500",
+       8
+      ],
+      [
+       "600",
+       1
+      ],
+      [
+       "700",
+       1
+      ]
+     ]
+    },
+    "spacing": {
+     "values": 80,
+     "multiples_of_4": 60,
+     "pct": 75,
+     "off_grid_top": [
+      [
+       6,
+       12
+      ],
+      [
+       10,
+       4
+      ],
+      [
+       2,
+       4
+      ]
+     ]
+    },
+    "shadows": {
+     "distinct": 1,
+     "values": [
+      [
+       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+       2
+      ]
+     ]
+    },
+    "radii": {
+     "distinct": 2,
+     "values": [
+      [
+       "8.75px",
+       10
+      ],
+      [
+       "4px",
+       2
+      ]
+     ]
+    },
+    "motion": {
+     "declared": 12,
+     "le300": 12,
+     "gt300": []
+    },
+    "keyboard": {
+     "interactive": 13,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "nav": {
+     "has_main": false,
+     "has_nav": true,
+     "has_header": true,
+     "nav_text": "Themes Components",
+     "nav_items": 2,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/",
+     "depth": 0,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    },
+    "links": {
+     "in_text": 0,
+     "distinguished_not_only_color": 0
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "css": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "reduced_motion_query": true,
+     "css_chars": 47089,
+     "has_animation": true
+    }
+   },
+   "mobile": {
+    "targets": {
+     "total": 13,
+     "ok": 1,
+     "pct": 7.7,
+     "worst": [
+      {
+       "w": 74,
+       "h": 32,
+       "inline": false,
+       "tag": "A",
+       "txt": "Themes"
+      },
+      {
+       "w": 102,
+       "h": 32,
+       "inline": false,
+       "tag": "A",
+       "txt": "Components"
+      },
+      {
+       "w": 36,
+       "h": 36,
+       "inline": false,
+       "tag": "A",
+       "txt": "GitHub repository"
+      },
+      {
+       "w": 36,
+       "h": 36,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Switch to light mode"
+      },
+      {
+       "w": 76,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Copy"
+      },
+      {
+       "w": 162,
+       "h": 36,
+       "inline": false,
+       "tag": "A",
+       "txt": "Browse 37 themes"
+      },
+      {
+       "w": 112,
+       "h": 36,
+       "inline": false,
+       "tag": "A",
+       "txt": "Components"
+      },
+      {
+       "w": 76,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Copy"
+      }
+     ]
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "nav": {
+     "has_main": false,
+     "has_nav": true,
+     "has_header": true,
+     "nav_text": "Themes Components",
+     "nav_items": 2,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/",
+     "depth": 0,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    }
+   },
+   "axe": {
+    "violations": [
+     {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": ".bg-primary",
+        "html": "<a data-slot=\"button\" class=\"inline-flex items-ce...\" href=\"/themes\">",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.16 (foreground color: #fcfcfc, background color: #7e83f7, font size: 10.5pt (14px), font weight: normal). Expected contrast rat"
+       }
+      ]
+     },
+     {
+      "id": "landmark-one-main",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": "html",
+        "html": "<html lang=\"en\" class=\"dark\" style=\"color-scheme: dark;\">",
+        "summary": "Fix all of the following:\n  Document does not have a main landmark"
+       }
+      ]
+     }
+    ],
+    "incomplete": []
+   },
+   "focus": [
+    {
+     "tag": "A",
+     "text": "Studio DS",
+     "changed": true,
+     "outline": "auto 1px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Themes",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Components",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "GitHub repository",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Switch to light mode",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Copy",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Browse 37 themes",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Components",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Copy",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Danilo do Amaral",
+     "changed": true,
+     "outline": "auto 1px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "GitHub",
+     "changed": true,
+     "outline": "auto 1px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "tweakcn",
+     "changed": true,
+     "outline": "auto 1px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    }
+   ],
+   "zoom": {
+    "overflow": 0
+   }
+  },
+  "DISCOVERY": {
+   "desktop": {
+    "headings": {
+     "h1_count": 1,
+     "heading_count": 3,
+     "level_skips": 0,
+     "h1_px": 24,
+     "h2_px": 16,
+     "h1_weight": "700",
+     "h2_weight": "500",
+     "sequence": [
+      1,
+      2,
+      2
+     ]
+    },
+    "type": {
+     "distinct_sizes": 5,
+     "sizes": [
+      [
+       14,
+       17
+      ],
+      [
+       11,
+       5
+      ],
+      [
+       16,
+       4
+      ],
+      [
+       12,
+       2
+      ],
+      [
+       24,
+       1
+      ]
+     ],
+     "families": [
+      [
+       "-apple-system",
+       27
+      ],
+      [
+       "GeistMono",
+       2
+      ]
+     ],
+     "weights": [
+      [
+       "400",
+       14
+      ],
+      [
+       "500",
+       8
+      ],
+      [
+       "600",
+       6
+      ],
+      [
+       "700",
+       1
+      ]
+     ]
+    },
+    "spacing": {
+     "values": 118,
+     "multiples_of_4": 84,
+     "pct": 71.2,
+     "off_grid_top": [
+      [
+       6,
+       24
+      ],
+      [
+       2,
+       10
+      ]
+     ]
+    },
+    "shadows": {
+     "distinct": 0,
+     "values": []
+    },
+    "radii": {
+     "distinct": 4,
+     "values": [
+      [
+       "3.35544e+07px",
+       10
+      ],
+      [
+       "8.75px",
+       9
+      ],
+      [
+       "15px",
+       2
+      ],
+      [
+       "10px",
+       2
+      ]
+     ]
+    },
+    "motion": {
+     "declared": 13,
+     "le300": 13,
+     "gt300": []
+    },
+    "keyboard": {
+     "interactive": 12,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "nav": {
+     "has_main": false,
+     "has_nav": true,
+     "has_header": true,
+     "nav_text": "Themes Components",
+     "nav_items": 2,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/components",
+     "depth": 1,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    },
+    "links": {
+     "in_text": 0,
+     "distinguished_not_only_color": 0
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "css": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "reduced_motion_query": true,
+     "css_chars": 47089,
+     "has_animation": true
+    }
+   },
+   "mobile": {
+    "targets": {
+     "total": 12,
+     "ok": 1,
+     "pct": 8.3,
+     "worst": [
+      {
+       "w": 74,
+       "h": 32,
+       "inline": false,
+       "tag": "A",
+       "txt": "Themes"
+      },
+      {
+       "w": 102,
+       "h": 32,
+       "inline": false,
+       "tag": "A",
+       "txt": "Components"
+      },
+      {
+       "w": 36,
+       "h": 36,
+       "inline": false,
+       "tag": "A",
+       "txt": "GitHub repository"
+      },
+      {
+       "w": 36,
+       "h": 36,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Switch to light mode"
+      },
+      {
+       "w": 76,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Copy"
+      },
+      {
+       "w": 76,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Copy"
+      },
+      {
+       "w": 76,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Copy"
+      },
+      {
+       "w": 105,
+       "h": 16,
+       "inline": true,
+       "tag": "A",
+       "txt": "Danilo do Amaral"
+      }
+     ]
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "nav": {
+     "has_main": false,
+     "has_nav": true,
+     "has_header": true,
+     "nav_text": "Themes Components",
+     "nav_items": 2,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/components",
+     "depth": 1,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    }
+   },
+   "axe": {
+    "violations": [
+     {
+      "id": "landmark-no-duplicate-banner",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": ".sticky",
+        "html": "<header class=\"sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur\">",
+        "summary": "Fix any of the following:\n  Document has more than one banner landmark"
+       }
+      ]
+     },
+     {
+      "id": "landmark-one-main",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": "html",
+        "html": "<html lang=\"en\" class=\"dark\" style=\"color-scheme: dark;\">",
+        "summary": "Fix all of the following:\n  Document does not have a main landmark"
+       }
+      ]
+     },
+     {
+      "id": "landmark-unique",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": ".sticky",
+        "html": "<header class=\"sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur\">",
+        "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+       }
+      ]
+     }
+    ],
+    "incomplete": []
+   },
+   "focus": [
+    {
+     "tag": "A",
+     "text": "Studio DS",
+     "changed": true,
+     "outline": "auto 1px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Themes",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Components",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "GitHub repository",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Switch to light mode",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Copy",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Copy",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Copy",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Danilo do Amaral",
+     "changed": true,
+     "outline": "auto 1px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "GitHub",
+     "changed": true,
+     "outline": "auto 1px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "tweakcn",
+     "changed": true,
+     "outline": "auto 1px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "shadcn/ui",
+     "changed": true,
+     "outline": "auto 1px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    }
+   ],
+   "zoom": {
+    "overflow": 0
+   }
+  },
+  "DETAIL": {
+   "desktop": {
+    "headings": {
+     "h1_count": 1,
+     "heading_count": 1,
+     "level_skips": 0,
+     "h1_px": 24,
+     "h2_px": null,
+     "h1_weight": "700",
+     "h2_weight": null,
+     "sequence": [
+      1
+     ]
+    },
+    "type": {
+     "distinct_sizes": 7,
+     "sizes": [
+      [
+       14,
+       86
+      ],
+      [
+       12,
+       74
+      ],
+      [
+       10,
+       74
+      ],
+      [
+       9,
+       74
+      ],
+      [
+       16,
+       39
+      ],
+      [
+       11,
+       5
+      ],
+      [
+       24,
+       1
+      ]
+     ],
+     "families": [
+      [
+       "-apple-system",
+       316
+      ],
+      [
+       "GeistMono",
+       37
+      ]
+     ],
+     "weights": [
+      [
+       "500",
+       114
+      ],
+      [
+       "400",
+       84
+      ],
+      [
+       "600",
+       80
+      ],
+      [
+       "700",
+       75
+      ]
+     ]
+    },
+    "spacing": {
+     "values": 2586,
+     "multiples_of_4": 1228,
+     "pct": 47.5,
+     "off_grid_top": [
+      [
+       6,
+       682
+      ],
+      [
+       10,
+       370
+      ],
+      [
+       2,
+       306
+      ]
+     ]
+    },
+    "shadows": {
+     "distinct": 1,
+     "values": [
+      [
+       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+       37
+      ]
+     ]
+    },
+    "radii": {
+     "distinct": 24,
+     "values": [
+      [
+       "3.35544e+07px",
+       232
+      ],
+      [
+       "8.75px",
+       115
+      ],
+      [
+       "8px",
+       72
+      ],
+      [
+       "12px",
+       38
+      ],
+      [
+       "15px",
+       37
+      ],
+      [
+       "10px",
+       14
+      ],
+      [
+       "6px",
+       14
+      ],
+      [
+       "4px",
+       14
+      ]
+     ]
+    },
+    "motion": {
+     "declared": 152,
+     "le300": 152,
+     "gt300": []
+    },
+    "keyboard": {
+     "interactive": 83,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "nav": {
+     "has_main": false,
+     "has_nav": true,
+     "has_header": true,
+     "nav_text": "Themes Components",
+     "nav_items": 2,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/themes",
+     "depth": 1,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    },
+    "links": {
+     "in_text": 0,
+     "distinguished_not_only_color": 0
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "css": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "reduced_motion_query": true,
+     "css_chars": 47089,
+     "has_animation": true
+    }
+   },
+   "mobile": {
+    "targets": {
+     "total": 83,
+     "ok": 1,
+     "pct": 1.2,
+     "worst": [
+      {
+       "w": 74,
+       "h": 32,
+       "inline": false,
+       "tag": "A",
+       "txt": "Themes"
+      },
+      {
+       "w": 102,
+       "h": 32,
+       "inline": false,
+       "tag": "A",
+       "txt": "Components"
+      },
+      {
+       "w": 36,
+       "h": 36,
+       "inline": false,
+       "tag": "A",
+       "txt": "GitHub repository"
+      },
+      {
+       "w": 36,
+       "h": 36,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Switch to light mode"
+      },
+      {
+       "w": 78,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Active"
+      },
+      {
+       "w": 76,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Copy"
+      },
+      {
+       "w": 77,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Apply"
+      },
+      {
+       "w": 76,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Copy"
+      }
+     ]
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "nav": {
+     "has_main": false,
+     "has_nav": true,
+     "has_header": true,
+     "nav_text": "Themes Components",
+     "nav_items": 2,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/themes",
+     "depth": 1,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    }
+   },
+   "axe": {
+    "violations": [
+     {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 40,
+      "sample": [
+       {
+        "target": ".gap-3.rounded-xl.bg-card:nth-child(1) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2",
+        "html": "<span class=\"px-2 py-0.5 text-[10px] font-bold\" style=\"background:oklch(0.66 0.17 279);color:oklch(0.99 0 0);border-radi",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.16 (foreground color: #fcfcfc, background color: #7e83f7, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio "
+       },
+       {
+        "target": ".gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(1) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2",
+        "html": "<span class=\"px-2 py-0.5 text-[10px] font-bold\" style=\"background:oklch(0.6231 0.1880 259.8145);color:oklch(1.0000 0 0);",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio "
+       },
+       {
+        "target": ".gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2",
+        "html": "<span class=\"px-2 py-0.5 text-[10px] font-bold\" style=\"background:oklch(0.6231 0.1880 259.8145);color:oklch(1.0000 0 0);",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio "
+       }
+      ]
+     },
+     {
+      "id": "landmark-no-duplicate-banner",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": ".sticky",
+        "html": "<header class=\"sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur\">",
+        "summary": "Fix any of the following:\n  Document has more than one banner landmark"
+       }
+      ]
+     },
+     {
+      "id": "landmark-one-main",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": "html",
+        "html": "<html lang=\"en\" class=\"dark\" style=\"color-scheme: dark;\">",
+        "summary": "Fix all of the following:\n  Document does not have a main landmark"
+       }
+      ]
+     },
+     {
+      "id": "landmark-unique",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": ".sticky",
+        "html": "<header class=\"sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur\">",
+        "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+       }
+      ]
+     }
+    ],
+    "incomplete": []
+   },
+   "focus": [
+    {
+     "tag": "A",
+     "text": "Studio DS",
+     "changed": true,
+     "outline": "auto 1px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Themes",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Components",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "GitHub repository",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Switch to light mode",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Active",
+     "changed": true,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Copy",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Apply",
+     "changed": true,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Copy",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Apply",
+     "changed": true,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Copy",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Apply",
+     "changed": true,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    }
+   ],
+   "zoom": {
+    "overflow": 0
+   }
+  },
+  "INTERACTION": {
+   "desktop": {
+    "headings": {
+     "h1_count": 1,
+     "heading_count": 1,
+     "level_skips": 0,
+     "h1_px": 24,
+     "h2_px": null,
+     "h1_weight": "700",
+     "h2_weight": null,
+     "sequence": [
+      1
+     ]
+    },
+    "type": {
+     "distinct_sizes": 7,
+     "sizes": [
+      [
+       14,
+       86
+      ],
+      [
+       12,
+       74
+      ],
+      [
+       10,
+       74
+      ],
+      [
+       9,
+       74
+      ],
+      [
+       16,
+       39
+      ],
+      [
+       11,
+       5
+      ],
+      [
+       24,
+       1
+      ]
+     ],
+     "families": [
+      [
+       "-apple-system",
+       316
+      ],
+      [
+       "GeistMono",
+       37
+      ]
+     ],
+     "weights": [
+      [
+       "500",
+       114
+      ],
+      [
+       "400",
+       84
+      ],
+      [
+       "600",
+       80
+      ],
+      [
+       "700",
+       75
+      ]
+     ]
+    },
+    "spacing": {
+     "values": 2586,
+     "multiples_of_4": 1228,
+     "pct": 47.5,
+     "off_grid_top": [
+      [
+       6,
+       682
+      ],
+      [
+       10,
+       370
+      ],
+      [
+       2,
+       306
+      ]
+     ]
+    },
+    "shadows": {
+     "distinct": 1,
+     "values": [
+      [
+       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+       37
+      ]
+     ]
+    },
+    "radii": {
+     "distinct": 24,
+     "values": [
+      [
+       "3.35544e+07px",
+       232
+      ],
+      [
+       "8.75px",
+       115
+      ],
+      [
+       "8px",
+       72
+      ],
+      [
+       "12px",
+       38
+      ],
+      [
+       "15px",
+       37
+      ],
+      [
+       "10px",
+       14
+      ],
+      [
+       "6px",
+       14
+      ],
+      [
+       "4px",
+       14
+      ]
+     ]
+    },
+    "motion": {
+     "declared": 152,
+     "le300": 152,
+     "gt300": []
+    },
+    "keyboard": {
+     "interactive": 83,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "nav": {
+     "has_main": false,
+     "has_nav": true,
+     "has_header": true,
+     "nav_text": "Themes Components",
+     "nav_items": 2,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/themes",
+     "depth": 1,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    },
+    "links": {
+     "in_text": 0,
+     "distinguished_not_only_color": 0
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "css": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "reduced_motion_query": true,
+     "css_chars": 47089,
+     "has_animation": true
+    }
+   },
+   "mobile": {
+    "targets": {
+     "total": 83,
+     "ok": 1,
+     "pct": 1.2,
+     "worst": [
+      {
+       "w": 74,
+       "h": 32,
+       "inline": false,
+       "tag": "A",
+       "txt": "Themes"
+      },
+      {
+       "w": 102,
+       "h": 32,
+       "inline": false,
+       "tag": "A",
+       "txt": "Components"
+      },
+      {
+       "w": 36,
+       "h": 36,
+       "inline": false,
+       "tag": "A",
+       "txt": "GitHub repository"
+      },
+      {
+       "w": 36,
+       "h": 36,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Switch to light mode"
+      },
+      {
+       "w": 78,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Active"
+      },
+      {
+       "w": 76,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Copy"
+      },
+      {
+       "w": 77,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Apply"
+      },
+      {
+       "w": 76,
+       "h": 32,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Copy"
+      }
+     ]
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "nav": {
+     "has_main": false,
+     "has_nav": true,
+     "has_header": true,
+     "nav_text": "Themes Components",
+     "nav_items": 2,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/themes",
+     "depth": 1,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    }
+   },
+   "axe": {
+    "violations": [
+     {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 40,
+      "sample": [
+       {
+        "target": ".gap-3.rounded-xl.bg-card:nth-child(1) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2",
+        "html": "<span class=\"px-2 py-0.5 text-[10px] font-bold\" style=\"background:oklch(0.66 0.17 279);color:oklch(0.99 0 0);border-radi",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.16 (foreground color: #fcfcfc, background color: #7e83f7, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio "
+       },
+       {
+        "target": ".gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(1) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2",
+        "html": "<span class=\"px-2 py-0.5 text-[10px] font-bold\" style=\"background:oklch(0.6231 0.1880 259.8145);color:oklch(1.0000 0 0);",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio "
+       },
+       {
+        "target": ".gap-3.rounded-xl.bg-card:nth-child(2) > .grid-cols-2.grid.gap-2 > .p-2\\.5.gap-2.flex-col:nth-child(2) > .items-center.gap-1\\.5.flex > .text-\\[10px\\].font-bold.px-2",
+        "html": "<span class=\"px-2 py-0.5 text-[10px] font-bold\" style=\"background:oklch(0.6231 0.1880 259.8145);color:oklch(1.0000 0 0);",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #3b82f6, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio "
+       }
+      ]
+     },
+     {
+      "id": "landmark-no-duplicate-banner",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": ".sticky",
+        "html": "<header class=\"sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur\">",
+        "summary": "Fix any of the following:\n  Document has more than one banner landmark"
+       }
+      ]
+     },
+     {
+      "id": "landmark-one-main",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": "html",
+        "html": "<html lang=\"en\" class=\"dark\" style=\"color-scheme: dark;\">",
+        "summary": "Fix all of the following:\n  Document does not have a main landmark"
+       }
+      ]
+     },
+     {
+      "id": "landmark-unique",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": ".sticky",
+        "html": "<header class=\"sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur\">",
+        "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+       }
+      ]
+     }
+    ],
+    "incomplete": []
+   },
+   "focus": [
+    {
+     "tag": "A",
+     "text": "Studio DS",
+     "changed": true,
+     "outline": "auto 1px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Themes",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Components",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "GitHub repository",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Switch to light mode",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Active",
+     "changed": true,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Copy",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Apply",
+     "changed": true,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Copy",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Apply",
+     "changed": true,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Copy",
+     "changed": false,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Apply",
+     "changed": true,
+     "outline": "none 0px oklab(0.66 0.0265939 -0.167907 / 0.5)"
+    }
+   ],
+   "zoom": {
+    "overflow": 0
+   }
+  }
+ }
+}

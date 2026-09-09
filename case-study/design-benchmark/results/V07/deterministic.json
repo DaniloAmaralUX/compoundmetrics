@@ -1,0 +1,1204 @@
+{
+ "milestone": "V07",
+ "build": "M09",
+ "source_sha": "28e53d1ab20b46b2ace378c0c67234e8a34bc151",
+ "run_at": "2026-09-09T15:54:43.196Z",
+ "classification_sha256": null,
+ "surfaces": {
+  "ENTRY": {
+   "hierarquia/headings": {
+    "state": "N/A",
+    "measured": {
+     "h1_count": 0,
+     "heading_count": 0,
+     "level_skips": 0,
+     "h1_px": null,
+     "h2_px": null,
+     "h1_weight": null,
+     "h2_weight": null,
+     "sequence": []
+    },
+    "expected": "PASS when exactly one <h1> is present AND heading levels never skip (h1→h2→h3) AND computed font-size of h1 ≥ 1.5× h2 or h1 is visually distinct by weight; FAIL otherwise.",
+    "evidence": "no headings on surface"
+   },
+   "hierarquia/escala-tipo": {
+    "state": "PASS",
+    "measured": 4,
+    "expected": "Collect distinct computed font-size values (px, rounded) of visible text nodes on the surface; PASS when ≤ 10 distinct values; FAIL when > 10.",
+    "evidence": "distinct computed font sizes: 14, 11, 15, 13"
+   },
+   "estilo/espaco-base": {
+    "state": "PASS",
+    "measured": 100,
+    "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+    "evidence": "52/52 spacing values are multiples of 4; off-grid: "
+   },
+   "estilo/elevacao": {
+    "state": "N/A",
+    "measured": 0,
+    "expected": "Collect distinct non-none computed box-shadow values; PASS when ≤ 3 distinct values; FAIL when > 3.",
+    "evidence": "distinct box-shadow values: 0"
+   },
+   "estilo/tipo-sistema": {
+    "state": "PASS",
+    "measured": {
+     "families": [
+      "Geist"
+     ],
+     "weights": [
+      "500",
+      "400"
+     ]
+    },
+    "expected": "PASS when ≤ 2 distinct font families (first family of the stack, excluding system fallbacks for icon/emoji) AND ≤ 4 distinct font-weights are used by visible text; FAIL otherwise.",
+    "evidence": "1 families (Geist), 2 weights (500, 400)"
+   },
+   "estilo/radius": {
+    "state": "N/A",
+    "measured": 0,
+    "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
+    "evidence": "distinct radii: "
+   },
+   "estilo/motion": {
+    "state": "FAIL",
+    "measured": {
+     "declared": 52,
+     "le300": 44
+    },
+    "expected": "Collect declared transition-duration and animation-duration values (from computed style of elements with a transition or animation); PASS when ≥ 90 % are ≤ 300 ms; entrance/transformation animations explicitly marked in the source as continuity are counted separately and reported; FAIL otherwise.",
+    "evidence": "44/52 declared durations ≤ 300 ms; > 300: 600, 720, 606, 394"
+   },
+   "acessibilidade/teclado": {
+    "state": "PASS",
+    "measured": {
+     "interactive": 2,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "expected": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
+    "evidence": "interactive 2; tabindex=-1 0; positive tabindex 0; role without tabindex 0; <a> without href 0"
+   },
+   "acessibilidade/foco": {
+    "state": "PASS",
+    "measured": "2/2",
+    "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+    "evidence": "all sampled elements show a focus change"
+   },
+   "acessibilidade/contraste": {
+    "state": "PASS",
+    "measured": 0,
+    "expected": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
+    "evidence": "axe color-contrast: 0 violations (16 needs-review)"
+   },
+   "acessibilidade/alvos": {
+    "state": "FAIL",
+    "measured": 0,
+    "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+    "evidence": "0/2 targets meet the rule at 390×844; worst: A \"Processo\" 61×24; BUTTON \"Switch to dark theme\" 16×16"
+   },
+   "acessibilidade/alt-aria": {
+    "state": "PASS",
+    "measured": 0,
+    "expected": "PASS when axe reports 0 violations for these rules; FAIL otherwise.",
+    "evidence": "axe image-alt / button-name / link-name / svg-img-alt: 0 violations"
+   },
+   "acessibilidade/semantica": {
+    "state": "FAIL",
+    "measured": {
+     "main": true,
+     "nav": true,
+     "header": false,
+     "headings": 0,
+     "axe": [
+      "page-has-heading-one×1"
+     ]
+    },
+    "expected": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+    "evidence": "main=true nav=true header=false headings=0; axe: page-has-heading-one×1"
+   },
+   "acessibilidade/reduced-motion": {
+    "state": "PASS",
+    "measured": true,
+    "expected": "PASS when at least one loaded stylesheet contains a prefers-reduced-motion media query that reaches the animated elements (heuristic: query present); FAIL when animations/transitions exist and no such query exists.",
+    "evidence": "prefers-reduced-motion query in loaded CSS: true; animations/transitions declared: 52"
+   },
+   "acessibilidade/zoom": {
+    "state": "PASS",
+    "measured": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "overflow_px_at_zoom2": 0
+    },
+    "expected": "PASS when the viewport meta has no maximum-scale < 2 and no user-scalable=no AND after applying CSS zoom 2 on the 1440 viewport document.scrollWidth ≤ viewport width + 2 px; FAIL otherwise.",
+    "evidence": "viewport meta \"width=device-width, initial-scale=1\"; horizontal overflow at CSS zoom 2: 0px"
+   },
+   "navegacao/links": {
+    "state": "N/A",
+    "measured": {
+     "in_text": 0,
+     "distinguished": 0,
+     "axe": 0
+    },
+    "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
+    "evidence": "0/0 in-text links distinguished by more than colour; axe link-in-text-block 0"
+   },
+   "carga/chunks": {
+    "state": "PASS",
+    "measured": {
+     "nav_items": 1,
+     "big_lists": []
+    },
+    "expected": "PASS when the primary nav has ≤ 9 top-level items AND no visible menu/list of choices exceeds 9 items without grouping (heuristic: any <ul>/<ol> of links with > 9 direct children and no headings between); FAIL otherwise.",
+    "evidence": "primary nav 1 items; ungrouped link lists > 9: none"
+   },
+   "formularios/labels": {
+    "state": "N/A",
+    "measured": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "axe_label": 0
+    },
+    "expected": "PASS when every input has a visible label (axe label rule 0 violations AND label is not visually hidden only); FAIL otherwise.",
+    "evidence": "0/0 inputs with a visible label; axe label violations 0"
+   },
+   "formularios/tipos-campo": {
+    "state": "N/A",
+    "measured": {
+     "candidates": 0,
+     "ok": 0
+    },
+    "expected": "PASS when email/phone/number fields use the matching input type and autocomplete tokens; FAIL otherwise.",
+    "evidence": "0/0 email/tel/number-like fields carry a matching type, inputmode or autocomplete"
+   },
+   "formularios/input-16px": {
+    "state": "N/A",
+    "measured": [],
+    "expected": "PASS when every visible input/select/textarea has computed font-size ≥ 16 px at 390×844; FAIL otherwise.",
+    "evidence": "0 inputs all ≥ 16px at 390×844"
+   }
+  },
+  "DISCOVERY": {
+   "hierarquia/headings": {
+    "state": "N/A",
+    "measured": {
+     "h1_count": 0,
+     "heading_count": 0,
+     "level_skips": 0,
+     "h1_px": null,
+     "h2_px": null,
+     "h1_weight": null,
+     "h2_weight": null,
+     "sequence": []
+    },
+    "expected": "PASS when exactly one <h1> is present AND heading levels never skip (h1→h2→h3) AND computed font-size of h1 ≥ 1.5× h2 or h1 is visually distinct by weight; FAIL otherwise.",
+    "evidence": "no headings on surface"
+   },
+   "hierarquia/escala-tipo": {
+    "state": "PASS",
+    "measured": 5,
+    "expected": "Collect distinct computed font-size values (px, rounded) of visible text nodes on the surface; PASS when ≤ 10 distinct values; FAIL when > 10.",
+    "evidence": "distinct computed font sizes: 11, 15, 14, 13, 10"
+   },
+   "estilo/espaco-base": {
+    "state": "PASS",
+    "measured": 99,
+    "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+    "evidence": "202/204 spacing values are multiples of 4; off-grid: 6px×2"
+   },
+   "estilo/elevacao": {
+    "state": "PASS",
+    "measured": 1,
+    "expected": "Collect distinct non-none computed box-shadow values; PASS when ≤ 3 distinct values; FAIL when > 3.",
+    "evidence": "distinct box-shadow values: 1"
+   },
+   "estilo/tipo-sistema": {
+    "state": "PASS",
+    "measured": {
+     "families": [
+      "Geist"
+     ],
+     "weights": [
+      "500",
+      "400",
+      "600"
+     ]
+    },
+    "expected": "PASS when ≤ 2 distinct font families (first family of the stack, excluding system fallbacks for icon/emoji) AND ≤ 4 distinct font-weights are used by visible text; FAIL otherwise.",
+    "evidence": "1 families (Geist), 3 weights (500, 400, 600)"
+   },
+   "estilo/radius": {
+    "state": "PASS",
+    "measured": 1,
+    "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
+    "evidence": "distinct radii: 3.35544e+07px"
+   },
+   "estilo/motion": {
+    "state": "PASS",
+    "measured": {
+     "declared": 233,
+     "le300": 225
+    },
+    "expected": "Collect declared transition-duration and animation-duration values (from computed style of elements with a transition or animation); PASS when ≥ 90 % are ≤ 300 ms; entrance/transformation animations explicitly marked in the source as continuity are counted separately and reported; FAIL otherwise.",
+    "evidence": "225/233 declared durations ≤ 300 ms; > 300: 600, 720, 606, 394"
+   },
+   "acessibilidade/teclado": {
+    "state": "PASS",
+    "measured": {
+     "interactive": 2,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "expected": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
+    "evidence": "interactive 2; tabindex=-1 0; positive tabindex 0; role without tabindex 0; <a> without href 0"
+   },
+   "acessibilidade/foco": {
+    "state": "PASS",
+    "measured": "2/2",
+    "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+    "evidence": "all sampled elements show a focus change"
+   },
+   "acessibilidade/contraste": {
+    "state": "PASS",
+    "measured": 0,
+    "expected": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
+    "evidence": "axe color-contrast: 0 violations (14 needs-review)"
+   },
+   "acessibilidade/alvos": {
+    "state": "FAIL",
+    "measured": 0,
+    "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+    "evidence": "0/2 targets meet the rule at 390×844; worst: A \"Lifeline\" 47×24; A \"Acme\" 36×18"
+   },
+   "acessibilidade/alt-aria": {
+    "state": "PASS",
+    "measured": 0,
+    "expected": "PASS when axe reports 0 violations for these rules; FAIL otherwise.",
+    "evidence": "axe image-alt / button-name / link-name / svg-img-alt: 0 violations"
+   },
+   "acessibilidade/semantica": {
+    "state": "FAIL",
+    "measured": {
+     "main": true,
+     "nav": true,
+     "header": false,
+     "headings": 0,
+     "axe": [
+      "page-has-heading-one×1"
+     ]
+    },
+    "expected": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+    "evidence": "main=true nav=true header=false headings=0; axe: page-has-heading-one×1"
+   },
+   "acessibilidade/reduced-motion": {
+    "state": "PASS",
+    "measured": true,
+    "expected": "PASS when at least one loaded stylesheet contains a prefers-reduced-motion media query that reaches the animated elements (heuristic: query present); FAIL when animations/transitions exist and no such query exists.",
+    "evidence": "prefers-reduced-motion query in loaded CSS: true; animations/transitions declared: 233"
+   },
+   "acessibilidade/zoom": {
+    "state": "PASS",
+    "measured": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "overflow_px_at_zoom2": 0
+    },
+    "expected": "PASS when the viewport meta has no maximum-scale < 2 and no user-scalable=no AND after applying CSS zoom 2 on the 1440 viewport document.scrollWidth ≤ viewport width + 2 px; FAIL otherwise.",
+    "evidence": "viewport meta \"width=device-width, initial-scale=1\"; horizontal overflow at CSS zoom 2: 0px"
+   },
+   "navegacao/onde-estou": {
+    "state": "FAIL",
+    "measured": {
+     "marked": 0,
+     "styled": 0
+    },
+    "expected": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+    "evidence": "nav items 1; aria-current/active class 0; styled difference for current route 0"
+   },
+   "navegacao/links": {
+    "state": "PASS",
+    "measured": {
+     "in_text": 1,
+     "distinguished": 1,
+     "axe": 0
+    },
+    "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
+    "evidence": "1/1 in-text links distinguished by more than colour; axe link-in-text-block 0"
+   },
+   "carga/chunks": {
+    "state": "PASS",
+    "measured": {
+     "nav_items": 1,
+     "big_lists": []
+    },
+    "expected": "PASS when the primary nav has ≤ 9 top-level items AND no visible menu/list of choices exceeds 9 items without grouping (heuristic: any <ul>/<ol> of links with > 9 direct children and no headings between); FAIL otherwise.",
+    "evidence": "primary nav 1 items; ungrouped link lists > 9: none"
+   },
+   "formularios/labels": {
+    "state": "N/A",
+    "measured": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "axe_label": 0
+    },
+    "expected": "PASS when every input has a visible label (axe label rule 0 violations AND label is not visually hidden only); FAIL otherwise.",
+    "evidence": "0/0 inputs with a visible label; axe label violations 0"
+   },
+   "formularios/tipos-campo": {
+    "state": "N/A",
+    "measured": {
+     "candidates": 0,
+     "ok": 0
+    },
+    "expected": "PASS when email/phone/number fields use the matching input type and autocomplete tokens; FAIL otherwise.",
+    "evidence": "0/0 email/tel/number-like fields carry a matching type, inputmode or autocomplete"
+   },
+   "formularios/input-16px": {
+    "state": "N/A",
+    "measured": [],
+    "expected": "PASS when every visible input/select/textarea has computed font-size ≥ 16 px at 390×844; FAIL otherwise.",
+    "evidence": "0 inputs all ≥ 16px at 390×844"
+   }
+  },
+  "INTERACTION": {
+   "hierarquia/headings": {
+    "state": "N/A",
+    "measured": {
+     "h1_count": 0,
+     "heading_count": 0,
+     "level_skips": 0,
+     "h1_px": null,
+     "h2_px": null,
+     "h1_weight": null,
+     "h2_weight": null,
+     "sequence": []
+    },
+    "expected": "PASS when exactly one <h1> is present AND heading levels never skip (h1→h2→h3) AND computed font-size of h1 ≥ 1.5× h2 or h1 is visually distinct by weight; FAIL otherwise.",
+    "evidence": "no headings on surface"
+   },
+   "hierarquia/escala-tipo": {
+    "state": "PASS",
+    "measured": 5,
+    "expected": "Collect distinct computed font-size values (px, rounded) of visible text nodes on the surface; PASS when ≤ 10 distinct values; FAIL when > 10.",
+    "evidence": "distinct computed font sizes: 11, 15, 14, 13, 10"
+   },
+   "estilo/espaco-base": {
+    "state": "PASS",
+    "measured": 99,
+    "expected": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+    "evidence": "202/204 spacing values are multiples of 4; off-grid: 6px×2"
+   },
+   "estilo/elevacao": {
+    "state": "PASS",
+    "measured": 1,
+    "expected": "Collect distinct non-none computed box-shadow values; PASS when ≤ 3 distinct values; FAIL when > 3.",
+    "evidence": "distinct box-shadow values: 1"
+   },
+   "estilo/tipo-sistema": {
+    "state": "PASS",
+    "measured": {
+     "families": [
+      "Geist"
+     ],
+     "weights": [
+      "500",
+      "400",
+      "600"
+     ]
+    },
+    "expected": "PASS when ≤ 2 distinct font families (first family of the stack, excluding system fallbacks for icon/emoji) AND ≤ 4 distinct font-weights are used by visible text; FAIL otherwise.",
+    "evidence": "1 families (Geist), 3 weights (500, 400, 600)"
+   },
+   "estilo/radius": {
+    "state": "PASS",
+    "measured": 1,
+    "expected": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
+    "evidence": "distinct radii: 3.35544e+07px"
+   },
+   "estilo/motion": {
+    "state": "PASS",
+    "measured": {
+     "declared": 233,
+     "le300": 225
+    },
+    "expected": "Collect declared transition-duration and animation-duration values (from computed style of elements with a transition or animation); PASS when ≥ 90 % are ≤ 300 ms; entrance/transformation animations explicitly marked in the source as continuity are counted separately and reported; FAIL otherwise.",
+    "evidence": "225/233 declared durations ≤ 300 ms; > 300: 600, 720, 606, 394"
+   },
+   "acessibilidade/teclado": {
+    "state": "PASS",
+    "measured": {
+     "interactive": 2,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "expected": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
+    "evidence": "interactive 2; tabindex=-1 0; positive tabindex 0; role without tabindex 0; <a> without href 0"
+   },
+   "acessibilidade/foco": {
+    "state": "PASS",
+    "measured": "2/2",
+    "expected": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+    "evidence": "all sampled elements show a focus change"
+   },
+   "acessibilidade/contraste": {
+    "state": "PASS",
+    "measured": 0,
+    "expected": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
+    "evidence": "axe color-contrast: 0 violations (14 needs-review)"
+   },
+   "acessibilidade/alvos": {
+    "state": "FAIL",
+    "measured": 0,
+    "expected": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+    "evidence": "0/2 targets meet the rule at 390×844; worst: A \"Lifeline\" 47×24; A \"Acme\" 36×18"
+   },
+   "acessibilidade/alt-aria": {
+    "state": "PASS",
+    "measured": 0,
+    "expected": "PASS when axe reports 0 violations for these rules; FAIL otherwise.",
+    "evidence": "axe image-alt / button-name / link-name / svg-img-alt: 0 violations"
+   },
+   "acessibilidade/semantica": {
+    "state": "FAIL",
+    "measured": {
+     "main": true,
+     "nav": true,
+     "header": false,
+     "headings": 0,
+     "axe": [
+      "page-has-heading-one×1"
+     ]
+    },
+    "expected": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+    "evidence": "main=true nav=true header=false headings=0; axe: page-has-heading-one×1"
+   },
+   "acessibilidade/reduced-motion": {
+    "state": "PASS",
+    "measured": true,
+    "expected": "PASS when at least one loaded stylesheet contains a prefers-reduced-motion media query that reaches the animated elements (heuristic: query present); FAIL when animations/transitions exist and no such query exists.",
+    "evidence": "prefers-reduced-motion query in loaded CSS: true; animations/transitions declared: 233"
+   },
+   "acessibilidade/zoom": {
+    "state": "PASS",
+    "measured": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "overflow_px_at_zoom2": 0
+    },
+    "expected": "PASS when the viewport meta has no maximum-scale < 2 and no user-scalable=no AND after applying CSS zoom 2 on the 1440 viewport document.scrollWidth ≤ viewport width + 2 px; FAIL otherwise.",
+    "evidence": "viewport meta \"width=device-width, initial-scale=1\"; horizontal overflow at CSS zoom 2: 0px"
+   },
+   "navegacao/onde-estou": {
+    "state": "FAIL",
+    "measured": {
+     "marked": 0,
+     "styled": 0
+    },
+    "expected": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+    "evidence": "nav items 1; aria-current/active class 0; styled difference for current route 0"
+   },
+   "navegacao/links": {
+    "state": "PASS",
+    "measured": {
+     "in_text": 1,
+     "distinguished": 1,
+     "axe": 0
+    },
+    "expected": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
+    "evidence": "1/1 in-text links distinguished by more than colour; axe link-in-text-block 0"
+   },
+   "carga/chunks": {
+    "state": "PASS",
+    "measured": {
+     "nav_items": 1,
+     "big_lists": []
+    },
+    "expected": "PASS when the primary nav has ≤ 9 top-level items AND no visible menu/list of choices exceeds 9 items without grouping (heuristic: any <ul>/<ol> of links with > 9 direct children and no headings between); FAIL otherwise.",
+    "evidence": "primary nav 1 items; ungrouped link lists > 9: none"
+   },
+   "formularios/labels": {
+    "state": "N/A",
+    "measured": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "axe_label": 0
+    },
+    "expected": "PASS when every input has a visible label (axe label rule 0 violations AND label is not visually hidden only); FAIL otherwise.",
+    "evidence": "0/0 inputs with a visible label; axe label violations 0"
+   },
+   "formularios/tipos-campo": {
+    "state": "N/A",
+    "measured": {
+     "candidates": 0,
+     "ok": 0
+    },
+    "expected": "PASS when email/phone/number fields use the matching input type and autocomplete tokens; FAIL otherwise.",
+    "evidence": "0/0 email/tel/number-like fields carry a matching type, inputmode or autocomplete"
+   },
+   "formularios/input-16px": {
+    "state": "N/A",
+    "measured": [],
+    "expected": "PASS when every visible input/select/textarea has computed font-size ≥ 16 px at 390×844; FAIL otherwise.",
+    "evidence": "0 inputs all ≥ 16px at 390×844"
+   }
+  }
+ },
+ "site_level": {
+  "navegacao/menu-previsivel": {
+   "state": "FAIL",
+   "measured": 2,
+   "expected": "PASS when the text content of the primary nav is identical (after whitespace normalisation) across every captured surface of the milestone; FAIL otherwise.",
+   "evidence": "distinct primary-nav texts across 3 surfaces: 2"
+  },
+  "navegacao/breadcrumbs": {
+   "state": "N/A",
+   "measured": null,
+   "expected": "On surfaces whose path depth ≥ 3 segments, PASS when a breadcrumb (nav[aria-label*=bread], .breadcrumb, ol with links to ancestors) or a visible parent link exists; FAIL otherwise.",
+   "evidence": "no captured surface deeper than two levels"
+  }
+ },
+ "raw": {
+  "ENTRY": {
+   "desktop": {
+    "headings": {
+     "h1_count": 0,
+     "heading_count": 0,
+     "level_skips": 0,
+     "h1_px": null,
+     "h2_px": null,
+     "h1_weight": null,
+     "h2_weight": null,
+     "sequence": []
+    },
+    "type": {
+     "distinct_sizes": 4,
+     "sizes": [
+      [
+       14,
+       15
+      ],
+      [
+       11,
+       9
+      ],
+      [
+       15,
+       7
+      ],
+      [
+       13,
+       1
+      ]
+     ],
+     "families": [
+      [
+       "Geist",
+       32
+      ]
+     ],
+     "weights": [
+      [
+       "500",
+       17
+      ],
+      [
+       "400",
+       15
+      ]
+     ]
+    },
+    "spacing": {
+     "values": 52,
+     "multiples_of_4": 52,
+     "pct": 100,
+     "off_grid_top": []
+    },
+    "shadows": {
+     "distinct": 0,
+     "values": []
+    },
+    "radii": {
+     "distinct": 0,
+     "values": []
+    },
+    "motion": {
+     "declared": 52,
+     "le300": 44,
+     "gt300": [
+      600,
+      720,
+      606,
+      394
+     ]
+    },
+    "keyboard": {
+     "interactive": 2,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "nav": {
+     "has_main": true,
+     "has_nav": true,
+     "has_header": false,
+     "nav_text": "Processo",
+     "nav_items": 1,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/",
+     "depth": 0,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    },
+    "links": {
+     "in_text": 0,
+     "distinguished_not_only_color": 0
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "css": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "reduced_motion_query": true,
+     "css_chars": 49243,
+     "has_animation": true
+    }
+   },
+   "mobile": {
+    "targets": {
+     "total": 2,
+     "ok": 0,
+     "pct": 0,
+     "worst": [
+      {
+       "w": 61,
+       "h": 24,
+       "inline": false,
+       "tag": "A",
+       "txt": "Processo"
+      },
+      {
+       "w": 16,
+       "h": 16,
+       "inline": false,
+       "tag": "BUTTON",
+       "txt": "Switch to dark theme"
+      }
+     ]
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "nav": {
+     "has_main": true,
+     "has_nav": true,
+     "has_header": false,
+     "nav_text": "Processo",
+     "nav_items": 1,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/",
+     "depth": 0,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    }
+   },
+   "axe": {
+    "violations": [
+     {
+      "id": "page-has-heading-one",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": "html",
+        "html": "<html lang=\"pt-BR\" class=\"geist_a71539c9-module__T19VSG__variable h-full font-sans antialiased light\" style=\"color-schem",
+        "summary": "Fix all of the following:\n  Page must have a level-one heading"
+       }
+      ]
+     }
+    ],
+    "incomplete": [
+     {
+      "id": "color-contrast",
+      "nodes": 16
+     }
+    ]
+   },
+   "focus": [
+    {
+     "tag": "A",
+     "text": "Processo",
+     "changed": true,
+     "outline": "auto 1px oklab(0.707999 -0.00000712276 0.0000166297 / 0.5)"
+    },
+    {
+     "tag": "BUTTON",
+     "text": "Switch to dark theme",
+     "changed": true,
+     "outline": "auto 1px oklab(0.707999 -0.00000712276 0.0000166297 / 0.5)"
+    }
+   ],
+   "zoom": {
+    "overflow": 0
+   }
+  },
+  "DISCOVERY": {
+   "desktop": {
+    "headings": {
+     "h1_count": 0,
+     "heading_count": 0,
+     "level_skips": 0,
+     "h1_px": null,
+     "h2_px": null,
+     "h1_weight": null,
+     "h2_weight": null,
+     "sequence": []
+    },
+    "type": {
+     "distinct_sizes": 5,
+     "sizes": [
+      [
+       11,
+       39
+      ],
+      [
+       15,
+       37
+      ],
+      [
+       14,
+       9
+      ],
+      [
+       13,
+       2
+      ],
+      [
+       10,
+       1
+      ]
+     ],
+     "families": [
+      [
+       "Geist",
+       88
+      ]
+     ],
+     "weights": [
+      [
+       "500",
+       77
+      ],
+      [
+       "400",
+       10
+      ],
+      [
+       "600",
+       1
+      ]
+     ]
+    },
+    "spacing": {
+     "values": 204,
+     "multiples_of_4": 202,
+     "pct": 99,
+     "off_grid_top": [
+      [
+       6,
+       2
+      ]
+     ]
+    },
+    "shadows": {
+     "distinct": 1,
+     "values": [
+      [
+       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+       1
+      ]
+     ]
+    },
+    "radii": {
+     "distinct": 1,
+     "values": [
+      [
+       "3.35544e+07px",
+       3
+      ]
+     ]
+    },
+    "motion": {
+     "declared": 233,
+     "le300": 225,
+     "gt300": [
+      600,
+      720,
+      606,
+      394
+     ]
+    },
+    "keyboard": {
+     "interactive": 2,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "nav": {
+     "has_main": true,
+     "has_nav": true,
+     "has_header": false,
+     "nav_text": "Lifeline",
+     "nav_items": 1,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/lifeline",
+     "depth": 1,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    },
+    "links": {
+     "in_text": 1,
+     "distinguished_not_only_color": 1
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "css": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "reduced_motion_query": true,
+     "css_chars": 49243,
+     "has_animation": true
+    }
+   },
+   "mobile": {
+    "targets": {
+     "total": 2,
+     "ok": 0,
+     "pct": 0,
+     "worst": [
+      {
+       "w": 47,
+       "h": 24,
+       "inline": false,
+       "tag": "A",
+       "txt": "Lifeline"
+      },
+      {
+       "w": 36,
+       "h": 18,
+       "inline": true,
+       "tag": "A",
+       "txt": "Acme"
+      }
+     ]
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "nav": {
+     "has_main": true,
+     "has_nav": true,
+     "has_header": false,
+     "nav_text": "Lifeline",
+     "nav_items": 1,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/lifeline",
+     "depth": 1,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    }
+   },
+   "axe": {
+    "violations": [
+     {
+      "id": "page-has-heading-one",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": "html",
+        "html": "<html lang=\"pt-BR\" class=\"geist_a71539c9-module__T19VSG__variable h-full font-sans antialiased light\" style=\"color-schem",
+        "summary": "Fix all of the following:\n  Page must have a level-one heading"
+       }
+      ]
+     }
+    ],
+    "incomplete": [
+     {
+      "id": "color-contrast",
+      "nodes": 14
+     }
+    ]
+   },
+   "focus": [
+    {
+     "tag": "A",
+     "text": "Lifeline",
+     "changed": true,
+     "outline": "auto 1px oklab(0.707999 -0.00000712276 0.0000166297 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Acme",
+     "changed": true,
+     "outline": "auto 1px oklab(0.707999 -0.00000712276 0.0000166297 / 0.5)"
+    }
+   ],
+   "zoom": {
+    "overflow": 0
+   }
+  },
+  "INTERACTION": {
+   "desktop": {
+    "headings": {
+     "h1_count": 0,
+     "heading_count": 0,
+     "level_skips": 0,
+     "h1_px": null,
+     "h2_px": null,
+     "h1_weight": null,
+     "h2_weight": null,
+     "sequence": []
+    },
+    "type": {
+     "distinct_sizes": 5,
+     "sizes": [
+      [
+       11,
+       39
+      ],
+      [
+       15,
+       37
+      ],
+      [
+       14,
+       9
+      ],
+      [
+       13,
+       2
+      ],
+      [
+       10,
+       1
+      ]
+     ],
+     "families": [
+      [
+       "Geist",
+       88
+      ]
+     ],
+     "weights": [
+      [
+       "500",
+       77
+      ],
+      [
+       "400",
+       10
+      ],
+      [
+       "600",
+       1
+      ]
+     ]
+    },
+    "spacing": {
+     "values": 204,
+     "multiples_of_4": 202,
+     "pct": 99,
+     "off_grid_top": [
+      [
+       6,
+       2
+      ]
+     ]
+    },
+    "shadows": {
+     "distinct": 1,
+     "values": [
+      [
+       "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0",
+       1
+      ]
+     ]
+    },
+    "radii": {
+     "distinct": 1,
+     "values": [
+      [
+       "3.35544e+07px",
+       3
+      ]
+     ]
+    },
+    "motion": {
+     "declared": 233,
+     "le300": 225,
+     "gt300": [
+      600,
+      720,
+      606,
+      394
+     ]
+    },
+    "keyboard": {
+     "interactive": 2,
+     "tabindex_minus1": 0,
+     "positive_tabindex": 0,
+     "role_without_tabindex": 0,
+     "anchors_without_href": 0
+    },
+    "nav": {
+     "has_main": true,
+     "has_nav": true,
+     "has_header": false,
+     "nav_text": "Lifeline",
+     "nav_items": 1,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/lifeline",
+     "depth": 1,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    },
+    "links": {
+     "in_text": 1,
+     "distinguished_not_only_color": 1
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "css": {
+     "viewport_meta": "width=device-width, initial-scale=1",
+     "reduced_motion_query": true,
+     "css_chars": 49243,
+     "has_animation": true
+    }
+   },
+   "mobile": {
+    "targets": {
+     "total": 2,
+     "ok": 0,
+     "pct": 0,
+     "worst": [
+      {
+       "w": 47,
+       "h": 24,
+       "inline": false,
+       "tag": "A",
+       "txt": "Lifeline"
+      },
+      {
+       "w": 36,
+       "h": 18,
+       "inline": true,
+       "tag": "A",
+       "txt": "Acme"
+      }
+     ]
+    },
+    "forms": {
+     "inputs": 0,
+     "visibly_labelled": 0,
+     "typed_candidates": 0,
+     "typed_ok": 0,
+     "below_16px": [],
+     "has_search": false
+    },
+    "nav": {
+     "has_main": true,
+     "has_nav": true,
+     "has_header": false,
+     "nav_text": "Lifeline",
+     "nav_items": 1,
+     "current_marked": 0,
+     "current_styled": 0,
+     "path": "/lifeline",
+     "depth": 1,
+     "breadcrumb": false,
+     "parent_link": false,
+     "big_lists": []
+    }
+   },
+   "axe": {
+    "violations": [
+     {
+      "id": "page-has-heading-one",
+      "impact": "moderate",
+      "nodes": 1,
+      "sample": [
+       {
+        "target": "html",
+        "html": "<html lang=\"pt-BR\" class=\"geist_a71539c9-module__T19VSG__variable h-full font-sans antialiased light\" style=\"color-schem",
+        "summary": "Fix all of the following:\n  Page must have a level-one heading"
+       }
+      ]
+     }
+    ],
+    "incomplete": [
+     {
+      "id": "color-contrast",
+      "nodes": 14
+     }
+    ]
+   },
+   "focus": [
+    {
+     "tag": "A",
+     "text": "Lifeline",
+     "changed": true,
+     "outline": "auto 1px oklab(0.707999 -0.00000712276 0.0000166297 / 0.5)"
+    },
+    {
+     "tag": "A",
+     "text": "Acme",
+     "changed": true,
+     "outline": "auto 1px oklab(0.707999 -0.00000712276 0.0000166297 / 0.5)"
+    }
+   ],
+   "zoom": {
+    "overflow": 0
+   }
+  }
+ }
+}

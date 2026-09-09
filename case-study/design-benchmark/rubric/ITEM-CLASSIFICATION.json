@@ -1,0 +1,689 @@
+{
+ "name": "Item classification — Compound Design Audit v3.6.0 (frozen)",
+ "declared_before_scoring": true,
+ "declared_at": "2026-09-09T15:39:40Z",
+ "rubric_sha256": "7c7c691550228276eeca80595d0f55182f033c2dbeefbb3b0b0d10219c78a279",
+ "item_count": 54,
+ "deterministic_count": 23,
+ "judgment_count": 31,
+ "principle": "A deterministic item is one whose PASS/FAIL follows from a pre-declared rule over DOM, computed style, axe-core output or bounding boxes. Everything else is judgment and is scored only in the blinded pass. A deterministic support measurement attached to a judgment item never decides the item.",
+ "states": {
+  "PASS": "criterion satisfied",
+  "FAIL": "criterion relevant and not satisfied — requires a finding with evidence",
+  "N/A": "criterion does not apply to that surface (na_condition met)",
+  "NOT_VERIFIED": "criterion relevant but the available material does not allow verification (e.g. no source access for fundamentos/*, no interactive state captured)"
+ },
+ "items": [
+  {
+   "id": "fundamentos/jtbd",
+   "category": "fundamentos",
+   "label": "Job-to-be-done em uma frase",
+   "mode": "judgment",
+   "method": "source-review",
+   "rule": "PASS when the repository or its docs state the screen/site job in one sentence (README, brief, docs, frame).",
+   "na_condition": "never N/A; NOT_VERIFIED when no source is available",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "fundamentos/macro-bet",
+   "category": "fundamentos",
+   "label": "Decisão alinhada à aposta do negócio",
+   "mode": "judgment",
+   "method": "source-review",
+   "rule": "PASS when docs tie design decisions to a stated business/product bet.",
+   "na_condition": "NOT_VERIFIED when no source",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "fundamentos/convencao",
+   "category": "fundamentos",
+   "label": "Convenção antes de novidade",
+   "mode": "judgment",
+   "method": "blind-visual",
+   "rule": "PASS when the ENTRY and DISCOVERY surfaces use familiar patterns by default and novelty is limited and purposeful.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "fundamentos/restricoes",
+   "category": "fundamentos",
+   "label": "Restrições conhecidas",
+   "mode": "judgment",
+   "method": "source-review",
+   "rule": "PASS when docs record stack/time/team/design-system constraints before the build.",
+   "na_condition": "NOT_VERIFIED when no source",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "fundamentos/documentado",
+   "category": "fundamentos",
+   "label": "Raciocínio documentado",
+   "mode": "judgment",
+   "method": "source-review",
+   "rule": "PASS when decision rationale is recorded (ADRs, ledger, docs/solutions, commit bodies with why).",
+   "na_condition": "NOT_VERIFIED when no source",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "hierarquia/cta-3s",
+   "category": "hierarquia",
+   "label": "Ação primária óbvia em 3 segundos",
+   "mode": "judgment",
+   "method": "blind-visual",
+   "rule": "PASS when one primary action is identifiable within 3 s on ENTRY; FAIL when two or more compete or none exists on a surface that needs one.",
+   "na_condition": "N/A when the surface has no call to action by design (pure reading surface)",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "hierarquia/headings",
+   "category": "hierarquia",
+   "label": "Níveis de título distintos",
+   "mode": "deterministic",
+   "method": "dom",
+   "rule": "PASS when exactly one <h1> is present AND heading levels never skip (h1→h2→h3) AND computed font-size of h1 ≥ 1.5× h2 or h1 is visually distinct by weight; FAIL otherwise.",
+   "na_condition": "N/A when the page has no headings at all",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "hierarquia/leitura",
+   "category": "hierarquia",
+   "label": "Ordem de leitura clara",
+   "mode": "judgment",
+   "method": "blind-visual",
+   "rule": "PASS when first/second/third reading targets can be numbered from size, weight and position alone.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "hierarquia/proximidade",
+   "category": "hierarquia",
+   "label": "Agrupamento por proximidade",
+   "mode": "judgment",
+   "method": "blind-visual",
+   "rule": "PASS when related items are visibly closer to each other than to unrelated ones.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "hierarquia/whitespace",
+   "category": "hierarquia",
+   "label": "Whitespace como hierarquia",
+   "mode": "judgment",
+   "method": "blind-visual",
+   "rule": "PASS when whitespace increases around the most important element(s).",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "hierarquia/cor-destaque",
+   "category": "hierarquia",
+   "label": "Cor de destaque reservada",
+   "mode": "judgment",
+   "method": "blind-visual",
+   "rule": "PASS when the accent/action colour appears only on actionable or important elements.",
+   "na_condition": "N/A when the surface uses no accent colour at all",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "hierarquia/escala-tipo",
+   "category": "hierarquia",
+   "label": "Escala tipográfica consistente",
+   "mode": "deterministic",
+   "method": "computed-style",
+   "rule": "Collect distinct computed font-size values (px, rounded) of visible text nodes on the surface; PASS when ≤ 10 distinct values; FAIL when > 10.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "estilo/espaco-base",
+   "category": "estilo",
+   "label": "Unidade base de espaçamento",
+   "mode": "deterministic",
+   "method": "computed-style",
+   "rule": "Collect non-zero computed padding/margin/gap values (px) of visible elements; PASS when ≥ 90 % are multiples of 4; FAIL otherwise.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "estilo/paleta",
+   "category": "estilo",
+   "label": "Paleta com papéis definidos",
+   "mode": "judgment",
+   "method": "blind-visual+inventory",
+   "rule": "PASS when colours read as a system (neutrals + one or two accents + semantic colours); the deterministic colour inventory (distinct text/background/border colours) is attached as support, not as the verdict.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "estilo/elevacao",
+   "category": "estilo",
+   "label": "Elevação num sistema",
+   "mode": "deterministic",
+   "method": "computed-style",
+   "rule": "Collect distinct non-none computed box-shadow values; PASS when ≤ 3 distinct values; FAIL when > 3.",
+   "na_condition": "N/A when no element has a box-shadow",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "estilo/tipo-sistema",
+   "category": "estilo",
+   "label": "Sistema tipográfico enxuto",
+   "mode": "deterministic",
+   "method": "computed-style",
+   "rule": "PASS when ≤ 2 distinct font families (first family of the stack, excluding system fallbacks for icon/emoji) AND ≤ 4 distinct font-weights are used by visible text; FAIL otherwise.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "estilo/radius",
+   "category": "estilo",
+   "label": "Radius consistente e concêntrico",
+   "mode": "deterministic",
+   "method": "computed-style",
+   "rule": "Collect distinct computed border-radius values on visible elements (excluding 50 % / 9999px pills); PASS when ≤ 4 distinct values; FAIL when > 4.",
+   "na_condition": "N/A when no element has a radius",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "estilo/icones",
+   "category": "estilo",
+   "label": "Ícones de um único estilo",
+   "mode": "judgment",
+   "method": "blind-visual",
+   "rule": "PASS when inline icons share one family / stroke weight / optical size.",
+   "na_condition": "N/A when the surface has no icons",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "estilo/motion",
+   "category": "estilo",
+   "label": "Motion com propósito",
+   "mode": "deterministic",
+   "method": "computed-style",
+   "rule": "Collect declared transition-duration and animation-duration values (from computed style of elements with a transition or animation); PASS when ≥ 90 % are ≤ 300 ms; entrance/transformation animations explicitly marked in the source as continuity are counted separately and reported; FAIL otherwise.",
+   "na_condition": "N/A when no transition or animation is declared",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "acessibilidade/teclado",
+   "category": "acessibilidade",
+   "label": "Teclado opera tudo",
+   "mode": "deterministic",
+   "method": "dom+keyboard",
+   "rule": "PASS when every visible <a>, <button>, input, select, textarea, [role=button] is focusable (tabindex ≠ -1) AND no element has tabindex > 0 AND no non-interactive element carries a click handler without keyboard equivalent (heuristic: div/span with role=button must have tabindex ≥ 0); FAIL otherwise.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "acessibilidade/foco",
+   "category": "acessibilidade",
+   "label": "Foco sempre visível",
+   "mode": "deterministic",
+   "method": "keyboard",
+   "rule": "Tab through the first 12 focusable elements; for each compare computed outline-style/outline-width/box-shadow focused vs unfocused; PASS when every sampled element changes; FAIL when any does not.",
+   "na_condition": "N/A when there are no focusable elements",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "acessibilidade/contraste",
+   "category": "acessibilidade",
+   "label": "Contraste de texto passa",
+   "mode": "deterministic",
+   "method": "axe:color-contrast",
+   "rule": "PASS when axe-core reports 0 color-contrast violations (serious) after animations settle; FAIL otherwise. Incomplete (needs-review) nodes are listed but not counted as FAIL.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "acessibilidade/alvos",
+   "category": "acessibilidade",
+   "label": "Alvos de toque ≥ 44px",
+   "mode": "deterministic",
+   "method": "bounding-box@390",
+   "rule": "On the 390×844 viewport, measure bounding boxes of visible interactive elements; PASS when ≥ 90 % have both width ≥ 44 and height ≥ 44 OR (height ≥ 24 and inline text link within a text block); FAIL otherwise.",
+   "na_condition": "N/A when no interactive element exists",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "acessibilidade/nao-so-cor",
+   "category": "acessibilidade",
+   "label": "Cor não é o único indicador",
+   "mode": "judgment",
+   "method": "blind-visual+dom",
+   "rule": "PASS when state/error/success also carry text or an icon; the deterministic axe rule link-in-text-block is attached as support.",
+   "na_condition": "N/A when no state, error or success indicators exist on the surface",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "acessibilidade/alt-aria",
+   "category": "acessibilidade",
+   "label": "Alt text e aria-label presentes",
+   "mode": "deterministic",
+   "method": "axe:image-alt,button-name,link-name,svg-img-alt",
+   "rule": "PASS when axe reports 0 violations for these rules; FAIL otherwise.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "acessibilidade/semantica",
+   "category": "acessibilidade",
+   "label": "Markup semântico",
+   "mode": "deterministic",
+   "method": "dom+axe:landmark-*,list,listitem,heading-order",
+   "rule": "PASS when <main> is present AND at least one <nav> or <header> AND at least one heading AND axe reports 0 landmark/list/heading-order violations; FAIL otherwise.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "acessibilidade/reduced-motion",
+   "category": "acessibilidade",
+   "label": "Reduced motion respeitado",
+   "mode": "deterministic",
+   "method": "stylesheet",
+   "rule": "PASS when at least one loaded stylesheet contains a prefers-reduced-motion media query that reaches the animated elements (heuristic: query present); FAIL when animations/transitions exist and no such query exists.",
+   "na_condition": "N/A when the surface declares no animation or transition",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "acessibilidade/zoom",
+   "category": "acessibilidade",
+   "label": "Zoom a 200% funciona",
+   "mode": "deterministic",
+   "method": "meta+overflow",
+   "rule": "PASS when the viewport meta has no maximum-scale < 2 and no user-scalable=no AND after applying CSS zoom 2 on the 1440 viewport document.scrollWidth ≤ viewport width + 2 px; FAIL otherwise.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "navegacao/onde-estou",
+   "category": "navegacao",
+   "label": "Localização atual clara",
+   "mode": "deterministic",
+   "method": "dom",
+   "rule": "On a non-home surface, PASS when the primary nav contains an element with aria-current or a class matching /active|current|selected/ or a styled difference for the current route (computed color/weight differs from siblings); FAIL otherwise.",
+   "na_condition": "N/A when the site has a single page or no primary nav",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "navegacao/menu-previsivel",
+   "category": "navegacao",
+   "label": "Menu previsível",
+   "mode": "deterministic",
+   "method": "dom",
+   "rule": "PASS when the text content of the primary nav is identical (after whitespace normalisation) across every captured surface of the milestone; FAIL otherwise.",
+   "na_condition": "N/A when the site has a single page",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "navegacao/breadcrumbs",
+   "category": "navegacao",
+   "label": "Breadcrumbs em hierarquias fundas",
+   "mode": "deterministic",
+   "method": "dom",
+   "rule": "On surfaces whose path depth ≥ 3 segments, PASS when a breadcrumb (nav[aria-label*=bread], .breadcrumb, ol with links to ancestors) or a visible parent link exists; FAIL otherwise.",
+   "na_condition": "N/A when no captured surface is deeper than two levels",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "navegacao/busca",
+   "category": "navegacao",
+   "label": "Busca acessível quando há volume",
+   "mode": "judgment",
+   "method": "dom+judgment",
+   "rule": "Deterministic support: presence of a search input / search button reachable by keyboard. Judgment: whether the content volume calls for search. PASS when volume is high and search exists and is keyboard operable; FAIL when volume is high and search is absent.",
+   "na_condition": "N/A when content volume is small (≤ ~15 destinations)",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "navegacao/mobile-nav",
+   "category": "navegacao",
+   "label": "Padrão mobile adequado",
+   "mode": "judgment",
+   "method": "blind-visual@390+dom",
+   "rule": "On 390×844, PASS when navigation is either visible or behind a labelled, ≥ 44 px toggle, with comfortable targets; FAIL when navigation is hidden behind undiscoverable gestures or overflows.",
+   "na_condition": "N/A when the site has a single page",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "navegacao/links",
+   "category": "navegacao",
+   "label": "Links parecem links",
+   "mode": "deterministic",
+   "method": "axe:link-in-text-block+computed-style",
+   "rule": "PASS when axe reports 0 link-in-text-block violations AND in-text links carry text-decoration or border-bottom or a weight change (not colour only); FAIL otherwise.",
+   "na_condition": "N/A when no links appear inside running text",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "carga/chunks",
+   "category": "carga",
+   "label": "Grupos de 7±2 itens",
+   "mode": "deterministic",
+   "method": "dom",
+   "rule": "PASS when the primary nav has ≤ 9 top-level items AND no visible menu/list of choices exceeds 9 items without grouping (heuristic: any <ul>/<ol> of links with > 9 direct children and no headings between); FAIL otherwise.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "carga/disclosure",
+   "category": "carga",
+   "label": "Divulgação progressiva",
+   "mode": "judgment",
+   "method": "blind-visual",
+   "rule": "PASS when complexity is revealed progressively (summary → detail) instead of all at once.",
+   "na_condition": "N/A when the surface has no secondary complexity",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "carga/feedback",
+   "category": "carga",
+   "label": "Toda ação tem feedback imediato",
+   "mode": "judgment",
+   "method": "interaction",
+   "rule": "PASS when clicking/submitting produces immediate visible feedback on the INTERACTION surface.",
+   "na_condition": "N/A when the surface has no actions beyond navigation",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "carga/loading",
+   "category": "carga",
+   "label": "Estados de loading desenhados",
+   "mode": "judgment",
+   "method": "interaction",
+   "rule": "PASS when long operations show a designed loading state.",
+   "na_condition": "N/A when no operation is long enough to need one (static content)",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "carga/prevencao",
+   "category": "carga",
+   "label": "Prevenção de erro antes do envio",
+   "mode": "judgment",
+   "method": "interaction",
+   "rule": "PASS when inline validation happens while typing or on blur.",
+   "na_condition": "N/A when there is no form",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "carga/recuperacao",
+   "category": "carga",
+   "label": "Recuperação sempre possível",
+   "mode": "judgment",
+   "method": "interaction",
+   "rule": "PASS when destructive actions have undo or confirmation.",
+   "na_condition": "N/A when there are no destructive actions",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "onboarding/valor-rapido",
+   "category": "onboarding",
+   "label": "Primeira experiência leva ao valor",
+   "mode": "judgment",
+   "method": "blind-visual",
+   "rule": "PASS when the first screen leads quickly to the value / core content.",
+   "na_condition": "not expected to be N/A on a rendered surface",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "onboarding/empty-states",
+   "category": "onboarding",
+   "label": "Empty states ensinam",
+   "mode": "judgment",
+   "method": "interaction",
+   "rule": "PASS when empty states explain and offer a next step.",
+   "na_condition": "N/A when the surface has no empty state",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "onboarding/dicas-contexto",
+   "category": "onboarding",
+   "label": "Dicas no contexto certo",
+   "mode": "judgment",
+   "method": "blind-visual",
+   "rule": "PASS when contextual help appears at the point of doubt (tooltips, inline explanations) rather than a tour.",
+   "na_condition": "N/A when there is nothing to explain (trivial surface)",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "onboarding/progresso-fluxo",
+   "category": "onboarding",
+   "label": "Progresso visível em multi-etapas",
+   "mode": "judgment",
+   "method": "interaction",
+   "rule": "PASS when multi-step flows show position and remaining steps.",
+   "na_condition": "N/A when there is no multi-step flow",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "confianca/depoimentos",
+   "category": "confianca",
+   "label": "Depoimentos reais e específicos",
+   "mode": "judgment",
+   "method": "content",
+   "rule": "PASS when testimonials carry name, context and specificity; FAIL when generic/faceless testimonials appear.",
+   "na_condition": "N/A when the surface shows no testimonials",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "confianca/numeros",
+   "category": "confianca",
+   "label": "Números específicos",
+   "mode": "judgment",
+   "method": "content",
+   "rule": "PASS when numbers shown are specific and sourced; FAIL when vague quantities are used as proof.",
+   "na_condition": "N/A when the surface shows no numbers as proof",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "confianca/logos",
+   "category": "confianca",
+   "label": "Prova social no ponto de decisão",
+   "mode": "judgment",
+   "method": "content",
+   "rule": "PASS when social proof sits at the decision point.",
+   "na_condition": "N/A when the surface has no decision point (pricing/signup)",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "confianca/seguranca",
+   "category": "confianca",
+   "label": "Sinais de segurança onde há dados",
+   "mode": "judgment",
+   "method": "content",
+   "rule": "PASS when data-collecting surfaces show protection/policy signals.",
+   "na_condition": "N/A when no data is collected",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "formularios/labels",
+   "category": "formularios",
+   "label": "Todo input tem label visível",
+   "mode": "deterministic",
+   "method": "axe:label",
+   "rule": "PASS when every input has a visible label (axe label rule 0 violations AND label is not visually hidden only); FAIL otherwise.",
+   "na_condition": "N/A when there are no inputs",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "formularios/erro-inline",
+   "category": "formularios",
+   "label": "Erro inline, junto ao campo",
+   "mode": "judgment",
+   "method": "interaction",
+   "rule": "PASS when an invalid submission shows the message next to the field and says how to fix it.",
+   "na_condition": "N/A when there is no form",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "formularios/tipos-campo",
+   "category": "formularios",
+   "label": "Tipos de campo corretos",
+   "mode": "deterministic",
+   "method": "dom",
+   "rule": "PASS when email/phone/number fields use the matching input type and autocomplete tokens; FAIL otherwise.",
+   "na_condition": "N/A when there are no such fields",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "formularios/input-16px",
+   "category": "formularios",
+   "label": "Texto de input ≥ 16px no mobile",
+   "mode": "deterministic",
+   "method": "computed-style@390",
+   "rule": "PASS when every visible input/select/textarea has computed font-size ≥ 16 px at 390×844; FAIL otherwise.",
+   "na_condition": "N/A when there are no inputs",
+   "tools": [
+    "playwright-core 1.63",
+    "axe-core 4.13"
+   ]
+  },
+  {
+   "id": "formularios/opcionais",
+   "category": "formularios",
+   "label": "Opcional ou obrigatório: marcado",
+   "mode": "judgment",
+   "method": "dom+judgment",
+   "rule": "PASS when either required or optional fields are consistently marked (visible marker, required attribute alone does not count).",
+   "na_condition": "N/A when the form has one field or no form",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  },
+  {
+   "id": "formularios/submit-estado",
+   "category": "formularios",
+   "label": "Submit comunica estado",
+   "mode": "judgment",
+   "method": "interaction",
+   "rule": "PASS when submitting/success/failure are visible and the button is never disabled without explanation.",
+   "na_condition": "N/A when there is no form",
+   "tools": [
+    "in-session blinded judgment (no model runtime billed; see RANDOMIZATION.json)"
+   ]
+  }
+ ]
+}

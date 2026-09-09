@@ -1,0 +1,661 @@
+{
+ "milestone": "V04",
+ "build": "M04",
+ "name": "Studio Dev UI — registry + originals (main 2026-08-24)",
+ "tool_ids": [
+  "tool-12"
+ ],
+ "tools": [
+  "Canvas UI fork → Dev Studio UI → Studio Dev UI"
+ ],
+ "repository": "DaniloAmaralUX/studio-dev-ui",
+ "source_sha": "d0e89313d04246196db5352d240070a091e0b549",
+ "representative_url": "https://studio-dev-ui.vercel.app/ (production at the time; deployment id not retained)",
+ "equivalent_deployments": [
+  "studio-dev-ui-originals project created 2026-08-24 (same source line)"
+ ],
+ "date_range": "2026-08-22 → 2026-08-24",
+ "captured_at": "2026-09-09T15:48:25.598Z",
+ "capture_method": "exact commit built locally (static export served by scripts/lib/serve.mjs); playwright-core 1.63.0; Chromium 141.0.7390.37; reducedMotion=reduce, animations=disabled, deviceScaleFactor=1, colorScheme=dark",
+ "build_adjustments": [
+  "next.config.ts: typescript.ignoreBuildErrors=true (type errors in the unrelated video/ package; no UI source touched)"
+ ],
+ "viewports": {
+  "desktop": {
+   "width": 1440,
+   "height": 900
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844
+  }
+ },
+ "surfaces": {
+  "ENTRY": "/",
+  "DISCOVERY": "/gallery",
+  "DETAIL": "/docs/components/glass",
+  "INTERACTION": "/playground",
+  "MOBILE_ENTRY": "/"
+ },
+ "visual_fingerprint": {
+  "ahash16_entry_top_band": "0000000000000000028000000000030000003ffc3ffc3ffc3ffc3ffc3ffc3ffc",
+  "dom_signature": "6cc4fb2d6ee986ab7475a0fa1f26af813314f963f5bd0cbfeaf3519378f140d4",
+  "css_sha256": "b73922520955409145990effd3f7596aa7dc8b8471e3ce10e8b0bc80cce1dcab",
+  "typography": "fc7aa704dd8d647abaa30ed2269c9f2f21983cd71172a03477de645a25638885",
+  "color": "e6c96b3357a4d82a3feb9455503186b9c893013d8edc289eedb451b4b78a125e",
+  "section_order": [
+   "div.relative",
+   "section.px-2.5"
+  ],
+  "nav_links": [
+   "Studio Dev UI",
+   "Docs",
+   "Screens",
+   "Components",
+   "Effects",
+   "Studio",
+   "Docs",
+   "Screens",
+   "Components",
+   "Effects",
+   "Studio",
+   "Docs",
+   "Installation",
+   "Components",
+   "Effects",
+   "Studio"
+  ],
+  "landmarks": [
+   "header",
+   "nav",
+   "main",
+   "section",
+   "section",
+   "section",
+   "section",
+   "section",
+   "section",
+   "section",
+   "section",
+   "footer",
+   "nav",
+   "nav"
+  ]
+ },
+ "fingerprint_detail": {
+  "ENTRY": {
+   "font_families": [
+    "GeistSans×169",
+    "GeistMono×40"
+   ],
+   "font_sizes": [
+    "13×81",
+    "15×56",
+    "14×31",
+    "12×16",
+    "16×12",
+    "36×6",
+    "18×3",
+    "11×2",
+    "60×1",
+    "48×1"
+   ],
+   "font_weights": [
+    "400×131",
+    "500×76",
+    "600×2"
+   ],
+   "text_colors": [
+    "rgb(255, 255, 255)×53",
+    "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)×49",
+    "lab(66.128 -0.0000298023 0.0000119209)×44",
+    "lab(98.26 0 0)×28",
+    "rgb(138, 138, 138)×15",
+    "rgb(250, 250, 250)×9",
+    "oklab(0.707999 -0.00000712276 0.0000166297 / 0.7)×2",
+    "rgb(179, 179, 179)×2"
+   ],
+   "background_colors": [
+    "oklab(0.268999 -0.00000260025 0.00000627339 / 0.3)×55",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.6)×48",
+    "lab(98.26 0 0)×6",
+    "oklab(0.999998 -0.00000980496 0.0000234246 / 0.06)×3",
+    "oklab(0.984998 -0.00000956654 0.0000230074 / 0.1)×3",
+    "lab(90.952 0 -0.0000119209)×2",
+    "rgb(10, 10, 10)×2",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.7)×1"
+   ],
+   "radii": [
+    "18px×52",
+    "10px×52",
+    "3.35544e+07px×17",
+    "8px×6",
+    "14px×2",
+    "26px×1",
+    "18px 18px 8px×1"
+   ],
+   "section_order": [
+    "div.relative",
+    "section.px-2.5"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "main",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "section",
+    "footer",
+    "nav",
+    "nav"
+   ],
+   "headings": [
+    "h1:Beautiful screens. Copy, paste, ship.",
+    "h2:Every component, alive on canvas.",
+    "h3:Asciify",
+    "h3:Bend",
+    "h3:Blaze",
+    "h3:Bubble",
+    "h3:Cloth",
+    "h3:Clouds",
+    "h3:Dithered Object",
+    "h3:Droplets",
+    "h3:Glass",
+    "h3:Glass Object",
+    "h3:Glitch",
+    "h3:Grid",
+    "h3:Asciify",
+    "h3:Bend",
+    "h3:Blaze",
+    "h3:Bubble",
+    "h3:Cloth",
+    "h3:Clouds",
+    "h3:Dithered Object",
+    "h3:Droplets",
+    "h3:Glass",
+    "h3:Glass Object",
+    "h3:Glitch",
+    "h3:Grid",
+    "h3:Hex Float",
+    "h3:Laser",
+    "h3:Liquid",
+    "h3:Magnify",
+    "h3:Particle Object",
+    "h3:Particle Reveal",
+    "h3:Particle Scroll",
+    "h3:Peel",
+    "h3:Retro Dither",
+    "h3:Ripple",
+    "h3:Shatter",
+    "h3:VHS",
+    "h3:Hex Float",
+    "h3:Laser",
+    "h3:Liquid",
+    "h3:Magnify",
+    "h3:Particle Object",
+    "h3:Particle Reveal",
+    "h3:Particle Scroll",
+    "h3:Peel",
+    "h3:Retro Dither",
+    "h3:Ripple",
+    "h3:Shatter",
+    "h3:VHS",
+    "h2:Three steps, start to shipped.",
+    "h3:Pick a component",
+    "h3:Run one command",
+    "h3:Make it yours",
+    "h2:One component, four flavors.",
+    "h2:Built for agents.",
+    "h2:Good questions.",
+    "h2:Build in a new dimension.",
+    "h2:Project history",
+    "h3:Navigate",
+    "h3:Tools"
+   ],
+   "nav_links": [
+    "Studio Dev UI",
+    "Docs",
+    "Screens",
+    "Components",
+    "Effects",
+    "Studio",
+    "Docs",
+    "Screens",
+    "Components",
+    "Effects",
+    "Studio",
+    "Docs",
+    "Installation",
+    "Components",
+    "Effects",
+    "Studio"
+   ],
+   "title": "Studio Dev UI: Copy-Paste Components That Look Good",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:38879/_next/static/chunks/15a_lrk1wqknz.css",
+    "http://127.0.0.1:38879/_next/static/chunks/2a_c83rl0o2ql.css"
+   ]
+  },
+  "DISCOVERY": {
+   "font_families": [
+    "GeistSans×196",
+    "GeistMono×57"
+   ],
+   "font_sizes": [
+    "14×181",
+    "11×58",
+    "13×7",
+    "16×3",
+    "15×2",
+    "30×1",
+    "12×1"
+   ],
+   "font_weights": [
+    "400×186",
+    "600×48",
+    "500×19"
+   ],
+   "text_colors": [
+    "lab(66.128 -0.0000298023 0.0000119209)×227",
+    "lab(98.26 0 0)×22",
+    "oklab(0.984998 -0.00000956655 0.0000230074 / 0.7)×4"
+   ],
+   "background_colors": [
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.85)×24",
+    "lab(2.75381 0 0)×13",
+    "lab(7.78201 -0.0000149012 0)×12",
+    "oklab(0.268999 -0.00000260025 0.00000627339 / 0.4)×4",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.7)×1",
+    "oklab(0.268999 -0.00000260025 0.00000627339 / 0.3)×1",
+    "oklab(0.984998 -0.00000956655 0.0000230074 / 0.035)×1",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.8)×1"
+   ],
+   "radii": [
+    "10px×178",
+    "4px×32",
+    "14px×17",
+    "18px×13",
+    "12px×12",
+    "8px×12",
+    "3.35544e+07px×9"
+   ],
+   "section_order": [
+    "div.flex"
+   ],
+   "landmarks": [
+    "header",
+    "nav",
+    "main",
+    "aside",
+    "nav",
+    "nav",
+    "section",
+    "header",
+    "aside",
+    "footer",
+    "nav",
+    "nav"
+   ],
+   "headings": [
+    "h1:Browse All",
+    "h3:Navigate",
+    "h3:Tools"
+   ],
+   "nav_links": [
+    "Studio Dev UI",
+    "Docs",
+    "Screens",
+    "Components",
+    "Effects",
+    "Studio",
+    "Docs",
+    "Screens",
+    "Components",
+    "Effects",
+    "Studio",
+    "ASCII Text",
+    "Blur Text",
+    "Circular Text",
+    "Count Up",
+    "Curved Loop",
+    "Decrypted Text",
+    "Depth TextNew",
+    "Echo TextNew",
+    "Falling Text"
+   ],
+   "title": "Components | Studio Dev UI",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:38879/_next/static/chunks/15a_lrk1wqknz.css",
+    "http://127.0.0.1:38879/_next/static/chunks/2a_c83rl0o2ql.css"
+   ]
+  },
+  "DETAIL": {
+   "font_families": [
+    "GeistMono×3040",
+    "GeistSans×89"
+   ],
+   "font_sizes": [
+    "13×3045",
+    "14×38",
+    "12×37",
+    "18×4",
+    "15×2",
+    "16×2",
+    "30×1"
+   ],
+   "font_weights": [
+    "400×3091",
+    "500×31",
+    "600×7"
+   ],
+   "text_colors": [
+    "rgb(138, 138, 138)×1697",
+    "rgb(179, 179, 179)×803",
+    "rgb(250, 250, 250)×467",
+    "lab(66.128 -0.0000298023 0.0000119209)×73",
+    "oklab(0.984998 -0.00000956654 0.0000230074 / 0.8)×31",
+    "lab(98.26 0 0)×30",
+    "rgb(89, 89, 89)×25",
+    "lab(2.75381 0 0)×1"
+   ],
+   "background_colors": [
+    "lab(15.204 0 -0.00000596046)×32",
+    "lab(98.26 0 0)×13",
+    "oklab(0.268999 -0.00000260025 0.00000627339 / 0.4)×3",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.7)×2",
+    "lab(2.75381 0 0)×1"
+   ],
+   "radii": [
+    "8px×32",
+    "10px×31",
+    "3.35544e+07px×7",
+    "14px×6",
+    "18px×1"
+   ],
+   "section_order": [
+    "div.page-enter",
+    "div.fixed"
+   ],
+   "landmarks": [
+    "aside",
+    "nav",
+    "main",
+    "article",
+    "section",
+    "section",
+    "section",
+    "section",
+    "nav",
+    "footer",
+    "nav",
+    "nav"
+   ],
+   "headings": [
+    "h1:Glass",
+    "h2:Demo image",
+    "h2:Install",
+    "h2:Code",
+    "h2:API reference",
+    "h3:Navigate",
+    "h3:Tools"
+   ],
+   "nav_links": [
+    "Introduction",
+    "Installation",
+    "MCP / AI Agents",
+    "Browse All",
+    "Asciify",
+    "Bend",
+    "Blaze",
+    "Bubble",
+    "Cloth",
+    "Clouds",
+    "Dithered Object",
+    "Droplets",
+    "Glass",
+    "Glass Object",
+    "Glitch",
+    "Grid",
+    "Hex Float",
+    "Laser",
+    "Liquid",
+    "Magnify"
+   ],
+   "title": "Glass | Studio Dev UI",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:38879/_next/static/chunks/15a_lrk1wqknz.css",
+    "http://127.0.0.1:38879/_next/static/chunks/2a_c83rl0o2ql.css"
+   ]
+  },
+  "INTERACTION": {
+   "font_families": [
+    "GeistSans×99",
+    "GeistMono×8"
+   ],
+   "font_sizes": [
+    "13×44",
+    "14×32",
+    "12×9",
+    "15×6",
+    "30×6",
+    "36×4",
+    "18×3",
+    "60×1",
+    "16×1",
+    "10×1"
+   ],
+   "font_weights": [
+    "400×48",
+    "500×45",
+    "600×14"
+   ],
+   "text_colors": [
+    "lab(66.128 -0.0000298023 0.0000119209)×54",
+    "lab(98.26 0 0)×25",
+    "oklab(0.984998 -0.00000956655 0.0000230074 / 0.9)×22",
+    "lab(2.75381 0 0)×5",
+    "oklab(0.984998 -0.00000956655 0.0000230074 / 0.95)×1"
+   ],
+   "background_colors": [
+    "oklab(0.268999 -0.00000260025 0.00000627339 / 0.6)×13",
+    "oklab(0.984998 -0.00000956654 0.0000230074 / 0.1)×10",
+    "oklab(0.984998 -0.00000956655 0.0000230074 / 0.9)×10",
+    "oklab(0.268999 -0.00000260025 0.00000627339 / 0.3)×7",
+    "lab(98.26 0 0)×5",
+    "lab(2.75381 0 0)×3",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.7)×2",
+    "oklab(0.145 -0.00000143796 0.00000340492 / 0.9)×2"
+   ],
+   "radii": [
+    "3.35544e+07px×29",
+    "10px×26",
+    "18px×12",
+    "14px×1",
+    "8px×1",
+    "22px×1"
+   ],
+   "section_order": [
+    "aside.fixed",
+    "div.fixed",
+    "div.page-enter"
+   ],
+   "landmarks": [
+    "main",
+    "aside",
+    "header",
+    "nav",
+    "section",
+    "section",
+    "section",
+    "section",
+    "article",
+    "article",
+    "article",
+    "section",
+    "section",
+    "section",
+    "section",
+    "article",
+    "article",
+    "section",
+    "footer",
+    "footer"
+   ],
+   "headings": [
+    "h1:Ship in days, not quarters.",
+    "h2:Less waiting. More shipping.",
+    "h3:Previews for every branch",
+    "h3:Reviews that keep moving",
+    "h3:Rollbacks in one click",
+    "h2:Teams that ship with bolt.",
+    "h2:Pricing that scales with you.",
+    "h3:Starter",
+    "h3:Scale",
+    "h2:Ready to ship faster?"
+   ],
+   "nav_links": [],
+   "title": "Playground | Studio Dev UI",
+   "stylesheet_hrefs": [
+    "http://127.0.0.1:38879/_next/static/chunks/15a_lrk1wqknz.css",
+    "http://127.0.0.1:38879/_next/static/chunks/2a_c83rl0o2ql.css"
+   ]
+  }
+ },
+ "notes": [
+  "DETAIL desktop: 4 failed requests (https://images.unsplash.com/photo-1782977389500-dd7adad33ebe?q=80&w=2032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D, https://images.unsplash.com/photo-1782094002386-7d9ae1f49f50?q=80&w=1817&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D, https://images.unsplash.com/photo-1781499455083-6ccc3beb20cd?q=80&w=1809&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+  "DETAIL mobile: 4 failed requests (https://images.unsplash.com/photo-1782977389500-dd7adad33ebe?q=80&w=2032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D, https://images.unsplash.com/photo-1782094002386-7d9ae1f49f50?q=80&w=1817&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D, https://images.unsplash.com/photo-1781499455083-6ccc3beb20cd?q=80&w=1809&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+  "INTERACTION desktop: 4 failed requests (https://images.unsplash.com/photo-1774425316479-4de6166e7408?q=80&w=1740&auto=format&fit=crop, https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop, https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?q=80&w=800&auto=format&fit=crop)",
+  "INTERACTION mobile: 4 failed requests (https://images.unsplash.com/photo-1774425316479-4de6166e7408?q=80&w=1740&auto=format&fit=crop, https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop, https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?q=80&w=800&auto=format&fit=crop)"
+ ],
+ "files": {
+  "surfaces/ENTRY-desktop.png": {
+   "sha256": "aab4dbacc554462ac77d6c50f2ed038d982adba03392dd6510678aac52373d77",
+   "bytes": 784767
+  },
+  "desktop-full.png": {
+   "sha256": "aab4dbacc554462ac77d6c50f2ed038d982adba03392dd6510678aac52373d77",
+   "bytes": 784767
+  },
+  "surfaces/ENTRY-desktop-first-screen.png": {
+   "sha256": "26f2fc59e915b3fa03666fb2931cb080d89b45cdbc41a2399f40c66455ecd7ad",
+   "bytes": 491118
+  },
+  "states/ENTRY-focus-first.png": {
+   "sha256": "33f4ee8954da9d754018248243870c34f2e311381649bc19c82982879789819b",
+   "bytes": 491381
+  },
+  "states/ENTRY-hover-first.png": {
+   "sha256": "501ae91ed3c51eb6349dfecd8267e9e3ddf08d258ef466e8946d443ca936d902",
+   "bytes": 491355
+  },
+  "surfaces/ENTRY-mobile.png": {
+   "sha256": "5a6d258d794d6ee2325fa9b864fb69cbed6dc72d0dcafc2c0f090c47295472aa",
+   "bytes": 290663
+  },
+  "mobile-full.png": {
+   "sha256": "5a6d258d794d6ee2325fa9b864fb69cbed6dc72d0dcafc2c0f090c47295472aa",
+   "bytes": 290663
+  },
+  "surfaces/ENTRY-mobile-first-screen.png": {
+   "sha256": "b5ddc6103a7d43fc3e535e1cfda65f723d82798b17c3227190a9706fb538066d",
+   "bytes": 202288
+  },
+  "states/ENTRY-mobile-nav-open.png": {
+   "sha256": "8f654d2ad700ac5393b86a72e0ea8bed703a86789688293c7b946877a166e839",
+   "bytes": 88854
+  },
+  "surfaces/DISCOVERY-desktop.png": {
+   "sha256": "2d78da6032b3e4e035454600bbb4efe1423d2a7f861af79515c0b89a16610d20",
+   "bytes": 742961
+  },
+  "surfaces/DISCOVERY-desktop-first-screen.png": {
+   "sha256": "89a93c51f23a8b33bc44989737da94166ba8fb287f69ba4341e1da1928183bfc",
+   "bytes": 326799
+  },
+  "states/DISCOVERY-focus-first.png": {
+   "sha256": "5bc1c6b4c5ae3641b9fd1a7b60bc364cb78b29a795bbda4cfbf26d32d637c59f",
+   "bytes": 327076
+  },
+  "states/DISCOVERY-hover-first.png": {
+   "sha256": "f81564d60d419c35f2bd3dc3cad8dcdc5b1d5cd8f5a9cf84e852db4c56e76091",
+   "bytes": 327388
+  },
+  "surfaces/DISCOVERY-mobile.png": {
+   "sha256": "eccdb6d15c31bc2e4d169402cd50b568e16a118fe799e1003e1bca821b150c99",
+   "bytes": 288946
+  },
+  "surfaces/DISCOVERY-mobile-first-screen.png": {
+   "sha256": "2ebeb6b7b40946b22e2b1fe63aac27580bab68ce137337fb200079c23a076138",
+   "bytes": 87069
+  },
+  "states/DISCOVERY-mobile-nav-open.png": {
+   "sha256": "efd94176afafac4ae30a6c3afa0cf49748d8e1087c7a9a7d30b36bd9b375098b",
+   "bytes": 57652
+  },
+  "surfaces/DETAIL-desktop.png": {
+   "sha256": "44904004da975f5d82498f440fd456e77b6ac1832ef4369c2805682a2b03d356",
+   "bytes": 85822
+  },
+  "surfaces/DETAIL-desktop-first-screen.png": {
+   "sha256": "44904004da975f5d82498f440fd456e77b6ac1832ef4369c2805682a2b03d356",
+   "bytes": 85822
+  },
+  "states/DETAIL-focus-first.png": {
+   "sha256": "e9b9e76accb4e5a7613dd67b521a8b3eac5a854fe0d20d820be12e682fffd617",
+   "bytes": 86084
+  },
+  "states/DETAIL-hover-first.png": {
+   "sha256": "905fc382ae28c5861252e4cd0f491207a138f3322d6f9b34529383cea02d6dd7",
+   "bytes": 89170
+  },
+  "surfaces/DETAIL-mobile.png": {
+   "sha256": "9c9c99655d11fa57dae65d1edbfea41f706bb69d02838b4a01d8d354b4a368ac",
+   "bytes": 46432
+  },
+  "surfaces/DETAIL-mobile-first-screen.png": {
+   "sha256": "9c9c99655d11fa57dae65d1edbfea41f706bb69d02838b4a01d8d354b4a368ac",
+   "bytes": 46432
+  },
+  "states/DETAIL-mobile-nav-open.png": {
+   "sha256": "561648f4eb21bb35dfe4288a72e52b85808aae329bc8749c5a40e281225ed003",
+   "bytes": 27242
+  },
+  "surfaces/INTERACTION-desktop.png": {
+   "sha256": "585b258e61bd3de0556ad1c62857a982ad742f3e69bf5b2cd51d7b8d5c10e914",
+   "bytes": 123383
+  },
+  "surfaces/INTERACTION-desktop-first-screen.png": {
+   "sha256": "585b258e61bd3de0556ad1c62857a982ad742f3e69bf5b2cd51d7b8d5c10e914",
+   "bytes": 123383
+  },
+  "states/INTERACTION-focus-first.png": {
+   "sha256": "846919e11467d2efbd74749a758648af6d2b71cf41f03ff1d947cab6ef7f1eaf",
+   "bytes": 124482
+  },
+  "states/INTERACTION-hover-first.png": {
+   "sha256": "d5bcb17af2b90707a646b4c31efbd74f408f03d3788f2c04fa67b18e651218c7",
+   "bytes": 124503
+  },
+  "surfaces/INTERACTION-mobile.png": {
+   "sha256": "1096857ef10157fd55b13d3c119afb8fd4ea1e453cd7bc8155bc700c43da66a4",
+   "bytes": 48979
+  },
+  "surfaces/INTERACTION-mobile-first-screen.png": {
+   "sha256": "1096857ef10157fd55b13d3c119afb8fd4ea1e453cd7bc8155bc700c43da66a4",
+   "bytes": 48979
+  },
+  "states/INTERACTION-mobile-nav-open.png": {
+   "sha256": "1096857ef10157fd55b13d3c119afb8fd4ea1e453cd7bc8155bc700c43da66a4",
+   "bytes": 48979
+  },
+  "sections.json": {
+   "sha256": "73a7cb41088fc78761fe9a824db9c47e1eb816ddea1884ded93a2e0e8fa41b45",
+   "bytes": 5625
+  }
+ }
+}
