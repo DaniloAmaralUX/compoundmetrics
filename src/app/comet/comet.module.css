@@ -1,0 +1,95 @@
+/*
+ * Comet (PT-BR) — tokens e primitivos compartilhados por todas as seções.
+ * Fonte da verdade do design: este arquivo + o .module.css de cada seção.
+ * Referência: https://www.perplexity.ai/comet (tema claro, serifa editorial nos títulos).
+ */
+.page {
+  /* cor — paleta observada em galeria de design (inferred); teal Perplexity (not-verified) */
+  --bg: #fbfaf4;
+  --fg: #091717;
+  --fg-2: #3b4151;
+  --surface: #e4e3d4;
+  --surface-2: #f2f1e8;
+  --line: rgba(9, 23, 23, 0.10);
+  --accent: #20808d;
+  --accent-ink: #fbfaf4;
+  --glass: rgba(251, 250, 244, 0.62);
+  --glass-line: rgba(255, 255, 255, 0.55);
+  /* esferas abstratas (placeholder das ilustrações 3D) */
+  --orb-1: #f3b9a1;
+  --orb-2: #9ac7c8;
+  --orb-3: #d9c7ee;
+  /* tipografia — famílias proprietárias da referência com fallback local */
+  --font-display: "PP Editorial New", "Editorial New", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body: "FK Grotesk", "FK Grotesk Neue", var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Berkeley Mono", var(--font-geist-mono), ui-monospace, monospace;
+  /* grade e ritmo */
+  --container: 1200px;
+  --gutter: 24px;
+  --section-gap: 128px;
+  --radius-card: 24px;
+  --radius-pill: 999px;
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+
+  color-scheme: light;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+.page * { box-sizing: border-box; }
+.page ::selection { background: var(--fg); color: var(--bg); }
+
+.container { width: min(var(--container), calc(100% - 2 * var(--gutter))); margin: 0 auto; }
+
+.display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.02em; line-height: 1.02; text-wrap: balance; margin: 0; }
+.eyebrow { font: 500 12px/1.2 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-2); }
+.lead { margin: 0; color: var(--fg-2); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.5; max-width: 60ch; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 48px; padding: 0 22px;
+  border-radius: var(--radius-pill); border: 1px solid transparent;
+  background: var(--fg); color: var(--bg);
+  font: 500 16px/1 var(--font-body); text-decoration: none; cursor: pointer;
+  transition: transform 160ms var(--ease), background-color 160ms var(--ease);
+}
+.btn:hover { background: #142626; transform: translateY(-1px); }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.btnGhost { background: transparent; color: var(--fg); border-color: var(--line); }
+.btnGhost:hover { background: var(--surface-2); }
+.btnAccent { background: var(--accent); color: var(--accent-ink); }
+.btnAccent:hover { background: #1a6c78; }
+
+/* esfera abstrata — substitui as ilustrações 3D da referência (assets não disponíveis) */
+.orb {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle at 30% 30%, #fff8 0, transparent 40%), radial-gradient(circle at 50% 50%, var(--orb-color, var(--orb-2)), color-mix(in oklab, var(--orb-color, var(--orb-2)) 60%, var(--fg)) 100%);
+  box-shadow: 0 30px 60px -30px rgba(9, 23, 23, 0.35);
+}
+
+/* cartão "glassmorphism" da referência */
+.glass {
+  background: var(--glass); border: 1px solid var(--glass-line);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+}
+
+/* revelação ao rolar — fade-in/slide-up (motion observado em galeria) */
+.reveal { opacity: 1; transform: none; }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { animation: reveal 1ms linear both; animation-timeline: view(); animation-range: entry 0% entry 35%; }
+    @keyframes reveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  }
+}
+
+.srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (max-width: 820px) {
+  .page { --section-gap: 88px; --gutter: 20px; font-size: 16px; }
+}

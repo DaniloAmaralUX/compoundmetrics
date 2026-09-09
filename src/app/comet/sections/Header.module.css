@@ -1,0 +1,10 @@
+/* Cabeçalho — sticky após o hero (observado em galeria: "becomes sticky after the initial hero section"). */
+.header { position: sticky; top: 0; z-index: 20; background: color-mix(in oklab, var(--bg) 82%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid transparent; }
+.bar { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; font: 500 18px/1 var(--font-body); letter-spacing: -0.01em; }
+.mark { width: 28px; height: 28px; border-radius: 50%; background: conic-gradient(from 200deg, var(--accent), var(--orb-1), var(--orb-3), var(--accent)); }
+.actions { display: flex; align-items: center; gap: 10px; }
+.iconBtn { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line); color: var(--fg); text-decoration: none; font: 500 16px/1 var(--font-mono); background: var(--surface-2); }
+.iconBtn:hover { background: var(--surface); }
+.iconBtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 560px) { .bar { height: 60px; } .brand span:last-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } }

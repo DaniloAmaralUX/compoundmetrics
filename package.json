@@ -22,6 +22,8 @@
     "cd:setup-check": "node compound-design/tools/cd.mjs setup-check",
     "cd:discover": "node compound-design/tools/cd.mjs discover",
     "cd:all": "npm run cd:lint && npm run cd:registry && npm run cd:evals && npm run cd:plugin && npm run cd:claims && npm run cd:selftest",
+    "screens:sync": "node scripts/screen-sync.mjs",
+    "screens:check": "node scripts/screen-sync.mjs --check",
     "content": "node scripts/build-content.mjs && node scripts/build-case-study-assets.mjs",
     "content:check": "node scripts/build-content.mjs --check",
     "site:check": "node scripts/site-check.mjs",

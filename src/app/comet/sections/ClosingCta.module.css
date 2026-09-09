@@ -1,0 +1,15 @@
+/* Fechamento — "video-hero" full-bleed na referência; aqui, fundo escuro com esferas em deriva lenta. */
+.section { position: relative; margin-top: var(--section-gap); padding: 160px 0; background: var(--fg); color: var(--bg); overflow: clip; }
+.backdrop { position: absolute; inset: 0; }
+.orbA { --orb-color: var(--accent); width: 44vw; max-width: 620px; aspect-ratio: 1; left: -10%; top: -30%; opacity: 0.8; }
+.orbB { --orb-color: var(--orb-1); width: 30vw; max-width: 420px; aspect-ratio: 1; right: -6%; bottom: -30%; opacity: 0.8; }
+.inner { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; }
+.title { font-size: clamp(40px, 6vw, 80px); }
+.cta { background: var(--bg); color: var(--fg); min-height: 52px; padding: 0 26px; font-size: 17px; }
+.cta:hover { background: #fff; }
+@media (prefers-reduced-motion: no-preference) {
+  .orbA, .orbB { animation: float 14s ease-in-out infinite alternate; }
+  .orbB { animation-duration: 18s; }
+  @keyframes float { to { translate: 4% 6%; } }
+}
+@media (max-width: 820px) { .section { padding: 112px 0; } }
