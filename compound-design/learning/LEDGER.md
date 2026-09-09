@@ -243,3 +243,21 @@ privacy: public-safe
 candidate_eval: yes — cd selftest claim cases, including the four negative ones
 lesson: a guard that cannot tell a rule from a violation blocks the rule
 ```
+
+```yaml
+id: CD-20260909-012
+observed_at: 2026-09-09
+project: compoundmetrics-v0.3
+resource: e2-ci-guard
+resource_version: 0.3.0-alpha.1
+model_runtime: none
+task: keep CI provably free of paid model runtime while documenting that guarantee in the workflow
+expected: the guard flags a workflow that sets E2_PAID_RUNTIME_CONFIRMED
+observed: it flagged the comment explaining that no job sets it — a whole-file regex cannot tell a stated rule from a violation, exactly the failure already fixed once in the claim guard, reintroduced in a second guard
+human_correction: line-level scan that skips comments and requires an actual assignment; mutations added in both directions (a workflow that sets it must fail, a comment naming it must pass)
+impact: medium
+reproducible: yes
+privacy: public-safe
+candidate_eval: yes — e2 self-test "CI gate rejects a workflow that sets the paid-runtime flag" and "CI gate does not flag a comment that names the flag"
+lesson: the same guard bug recurred in a second place because the first fix was applied to one guard rather than turned into a rule for all of them — a guard must distinguish stating a rule from breaking it, and both directions belong in its tests
+```

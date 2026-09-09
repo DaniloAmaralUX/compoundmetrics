@@ -523,9 +523,15 @@ function scanCiWorkflows() {
   const dir = path.join(REPO, ".github/workflows");
   for (const f of exists(dir) ? fs.readdirSync(dir) : []) {
     const text = readText(path.join(dir, f));
-    if (/paid-runtime|DANGEROUS-PAID/.test(text)) problems.push(`${f}: CI must never invoke paid-runtime`);
-    if (new RegExp(PAID_FLAG).test(text)) problems.push(`${f}: CI must not set ${PAID_FLAG}`);
-    if (/\bclaude\s+-p\b|claude-agent-sdk|anthropic:|openai:/.test(text)) problems.push(`${f}: CI references a model runtime`);
+    // Line-level, and blind to comments: a workflow that documents the guarantee names these
+    // tokens, and a comment naming the flag is not a job setting it. Same distinction the claim
+    // guard makes between stating a rule and breaking it.
+    const code = text.split("\n").filter((l) => !/^\s*#/.test(l));
+    for (const l of code) {
+      if (/paid-runtime|DANGEROUS-PAID/.test(l)) problems.push(`${f}: CI must never invoke paid-runtime — ${l.trim().slice(0, 80)}`);
+      if (new RegExp(`${PAID_FLAG}\\s*[:=]`).test(l)) problems.push(`${f}: CI must not set ${PAID_FLAG} — ${l.trim().slice(0, 80)}`);
+      if (/\bclaude\s+-p\b|claude-agent-sdk|anthropic:|openai:/.test(l)) problems.push(`${f}: CI references a model runtime — ${l.trim().slice(0, 80)}`);
+    }
     for (const line of text.split("\n")) if (/promptfoo\s+eval/.test(line) && !/dryrun|dry-run/.test(line)) problems.push(`${f}: promptfoo eval outside dry-run: ${line.trim()}`);
   }
   return problems;
@@ -904,6 +910,15 @@ async function cmdSelfTest() {
   { const env = scrubbedEnv({ [PAID_FLAG]: "yes" }); const r = spawnSync(process.execPath, [fileURLToPath(import.meta.url), "paid-runtime", "--suite=jakub", "--model=x", "--judge=y"], { encoding: "utf8", env }); expectTrue("paid-runtime with flag != exactly YES → blocked", r.status === 2 && r.stderr.includes(BLOCK_MESSAGE)); }
   // 16. CI, dry-run config, templates
   expectTrue("CI workflows are zero-model-cost", scanCiWorkflows().length === 0, scanCiWorkflows().join("; "));
+  { const d = path.join(REPO, ".github/workflows"); const probe = path.join(d, "__selftest-probe.yml");
+    try {
+      fs.writeFileSync(probe, "jobs:\n  x:\n    steps:\n      - env:\n          E2_PAID_RUNTIME_CONFIRMED: YES\n");
+      expectTrue("CI gate rejects a workflow that sets the paid-runtime flag", scanCiWorkflows().some((p) => /must not set/.test(p)));
+      fs.writeFileSync(probe, "jobs:\n  x:\n    steps:\n      - run: npm run e2:runtime:DANGEROUS-PAID\n");
+      expectTrue("CI gate rejects a workflow that invokes paid runtime", scanCiWorkflows().some((p) => /never invoke paid-runtime/.test(p)));
+      fs.writeFileSync(probe, "# documents the guarantee: never sets E2_PAID_RUNTIME_CONFIRMED and never calls paid-runtime\njobs:\n  x:\n    steps:\n      - run: npm test\n");
+      expectTrue("CI gate does not flag a comment that names the flag", scanCiWorkflows().length === 0, scanCiWorkflows().join("; "));
+    } finally { fs.rmSync(probe, { force: true }); } }
   expectTrue("loadable promptfoo configs are exec-only", scanLoadableConfigs().length === 0, scanLoadableConfigs().join("; "));
   expectTrue("runtime templates guarded (apiKeyRequired true, placeholders, repeat 3)", scanRuntimeTemplates().length === 0, scanRuntimeTemplates().join("; "));
   // 16b. legacy resource equivalence
