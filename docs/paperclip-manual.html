@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual de Campo Paperclip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --paper:#F4F3EF; --paper-2:#ECEAE3; --ink:#1B2230; --ink-2:#4A5160; --ink-3:#7B8291;
+    --rule:#D5D2CA; --accent:#1F3A93; --accent-soft:#E3E8F7; --stamp:#A8302C; --stamp-soft:#F6E4E2;
+    --code-bg:#1B2230; --code-fg:#E8E6DF; --code-dim:#8C93A3; --code-accent:#9DB3FF;
+    --ok:#2C6E49;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#15181E; --paper-2:#1D2129; --ink:#E6E4DE; --ink-2:#B4B8C2; --ink-3:#7E8493;
+      --rule:#2E333D; --accent:#8FA8FF; --accent-soft:#1F2740; --stamp:#E07A74; --stamp-soft:#3A2223;
+      --code-bg:#0E1014; --code-fg:#E1E3E8; --code-dim:#6E7484; --code-accent:#9DB3FF;
+      --ok:#7CC49A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#15181E; --paper-2:#1D2129; --ink:#E6E4DE; --ink-2:#B4B8C2; --ink-3:#7E8493;
+    --rule:#2E333D; --accent:#8FA8FF; --accent-soft:#1F2740; --stamp:#E07A74; --stamp-soft:#3A2223;
+    --code-bg:#0E1014; --code-fg:#E1E3E8; --code-dim:#6E7484; --code-accent:#9DB3FF;
+    --ok:#7CC49A;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size:17px; line-height:1.6;
+    padding-block:0 96px; padding-inline:clamp(16px, 4vw, 48px);
+  }
+  a{color:var(--accent)}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    max-width:1180px; margin:0 auto; padding-block:28px 40px;
+    border-bottom:1px solid var(--ink);
+    display:grid; grid-template-columns:1fr auto; gap:24px; align-items:end;
+  }
+  .kicker{
+    font-family:"IBM Plex Mono", monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+    display:flex; gap:18px; flex-wrap:wrap;
+  }
+  .kicker b{color:var(--accent); font-weight:500}
+  h1{
+    font-family:"Newsreader", Georgia, serif; font-weight:400; font-style:italic;
+    font-size:clamp(44px, 7vw, 92px); line-height:.98; margin:14px 0 0; letter-spacing:-.01em; text-wrap:balance;
+  }
+  h1 span{font-style:normal; font-weight:500}
+  .masthead .lede{
+    max-width:34ch; font-family:"Newsreader", Georgia, serif; font-size:21px; line-height:1.35; color:var(--ink-2);
+    margin:0; text-wrap:balance;
+  }
+
+  /* ---------- body grid ---------- */
+  .page{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:220px minmax(0,1fr); gap:56px; padding-top:40px}
+  .rail{position:sticky; top:24px; align-self:start}
+  .rail h2{font-family:"IBM Plex Mono", monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3); margin:0 0 12px; font-weight:500}
+  .rail ol{list-style:none; margin:0; padding:0; border-top:1px solid var(--rule)}
+  .rail li{border-bottom:1px solid var(--rule)}
+  .rail a{
+    display:grid; grid-template-columns:28px 1fr; gap:10px; padding:9px 0; text-decoration:none; color:var(--ink-2); font-size:14px; line-height:1.3;
+  }
+  .rail a:hover{color:var(--accent)}
+  .rail a i{font-style:normal; font-family:"IBM Plex Mono", monospace; font-size:12px; color:var(--ink-3); padding-top:2px}
+  .rail .meta{margin-top:20px; font-size:12.5px; color:var(--ink-3); line-height:1.5}
+  .rail .meta code{font-family:"IBM Plex Mono", monospace; font-size:12px; color:var(--ink-2)}
+
+  .main{max-width:68ch}
+
+  /* ---------- prologue ---------- */
+  .prologue p{margin:0 0 18px}
+  .prologue p:first-child::first-letter{
+    font-family:"Newsreader", Georgia, serif; font-size:3.4em; float:left; line-height:.82; padding-right:10px; padding-top:6px; color:var(--accent); font-weight:500;
+  }
+  .model{
+    margin:28px 0 8px; border:1px solid var(--rule); background:var(--paper-2);
+    display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:0; overflow:hidden;
+  }
+  .model > div{padding:18px 20px}
+  .model .lab{font-family:"IBM Plex Mono", monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); margin-bottom:6px}
+  .model .who{font-family:"Newsreader", Georgia, serif; font-size:22px; line-height:1.15}
+  .model .arrow{font-family:"IBM Plex Mono", monospace; color:var(--accent); font-size:13px; text-align:center; padding:0 6px; white-space:nowrap}
+  .model .arrow small{display:block; color:var(--ink-3); font-size:11px}
+  .model p{margin:6px 0 0; font-size:14px; color:var(--ink-2); line-height:1.45}
+
+  /* ---------- steps ---------- */
+  .step{margin-top:72px; padding-top:28px; border-top:1px solid var(--ink)}
+  .step-head{display:grid; grid-template-columns:auto 1fr; gap:22px; align-items:baseline; margin-bottom:22px}
+  .step-num{
+    font-family:"Newsreader", Georgia, serif; font-size:64px; line-height:1; color:var(--accent); font-weight:500; font-variant-numeric:tabular-nums;
+  }
+  .step h2{font-family:"Newsreader", Georgia, serif; font-weight:400; font-size:clamp(28px, 3.4vw, 38px); line-height:1.1; margin:0; text-wrap:balance}
+  .step h2 em{font-style:italic; color:var(--ink-2)}
+  .step .goal{font-size:14px; color:var(--ink-3); margin:8px 0 0; font-family:"IBM Plex Mono", monospace}
+  .step .goal b{color:var(--ok); font-weight:500}
+  .step p{margin:0 0 16px}
+  .step h3{font-size:13px; letter-spacing:.12em; text-transform:uppercase; font-weight:600; color:var(--ink-2); margin:30px 0 10px}
+
+  pre{
+    margin:18px 0 22px; background:var(--code-bg); color:var(--code-fg); border-radius:3px;
+    padding:16px 18px; font-family:"IBM Plex Mono", monospace; font-size:13.5px; line-height:1.6; overflow-x:auto;
+    border-left:3px solid var(--accent);
+  }
+  pre .c{color:var(--code-dim)}
+  pre .k{color:var(--code-accent)}
+  code{font-family:"IBM Plex Mono", monospace; font-size:.9em; background:var(--paper-2); padding:1px 5px; border-radius:2px; color:var(--ink)}
+  pre code{background:none; padding:0; font-size:inherit; color:inherit}
+
+  .note{
+    display:grid; grid-template-columns:auto 1fr; gap:14px; margin:20px 0 24px; padding:14px 16px;
+    background:var(--accent-soft); border-left:3px solid var(--accent); font-size:15px; line-height:1.5;
+  }
+  .note .tag{font-family:"IBM Plex Mono", monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); padding-top:3px; font-weight:500}
+  .note.stamp{background:var(--stamp-soft); border-left-color:var(--stamp)}
+  .note.stamp .tag{color:var(--stamp)}
+  .note p{margin:0}
+
+  table{width:100%; border-collapse:collapse; font-size:14.5px; margin:14px 0 24px}
+  th{text-align:left; font-family:"IBM Plex Mono", monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); font-weight:500; padding:8px 10px 8px 0; border-bottom:1px solid var(--ink)}
+  td{padding:9px 10px 9px 0; border-bottom:1px solid var(--rule); vertical-align:top; line-height:1.45}
+  td:first-child{white-space:nowrap}
+  .twrap{overflow-x:auto}
+
+  .check{list-style:none; margin:14px 0 24px; padding:0}
+  .check li{position:relative; padding-left:30px; margin-bottom:8px; line-height:1.5}
+  .check li::before{
+    content:""; position:absolute; left:0; top:6px; width:14px; height:14px; border:1.5px solid var(--ink-2); border-radius:2px;
+  }
+  .check li.done::before{background:var(--accent); border-color:var(--accent)}
+  .check li.done::after{
+    content:""; position:absolute; left:4.5px; top:8px; width:4px; height:8px; border:solid var(--paper); border-width:0 2px 2px 0; transform:rotate(45deg);
+  }
+
+  .flow{display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin:14px 0 24px; font-family:"IBM Plex Mono", monospace; font-size:12.5px}
+  .flow span{border:1px solid var(--rule); padding:5px 10px; border-radius:2px; background:var(--paper-2)}
+  .flow span.hot{border-color:var(--accent); color:var(--accent)}
+  .flow i{color:var(--ink-3); font-style:normal}
+
+  .colophon{max-width:1180px; margin:88px auto 0; padding-top:20px; border-top:1px solid var(--ink); display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; font-size:13px; color:var(--ink-3); font-family:"IBM Plex Mono", monospace}
+
+  @media (max-width: 860px){
+    .masthead{grid-template-columns:1fr}
+    .page{grid-template-columns:1fr; gap:32px}
+    .rail{position:static}
+    .rail ol{display:grid; grid-template-columns:1fr 1fr; border-top:none; gap:0 16px}
+    .rail li{border-top:1px solid var(--rule)}
+    .model{grid-template-columns:1fr}
+    .model .arrow{padding:0 20px 10px; text-align:left}
+    .step-num{font-size:48px}
+  }
+  @media (max-width: 480px){
+    .rail ol{grid-template-columns:1fr}
+    body{font-size:16px}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div>
+    <div class="kicker"><span>Manual de campo</span><span>Paperclip <b>v2026.831</b></span><span>Do zero à primeira empresa operada por agentes</span></div>
+    <h1>Uma empresa de IA,<br><span>passo a passo.</span></h1>
+  </div>
+  <p class="lede">Nove passos, do terminal ao primeiro agente entregando trabalho sob orçamento, aprovação e auditoria.</p>
+</header>
+
+<div class="page">
+  <nav class="rail" aria-label="Passos">
+    <h2>Sequência</h2>
+    <ol>
+      <li><a href="#s0"><i>00</i><span>O modelo mental</span></a></li>
+      <li><a href="#s1"><i>01</i><span>Instalar o CLI</span></a></li>
+      <li><a href="#s2"><i>02</i><span>Subir a instância</span></a></li>
+      <li><a href="#s3"><i>03</i><span>Conectar e autenticar</span></a></li>
+      <li><a href="#s4"><i>04</i><span>Criar empresa e metas</span></a></li>
+      <li><a href="#s5"><i>05</i><span>Contratar o primeiro agente</span></a></li>
+      <li><a href="#s6"><i>06</i><span>Delegar trabalho</span></a></li>
+      <li><a href="#s7"><i>07</i><span>Observar a execução</span></a></li>
+      <li><a href="#s8"><i>08</i><span>Governar custo e decisões</span></a></li>
+      <li><a href="#s9"><i>09</i><span>Automatizar e estender</span></a></li>
+    </ol>
+    <p class="meta">Todos os exemplos usam o binário <code>paperclipai</code>. Sem instalação, prefixe com <code>npx</code>. Valores entre <code>&lt;&gt;</code> são seus.</p>
+  </nav>
+
+  <main class="main">
+
+    <section class="prologue" id="s0">
+      <p>Paperclip é um plano de controle para uma empresa operada por agentes de IA. Ele não substitui o Claude Code, o Codex ou o Gemini CLI. Ele fica acima deles: cria a organização, distribui tarefas, acorda cada agente quando há trabalho, mede o gasto e exige aprovação humana antes de decisões caras. O produto é a empresa. Os adapters são a mão de obra.</p>
+      <p>Uma regra organiza tudo o que vem a seguir: <strong>o CLI não executa o modelo.</strong> Quando você digita um comando, o servidor Paperclip recebe uma chamada de API, roda o adapter do lado dele e devolve eventos e logs para o seu terminal. Você rege. O servidor toca.</p>
+
+      <div class="model">
+        <div><div class="lab">Você, o Board</div><div class="who">Terminal ou UI</div><p>Cria empresa, contrata agentes, aprova, ajusta orçamento, lê logs.</p></div>
+        <div class="arrow">──── API ────&gt;<small>issues, wakeups, aprovações</small></div>
+        <div><div class="lab">Servidor Paperclip</div><div class="who">Runtime e adapters</div><p>Acorda o agente, roda Claude ou Codex, registra runs, custos e atividade.</p></div>
+      </div>
+
+      <h3 style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--ink-2);margin:30px 0 10px">Vocabulário mínimo</h3>
+      <div class="twrap"><table>
+        <tr><th>Termo</th><th>O que é</th></tr>
+        <tr><td>Company</td><td>O contêiner de tudo. Prefixo de issues próprio, como <code>PAP-39</code>.</td></tr>
+        <tr><td>Agent</td><td>Um trabalhador de IA com adapter, orçamento, instruções e chefe. O primeiro é sempre o CEO.</td></tr>
+        <tr><td>Issue</td><td>A unidade de trabalho. Comunicação é tarefa mais comentários, nunca chat.</td></tr>
+        <tr><td>Heartbeat</td><td>Um acordar do agente. Cada heartbeat gera um run com log, custo e issues tocadas.</td></tr>
+        <tr><td>Approval</td><td>Portão humano para ações governadas: contratar, aprovar estratégia, estourar orçamento.</td></tr>
+        <tr><td>Board</td><td>Você. A persona com autoridade total sobre a instância.</td></tr>
+      </table></div>
+    </section>
+
+    <!-- 01 -->
+    <section class="step" id="s1">
+      <div class="step-head">
+        <div class="step-num">01</div>
+        <div><h2>Instalar o CLI <em>e verificar o Node</em></h2><p class="goal">resultado: <b>paperclipai --version responde</b></p></div>
+      </div>
+      <p>O CLI é um programa Node e exige a versão 24.11 ou mais nova. Versões 22 e 23 imprimem aviso e seguem, mas aviso não é suporte. Confira antes de qualquer outra coisa.</p>
+<pre><code><span class="c"># precisa reportar v24.11.0 ou superior</span>
+node --version</code></pre>
+      <p>Para experimentar, o caminho sem instalação é o <code>npx</code>. Para ficar, use a instalação gerenciada: ela baixa a release, verifica, instala em <code>~/.local/bin</code> e passa a permitir update, rollback instantâneo e serviço em background.</p>
+<pre><code><span class="c"># experimentar</span>
+npx paperclipai --help
+
+<span class="c"># ficar: instalação gerenciada em ~/.paperclip/cli</span>
+npx paperclipai install
+paperclipai --version
+paperclipai channels        <span class="c"># stable · beta · nightly · canary</span></code></pre>
+      <div class="note"><span class="tag">Nota</span><p>A instalação gerenciada guarda os dois payloads anteriores. Se uma atualização quebrar algo, <code>paperclipai update --rollback</code> volta na hora, sem download.</p></div>
+    </section>
+
+    <!-- 02 -->
+    <section class="step" id="s2">
+      <div class="step-head">
+        <div class="step-num">02</div>
+        <div><h2>Subir a instância <em>local</em></h2><p class="goal">resultado: <b>GET /api/health responde no localhost:3100</b></p></div>
+      </div>
+      <p>Dois comandos separam uma máquina vazia de um servidor saudável. O <code>onboard</code> grava a configuração, o segredo JWT dos agentes e a chave local de secrets. O <code>run</code> valida tudo com o <code>doctor</code>, repara o que souber reparar e só então sobe o servidor.</p>
+<pre><code>paperclipai onboard          <span class="c"># Quickstart: Postgres embutido, disco local, secrets criptografados</span>
+paperclipai run              <span class="c"># doctor + servidor</span></code></pre>
+      <p>Em scripts e CI, aceite os padrões sem prompt. Sem <code>--bind</code>, isso força o modo loopback confiável.</p>
+<pre><code>paperclipai onboard --yes
+paperclipai onboard --bind lan       <span class="c"># expor na rede local</span>
+paperclipai run --instance dev       <span class="c"># segunda instância isolada</span>
+paperclipai run --no-repair          <span class="c"># doctor só reporta</span></code></pre>
+      <h3>Deixe rodando</h3>
+      <p>Um terminal fechado derruba o servidor. Entregue a tarefa ao sistema operacional: launchd no macOS, systemd de usuário no Linux, sem sudo.</p>
+<pre><code>paperclipai service install
+paperclipai service status
+paperclipai service logs --follow
+paperclipai service restart          <span class="c"># hot restart: runs em andamento são adotados</span></code></pre>
+      <div class="note stamp"><span class="tag">Atenção</span><p>O <code>run</code> sem subcomando sobe a instância. Os subcomandos <code>run list</code>, <code>run live</code> e <code>run log</code> inspecionam heartbeat runs pela API. São dois conceitos sob o mesmo verbo.</p></div>
+      <p>Onde as coisas ficam, na instância padrão:</p>
+      <div class="twrap"><table>
+        <tr><th>Dado</th><th>Caminho</th></tr>
+        <tr><td>Config</td><td><code>~/.paperclip/instances/default/config.json</code></td></tr>
+        <tr><td>Banco embutido</td><td><code>~/.paperclip/instances/default/db</code></td></tr>
+        <tr><td>Logs</td><td><code>~/.paperclip/instances/default/logs</code></td></tr>
+        <tr><td>Chave de secrets</td><td><code>~/.paperclip/instances/default/secrets/master.key</code></td></tr>
+      </table></div>
+    </section>
+
+    <!-- 03 -->
+    <section class="step" id="s3">
+      <div class="step-head">
+        <div class="step-num">03</div>
+        <div><h2>Conectar <em>e escolher quem você é</em></h2><p class="goal">resultado: <b>paperclipai whoami mostra persona board</b></p></div>
+      </div>
+      <p>Toda chamada ao plano de controle é feita <em>como alguém</em>. Existem exatamente duas personas e dois tipos de credencial.</p>
+      <div class="twrap"><table>
+        <tr><th>Persona</th><th>Autoridade</th><th>Credencial</th></tr>
+        <tr><td>Board</td><td>Toda a instância: todas as empresas, todos os agentes.</td><td>Board API token. Nomeado, com expiração e revogação.</td></tr>
+        <tr><td>Agent</td><td>Uma empresa e um agente. Só pode agir como ele mesmo.</td><td>Agent API key. Texto mostrado uma única vez.</td></tr>
+      </table></div>
+      <p>Com um terminal na frente, o assistente resolve tudo: encontra o servidor, testa a saúde, faz login como board, deixa você escolher a persona, cunha um token, salva um perfil e imprime os exports.</p>
+<pre><code>paperclipai connect
+paperclipai auth whoami</code></pre>
+      <p>O perfil salvo em <code>~/.paperclip/context.json</code> nunca guarda o token. Ele guarda o <em>nome</em> da variável de ambiente que contém o token. O segredo fica no seu shell ou no seu cofre.</p>
+<pre><code>paperclipai context set --api-base http://localhost:3100 \
+  --persona board --api-key-env-var-name PAPERCLIP_API_KEY --use
+export PAPERCLIP_API_KEY=...</code></pre>
+      <h3>Ordem de resolução</h3>
+      <p>Quando um comando conecta no lugar errado, é sempre esta fila. A primeira fonte preenchida vence.</p>
+      <div class="flow"><span class="hot">--api-base</span><i>›</i><span>PAPERCLIP_API_URL</span><i>›</i><span>perfil</span><i>›</i><span>porta do config</span><i>›</i><span>localhost:3100</span></div>
+      <div class="note stamp"><span class="tag">Uma vez só</span><p>Tokens e chaves aparecem em texto claro apenas no momento da criação. Não existe comando para mostrar de novo. Capture na hora.</p></div>
+    </section>
+
+    <!-- 04 -->
+    <section class="step" id="s4">
+      <div class="step-head">
+        <div class="step-num">04</div>
+        <div><h2>Criar a empresa <em>e declarar o porquê</em></h2><p class="goal">resultado: <b>company list mostra sua empresa com prefixo</b></p></div>
+      </div>
+      <p>A empresa é o contêiner de agentes, projetos, metas, issues e orçamento. Dê a ela um prefixo curto: ele nomeia toda issue daqui em diante. Defina o orçamento mensal em centavos desde o primeiro dia.</p>
+<pre><code>paperclipai company create \
+  --payload-json '{"name":"Acme","issuePrefix":"ACME","budgetMonthlyCents":500000}' --json
+
+<span class="c"># guarde o id para os próximos passos</span>
+export PAPERCLIP_COMPANY_ID=&lt;company-id&gt;
+paperclipai company current</code></pre>
+      <p>Metas ficam acima do trabalho. Projetos e issues pendem de metas, não o contrário. Uma meta pode ter meta-mãe e um agente responsável.</p>
+<pre><code>paperclipai goal create --title "Alcançar lucratividade" --level company --json
+paperclipai goal create --title "Lançar plano pago" --parent-id &lt;goal-id&gt;
+
+paperclipai project create --name "Lançamento do site" \
+  --goal-ids &lt;goal-id&gt; --status planned</code></pre>
+      <div class="note"><span class="tag">Regra</span><p>Uma issue sem meta herda a meta do projeto; sem projeto, herda a meta padrão da empresa. Preencha as metas antes das issues e o gráfico de custo por objetivo sai de graça.</p></div>
+    </section>
+
+    <!-- 05 -->
+    <section class="step" id="s5">
+      <div class="step-head">
+        <div class="step-num">05</div>
+        <div><h2>Contratar o primeiro agente<em>, o CEO</em></h2><p class="goal">resultado: <b>agent list mostra um agente ativo com orçamento</b></p></div>
+      </div>
+      <p>Toda empresa começa por um CEO. Ele fica no topo da árvore de reporte e pode, se você permitir, contratar os demais. Antes de montar o payload, leia o schema do adapter: ele diz exatamente quais campos a configuração aceita.</p>
+<pre><code>paperclipai adapter list
+paperclipai adapter config-schema claude_local --json</code></pre>
+<pre><code>paperclipai agent create --payload-json '{
+  "name": "CEO",
+  "role": "ceo",
+  "adapterType": "claude_local",
+  "budgetMonthlyCents": 150000
+}' --json</code></pre>
+      <p>Instruções vivem num bundle gerenciado no servidor, com a convenção de quatro arquivos: <code>AGENTS.md</code> para o papel, <code>SOUL.md</code> para o tom, <code>HEARTBEAT.md</code> para o que fazer ao acordar, <code>TOOLS.md</code> para ferramentas.</p>
+<pre><code>paperclipai agent instructions-file:put &lt;agent-id&gt; \
+  --path AGENTS.md --content-file ./ceo/AGENTS.md</code></pre>
+      <h3>Antes de soltar</h3>
+      <p>A ordem que evita sustos ao operar sem supervisão: política de orçamento, teto da empresa, folga por agente, conferência.</p>
+      <ul class="check">
+        <li class="done">Orçamento mensal da empresa definido no passo anterior</li>
+        <li>Política de janelas: <code>budget policy:upsert</code></li>
+        <li>Folga individual: <code>budget agent:update &lt;agent-id&gt;</code></li>
+        <li>Conferir: <code>budget overview</code> e <code>cost window-spend</code></li>
+      </ul>
+      <div class="note"><span class="tag">Governança</span><p>Aos 80% do orçamento o Paperclip avisa; aos 100% ele para o agente. Agentes importados de pacotes chegam com o timer desligado, para nada gastar antes da sua revisão.</p></div>
+      <p>Para rodar Claude ou Codex <em>localmente</em> como esse agente, um comando cunha a chave, instala as skills em <code>~/.claude/skills</code> e imprime os exports.</p>
+<pre><code>paperclipai agent local-cli ceo --company-id $PAPERCLIP_COMPANY_ID</code></pre>
+    </section>
+
+    <!-- 06 -->
+    <section class="step" id="s6">
+      <div class="step-head">
+        <div class="step-num">06</div>
+        <div><h2>Delegar trabalho <em>como tarefa, não como chat</em></h2><p class="goal">resultado: <b>uma issue em todo, atribuída, e o agente acordado</b></p></div>
+      </div>
+      <p>O comando mais direto para dizer “vai fazer isto” é o prompt handoff. Ele cria uma issue em <code>todo</code>, atribui ao agente e o acorda. Não há resposta em streaming, não há sessão aberta. O trabalho acontece no servidor, no próximo heartbeat, e você o observa pela issue.</p>
+<pre><code>paperclipai board prompt --agent ceo \
+  "Defina a estratégia do trimestre e abra as issues iniciais para cada meta"</code></pre>
+      <p>Rodar o mesmo comando três vezes gera três tarefas separadas. Para continuar um trabalho existente, aponte a issue: o texto vira comentário e o agente é acordado contra ela.</p>
+<pre><code>paperclipai board prompt --agent ceo --issue ACME-12 \
+  "O banco de staging voltou. Repita a migração e confirme as contagens."
+
+paperclipai board prompt --agent ceo --no-wake "Auditar permissões não usadas"   <span class="c"># só enfileira</span></code></pre>
+      <h3>O ciclo de uma issue</h3>
+      <div class="flow"><span>backlog</span><i>›</i><span>todo</span><i>›</i><span class="hot">in_progress</span><i>›</i><span>in_review</span><i>›</i><span>done</span><i>·</i><span>blocked</span><span>cancelled</span></div>
+      <p>Um agente reivindica trabalho com checkout atômico. O checkout só passa se a issue estiver num estado esperado, o que impede dois agentes de pegarem a mesma tarefa.</p>
+<pre><code>paperclipai issue checkout ACME-12 --agent-id &lt;agent-id&gt;
+paperclipai issue update ACME-12 --status in_review --comment "Pronto para revisão"
+paperclipai issue release ACME-12</code></pre>
+      <div class="note stamp"><span class="tag">Nunca repita</span><p>Um 409 no checkout significa que outro run já reivindicou a issue. A resposta correta é seguir para outra tarefa, não tentar de novo.</p></div>
+    </section>
+
+    <!-- 07 -->
+    <section class="step" id="s7">
+      <div class="step-head">
+        <div class="step-num">07</div>
+        <div><h2>Observar <em>o que o agente fez</em></h2><p class="goal">resultado: <b>você lê o log de um run e as issues que ele tocou</b></p></div>
+      </div>
+      <p>O dashboard responde “como está a empresa” numa chamada só: agentes ativos, trabalho aberto, gasto do mês, aprovações pendentes. Os comandos de run respondem “o que aconteceu neste heartbeat”.</p>
+<pre><code>paperclipai dashboard get --json | jq '.costs.monthUtilizationPercent, .pendingApprovals'
+
+paperclipai run live --min-count 5
+paperclipai run get &lt;run-id&gt;
+paperclipai run events &lt;run-id&gt; --limit 50
+paperclipai run log &lt;run-id&gt; --text
+paperclipai run issues &lt;run-id&gt;</code></pre>
+      <p>Quando o agente rodou um build ou um teste num workspace de execução, o erro real costuma estar no log da operação, não no log do run.</p>
+<pre><code>paperclipai run workspace-operations &lt;run-id&gt;
+paperclipai run workspace-log &lt;operation-id&gt; --text
+paperclipai run cancel &lt;run-id&gt;              <span class="c"># não desfaz o que já foi feito</span></code></pre>
+      <p>A trilha de auditoria registra quem fez o quê em cada entidade. Para uma única tarefa, o atalho aceita o identificador humano.</p>
+<pre><code>paperclipai activity issue ACME-12
+paperclipai activity list --agent-id &lt;agent-id&gt;</code></pre>
+      <div class="note"><span class="tag">Watchdog</span><p>O servidor sinaliza runs que parecem travados. Antes de decidir, leia o log: uma suíte de testes longa é idêntica a um travamento até você olhar. Depois, <code>run watchdog-decision &lt;run-id&gt; --decision continue --reason "..."</code>.</p></div>
+    </section>
+
+    <!-- 08 -->
+    <section class="step" id="s8">
+      <div class="step-head">
+        <div class="step-num">08</div>
+        <div><h2>Governar <em>custo e decisões</em></h2><p class="goal">resultado: <b>fila de aprovações vazia e orçamento sob controle</b></p></div>
+      </div>
+      <p>Aprovações são a camada entre o que um agente <em>quer</em> fazer e o que ele <em>pode</em> fazer. Contratar outro agente, fixar a estratégia do CEO e estourar orçamento passam por aqui. A persona que decide é sempre o board.</p>
+<pre><code>paperclipai approval list --status pending
+paperclipai approval get &lt;approval-id&gt; --json
+
+paperclipai approval approve &lt;approval-id&gt; --decision-note "Orçamento liberado."
+paperclipai approval request-revision &lt;approval-id&gt; \
+  --decision-note "Restrinja o papel a backend e reenvie."</code></pre>
+      <div class="flow"><span>pending</span><i>›</i><span class="hot">approved</span><i>·</i><span>rejected</span><i>·</i><span>revision_requested</span><i>›</i><span>resubmit</span></div>
+      <p>Quando o gasto ultrapassa uma guarda, o servidor abre um incidente e o trabalho afetado fica bloqueado até você resolver. A triagem que funciona:</p>
+      <ul class="check">
+        <li><code>cost window-spend</code> para ver o quanto passou</li>
+        <li><code>cost by-agent</code> para achar a origem</li>
+        <li>Ajustar com <code>budget agent:update</code> ou <code>budget policy:upsert</code></li>
+        <li>Só então <code>budget incident:resolve &lt;incident-id&gt;</code></li>
+      </ul>
+      <div class="note stamp"><span class="tag">Ordem importa</span><p>Resolver o incidente sem ajustar a política limpa o bloqueio e o incidente volta no próximo run.</p></div>
+      <p>Em emergência, uma chave desliga toda a automação de uma empresa na instância local, direto no banco, mesmo com o servidor fora do ar. Não existe “ligar tudo”: cada rotina volta uma a uma.</p>
+<pre><code>paperclipai routines disable-all --company-id $PAPERCLIP_COMPANY_ID</code></pre>
+    </section>
+
+    <!-- 09 -->
+    <section class="step" id="s9">
+      <div class="step-head">
+        <div class="step-num">09</div>
+        <div><h2>Automatizar <em>e estender</em></h2><p class="goal">resultado: <b>uma rotina agendada e uma skill anexada ao agente</b></p></div>
+      </div>
+      <p>Rotinas são trabalho recorrente ou disparado por evento. Cada uma carrega um payload, um status, histórico de revisões e gatilhos por cron, webhook ou API pública. Duas configurações do gatilho merecem decisão consciente: concorrência, quando a próxima execução vence e a anterior ainda roda, e catch-up, o que fazer com janelas perdidas durante uma queda.</p>
+<pre><code>paperclipai routine create --payload-json '{
+  "name": "Resumo noturno", "status": "active",
+  "description": "Resumir as issues fechadas no dia"
+}' --json
+
+paperclipai routine trigger:create &lt;routine-id&gt; \
+  --payload-json '{"kind":"schedule","schedule":"0 7 * * *"}'
+paperclipai routine run &lt;routine-id&gt;        <span class="c"># dispara agora, para testar</span>
+paperclipai routine runs &lt;routine-id&gt;</code></pre>
+      <h3>Skills</h3>
+      <p>Uma skill é uma pasta com <code>SKILL.md</code>: um procedimento repetível que o agente carrega sem você reescrever o prompt. Instalar na biblioteca da empresa e anexar ao agente são operações distintas. O modo é obrigatório e evita que um <code>replace</code> acidental apague o conjunto.</p>
+<pre><code>paperclipai skills browse --kind bundled
+paperclipai skills install github-pr-workflow
+paperclipai skills agent sync ceo --skill github-pr-workflow --mode add</code></pre>
+      <h3>Times prontos</h3>
+      <p>O catálogo traz grupos completos: agentes, projetos, tarefas e as skills que precisam. Visualize antes, escolha o adapter de cada agente na instalação e encaixe o time sob um gestor que já existe.</p>
+<pre><code>paperclipai teams preview product-engineering --target-manager-slug ceo
+paperclipai teams install product-engineering \
+  --target-manager-slug ceo --adapter-override senior-coder=claude_local</code></pre>
+      <h3>Levar a empresa com você</h3>
+      <p>Uma empresa é portátil. A exportação escreve uma pasta de arquivos markdown com manifesto e anexos; a importação lê de volta de um caminho, um zip ou um repositório GitHub, sempre com preview antes de escrever. É também o backup.</p>
+<pre><code>paperclipai company export $PAPERCLIP_COMPANY_ID --out ./exports/acme \
+  --include company,agents,projects,issues,skills
+
+paperclipai company import ./exports/acme --target new \
+  --new-company-name "Acme (restaurada)" --dry-run</code></pre>
+      <div class="note"><span class="tag">Disciplina de script</span><p>Credenciais explícitas, <code>--json</code> em todo comando, <code>set -euo pipefail</code> no topo. Um 401 ou 409 interrompe o script em vez de seguir com dados vazios.</p></div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="colophon">
+  <span>Baseado na documentação oficial do Paperclip, versão 2026.831.1</span>
+  <span>Newsreader · IBM Plex Sans · IBM Plex Mono</span>
+</footer>
+</body>
+</html>
