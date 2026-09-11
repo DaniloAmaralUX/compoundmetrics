@@ -188,6 +188,7 @@
       <li><a href="#s7"><i>07</i><span>Observar a execução</span></a></li>
       <li><a href="#s8"><i>08</i><span>Governar custo e decisões</span></a></li>
       <li><a href="#s9"><i>09</i><span>Automatizar e estender</span></a></li>
+      <li><a href="#sa"><i>A</i><span>Windows e problemas comuns</span></a></li>
     </ol>
     <p class="meta">Todos os exemplos usam o binário <code>paperclipai</code>. Sem instalação, prefixe com <code>npx</code>. Valores entre <code>&lt;&gt;</code> são seus.</p>
   </nav>
@@ -312,6 +313,7 @@ paperclipai goal create --title "Lançar plano pago" --parent-id &lt;goal-id&gt;
 paperclipai project create --name "Lançamento do site" \
   --goal-ids &lt;goal-id&gt; --status planned</code></pre>
       <div class="note"><span class="tag">Regra</span><p>Uma issue sem meta herda a meta do projeto; sem projeto, herda a meta padrão da empresa. Preencha as metas antes das issues e o gráfico de custo por objetivo sai de graça.</p></div>
+      <div class="note"><span class="tag">Na interface</span><p>As rotas da UI usam o prefixo de issues, não o id da empresa: o dashboard da Acme fica em <code>http://localhost:3100/ACME/dashboard</code>, as tarefas em <code>/ACME/issues</code>, os agentes em <code>/ACME/agents/all</code>.</p></div>
     </section>
 
     <!-- 05 -->
@@ -452,6 +454,55 @@ paperclipai teams install product-engineering \
 paperclipai company import ./exports/acme --target new \
   --new-company-name "Acme (restaurada)" --dry-run</code></pre>
       <div class="note"><span class="tag">Disciplina de script</span><p>Credenciais explícitas, <code>--json</code> em todo comando, <code>set -euo pipefail</code> no topo. Um 401 ou 409 interrompe o script em vez de seguir com dados vazios.</p></div>
+    </section>
+
+    <!-- Apêndice -->
+    <section class="step" id="sa">
+      <div class="step-head">
+        <div class="step-num">A</div>
+        <div><h2>Windows <em>e problemas comuns</em></h2><p class="goal">resultado: <b>uma instalação real no Windows, do erro ao primeiro run</b></p></div>
+      </div>
+      <p>Tudo abaixo aconteceu numa instalação de verdade em Windows 11 com PowerShell 5.1 e Node 24. São os tropeços na ordem em que apareceram, com a saída correta para cada um.</p>
+
+      <h3>Não existe serviço em background no Windows</h3>
+      <p>O <code>doctor</code> avisa que gerenciamento de serviço não é suportado em <code>win32</code>. O servidor vive na janela do PowerShell: fechar a janela derruba o servidor, e cada nova sessão começa com <code>npx paperclipai run</code>. Para parar, use <code>Ctrl+C</code> dentro da janela. Fechar a janela sem isso é o que produz o problema seguinte.</p>
+
+      <h3>“pre-existing shared memory block is still in use”</h3>
+      <p>Sintoma: o log avisa que a porta 54329 está em uso, tenta a 54330 e o Postgres embutido recusa. Causa: um <code>postgres.exe</code> de uma sessão anterior continua vivo segurando o diretório de dados. O filtro por nome não basta, porque uma instalação separada do PostgreSQL também se chama <code>postgres</code>. Mate pelo dono da porta:</p>
+<pre><code><span class="c"># PowerShell, tudo numa linha</span>
+Get-NetTCPConnection -LocalPort 54329,54330 -State Listen -ErrorAction SilentlyContinue |
+  ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue };
+Start-Sleep -Seconds 3;
+Remove-Item "$env:USERPROFILE\.paperclip\instances\default\db\postmaster.pid" -ErrorAction SilentlyContinue;
+npx paperclipai run</code></pre>
+      <div class="note"><span class="tag">Acesso negado</span><p>Erros de “Acesso negado” ao encerrar <code>postgres</code> ou <code>pg_ctl</code> costumam vir de um PostgreSQL instalado como serviço do sistema. Deixe-os em paz: se o servidor subiu na porta 54329 logo depois, o órfão certo foi encerrado.</p></div>
+
+      <h3>Aspas em JSON no PowerShell 5.1</h3>
+      <p>O PowerShell clássico remove as aspas duplas de dentro de um argumento antes de entregá-lo ao Node, e o JSON chega quebrado. Escape cada aspa com barra invertida dentro de aspas simples:</p>
+<pre><code>npx paperclipai company update $env:PAPERCLIP_COMPANY_ID `
+  --payload-json '{\"budgetMonthlyCents\":5000}'</code></pre>
+
+      <h3>“required option -C, --company-id not specified”</h3>
+      <p>Alguns comandos, como <code>agent list</code>, exigem o <code>-C</code> explícito mesmo com <code>PAPERCLIP_COMPANY_ID</code> exportado. Passe <code>-C $env:PAPERCLIP_COMPANY_ID</code> e siga.</p>
+
+      <h3>Agente em <code>error</code> com “Authentication required”</h3>
+      <p>O adapter <code>claude_local</code> executa o Claude Code na sua máquina e lê a credencial gravada pelo login dele. Sem login, todo heartbeat falha em três segundos com <code>acpx_turn_failed</code>, o agente entra em <code>error</code> e a issue vai para <code>blocked</code>. O comando <code>claude</code> pode nem estar no PATH quando o que existe é o app de desktop ou a extensão do VS Code.</p>
+<pre><code><span class="c"># instala o CLI se faltar, abre o Claude Code; dentro dele: /login, depois /exit</span>
+if (-not (Get-Command claude -ErrorAction SilentlyContinue)) { npm install -g @anthropic-ai/claude-code }; claude</code></pre>
+      <p>Depois do login, não é preciso reiniciar o servidor. Dê orçamento ao agente, reabra a issue e acorde-o contra ela:</p>
+<pre><code>$A="&lt;agent-id&gt;"
+npx paperclipai budget agent:update $A --payload-json '{\"budgetMonthlyCents\":3000}'
+npx paperclipai issue update LAB-1 --status todo
+npx paperclipai agent wake $A -C $env:PAPERCLIP_COMPANY_ID `
+  --reason "Login concluido" --payload '{\"issueId\":\"&lt;issue-id&gt;\"}'
+npx paperclipai run live -C $env:PAPERCLIP_COMPANY_ID --min-count 2</code></pre>
+
+      <h3>Orçamento zerado não é guarda</h3>
+      <p>Uma empresa recém-criada pela UI pode vir com <code>budgetMonthlyCents: 0</code> e sem políticas. Isso não impede gasto; apenas não avisa. Defina o teto da empresa e o de cada agente antes do primeiro run, como no passo 05.</p>
+
+      <h3>Aviso sobre <code>master.key</code></h3>
+      <p>O <code>doctor</code> sugere <code>chmod 600</code>, que não existe no Windows. O equivalente:</p>
+<pre><code>icacls "$env:USERPROFILE\.paperclip\instances\default\secrets\master.key" /inheritance:r /grant:r "$env:USERNAME:(R,W)"</code></pre>
     </section>
 
   </main>
