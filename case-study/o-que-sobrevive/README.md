@@ -14,12 +14,11 @@ npm run build     # tsc --noEmit, vite build, then dist/artifact.html for the Ar
 
 ## Where it is published
 
-- Artifact (claude.ai): the `dist/artifact.html` fragment plus `dist/assets/*` and `dist/captures/*`.
 - Vercel project `lifeliferesearch`, linked to this repository with this directory as root; production deploys from `main`, previews from every other branch (`vercel.json`).
 
 ## What is reused verbatim
 
-`src/components/lifeline/*`, `src/components/lifeline-shell.tsx`, `src/components/theme-switcher.tsx`, `src/components/copy-command.tsx`, `src/lib/lifeline-data.ts`, `src/lib/utils.ts` and `src/globals.css` are the upstream files of [evilrabbit/lifeline](https://github.com/evilrabbit/lifeline) at `8ddbb3d` (MIT, see `LICENSE.lifeline`). Two adaptations, outside those files: `next/image` is aliased to `src/shims/next-image.tsx`, and the two column headers ("Age" / "Years") are relabelled in the DOM after render by `useRailLabels` in `src/App.tsx`. `next-themes` is the real package. The one edit inside a copied file is a commented-out `@import "shadcn/tailwind.css"` in `globals.css`, whose base layer that file already restates.
+`src/components/lifeline/*`, `src/components/lifeline-shell.tsx`, `src/components/theme-switcher.tsx`, `src/components/copy-command.tsx`, `src/lib/lifeline-data.ts`, `src/lib/utils.ts` and `src/globals.css` are the upstream files of [evilrabbit/lifeline](https://github.com/evilrabbit/lifeline) at `8ddbb3d` (MIT, see `LICENSE.lifeline`). Two adaptations, outside those files: `next/image` is aliased to `src/shims/next-image.tsx`, and the two column headers ("Age" / "Years") are relabelled in the DOM after render by `useRailLabels` in `src/App.tsx`. `next-themes` is the real package. The favicon (`public/icon.svg`, `icon.png`, `apple-icon.png`) is Evil Rabbit's own from the same repository. The page commits to the site's dark ground and carries no link that leaves it. The favicon (`public/icon.svg`, `icon.png`, `apple-icon.png`) is Evil Rabbit's own from the same repository. The page commits to the site's dark ground and carries no link that leaves it. The one edit inside a copied file is a commented-out `@import "shadcn/tailwind.css"` in `globals.css`, whose base layer that file already restates.
 
 ## Data
 

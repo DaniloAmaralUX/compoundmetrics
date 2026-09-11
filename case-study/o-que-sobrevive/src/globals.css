@@ -4,6 +4,32 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/*
+ * Compound Design tokens, mapped onto the utilities the Lifeline uses so the
+ * component files stay verbatim: one committed dark ground, two text colours,
+ * whitespace as the border, one accent with one meaning (what compounds).
+ * Source of truth: the site's src/app/globals.css.
+ */
+@theme {
+  --color-black: #0b0c0b;        /* ground */
+  --color-white: #efeee9;        /* ink */
+  --color-zinc-50: #131513;      /* ground-raised */
+  --color-zinc-100: #131513;
+  --color-zinc-200: #2c2d2b;     /* hairline on the ground */
+  --color-zinc-300: #474845;     /* hairline-strong */
+  --color-zinc-400: #b4b6b0;     /* ink at rest for hover targets */
+  --color-zinc-500: #8f918b;     /* muted: the reading tone */
+  --color-zinc-600: #7d7f7a;     /* faint: 4.7:1, the quietest text */
+  --color-zinc-700: #474845;     /* ticks */
+  --color-zinc-800: #2c2d2b;     /* the rail */
+  --color-zinc-900: #131513;
+  --color-zinc-950: #070807;     /* ground-sunken */
+  --color-blue-500: #7d7f7a;     /* people slot 1: upstream source, quiet */
+  --color-pink-500: #d7ff57;     /* people slot 2: a recorded validation — the one thing that compounds */
+  --color-accent-lime: #d7ff57;
+  --color-warm: #e8a04a;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -48,73 +74,40 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-:root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-
+:root,
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: #0b0c0b;
+  --foreground: #efeee9;
+  --card: #131513;
+  --card-foreground: #efeee9;
+  --popover: #131513;
+  --popover-foreground: #efeee9;
+  --primary: #efeee9;
+  --primary-foreground: #0b0c0b;
+  --secondary: #131513;
+  --secondary-foreground: #efeee9;
+  --muted: #131513;
+  --muted-foreground: #8f918b;
+  --accent: #131513;
+  --accent-foreground: #efeee9;
+  --destructive: #e8a04a;
+  --border: rgba(239, 238, 233, 0.12);
+  --input: rgba(239, 238, 233, 0.16);
+  --ring: #d7ff57;
+  --chart-1: #efeee9;
+  --chart-2: #8f918b;
+  --chart-3: #7d7f7a;
+  --chart-4: #474845;
+  --chart-5: #2c2d2b;
+  --radius: 0.625rem;
+  --sidebar: #131513;
+  --sidebar-foreground: #efeee9;
+  --sidebar-primary: #efeee9;
+  --sidebar-primary-foreground: #0b0c0b;
+  --sidebar-accent: #131513;
+  --sidebar-accent-foreground: #efeee9;
+  --sidebar-border: rgba(239, 238, 233, 0.12);
+  --sidebar-ring: #d7ff57;
 }
 
 @layer base {
@@ -126,6 +119,8 @@
   }
   html {
     @apply font-sans;
+    color-scheme: dark;
+    font-feature-settings: "ss01", "cv11";
   }
 }
 /* Lifeline — intro animation plumbing */

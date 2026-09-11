@@ -1,5 +1,5 @@
 import type { LifelineEvent, LifelineLegendItem, LifelineMarker } from "@/components/lifeline/types"
-import { GH, asset, type Level } from "./level"
+import { asset, type Level } from "./level"
 
 /**
  * Trilho 2 — "A linha real". The eleven captured milestones of the design
@@ -111,10 +111,7 @@ export function marcosMarkers(level: Level): LifelineMarker[] {
   const markers: LifelineMarker[] = MARCOS.map((m) => {
     const events: LifelineEvent[] = [m[level], scoreEvent(m, level)]
     if (level === "especialista") {
-      events.push([
-        { type: "text", value: "Fonte: " },
-        { type: "link", value: m.source[0], href: GH + m.source[1] },
-      ])
+      events.push(`Fonte: ${m.source[0]}`)
     }
     return {
       id: m.id,

@@ -1,5 +1,5 @@
 import type { LifelineEvent, LifelineMarker } from "@/components/lifeline/types"
-import { GH, type Level } from "./level"
+import type { Level } from "./level"
 
 /**
  * Trilho 1 — "A linha simples". Six project stages on an ordinal axis
@@ -17,14 +17,8 @@ interface Fase {
   especialista: LifelineEvent[]
 }
 
-const fonte = (...refs: Array<[string, string]>): LifelineEvent => [
-  { type: "text", value: "Fonte: " },
-  ...refs.flatMap(([label, path], i) =>
-    i === 0
-      ? [{ type: "link" as const, value: label, href: GH + path }]
-      : [{ type: "text" as const, value: " · " }, { type: "link" as const, value: label, href: GH + path }],
-  ),
-]
+const fonte = (...refs: Array<[string, string]>): LifelineEvent =>
+  "Fonte: " + refs.map(([label]) => label).join(" · ")
 
 export const FASES: Fase[] = [
   {

@@ -12,8 +12,6 @@ export const LEVELS: Array<{ id: Level; label: string; hint: string }> = [
 export const LevelContext = createContext<Level>("colega")
 export const useLevel = () => useContext(LevelContext)
 
-export const GH = "https://github.com/DaniloAmaralUX/compoundmetrics/blob/main/"
-
 /** Resolve a public asset against the document, so the Lifeline's absolute-URL comparisons hold wherever the page is served. */
 export const asset = (path: string) =>
   typeof document === "undefined" ? path : new URL(path, document.baseURI).href
