@@ -38,6 +38,7 @@
   "exclude": [
     "node_modules",
     "out",
-    "compound-design"
+    "compound-design",
+    "case-study/o-que-sobrevive"
   ]
 }

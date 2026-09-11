@@ -14,5 +14,6 @@ export default defineConfig([
     "compound-design/**",
     ".research/**",
     "scripts/**",
+    "case-study/o-que-sobrevive/**",
   ]),
 ]);
