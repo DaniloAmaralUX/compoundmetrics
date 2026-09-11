@@ -8,12 +8,11 @@ import React, {
   useState,
   type ReactNode,
 } from "react"
-import { ThemeProvider, useTheme } from "next-themes"
+import { ThemeProvider } from "next-themes"
 import { Lifeline, LifelineLegend } from "@/components/lifeline"
 import { LifelineNav } from "@/components/lifeline-shell"
-import { ThemeSwitcher } from "@/components/theme-switcher"
 import { cn } from "@/lib/utils"
-import { GH, LEVELS, LevelContext, useLevel, type Level } from "@/data/level"
+import { LEVELS, LevelContext, useLevel, type Level } from "@/data/level"
 import { FASES, FASES_BIRTH, fasesMarkers } from "@/data/fases"
 import { DELTA_V01_V11, MARCOS, MARCOS_BIRTH, MARCOS_LEGEND, MEDIA_11, MEDIA_INDEPENDENTE, marcosMarkers } from "@/data/marcos"
 import { GLOSSARIO } from "@/data/glossario"
@@ -148,7 +147,7 @@ function Section({ id, kicker, title, children, className }: { id: string; kicke
   return (
     <section id={id} className={cn("mt-24 scroll-mt-24", className)} aria-labelledby={`${id}-h`}>
       <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-zinc-500 transition-colors duration-300 dark:text-zinc-600">{kicker}</p>
-      <h2 id={`${id}-h`} className="mt-2 text-2xl font-medium tracking-tight text-black [text-wrap:balance] dark:text-white">{title}</h2>
+      <h2 id={`${id}-h`} className="mt-2 text-[clamp(26px,3.2vw,40px)] font-medium leading-[1.12] tracking-[-0.03em] text-black [text-wrap:balance] dark:text-white">{title}</h2>
       {children}
     </section>
   )
@@ -181,11 +180,7 @@ function Details({ summary, children, className }: { summary: ReactNode; childre
 }
 
 function Src({ path, children }: { path: string; children?: ReactNode }) {
-  return (
-    <a href={GH + path} target="_blank" rel="noopener noreferrer" className="underline decoration-zinc-400 underline-offset-2 transition-colors duration-300 hover:text-black hover:decoration-zinc-600 dark:decoration-zinc-700 dark:hover:text-white">
-      {children ?? path.split("/").pop()}
-    </a>
-  )
+  return <span className="text-zinc-400 tabular-nums">{children ?? path.split("/").pop()}</span>
 }
 
 /* ------------------------------------------------------------------- nav */
@@ -224,19 +219,6 @@ function LevelSwitch({ level, onChange }: { level: Level; onChange: (l: Level) =
   )
 }
 
-/** The Artifact host stamps data-theme on <html> for an explicit choice; hand it to next-themes. */
-function HostThemeSync() {
-  const { setTheme } = useTheme()
-  useEffect(() => {
-    const root = document.documentElement
-    const apply = () => { const t = root.getAttribute("data-theme"); if (t === "dark" || t === "light") setTheme(t) }
-    apply()
-    const mo = new MutationObserver(apply)
-    mo.observe(root, { attributes: true, attributeFilter: ["data-theme"] })
-    return () => mo.disconnect()
-  }, [setTheme])
-  return null
-}
 
 /* ----------------------------------------------------------------- chart */
 
@@ -310,7 +292,7 @@ function Page() {
     <main id="top" className="mx-auto w-full max-w-5xl px-6 pb-24 pt-32">
       {/* 1 · hero */}
       <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-zinc-500 dark:text-zinc-600">Pesquisa e documentação · Compound Design · atualizado 2026-09-09</p>
-      <h1 className="mt-4 text-4xl font-medium tracking-tight text-black [text-wrap:balance] md:text-5xl dark:text-white">O Que Sobrevive</h1>
+      <h1 className="mt-4 text-[clamp(40px,6.4vw,84px)] font-medium leading-[1.02] tracking-[-0.03em] text-black [text-wrap:balance] dark:text-white">O Que Sobrevive</h1>
       <Lv
         className="mt-6 max-w-[62ch] space-y-4 text-[17px] leading-[1.6] text-zinc-500"
         c={<p>Toda vez que alguém termina um trabalho com um agente de IA, joga fora o caderno de anotações. O Compound é a aposta de que o caderno pode passar para o próximo. Esta página conta o que já foi feito para testar essa aposta, e o que ainda não.</p>}
@@ -446,7 +428,7 @@ function Page() {
       <Section id="compoe" kicker="O filtro" title="O que compõe e o que não compõe">
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-zinc-500 dark:text-zinc-600">Compõe</p>
+            <p className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.08em] text-zinc-500 dark:text-zinc-600"><span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-pink-500" />Compõe</p>
             <ul className="mt-3 divide-y divide-black/10 border-y border-black/10 dark:divide-white/10 dark:border-white/10">
               {[["Uma decisão", "vira uma regra"], ["Uma falha", "vira um eval"], ["Uma solução recorrente", "vira um padrão"], ["Uma interface recorrente", "vira um componente"], ["Um fluxo de trabalho útil", "vira uma skill"], ["Uma responsabilidade especializada", "vira um agente"], ["Uma lição de projeto", "melhora o próximo projeto"]].map(([a, b]) => (
                 <li key={a} className="flex items-baseline justify-between gap-4 py-3 text-[14px]"><span className="text-black dark:text-white">{a}</span><span className="text-right text-zinc-500">{b}</span></li>
@@ -586,7 +568,7 @@ function Footer() {
   return (
     <footer className="border-t border-black/10 transition-colors duration-300 dark:border-white/10">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-6 py-8 text-[13px] text-zinc-500">
-        <p>Modelo de interação e linguagem visual: <a className="underline decoration-zinc-400 underline-offset-2 transition-colors duration-300 hover:text-black dark:hover:text-white" href="https://github.com/evilrabbit/lifeline" target="_blank" rel="noopener noreferrer">Lifeline</a>, de Evil Rabbit, MIT, usado como está. Fonte Geist, Vercel, SIL OFL. Nenhum autor upstream endossa o Compound Design.</p>
+        <p>Modelo de interação e linguagem visual: Lifeline, de Evil Rabbit, MIT, usado como está. Fonte Geist, Vercel, SIL OFL. Nenhum autor upstream endossa o Compound Design.</p>
         <details className="group">
           <summary className="cursor-pointer list-none transition-colors duration-300 hover:text-black [&::-webkit-details-marker]:hidden dark:hover:text-white">Licença MIT do Lifeline <span aria-hidden="true" className="inline-block transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <pre className="mt-3 whitespace-pre-wrap font-sans text-[12px] leading-relaxed">{`MIT License
@@ -599,7 +581,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`}</pre>
         </details>
-        <p>Compound Design · <a className="underline decoration-zinc-400 underline-offset-2 transition-colors duration-300 hover:text-black dark:hover:text-white" href="https://github.com/DaniloAmaralUX/compoundmetrics" target="_blank" rel="noopener noreferrer">DaniloAmaralUX/compoundmetrics</a> · {FASES.length} etapas · {MARCOS.length} marcos · tudo em E1.</p>
+        <p>Compound Design · {FASES.length} etapas · {MARCOS.length} marcos · tudo em E1. Esta página não leva a lugar nenhum além dela mesma.</p>
       </div>
     </footer>
   )
@@ -613,15 +595,12 @@ export function App() {
   }, [])
 
   return (
-    <ThemeProvider attribute="class" disableTransitionOnChange>
-      <HostThemeSync />
+    <ThemeProvider attribute="class" forcedTheme="dark" enableSystem={false} disableTransitionOnChange>
       <LevelContext.Provider value={level}>
         <GlossaryProvider>
           <div className="min-h-dvh bg-white text-black antialiased transition-colors duration-300 dark:bg-black dark:text-white">
             <LifelineNav logo={<LoopMark className="h-6 w-6" />} logoHref="#top" logoLabel="O Que Sobrevive — início">
               <LevelSwitch level={level} onChange={setLevel} />
-              <ThemeSwitcher />
-              <a href="https://github.com/DaniloAmaralUX/compoundmetrics" target="_blank" rel="noopener noreferrer" className="hidden text-sm text-zinc-500 transition-colors duration-300 hover:text-black md:inline dark:hover:text-white">Repositório</a>
             </LifelineNav>
             <Page />
             <Footer />
