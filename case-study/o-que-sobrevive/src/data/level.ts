@@ -4,9 +4,9 @@ import { createContext, useContext } from "react"
 export type Level = "crianca" | "colega" | "especialista"
 
 export const LEVELS: Array<{ id: Level; label: string; hint: string }> = [
-  { id: "crianca", label: "Criança", hint: "Duas frases, uma metáfora, nenhum jargão." },
-  { id: "colega", label: "Colega", hint: "O que aconteceu, em linguagem de trabalho." },
-  { id: "especialista", label: "Especialista", hint: "Pergunta, construído, aprendido, desconhecido, fonte." },
+  { id: "crianca", label: "Criança", hint: "Linguagem simples, sem termos técnicos." },
+  { id: "colega", label: "Colega", hint: "Linguagem de trabalho, termos técnicos explicados." },
+  { id: "especialista", label: "Especialista", hint: "Linguagem técnica: perguntas, números e fontes literais." },
 ]
 
 export const LevelContext = createContext<Level>("colega")

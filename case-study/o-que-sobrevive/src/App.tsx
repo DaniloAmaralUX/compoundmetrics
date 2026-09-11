@@ -197,25 +197,59 @@ function LoopMark({ className }: { className?: string }) {
 }
 
 function LevelSwitch({ level, onChange }: { level: Level; onChange: (l: Level) => void }) {
+  const index = LEVELS.findIndex((l) => l.id === level)
   return (
-    <div role="radiogroup" aria-label="Profundidade da leitura" className="flex items-center gap-4 text-sm">
-      {LEVELS.map((l) => (
-        <button
-          key={l.id}
-          type="button"
-          role="radio"
-          aria-checked={level === l.id}
-          title={l.hint}
-          onClick={() => onChange(l.id)}
-          className={cn(
-            "transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring",
-            level === l.id ? "text-black dark:text-white" : "text-zinc-500 hover:text-black dark:hover:text-white",
-          )}
-        >
-          {l.label}
-        </button>
-      ))}
+    <div className="flex items-center gap-3">
+      <span id="nivel-rotulo" className="hidden text-[13px] text-zinc-500 sm:inline">
+        Explique como se eu fosse
+      </span>
+      <div
+        role="radiogroup"
+        aria-labelledby="nivel-rotulo"
+        aria-describedby="nivel-dica"
+        className="relative grid h-8 grid-cols-3 rounded-full bg-zinc-900 p-0.5 ring-1 ring-white/10"
+      >
+        {/* the thumb slides under the chosen word; the words themselves never move */}
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0.5 left-0.5 w-[calc((100%-4px)/3)] rounded-full bg-white shadow-sm transition-transform duration-300 ease-[cubic-bezier(0.2,0.7,0.2,1)] motion-reduce:transition-none"
+          style={{ transform: `translateX(${index * 100}%)` }}
+        />
+        {LEVELS.map((l) => (
+          <button
+            key={l.id}
+            type="button"
+            role="radio"
+            aria-checked={level === l.id}
+            title={l.hint}
+            onClick={() => onChange(l.id)}
+            className={cn(
+              "relative z-10 rounded-full px-3 text-[13px] font-medium transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
+              level === l.id ? "text-black" : "text-zinc-500 hover:text-white",
+            )}
+          >
+            {l.label.toLowerCase()}
+          </button>
+        ))}
+      </div>
     </div>
+  )
+}
+
+/** One line that tells the reader what just changed, announced to assistive tech. */
+function LevelHint() {
+  const level = useLevel()
+  const text =
+    level === "crianca"
+      ? "Você está lendo a versão para uma criança: linguagem simples, uma imagem, nenhum termo técnico."
+      : level === "especialista"
+        ? "Você está lendo a versão para um especialista: perguntas, números e citações literais dos arquivos."
+        : "Você está lendo a versão para um colega: linguagem de trabalho, termos técnicos explicados ao passar o mouse."
+  return (
+    <p id="nivel-dica" aria-live="polite" className="mt-5 flex items-center gap-2 text-[13px] text-zinc-500">
+      <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600" />
+      <span>{text} Troque no topo da página: a linguagem técnica muda, os fatos não.</span>
+    </p>
   )
 }
 
@@ -299,6 +333,7 @@ function Page() {
         k={<p>Compound Design é um experimento em design engineering cumulativo: o julgamento gasto em um projeto pode sobreviver no seguinte, como regra, <T k="duravel">eval, skill ou especialista</T>, e essa sobrevivência pode ser mostrada em vez de afirmada. Esta página é o registro do que é, onde está, o que já demonstrou e o que ainda não.</p>}
         e={<><p>“It asks whether the judgment spent on one project can be made to survive into the next — as a rule, an eval, a skill, a specialist — and whether that survival can be shown rather than asserted.” Esta página é o registro de prestação de contas do experimento: o que é, por que existe, onde está, o que demonstrou, o que não demonstrou e o que vem a seguir.</p><p className="text-black dark:text-white">Build the application. Improve the system that builds the next one.</p></>}
       />
+      <LevelHint />
       <dl className="mt-8 grid gap-x-8 gap-y-4 border-y border-black/10 py-5 text-[14px] sm:grid-cols-3 dark:border-white/10">
         <div><dt className="text-zinc-500">Evidência</dt><dd className="mt-1 font-medium text-black tabular-nums dark:text-white"><T k="e1">E1</T>, o máximo de qualquer recurso</dd></div>
         <div><dt className="text-zinc-500"><T k="uplift">Ganho em runtime</T></dt><dd className="mt-1 font-medium text-black tabular-nums dark:text-white">não medido · chamadas pagas: 0</dd></div>
@@ -338,7 +373,7 @@ function Page() {
 
       {/* 3 · rail 1 */}
       <Section id="fases" kicker="Linha do tempo · camada 1" title="A linha simples: seis etapas, uma pergunta cada">
-        <p className="mt-4 max-w-[62ch] text-[15px] leading-[1.6] text-zinc-500">Passe o ponteiro sobre o trilho e role: ele corre de lado. No fim do trilho a página volta a rolar. Setas do teclado funcionam quando o trilho está em foco. O seletor no topo muda a profundidade do texto.</p>
+        <p className="mt-4 max-w-[62ch] text-[15px] leading-[1.6] text-zinc-500">Passe o ponteiro sobre o trilho e role: ele corre de lado. No fim do trilho a página volta a rolar. Setas do teclado funcionam quando o trilho está em foco.</p>
         <div ref={rail1} style={{ height: h1 }} className="mt-8 w-full overflow-hidden rounded-xl border border-black/10 transition-[height,border-color] duration-300 dark:border-white/10">
           <Lifeline mode="embed" markers={fases} birthYear={FASES_BIRTH} title="As seis etapas do projeto" className="h-full" />
         </div>
